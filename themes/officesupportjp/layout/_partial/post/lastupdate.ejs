@@ -1,0 +1,7 @@
+<a href="<%- url_for(post.path) %>" class="<%= class_name %>">    
+    <% if (post.lastupdate) { %>    
+    <time datetime="<%= date_xml(post.lastupdate) %>" itemprop="lastupdate"><%= date(post.lastupdate, date_format) %></time>    
+    <% } else { %>
+    <time datetime="<%= date_xml(post.date) %>" itemprop="dateUpdated"><%= date(post.date, date_format) %></time>
+    <% } %>
+</a>
