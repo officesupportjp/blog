@@ -61,14 +61,22 @@ function getImages(urls, title) {
     fs.mkdirSync(folderName)
   }
 
-  var imageNum = 1;
+  var imageNum = 0;
   for (var i = 0; i < urls.length; i++) {
     var url = urls[i];
     request(
       {method: 'GET', url: url, encoding: null},
       function (error, response, body){
         if(!error && response.statusCode === 200){
-          fs.writeFileSync(folderName + '/image' + (imageNum++) + '.png', body, 'binary');
+          fs.writeFile(folderName + '/image' + (++imageNum) + '.png', body, 'binary', (err) => {
+            if (err) {
+              console.log('Failed to download images.');
+              throw err;
+            }
+            else {
+              console.log('Downloaded image' + imageNum);
+            }
+          })
         }
       }
     );
