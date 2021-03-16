@@ -33,8 +33,8 @@ Excel が画面外の領域にスクロールするときに、スクロール�
 ワークシートの ScrollArea プロパティが設定されていること
 
 ※プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。
-
-ScrollArea プロパティ (Excel)[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea)
+ScrollArea プロパティ (Excel)
+[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea)
 
 ![](image2.png)
 
@@ -61,7 +61,6 @@ ScrollArea プロパティ (Excel)[https://docs.microsoft.com/ja-jp/office/vba/a
 
   
 マウス操作でスクロール バーによってスクロールすると、画面をスクロールできます。
-
 以下は、先述のファイルでスクロール バーの右矢印 (赤枠部分) をマウスで操作してスクロールした例です。
 
 ![](image3.png)  
