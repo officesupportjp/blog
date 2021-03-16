@@ -18,6 +18,8 @@ Excel には、ワークシートのスクロール可能な範囲を設定す�
 ![](image1.png)  
   
 
+
+
 #### **2\. 現象が発生する状況**
 
   
@@ -32,7 +34,7 @@ Excel が画面外の領域にスクロールするときに、スクロール�
 **条件 1:**
 ワークシートの ScrollArea プロパティが設定されていること
 
-※プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。
+※ プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。
 ScrollArea プロパティ (Excel)
 [https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea)
 
