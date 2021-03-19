@@ -55,7 +55,8 @@ Office アプリケーション間では、Word と Excel など、別の Office
 なお、この機能については以下のレジストリを設定することで無効化できます。Office クリップボードを無効化しても、通常の OS としてのコピー・貼り付け機能の範囲でコピー操作を利用できます。
 
 <Office クリップボードの無効化\>  
-キー : HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\16.0\\Common\\General名前: AcbControl  
+キー : HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\16.0\\Common\\General
+名前: AcbControl  
 種類: REG\_DWORD  
 値 : 2147483648 (10 進)  
 ※ Microsoft 365 / Office 2019 / Office 2016 向けのレジストリ キーです。  
