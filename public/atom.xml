@@ -64,4 +64,29 @@
     
   </entry>
   
+  <entry>
+    <title>「このコンピューターに組織内の別のアカウントが既にサインインしています」と表示される</title>
+    <link href="https://officesupportjp.github.io/blog/%E3%80%8C%E3%81%93%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%E7%B5%84%E7%B9%94%E5%86%85%E3%81%AE%E5%88%A5%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%8C%E6%97%A2%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%8D%E3%81%A8%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/"/>
+    <id>https://officesupportjp.github.io/blog/%E3%80%8C%E3%81%93%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%E7%B5%84%E7%B9%94%E5%86%85%E3%81%AE%E5%88%A5%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%8C%E6%97%A2%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%8D%E3%81%A8%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/</id>
+    <published>2021-04-12T15:00:00.000Z</published>
+    <updated>2021-08-05T12:02:56.910Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。  </p><p>Office 製品のサインイン時に以下のようなエラーが表示されるとお問い合わせいただくことがございます。  </p><p><img src="image1.png" alt=""></p><p><strong>【事象について】</strong></p><p>以下の公開情報のとおり、組織内の別のアカウントが既に Office にサインインしているために発生してます。  </p><p>Title : “申し訳ございません。組織の別のアカウントが、このコンピューターで既にサインインしています” という Office 2013 があります。<br>URL : <a href="https://docs.microsoft.com/ja-jp/office/troubleshoot/office-suite-issues/another-account-already-signed-in" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/troubleshoot/office-suite-issues/another-account-already-signed-in</a><br>※ Office 2013 と記載されておりますが、Microsoft 365 Apps for Enterprise も対象となります。</p><p><strong>【解消方法について】</strong></p><p>以下の手順で事象が解消されるかをご確認いただきますようお願いいたします。  </p><p>- 手順<br>1. Office にサインインしているユーザーをすべてサインアウトし、Office を終了してください。<br>2. OS のスタートメニュー - 歯車 - “アカウント” - “職場または学校にアクセスする” をクリックし、”職場または学校アカウント” として表示されている項目がある場合、”切断” をクリックします<br>※ Azure AD や AD に接続済みの項目を “切断” しますと、ドメインから外れてしまいますので、Azure AD や AD に接続済み の項目は切断しないようにご注意ください。</p><p><img src="image2.png" alt=""></p><p>3. Office を起動し、サインインをご実施ください</p><p>なお、”職場または学校にアクセスする” のアカウントは、Office のサインイン時に “すべてのアプリにサインインしたままにする” の旨のダイアログで、”このアプリのみ” を選択せず、そのまま OK をクリックした場合に追加されます。</p><p><img src="image3.png" alt=""></p><p>※ このダイアログの文言は OS のバージョンによって変わる場合がございます。</p><p>“職場または学校にアクセスする” にアカウントが追加されると、Office のサインインや Office 365 ポータルへのアクセス等でパスワードが求められなくなる等の利点がございますが、<br>共用の端末の場合等でこのアカウントの追加が必要ございません場合、今後、以下の対応をご検討いただけますと幸いです。  </p><p>方法 1) “すべてのアプリにサインインしたままにする” の旨のダイアログで、”このアプリのみ” を選択する<br>方法 2) 以下の BlockAADWorkplaceJoin レジストリを設定し、”すべてのアプリにサインインしたままにする” の旨のダイアログを表示させないようにする。  </p><p>Title : Azure Active Directory デバイス管理の FAQ<br>URL : <a href="https://docs.microsoft.com/ja-jp/azure/active-directory/devices/faq" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/azure/active-directory/devices/faq</a><br>-—- 抜粋開始 —–<br>HKLM\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin, “BlockAADWorkplaceJoin”=dword:00000001<br>-—- 抜粋終了 —–</p><p>今回の投稿は以上です。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは、Office サポートの西川 (直) です。  &lt;/p&gt;
+&lt;p&gt;Office 製品のサインイン時に以下のようなエラーが表示されるとお問い合わせいただくことがございます。  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;image1.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
 </feed>
