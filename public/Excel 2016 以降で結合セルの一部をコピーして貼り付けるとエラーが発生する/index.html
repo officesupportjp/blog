@@ -5,17 +5,19 @@
   
 
   
-  <title>バージョン 2005 - 2006 で Office プロセスの終了が遅延する | Japan Office Client Support Blog</title>
+  <title>Excel 2016 以降で結合セルの一部をコピーして貼り付けるとエラーが発生する | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Office サポート チームの中村です。 今回の記事では、Microsoft 365 &#x2F; Office 2016 &#x2F; Office 2019 の以下のバージョンで、Office アプリケーションの終了指示を出した後、バックグラウンドでしばらくプロセスが残存する動作について記載します。   現象 通常通り Office アプリケーションの画面操作を行って×ボタンで終了したり、プログラム">
+  <meta name="description" content="こんにちは、Office サポート チームの中村です。 今回の記事では、Excel 2016 以降でプログラムから結合セルをコピーするときの動作の変更内容について記載します。(Excel 2016 以降とは、Excel 2016 &#x2F; Excel 2019 &#x2F; Microsoft 365 の Excel を指します。)   1. 現象 Excel 2013 までのバージョンでは、プログラムで結合セル">
 <meta property="og:type" content="article">
-<meta property="og:title" content="バージョン 2005 - 2006 で Office プロセスの終了が遅延する">
-<meta property="og:url" content="https://officesupportjp.github.io/blog/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202005%20-%202006%20%E3%81%A7%20Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%AE%E7%B5%82%E4%BA%86%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B/index.html">
+<meta property="og:title" content="Excel 2016 以降で結合セルの一部をコピーして貼り付けるとエラーが発生する">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="こんにちは、Office サポート チームの中村です。 今回の記事では、Microsoft 365 &#x2F; Office 2016 &#x2F; Office 2019 の以下のバージョンで、Office アプリケーションの終了指示を出した後、バックグラウンドでしばらくプロセスが残存する動作について記載します。   現象 通常通り Office アプリケーションの画面操作を行って×ボタンで終了したり、プログラム">
+<meta property="og:description" content="こんにちは、Office サポート チームの中村です。 今回の記事では、Excel 2016 以降でプログラムから結合セルをコピーするときの動作の変更内容について記載します。(Excel 2016 以降とは、Excel 2016 &#x2F; Excel 2019 &#x2F; Microsoft 365 の Excel を指します。)   1. 現象 Excel 2013 までのバージョンでは、プログラムで結合セル">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-08-16T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-08T06:42:19.819Z">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image2.png">
+<meta property="article:published_time" content="2020-08-06T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-08T07:30:13.316Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -29,6 +31,7 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
@@ -90,10 +93,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-バージョン 2005 - 2006 で Office プロセスの終了が遅延する" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Excel 2016 以降で結合セルの一部をコピーして貼り付けるとエラーが発生する" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202005%20-%202006%20%E3%81%A7%20Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%AE%E7%B5%82%E4%BA%86%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B/" class="article-date">
-  <time datetime="2020-08-16T15:00:00.000Z" itemprop="datePublished">2020-08-17</time>
+    <a href="/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" class="article-date">
+  <time datetime="2020-08-06T15:00:00.000Z" itemprop="datePublished">2020-08-07</time>
 </a>
     <!--  -->
   </div>
@@ -104,16 +107,16 @@
         
   
     <h1 class="article-title" itemprop="name">
-      バージョン 2005 - 2006 で Office プロセスの終了が遅延する
+      Excel 2016 以降で結合セルの一部をコピーして貼り付けるとエラーが発生する
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202005%20-%202006%20%E3%81%A7%20Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%AE%E7%B5%82%E4%BA%86%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B/" class="article-date-single">    
+        <a href="/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" class="article-date-single">    
     
-    <time datetime="2020-08-16T15:00:00.000Z" itemprop="dateUpdated">2020-08-17</time>
+    <time datetime="2020-08-06T15:00:00.000Z" itemprop="dateUpdated">2020-08-07</time>
     
 </a>              
       </div>
@@ -121,29 +124,40 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Office サポート チームの中村です。</p>
-<p>今回の記事では、Microsoft 365 / Office 2016 / Office 2019 の以下のバージョンで、Office アプリケーションの終了指示を出した後、バックグラウンドでしばらくプロセスが残存する動作について記載します。  </p>
-<p><strong>現象</strong></p>
-<p>通常通り Office アプリケーションの画面操作を行って×ボタンで終了したり、プログラムからの Office 操作で Quit メソッドによりアプリケーションを終了すると、Office アプリケーションの画面は消えるものの、タスク マネージャー等で確認すると、バックグラウンド プロセスとして 20 秒程度プロセスが残存した後、自動的に終了します。  </p>
-<p><strong>発生バージョン</strong></p>
-<p>バージョン 2005 (ビルド 12827.20470) 以降、バージョン 2006 (すべてのビルド) まで</p>
-<p>Microsoft 365 では、現在のチャネル / 月次エンタープライズ チャネル向けにこのバージョンが提供されています。<br>Office 2016 / 2019 は、市販パッケージ製品 (FPP) および PC プリインストール製品 (PIPC) にこのバージョンが提供されています。</p>
-<p><strong>原因</strong></p>
-<p>Office アプリケーションは、製品の改善のためにアプリケーションの利用状況などを診断データ (テレメトリ データ) としてマイクロソフトに送信しています。</p>
-<p>従量課金ネットワークにおいてこの診断データの送信が短時間に繰り返され、CPU 使用率が高騰する問題が確認されました。バージョン 2005 (ビルド 12827.20470) で、この問題への対応として診断データの送信に待機時間を設けたところ、通常のネットワークにおいても診断データの送信に待機時間が生じるようになったために発生します。</p>
-<p><strong>対応状況</strong></p>
-<p>バージョン 2007 で通常ネットワークでの動作を修正し、従来通り、アプリケーションの終了操作後すぐにプロセスが終了するよう対応しました。</p>
-<p>ただし、以下の場合にはバージョン 2007 以降も引き続き本動作によるバックグラウンドでのプロセス終了遅延が生じます。</p>
-<p>・  従量課金ネットワークの場合<br>　　※ 従量課金ネットワークは OS の [設定] 画面より確認できます。<br>　　Windows 10 での従量制課金接続<br>　　<a href="https://support.microsoft.com/ja-jp/help/4028458" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/4028458</a>..</p>
-<p>・ ネットワークに接続されていない場合 Microsoft 365 / Office 2016 / Office 2019 は、診断データの送信先を含む、以下で公開している接続先にインターネット接続が可能な構成で利用いただくことを想定しています。</p>
-<p>Office 365 URL および IP アドレス範囲<br><a href="https://docs.microsoft.com/ja-jp/office365/enterprise/urls-and-ip-address-ranges" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office365/enterprise/urls-and-ip-address-ranges</a></p>
-<p>本現象に関して、約 20 秒程度プロセスが残存すること以外に Office の動作への影響は確認されていません。<br>他の影響として想定されるものとしては、Office プロセスの終了監視を行うような製品を利用している場合に、終了の検知が遅れることが考えられます。</p>
-<p>今回の投稿は以上です。  </p>
+<p>今回の記事では、Excel 2016 以降でプログラムから結合セルをコピーするときの動作の変更内容について記載します。<br>(Excel 2016 以降とは、Excel 2016 / Excel 2019 / Microsoft 365 の Excel を指します。)  </p>
+<p><strong>1.</strong> <strong>現象</strong></p>
+<p>Excel 2013 までのバージョンでは、プログラムで結合セルの一部を指定してコピーし、コピー元と同じ範囲のセルが結合された場所に貼り付けることができていました。Excel 2016 以降のバージョンでこの操作を行うと、「この操作を行うには、すべての結合セルを同じサイズにする必要があります。」とエラーが表示されます。</p>
+<p>この動作が生じる手順のサンプルを以下に記載します。  </p>
+<p><strong>手順</strong></p>
+<p>1. Excel で新規ブックを作成し、A1-B1 セル、A2-B2 セルをそれぞれ結合します。  </p>
+<p><img src="image1.png" alt=""></p>
+<p>2. Visual Basic Editor (VBE) を起動し、以下のサンプル コードを追加します。 </p>
+<pre><code>Sub Sample()
+   ActiveSheet.Range(&quot;A1&quot;).Copy
+   ActiveSheet.Range(&quot;A2&quot;).PasteSpecial xlPasteValues
+End Sub</code></pre><p>3. Sample() を実行すると、以下のエラーが表示されます。  </p>
+<p><img src="image2.png" alt="">  </p>
+<p>※ Excel 2013 までの動作では、A2-B2 の結合セルに、A1-B1 セルの値が貼り付けられていました。</p>
+<p><strong>2.</strong> <strong>変更の説明</strong></p>
+<p>従来の動作では、Excel 内部でプログラムで指定されたセルの結合状態を暗黙的に判断してコピー範囲を自動的に拡張していました。(サンプルの動作の場合、A1 セルは A2 セルと結合されている、ということを判断し、横 2 つ分の結合セルをコピー範囲として貼り付け動作を行っていました。)</p>
+<p>しかしながら、この暗黙的な範囲の判断処理がパフォーマンスの低下に影響を与えていました。一方で、本来 Copy メソッドの適切な使用方法としては、Range オブジェクトでコピー範囲全体を指定するものであることから、この暗黙的な結合範囲の判断を期待するシナリオは多くないと判断し、その他の適切な Copy メソッドの利用を行っているプログラムのパフォーマンス改善を目的として、暗黙的な範囲拡張を行わないよう Excel 2016 で動作を変更しました。</p>
+<p><strong>3.</strong> <strong>対応方法</strong></p>
+<p>コピーを行うときに、結合セル全体を Range オブジェクトに指定します。</p>
+<p>結合セルの範囲が動的に変化する場合などには、Range.MergeArea プロパティで結合範囲を取得できます。</p>
+<p>Range.MergeArea プロパティ (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.range.mergearea" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.range.mergearea</a></p>
+<p>先程のサンプル コードを MergeArea を使用した回避コードに変更すると以下のようになります。  </p>
+<pre><code>Sub Sample()
+    ActiveSheet.Range(&quot;A1&quot;).MergeArea.Copy
+    ActiveSheet.Range(&quot;A2&quot;).PasteSpecial xlPasteValues
+End Sub</code></pre><p><strong>補足</strong></p>
+<p>貼り付け時には、結合セルの範囲が異なる場合にエラーとするために範囲の判断処理を行うので、結合セルの一部を指定しても引き続き暗黙的な範囲の判断が行われ、正常に動作します。ただ、メソッドの使用方法としてより適切な実装としては、PasteSpecial も同様に結合範囲全体を設定します。</p>
+<pre><code>ActiveSheet.Range(&quot;A2&quot;).MergeArea.PasteSpecial xlPasteValues</code></pre><p>今回の投稿は以上です。  </p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202005%20-%202006%20%E3%81%A7%20Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%AE%E7%B5%82%E4%BA%86%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B/" data-id="cks2tapjn0000n8vseghv29ek" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" data-id="cks2vhxtk000098vsd7mqc35z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,20 +166,15 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202005%20-%202006%20%E3%81%A7%20Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%AE%E7%B5%82%E4%BA%86%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する
+          バージョン 2005 - 2006 で Office プロセスの終了が遅延する
         
       </div>
     </a>
   
-  
-    <a href="/blog/Excel%202016%20%E4%BB%A5%E9%99%8D%E3%81%A7%E7%B5%90%E5%90%88%E3%82%BB%E3%83%AB%E3%81%AE%E4%B8%80%E9%83%A8%E3%82%92%E3%82%B3%E3%83%94%E3%83%BC%E3%81%97%E3%81%A6%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%82%8B%E3%81%A8%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Excel 2016 以降で結合セルの一部をコピーして貼り付けるとエラーが発生する</div>
-    </a>
   
 </nav>
 
