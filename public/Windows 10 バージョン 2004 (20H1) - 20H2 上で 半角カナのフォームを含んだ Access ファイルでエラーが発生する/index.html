@@ -7,18 +7,18 @@
   
   <title>Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="※2020&#x2F;10&#x2F;28 OS 観点での回避方法 (3-3) を追加しました。 ※2021&#x2F;06&#x2F;03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。 こんにちは、Office サポート チームの佐村です。 今回の記事では、Windows 10 バージョン 2004 上で半角カナ + カナに濁音 &#x2F; 半濁音を含んでいる Access ファイルを開くとエラーが発生する状況につい">
+  <meta name="description" content="※2020&#x2F;10&#x2F;28 OS 観点での回避方法 (3-3) を追加しました。  ※2021&#x2F;06&#x2F;03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。   こんにちは、Office サポート チームの佐村です。 今回の記事では、Windows 10 バージョン 2004 上で半角カナ + カナに濁音 &#x2F; 半濁音を含んでいる Access ファイルを開くとエラーが発生する状">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="※2020&#x2F;10&#x2F;28 OS 観点での回避方法 (3-3) を追加しました。 ※2021&#x2F;06&#x2F;03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。 こんにちは、Office サポート チームの佐村です。 今回の記事では、Windows 10 バージョン 2004 上で半角カナ + カナに濁音 &#x2F; 半濁音を含んでいる Access ファイルを開くとエラーが発生する状況につい">
+<meta property="og:description" content="※2020&#x2F;10&#x2F;28 OS 観点での回避方法 (3-3) を追加しました。  ※2021&#x2F;06&#x2F;03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。   こんにちは、Office サポート チームの佐村です。 今回の記事では、Windows 10 バージョン 2004 上で半角カナ + カナに濁音 &#x2F; 半濁音を含んでいる Access ファイルを開くとエラーが発生する状">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image1.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image2.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image3.png">
 <meta property="article:published_time" content="2020-08-23T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-08T02:14:13.157Z">
+<meta property="article:modified_time" content="2021-08-08T05:57:21.268Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -124,8 +124,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>※2020/10/28 OS 観点での回避方法 (3-3) を追加しました。</p>
+        <div style="color:#ff0000">
+※2020/10/28 OS 観点での回避方法 (3-3) を追加しました。
+
 <p>※2021/06/03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。</p>
+</div>
+
 <p>こんにちは、Office サポート チームの佐村です。</p>
 <p>今回の記事では、Windows 10 バージョン 2004 上で半角カナ + カナに濁音 / 半濁音を含んでいる Access ファイルを開くとエラーが発生する状況について説明します。</p>
 <p>(Access のバージョンに依存性はなく Windows 10 バージョン 2004 / 20H2 /21H1 上での Access アプリケーションで発生します。)</p>
@@ -136,22 +140,26 @@
 <p>・データベースに含まれている VBA プロジェクトを読み取れないため、データベースを開くことができません。</p>
 <p> <img src="image2.png" alt=""></p>
 <p>「データベースに含まれている VBA プロジェクトを～」のエラーダイアログで「OK」ボタンをクリックするとファイルに保存されている VBA プロジェクトが全て削除され、Access ファイルは操作の都度保存されるため VBA プロジェクトが削除された状態でファイルが自動保存されてしまい、コードが消失して復元ができなくなる可能性があります。</p>
-<p>また、フォームとの不整合状態が保持されることで以前の OS 上の Access で該当のファイルを開いても VBA が正しく参照できないといった問題が発生します。</p>
+<p><span style="color:#ff0000">また、フォームとの不整合状態が保持されることで以前の OS 上の Access で該当のファイルを開いても VBA が正しく参照できないといった問題が発生します。</span></p>
 <p>この動作が生じる条件は以下になります。 </p>
 <p><strong>問題発生条件</strong></p>
-<p>・Windows 10 OS バージョン 2004 または 20H2 / 21H1 である。</p>
+<p>・Windows 10 OS バージョン 2004 <span style="color:#ff0000">または 20H2 / 21H1 </span>である。</p>
 <p>・Access ファイル内のフォーム名に半角カタカナを利用して濁音、半濁音のいずれかが含まれている。</p>
 <p>この条件を満たす場合、フォームに紐づく VBA プロジェクトが存在している場合や、半角カナのサブフォームを指定する際に全角で指定していると上記であげたエラーが発生します。</p>
 <p><strong>2.</strong> <strong>原因の説明</strong></p>
 <p>Access アプリケーションでは、フォーム名に関して OS で用意している機能を利用し、半角と全角とを区別せずに比較しています。</p>
-<p>そのため、以前の OS では “ガ” と “ガ” のような全角 / 半角は同じ文字列として判定されていましたが、Windows 10 バージョン 2004 / 20H2 /21H1 では OS の自然言語処理を担う NLS (National Language Support) バージョンが更新 (6.3) され異なる文字列として判定されてしまいます。</p>
+<p>そのため、以前の OS では “ガ” と “ガ” のような全角 / 半角は同じ文字列として判定されていましたが、Windows 10 バージョン 2004 <span style="color:#ff0000">/ 20H2 /21H1</span> では OS の自然言語処理を担う NLS (National Language Support) バージョンが更新 (6.3) され異なる文字列として判定されてしまいます。</p>
 <p>これによって内部管理上同じとみなされることが期待されるフォームが異なるものとして認識されるためにエラーが発生します。</p>
 <p><strong>3.</strong> <strong>対応方法</strong></p>
-<p>本問題について確認し、修正方法を検討いたしましたが、更新プログラム等で現在のバージョンに対する更新は仕様上出来ないことを確認いたしました。</p>
+<div style="color:#ff0000">
+本問題について確認し、修正方法を検討いたしましたが、更新プログラム等で現在のバージョンに対する更新は仕様上出来ないことを確認いたしました。
+
 <p>自然言語処理を担う NLS の定義に基づいて発生している問題となりますが、NLS の性質上、既存のモジュールと修正されたモジュールがネットワークシステム上で混在すると解決の難しい不整合が生じる可能性があり、そのような状況を避けるため一度リリースされたバージョンの内容を修正することができません。</p>
 <p>このため、問題があった場合には新しいバージョンの NLS を開発して新しい OS とともにリリースする必要があります。</p>
 <p>つまり、既にリリース済のバージョン 2004 および 20H2 / 21H1 において既存のバージョンのまま問題を回避することは機能仕様上出来ず、2021年後半以降の Windows 10 OS にて本問題を修正したバージョンがリリースされます。</p>
 <p>これらのことから、バージョン 2004 および 20H2 /21H1 においては、利用者様にて問題が発生しないように対応をしていただく必要があります。</p>
+</div>
+
 <p><strong>3-1. Access</strong> <strong>アプリケーション観点 - Access の EXE (MSACCESS.EXE) について、”Windows 8” の互換設定を行う</strong></p>
 <p>エクスプローラーで MSACCESS.EXE までを展開し、MSACCESS.EXE のプロパティから互換モードで動作するように変更します。</p>
 <p><img src="image3.png" alt=""></p>
@@ -186,7 +194,7 @@
 <p><strong>3-2. Access</strong> <strong>ファイル観点 - Access のフォームで半角カタカナを全角カタカナに変更する</strong></p>
 <p>Windows 10 の OS 1909 等、以前の問題が発生しない OS バージョンでフォーム等の半角カタカナを全角カタカナに統一します。</p>
 <p>VBA コードに半角カナでフォームを指定している場合等、半角カタカナのフォームを参照している処理は全角カナに修正する必要があります。</p>
-<p> <strong>3-3. OS</strong> <strong>観点 – Windows OS の NLS バージョンを 6.3 から 6.2 に変更する</strong></p>
+<p><span style="color:#ff0000"><strong>3-3. OS</strong> <strong>観点 – Windows OS の NLS バージョンを 6.3 から 6.2 に変更する</span></strong></p>
 <p>問題の発生しない NLS バージョン 6.2 (以前の OS で利用されていたバージョン) を利用することで本問題は発生しません。レジストリを変更して対処する必要があります。</p>
 <p>&lt;レジストリ NLS\Version の値の変更手順&gt;</p>
 <p>- 以前の NLS バージョンに戻す場合 (Access のエラーを回避する)</p>
