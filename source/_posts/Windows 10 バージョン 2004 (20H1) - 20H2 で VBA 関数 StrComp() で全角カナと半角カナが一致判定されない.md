@@ -1,10 +1,11 @@
 ---
 title: Windows 10 バージョン 2004 (20H1) - 20H2 で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない
-date: 2020-11-24
+date: 2020-11-12
+lastupdate: 2020-11-24
 ---
 
-**2020/11/24 Update**  
-「4. その他の発生シナリオ」セクションを追加し、Excel での検索・置換 (Find / Replace) での発生を追記しました。  
+<span style="color:#ff0000">**2020/11/24 Update**</span>  
+<span style="color:#339966">「4. その他の発生シナリオ」セクションを追加し、Excel での検索・置換 (Find / Replace) での発生を追記しました。</span>  
 
   
   
