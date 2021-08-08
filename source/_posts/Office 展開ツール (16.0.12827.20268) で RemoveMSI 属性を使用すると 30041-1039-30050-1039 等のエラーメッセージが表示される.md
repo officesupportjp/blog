@@ -1,6 +1,7 @@
 ---
 title: Office 展開ツール (16.0.12827.20268) で RemoveMSI 属性を使用すると 30041-1039-30050-1039 等のエラーメッセージが表示される
-date: 2020-10-30
+date: 2020-09-15
+lastupdate: 2020-10-30
 ---
 
 こんにちは、Office サポートの西川 (直) です。
@@ -18,6 +19,7 @@ Office 展開ツール (16.0.12827.20268) で 30041-1039 や 30050-1039 のエ�
 当該バージョンの Office 展開ツールでは、RemoveMSI 属性 で Office 2007 製品もアンインストールが可能となりましたが、  
 バージョン番号が "12" から始まる一部の MSI インストール形式の製品がインストールされている環境で、アンインストールが失敗しエラーとなる事象が発生しております。
 
+<div style="color:#ff0000">
 本事象は、最新の Office 展開ツールで改善されておりますので、最新の Office 展開ツールをご利用いただきますようお願いいたします。
 
 Title : Release history for Office Deployment Tool  
@@ -32,6 +34,8 @@ Version 16.0.13328.20292 (setup.exe version 16.0.13328.20290)
   
 Title : Office Deployment Tool  
 URL : [https://www.microsoft.com/en-us/download/details.aspx?id=49117](https://www.microsoft.com/en-us/download/details.aspx?id=49117)  
+
+</div>
 
 ~~本不具合については、リリース時期はまだ未定ですが、次期バージョンの ODT で修正される見込みとなっております~~
 

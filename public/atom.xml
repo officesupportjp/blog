@@ -255,31 +255,6 @@
   </entry>
   
   <entry>
-    <title>Office 展開ツール (16.0.12827.20268) で RemoveMSI 属性を使用すると 30041-1039-30050-1039 等のエラーメッセージが表示される</title>
-    <link href="https://officesupportjp.github.io/blog/Office%20%E5%B1%95%E9%96%8B%E3%83%84%E3%83%BC%E3%83%AB%20(16.0.12827.20268)%20%E3%81%A7%20RemoveMSI%20%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%81%A8%2030041-1039-30050-1039%20%E7%AD%89%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/"/>
-    <id>https://officesupportjp.github.io/blog/Office%20%E5%B1%95%E9%96%8B%E3%83%84%E3%83%BC%E3%83%AB%20(16.0.12827.20268)%20%E3%81%A7%20RemoveMSI%20%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%81%A8%2030041-1039-30050-1039%20%E7%AD%89%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/</id>
-    <published>2020-10-29T15:00:00.000Z</published>
-    <updated>2021-08-08T01:55:23.764Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。</p><p>表題の件について、既知の事象が報告されておりますのでご案内いたします。</p><p><strong>【事象】</strong>  </p><p>Office 展開ツール (16.0.12827.20268) で 30041-1039 や 30050-1039 のエラーメッセージが表示される</p><p><strong>【説明】</strong>  </p><p>本事象は 2020/6/9 にリリースされた Office 展開ツール (Version 16.0.12827.20268) に起因した事象である可能性がございます。</p><p>当該バージョンの Office 展開ツールでは、RemoveMSI 属性 で Office 2007 製品もアンインストールが可能となりましたが、<br>バージョン番号が “12” から始まる一部の MSI インストール形式の製品がインストールされている環境で、アンインストールが失敗しエラーとなる事象が発生しております。</p><p>本事象は、最新の Office 展開ツールで改善されておりますので、最新の Office 展開ツールをご利用いただきますようお願いいたします。</p><p>Title : Release history for Office Deployment Tool<br>URL : <a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/officeupdates/odt-release-history</a><br>-—————抜粋開始—————-  </p><p>October 29, 2020<br>Version 16.0.13328.20292 (setup.exe version 16.0.13328.20290)<br>• Resolves an issue where certain Office 2007 products may unexpectedly block installation when using RemoveMSI  </p><p>-—————抜粋終了—————-  </p><p>Title : Office Deployment Tool<br>URL : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a>  </p><p><del>本不具合については、リリース時期はまだ未定ですが、次期バージョンの ODT で修正される見込みとなっております</del></p><p><del><strong>【回避策】</strong></del>  </p><p><del>以下の何れかの回避策をご実施いただけますようお願いいたします。</del></p><p><del>・Office 2007 製品をコントロールパネルからアンインストールするか、以下の資料の OffScrub07.vbs により Office 2007 製品をアンインストールしてください。</del>  </p><p><del><a href="https://github.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/tree/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls" target="_blank" rel="noopener">https://github.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/tree/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls</a></del>  </p><p><del>・RemoveMSI 属性を削除してください</del></p><p><del><strong>【参考】</strong></del>  </p><p><del>Release history for Office Deployment Tool</del></p><p><del><a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener"></a><a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/officeupdates/odt-release-history</a></del>  </p><p><strong>2020/10/15 :</strong> <strong>回避策について説明を追記しました。</strong></p><p><strong>2020/10/30 :</strong> <strong>回避策について対応バージョンを変更しました。</strong></p><p>今回の投稿は以上です。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;/p&gt;
-&lt;p&gt;表題の件について、既知の事象が報告されておりますのでご案内いたします。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;【事象】&lt;/strong&gt;  &lt;/p&gt;
-&lt;p&gt;Office 展開ツール (16.0.12827.20
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる</title>
     <link href="https://officesupportjp.github.io/blog/Excel%20for%20Microsoft%20365%20%E3%81%A7%E4%B8%8A%E6%9B%B8%E3%81%8D%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%20DBCS%20%E3%82%92%201%20%E6%96%87%E5%AD%97%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B%E3%81%A8%202%20%E6%96%87%E5%AD%97%E5%88%86%E4%B8%8A%E6%9B%B8%E3%81%8D%E3%81%95%E3%82%8C%E3%82%8B/"/>
     <id>https://officesupportjp.github.io/blog/Excel%20for%20Microsoft%20365%20%E3%81%A7%E4%B8%8A%E6%9B%B8%E3%81%8D%E3%83%A2%E3%83%BC%E3%83%89%E3%81%A7%20DBCS%20%E3%82%92%201%20%E6%96%87%E5%AD%97%E3%82%92%E7%B7%A8%E9%9B%86%E3%81%99%E3%82%8B%E3%81%A8%202%20%E6%96%87%E5%AD%97%E5%88%86%E4%B8%8A%E6%9B%B8%E3%81%8D%E3%81%95%E3%82%8C%E3%82%8B/</id>
@@ -366,6 +341,31 @@
         &lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;/p&gt;
 &lt;p&gt;今回の投稿では、MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について説明します。&lt;/p&gt;
 &lt;p&gt;&lt;a 
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Office 展開ツール (16.0.12827.20268) で RemoveMSI 属性を使用すると 30041-1039-30050-1039 等のエラーメッセージが表示される</title>
+    <link href="https://officesupportjp.github.io/blog/Office%20%E5%B1%95%E9%96%8B%E3%83%84%E3%83%BC%E3%83%AB%20(16.0.12827.20268)%20%E3%81%A7%20RemoveMSI%20%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%81%A8%2030041-1039-30050-1039%20%E7%AD%89%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/"/>
+    <id>https://officesupportjp.github.io/blog/Office%20%E5%B1%95%E9%96%8B%E3%83%84%E3%83%BC%E3%83%AB%20(16.0.12827.20268)%20%E3%81%A7%20RemoveMSI%20%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%81%A8%2030041-1039-30050-1039%20%E7%AD%89%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/</id>
+    <published>2020-09-14T15:00:00.000Z</published>
+    <updated>2021-08-08T05:48:26.443Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。</p><p>表題の件について、既知の事象が報告されておりますのでご案内いたします。</p><p><strong>【事象】</strong>  </p><p>Office 展開ツール (16.0.12827.20268) で 30041-1039 や 30050-1039 のエラーメッセージが表示される</p><p><strong>【説明】</strong>  </p><p>本事象は 2020/6/9 にリリースされた Office 展開ツール (Version 16.0.12827.20268) に起因した事象である可能性がございます。</p><p>当該バージョンの Office 展開ツールでは、RemoveMSI 属性 で Office 2007 製品もアンインストールが可能となりましたが、<br>バージョン番号が “12” から始まる一部の MSI インストール形式の製品がインストールされている環境で、アンインストールが失敗しエラーとなる事象が発生しております。</p><div style="color:#ff0000">本事象は、最新の Office 展開ツールで改善されておりますので、最新の Office 展開ツールをご利用いただきますようお願いいたします。<p>Title : Release history for Office Deployment Tool<br>URL : <a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/officeupdates/odt-release-history</a><br>-—————抜粋開始—————-  </p><p>October 29, 2020<br>Version 16.0.13328.20292 (setup.exe version 16.0.13328.20290)<br>• Resolves an issue where certain Office 2007 products may unexpectedly block installation when using RemoveMSI  </p><p>-—————抜粋終了—————-  </p><p>Title : Office Deployment Tool<br>URL : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a>  </p></div><p><del>本不具合については、リリース時期はまだ未定ですが、次期バージョンの ODT で修正される見込みとなっております</del></p><p><del><strong>【回避策】</strong></del>  </p><p><del>以下の何れかの回避策をご実施いただけますようお願いいたします。</del></p><p><del>・Office 2007 製品をコントロールパネルからアンインストールするか、以下の資料の OffScrub07.vbs により Office 2007 製品をアンインストールしてください。</del>  </p><p><del><a href="https://github.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/tree/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls" target="_blank" rel="noopener">https://github.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/tree/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls</a></del>  </p><p><del>・RemoveMSI 属性を削除してください</del></p><p><del><strong>【参考】</strong></del>  </p><p><del>Release history for Office Deployment Tool</del></p><p><del><a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener"></a><a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/officeupdates/odt-release-history</a></del>  </p><p><strong>2020/10/15 :</strong> <strong>回避策について説明を追記しました。</strong></p><p><strong>2020/10/30 :</strong> <strong>回避策について対応バージョンを変更しました。</strong></p><p>今回の投稿は以上です。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;/p&gt;
+&lt;p&gt;表題の件について、既知の事象が報告されておりますのでご案内いたします。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【事象】&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;Office 展開ツール (16.0.12827.20
       
     
     </summary>
