@@ -43,8 +43,7 @@ Microsoft 365 Apps に対する共有コンピューターのライセンス認�
       
     シングルサインオンについては、ADFS やシームレスシングルサインオンを使用したユーザ対話がなくサインインできる方式をご検討ください。  
     Azure Active Directory シームレス シングル サインオンとは  
-    [https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/how-to-connect-sso  
-      
+    [https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/how-to-connect-sso
     ](https://docs.microsoft.com/ja-jp/azure/active-directory/hybrid/how-to-connect-sso)
 *   デバイス登録の無効化について  
     Microsoft 365 Apps でサインインをする際、以下の画面が表示される場合があります。  
