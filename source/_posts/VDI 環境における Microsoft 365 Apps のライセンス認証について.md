@@ -1,6 +1,7 @@
 ---
 title: VDI 環境における Microsoft 365 Apps のライセンス認証について
-date: 2020-10-28
+date: 2020-10-12
+lastupdate: 2020-10-28
 ---
 
 こんにちは、Office サポートの西川 (直) です。
