@@ -1,13 +1,17 @@
 ---
 title: Office 展開ツール (16.0.13328.20356) で生じる事象について
-date: 2020-11-24
+date: 2020-11-16
+lastupdate: 2020-11-24
 ---
 
 こんにちは、Office サポートの西川 (直) です。  
 
+<div style="color:#ff0000">  
+
 **2020/11/19 記事の内容を更新しました**
 
 **2020/11/24 記事の内容を更新しました**
+</div>
 
 Office 展開ツール (16.0.13328.20356) にて、以下の事象が報告されておりますのでご案内いたします。  
   
@@ -27,11 +31,14 @@ Office 展開ツール (16.0.13328.20356) では、現時点で以下の事象�
 [](https://docs.microsoft.com/ja-jp/officeupdates/odt-release-history)[https://docs.microsoft.com/en-us/officeupdates/odt-release-history](https://docs.microsoft.com/en-us/officeupdates/odt-release-history)  
   
 
+<div style="color:#ff0000">  
+
 **1) については、Office 展開ツールの仕様変更によるものとなります。今後、Logging 要素 Path 属性はご利用いただけません。**
 
 **2) と 3) については、**
 
 **最新の Office 展開ツールにて修正されておりますので、最新の Office 展開ツールをご利用いただきますようお願いいたします。**
+</div>
 
 **今回の投稿は以上です。**  
 
