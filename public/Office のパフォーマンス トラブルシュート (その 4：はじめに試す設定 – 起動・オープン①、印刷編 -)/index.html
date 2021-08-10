@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office のパフォーマンス トラブルシュート (その 4：はじめに試す設定 – 起動・オープン①、印刷編 -) | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Office サポート チームの中村です。 前回に続いて、パフォーマンス改善効果が期待できる設定をご紹介します。 今回は、Office アプリケーションの起動が遅い場合、およびファイルを開くのが遅い状況に効果が期待できる設定を紹介します。 一般的なユーザー操作では Office ファイルをダブルクリックで開くことが多く、このような場合は起動とファイルを開く操作がまとめて行われ、どちらの">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office のパフォーマンス トラブルシュート (その 4：はじめに試す設定 – 起動・オープン①、印刷編 -)">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%204%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20%E2%80%93%20%E8%B5%B7%E5%8B%95%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E2%91%A0%E3%80%81%E5%8D%B0%E5%88%B7%E7%B7%A8%20-)/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="こんにちは、Office サポート チームの中村です。 前回に続いて、パフォーマンス改善効果が期待できる設定をご紹介します。 今回は、Office アプリケーションの起動が遅い場合、およびファイルを開くのが遅い状況に効果が期待できる設定を紹介します。 一般的なユーザー操作では Office ファイルをダブルクリックで開くことが多く、このような場合は起動とファイルを開く操作がまとめて行われ、どちらの">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-12-18T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-10T13:12:37.645Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office のパフォーマンス トラブルシュート (その 4：はじめに試す設定 – 起動・オープン①、印刷編 -)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%204%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20%E2%80%93%20%E8%B5%B7%E5%8B%95%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E2%91%A0%E3%80%81%E5%8D%B0%E5%88%B7%E7%B7%A8%20-)/" class="article-date">
+  <time datetime="2019-12-18T15:00:00.000Z" itemprop="datePublished">2019-12-19</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office のパフォーマンス トラブルシュート (その 4：はじめに試す設定 – 起動・オープン①、印刷編 -)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%204%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20%E2%80%93%20%E8%B5%B7%E5%8B%95%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E2%91%A0%E3%80%81%E5%8D%B0%E5%88%B7%E7%B7%A8%20-)/" class="article-date-single">    
+    
+    <time datetime="2019-12-18T15:00:00.000Z" itemprop="dateUpdated">2019-12-19</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Office サポート チームの中村です。</p>
+<p><a href="https://social.msdn.microsoft.com/Forums/ja-JP/12af26b8-6855-41af-a76c-e2da7c74ad0f" target="_blank" rel="noopener">前回</a>に続いて、パフォーマンス改善効果が期待できる設定をご紹介します。</p>
+<p>今回は、Office アプリケーションの起動が遅い場合、およびファイルを開くのが遅い状況に効果が期待できる設定を紹介します。</p>
+<p>一般的なユーザー操作では Office ファイルをダブルクリックで開くことが多く、このような場合は起動とファイルを開く操作がまとめて行われ、どちらの処理が遅いのか判断しづらいことがあります。このため、この 2 つの動作 (Office の起動、ファイルを開く) に関する設定を合わせて紹介しています。また、印刷に関するパフォーマンス低下要因は詳細を後述する通りファイルを開くタイミングにも影響することがあるため、合わせてこの資料で紹介します。</p>
+<p>なお、起動・オープン編は次の記事でもさらに設定項目を紹介予定です。</p>
+<p><strong>目次</strong></p>
+<p>1. アドインの無効化</p>
+<p>2. 既定のプリンターの変更</p>
+<p>3. ユーザー設定のビュー削除 (Excel 共有ブック)</p>
+<p>4. 改ページ情報の非表示 (Excel)</p>
+<p>5. ファイル・フォルダ履歴削除</p>
+<p>6. ファイル検証の無効化</p>
+<p><strong>1.</strong> <strong>アドインの無効化</strong></p>
+<p>Office アドインが設定されている場合、起動時に読み込みが行われます。アドインが有効になっていると、読み込み処理自体や、アドインのバージョン更新動作、またアドインに実装された処理の実行などによりパフォーマンスが低下することがあります。必要のないアドインは以下の手順で無効化します。</p>
+<p>&lt;有効なアドインの確認&gt;</p>
+<p>[ファイル] – [オプション] – [アドイン] で “アクティブなアプリケーション アドイン” に表示されているものが有効なアドインです。</p>
+<p><u><strong>無効化手順</strong></u></p>
+<p>&lt;オプション&gt;</p>
+<p>[ファイル] – [オプション] – [アドイン] – [管理] (画面下部) で無効化したいアドインの種類 (&lt;アプリケーション名&gt;アドイン または COM アドイン) を選択し、[設定] をクリックして起動したダイアログで無効化したいアドインのチェックをオフ</p>
+<p>補足:</p>
+<ul>
+<li>(Excel を例に説明) Excelアドインは、VBA で実装された xlam / xla 拡張子の Excel ブック形式のアドインです。一方、COM アドインは、C# / VB.NET で作成された VSTO アドインや、C++ 等で実装されたDLL 形式のアドインを指します。</li>
+<li>Web アドインと呼ばれる JavaScript で実装されるアドインはこのメニューからは確認できません。[挿入] – [アドイン] から確認、無効化しますが本記事では詳細は割愛します。</li>
+<li>ほとんどのアドインはユーザーごとに登録されているため、ユーザーそれぞれで上記作業が必要です。一方、アドインによってはマシン レベルでインストールされており、一般ユーザーの権限で無効化できないものもあります。</li>
+</ul>
+<p>&lt;グループポリシー&gt;</p>
+<p>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] – [その他] – [非管理対象のアドインをすべてブロックする]</p>
+<p>(&lt;アプリケーション名&gt; には Excel / Word / PowerPoint のいずれかが入ります。以降の記述でも同様です。)</p>
+<p>設定値 : 有効</p>
+<ul>
+<li>個別に無効化するのではなく、有効にするアドインを全て管理するための設定です。合わせて [管理対象アドインの一覧] ポリシーで有効化するアドインを指定します。</li>
+</ul>
+<p>&lt;レジストリ&gt;</p>
+<p><strong>Excel</strong> <strong>アドイン</strong></p>
+<p>以下のアドインを管理するレジストリを削除します。</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options<br>名前 : OPENn (OPEN, OPEN1, OPEN2・・・と増加していきます)<br>種類 : REG_SZ<br>値 : アドイン ファイルのフルパス (アドインフォルダに格納されている場合はファイル名のみ)  </p>
+<p><strong>Word</strong> <strong>アドイン</strong></p>
+<p>Word アドインは起動中のプロセスでのみ読み込まれ、次回起動時には読み込まれません。このため、レジストリであらかじめ無効化するシナリオが想定されないため割愛します。</p>
+<p><strong>PowerPoint</strong> <strong>アドイン</strong></p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\AddIns\&lt;アドインファイル名 (拡張子なし)&gt;<br>名前 : AutoLoad<br>種類 : REG_DWORD<br>値 : 0  </p>
+<p><strong>COM</strong> <strong>アドイン</strong></p>
+<p>キー<strong>:</strong> HKEY_CURRENT_USER\Software\Microsoft\Office\&lt;アプリケーション名&gt;\Addins\&lt;アドインの名前&gt; (ユーザー単位に登録されたアドインの場合)</p>
+<p>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\&lt;アプリケーション名&gt;\Addins\&lt;アドインの名前&gt; (マシン単位に登録されたアドインの場合で OS と Office の bit が同じ場合)</p>
+<p>キー : HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\&lt;アプリケーション名&gt;\Addins\&lt;アドインの名前&gt; (マシン単位に登録されたアドインの場合で 64 bit OS と 32 bit Office の場合)</p>
+<p>名前 : LoadBehavior<br>種類 : REG_DWORD<br>値 : 2  </p>
+<p><strong>2.</strong> <strong>既定のプリンターの変更</strong></p>
+<p>印刷実行時だけでなく、ページ設定などが関連する処理では選択されたプリンターに対するアクセスが行われます。特に、Excel の改ページ ビューで保存されたブックを開くシナリオでは、ブックを開くときにこの処理が行われます。この結果、ネットワークプリンターなどでプリンターへのアクセスに時間を要する場合などにはファイルをパフォーマンスに影響を与えることがあります。また、Office は、OS の [通常使うプリンター] に設定されたプリンターが既定で選択されますので、[通常使うプリンター] を変更するとパフォーマンスを改善できます。</p>
+<p><strong>2-1. OS の[Windows で通常使うプリンターを管理する] をオフにする</strong></p>
+<p>この設定は、Windows 10 バージョン 1511 で追加された機能です。接続されているネットワークに応じて通常使うプリンターが選択される機能です。</p>
+<p>この機能が有効な場合、これまでの処理に比べて内部処理に多少時間を要しますので、常に固定のネットワークに接続する環境などでは無効化することをご検討ください。</p>
+<p>&lt;オプション&gt;</p>
+<p>OS の [設定] – [デバイス] – [プリンターとスキャナー] – [Windows で通常使うプリンターを管理する] のチェックをオフ</p>
+<p><strong>2-2.</strong> <strong>通常使うプリンターをローカルプリンターに変更する</strong></p>
+<p>&lt;オプション&gt;</p>
+<p>[コントロール パネル] – [ハードウェアとサウンド] – [デバイスとプリンター] で、通常使うプリンターに設定されている (緑のチェック マークがついている) プリンターを ”Mcicrosoft XPS Document Writer” などのローカル プリンターに変更</p>
+<p>&lt;プロパティ&gt;</p>
+<p>プログラムの開始時に ActivePrinter プロパティをローカルプリンターに変更し、ファイル オープンやプリンタ―関連処理を行った後、最後に元に戻す</p>
+<p><strong>Excel</strong></p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.application.activeprinter&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832219521&sdata=HrFp%2BcdSWaW3%2FpVDwvhoc3FVUtojBfJMUcSjxcYhSTc%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.activeprinter</a></p>
+<p><strong>Word</strong></p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fword.application.activeprinter&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832229518&sdata=fD3vukAn%2FLLS25q%2FZH0LcNgc8adue9Kg1RYhDIcXxD8%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/word.application.activeprinter</a></p>
+<p><strong>PowerPoint</strong></p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fpowerpoint.application.activeprinter&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832229518&sdata=lZtZ7RnC9yaxk%2FjT3KVCCkmi1Cjsiso90OMvCt37ijA%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.activeprinter</a></p>
+<p><strong>3. ユーザー設定のビュー削除 (Excel 共有ブック)</strong></p>
+<p>Excel でブックの共有設定 (レガシ機能) が行われているとき、そのブックをこれまでに開いたユーザーごとの表示設定がブックに保存されています。ビュー設定の情報が増えると、ブックを開くときに読み込みのため時間がかかりますので、不要なビュー設定を削除することでパフォーマンスを改善できます。</p>
+<p><strong>既存ビューの削除</strong></p>
+<p>対象の Excel ブックを開き、[表示] – [ユーザー設定のビュー] に表示されたビューから不要なものを選択して [削除] を実行</p>
+<p>また、ビューの情報には既定で印刷設定情報が含まれます。これを含む場合、2. で説明したようなプリンター関連の処理によってパフォーマンスが低下します。以下の設定を行うと、そのブックのビューには以後、印刷設定を含めないようにできます。ビューは保存したいが少しでもパフォーマンスを改善したい、という場合に利用できます。</p>
+<p><strong>今後作成される対象ブックのビューに印刷設定を含めない</strong></p>
+<p>&lt;手順&gt;</p>
+<p>1) 対象の Excel ブックを開き、[ブックの共有 (レガシ)] – [詳細設定] – [個人用ビューに含む] – [印刷の設定] のチェックをオフ</p>
+<p>2) [編集] タブで [新しい共同編集機能ではなく、以前の共有ブック機能を使用します。] のチェックを一旦オフにして [OK] をクリック</p>
+<p>3) [新しい共同編集機能ではなく、以前の共有ブック機能を使用します。] を再度有効にしてブックを保存</p>
+<p>※ [ブックの共有 (レガシ)] メニューは既定ではリボンに表示されません。表示する方法は以下補足に記載のリンク先をご覧ください。</p>
+<p>&lt;レジストリ&gt;</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options<br>名前 : QFE_Sitka<br>種類 : REG_DWORD<br>値 : 1  </p>
+<p>補足:</p>
+<p>現在ブックの共有機能は互換性のために残されているレガシ機能の位置づけとなり、Excel を複数のユーザーで同時編集する場合、共同編集機能を推奨しています。</p>
+<p>共有ブック機能について</p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.office.com%2Fja-jp%2Farticle%2F49b833c0-873b-48d8-8bf2-c1c59a628534&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832239510&sdata=DB5s6KZTEyhoXVIIDiWCYU78Y3glw3291SK%2FZCMrGaw%3D&reserved=0" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/49b833c0-873b-48d8-8bf2-c1c59a628534</a></p>
+<p><strong>4. 改ページ情報の非表示 (Excel)</strong></p>
+<p>Excel 改ページ設定を行うと、2. で述べたようにプリンター関連処理でパフォーマンスが低下します。これを避けるための方法を紹介します。</p>
+<p><strong>4-1.</strong> <strong>保存時の標準ビュー設定</strong></p>
+<p>[改ページ プレビュー] や [ページ レイアウト ビュー] の状態でブックを保存すると、次に開いたときもこのビューの状態で開かれ、プリンター情報の取得が発生します。これを避けるため、保存時に標準ビューに変更して保存します。</p>
+<p>&lt;設定&gt;</p>
+<p>[表示] タブ – [ブックの表示] – [標準]</p>
+<p>&lt;プロパティ&gt;</p>
+<p>Window.View プロパティに xlNormalView を設定</p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.window.view&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832239510&sdata=pwSYp5RZNiu5gzvH6dpZF5pchHxBlppSgYuEB5io1pw%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.window.view</a></p>
+<p><strong>4-2. Worksheet.DisplayPageBreaks</strong> <strong>の設定</strong></p>
+<p>一旦改ページを設定すると、標準ビューでも、改ページ位置が表示されるようになります。この状態でもパフォーマンス低下が生じる場合があります。主にプログラムからの処理が遅い場合に、初めに設定すると有効なプロパティです。</p>
+<p>&lt;プロパティ&gt;</p>
+<p>Worksheet.DisplayPageBreaks プロパティ を False に設定</p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.worksheet.displaypagebreaks&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=04OYmavm2zYeMu5FldVB4rLZt2yV5RUpklZDO5bCRVs%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.displaypagebreaks</a></p>
+<p><strong>5.</strong> <strong>ファイル・フォルダ履歴削除</strong></p>
+<p>Office の [開く] や [名前を付けて保存] メニューに表示される最近開いたファイルやフォルダーの情報が多く残されていると、その読み込みに時間を要します。情報を減らすことでパフォーマンスを改善できます。</p>
+<p>&lt;オプション&gt;</p>
+<p><strong>現時点での履歴情報をクリアする</strong></p>
+<p>個別削除: [ファイル] タブ – [開く] でファイルやフォルダーの履歴から削除しても良い項目を右クリックし [一覧から削除]</p>
+<p>一括削除: [ファイル] タブ – [開く] でファイルやフォルダーの履歴で任意のファイル/フォルダを右クリックし [固定されていない項目をクリア]</p>
+<p>※ あらかじめ [一覧にピン留め] しておくと、一括削除時に残すことができます。</p>
+<p><strong>今後の履歴情報保持数を変更する</strong></p>
+<p><strong>ファイル</strong></p>
+<p>[詳細設定] – [表示] – [最近使ったブックの一覧に表示するブックの数] を少ない数に変更 (0 も設定可能) ※ Excel の例</p>
+<p>(“ブック” の部分は、Word の場合は “文書”、PowerPoint は “プレゼンテーション”)</p>
+<p><strong>フォルダ</strong></p>
+<p>[詳細設定] – [表示] – [最近使ったフォルダーの一覧から固定表示を解除するフォルダーの数] を少ない数に変更</p>
+<p>&lt;グループポリシー&gt;</p>
+<p>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] – [&lt;アプリケーション名&gt; のオプション] - [詳細設定]<br>– [最近使ったブック (ドキュメント、プレゼンテーション) の一覧に表示するブック(ドキュメント、プレゼンテーション) の数]<br>– [最近使用したフォルダーの一覧に表示するフォルダーの数]  </p>
+<p>設定値 : 表示したい数 (最小値は 0)</p>
+<p>&lt;レジストリ&gt;</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options\File MRU (ファイル)</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options\Place MRU (フォルダ)</p>
+<p><strong>現時点での履歴情報をクリアする場合は以下を削除</strong></p>
+<p>名前 : Item n (n には 1 ~ の連番が入ります)<br>種類 : REG_SZ<br>値 : ファイルまたはフォルダのフルパス  </p>
+<p><strong>今後の履歴情報保持数を変更する場合は以下の値を変更</strong></p>
+<p>名前 : Max Display<br>種類 : REG_DWORD<br>値 : 履歴を保持したい数  </p>
+<p><strong>6.</strong> <strong>ファイル検証の無効化</strong></p>
+<p>バイナリ形式ファイル (xls / doc / ppt など) を開くときには、ファイル検証処理が行われます。ファイル検証処理は、バイナリ形式であるこれらのファイルのフォーマットが正しいかをチェックし、不正なファイルを検出する仕組みです。(Office 2007 形式 (xlsx / docx / pptx) 等に対してはファイル検証は行われません。) この検証に時間を要する場合、セキュリティが十分担保されている環境であればファイル検証を無効化してパフォーマンスを改善できます。</p>
+<p>参考) Office 2016 の Office ファイル検証を使った、ファイル形式攻撃の防止</p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2FDeployOffice%2Fsecurity%2Fprevent-file-format-attacks-by-using-file-validation-in-office&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=OJKjGU%2FbD8vIdClW0KqjaVmRRS%2F3U%2F6IBjo0V8MWydM%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/DeployOffice/security/prevent-file-format-attacks-by-using-file-validation-in-office</a></p>
+<p>セキュリティ上、基本的にはファイル検証機能の無効化は推奨しません。無効にする場合はバイナリ形式ファイルがインターネットなどの安全でない場所から入手されないことを十分に確認してください。</p>
+<p>&lt;グループポリシー&gt;</p>
+<p>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] – [&lt;アプリケーション名&gt; のオプション] – [セキュリティ] – [ファイル検証機能をオフにする]</p>
+<p>設定値 : 有効</p>
+<p>&lt;レジストリ&gt;</p>
+<p>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Security\FileValidation ※ Policies 配下のみ有効です。<br>エントリ名 : EnableOnLoad<br>型 : REG_DWORD<br>値 : 0  </p>
+<p>&lt;プロパティ&gt;</p>
+<p>Application.Filevalidation プロパティを false に設定</p>
+<p><strong>Excel</strong></p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.application.filevalidation&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=6wC1wtjSQOox%2BsMhfmwHe41mejqY8fjNn3gWKjEoqCA%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.filevalidation</a></p>
+<p><strong>Word</strong></p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fword.application.filevalidation&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832259499&sdata=x1tV%2BxToA10xKanVXM1NIDDtFJq3eTDooZ3jlGnyHSA%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/word.application.filevalidation</a></p>
+<p><strong>PowerPoint</strong></p>
+<p><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fpowerpoint.application.filevalidation&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832259499&sdata=LmPSMmVE0OfqX0gFTU6o1F5%2BKTed9uffv9CA3nVc6ZU%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.filevalidation</a></p>
+<p>今回の投稿は以上です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%204%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20%E2%80%93%20%E8%B5%B7%E5%8B%95%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E2%91%A0%E3%80%81%E5%8D%B0%E5%88%B7%E7%B7%A8%20-)/" data-id="cks62d697000028vs2g9dd7k5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%E8%A8%98%E4%BA%8B%20%E3%83%AA%E3%83%B3%E3%82%AF%E9%9B%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office のパフォーマンス トラブルシュート記事 リンク集
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/Teams%E3%80%81SPO%E3%80%81OneDrive%E3%80%81WebDav%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Office%20%E8%A3%BD%E5%93%81%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%A7%E5%85%88%E9%80%B2%E8%AA%8D%E8%A8%BC%E3%81%8C%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/%E3%80%8C%E3%81%93%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%E7%B5%84%E7%B9%94%E5%86%85%E3%81%AE%E5%88%A5%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%8C%E6%97%A2%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%8D%E3%81%A8%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/">「このコンピューターに組織内の別のアカウントが既にサインインしています」と表示される</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E9%96%8B%E3%81%93%E3%81%86%E3%81%A8%E3%81%99%E3%82%8B%E3%81%A8%E3%80%81%E5%AE%9F%E9%9A%9B%E3%81%AB%E9%96%8B%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%81%AF%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%8C%E4%BD%BF%E7%94%A8%E4%B8%AD%E3%81%A8%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/">Office ファイルを開こうとすると、実際に開いているユーザーとは異なるユーザーが使用中と表示される</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Excel%20%E3%81%AB%E5%85%A5%E5%8A%9B%E3%81%97%E3%81%9F%E8%A8%98%E5%8F%B7%E3%81%AE%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88%E3%81%8C%20Cambria%20Math%20%E3%81%AB%E5%A4%89%E6%9B%B4%E3%81%95%E3%82%8C%E3%82%8B%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Excel に入力した記号のフォントが Cambria Math に変更される事象について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
