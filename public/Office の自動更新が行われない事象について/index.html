@@ -5,17 +5,17 @@
   
 
   
-  <title>クイック実行版の Office を展開している環境で Office のサインインに失敗する (ライセンス認証が失敗する)事象について | Japan Office Client Support Blog</title>
+  <title>Office の自動更新が行われない事象について | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本内容は以下の記事に移動されました。 https:&#x2F;&#x2F;social.msdn.microsoft.com&#x2F;Forums&#x2F;ja-JP&#x2F;528e54cc-6e92-420d-b7ce-0e5a65fb6d3f&#x2F;office?forum&#x3D;officesupportteamja 本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。">
+  <meta name="description" content="こんにちは、Office サポートの西川 (直) です。   Office 365 クライアントや Office 2019 を展開している環境で、自動更新が行われないとお問い合わせいただくことがございます。以下の項目をご確認いただくことで解消する可能性がございますので、ご参考にしていただけますと幸いでございます。   1. インストール、または、更新した後、24 時間が経過していない-——————">
 <meta property="og:type" content="article">
-<meta property="og:title" content="クイック実行版の Office を展開している環境で Office のサインインに失敗する (ライセンス認証が失敗する)事象について">
-<meta property="og:url" content="https://officesupportjp.github.io/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E7%89%88%E3%81%AE%20Office%20%E3%82%92%E5%B1%95%E9%96%8B%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%20(%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E8%AA%8D%E8%A8%BC%E3%81%8C%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B)%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
+<meta property="og:title" content="Office の自動更新が行われない事象について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E3%81%8C%E8%A1%8C%E3%82%8F%E3%82%8C%E3%81%AA%E3%81%84%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="本内容は以下の記事に移動されました。 https:&#x2F;&#x2F;social.msdn.microsoft.com&#x2F;Forums&#x2F;ja-JP&#x2F;528e54cc-6e92-420d-b7ce-0e5a65fb6d3f&#x2F;office?forum&#x3D;officesupportteamja 本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。">
+<meta property="og:description" content="こんにちは、Office サポートの西川 (直) です。   Office 365 クライアントや Office 2019 を展開している環境で、自動更新が行われないとお問い合わせいただくことがございます。以下の項目をご確認いただくことで解消する可能性がございますので、ご参考にしていただけますと幸いでございます。   1. インストール、または、更新した後、24 時間が経過していない-——————">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-18T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-11T00:45:33.070Z">
+<meta property="article:modified_time" content="2021-08-11T01:15:12.863Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -90,9 +90,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-クイック実行版の Office を展開している環境で Office のサインインに失敗する (ライセンス認証が失敗する)事象について" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Office の自動更新が行われない事象について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E7%89%88%E3%81%AE%20Office%20%E3%82%92%E5%B1%95%E9%96%8B%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%20(%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E8%AA%8D%E8%A8%BC%E3%81%8C%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B)%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+    <a href="/blog/Office%20%E3%81%AE%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E3%81%8C%E8%A1%8C%E3%82%8F%E3%82%8C%E3%81%AA%E3%81%84%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
   <time datetime="2019-12-18T15:00:00.000Z" itemprop="datePublished">2019-12-19</time>
 </a>
     <!--  -->
@@ -104,30 +104,37 @@
         
   
     <h1 class="article-title" itemprop="name">
-      クイック実行版の Office を展開している環境で Office のサインインに失敗する (ライセンス認証が失敗する)事象について
+      Office の自動更新が行われない事象について
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E7%89%88%E3%81%AE%20Office%20%E3%82%92%E5%B1%95%E9%96%8B%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%20(%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E8%AA%8D%E8%A8%BC%E3%81%8C%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B)%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
-        
-    <time datetime="2020-10-14T15:00:00.000Z" itemprop="lastupdate">2020-10-15</time>    
+        <a href="/blog/Office%20%E3%81%AE%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E3%81%8C%E8%A1%8C%E3%82%8F%E3%82%8C%E3%81%AA%E3%81%84%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+    
+    <time datetime="2019-12-18T15:00:00.000Z" itemprop="dateUpdated">2019-12-19</time>
     
 </a>              
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>本内容は以下の記事に移動されました。</p>
-<p><a href="https://social.msdn.microsoft.com/Forums/ja-JP/528e54cc-6e92-420d-b7ce-0e5a65fb6d3f/office?forum=officesupportteamja" target="_blank" rel="noopener">https://social.msdn.microsoft.com/Forums/ja-JP/528e54cc-6e92-420d-b7ce-0e5a65fb6d3f/office?forum=officesupportteamja</a></p>
-<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+        <p>こんにちは、Office サポートの西川 (直) です。  </p>
+<p>Office 365 クライアントや Office 2019 を展開している環境で、自動更新が行われないとお問い合わせいただくことがございます。<br>以下の項目をご確認いただくことで解消する可能性がございますので、ご参考にしていただけますと幸いでございます。  </p>
+<p>1. インストール、または、更新した後、24 時間が経過していない<br>-—————————<br>Office は、連続した更新を避けるため、インストール、または、更新が完了した後、24 時間の間は次の更新を行わない動作となっております。<br>そのため、インストール、または、更新が完了した後、24 時間が経過していない場合、1 日ほど経過をご観察いただきますようお願いいたします。  </p>
+<p>- 参考<br>How to manage Office 365 ProPlus Channels for IT Pros<br><a href="https://techcommunity.microsoft.com/t5/Office-365-Blog/How-to-manage-Office-365-ProPlus-Channels-for-IT-Pros/ba-p/795813" target="_blank" rel="noopener">https://techcommunity.microsoft.com/t5/Office-365-Blog/How-to-manage-Office-365-ProPlus-Channels-for-IT-Pros/ba-p/795813</a>  </p>
+<p>2. ”自動更新” が無効になっている、もしくは、”更新プログラムのパス” が正しく構成されていない<br>-—————————<br>Office は更新プログラムの取得先をグループポリシーや Office 展開ツールにより構成することが可能です。<br>以下の設定をご確認いただき、意図した構成となっているかをご確認いただきますようお願いいたします。  </p>
+<p>Office 365 ProPlus の更新設定を構成する<br><a href="https://docs.microsoft.com/ja-jp/deployoffice/configure-update-settings-for-office-365-proplus" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployoffice/configure-update-settings-for-office-365-proplus</a><br>*UpdatePath  </p>
+<p>Office 展開ツールのオプションの構成<br><a href="https://docs.microsoft.com/ja-jp/deployoffice/configuration-options-for-the-office-2016-deployment-tool" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployoffice/configuration-options-for-the-office-2016-deployment-tool</a><br>*UpdatePath  </p>
+<p>3. “Office 365 クライアント管理” (OfficeMgmtCOM) が構成されている<br>-—————————<br>“Office 365 クライアント管理” (OfficeMgmtCOM) が構成されている場合、Office は自動更新を行いません。<br>Office を起動し、[ファイル] タブ - “アカウント” に “更新プログラムはシステム管理者が管理します” と記載されている場合、”Office 365 クライアント管理” (OfficeMgmtCOM) が構成されていますので、設定を解除してください。  </p>
+<p>- 参考<br>Microsoft Endpoint Configuration Manager を使用して Office 365 ProPlus の更新プログラムを管理する<br><a href="https://docs.microsoft.com/ja-jp/deployoffice/manage-office-365-proplus-updates-with-configuration-manager" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployoffice/manage-office-365-proplus-updates-with-configuration-manager</a>  </p>
+<p>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E7%89%88%E3%81%AE%20Office%20%E3%82%92%E5%B1%95%E9%96%8B%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%20(%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E8%AA%8D%E8%A8%BC%E3%81%8C%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B)%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cks6rsdrb0000x8vsh8drex9f" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E3%81%8C%E8%A1%8C%E3%82%8F%E3%82%8C%E3%81%AA%E3%81%84%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cks6sw5iu0000u0vs1aew404s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,20 +143,15 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%204%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20%E2%80%93%20%E8%B5%B7%E5%8B%95%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E2%91%A0%E3%80%81%E5%8D%B0%E5%88%B7%E7%B7%A8%20-)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E7%89%88%E3%81%AE%20Office%20%E3%82%92%E5%B1%95%E9%96%8B%E3%81%97%E3%81%A6%E3%81%84%E3%82%8B%E7%92%B0%E5%A2%83%E3%81%A7%20Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AB%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B%20(%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E8%AA%8D%E8%A8%BC%E3%81%8C%E5%A4%B1%E6%95%97%E3%81%99%E3%82%8B)%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Office のパフォーマンス トラブルシュート (その 4：はじめに試す設定 – 起動・オープン①、印刷編 -)
+          クイック実行版の Office を展開している環境で Office のサインインに失敗する (ライセンス認証が失敗する)事象について
         
       </div>
     </a>
   
-  
-    <a href="/blog/Office%20%E3%81%AE%E8%87%AA%E5%8B%95%E6%9B%B4%E6%96%B0%E3%81%8C%E8%A1%8C%E3%82%8F%E3%82%8C%E3%81%AA%E3%81%84%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Office の自動更新が行われない事象について</div>
-    </a>
   
 </nav>
 
