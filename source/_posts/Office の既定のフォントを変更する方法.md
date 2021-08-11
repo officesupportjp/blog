@@ -43,17 +43,17 @@ Office 2013 までの環境で作成したファイルを Office 2016 以降の�
 
 ****目次****  
 
-[1\. Excel](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter1)  
-[1-1. Excel 内での新規作成](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter1-1)  
-[1-2. エクスプローラなどでの右クリックからの新規作成](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter1-2)
+[1\. Excel](#1-Excel)  
+[1-1. Excel 内での新規作成](#1-1-Excel-内での新規作成)  
+[1-2. エクスプローラなどでの右クリックからの新規作成](#1-2-エクスプローラなどでの右クリックからの新規作成)
 
-[2\. Word](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter2)  
-[2-1. Word 内での新規作成](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter2-1)  
-[2-2. エクスプローラなどでの右クリックからの新規作成](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter2-2)
+[2\. Word](#2-Word)  
+[2-1. Word 内での新規作成](#2-1-Word-内での新規作成)  
+[2-2. エクスプローラなどでの右クリックからの新規作成](#2-2-エクスプローラなどでの右クリックからの新規作成)
 
-[3\. PowerPoint](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter3)  
-[3-1. PowerPoint 内での新規作成](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter3-1)  
-[3-2. エクスプローラなどでの右クリックからの新規作成](#x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_x_chapter3-2)  
+[3\. PowerPoint](#3-PowerPoint)  
+[3-1. PowerPoint 内での新規作成](#3-1-PowerPoint-内での新規作成)  
+[3-2. エクスプローラなどでの右クリックからの新規作成](#3-2-エクスプローラなどでの右クリックからの新規作成)  
 
   
 
