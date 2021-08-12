@@ -5,17 +5,19 @@
   
 
   
-  <title>日本語入力中に Office アプリケーションが異常終了する場合がある現象について | Japan Office Client Support Blog</title>
+  <title>Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(※ 2018 年 9 月 7 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。   本記事では、Windows 10 や Windows Server 2016 上で Office アプリケーションにて日本語入力をしている時に、Office アプリケーションが異常終了する現象について説明します。 201">
+  <meta name="description" content="[English Follows]  こんにちは、Office サポートの山本です。 本記事では Excel 2016 for Mac で [ページ設定] で設定した [先頭ページ番号] の数字から、印刷時にページ番号が開始しない動作についてご説明します。   現象macOS 版の Excel 2016 において、以下の手順で先頭ページ番号を指定し印刷した場合には、指定した先頭ページ番号が有効とな">
 <meta property="og:type" content="article">
-<meta property="og:title" content="日本語入力中に Office アプリケーションが異常終了する場合がある現象について">
-<meta property="og:url" content="https://officesupportjp.github.io/blog/%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B%E4%B8%AD%E3%81%AB%20Office%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8C%E7%95%B0%E5%B8%B8%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%8C%E3%81%82%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
+<meta property="og:title" content="Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="(※ 2018 年 9 月 7 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。   本記事では、Windows 10 や Windows Server 2016 上で Office アプリケーションにて日本語入力をしている時に、Office アプリケーションが異常終了する現象について説明します。 201">
+<meta property="og:description" content="[English Follows]  こんにちは、Office サポートの山本です。 本記事では Excel 2016 for Mac で [ページ設定] で設定した [先頭ページ番号] の数字から、印刷時にページ番号が開始しない動作についてご説明します。   現象macOS 版の Excel 2016 において、以下の手順で先頭ページ番号を指定し印刷した場合には、指定した先頭ページ番号が有効とな">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/image2.png">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-12T01:19:31.118Z">
+<meta property="article:modified_time" content="2021-08-12T02:50:47.026Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -29,6 +31,7 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
@@ -90,9 +93,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-日本語入力中に Office アプリケーションが異常終了する場合がある現象について" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B%E4%B8%AD%E3%81%AB%20Office%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8C%E7%95%B0%E5%B8%B8%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%8C%E3%81%82%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+    <a href="/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/" class="article-date">
   <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
 </a>
     <!--  -->
@@ -104,14 +107,14 @@
         
   
     <h1 class="article-title" itemprop="name">
-      日本語入力中に Office アプリケーションが異常終了する場合がある現象について
+      Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B%E4%B8%AD%E3%81%AB%20Office%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8C%E7%95%B0%E5%B8%B8%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%8C%E3%81%82%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+        <a href="/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/" class="article-date-single">    
     
     <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
     
@@ -120,30 +123,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>(※ 2018 年 9 月 7 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
-<p>こんにちは、Office サポート チームです。  </p>
-<p>本記事では、Windows 10 や Windows Server 2016 上で Office アプリケーションにて日本語入力をしている時に、Office アプリケーションが異常終了する現象について説明します。</p>
-<p><span style="color:#ff0000">2018/12/18 update</span><br><span style="color:#339966">「- 回避方法」 の冒頭に情報を追加しました。</span></p>
-<h2 id="現象"><a href="#現象" class="headerlink" title="- 現象"></a><strong>-</strong> <strong>現象</strong></h2><p>Windows 10 や Windows Server 2016 上で OS に付属の Microsoft IME を利用して日本語入力をしているときに、入力中の Office アプリケーションが異常終了する場合があります。  </p>
-<p>入力中の文字や文字数等、明確な現象再現のための条件はなく、不定期に発生する現象です。</p>
-<p>アプリケーションの異常終了は様々な要因で発生しますが、Microsoft IME で既定で有効になっている 「予測入力」 の機能をご利用になられている場合、現象の一因としてこの 「予測入力」 機能の影響が考えられます。  </p>
-<p>アプリケーションの異常終了に伴いアプリケーション イベント ログに記録される Application Error イベント ID 1000 のログに記録される [障害が発生しているモジュール名] が IMJPAPI.DLL となっている場合、「予測入力」 機能の影響で異常終了が生じている可能性がございます。</p>
-<h2 id="回避方法"><a href="#回避方法" class="headerlink" title="- 回避方法"></a><strong>-</strong> <strong>回避方法</strong></h2><p><span style="color:#ff0000">2018/12/18 update</span></p>
-<p>Windows 10 のバージョン 1703 以前をご利用いただいている場合、バージョン 1709 以降に更新いただくことで、現象の回避が見込まれます。バージョン 1709 以降をご利用の環境で現象が発生している場合は、本記事に記載の現象とは異なる要因で現象が発生していることが考えられます。</p>
-<p>イベント ログをご確認いただいた結果 「予測入力」 機能の影響が疑われる場合、以下の設定変更にて 「予測入力」 の機能を無効にしていただくことで現象を回避できる可能性がございます。</p>
-<ol>
-<li>タスク バー上の IME のアイコン (A あ などと表示されているもの) を右クリックし、[プロパティ] メニューを選択します。</li>
-<li>[Microsoft IME の設定] ダイアログで [詳細設定] ボタンを押します。</li>
-<li>[予測入力] タブの [予測入力を使用する] のチェックをオフにします。</li>
-<li>OK で [Microsoft IME の詳細設定] ダイアログを閉じます。  </li>
-</ol>
-<p>なお、この設定変更を行った場合、予測入力の機能はご利用いただけなくなりますが、その他の日本語入力機能への影響はなく各アプリケーションにて日本語入力をすることが可能です。</p>
-<h2 id="状況"><a href="#状況" class="headerlink" title="- 状況"></a><strong>-</strong> <strong>状況</strong></h2><p>本動作につきまして、追加での情報が確認できましたら、本ブログを更新させていただきます。</p>
+        <p><span style="color:#ff0000">[English Follows]</span></p>
+<p> こんにちは、Office サポートの山本です。</p>
+<p>本記事では Excel 2016 for Mac で [ページ設定] で設定した [先頭ページ番号] の数字から、印刷時にページ番号が開始しない動作についてご説明します。  </p>
+<p><strong>現象</strong><br>macOS 版の Excel 2016 において、以下の手順で先頭ページ番号を指定し印刷した場合には、指定した先頭ページ番号が有効とならず、必ず “1” から開始されます。</p>
+<p>- 手順<br>1. “Excel for Mac” を起動しブックを開きます。<br>2. [ファイル] - [ページ設定] の [先頭ページ番号] にて、以下のように “1” 以外の番号を設定します。<br><img src="image1.png" alt="">  </p>
+<p>3. ブックのフッター等に、ページ番号を挿入します。<br> 指定した先頭ページ番号からページ番号が挿入されます。<br>4. [印刷] を実行します。<br>5. 結果、ページ番号が指定した先頭ページ番号ではなく “1” から開始します。  </p>
+<p><strong>原因</strong><br>現時点の Excel 2016 for Mac の機能として、[ファイル] - [ページ設定] から [先頭ページ番号] を指定した場合にも、この設定値が有効とならないことが原因です。  </p>
+<p><strong>対処方法</strong><br>現状ご案内可能な回避策としては、[先頭ページ番号] を利用せずに、手動でページ番号を設定する方法にてご対応ください。  </p>
+<p>例) 先頭ページ番号を 1+n ページ目から開始したい場合、ブックのフッター等で &amp;[ページ番号] の後に “+n “ を追加します。  </p>
+<p>Page &amp;[ページ番号]+n  </p>
+<p><strong>今後の修正予定について</strong><br>本現象については 2018 年 8 月 23 日において修正対応の予定はございません。<br>今後 [ページ設定] 画面の変更や、機能追加などが行われた場合には、本ブログにて随時ご案内させていただく予定です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+<p><span style="color:#ff0000">[English]</span></p>
+<p><span style="color:#0000ff"><strong>“First page number” is not effective when printing on Excel 2016 for Mac</strong></span></p>
+<p><strong>Symptom</strong><br>If you print a book on Excel 2016 for Mac by using First page number option, the expected page number is not printed and the first page number is always “1”.</p>
+<p>- Steps  </p>
+<p>1. Start “Excel for Mac” and open a book.<br>2. Select [File] - [Page Setup] and set any number (besides “1”) on [First page number].  </p>
+<p><img src="image2.png" alt=""> <a href="https://msdnshared.blob.core.windows.net/media/2018/08/Excel_PageSetup_en.png" target="_blank" rel="noopener"></a> 3. Insert the page number to the book (e.g. footer) and check the expected number is displayed.  </p>
+<p>4. Select [Print].  </p>
+<p>5. Check the printed page number and the first page number is “1”.</p>
+<p><strong>Cause</strong><br>[File] - [Page Setup]- [First page number] is not available as of now.</p>
+<p><strong>Workaround</strong><br>Set the page number manually.</p>
+<p>e.g. If you want to set the first page number as 1+n, type “+n “ after the &amp;[Page] code in the footer.  </p>
+<p>Page &amp;[Page]+n</p>
+<p><strong>Status</strong><br>There is no plan for fix as of 8/23/2018.  </p>
+<p>We will update in this blog if there are changes in [Page Setup] page or new feature is added.</p>
+<p><strong>Information in this article (including attached documents and links) is as of date of article’s creation.</strong><br><strong>Please note that this may be changed without notice.</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B%E4%B8%AD%E3%81%AB%20Office%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8C%E7%95%B0%E5%B8%B8%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%8C%E3%81%82%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cks88df8t0000kcvs7z741ye6" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/" data-id="cks8a9jbu0000ngvsgsxd7cc2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,20 +163,15 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/2016%20%E5%B9%B4%207%20%E6%9C%88%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%20MS16-088%20%E3%81%AE%E5%8B%95%E4%BD%9C%E3%81%8C%E5%A4%89%E6%9B%B4%E3%81%95%E3%82%8C%E3%81%BE%E3%81%97%E3%81%9F/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%85%A5%E5%8A%9B%E4%B8%AD%E3%81%AB%20Office%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8C%E7%95%B0%E5%B8%B8%E7%B5%82%E4%BA%86%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%8C%E3%81%82%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          2016 年 7 月セキュリティ更新プログラム MS16-088 の動作が変更されました
+          日本語入力中に Office アプリケーションが異常終了する場合がある現象について
         
       </div>
     </a>
   
-  
-    <a href="/blog/Excel%202016%20for%20Mac%20%E3%81%A7%E3%81%AE%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E5%85%88%E9%A0%AD%E3%83%9A%E3%83%BC%E3%82%B8%E7%95%AA%E5%8F%B7%E3%81%AE%E8%A8%AD%E5%AE%9A%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%20%E2%80%93%20%E2%80%9CFirst%20page%20number%E2%80%9D%20is%20not%20effective%20when%20printing%20on%20Excel%202016%20for%20Mac/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac</div>
-    </a>
   
 </nav>
 
