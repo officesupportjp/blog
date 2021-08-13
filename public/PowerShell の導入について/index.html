@@ -5,15 +5,17 @@
   
 
   
-  <title>Japan Office Client Support Blog</title>
+  <title>PowerShell の導入について | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="日本マイクロソフト Office Client サポート チームのブログです">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Japan Office Client Support Blog">
-<meta property="og:url" content="https://officesupportjp.github.io/blog/page/6/index.html">
+  <meta name="description" content="(※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートです。   本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照く">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PowerShell の導入について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="日本マイクロソフト Office Client サポート チームのブログです">
+<meta property="og:description" content="(※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートです。   本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照く">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-13T13:12:42.991Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -88,68 +90,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-OneNote 2016 で背景に設定した画像が印刷時にずれる" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/OneNote%202016%20%E3%81%A7%E8%83%8C%E6%99%AF%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%81%8C%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E3%81%9A%E3%82%8C%E3%82%8B/" class="article-date">
-  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/OneNote%202016%20%E3%81%A7%E8%83%8C%E6%99%AF%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%81%8C%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E3%81%9A%E3%82%8C%E3%82%8B/">OneNote 2016 で背景に設定した画像が印刷時にずれる</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/OneNote%202016%20%E3%81%A7%E8%83%8C%E6%99%AF%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%81%8C%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E3%81%9A%E3%82%8C%E3%82%8B/" class="article-date-single">    
-    
-    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2018 年 3 月 12 日に Japan Office Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office サポートの佐村です。  
-本記事では、OneNote 2016 で、背景に設定した画像が印刷時にずれて印刷される現象について説明します。
-現象  
-OneNote 2016 ではコンテナ (フレーム) 内に配置した画像も背景として設定することが可能になりました。  
-しかし、コンテナ (フレーム) 内に配置した画像を背景に設定したページを印刷すると、画像が左にずれるという現象が発生します。  
-&lt;OneNote 2016 に貼り付けて画像を背景に設定後、ペンツールで描画&gt;  
-
-&lt;上記のページを印刷プレビューで表示&gt;
-  
-画像が左にずれますが描画した線は正しい位置のままのため、ずれが発生します。  
-原因  
-以...
-        <p class="article-more-link">
-          <a href="/blog/OneNote%202016%20%E3%81%A7%E8%83%8C%E6%99%AF%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%81%8C%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E3%81%9A%E3%82%8C%E3%82%8B/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/OneNote%202016%20%E3%81%A7%E8%83%8C%E6%99%AF%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%81%8C%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E3%81%9A%E3%82%8C%E3%82%8B/" data-id="cksa3oneh0000c4vsbiqv4eya" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-PowerShell の導入について" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-PowerShell の導入について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
   <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
@@ -162,8 +103,8 @@ OneNote 2016 ではコンテナ (フレーム) 内に配置した画像も背景
       <header class="article-header-single">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">PowerShell の導入について</a>
+    <h1 class="article-title" itemprop="name">
+      PowerShell の導入について
     </h1>
   
 
@@ -179,17 +120,32 @@ OneNote 2016 ではコンテナ (フレーム) 内に配置した画像も背景
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office サポートです。  
-本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照ください。  
-目次1. PowerShell の導入2. 関連情報  
-1. PowerShell の導入  
-1. 64 Bit OS が動作する Windows 10/8.1/8/7 の PC を準備します。  
-2. Windows 7 の PC に導入する場合は、前提条件を満たすために最新の Windows Update をすべて適用します。  
-Windows Update 適用後に O...
-        <p class="article-more-link">
-          <a href="/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
-        </p>
+        <p>(※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポートです。  </p>
+<p>本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照ください。  </p>
+<p><strong>目次</strong><br>1. PowerShell の導入<br>2. 関連情報  </p>
+<p><strong>1. PowerShell の導入</strong>  </p>
+<p>1. 64 Bit OS が動作する Windows 10/8.1/8/7 の PC を準備します。  </p>
+<p>2. Windows 7 の PC に導入する場合は、前提条件を満たすために最新の Windows Update をすべて適用します。  </p>
+<p>Windows Update 適用後に OS を再起動し、その後、下記リンクから Windows Management Framework 3.0 をインストールし、 Windows PowerShell 3.0 を使用できるようにします。(Windows 10/8.1/8 の PC 場合は、本手順は不要です。)<br>タイトル : Windows Management Framework 3.0<br>アドレス : <a href="http://www.microsoft.com/en-us/download/details.aspx?id=34595" target="_blank" rel="noopener">http://www.microsoft.com/en-us/download/details.aspx?id=34595</a>  </p>
+<p>3. 下記の弊社 TechNet ページを参照し、Microsoft Online Services サインイン アシスタント、Windows PowerShell 用 Microsoft Azure Active Directory モジュール (64 ビット バージョン) をインストールします。  </p>
+<p>タイトル : Connect to Office 365 PowerShell<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/dn975125.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/dn975125.aspx</a></p>
+<p>4. PowerShell の<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を変更していない場合は、インストールした Windows PowerShell の Microsoft Azure Active Directory モジュールを管理者権限で起動し、下記コマンドを実行します。(<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">【参考 : 実行ポリシー】</a>既に変更済みの場合は、本手順は不要です。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+
+
+
+<p>なお、設定されている<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を確認するには下記のコマンドを実行します。(<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を取得してプロンプトに表示します。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2.関連情報</strong>  </p>
+<p>関連ブログ記事をご案内いたします。  </p>
+<p>タイトル : Windows PowerShell ファースト ステップ ガイド<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx</a></p>
+<p>タイトル : PowerShell の学習<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx</a></p>
+<p>タイトル : PowerShell スクリプト<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting</a></p>
+
       
     </div>
     <footer class="article-footer">
@@ -199,16 +155,23 @@ Windows Update 適用後に O...
     </footer>
   </div>
   
-</article>
-
+    
+<nav id="article-nav">
+  
+    <a href="/blog/OneNote%202016%20%E3%81%A7%E8%83%8C%E6%99%AF%E3%81%AB%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E7%94%BB%E5%83%8F%E3%81%8C%E5%8D%B0%E5%88%B7%E6%99%82%E3%81%AB%E3%81%9A%E3%82%8C%E3%82%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          OneNote 2016 で背景に設定した画像が印刷時にずれる
+        
+      </div>
+    </a>
+  
+  
+</nav>
 
   
-
-
-  <nav id="page-nav">
-    
-    <a class="extend prev" rel="prev" href="/blog/page/5/">Prev</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/4/">4</a><a class="page-number" href="/blog/page/5/">5</a><span class="page-number current">6</span>
-  </nav>
+</article>
 
 </section>
         
