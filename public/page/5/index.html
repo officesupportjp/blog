@@ -567,6 +567,58 @@ Ex...
 
 
   
+    <article id="post-Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20%E3%81%AE%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E7%94%9F%E3%81%98%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(ForceShellExecute%20%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AA%E3%81%AB%E3%82%88%E3%82%8B%E5%AF%BE%E5%87%A6%E3%81%A8%E5%BD%B1%E9%9F%BF)/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%20%E3%81%AE%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E7%94%9F%E3%81%98%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(ForceShellExecute%20%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AA%E3%81%AB%E3%82%88%E3%82%8B%E5%AF%BE%E5%87%A6%E3%81%A8%E5%BD%B1%E9%9F%BF)/">Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20%E3%81%AE%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E7%94%9F%E3%81%98%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(ForceShellExecute%20%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AA%E3%81%AB%E3%82%88%E3%82%8B%E5%AF%BE%E5%87%A6%E3%81%A8%E5%BD%B1%E9%9F%BF)/" class="article-date-single">    
+        
+    <time datetime="2020-10-28T15:00:00.000Z" itemprop="lastupdate">2020-10-29</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 7 月 12 日に Japan Office Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office サポートの 西川 (直) です。
+Office ファイルにサーバ上の他のファイルやページへのハイパーリンクを挿入したとき、環境構成によって、これをクリックすると認証ダイアログが表示されたり、正常に開かないというお問い合わせを頂きます。  
+このような場合、ForceShellExecute というレジストリを設定することで事象が回避する可能性があります。  
+この記事では、この ForceShellExecute レジストリの説明を中心に、このような問題が生じたときの対処方法や考慮事項を記載します。  
+2017/11/11 Update“3.レジストリ ForceShellExecuteを設定する影響について” 内の対象製品、バージョン...
+        <p class="article-more-link">
+          <a href="/blog/Office%20%E3%81%AE%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E7%94%9F%E3%81%98%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(ForceShellExecute%20%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AA%E3%81%AB%E3%82%88%E3%82%8B%E5%AF%BE%E5%87%A6%E3%81%A8%E5%BD%B1%E9%9F%BF)/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E3%82%AF%E3%83%AA%E3%83%83%E3%82%AF%E3%81%A7%E7%94%9F%E3%81%98%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%B8%E3%81%AE%E5%AF%BE%E5%87%A6%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(ForceShellExecute%20%E3%83%AC%E3%82%B8%E3%82%B9%E3%83%88%E3%83%AA%E3%81%AB%E3%82%88%E3%82%8B%E5%AF%BE%E5%87%A6%E3%81%A8%E5%BD%B1%E9%9F%BF)/" data-id="cks9zguql00000ovsdr8jbfmj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
