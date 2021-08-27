@@ -404,6 +404,57 @@ Excel には、SpecialCells メソッドという、引数に指定した条件�
 
 
   
+    <article id="post-Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/">Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 11 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発サポート チームの中村です。
+本テーマについて、前回の投稿から時間が空いてしまい申し訳ありません。
+ここまでの記事では、カスタムのリボン タブを作成するというカスタマイズ内容を例に、カスタマイズ手法についてご紹介してきました。今回の記事からは、この他によく行われるカスタマイズの実装方法をいくつか紹介しつつ、XML などの書き方のイメージを掴んでいただればと思います。
+今回の投稿で紹介する方法は、1. を除いて VSTO のビジュアルなデザイナーではカスタマイズできない内容となりますので、XML を利用して実装します。VSTO のビジュアルなデザイナーでカスタマイズしている方で以下の方法を利用したい場合は、以前の投稿...
+        <p class="article-more-link">
+          <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" data-id="cksu2v3vl000070vsfhnj8907" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
