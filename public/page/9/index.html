@@ -294,6 +294,60 @@ Excel の CodeName プロパティは、以下の 3 つのオブジェクトに�
 
 
   
+    <article id="post-Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Windows%2010%20Version%201607%20%E4%B8%8A%E3%81%A7%20Workbook.Close%20%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%81%AB%20Excel%20%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Windows%2010%20Version%201607%20%E4%B8%8A%E3%81%A7%20Workbook.Close%20%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%81%AB%20Excel%20%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Windows%2010%20Version%201607%20%E4%B8%8A%E3%81%A7%20Workbook.Close%20%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%81%AB%20Excel%20%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office 開発 サポート チームの 遠藤です。
+今回は、Windows 10 への対応を行われているお客様からいくつかいただくもので、Excel がクラッシュしてしまう、という問題について報告したいと思います。
+2017/4/13 update本 Blog で紹介した問題については、2017 年 4 月から提供を開始しました Windows 10 Creators Update にて修正されました。
+この問題は以下の条件下で発生します。
+(条件の 1 から 4 は必須条件となります。5 については、結果的に何かしらのオブジェクトを破棄するような処理が影響する可能性があり、5  は一例となります。)
+
+OS が Windows...
+        <p class="article-more-link">
+          <a href="/blog/Windows%2010%20Version%201607%20%E4%B8%8A%E3%81%A7%20Workbook.Close%20%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%81%AB%20Excel%20%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Windows%2010%20Version%201607%20%E4%B8%8A%E3%81%A7%20Workbook.Close%20%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%81%AB%20Excel%20%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="cksy7zl890000n0vs13y84a2a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
