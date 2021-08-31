@@ -345,6 +345,57 @@ Excel には、セルに設定する式として、SUM() のように計算に�
 
 
   
+    <article id="post-Office をマルチスレッドでオートメーションすることの危険性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/" class="article-date">
+  <time datetime="2019-02-24T15:00:00.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/">Office をマルチスレッドでオートメーションすることの危険性</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/" class="article-date-single">    
+    
+    <time datetime="2019-02-24T15:00:00.000Z" itemprop="dateUpdated">2019-02-25</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 1 月 30 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+今回は、Office をオートメーションするアプリケーションをマルチスレッドで作成する際の注意点について記載します。
+Office は STA (Single-Threaded Apartment) モデルで動作しているため、マルチスレッドからの呼び出し、特に Office に重い処理を実行させているときや、ループ処理などでマルチスレッドから大量の呼び出しを行うと、エラーが発生することがあります。
+この動作については、以下の弊社公開資料で解説していますが、開発者の皆様に知って頂く機会を増やすとともに、図等を用いてより親しみやすい内容でご案内するため、今回、本記事でも取り上げたいと思い...
+        <p class="article-more-link">
+          <a href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/" data-id="ckszze07w0000ssvs02evf1b9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
 
 
   <nav id="page-nav">
