@@ -5,20 +5,18 @@
   
 
   
-  <title>Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない | Japan Office Client Support Blog</title>
+  <title>Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。 本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。 2018&#x2F;02&#x2F;08 Update[対処方法] セクシ">
+  <meta name="description" content="(※ 2016 年 10 月 26 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。本記事では新たに確認された、Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない問題について説明します。 !! Update !! 2017&#x2F;02&#x2F;09　Excel 2013 Wind">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない">
-<meta property="og:url" content="https://officesupportjp.github.io/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E8%AD%B7%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A7%E9%96%8B%E3%81%8F%E3%81%A8%E3%81%8D%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%88%E9%A0%98%E5%9F%9F%E3%81%8C%E6%8F%8F%E7%94%BB%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/index.html">
+<meta property="og:title" content="Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%8F%E6%A8%AA%20(%E9%A0%85%E7%9B%AE)%20%E8%BB%B8%E3%83%A9%E3%83%99%E3%83%AB%E3%81%8C%E6%9B%B4%E6%96%B0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。 本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。 2018&#x2F;02&#x2F;08 Update[対処方法] セクシ">
+<meta property="og:description" content="(※ 2016 年 10 月 26 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。本記事では新たに確認された、Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない問題について説明します。 !! Update !! 2017&#x2F;02&#x2F;09　Excel 2013 Wind">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2017/10/01-1024x768.jpg">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro-1024x768.jpg">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround-1024x768.jpg">
+<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2016/10/img01-2.png">
 <meta property="article:published_time" content="2019-02-03T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-01T08:38:26.843Z">
+<meta property="article:modified_time" content="2021-09-01T08:45:21.745Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -32,7 +30,7 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://msdnshared.blob.core.windows.net/media/2017/10/01-1024x768.jpg">
+<meta name="twitter:image" content="https://msdnshared.blob.core.windows.net/media/2016/10/img01-2.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
@@ -94,9 +92,9 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E8%AD%B7%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A7%E9%96%8B%E3%81%8F%E3%81%A8%E3%81%8D%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%88%E9%A0%98%E5%9F%9F%E3%81%8C%E6%8F%8F%E7%94%BB%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date">
+    <a href="/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%8F%E6%A8%AA%20(%E9%A0%85%E7%9B%AE)%20%E8%BB%B8%E3%83%A9%E3%83%99%E3%83%AB%E3%81%8C%E6%9B%B4%E6%96%B0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date">
   <time datetime="2019-02-03T15:00:00.000Z" itemprop="datePublished">2019-02-04</time>
 </a>
     <!--  -->
@@ -108,14 +106,14 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない
+      Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E8%AD%B7%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A7%E9%96%8B%E3%81%8F%E3%81%A8%E3%81%8D%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%88%E9%A0%98%E5%9F%9F%E3%81%8C%E6%8F%8F%E7%94%BB%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date-single">    
+        <a href="/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%8F%E6%A8%AA%20(%E9%A0%85%E7%9B%AE)%20%E8%BB%B8%E3%83%A9%E3%83%99%E3%83%AB%E3%81%8C%E6%9B%B4%E6%96%B0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date-single">    
     
     <time datetime="2019-02-03T15:00:00.000Z" itemprop="dateUpdated">2019-02-04</time>
     
@@ -124,43 +122,45 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)</p>
-<p>こんにちは、Office サポートの町口です。</p>
-<p>本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。</p>
-<p><span style="color:#ff0000"><strong>2018/02/08 Update</strong></span><br><span style="color:#339966">[対処方法] セクションに修正プログラムの情報を追記しました。</span></p>
-<h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Excel 2013 以降で、先に任意のExcel ファイルを開いている状態にして、<br>次に、前回画面サイズが最小化された状態のファイルを保護されたビューで開くとき、<br>メッセージ バーやシート領域が描画されず、グレーの状態となります。</p>
-<p>再現手順:</p>
-<ol>
-<li>新規ブックを作成し、一旦保存します。</li>
-<li>ファイルに何らかの編集を加えて、ウィンドウを最小化します。</li>
-<li>タスクバーに表示されたExcel のアイコンを右クリックして[ウィンドウを閉じる] をクリックします。</li>
-<li>「’&lt;ファイル名&gt;‘ の変更内容を保存しますか?」のメッセージで[保存] をクリックします。</li>
-<li>手順4 で保存したファイルではなく、新規ブックや任意の別のブックをダブルクリックで開きます。</li>
-<li>Shift キーを押下しながら、手順4 で保存したファイルのアイコンを右クリックして、[保護ビューで開く] をクリックします。  </li>
+        <p>(※ 2016 年 10 月 26 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポートの町口です。<br>本記事では新たに確認された、Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない問題について説明します。</p>
+<p><span style="color:#ff0000"><strong>!! Update !!</strong></span></p>
+<p>2017/02/09　Excel 2013 Windows インストーラー版の解決方法を追加しました。</p>
+<p>2017/02/23　Excel 2013 クイック実行版と Excel 2016 クイック実行版 (FRDC) の解決方法を追加しました。</p>
+<p>2017/02/23　Excel 2016 クイック実行版の解決方法 (CC) を追加しました。</p>
+<p>2017/03/15　Excel 2016 Windows インストーラー版の解決方法を追加しました。</p>
+<h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a><strong>現象</strong></h1><p>Excel 2013 以降のバージョンで、グラフの横 (項目) 軸ラベルが参照しているセルを “” (NULL ではなく空文字) にして、 OpenXML 形式で保存すると、次回以降ファイルを開いたときに、グラフの横 (項目) 軸ラベルが参照しているセルの値を更新しても横 (項目) 軸ラベルに更新した値が表示されません。</p>
+<h1 id="再現手順"><a href="#再現手順" class="headerlink" title="再現手順"></a><strong>再現手順</strong></h1><ol>
+<li>Excel 2013 以降のバージョンで新規ブックを作成します。</li>
+<li>A2:C2 の範囲に =rand() を設定します。</li>
+<li>A1:C2 を選択した状態で円グラフ等を挿入します。</li>
+<li>横 (項目) 軸ラベルとなるセル範囲 A1:C1 の範囲に =”” を設定します。</li>
+<li>xlsx 形式で保存し、ファイルを閉じます。</li>
+<li>ファイルを開き、A1 セルに “a” と入力します。  </li>
 </ol>
-<p><a href="https://msdnshared.blob.core.windows.net/media/2017/10/01.jpg" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/01-1024x768.jpg" alt=""></a></p>
-<p>結果:</p>
-<p>手順6 で開いたファイルのメッセージバーやシート領域が描画されず、グレーの状態となります。</p>
-<p><a href="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro.jpg" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro-1024x768.jpg" alt=""></a></p>
-<h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>Excel 2013 およびExcel 2016 の問題により発生しています。</p>
-<h1 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h1><p>以下のいずれかの方法で回避します。</p>
-<p><strong>&lt;&lt; 事前に発生しないようにする方法&gt;&gt;</strong></p>
-<p>以下のいずれかの方法で、現象の発生を防ぎます。</p>
-<p>a) 保護ビューで開くファイルを最小化した状態で保存しないようにする<br>b) 先に別のファイルを開かない</p>
-<p><span style="color:#ff0000"><strong>!! 2018/02/08 Update !!</strong></span></p>
-<p>c) Excel 2016 クイック実行版を更新する</p>
-<p>Excel 2016 クイック実行版については、<strong>バージョン 1801 (ビルド 9001.2138 クイック実行)</strong> で修正しました。</p>
-<p>2018 年 2 月 1 日以降、更新プログラム チャネル「月次チャネル/Monthly Channel」でバージョン 1801 (ビルド 9001.2138 クイック実行) を受信することができます。  </p>
-<p>[ファイル] – [アカウント] – [更新オプション] の [今すぐ更新] や ODT を利用して、バージョン 1801 (ビルド 9001.2138 クイック実行) 以上のバージョンに更新してください。</p>
-<p><strong>&lt;&lt; 現象発生後に対応する方法&gt;&gt;</strong></p>
-<p>保護ビューで開いたファイルで、メッセージバー以下が描画されずグレーの状態となった場合は、<br>[ファイル] - [情報] - [編集を有効にする] をクリックして、通常ビューで開きます。</p>
-<p><a href="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround.jpg" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround-1024x768.jpg" alt=""></a></p>
-<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+<p>結果 :横 (項目) 軸ラベルに、”a” と表示されるべきところ、以下のように、1, 2, 3 と表示されます。</p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/2016/10/img01-2.png" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2016/10/img01-2.png" alt="img01"></a></p>
+<h1 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a><strong>解決方法</strong></h1><p>次の更新プログラムを適用した環境で新たに作成するグラフでは、この現象は発生しません。</p>
+<p>なお、更新プログラム適用前に作成したグラフは、更新プログラムを適用した環境で再作成する必要があります。</p>
+<p><strong>&lt;&lt; Excel 2013 &gt;&gt;</strong></p>
+<p> Windows インストーラー版:</p>
+<p> 次の更新プログラムを適用します。<br> <a href="https://support.microsoft.com/ja-jp/help/3127966/february-7-2017-update-for-office-2013-kb3127966" target="_blank" rel="noopener">3127966</a> February 7, 2017, update for Office 2013 (KB3127966)</p>
+<p> クイック実行版:</p>
+<p> [ファイル] タブの [アカウント] - [更新オプション] - [今すぐ更新] をクリックして最新の状態に更新し、<br> 製品バージョンを <strong>15.0.4903.1002</strong> 以上にします。</p>
+<p><strong>&lt;&lt; Excel 2016 &gt;&gt;</strong></p>
+<p> Windows インストーラー版:</p>
+<p>  次の更新プログラムを適用します。<br> <a href="https://support.microsoft.com/en-us/help/3141452/march-7-2017-update-for-office-2016-kb3141452" target="_blank" rel="noopener">3141452</a>　March 7, 2017, update for Office 2016 (KB3141452)</p>
+<p> クイック実行版:</p>
+<p> バージョン 1701 で修正しました。<br> Current Channel : バージョン 1701 (ビルド 7766.2060) を 2017/2/24 日に公開しました。<br> First Release for Deferred Channel : バージョン 1701 (ビルド 7766.2060) を 2017/2/23 日に公開しました。<br> Deferred Channel : 2017 年 6 月のリリースを予定しています。</p>
+<h1 id="回避方法"><a href="#回避方法" class="headerlink" title="回避方法"></a><strong>回避方法</strong></h1><p>以下のいずれかの方法で回避することができます。</p>
+<p>方法 1 : xls 形式で保存する<br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>この問題は、OpenXML 形式で保存した場合の XML 情報の不整合に因り発生しますので、xls 形式で保存することで回避します。<br>なお、xlsx 形式で、既に現象が発生する状態になったグラフであっても、そのまま xls 形式で保存することで、回避することができます。</p>
+<p>方法 2 : “” (空文字) が設定されないようにする<br>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~<br>グラフの横 (項目) 軸ラベルが参照しているセルに “” (空文字) が設定されないようにして、グラフを再作成します。</p>
+<p><strong>本情報の内容 ( 添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E8%AD%B7%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A7%E9%96%8B%E3%81%8F%E3%81%A8%E3%81%8D%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%88%E9%A0%98%E5%9F%9F%E3%81%8C%E6%8F%8F%E7%94%BB%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" data-id="ckt18uyr60000i8vsh0yx8ik7" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%8F%E6%A8%AA%20(%E9%A0%85%E7%9B%AE)%20%E8%BB%B8%E3%83%A9%E3%83%99%E3%83%AB%E3%81%8C%E6%9B%B4%E6%96%B0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" data-id="ckt191twk0000povs7g3pfiqs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -169,20 +169,15 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/OneNote%202016%20%E3%81%A7%E5%85%A8%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%8B%E3%82%89%E5%8D%8A%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%AB%E3%81%99%E3%82%8B%E3%81%A8%E3%80%8C%E9%81%8A%E3%82%B4%E3%82%B7%E3%83%83%E3%82%AF%E3%80%8D%E3%81%AB%E5%88%87%E3%82%8A%E6%9B%BF%E3%82%8F%E3%82%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E8%AD%B7%E3%83%93%E3%83%A5%E3%83%BC%E3%81%A7%E9%96%8B%E3%81%8F%E3%81%A8%E3%81%8D%E3%81%AB%E3%82%B7%E3%83%BC%E3%83%88%E9%A0%98%E5%9F%9F%E3%81%8C%E6%8F%8F%E7%94%BB%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          OneNote 2016 で全角入力から半角入力にすると「遊ゴシック」に切り替わる
+          Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない
         
       </div>
     </a>
   
-  
-    <a href="/blog/Excel%202013%20%E4%BB%A5%E9%99%8D%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E3%81%A7%E6%AD%A3%E3%81%97%E3%81%8F%E6%A8%AA%20(%E9%A0%85%E7%9B%AE)%20%E8%BB%B8%E3%83%A9%E3%83%99%E3%83%AB%E3%81%8C%E6%9B%B4%E6%96%B0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない</div>
-    </a>
   
 </nav>
 
