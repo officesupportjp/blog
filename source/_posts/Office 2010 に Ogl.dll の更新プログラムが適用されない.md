@@ -1,6 +1,7 @@
 ---
 title: Office 2010 に Ogl.dll の更新プログラムが適用されない
 date: 2019-02-04
+lastupdate: 2021-04-14
 ---
 
 (※ 2017 年 6 月 19 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
