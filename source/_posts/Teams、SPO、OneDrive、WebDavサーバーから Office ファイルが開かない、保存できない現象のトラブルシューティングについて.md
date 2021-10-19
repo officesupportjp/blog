@@ -82,14 +82,13 @@ HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Internet\\Server
 
 以下の記事の手順により、サインインキャッシュのクリアをご実施ください。
 
-Title : Office のサインインのトラブルシュートについて
-
-URL : [https://social.msdn.microsoft.com/Forums/ja-JP/528e54cc-6e92-420d-b7ce-0e5a65fb6d3f/office?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/528e54cc-6e92-420d-b7ce-0e5a65fb6d3f/office?forum=officesupportteamja)
+Title : Office のサインインのトラブルシュートについて  
+URL : [https://officesupportjp.github.io/blog/Office のサインインのトラブルシュートについて](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
 **\- 関連情報**
 
 Title : MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について
 
-URL : [https://social.msdn.microsoft.com/Forums/ja-JP/cb8cb890-b30a-467b-a4fa-d7f7159dd373/msi-2925612398-office-2016-12391?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/cb8cb890-b30a-467b-a4fa-d7f7159dd373/msi-2925612398-office-2016-12391?forum=officesupportteamja)
+URL : [https://officesupportjp.github.io/blog/MSI 版の Office 2016 で SPO、OneDrive、WebDav サーバーから Office ファイルが開かない、保存できない現象について](https://officesupportjp.github.io/blog/MSI%20%E7%89%88%E3%81%AE%20Office%202016%20%E3%81%A7%20SPO%E3%80%81OneDrive%E3%80%81WebDav%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
