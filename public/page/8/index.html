@@ -90,6 +90,63 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%202016%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%B5%B7%E5%8B%95%E6%99%82%E3%81%AB%E3%80%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%20api-ms-win-crt-heap-1-1-0.dll%20%E3%81%8C%E3%81%AA%E3%81%84%E3%81%9F%E3%82%81%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E9%96%8B%E5%A7%8B%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%E3%80%8D%E7%AD%89%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%202016%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%B5%B7%E5%8B%95%E6%99%82%E3%81%AB%E3%80%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%20api-ms-win-crt-heap-1-1-0.dll%20%E3%81%8C%E3%81%AA%E3%81%84%E3%81%9F%E3%82%81%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E9%96%8B%E5%A7%8B%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%E3%80%8D%E7%AD%89%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%202016%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%B5%B7%E5%8B%95%E6%99%82%E3%81%AB%E3%80%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%20api-ms-win-crt-heap-1-1-0.dll%20%E3%81%8C%E3%81%AA%E3%81%84%E3%81%9F%E3%82%81%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E9%96%8B%E5%A7%8B%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%E3%80%8D%E7%AD%89%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2018 年 6 月 22 日に Japan Office Support Blog に公開した情報のアーカイブです。)こんにちは、
+Office サポート チームです。
+本記事では、Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について案内します。
+1 現象Office 2016 アプリケーションの起動時に、以下のメッセージが表示されることがあります。
+(例) Excel 起動時のメッセージ
+  
+補足 :
+
+Office 2016 をインストールしている環境で、Office アプリケーション以外で上記メッセージが表示した場合においても、本記事の「対処方法」をお試しください。
+
+dll の名前は他のファイル名で表示される場合もあ...
+        <p class="article-more-link">
+          <a href="/blog/Office%202016%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%B5%B7%E5%8B%95%E6%99%82%E3%81%AB%E3%80%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%20api-ms-win-crt-heap-1-1-0.dll%20%E3%81%8C%E3%81%AA%E3%81%84%E3%81%9F%E3%82%81%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E9%96%8B%E5%A7%8B%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%E3%80%8D%E7%AD%89%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%202016%20%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E8%B5%B7%E5%8B%95%E6%99%82%E3%81%AB%E3%80%8C%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%20api-ms-win-crt-heap-1-1-0.dll%20%E3%81%8C%E3%81%AA%E3%81%84%E3%81%9F%E3%82%81%E3%80%81%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%82%92%E9%96%8B%E5%A7%8B%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93%E3%80%82%E3%80%8D%E7%AD%89%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckuxsqeoo0000p0vse72t8vko" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Word 2016 からメールを送信すると文字化けする" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/Word%202016%20%E3%81%8B%E3%82%89%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/" class="article-date">
@@ -546,56 +603,6 @@ VSTO ビジュアルなデザイナーでリボンをカスタマイズするこ
     </div>
     <footer class="article-footer">
       <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%883%20%E2%80%93%20(VSTO%20%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" data-id="cksx0sr3j00007wvs7o5g4jd5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%882%20%E2%80%93%20(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%20XML%20%E3%82%92%E8%BF%BD%E5%8A%A0)/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%882%20%E2%80%93%20(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%20XML%20%E3%82%92%E8%BF%BD%E5%8A%A0)/">Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%882%20%E2%80%93%20(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%20XML%20%E3%82%92%E8%BF%BD%E5%8A%A0)/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 3 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
-こんにちは、Office 開発 サポート チームの中村です。
-今回の投稿は、前回に引き続き、リボンのカスタマイズについての投稿です。今回は、前回の投稿で紹介した 「a. OpenXML 形式のファイルにカスタム XML を追加してカスタマイズを行う」 方法について、サンプルの作成を通して手順とポイントの解説をしていきます。
-ファイルにカスタム XML を追加してリボンをカスタマイズする前回の投稿で説明したように、Excel, Word, PowerPoint の Office 2007 形式のファイルは Open XML 構造になっています。Open XML ファイル フォーマットでは、ファイル内容が記述された xml ファイルと、それらの関...
-        <p class="article-more-link">
-          <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%882%20%E2%80%93%20(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%20XML%20%E3%82%92%E8%BF%BD%E5%8A%A0)/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%882%20%E2%80%93%20(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%20XML%20%E3%82%92%E8%BF%BD%E5%8A%A0)/" data-id="cksx1e5ha0000hwvsa04x8ov5" class="article-share-link">Share</a>
       
       
     </footer>
