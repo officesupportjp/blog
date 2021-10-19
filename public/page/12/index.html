@@ -90,6 +90,56 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20365%20Sway%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E6%8C%87%E5%AE%9A%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%8D%98%E4%BD%8D%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+  <time datetime="2019-02-07T15:00:00.000Z" itemprop="datePublished">2019-02-08</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%20365%20Sway%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E6%8C%87%E5%AE%9A%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%8D%98%E4%BD%8D%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20365%20Sway%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E6%8C%87%E5%AE%9A%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%8D%98%E4%BD%8D%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+        
+    <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
+こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化/無効化する方法をご案内いたしました。本記事では、テナント全体のユーザーではなく、指定したユーザーのみのライセンスを有効化/無効化する方法をご案内いたします。  
+目次  
+1. Sway のライセンスについて2. PowerShell のインストール3. ユーザーリストの作成4. PowerShell で指定ユーザーのみを有効化する方法5. PowerShell で指定ユーザーのみを無効化する方法6. ユーザーリストをスクリプト...
+        <p class="article-more-link">
+          <a href="/blog/Office%20365%20Sway%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E6%8C%87%E5%AE%9A%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%8D%98%E4%BD%8D%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20365%20Sway%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E6%8C%87%E5%AE%9A%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%8D%98%E4%BD%8D%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckt0rl6in000084vs5pwu6ugy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Excel 2010 以降で条件付き書式を設定したブックへのコピー &amp; ペーストに時間がかかる" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/Excel%202010%20%E4%BB%A5%E9%99%8D%E3%81%A7%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E6%9B%B8%E5%BC%8F%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%97%E3%81%9F%E3%83%96%E3%83%83%E3%82%AF%E3%81%B8%E3%81%AE%E3%82%B3%E3%83%94%E3%83%BC%20&%20%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88%E3%81%AB%E6%99%82%E9%96%93%E3%81%8C%E3%81%8B%E3%81%8B%E3%82%8B/" class="article-date">
@@ -577,61 +627,11 @@
 
 
   
-    <article id="post-【お知らせ】Office サポートチーム フォーラムについて" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/%E3%80%90%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91Office%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%81%E3%83%BC%E3%83%A0%20%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
-  <time datetime="2019-02-03T15:00:00.000Z" itemprop="datePublished">2019-02-04</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/%E3%80%90%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91Office%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%81%E3%83%BC%E3%83%A0%20%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">【お知らせ】Office サポートチーム フォーラムについて</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/%E3%80%90%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91Office%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%81%E3%83%BC%E3%83%A0%20%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
-        
-    <time datetime="2019-02-20T15:00:00.000Z" itemprop="lastupdate">2019-02-21</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        いつも Microsoft Office をご愛顧いただき誠にありがとうございます。「Office サポートチーム」フォーラムの運用についてお知らせします。
-「Office サポートチーム」フォーラムは、Office サポートチームより、よくお問い合わせをいただく情報をサポートトピックとして、皆様よりご要望が多い情報を配信します。
-また、Office Support Team Blog JAPAN および Japan Office Developer Support Blog にて公開しておりました記事について、本フォーラムでの公開を進めております。対象の記事には以下のような注釈が冒頭にございます。  
-(※ YYYY 年 MM 月 DD 日に Office Support Team Blog JAPAN (または Japan Office Developer Support Blog) ...
-        <p class="article-more-link">
-          <a href="/blog/%E3%80%90%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91Office%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%81%E3%83%BC%E3%83%A0%20%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/%E3%80%90%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%E3%80%91Office%20%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E3%83%81%E3%83%BC%E3%83%A0%20%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A9%E3%83%A0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckt1hgfu400001ovs0cgr7weh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/blog/page/11/">Prev</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/10/">10</a><a class="page-number" href="/blog/page/11/">11</a><span class="page-number current">12</span>
+    <a class="extend prev" rel="prev" href="/blog/page/11/">Prev</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/10/">10</a><a class="page-number" href="/blog/page/11/">11</a><span class="page-number current">12</span><a class="page-number" href="/blog/page/13/">13</a><a class="extend next" rel="next" href="/blog/page/13/">Next</a>
   </nav>
 
 </section>
