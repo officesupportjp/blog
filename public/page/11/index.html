@@ -90,6 +90,110 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Office のプロセス インスタンス制御について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+  <time datetime="2019-02-20T15:00:00.000Z" itemprop="datePublished">2019-02-21</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%20%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office のプロセス インスタンス制御について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+        
+    <time datetime="2019-02-24T15:00:00.000Z" itemprop="lastupdate">2019-02-25</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2012 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。
+今回の投稿では、Office のプロセス インスタンス制御というテーマにて記載いたします。
+Office アプリケーションは MDI (Multi Document Interface) アプリケーションとして開発されており、1 つのプロセスで複数のドキュメントを扱えるように実装されています。
+様々な場合において、既存のプロセス インスタンスでドキュメントを開くか、新しいプロセスを起動してドキュメントを開くかを制御しています。
+この動作は、Office の自動化プログラムを実装するにあたり、色々と影響があるため、事前に把握しておいた方が良い内容と思い、ご紹介させてい...
+        <p class="article-more-link">
+          <a href="/blog/Office%20%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckt01z5770000osvs8bte12g0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/" class="article-date">
+  <time datetime="2019-02-20T15:00:00.000Z" itemprop="datePublished">2019-02-21</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/">Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/" class="article-date-single">    
+        
+    <time datetime="2020-07-05T15:00:00.000Z" itemprop="lastupdate">2020-07-06</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 12 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+先日、本ブログの更新再開をお知らせさせて頂きましたが、今回の投稿では Office クライアント開発に関する投稿の第一弾として、Excel 2013 から変更された Excel のウィンドウ管理方法について記載します。
+今回の内容は、Office クライアント製品を利用した開発を行う場合だけでなく、画面操作で Excel を操作する上でも影響がありますが、特に開発観点でチェックして頂きたいポイントを解説していきます。
+2018/4/4 Update3-1. に DisableMergeInstance に関する情報を追記しました。
+2020/7/6 Update3-1. に関連記事...
+        <p class="article-more-link">
+          <a href="/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/" data-id="ckt02w3p70000e4vs61sobhf5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
@@ -508,113 +612,6 @@
     </div>
     <footer class="article-footer">
       <a data-url="https://officesupportjp.github.io/blog/Excel%202016%20%E3%81%A7%E3%81%99%E3%81%90%E3%81%AB%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E6%9B%B8%E5%BC%8F%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" data-id="ckt19fica00005wvs50830qsg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 2010 に Ogl.dll の更新プログラムが適用されない" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/Office%202010%20%E3%81%AB%20Ogl.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date">
-  <time datetime="2019-02-03T15:00:00.000Z" itemprop="datePublished">2019-02-04</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%202010%20%E3%81%AB%20Ogl.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/">Office 2010 に Ogl.dll の更新プログラムが適用されない</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/Office%202010%20%E3%81%AB%20Ogl.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date-single">    
-        
-    <time datetime="2021-04-13T15:00:00.000Z" itemprop="lastupdate">2021-04-14</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 6 月 19 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
-こんにちは、Office サポートの町口です。  
-本記事では Office 2010 に Ogl.dll の更新プログラムが適用されない (適用の必要がない) パターンについて説明します。
-説明Windows Vista 以降の OS 上の Office 2010 の環境には、システム内に Ogl.dll 自体が存在しないため Ogl.dll の脆弱性はありません。  
-ご安心ください。  
-そのため、ご利用の環境の OS が Windows Vista 以降である場合は、Office 2010 のセキュリティ更新プログラムとして Ogl.dll が公開されても適用する必要はありません。
-2017 年 6 月以降にリリースされた Ogl.dll の更新...
-        <p class="article-more-link">
-          <a href="/blog/Office%202010%20%E3%81%AB%20Ogl.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%202010%20%E3%81%AB%20Ogl.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" data-id="ckt19nn8j00004kvs1s9paref" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 2010 に Wwlibcxm.dll の更新プログラムが適用されない" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/Office%202010%20%E3%81%AB%20Wwlibcxm.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date">
-  <time datetime="2019-02-03T15:00:00.000Z" itemprop="datePublished">2019-02-04</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%202010%20%E3%81%AB%20Wwlibcxm.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/">Office 2010 に Wwlibcxm.dll の更新プログラムが適用されない</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/Office%202010%20%E3%81%AB%20Wwlibcxm.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" class="article-date-single">    
-        
-    <time datetime="2021-04-13T15:00:00.000Z" itemprop="lastupdate">2021-04-14</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 6 月 19 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
-こんにちは、Office サポートの町口です。
-本記事ではOffice 2010 にWwlibcxm.dll の更新プログラムが適用されない(適用の必要がない) パターンについて説明します。
-説明Wwlibcxm.dll は、英語圏の特殊な環境のみに存在するコンポーネントです。
-日本で日本語版のOffice 2010 をご利用の場合には、システム内にこのdll は存在しないため、Wwlibcxm.dll の脆弱性はありません。  
-ご安心ください。
-そのため、システム内に Wwlibcxm.dll が存在しない場合には、Office 2010 のセキュリティ更新プログラムとしてWwlibcxm.dll が公開されても適用する必要はありません。
-2017 ...
-        <p class="article-more-link">
-          <a href="/blog/Office%202010%20%E3%81%AB%20Wwlibcxm.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%202010%20%E3%81%AB%20Wwlibcxm.dll%20%E3%81%AE%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E3%81%8C%E9%81%A9%E7%94%A8%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/" data-id="ckt1gcd3c00009gvs0k0b2y0y" class="article-share-link">Share</a>
       
       
     </footer>
