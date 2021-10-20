@@ -8,12 +8,12 @@ lastupdate: 2021-04-23
 
 今回の投稿では、MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について説明します。
 
-[MSI 版の Office 2016 とは？](https://social.msdn.microsoft.com/Forums/ja-JP/57e5d81e-ef69-4c1f-9ef0-932d03d0e7ce/1246312452124831246323455348922441824335-c2r-12392-windows?forum=officesupportteamja "クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法")
+[MSI 版の Office 2016 とは？](https://officesupportjp.github.io/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E5%BD%A2%E5%BC%8F%20(C2R)%20%E3%81%A8%20Windows%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F%20(MSI)%20%E3%82%92%E8%A6%8B%E5%88%86%E3%81%91%E3%82%8B%E6%96%B9%E6%B3%95/)
 
 以下の Blog 記事のとおり、「SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない」現象についてお問い合わせいただく場合があります。
 
 Title : SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について  
-URL : [https://social.msdn.microsoft.com/Forums/ja-JP/ea318b53-5f30-4a35-b21c-64ac83be977e/sharepoint-server-1239412393-webdav?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/ea318b53-5f30-4a35-b21c-64ac83be977e/sharepoint-server-1239412393-webdav?forum=officesupportteamja)  
+URL : [https://officesupportjp.github.io/blog/SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について](https://officesupportjp.github.io/blog/SharePoint%20Server%20%E3%81%AA%E3%81%A9%20WebDAV%20%E3%81%8C%E6%9C%89%E5%8A%B9%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)  
 
 上記の Blog 記事の方法では改善せず、ご利用されているのが MSI 版の Office 2016 の場合、セキュリティ更新のみ等、限定的に更新プログラムを適用していることに起因している可能性があります。
 
