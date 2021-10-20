@@ -70,7 +70,7 @@ Title : Windows デバイスの Office 2013 の先進認証を有効にする[]
 **\- 関連記事**  
   
 Title : Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について  
-URL : [https://social.msdn.microsoft.com/Forums/ja-JP/40ba1467-0b54-48d5-9db0-4d3aedca2b0a/office?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/40ba1467-0b54-48d5-9db0-4d3aedca2b0a/office?forum=officesupportteamja)
+URL : [https://officesupportjp.github.io/blog/Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%A7%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E6%8E%A5%E7%B6%9A%E3%81%8C%E3%81%AA%E3%81%84%E6%97%A8%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
   
 
