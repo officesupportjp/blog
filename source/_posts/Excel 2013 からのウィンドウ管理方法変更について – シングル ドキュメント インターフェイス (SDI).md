@@ -76,7 +76,7 @@ Excel 2010 以前から、既に起動されている Excel プロセスがあ�
 Excel 2010 までの動作については、以下の過去投稿で説明しています。  
   
 タイトル : Office のプロセス インスタンス制御について  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/6741b589-b14b-4dca-b213-6be567d9cd0e/office-1239812503125251247512473?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/6741b589-b14b-4dca-b213-6be567d9cd0e/office-1239812503125251247512473?forum=officesupportteamja)
+アドレス : [https://officesupportjp.github.io/blog/Office のプロセス インスタンス制御について/](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
 Excel 2013 からは、SDI 化に伴って、下表の 「No.1 プログラムを起動する」のシナリオの動作が変更されました。Excel 2010 では新規プロセスが使用されていましたが、Excel 2013 以降、既存プロセスが使用されるよう変更されました。なお、下表の各操作の詳細は、先述の過去投稿をご参照ください。
 
@@ -126,10 +126,10 @@ Excel 2010 以前からの動作ですが、No.2 や No.4 に相当する動作�
 プロセスの統合・分離に関連する以下のフォーラム記事も公開しています。
 
 Office プロセスを自プログラム専用にすることはできません  
-[https://social.msdn.microsoft.com/Forums/ja-JP/f3f16afa-0126-4054-a58e-a2e77986cd80](https://social.msdn.microsoft.com/Forums/ja-JP/f3f16afa-0126-4054-a58e-a2e77986cd80)  
+[https://officesupportjp.github.io/blog/Office プロセスを自プログラム専用にすることはできません/](https://officesupportjp.github.io/blog/Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E8%87%AA%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%B0%82%E7%94%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/)  
   
 Excel でブックを開くプロセスを統合するメリット  
-[https://social.msdn.microsoft.com/Forums/ja-JP/bc946302-91ff-4fdd-b798-b7b7a06c5391](https://social.msdn.microsoft.com/Forums/ja-JP/bc946302-91ff-4fdd-b798-b7b7a06c5391)
+[https://officesupportjp.github.io/blog/Excel でブックを開くプロセスを統合するメリット/](https://officesupportjp.github.io/blog/Excel%20%E3%81%A7%E3%83%96%E3%83%83%E3%82%AF%E3%82%92%E9%96%8B%E3%81%8F%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E7%B5%B1%E5%90%88%E3%81%99%E3%82%8B%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88/)
 
   
 

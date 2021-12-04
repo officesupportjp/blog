@@ -17,7 +17,7 @@ date: 2019-02-28
 前置きが少し長くなりましたが、私の連載においては、Office　アプリケーションで作成されたファイルをコード上から操作するテクノロジについて整理する予定です。  
 既にご存知の方も多いとは思いますが、Office を操作するためには、主に以下の技術を利用することができます。
 
- **[1\. Office PIA 経由で、Office 製品をオートメーションすることによる、Office オブジェクトモデルの操作](https://social.msdn.microsoft.com/Forums/ja-JP/ab2638ca-d7cf-4947-8255-0418daa5f35e/1-office-pia-office-office-)**
+ **[1\. Office PIA 経由で、Office 製品をオートメーションすることによる、Office オブジェクトモデルの操作](https://officesupportjp.github.io/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/)**
 
  **2\. レイトバインディングによる、Office オブジェクトモデルの操作**
 

@@ -16,7 +16,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/image1.png">
 <meta property="article:published_time" content="2019-02-27T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-19T12:10:47.392Z">
+<meta property="article:modified_time" content="2021-12-04T06:19:36.481Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -128,7 +128,7 @@
 <p>Microsoft Office では、プライマリ相互運用機能アセンブリ (PIA) と呼ばれるライブラリが用意されており(以下Office PIA)、これを使用することで、Office アプリケーションによって公開されている COM オブジェクトを使ってOfficeを外部から操作するOffice ソリューションを開発することができます。 利用できるオブジェクトやメソッドの名前はほぼVBA と一緒であり、従来VBA マクロに限定されていたOffice 用のオブジェクトが、外部アプリケーションからアクセスできるインターフェースとして公開されているということになります。</p>
 <p>このテクノロジを実装した場合の実行条件は、クライアント環境に、操作対象の Officeアプリケーションがインストールされていて、かつ対象バージョン以降の.NET Framework がインストールされていることと、Office PIA がGAC(グローバルアセンブリキャッシュ)　に登録されていることになりますが、詳細については、次回以降に掘り下げたいと思います。</p>
 <p>さて、Visual　Studio にてアプリケーションを作成し、参照設定から、Office のタイプライブラリ経由で Office　製品のインスタンスを生成してコーディングを始めると、インテリセンス等でも確認できる通り、必要なオブジェクトを取得すれば、VBA と同じ感覚でプログラミングすることができます。 基本的には、Office アプリケーション上で、ユーザー インターフェイスを介して手動で実行する機能のほぼすべてを、実装することができます。</p>
-<p>注意点としては、先日の森さんの投稿<a href="https://social.msdn.microsoft.com/Forums/ja-JP/5deec897-a897-404b-a610-f7d894fde1b3/office" target="_blank" rel="noopener">(Office オートメーションで割り当てたオブジェクトを解放する - Part1)</a> のようなCOM オブジェクトを操作しているという意識を持って、オブジェクトを明示的に破棄するなどの処理を行ったり、イベントを適切に扱う等の考慮事項が発生します。さて、実際にOffice アプリケーションのイベントを扱うサンプルをご紹介しましょう。</p>
+<p>注意点としては、先日の森さんの投稿<a href="https://officesupportjp.github.io/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/">(Office オートメーションで割り当てたオブジェクトを解放する - Part1)</a> のようなCOM オブジェクトを操作しているという意識を持って、オブジェクトを明示的に破棄するなどの処理を行ったり、イベントを適切に扱う等の考慮事項が発生します。さて、実際にOffice アプリケーションのイベントを扱うサンプルをご紹介しましょう。</p>
 <p>今回制御したいのは、Excel ワークブックが閉じる直前に発生するWorkbookBeforeCloseイベントです。</p>
 <p>AppEvents_Event.WorkbookBeforeClose イベント<br><a href="http://msdn.microsoft.com/ja-jp/library/microsoft.office.interop.excel.appevents_event.workbookbeforeclose(office.11).aspx" target="_blank" rel="noopener">http://msdn.microsoft.com/ja-jp/library/microsoft.office.interop.excel.appevents_event.workbookbeforeclose(office.11).aspx</a></p>
 <p>VB.NET の場合には、WithEvents を使って変数を定義すると、VBA のイベント共有と同じように、WithEvents キーワードで宣言されたオブジェクトが発生させたイベントをそのイベントの Handles ステートメントを持つ任意のイベントにて処理することが可能となります。　</p>

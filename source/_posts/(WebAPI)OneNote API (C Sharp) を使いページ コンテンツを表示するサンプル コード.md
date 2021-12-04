@@ -15,7 +15,7 @@ date: 2019-03-01
 
 ### **事前準備**
 
-[以前の投稿](https://social.msdn.microsoft.com/Forums/ja-JP/21efd6e2-220a-48e8-b48f-9330ee90c414/webapioauth-bearer-token-access-token?forum=officesupportteamja)をもとに、Azure AD にアプリケーションの登録を完了してください。少なくとも以下のデリゲートされたアクセス許可が必要です。
+[以前の投稿](https://officesupportjp.github.io/blog/(WebAPI)OAuth%20Bearer%20Token%20(Access%20Token)%20%E3%81%AE%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)をもとに、Azure AD にアプリケーションの登録を完了してください。少なくとも以下のデリゲートされたアクセス許可が必要です。
 
 ・View OneNote Notebooks
 

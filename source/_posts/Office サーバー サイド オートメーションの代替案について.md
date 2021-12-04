@@ -10,7 +10,7 @@ date: 2019-02-28
 今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
 
 タイトル : Office サーバー サイド オートメーションの危険性について  
-アドレス: [https://social.msdn.microsoft.com/Forums/ja-JP/e7a5c553-e01f-41c9-a277-40fdbb8e198e/office-12469125401249612540-124691245212489](https://social.msdn.microsoft.com/Forums/ja-JP/e7a5c553-e01f-41c9-a277-40fdbb8e198e/office-12469125401249612540-124691245212489)
+アドレス: [https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/](https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
 上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされていません。
 

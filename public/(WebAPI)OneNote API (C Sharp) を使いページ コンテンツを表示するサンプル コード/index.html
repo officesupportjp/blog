@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/(WebAPI)OneNote%20API%20(C%20Sharp)%20%E3%82%92%E4%BD%BF%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8%20%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%20%E3%82%B3%E3%83%BC%E3%83%89/image4.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/(WebAPI)OneNote%20API%20(C%20Sharp)%20%E3%82%92%E4%BD%BF%E3%81%84%E3%83%9A%E3%83%BC%E3%82%B8%20%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%99%E3%82%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%20%E3%82%B3%E3%83%BC%E3%83%89/image5.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-19T08:42:27.750Z">
+<meta property="article:modified_time" content="2021-12-04T06:01:15.703Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -131,7 +131,7 @@
 <p>今回の投稿では、OneNote API を使用して、ノート、セクション、ページを選択し、コンテンツを表示するプログラムを、実際に C# で開発するエクスペリエンスをご紹介します。</p>
 <p>ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。本投稿では、現実的な実装シナリオを重視するよりも、OneNote API を理解するためになるべくシンプルなコードにすることを心掛けています。例外処理なども含めていませんので、実際にコーディングする際には、あくまでこのコードを参考する形でご検討ください。</p>
 <p>現在のところ Microsoft Graph において OneNote API はベータ版のみの提供となります。ベータ版の API は本番環境における使用はサポートされません。そのため、代わりに OneNote エンドポイント (<a href="https://www.onenote.com" target="_blank" rel="noopener">https://www.onenote.com</a>) 配下に要求を実行する実装コードで実現しております。</p>
-<h3 id="事前準備"><a href="#事前準備" class="headerlink" title="事前準備"></a><strong>事前準備</strong></h3><p><a href="https://social.msdn.microsoft.com/Forums/ja-JP/21efd6e2-220a-48e8-b48f-9330ee90c414/webapioauth-bearer-token-access-token?forum=officesupportteamja" target="_blank" rel="noopener">以前の投稿</a>をもとに、Azure AD にアプリケーションの登録を完了してください。少なくとも以下のデリゲートされたアクセス許可が必要です。</p>
+<h3 id="事前準備"><a href="#事前準備" class="headerlink" title="事前準備"></a><strong>事前準備</strong></h3><p><a href="https://officesupportjp.github.io/blog/(WebAPI)OAuth%20Bearer%20Token%20(Access%20Token)%20%E3%81%AE%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">以前の投稿</a>をもとに、Azure AD にアプリケーションの登録を完了してください。少なくとも以下のデリゲートされたアクセス許可が必要です。</p>
 <p>・View OneNote Notebooks</p>
 <p><img src="image1.png" alt=""></p>
 <p>その上で、クライアント ID とリダイレクト URI を控えておいてください。</p>

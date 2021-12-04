@@ -31,7 +31,7 @@ Forms のライセンスは、現在 Office 365 Education に含まれており�
 **2\. PowerShell を使用して一括で有効化する方法**  
 PowerShell を利用するには、以下のページで PowerShell をインストールし、事前設定を行う必要があります。  
 タイトル : PowerShell の導入について  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/d3cf96bd-36e6-4cae-b3d1-24e210b9263d](https://social.msdn.microsoft.com/Forums/ja-JP/d3cf96bd-36e6-4cae-b3d1-24e210b9263d)  
+アドレス : [https://officesupportjp.github.io/blog/PowerShell の導入について/](https://officesupportjp.github.io/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)  
 Power Shell を導入後、下記の有効化のスクリプト内容をコピーし、ps1 ファイルとして保存します。(例 : EnableFormsLicense.ps1)  
 
 ```

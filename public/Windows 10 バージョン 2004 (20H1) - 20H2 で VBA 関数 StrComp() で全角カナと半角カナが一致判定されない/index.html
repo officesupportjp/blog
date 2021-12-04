@@ -15,7 +15,7 @@
 <meta property="og:description" content="2020&#x2F;11&#x2F;24 Update「4. その他の発生シナリオ」セクションを追加し、Excel での検索・置換 (Find &#x2F; Replace) での発生を追記しました。   こんにちは、Office サポート チームの中村です。 先日、以下の記事で同じ原因により Access フォームで発生する問題について記載していますが、VBA 関数 StrComp() も影響を受けることが分かったため、本記">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-11-11T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-08T05:38:28.954Z">
+<meta property="article:modified_time" content="2021-12-04T06:26:18.118Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -124,8 +124,7 @@
 <p>こんにちは、Office サポート チームの中村です。</p>
 <p>先日、以下の記事で同じ原因により Access フォームで発生する問題について記載していますが、VBA 関数 StrComp() も影響を受けることが分かったため、本記事にて詳細をご案内します。  </p>
 <p><strong>関連記事</strong></p>
-<p>Windows 10 バージョン 2004 (20H1) / 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する<br><a href="https://social.msdn.microsoft.com/Forums/ja-JP/4e6223e2-34d0-4a5f-bb61-109bc28040b6" target="_blank" rel="noopener">https://social.msdn.microsoft.com/Forums/ja-JP/4e6223e2-34d0-4a5f-bb61-109bc28040b6  
-</a>  </p>
+<p>Windows 10 バージョン 2004 (20H1) / 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する<br><a href="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/">https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/</a>  </p>
 <h4 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a><strong>1. 現象</strong></h4><p>VBA には、StrComp() という 2 つの文字列が一致するかを比較する関数が用意されています。</p>
 <p>StrComp 関数<br><a href="https://docs.microsoft.com/ja-jp/office/vba/language/reference/user-interface-help/strcomp-function" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/language/reference/user-interface-help/strcomp-function</a>  </p>
 <p>例えば以下のサンプル コードのように、濁点または半濁点を含む文字列を、一方は全角、一方半角で比較すると、以前の OS では一致とみなされ 0 が返っていました。</p>
@@ -191,7 +190,7 @@ End Sub</code></pre><p>基本的には、上記の a. / b. いずれかの方法
 <p><strong>d. レジストリを使用して NLS バージョンを以前のバージョン (6.2) に変更する</strong></p>
 <p>システム全体で影響を受けるため、Office 以外のアプリケーションも以前の NLS バージョンを使用するようになります。アプリケーションの実装やビジネスロジックによっては、ソートの整合が崩れたり、データが不正となる可能性があります。</p>
 <p>c. / d. の具体的な設定方法や注意点については、既に公開された Access フォームの現象をご案内する以下のフォーラム記事で説明していますので、こちらを参照してください。</p>
-<p>Windows 10 バージョン 2004 (20H1) / 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する<br><a href="https://social.msdn.microsoft.com/Forums/ja-JP/4e6223e2-34d0-4a5f-bb61-109bc28040b6" target="_blank" rel="noopener">https://social.msdn.microsoft.com/Forums/ja-JP/4e6223e2-34d0-4a5f-bb61-109bc28040b6</a></p>
+<p>Windows 10 バージョン 2004 (20H1) / 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する<br><a href="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/">https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/</a></p>
 <p>※ 参照箇所<br>c 案 : 3-1. Access アプリケーション観点 - Access の EXE (MSACCESS.EXE) について、”Windows 8” の互換設定を行う<br>d 案 : 3-3. OS 観点 – Windows OS の NLS バージョンを 6.3 から 6.2 に変更する  </p>
 <h4 id="4-その他の発生シナリオ"><a href="#4-その他の発生シナリオ" class="headerlink" title="4. その他の発生シナリオ"></a><strong>4. その他の発生シナリオ</strong></h4><p>ここまで、一般に利用頻度の比較的高い StrComp() での発生シナリオを中心に説明してきましたが、内部的に文字の比較を行う以下の機能でも同様の問題による現象が発生します。  </p>
 <p>・Range.Find() / Range.FindNext() / Range.FindPrevious() メソッドによる検索や Range.Replace() メソッドによる置換で、濁点・半濁点を含む半角カナと全角カナが一致判定されません。<br>※ 手動での検索や置換も同様です。</p>

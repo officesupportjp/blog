@@ -30,7 +30,7 @@ Sway のライセンスはユーザー単位で有効化/無効化を設定し�
 PowerShell を利用するには、以下のページに従って PowerShell の環境を構築する必要があります。  
   
 タイトル : PowerShell の導入について  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/d3cf96bd-36e6-4cae-b3d1-24e210b9263d](https://social.msdn.microsoft.com/Forums/ja-JP/d3cf96bd-36e6-4cae-b3d1-24e210b9263d)  
+アドレス : [https://officesupportjp.github.io/blog/PowerShell の導入について/](https://officesupportjp.github.io/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)  
   
   
 **3\. ユーザーリストの作成**  
@@ -202,4 +202,4 @@ $list = Get-Content "UserList.txt"
   
 **7\. 関連情報**  
 タイトル : Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/fe873f27-bc36-4333-9697-836ed93144a8/office-365-sway-12434-powershell?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/fe873f27-bc36-4333-9697-836ed93144a8/office-365-sway-12434-powershell?forum=officesupportteamja)
+アドレス : [https://officesupportjp.github.io/blog/Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について/](https://officesupportjp.github.io/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)

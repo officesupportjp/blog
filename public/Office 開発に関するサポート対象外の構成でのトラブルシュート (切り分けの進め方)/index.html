@@ -15,7 +15,7 @@
 <meta property="og:description" content="(※ 2017 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 ユーザーの皆様にサポート サービスをご愛顧頂いていることに厚く御礼申し上げます。 私たち Office サポート チームでは、日々、お客様から様々なお問い合わせを頂いておりますが、ご質問の内">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-29T11:50:06.749Z">
+<meta property="article:modified_time" content="2021-12-04T05:00:22.416Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -132,7 +132,7 @@
 <p><a href="#1-サーバーサイド-オートメーションでの現象">1. サーバーサイド オートメーションでの現象</a><br><a href="#2-Windows-Vista-Office-2007-以前での現象">2. Windows Vista / Office 2007 以前での現象</a><br><a href="#3-Visual-Basic-6-0-アプリケーションでの現象">3. Visual Basic 6.0 アプリケーションでの現象</a><br><a href="#4-サードパーティ製品との連携">4. サードパーティ製品との連携</a><br><a href="#5-複雑なプログラムでの現象">5. 複雑なプログラムでの現象</a><br><a href="#6-パフォーマンス-チューニング">6. パフォーマンス チューニング</a></p>
 <h4 id="1-サーバーサイド-オートメーションでの現象"><a href="#1-サーバーサイド-オートメーションでの現象" class="headerlink" title="1. サーバーサイド オートメーションでの現象"></a><strong>1. サーバーサイド</strong> <strong>オートメーションでの現象</strong></h4><p>このブログでも何度か取り上げていますが、Office 製品はサーバーサイド構成で利用することをサポートしていません。これについては、詳細を以下の公開情報に記載しています。</p>
 <p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a href="https://support.microsoft.com/ja-jp/help/257757" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/257757</a></p>
-<p>サーバーサイドと表現していますが、これは、無人の非対話型クライアント アプリケーションからの Office オートメーションを意味しています。Office がサーバーサイド オートメーション構成に該当するかどうかの最初のポイントは、<strong>Office アプリケーションを OS にログインしたユーザーの権限で起動しているかどうか</strong>です (実行ユーザーを指定している場合も、ユーザープロファイルや対話デスクトップの状態など、ユーザーが OS ログインしている状態とは異なる部分があり、Office の設計前提を満たしていないため、同様にサポート外の構成です) 。<a href="https://social.msdn.microsoft.com/Forums/ja-JP/e7a5c553-e01f-41c9-a277-40fdbb8e198e/office-12469125401249612540-124691245212489" target="_blank" rel="noopener">過去の投稿</a>で例を挙げながら詳細を説明していますので、併せてご確認ください。</p>
+<p>サーバーサイドと表現していますが、これは、無人の非対話型クライアント アプリケーションからの Office オートメーションを意味しています。Office がサーバーサイド オートメーション構成に該当するかどうかの最初のポイントは、<strong>Office アプリケーションを OS にログインしたユーザーの権限で起動しているかどうか</strong>です (実行ユーザーを指定している場合も、ユーザープロファイルや対話デスクトップの状態など、ユーザーが OS ログインしている状態とは異なる部分があり、Office の設計前提を満たしていないため、同様にサポート外の構成です) 。<a href="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">過去の投稿</a>で例を挙げながら詳細を説明していますので、併せてご確認ください。</p>
 <p><strong>切り分け方法</strong></p>
 <p>サーバーサイド オートメーションでの利用時にエラーが発生するなどのトラブルに直面した場合は、以下の切り分けを行います。</p>
 <ol>
@@ -142,7 +142,7 @@
 <p>なお、DCOM の構成については、変更していないことが前提となります。a や b で現象が発生する場合は、この切り分け後の構成についてサポート サービスをご提供できます。(a の方が、プログラムの実装の問題でないことが確認できますので、より調査が容易です。)</p>
 <p><strong>対応方法</strong></p>
 <p>切り分けの結果、a や b では現象が再現しない場合、サーバーサイド オートメーション独自の問題である可能性があります。現象に開発段階で直面している場合は、構成を再検討頂くことをお勧めします。以下のブログ記事で、代替案についていくつかご案内していますので、参考として頂ければ幸いです。</p>
-<p>タイトル : Office サーバー サイド オートメーションの代替案について<br>アドレス : <a href="https://social.msdn.microsoft.com/Forums/ja-JP/48c5da64-09e5-422c-9699-1dfed44cee07/office-12469125401249612540-124691245212489" target="_blank" rel="noopener">https://social.msdn.microsoft.com/Forums/ja-JP/48c5da64-09e5-422c-9699-1dfed44cee07/office-12469125401249612540-124691245212489</a></p>
+<p>タイトル : Office サーバー サイド オートメーションの代替案について<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの代替案について/</a></p>
 <p><span style="color:#ff0000"><strong>2018/5/7 Update</strong></span></p>
 <h4 id="2-Windows-Vista-Office-2007-以前での現象"><a href="#2-Windows-Vista-Office-2007-以前での現象" class="headerlink" title="2. Windows Vista / Office 2007 以前での現象"></a><strong>2. Windows Vista / Office 2007</strong> <strong>以前での現象</strong></h4><p>2018 年 5 月 7 日現在、サポート対象の Office 製品バージョンは Office 2010 以降です。また、Windows OS は Windows 7 およびサーバー OS では Windows Server 2008 以降をサポートしています。これ以前の Office や OS で生じたエラーについては、既にサポートを終了していますので、サポートをお受けできません。Microsoft 製品のサポート ライフサイクルについては、以下のサイトで検索できます。</p>
 <p>タイトル : 製品のライフサイクルの検索<br>アドレス : <a href="https://support.microsoft.com/ja-jp/lifecycle/search" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/lifecycle/search</a></p>
@@ -177,8 +177,8 @@
 <p>タイトル : プロフェッショナル サポートの対応範囲 Q&amp;A<br>アドレス : <a href="https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx</a><br>該当箇所 : パフォーマンス / チューニング</p>
 <p>プレミア サポートでは、パフォーマンス チューニングについてのご支援も承っております。</p>
 <p>また、以下のブログ記事でお客様自身でのパフォーマンスに関する調査の進め方をご紹介しています。最終的にはお客様自身で判断が難しい部分もありますが、可能な範囲で調査を進めたいという場合にはご参照いただければ幸いです。</p>
-<p>タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)<br>アドレス : <a href="https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb/office" target="_blank" rel="noopener">https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb/office</a></p>
-<p>タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 2 : ボトルネックの特定)<br>アドレス : <a href="https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c/office" target="_blank" rel="noopener">https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c/office</a></p>
+<p>タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%201%EF%BC%9A%E6%A6%82%E8%A6%81%E3%81%A8%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95)/">https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 1：概要と対処方法)/</a></p>
+<p>タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 2 : ボトルネックの特定)<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/">https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)/</a></p>
 <p><strong>切り分け方法</strong></p>
 <p>お客様コードのロジックを含む見直しが必要な調査はお受けできませんが、特定のメソッドが非常に遅いといった場合には、代替となる実装方法や、Office のオプション設定の工夫、処理対象のファイル構造の見直しなどのご提案を差し上げられる場合があります。</p>
 <p>「<strong>5.</strong> <strong>複雑なプログラムでの現象</strong>」と同じように、プログラムの中のどこで時間がかかっているかをデバッグ ログなどから確認していただき、ボトルネックとなる特定の関数についてのお問い合わせを頂ければ幸いです。</p>

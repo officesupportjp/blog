@@ -7,7 +7,7 @@ date: 2019-02-22
 
 こんにちは、Office 開発 サポート チームです。
 
-[前回の投稿](https://social.msdn.microsoft.com/Forums/ja-JP/bc946302-91ff-4fdd-b798-b7b7a06c5391/excel?forum=officesupportteamja)で Excel のプロセスを統合することについて記載しましたが、今回はこれに関連し、Office オートメーションを行うプログラムを開発するときにプログラムから操作する Office プロセスを自分のプログラム専用にできるか、という話を記載します。
+[前回の投稿](https://officesupportjp.github.io/blog/Excel%20%E3%81%A7%E3%83%96%E3%83%83%E3%82%AF%E3%82%92%E9%96%8B%E3%81%8F%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E7%B5%B1%E5%90%88%E3%81%99%E3%82%8B%E3%83%A1%E3%83%AA%E3%83%83%E3%83%88/)で Excel のプロセスを統合することについて記載しましたが、今回はこれに関連し、Office オートメーションを行うプログラムを開発するときにプログラムから操作する Office プロセスを自分のプログラム専用にできるか、という話を記載します。
 
 Office オートメーションを行うプログラム開発を行う際、プログラムの処理が行いやすいよう、Office アプリケーションのプロパティを変更したり、画面を非表示にすることがあります。このとき、プログラムから行うプロパティ設定や画面の状態を、ユーザーが開いている他の Office ファイルには反映させたくないといった理由から、「ユーザーが起動する Office とプログラムが起動する Office でプロセスを分けたい」というご相談を頂くことがあります。
 
@@ -18,10 +18,10 @@ Office オートメーションを行うプログラム開発を行う際、プ�
 過去の投稿)
 
 タイトル : Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/a74ebdc3-9c37-46a1-8521-3cac24965e18/excel-2013?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/a74ebdc3-9c37-46a1-8521-3cac24965e18/excel-2013?forum=officesupportteamja)
+アドレス : [https://officesupportjp.github.io/blog/Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)/](https://officesupportjp.github.io/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/)
 
 タイトル : Office のプロセス インスタンス制御について  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/6741b589-b14b-4dca-b213-6be567d9cd0e/office-1239812503125251247512473?forum=officesupportteamja](https://social.msdn.microsoft.com/Forums/ja-JP/6741b589-b14b-4dca-b213-6be567d9cd0e/office-1239812503125251247512473?forum=officesupportteamja)
+アドレス : [https://officesupportjp.github.io/blog/Office のプロセス インスタンス制御について/](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9%E5%88%B6%E5%BE%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
 過去投稿でご案内している Excel の /x コマンドライン スイッチのように、新規プロセスで起動するよう変更できる起動方法もありますが、ショートカットをこのように変更しても、ユーザーが直接 Office 実行モジュール (Excel であれば excel.exe) を起動したり、または他の Office オートメーションを行うプログラムが Process.Start で Office プログラムを起動することもあり得ます。また、OLE 埋め込みオブジェクトのように新規プロセスで起動する方法が用意されていない起動方法もあります。
 

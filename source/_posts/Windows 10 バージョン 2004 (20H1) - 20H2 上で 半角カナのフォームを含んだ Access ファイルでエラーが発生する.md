@@ -79,9 +79,9 @@ Office14 : Office 2010
 
 \-ご参考
 
-タイトル : クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法
+タイトル : クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法  
+URL : [https://officesupportjp.github.io/blog/クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法/](https://officesupportjp.github.io/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E5%BD%A2%E5%BC%8F%20(C2R)%20%E3%81%A8%20Windows%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F%20(MSI)%20%E3%82%92%E8%A6%8B%E5%88%86%E3%81%91%E3%82%8B%E6%96%B9%E6%B3%95/)
 
-URL : [https://social.msdn.microsoft.com/Forums/ja-JP/57e5d81e-ef69-4c1f-9ef0-932d03d0e7ce/1246312452124831246323455348922441824335-c2r-12392-windows](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsocial.msdn.microsoft.com%2FForums%2Fja-JP%2F57e5d81e-ef69-4c1f-9ef0-932d03d0e7ce%2F1246312452124831246323455348922441824335-c2r-12392-windows&data=02%7C01%7Cmasamura%40microsoft.com%7C3ad5c5de6c1348d728f508d847f6a5de%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637338471963470942&sdata=td%2FgO%2BMeA2HHyTyR%2FW%2FbrJHzTmnVb2Anp2JvIW9mQ6Y%3D&reserved=0)
 
 <設定変更方法 (C2R版 Office の場合)>
 

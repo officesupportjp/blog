@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/(%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20VSTO)%20.NET%20%E3%81%A7%E3%81%AE%20Office%20%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%20(%E6%9C%80%E6%96%B0%E7%89%88)/image1.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/(%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20VSTO)%20.NET%20%E3%81%A7%E3%81%AE%20Office%20%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%20(%E6%9C%80%E6%96%B0%E7%89%88)/image2.png">
 <meta property="article:published_time" content="2019-02-27T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-19T12:00:32.812Z">
+<meta property="article:modified_time" content="2021-12-04T06:16:42.157Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -126,7 +126,7 @@
         <p>(※ 2017 年 2 月 7 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office 開発 サポート チームの中村です。</p>
 <p>今回は、C# や VB.NET を使って .NET Framework 上で動作する Office をオートメーションするプログラムや、VSTO でOffice ソリューション (アドインや、プログラムが組み込まれた Office ファイル) を作成するときに必要な環境構成について記載します。</p>
-<p><a href="https://social.msdn.microsoft.com/Forums/ja-JP/7d21b81b-5c3d-4b29-9e47-032fd963125d/office12477125221251712540124711251912531382833033026178123983828" target="_blank" rel="noopener">過去の投稿</a>で、当時の製品でのバージョン選定について記載していましたが、古い情報になってしまいましたので、本記事では、現在サポートされる製品バージョンについての最新情報を記載したいと思います。動作の仕組みの説明などは、<a href="https://social.msdn.microsoft.com/Forums/ja-JP/7d21b81b-5c3d-4b29-9e47-032fd963125d/office12477125221251712540124711251912531382833033026178123983828" target="_blank" rel="noopener">過去の投稿</a>で詳しく説明していますのでぜひ合わせてご参照ください。</p>
+<p><a href="https://officesupportjp.github.io/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">過去の投稿</a>で、当時の製品でのバージョン選定について記載していましたが、古い情報になってしまいましたので、本記事では、現在サポートされる製品バージョンについての最新情報を記載したいと思います。動作の仕組みの説明などは、<a href="https://officesupportjp.github.io/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">過去の投稿</a>で詳しく説明していますのでぜひ合わせてご参照ください。</p>
 <p><span style="color:#ff0000"><strong>2017/7/14 Update</strong></span><br><span style="color:#339966">Visual Studio 2017 と .NET Framework 4.7 の情報を追記しました。</span></p>
 <p><span style="color:#ff0000"><strong>2018/1/16 Update</strong></span><br><span style="color:#339966">「表2. VSTO 開発環境の組み合わせ」の実行環境で利用される VSTO Runtime と Office のバージョンの組み合わせを表内に追記しました。</span></p>
 <p><strong>目次</strong></p>

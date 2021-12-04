@@ -16,7 +16,7 @@ date: 2019-02-28
 新しい Visual Studio と Office バージョンについての記事を以下に投稿しました。
 
 タイトル : \[オートメーション / VSTO\] .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/b6ce3e29-3859-4344-9535-c8d89e4cf778/-vsto-net-office-](https://social.msdn.microsoft.com/Forums/ja-JP/b6ce3e29-3859-4344-9535-c8d89e4cf778/-vsto-net-office-)
+アドレス : [https://officesupportjp.github.io/blog/(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)/](https://officesupportjp.github.io/blog/(%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20VSTO)%20.NET%20%E3%81%A7%E3%81%AE%20Office%20%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%20(%E6%9C%80%E6%96%B0%E7%89%88)/)
 
 **目次**
 **1. 導入 - 開発環境に必要なもの**  

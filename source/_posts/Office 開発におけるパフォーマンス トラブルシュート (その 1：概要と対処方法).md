@@ -15,7 +15,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
 今回は全体の流れと Office におけるパフォーマンスの考え方などを紹介しています。ボトルネックの特定手法については、以下のパート 2 の記事をご参照ください。
 
 タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 2 : ボトルネックの特定)  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c/office](https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c/office)
+アドレス : [https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)/](https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/)
 
 **目次**  
 [1\. はじめに : Office におけるパフォーマンス](#1-はじめに-Office-におけるパフォーマンス)  
@@ -136,10 +136,10 @@ Office のオートメーションにおいては、同じプログラムを VBA
 *   .NET プログラムの場合は、以下の資料で説明するように適切なタイミングで COM オブジェクトの解放が必要です。ガベージ コレクトはパフォーマンス コストの高い処理のため、これを適宜呼び出すことによって、(適切な実装が行われた) .NET プログラムではプログラム全体としてパフォーマンスが低下します。
     
     タイトル : Office オートメーションで割り当てたオブジェクトを解放する – Part1  
-    アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/5deec897-a897-404b-a610-f7d894fde1b3/office](https://social.msdn.microsoft.com/Forums/ja-JP/5deec897-a897-404b-a610-f7d894fde1b3/office)
+    アドレス : [https://officesupportjp.github.io/blog/Office オートメーションで割り当てたオブジェクトを解放する – Part1/](https://officesupportjp.github.io/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/)
     
     タイトル : Office オートメーションで割り当てたオブジェクトを解放する – Part2  
-    アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/0d9c6273-bade-4f6a-a0de-5adb748d15eb/office-part2](https://social.msdn.microsoft.com/Forums/ja-JP/0d9c6273-bade-4f6a-a0de-5adb748d15eb/office-part2)
+    アドレス : [https://officesupportjp.github.io/blog/Office オートメーションで割り当てたオブジェクトを解放する - Part2/](https://officesupportjp.github.io/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/)
     
 
 以上のような理由から、もし既存コードが他の言語であるなら、VBA で記述することでパフォーマンス改善を図ることができます。完全に VBA のみで行うことは難しい場合も、例えばユーザー インターフェイスとなる Windows フォームは .NET で作成し、ボタンクリック イベントから Application.Run メソッドを用いて Office ファイル内の VBA を呼び出し、実際の処理の内容は VBA で実行するといった仕組みを検討できます。

@@ -9,13 +9,13 @@ date: 2019-03-01
 
 今回の投稿では、Microsoft Graph – Excel REST API を使用して、指定されたアドレスの Range オブジェクトを操作するプログラムを、実際に C# で開発するエクスペリエンスをご紹介します。
 
-ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。[前回の OneDrive API のウォークスルー](https://social.msdn.microsoft.com/Forums/ja-JP/d8efd895-d94b-4770-9eaf-eff83e644b1e/webapimicrosoft-graph-onedrive-api-c?forum=officesupportteamja)同様、本投稿では、現実的な実装シナリオを重視するよりも、Excel REST API を理解するためになるべくシンプルなコードにすることを心掛けています。例外処理なども含めていませんので、実際にコーディングする際には、あくまでこのコードを参考する形でご検討ください。
+ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。[前回の OneDrive API のウォークスルー](https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20-%20OneDrive%20API%20(C%20Sharp)%20%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%20%E3%82%B3%E3%83%BC%E3%83%89/)同様、本投稿では、現実的な実装シナリオを重視するよりも、Excel REST API を理解するためになるべくシンプルなコードにすることを心掛けています。例外処理なども含めていませんので、実際にコーディングする際には、あくまでこのコードを参考する形でご検討ください。
 
 Excel REST API は、OneDrive API が前提となります。OneDrive API エンドポイント配下で取得したファイルに対してのみ、Excel REST API は使用できます。Office 365 という前提はありますが、一度慣れてしまえばオートメーションの要件において、OpenXML などのプログラムを実装するよりも開発生産性が高いと思います。
 
 **事前準備**
 
-[以前の投稿](https://social.msdn.microsoft.com/Forums/ja-JP/21efd6e2-220a-48e8-b48f-9330ee90c414/webapioauth-bearer-token-access-token?forum=officesupportteamja)をもとに、Azure AD にアプリケーションの登録を完了してください。少なくとも以下の 2 つのデリゲートされたアクセス許可が必要です。
+[以前の投稿](https://officesupportjp.github.io/blog/(WebAPI)OAuth%20Bearer%20Token%20(Access%20Token)%20%E3%81%AE%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)をもとに、Azure AD にアプリケーションの登録を完了してください。少なくとも以下の 2 つのデリゲートされたアクセス許可が必要です。
 
 ・Have full access to all files user can access  
 ・Sign users in
@@ -363,7 +363,7 @@ Excel REST API をさらに使用する場合は、以下の情報をご参考�
 開発工数削減のため、アプリケーション開発前に Graph Explorer, Fiddler や Postman などを使用して、あらかじめ使用する REST を確立しておくことをお勧めします。デバッグ方法については、以下をご参考にしてください。
 
 タイトル : \[WebAPI\]Microsoft Graph を使用した開発に便利なツール群  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/db724ffc-5f99-4591-8af8-5cd161b46489/webapimicrosoft-graph](https://social.msdn.microsoft.com/Forums/ja-JP/db724ffc-5f99-4591-8af8-5cd161b46489/webapimicrosoft-graph)
+アドレス : [https://officesupportjp.github.io/blog/(WebAPI)Microsoft Graph を使用した開発に便利なツール群/](https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E9%96%8B%E7%99%BA%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E7%BE%A4/)
 
 Excel REST API については、今後も何度かにわけて様々なサンプルを記載しようと思います。
 

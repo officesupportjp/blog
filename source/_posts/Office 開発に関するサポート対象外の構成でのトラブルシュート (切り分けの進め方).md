@@ -38,7 +38,7 @@ date: 2019-03-01
 タイトル : Office のサーバーサイド オートメーションについて  
 アドレス : [https://support.microsoft.com/ja-jp/help/257757](https://support.microsoft.com/ja-jp/help/257757)
 
-サーバーサイドと表現していますが、これは、無人の非対話型クライアント アプリケーションからの Office オートメーションを意味しています。Office がサーバーサイド オートメーション構成に該当するかどうかの最初のポイントは、**Office アプリケーションを OS にログインしたユーザーの権限で起動しているかどうか**です (実行ユーザーを指定している場合も、ユーザープロファイルや対話デスクトップの状態など、ユーザーが OS ログインしている状態とは異なる部分があり、Office の設計前提を満たしていないため、同様にサポート外の構成です) 。[過去の投稿](https://social.msdn.microsoft.com/Forums/ja-JP/e7a5c553-e01f-41c9-a277-40fdbb8e198e/office-12469125401249612540-124691245212489)で例を挙げながら詳細を説明していますので、併せてご確認ください。
+サーバーサイドと表現していますが、これは、無人の非対話型クライアント アプリケーションからの Office オートメーションを意味しています。Office がサーバーサイド オートメーション構成に該当するかどうかの最初のポイントは、**Office アプリケーションを OS にログインしたユーザーの権限で起動しているかどうか**です (実行ユーザーを指定している場合も、ユーザープロファイルや対話デスクトップの状態など、ユーザーが OS ログインしている状態とは異なる部分があり、Office の設計前提を満たしていないため、同様にサポート外の構成です) 。[過去の投稿](https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)で例を挙げながら詳細を説明していますので、併せてご確認ください。
 
 **切り分け方法**
 
@@ -54,7 +54,7 @@ date: 2019-03-01
 切り分けの結果、a や b では現象が再現しない場合、サーバーサイド オートメーション独自の問題である可能性があります。現象に開発段階で直面している場合は、構成を再検討頂くことをお勧めします。以下のブログ記事で、代替案についていくつかご案内していますので、参考として頂ければ幸いです。
 
 タイトル : Office サーバー サイド オートメーションの代替案について  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/48c5da64-09e5-422c-9699-1dfed44cee07/office-12469125401249612540-124691245212489](https://social.msdn.microsoft.com/Forums/ja-JP/48c5da64-09e5-422c-9699-1dfed44cee07/office-12469125401249612540-124691245212489)
+アドレス : [https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの代替案について/](https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
   
 
@@ -138,10 +138,10 @@ VBA、VBScript、VB.NET などのサポート可能な言語で同じ処理を�
 また、以下のブログ記事でお客様自身でのパフォーマンスに関する調査の進め方をご紹介しています。最終的にはお客様自身で判断が難しい部分もありますが、可能な範囲で調査を進めたいという場合にはご参照いただければ幸いです。
 
 タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb/office](https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb/office)
+アドレス : [https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 1：概要と対処方法)/](https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%201%EF%BC%9A%E6%A6%82%E8%A6%81%E3%81%A8%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95)/)
 
 タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 2 : ボトルネックの特定)  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c/office](https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c/office)
+アドレス : [https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)/](https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/)
 
 **切り分け方法**
 
