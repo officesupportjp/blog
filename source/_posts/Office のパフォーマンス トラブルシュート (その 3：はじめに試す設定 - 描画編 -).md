@@ -8,10 +8,10 @@ date: 2019-10-29
 以前の投稿で、Office 開発に特化して Office のパフォーマンスが低下する一般的な理由や、調査手法などをご説明しました。 
 
 Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)  
-[https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb](https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb)
+[https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 1：概要と対処方法)/](https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%201%EF%BC%9A%E6%A6%82%E8%A6%81%E3%81%A8%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95)/)
 
 Office 開発におけるパフォーマンス トラブルシュート (その 2 : ボトルネックの特定)  
-[https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c](https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c)
+[https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)/](https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/)
 
 過去の投稿で説明した通り、パフォーマンスの問題に直面したとき、そのボトルネックとなっている処理の内容によって対応は異なるため、本来のアプローチとしては、ボトルネックを特定してから対応を検討する必要があります。
 

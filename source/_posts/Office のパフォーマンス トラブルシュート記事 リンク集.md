@@ -13,25 +13,26 @@ Office の特定の動作について、Office をバージョンアップした
 特に Office をオートメーションするプログラムの動作について問い合わせを頂くことが多いため、まずは以下の 2 つの記事ではプログラムのパフォーマンス トラブルへどのようにアプローチしていくかという観点を中心にご案内しています。ただ、Office 製品でのパフォーマンスの考え方、バージョンアップでパフォーマンス低下が生じることの説明、取り得る対応方針などの一般的な情報もご案内しています。一般的な操作で Office パフォーマンスを改善したい方も、まずは以下資料をご一読ください。
 
 Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)  
-[https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb](https://social.msdn.microsoft.com/Forums/ja-JP/8e49ab2a-2f09-47c8-9540-3744203dcdbb)
+[https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 1：概要と対処方法)](https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%201%EF%BC%9A%E6%A6%82%E8%A6%81%E3%81%A8%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95)/)
 
 Office 開発におけるパフォーマンス トラブルシュート (その 2 : ボトルネックの特定)  
-[https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c](https://social.msdn.microsoft.com/Forums/ja-JP/2affb5ed-a03a-45e9-8cc5-5f41ea7a691c)
+[https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)](https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/)
 
   
   
 
 上記の資料では、全般的な考え方やアプロ―チをまとめていますが、以下の記事では個別の機能・動作ごとにパフォーマンス改善に役立つ主なオプション、グループポリシー、プロパティなどを紹介しています。タイトルから、改善したい動作に近い記事を参照して、記載の設定から状況に合致するものを試してみてください。(個別の項目紹介記事は随時更新予定です。)
 
-Office のパフォーマンス トラブルシュート (その 3 : はじめに試す設定 - 描画編 -)[https://social.msdn.microsoft.com/Forums/ja-JP/12af26b8-6855-41af-a76c-e2da7c74ad0f](https://social.msdn.microsoft.com/Forums/ja-JP/12af26b8-6855-41af-a76c-e2da7c74ad0f) 
+Office のパフォーマンス トラブルシュート (その 3 : はじめに試す設定 - 描画編 -)  
+[https://officesupportjp.github.io/blog/Office のパフォーマンス トラブルシュート (その 3：はじめに試す設定 - 描画編 -)/](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%203%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20-%20%E6%8F%8F%E7%94%BB%E7%B7%A8%20-)/) 
 
-Office のパフォーマンス トラブルシュート (その 4 : はじめに試す設定 – 起動・オープン①、印刷編 -)[https://social.msdn.microsoft.com/Forums/ja-JP/ea9f89b7-a809-45ec-a8b5-6651e915f6bd](https://social.msdn.microsoft.com/Forums/ja-JP/ea9f89b7-a809-45ec-a8b5-6651e915f6bd)
+Office のパフォーマンス トラブルシュート (その 4 : はじめに試す設定 – 起動・オープン①、印刷編 -)  [https://officesupportjp.github.io/blog/Office のパフォーマンス トラブルシュート (その 4：はじめに試す設定 – 起動・オープン①、印刷編 -)/](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%204%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20%E2%80%93%20%E8%B5%B7%E5%8B%95%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E2%91%A0%E3%80%81%E5%8D%B0%E5%88%B7%E7%B7%A8%20-)/)
 
 Office のパフォーマンス トラブルシュート (その 5 : はじめに試す設定 – 起動・オープン② –)  
-[https://social.msdn.microsoft.com/Forums/ja-JP/6feb3f3f-93a2-4217-a723-4918a7229f69](https://social.msdn.microsoft.com/Forums/ja-JP/6feb3f3f-93a2-4217-a723-4918a7229f69)
+[https://officesupportjp.github.io/blog/Office のパフォーマンス トラブルシュート (その 5：はじめに試す設定 – 起動・オープン② –)/](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%205%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20%E2%80%93%20%E8%B5%B7%E5%8B%95%E3%83%BB%E3%82%AA%E3%83%BC%E3%83%97%E3%83%B3%E2%91%A1%20%E2%80%93)/)
 
 Office のパフォーマンス トラブルシュート (その 6 : はじめに試す設定 - ファイル内容編 -)  
-[https://social.msdn.microsoft.com/Forums/ja-JP/c537577f-1029-455f-9491-8bc56c013176](https://social.msdn.microsoft.com/Forums/ja-JP/c537577f-1029-455f-9491-8bc56c013176/office-1239812497125011245712540125101253112473?forum=officesupportteamja)[](https://social.msdn.microsoft.com/Forums/ja-JP/6feb3f3f-93a2-4217-a723-4918a7229f69/office-5-)
+[https://officesupportjp.github.io/blog/Office のパフォーマンス トラブルシュート (その 6：はじめに試す設定 - ファイル内容編 -)/](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%206%EF%BC%9A%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB%E8%A9%A6%E3%81%99%E8%A8%AD%E5%AE%9A%20-%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E5%86%85%E5%AE%B9%E7%B7%A8%20-)/)
 
   
   

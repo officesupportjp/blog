@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/image2.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/image3.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-27T08:22:14.595Z">
+<meta property="article:modified_time" content="2021-12-04T04:44:59.939Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -126,9 +126,9 @@
       
         <p>(※ 2017 年 11 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office 開発サポート チームの中村です。</p>
-<p>本テーマについて、<a href="https://social.msdn.microsoft.com/Forums/ja-JP/21055b52-0c3f-43cb-b4a6-9ae14ba91292/office-12522125081253112434124591247312479125101245212474-8211" target="_blank" rel="noopener">前回の投稿</a>から時間が空いてしまい申し訳ありません。</p>
+<p>本テーマについて、<a href="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%884%20%E2%80%93%20(VSTO%20XML%20%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/">前回の投稿</a>から時間が空いてしまい申し訳ありません。</p>
 <p>ここまでの記事では、カスタムのリボン タブを作成するというカスタマイズ内容を例に、カスタマイズ手法についてご紹介してきました。今回の記事からは、この他によく行われるカスタマイズの実装方法をいくつか紹介しつつ、XML などの書き方のイメージを掴んでいただればと思います。</p>
-<p>今回の投稿で紹介する方法は、1. を除いて VSTO のビジュアルなデザイナーではカスタマイズできない内容となりますので、XML を利用して実装します。VSTO のビジュアルなデザイナーでカスタマイズしている方で以下の方法を利用したい場合は、<a href="https://social.msdn.microsoft.com/Forums/ja-JP/21055b52-0c3f-43cb-b4a6-9ae14ba91292/office-12522125081253112434124591247312479125101245212474-8211" target="_blank" rel="noopener">以前の投稿</a>の例でも行っていたように、ビジュアルなデザイナーで作成したリボンを XML へエクスポートできます。</p>
+<p>今回の投稿で紹介する方法は、1. を除いて VSTO のビジュアルなデザイナーではカスタマイズできない内容となりますので、XML を利用して実装します。VSTO のビジュアルなデザイナーでカスタマイズしている方で以下の方法を利用したい場合は、<a href="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%884%20%E2%80%93%20(VSTO%20XML%20%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/">以前の投稿</a>の例でも行っていたように、ビジュアルなデザイナーで作成したリボンを XML へエクスポートできます。</p>
 <p><strong>目次</strong></p>
 <p><a href="#はじめに-開発時に便利な機能">はじめに : 開発時に便利な機能</a></p>
 <p><a href="#1-既存のタブをすべて表示しない方法">1. 既存のタブをすべて表示しない方法</a></p>
