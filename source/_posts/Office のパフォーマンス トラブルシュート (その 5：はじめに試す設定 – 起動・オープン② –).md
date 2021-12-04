@@ -76,11 +76,11 @@ Office には多数のオンライン サービスを利用する機能があり
 
 以下の過去投稿でオンライン サービスを無効化する方法をご案内しています。
 
-Office 2016 が行うインターネット接続について
-
-[https://social.msdn.microsoft.com/Forums/ja-JP/decfa528-6257-4b89-bca5-e0e613682865/office-2016](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsocial.msdn.microsoft.com%2FForums%2Fja-JP%2Fdecfa528-6257-4b89-bca5-e0e613682865%2Foffice-2016&data=02%7C01%7Ckanakamu%40microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243469961&sdata=pKo0W2r8dlkmw%2BPKXvK2BSsu0bYa95l5Cb5L8yIg2Ek%3D&reserved=0)
+Office 2016 が行うインターネット接続について  
+[https://officesupportjp.github.io/blog/Office 2016 が行うインターネット接続について/](https://officesupportjp.github.io/blog/Office%202016%20%E3%81%8C%E8%A1%8C%E3%81%86%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E6%8E%A5%E7%B6%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
 オプションについては上記記事で言及されていないため、以下に記載します。  
+
 
 <オプション\>
 
