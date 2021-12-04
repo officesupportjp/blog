@@ -1,11 +1,17 @@
 ---
-title: Windows 10 バージョン 2004 (20H1) - 20H2 で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない
+title: Windows 10 バージョン 2004 以降で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない
 date: 2020-11-12
-lastupdate: 2020-11-24
+lastupdate: 2021-10-28
 ---
 
 <span style="color:#ff0000">**2020/11/24 Update**</span>  
 <span style="color:#339966">「4. その他の発生シナリオ」セクションを追加し、Excel での検索・置換 (Find / Replace) での発生を追記しました。</span>  
+
+<span style="color:#ff0000">**2021/10/22 Update**</span>  
+<span style="color:#339966">現象発生 OS と回避策に記載の対応を行った場合の既知の問題を追記しました。</span>  
+
+<span style="color:#ff0000">**2021/10/18 Update**</span>  
+<span style="color:#339966">Windows 11 では修正済みであることを追記しました。</span>  
 
   
   
@@ -16,8 +22,8 @@ lastupdate: 2020-11-24
   
 **関連記事**
 
-Windows 10 バージョン 2004 (20H1) / 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する  
-[https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/](https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/)  
+Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する  
+[https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/](https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/)  
 
 #### **1\. 現象**
 
@@ -28,7 +34,7 @@ StrComp 関数
 
 例えば以下のサンプル コードのように、濁点または半濁点を含む文字列を、一方は全角、一方半角で比較すると、以前の OS では一致とみなされ 0 が返っていました。
 
-しかし、Windows 10 バージョン 2004 および 20H2 OS 上で実行すると、不一致を示す -1 が返ります。  
+しかし、Windows 10 バージョン 2004 以降の OS 上で実行すると、不一致を示す -1 が返ります。  
 
 <サンプル コード\>
 
@@ -48,8 +54,9 @@ Windows 10 バージョン 2004 で、OS の自然言語処理を担う NLS (Nat
 
 |OS バージョン|NLS バージョン|
 |:---|:---|
-|1909|6.2|
-|2004 (20H1) / 20H2|6.3|
+|Windows 10 バージョン 1909|6.2|
+|Windows 10 バージョン 2004 以降|6.3|
+|Windows 11|6.4|
 
 
   
@@ -57,11 +64,17 @@ Windows 10 バージョン 2004 で、OS の自然言語処理を担う NLS (Nat
 
 この問題は、OS の更新プログラムについての公開情報でも既知の問題として記載されています。
 
-Windows 10, version 2004 and Windows Server, version 2004 update history  
-[https://support.microsoft.com/en-us/help/4555932/windows-10-update-history](https://support.microsoft.com/en-us/help/4555932/windows-10-update-history)
+Current status of Windows 10, version 2004 and Windows Server, version 2004  
+[https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda](https://support.microsoft.com/en-us/topic/windows-10-update-history-24ea91f4-36e7-d8fd-0ddb-d79d9d0cdbda)
 
-Windows 10, version 20H2 and Windows Server, version 20H2 update history  
-[https://support.microsoft.com/en-us/help/4581839/windows-10-update-history](https://support.microsoft.com/en-us/help/4581839/windows-10-update-history)
+
+Windows 10 update history - Updates for Windows 10, version 20H2 and Windows Server, version 20H2  
+[https://support.microsoft.com/en-us/topic/windows-10-update-history-7dd3071a-3906-fa2c-c342-f7f86728a6e3](https://support.microsoft.com/en-us/topic/windows-10-update-history-7dd3071a-3906-fa2c-c342-f7f86728a6e3)
+
+
+Windows 10 update history - Updates for Windows 10, version 21H1
+[https://support.microsoft.com/en-us/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11](https://support.microsoft.com/en-us/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11)
+
 
 <公開情報より該当の記載を抜粋\>
 
@@ -69,11 +82,13 @@ Windows 10, version 20H2 and Windows Server, version 20H2 update history
 |:---|:---|
 |Certain Japanese half-width Katakana and full-width Katakana characters that have a consonant mark aren’t interpreted as the same character. When you use the **CompareStringEx()** function with the _NORM\_IGNOREWIDTH_ flag to compare them, these characters are evaluated as different because of an issue in the sorting rule**.** This issue affects all the updates starting on June 9, 2020 for Windows 10, version 2004.|Currently, there is no workaround for this issue.|
 
+※ 次期リリース予定の Windows 10 バージョン 21H2 においても引き続きこの問題は発生します。
   
 
-#### **3\. 回避策**
+#### **3\. 対応状況 / 回避策**
 
-以下のいずれかの回避策で現象を回避できます。  
+Windows 11 では、NLS バージョン 6.4 に更新され、この問題は修正されています。  
+Windows 10 の現象が発生するバージョンでは、以下のいずれかの回避策で現象を回避できます。
   
 
 **a.** **比較対象の文字列を全角、または半角に統一する**
@@ -128,14 +143,17 @@ Access : MSACCESS.EXE
 
 c. / d. の具体的な設定方法や注意点については、既に公開された Access フォームの現象をご案内する以下のフォーラム記事で説明していますので、こちらを参照してください。
 
-Windows 10 バージョン 2004 (20H1) / 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する  
-[https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/](https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/)
+Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する  
+[https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/](https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/)
 
 ※ 参照箇所  
 c 案 : 3-1. Access アプリケーション観点 - Access の EXE (MSACCESS.EXE) について、"Windows 8" の互換設定を行う  
 d 案 : 3-3. OS 観点 – Windows OS の NLS バージョンを 6.3 から 6.2 に変更する  
   
-  
+
+**注意**
+この d 案の設定を行うと、Windows のライセンス認証が行われない場合があることを確認しています。ライセンス認証を実行する際はこの変更を元に戻してから実行してください。
+
 
 #### **4\. その他の発生シナリオ**
 

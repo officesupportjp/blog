@@ -1,7 +1,7 @@
 ---
 title: Office Online と Office デスクトップ アプリケーションの機能差異に関する情報
 date: 2019-03-09
-lastupdate: 2019-03-27
+lastupdate: 2021-11-08
 ---
 
 (※ 2018 年 3 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。)
@@ -19,6 +19,7 @@ lastupdate: 2019-03-27
   
 
 <span style="color:#ff0000">更新情報: 2018/12/10 「6. よくある質問」を更新しました。</span>
+<span style="color:#ff0000">更新情報: 2021/11/08 「6. よくある質問」を更新しました。</span>
 
   
 
@@ -225,5 +226,13 @@ A4. この動作は、Office 365 およびオンプレミスに依存せず、Ex
 これらのオブジェクトが含まれた Excel ブックを Excel Online (OWA 経由で開いた Excel Online も同一の動作です。) で開く場合、ブックは開きますが、ActiveX コントロール、あるいは、フォーム コントロールは表示されないため、チェック ボックスやラジオ ボタンは表示されません。
 
   
+
+Q5. PowerPoint Online にて、表から文字がはみ出てしまいます。
+
+
+A5. PowerPoint Online にて、フォントサイズやスライドの表示倍率等の設定によっては、表から文字がはみ出てしまう動作が確認されており、この動作は、現行の PowerPoint Online の制限です。
+
+このような場合、クライアントの PowerPoint で開いてご確認ください。
+
 
 今回の投稿は以上です。
