@@ -34,7 +34,8 @@ Excel が画面外の領域にスクロールするときに、スクロール�
 
 ※プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。
 
-ScrollArea プロパティ (Excel)[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea)
+ScrollArea プロパティ (Excel)  
+[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea)
 
 ![](image2.png)
 
@@ -89,11 +90,13 @@ ScrollArea を広げるにあたって、例えば上記の例であれば、テ
 
 VBA などのプログラムからは、以下で設定できます。
 
-Worksheet. EnableSelection プロパティ (Excel)[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection)
+Worksheet. EnableSelection プロパティ (Excel)  
+[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection)
 
 このプロパティで xlUnlockedCells を設定します。このプロパティは、ワークシートを保護した状態でのみ有効ですので、さらに以下の Protect メソッドでワークシートを保護します。
 
-Protect メソッド (Excel)[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect)
+Protect メソッド (Excel)  
+[https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect](https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect)
 
   
 また、選択セルの移動を制限することが ScrollArea プロパティを設定している目的である場合は、上記の設定を代わりに行うことで、ScrollArea プロパティの設定自体を削除することも検討できます。(ただし、スクロール バーの操作ではスクロールできます。)

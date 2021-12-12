@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%20%E3%81%A7%20ScrollArea%20%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B%E3%81%A8%E3%80%81%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E6%93%8D%E4%BD%9C%E3%81%A7%E3%82%B7%E3%83%BC%E3%83%88%E3%81%8C%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%97%E3%81%AA%E3%81%84/image4.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%20%E3%81%A7%20ScrollArea%20%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B%E3%81%A8%E3%80%81%E3%82%AD%E3%83%BC%E3%83%9C%E3%83%BC%E3%83%89%E6%93%8D%E4%BD%9C%E3%81%A7%E3%82%B7%E3%83%BC%E3%83%88%E3%81%8C%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%83%AB%E3%81%97%E3%81%AA%E3%81%84/image5.png">
 <meta property="article:published_time" content="2021-01-11T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-06T00:37:13.837Z">
+<meta property="article:modified_time" content="2021-12-12T13:05:23.819Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -137,7 +137,7 @@
 <p>発生に関わる条件をまとめると以下の通りです。</p>
 <p><strong>条件 1:</strong><br>ワークシートの ScrollArea プロパティが設定されていること</p>
 <p>※プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。</p>
-<p>ScrollArea プロパティ (Excel)<a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea</a></p>
+<p>ScrollArea プロパティ (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea</a></p>
 <p><img src="image2.png" alt=""></p>
 <p><strong>条件 2:</strong><br>以下の要素等の組み合わせによって発生</p>
 <ul>
@@ -160,9 +160,9 @@
 <p>3. [校閲] タブ – [シートの保護] – “このシートのすべてのユーザーに許可する操作” の一覧で [ロックされたセル範囲の選択] のチェックを外します。</p>
 <p><img src="image4.png" alt=""><br><img src="image5.png" alt=""></p>
 <p>VBA などのプログラムからは、以下で設定できます。</p>
-<p>Worksheet. EnableSelection プロパティ (Excel)<a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection</a></p>
+<p>Worksheet. EnableSelection プロパティ (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection</a></p>
 <p>このプロパティで xlUnlockedCells を設定します。このプロパティは、ワークシートを保護した状態でのみ有効ですので、さらに以下の Protect メソッドでワークシートを保護します。</p>
-<p>Protect メソッド (Excel)<a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect</a></p>
+<p>Protect メソッド (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect</a></p>
 <p>また、選択セルの移動を制限することが ScrollArea プロパティを設定している目的である場合は、上記の設定を代わりに行うことで、ScrollArea プロパティの設定自体を削除することも検討できます。(ただし、スクロール バーの操作ではスクロールできます。)</p>
 <p>ScrollArea 設定を削除する場合は、プログラムからは ScrollArea プロパティに空の値 (“”) を設定してください。プロパティ ウィンドウの場合は、ScrollArea プロパティの値を削除してください。  </p>
 <p>今回の投稿は以上です。  </p>
