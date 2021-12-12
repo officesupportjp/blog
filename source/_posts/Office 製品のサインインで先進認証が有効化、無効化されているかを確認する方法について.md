@@ -65,7 +65,8 @@ Title : 2013、Office 2016、および 2019 Office 2019 クライアント ア�
 
 URL : [https://docs.microsoft.com/ja-jp/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016?view=o365-worldwide](https://docs.microsoft.com/ja-jp/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016?view=o365-worldwide)
 
-Title : Windows デバイスの Office 2013 の先進認証を有効にする[](https://docs.microsoft.com/ja-jp/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016?view=o365-worldwide)URL : [https://docs.microsoft.com/ja-jp/microsoft-365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide](https://docs.microsoft.com/ja-jp/microsoft-365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide)
+Title : Windows デバイスの Office 2013 の先進認証を有効にする[](https://docs.microsoft.com/ja-jp/microsoft-365/enterprise/modern-auth-for-office-2013-and-2016?view=o365-worldwide)  
+URL : [https://docs.microsoft.com/ja-jp/microsoft-365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide](https://docs.microsoft.com/ja-jp/microsoft-365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide)
 
 **\- 関連記事**  
   
