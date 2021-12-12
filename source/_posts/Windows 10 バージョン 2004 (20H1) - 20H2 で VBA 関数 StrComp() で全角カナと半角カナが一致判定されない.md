@@ -32,7 +32,7 @@ VBA には、StrComp() という 2 つの文字列が一致するかを比較す
 StrComp 関数  
 [https://docs.microsoft.com/ja-jp/office/vba/language/reference/user-interface-help/strcomp-function](https://docs.microsoft.com/ja-jp/office/vba/language/reference/user-interface-help/strcomp-function)  
 
-例えば以下のサンプル コードのように、濁点または半濁点を含む文字列を、一方は全角、一方半角で比較すると、以前の OS では一致とみなされ 0 が返っていました。
+例えば以下のサンプル コードのように、濁点または半濁点を含む文字列を、一方は全角、もう一方を半角で比較すると、以前の OS では一致とみなされ 0 が返っていました。
 
 しかし、Windows 10 バージョン 2004 以降の OS 上で実行すると、不一致を示す -1 が返ります。  
 
