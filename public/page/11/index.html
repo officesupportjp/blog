@@ -90,6 +90,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Office オートメーションで割り当てたオブジェクトを解放する - Part2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/" class="article-date">
+  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/">Office オートメーションで割り当てたオブジェクトを解放する - Part2</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/" class="article-date-single">    
+    
+    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2012 年 2 月 28 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。  
+今回の投稿では、Office オートメーションの実装コードで割り当てたオブジェクトを解放する – Part1 の続編を記載いたします。続編では、前回の投稿でベスト プラクティスとして紹介した解放処理に対して解説を実施した後、正しくオブジェクト解放を実施しない場合に生じる影響についてご紹介します。
+最初に、オブジェクト解放漏れがあると、主に以下のような事象があるということは先に述べておきます。
+・意図とは異なる COM オブジェクトに接続され、想定とは異なる結果を返し、アプリケーションの動作に予期せぬ影響を与えます。・通常のメソッド実行にも関わらず COMEx...
+        <p class="article-more-link">
+          <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/" data-id="cksztuppj0000ggvs2gehd9ap" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Office オートメーションで割り当てたオブジェクトを解放する – Part1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/" class="article-date">
@@ -542,56 +593,6 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
     </div>
     <footer class="article-footer">
       <a data-url="https://officesupportjp.github.io/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/" data-id="ckt02w3p70000e4vs61sobhf5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
-  <time datetime="2019-02-18T15:00:00.000Z" itemprop="datePublished">2019-02-19</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
-        
-    <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 6 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
-2017/06/19 Update! Office 365 Enterprise パックのライセンスにも対応したコマンドに更新  
-こんにちは、Office サポートの佐村です。本記事では Office 365 にて公開されている Microsoft Forms (以下、Forms) について、PowerShell スクリプトを使用して一括でテナント全体のユーザーのライセンスを有効化、無効化する方法をご案内いたします。本方法をご利用いただくことで、別サービスの無効化状況には影響せずに、Forms だけを有効化、もしくは、無効化することが可能です。  
-目次1. Forms のライセンスについて2. PowerShell を使用して一括で有効化する方法...
-        <p class="article-more-link">
-          <a href="/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckt0r8s7v0000n0vsfwdghqcj" class="article-share-link">Share</a>
       
       
     </footer>
