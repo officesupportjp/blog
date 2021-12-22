@@ -63,7 +63,7 @@ Office には、Excel から PowerPoint のように異なるアプリケーシ�
 例 : ファイル名「テスト.xlsx」を OneDrive for Business に格納したときの Shift-JIS エンコードの URL
 
 <span>
-https://microsoft-my.sharepoint.com/personal/username\_microsoft\_com/Documents/%83%65%83%58%83%67.xlsx
+https://microsoft-my.sharepoint.com/personal/username_microsoft_com/Documents/%83%65%83%58%83%67.xlsx
 </span>
 
 しかしながら、OneDrive for Business や SharePoint Online は UTF-8 文字コードを使用することを期待しているため、ファイルを見つけることができずエラーが発生します。
@@ -71,7 +71,7 @@ https://microsoft-my.sharepoint.com/personal/username\_microsoft\_com/Documents/
 例 : ファイル名「テスト.xlsx」を OneDrive for Business に格納したときのUTF-8 エンコードの例
 
 <span>
-https://microsoft-my.sharepoint.com/personal/username\_microsoft\_com/Documents/%E3%83%86%E3%82%B9%E3%83%88.xlsx
+https://microsoft-my.sharepoint.com/personal/username_microsoft_com/Documents/%E3%83%86%E3%82%B9%E3%83%88.xlsx
 </span>
 
 OneDrive for Business や SharePoint Online 上の日本語をパスに含むファイルからもリンク貼り付けを可能とすることを検討しましたが、Office は Windows OS の WinInet コンポーネントの公開 API を利用してエンコードを行っており、他のプログラム利用上の互換性を考慮し、WinInet コンポーネントの既定の動作を変更することができません。(昨今では URL のエンコードでは UTF-8 が利用されることが主流ですが、このような時流となる以前から ANSI でエンコードを行う API として公開されています。)

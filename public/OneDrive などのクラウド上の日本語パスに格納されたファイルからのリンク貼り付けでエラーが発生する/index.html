@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/OneDrive%20%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E4%B8%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%91%E3%82%B9%E3%81%AB%E6%A0%BC%E7%B4%8D%E3%81%95%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image4.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/OneDrive%20%E3%81%AA%E3%81%A9%E3%81%AE%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E4%B8%8A%E3%81%AE%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%83%91%E3%82%B9%E3%81%AB%E6%A0%BC%E7%B4%8D%E3%81%95%E3%82%8C%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8B%E3%82%89%E3%81%AE%E3%83%AA%E3%83%B3%E3%82%AF%E8%B2%BC%E3%82%8A%E4%BB%98%E3%81%91%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image5.png">
 <meta property="article:published_time" content="2020-06-22T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-08T12:37:54.459Z">
+<meta property="article:modified_time" content="2021-12-22T07:18:15.300Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -153,13 +153,13 @@
 <p>リンクの更新やダブル クリックで Excel ブックを開くため、Office アプリケーションから OneDrive for Business や SharePoint Online へ Excel ブックの格納 URL が HTTP リクエストで送信されます。この URL は、クライアントの OS ロケールを基に判断された ANSI 文字コードを使用して % エンコードが行われます (日本語環境の場合、Shift－JIS)。</p>
 <p>例 : ファイル名「テスト.xlsx」を OneDrive for Business に格納したときの Shift-JIS エンコードの URL</p>
 <span>
-https://microsoft-my.sharepoint.com/personal/username\_microsoft\_com/Documents/%83%65%83%58%83%67.xlsx
+https://microsoft-my.sharepoint.com/personal/username_microsoft_com/Documents/%83%65%83%58%83%67.xlsx
 </span>
 
 <p>しかしながら、OneDrive for Business や SharePoint Online は UTF-8 文字コードを使用することを期待しているため、ファイルを見つけることができずエラーが発生します。</p>
 <p>例 : ファイル名「テスト.xlsx」を OneDrive for Business に格納したときのUTF-8 エンコードの例</p>
 <span>
-https://microsoft-my.sharepoint.com/personal/username\_microsoft\_com/Documents/%E3%83%86%E3%82%B9%E3%83%88.xlsx
+https://microsoft-my.sharepoint.com/personal/username_microsoft_com/Documents/%E3%83%86%E3%82%B9%E3%83%88.xlsx
 </span>
 
 <p>OneDrive for Business や SharePoint Online 上の日本語をパスに含むファイルからもリンク貼り付けを可能とすることを検討しましたが、Office は Windows OS の WinInet コンポーネントの公開 API を利用してエンコードを行っており、他のプログラム利用上の互換性を考慮し、WinInet コンポーネントの既定の動作を変更することができません。(昨今では URL のエンコードでは UTF-8 が利用されることが主流ですが、このような時流となる以前から ANSI でエンコードを行う API として公開されています。)</p>
