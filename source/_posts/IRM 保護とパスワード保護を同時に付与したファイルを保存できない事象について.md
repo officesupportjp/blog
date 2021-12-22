@@ -76,7 +76,7 @@ VL 版 Office 2016 (MSI 版) および、VL 版 Office 2019 (最新でバージ�
 バージョン 2004 で本事象は解消しました。
 
 これは Office 製品の好ましくない動作であると判断しております。  
-マイクロソフトでは現時点でこの問題を調査中です。
+<del>マイクロソフトでは現時点でこの問題を調査中です。</del>
 
   
 
@@ -86,7 +86,7 @@ VL 版 Office 2016 (MSI 版) および、VL 版 Office 2019 (最新でバージ�
 
 *   <span style="color:#ff0000">**2020/5/12 Update**</span>  
     バージョン 2004 を利用する
-*   パスワード保護と IRM 保護を併用しないよう運用する
+*   <del>パスワード保護と IRM 保護を併用しないよう運用する</del>
 *   バージョン 2002 までを利用する
 
   
@@ -109,14 +109,16 @@ VL 版 Office 2016 (MSI 版) および、VL 版 Office 2019 (最新でバージ�
 
 ※ OfficeClientEdition の 64 または 32 、ならびに Product ID や Language は既存の Office に合わせてください。
 
+```
 <Configuration>  
-  <Add OfficeClientEdition="64" Version="16.0.12527.20278" Channel="Monthly">  
-    <Product ID="O365ProPlusRetail" >  
-      <Language ID="ja-jp" />  
-    </Product>  
-  </Add>  
-  <Updates Enabled="FALSE" />  
+  <Add OfficeClientEdition="64" Version="16.0.12527.20278" Channel="Monthly">  
+    <Product ID="O365ProPlusRetail" >  
+      <Language ID="ja-jp" />  
+    </Product>  
+  </Add>  
+  <Updates Enabled="FALSE" />  
 </Configuration>
+```
 
   
 

@@ -18,7 +18,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/IRM%20%E4%BF%9D%E8%AD%B7%E3%81%A8%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E4%BF%9D%E8%AD%B7%E3%82%92%E5%90%8C%E6%99%82%E3%81%AB%E4%BB%98%E4%B8%8E%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/image2.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/IRM%20%E4%BF%9D%E8%AD%B7%E3%81%A8%E3%83%91%E3%82%B9%E3%83%AF%E3%83%BC%E3%83%89%E4%BF%9D%E8%AD%B7%E3%82%92%E5%90%8C%E6%99%82%E3%81%AB%E4%BB%98%E4%B8%8E%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/image3.png">
 <meta property="article:published_time" content="2020-04-14T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-08-08T13:16:44.625Z">
+<meta property="article:modified_time" content="2021-12-22T09:48:38.011Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -156,11 +156,11 @@
 <p><u>Word</u></p>
 <p>保存ボタンをクリックしてもエラーが出ないが、保存ダイアログが繰り返し表示され、保存処理は完了しない。</p>
 <h4 id="対応状況"><a href="#対応状況" class="headerlink" title="対応状況"></a><strong>対応状況</strong></h4><p><span style="color:#ff0000"><strong>2020/5/12 Update</strong></span><br>バージョン 2004 で本事象は解消しました。</p>
-<p>これは Office 製品の好ましくない動作であると判断しております。<br>マイクロソフトでは現時点でこの問題を調査中です。</p>
+<p>これは Office 製品の好ましくない動作であると判断しております。<br><del>マイクロソフトでは現時点でこの問題を調査中です。</del></p>
 <h4 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a><strong>回避策</strong></h4><p>現段階での回避策としては、誠に恐れ入りますが、以下の方法を検討ください。</p>
 <ul>
 <li><span style="color:#ff0000"><strong>2020/5/12 Update</strong></span><br>バージョン 2004 を利用する</li>
-<li>パスワード保護と IRM 保護を併用しないよう運用する</li>
+<li><del>パスワード保護と IRM 保護を併用しないよう運用する</del></li>
 <li>バージョン 2002 までを利用する</li>
 </ul>
 <p>補足</p>
@@ -170,14 +170,7 @@
 <p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a></p>
 <p>2. 以下の内容で、Configuration.xml を作成する</p>
 <p>※ OfficeClientEdition の 64 または 32 、ならびに Product ID や Language は既存の Office に合わせてください。</p>
-<Configuration>  
-  <Add OfficeClientEdition="64" Version="16.0.12527.20278" Channel="Monthly">  
-    <Product ID="O365ProPlusRetail" >  
-      <Language ID="ja-jp" />  
-    </Product>  
-  </Add>  
-  <Updates Enabled="FALSE" />  
-</Configuration>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;Configuration&gt;  </span><br><span class="line">  &lt;Add OfficeClientEdition&#x3D;&quot;64&quot; Version&#x3D;&quot;16.0.12527.20278&quot; Channel&#x3D;&quot;Monthly&quot;&gt;  </span><br><span class="line">    &lt;Product ID&#x3D;&quot;O365ProPlusRetail&quot; &gt;  </span><br><span class="line">      &lt;Language ID&#x3D;&quot;ja-jp&quot; &#x2F;&gt;  </span><br><span class="line">    &lt;&#x2F;Product&gt;  </span><br><span class="line">  &lt;&#x2F;Add&gt;  </span><br><span class="line">  &lt;Updates Enabled&#x3D;&quot;FALSE&quot; &#x2F;&gt;  </span><br><span class="line">&lt;&#x2F;Configuration&gt;</span><br></pre></td></tr></table></figure>
 
 
 
