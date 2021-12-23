@@ -67,7 +67,8 @@ Access の起動時にカスタマイズされたリボンを読み込むには�
   <backstage>
     <button idMso="ApplicationOptionsDialog" visible="false" />
     <button idMso="FileSave" visible="false" />
-    <!-- \[閉じる\] ボタンのみ visible="true" にして表示させています --><button idMso="FileCloseDatabase" visible="true" />
+    <!-- [閉じる] ボタンのみ visible="true" にして表示させています -->
+    <button idMso="FileCloseDatabase" visible="true" />
     <tab idMso="TabInfo" visible="false" />
     <tab idMso="TabRecent" visible="false" />
     <tab idMso="TabSave" visible="false" />
