@@ -119,7 +119,7 @@ Office アプリケーションは、オートメーションによって起動�
 移行をご検討いただく際には、ご参考にしていただけますと幸いです。
 
 タイトル : Office サーバー サイド オートメーションの代替案について  
-アドレス : [https://social.msdn.microsoft.com/Forums/ja-JP/48c5da64-09e5-422c-9699-1dfed44cee07/office-12469125401249612540-124691245212489](https://social.msdn.microsoft.com/Forums/ja-JP/48c5da64-09e5-422c-9699-1dfed44cee07/office-12469125401249612540-124691245212489)
+アドレス : [https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの代替案について/](https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
 **結論**
 
