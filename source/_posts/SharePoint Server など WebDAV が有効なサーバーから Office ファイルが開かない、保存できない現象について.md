@@ -164,7 +164,7 @@ Next
 
  
 
-'C:\\Users\\<ユーザー名>\\AppData\\Local の取得します'
+'C:\Users\<ユーザー名>\AppData\Local の取得します'
 
 Set objShell = CreateObject("WScript.Shell")
 MyLocalPath = objShell.ExpandEnvironmentStrings("%LOCALAPPDATA%")
