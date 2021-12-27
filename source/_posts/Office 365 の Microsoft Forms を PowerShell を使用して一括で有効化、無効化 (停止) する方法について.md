@@ -96,14 +96,14 @@ cd c:\temp
 **3\. PowerShell を使用して一括で無効化する方法**  
 PowerShell を利用するには、以下のページで PowerShell をインストールし、事前設定を行う必要があります。  
 タイトル : PowerShell の導入について  
-アドレス : https://blogs.technet.microsoft.com/officesupportjp/2016/06/30/powershell\_installation/  
+アドレス : https://blogs.technet.microsoft.com/officesupportjp/2016/06/30/powershell_installation/  
 Power Shell を導入後、下記の無効化のスクリプト内容をコピーし、ps1 ファイルとして保存します。(例 : DisableFormsLicense.ps1)  
 
 ```
 connect-msolservice -credential $msolcred
 
 # ライセンスが割り当てられた全ユーザーの列挙
-$users = Get-MsolUser -All | where {$\_.isLicensed -eq "True"}
+$users = Get-MsolUser -All | where {$_.isLicensed -eq "True"}
 
 # ユーザー毎のライセンス/サービスの確認と変更
 foreach ($user in $users)
