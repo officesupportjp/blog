@@ -39,13 +39,15 @@ date: 2019-02-04
 
 1\. Excel 2016 で新規ブックを作成し、A1 セルに以下の内容で条件付き書式を設定します。
 
- \[指定の値を含むセルだけを書式設定\] で \[セルの値\]　\[次の値に等しい\]　\="" \[書式\] は黄色の塗りつぶし[![01](https://msdnshared.blob.core.windows.net/media/2016/11/01-300x224.png)](https://msdnshared.blob.core.windows.net/media/2016/11/01.png)
+ \[指定の値を含むセルだけを書式設定\] で \[セルの値\]　\[次の値に等しい\]　\="" \[書式\] は黄色の塗りつぶし
+
+![](01.png)
 
 2\. xls 形式で保存します。  
 3\. 一度ファイルを閉じて、開きなおします。  
 4\. A1 セルは、空なので、黄色の塗りつぶしで表示されています。
 
-[![02](https://msdnshared.blob.core.windows.net/media/2016/11/02-300x182.png)](https://msdnshared.blob.core.windows.net/media/2016/11/02.png)
+![](02.png)
 
 5\. A1 セルに、「1」等、任意の値を入力します。
 
@@ -54,7 +56,7 @@ date: 2019-02-04
 結果 :A1 セルが黄色の網掛けのままとなります。  
 正しくは、セルの塗りつぶしがなくなり、白色で表示されることです。
 
-[![03](https://msdnshared.blob.core.windows.net/media/2016/11/03-300x179.png)](https://msdnshared.blob.core.windows.net/media/2016/11/03.png)
+![](03.png)
 
   
   

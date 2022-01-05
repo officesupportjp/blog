@@ -14,11 +14,11 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2016 年 11 月 14 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)   2016&#x2F;11&#x2F;9 更新:   この不具合の修正を含む MSI 向けの修正をリリースいたしましたので、[対処方法] セクションを更新しました。     こんにちは、Office サポートの町口です。本記事では新たに確認された、Excel 2016 ですぐに">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/01-300x224.png">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/02-300x182.png">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/03-300x179.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%202016%20%E3%81%A7%E3%81%99%E3%81%90%E3%81%AB%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E6%9B%B8%E5%BC%8F%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/01.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%202016%20%E3%81%A7%E3%81%99%E3%81%90%E3%81%AB%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E6%9B%B8%E5%BC%8F%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/02.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Excel%202016%20%E3%81%A7%E3%81%99%E3%81%90%E3%81%AB%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E6%9B%B8%E5%BC%8F%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/03.png">
 <meta property="article:published_time" content="2019-02-03T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-29T05:48:07.088Z">
+<meta property="article:modified_time" content="2022-01-05T08:41:11.451Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -32,7 +32,7 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/01-300x224.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/Excel%202016%20%E3%81%A7%E3%81%99%E3%81%90%E3%81%AB%E6%9D%A1%E4%BB%B6%E4%BB%98%E3%81%8D%E6%9B%B8%E5%BC%8F%E3%81%8C%E5%8F%8D%E6%98%A0%E3%81%95%E3%82%8C%E3%81%AA%E3%81%84/01.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
@@ -135,12 +135,13 @@
 <h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a><strong>現象</strong></h1><p>以下のような条件付き書式を設定したファイルを Excel 2016 で開いた場合、<br>セルに値を入力しても、条件付き書式がすぐに反映されず、セルの背景色が更新されません。</p>
 <p>条件付き書式の例 :<br>セルに値を設定していない場合にセルの背景色を黄色に設定し、<br>セルに値が入っているときにはセルの背景色を無色にする。<br>設定内容詳細は再現手順に記載します。</p>
 <h1 id="再現手順"><a href="#再現手順" class="headerlink" title="再現手順"></a><strong>再現手順</strong></h1><p>1. Excel 2016 で新規ブックを作成し、A1 セルに以下の内容で条件付き書式を設定します。</p>
-<p> [指定の値を含むセルだけを書式設定] で [セルの値]　[次の値に等しい]　=“” [書式] は黄色の塗りつぶし<a href="https://msdnshared.blob.core.windows.net/media/2016/11/01.png" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2016/11/01-300x224.png" alt="01"></a></p>
+<p> [指定の値を含むセルだけを書式設定] で [セルの値]　[次の値に等しい]　=“” [書式] は黄色の塗りつぶし</p>
+<p><img src="01.png" alt=""></p>
 <p>2. xls 形式で保存します。<br>3. 一度ファイルを閉じて、開きなおします。<br>4. A1 セルは、空なので、黄色の塗りつぶしで表示されています。</p>
-<p><a href="https://msdnshared.blob.core.windows.net/media/2016/11/02.png" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2016/11/02-300x182.png" alt="02"></a></p>
+<p><img src="02.png" alt=""></p>
 <p>5. A1 セルに、「1」等、任意の値を入力します。</p>
 <p>結果 :A1 セルが黄色の網掛けのままとなります。<br>正しくは、セルの塗りつぶしがなくなり、白色で表示されることです。</p>
-<p><a href="https://msdnshared.blob.core.windows.net/media/2016/11/03.png" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2016/11/03-300x179.png" alt="03"></a></p>
+<p><img src="03.png" alt=""></p>
 <h1 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a><strong>回避策</strong></h1><p>xlsx 形式で保存することで回避します。<br>この回避策は、クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) の両方で有効です。</p>
 <h1 id="対処方法-2016-11-09-Update"><a href="#対処方法-2016-11-09-Update" class="headerlink" title="対処方法 !!2016/11/09 Update!!"></a><strong>対処方法 <span style="color:#ff0000">!!2016/11/09 Update!!</strong></span></h1><p>クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) のそれぞれについて説明します。</p>
 <p>(1) クイック実行形式 (C2R)<br>========================================<br>Version 1609 (16.0.7369.2038) で修正しました。</p>
