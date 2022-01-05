@@ -14,11 +14,11 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2016 年 11 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。本記事では新たに確認された、OneNote 2016 で既定のフォントを設定していても、全角入力から半角入力にすると「遊ゴシック」に切り替わる問題について説明します。 2017&#x2F;10&#x2F;18 Update[対処方法]">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/00.png">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/012.png">
-<meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/022.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/OneNote%202016%20%E3%81%A7%E5%85%A8%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%8B%E3%82%89%E5%8D%8A%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%AB%E3%81%99%E3%82%8B%E3%81%A8%E3%80%8C%E9%81%8A%E3%82%B4%E3%82%B7%E3%83%83%E3%82%AF%E3%80%8D%E3%81%AB%E5%88%87%E3%82%8A%E6%9B%BF%E3%82%8F%E3%82%8B/01.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/OneNote%202016%20%E3%81%A7%E5%85%A8%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%8B%E3%82%89%E5%8D%8A%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%AB%E3%81%99%E3%82%8B%E3%81%A8%E3%80%8C%E9%81%8A%E3%82%B4%E3%82%B7%E3%83%83%E3%82%AF%E3%80%8D%E3%81%AB%E5%88%87%E3%82%8A%E6%9B%BF%E3%82%8F%E3%82%8B/02.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/OneNote%202016%20%E3%81%A7%E5%85%A8%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%8B%E3%82%89%E5%8D%8A%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%AB%E3%81%99%E3%82%8B%E3%81%A8%E3%80%8C%E9%81%8A%E3%82%B4%E3%82%B7%E3%83%83%E3%82%AF%E3%80%8D%E3%81%AB%E5%88%87%E3%82%8A%E6%9B%BF%E3%82%8F%E3%82%8B/03.png">
 <meta property="article:published_time" content="2019-02-03T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-09-01T08:32:04.570Z">
+<meta property="article:modified_time" content="2022-01-05T08:26:53.163Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -32,7 +32,7 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://msdnshared.blob.core.windows.net/media/2016/11/00.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/OneNote%202016%20%E3%81%A7%E5%85%A8%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%8B%E3%82%89%E5%8D%8A%E8%A7%92%E5%85%A5%E5%8A%9B%E3%81%AB%E3%81%99%E3%82%8B%E3%81%A8%E3%80%8C%E9%81%8A%E3%82%B4%E3%82%B7%E3%83%83%E3%82%AF%E3%80%8D%E3%81%AB%E5%88%87%E3%82%8A%E6%9B%BF%E3%82%8F%E3%82%8B/01.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
@@ -132,14 +132,20 @@
 <p>全角入力から半角入力にすると「遊ゴシック」に切り替わります。</p>
 <h1 id="再現手順"><a href="#再現手順" class="headerlink" title="再現手順"></a><strong>再現手順</strong></h1><ol>
 <li>OneNote 2016 を起動します。</li>
-<li>[ファイル] タブの [オプション] をクリックし、[基本設定] - [既定のフォント] - [フォント] のプルダウンを「ＭＳ Ｐゴシック」に設定して [OK] をクリックします。<br><a href="https://msdnshared.blob.core.windows.net/media/2016/11/00.png" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2016/11/00.png" alt="00"></a></li>
-<li>ノートに全角で文字列を入力します。 ここでは例として「あ」と入力します。このときは、既定のフォントに設定した「ＭＳ Ｐゴシック」で入力されます。<br><a href="https://msdnshared.blob.core.windows.net/media/2016/11/012.png" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2016/11/012.png" alt="01"></a></li>
+<li>[ファイル] タブの [オプション] をクリックし、[基本設定] - [既定のフォント] - [フォント] のプルダウンを「ＭＳ Ｐゴシック」に設定して [OK] をクリックします。  </li>
+</ol>
+<p><img src="01.png" alt=""></p>
+<ol start="3">
+<li>ノートに全角で文字列を入力します。 ここでは例として「あ」と入力します。このときは、既定のフォントに設定した「ＭＳ Ｐゴシック」で入力されます。  </li>
+</ol>
+<p><img src="02.png" alt=""></p>
+<ol start="4">
 <li>[半角/全角] キーを押下して、半角で文字列を入力します。 ここでは例として「a」と入力します。</li>
 </ol>
 <p>結果 :  </p>
 <p>手順 4 で入力した a が「游ゴシック」で入力されます。</p>
 <p>以降は全角入力に切り替えても「游ゴシック」で入力されます。</p>
-<p><a href="https://msdnshared.blob.core.windows.net/media/2016/11/022.png" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2016/11/022.png" alt="02"></a></p>
+<p><img src="03.png" alt=""></p>
 <p>補足 :  </p>
 <p>OneNote 2016 の既定のフォントは、Office 2016 管理用テンプレートを利用して、以下のポリシーで設定することもできます。</p>
 <p>* Office 2016 の管理用テンプレート</p>
@@ -254,7 +260,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2021 Office Support Japan<br>      
+      &copy; 2022 Office Support Japan<br>      
     </div>
   </div>
 </footer>

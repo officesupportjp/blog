@@ -41,9 +41,13 @@ OneNote 2016 でオプションやグループポリシーで、既定のフォ�
 
 1.  OneNote 2016 を起動します。
 2.  \[ファイル\] タブの \[オプション\] をクリックし、\[基本設定\] - \[既定のフォント\] - \[フォント\] のプルダウンを「ＭＳ Ｐゴシック」に設定して \[OK\] をクリックします。  
-    [![00](https://msdnshared.blob.core.windows.net/media/2016/11/00.png)](https://msdnshared.blob.core.windows.net/media/2016/11/00.png)
+
+![](01.png)
+
 3.  ノートに全角で文字列を入力します。 ここでは例として「あ」と入力します。このときは、既定のフォントに設定した「ＭＳ Ｐゴシック」で入力されます。  
-    [![01](https://msdnshared.blob.core.windows.net/media/2016/11/012.png)](https://msdnshared.blob.core.windows.net/media/2016/11/012.png)
+
+![](02.png)
+
 4.  \[半角/全角\] キーを押下して、半角で文字列を入力します。 ここでは例として「a」と入力します。
 
   
@@ -54,7 +58,7 @@ OneNote 2016 でオプションやグループポリシーで、既定のフォ�
 
 以降は全角入力に切り替えても「游ゴシック」で入力されます。
 
-[![02](https://msdnshared.blob.core.windows.net/media/2016/11/022.png)](https://msdnshared.blob.core.windows.net/media/2016/11/022.png)
+![](03.png)
 
   
 
