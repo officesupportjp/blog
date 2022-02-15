@@ -131,7 +131,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%887%20%E2%80%93%20(TIPS%203%EF%BC%9A%E7%89%B9%E6%AE%8A%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" data-id="ckz2fj1dv0028x0vsdjem89t2" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%887%20%E2%80%93%20(TIPS%203%EF%BC%9A%E7%89%B9%E6%AE%8A%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" data-id="ckznj8h90002538u8fwib4gd5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%883%20%E2%80%93%20(VSTO%20%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%883%20%E2%80%93%20(VSTO%20%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/">Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%883%20%E2%80%93%20(VSTO%20%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 3 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office 開発 サポート チームの中村です。
+今回も、リボンのカスタマイズ手順について解説していきます。今回の記事では、パート 1 で紹介した「c. VSTO からビジュアルなデザイナーを用いてカスタマイズを行う」 について紹介したいと思います。前回と同じく、サンプル作成を通して解説します。
+VSTO ビジュアルなデザイナーでリボンをカスタマイズするこの方法は、VSTO で提供されている Visual Studio 上で GUI でリボンのカスタマイズを行うビジュアルなデザイナー機能を用いてリボンをカスタマイズします。カスタマイズ内容は、VSTO ランタイムによって VSTO ソリューションのロード時にOffice が読み込む...
+        <p class="article-more-link">
+          <a href="/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%883%20%E2%80%93%20(VSTO%20%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%883%20%E2%80%93%20(VSTO%20%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/" data-id="ckznj8h91002938u897jb6oti" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,7 +233,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%201%EF%BC%9A%E6%A6%82%E8%A6%81%E3%81%A8%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95)/" data-id="ckz2fj1dw002cx0vseesj8u02" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%201%EF%BC%9A%E6%A6%82%E8%A6%81%E3%81%A8%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95)/" data-id="ckznj8h92002b38u823vd9pk9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -234,7 +284,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/" data-id="ckz2fj1dx002dx0vsf5cl7c8x" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/" data-id="ckznj8h93002e38u87b3978wu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +335,58 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E5%AF%BE%E8%B1%A1%E5%A4%96%E3%81%AE%E6%A7%8B%E6%88%90%E3%81%A7%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E5%88%87%E3%82%8A%E5%88%86%E3%81%91%E3%81%AE%E9%80%B2%E3%82%81%E6%96%B9)/" data-id="ckz2fj1dx002ex0vs2vn07wmb" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E3%82%B5%E3%83%9D%E3%83%BC%E3%83%88%E5%AF%BE%E8%B1%A1%E5%A4%96%E3%81%AE%E6%A7%8B%E6%88%90%E3%81%A7%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E5%88%87%E3%82%8A%E5%88%86%E3%81%91%E3%81%AE%E9%80%B2%E3%82%81%E6%96%B9)/" data-id="ckznj8h95002h38u828ledkpc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/">VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 2 月 16 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの多田です。
+今回は、.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降では使用できない件、およびその対処策についてご案内します。
+はじめにVSTOソリューションをインストール時や、初回起動時にユーザーに信頼するかどうかの確認ダイアログを表示させたくない、といった理由から、VSTO ソリューションへの信頼をあらかじめ付与したい場合があります。信頼を付与する方法として、従来、VSTO では UserInclusionList クラスおよび AddInSecurityEntryクラスが用意されていました。
+参考) 方法: 信頼のリストのエントリを追加...
+        <p class="article-more-link">
+          <a href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" data-id="ckznj8h9o002q38u8c44h3dsk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -339,58 +440,7 @@ OS が Windows...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Windows%2010%20Version%201607%20%E4%B8%8A%E3%81%A7%20Workbook.Close%20%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%81%AB%20Excel%20%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckz2fj1e1002qx0vs7mnr0krm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/">VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 2 月 16 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発 サポート チームの多田です。
-今回は、.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降では使用できない件、およびその対処策についてご案内します。
-はじめにVSTOソリューションをインストール時や、初回起動時にユーザーに信頼するかどうかの確認ダイアログを表示させたくない、といった理由から、VSTO ソリューションへの信頼をあらかじめ付与したい場合があります。信頼を付与する方法として、従来、VSTO では UserInclusionList クラスおよび AddInSecurityEntryクラスが用意されていました。
-参考) 方法: 信頼のリストのエントリを追加...
-        <p class="article-more-link">
-          <a href="/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/VSTO%EF%BC%9A.NET%203.5%20%E3%81%A7%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%81%84%E3%81%9F%20UserInclusionList%20%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%8C%20.NET%204.0%20%E4%BB%A5%E9%99%8D%E3%81%AF%E4%BD%BF%E7%94%A8%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84/" data-id="ckz2fj1e2002rx0vs416327i9" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Windows%2010%20Version%201607%20%E4%B8%8A%E3%81%A7%20Workbook.Close%20%E5%AE%9F%E8%A1%8C%E5%BE%8C%E3%81%AB%20Excel%20%E3%81%8C%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%A8%E3%81%AA%E3%81%A3%E3%81%A6%E3%81%97%E3%81%BE%E3%81%86%E3%81%93%E3%81%A8%E3%81%8C%E3%81%82%E3%82%8B%E5%95%8F%E9%A1%8C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckznj8h9o002r38u80q9o6iod" class="article-share-link">Share</a>
       
       
     </footer>
@@ -444,7 +494,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Word%202016%20%E3%81%8B%E3%82%89%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/" data-id="ckz2fj1e4002wx0vsc1cwea9p" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/Word%202016%20%E3%81%8B%E3%82%89%E3%83%A1%E3%83%BC%E3%83%AB%E3%82%92%E9%80%81%E4%BF%A1%E3%81%99%E3%82%8B%E3%81%A8%E6%96%87%E5%AD%97%E5%8C%96%E3%81%91%E3%81%99%E3%82%8B/" data-id="ckznj8h9q002u38u862q257du" class="article-share-link">Share</a>
       
       
     </footer>
@@ -495,7 +545,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/(%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20VSTO)%20.NET%20%E3%81%A7%E3%81%AE%20Office%20%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%20(%E6%9C%80%E6%96%B0%E7%89%88)/" data-id="ckz2fj1cd0006x0vs5hag30i7" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/(%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%20-%20VSTO)%20.NET%20%E3%81%A7%E3%81%AE%20Office%20%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%20(%E6%9C%80%E6%96%B0%E7%89%88)/" data-id="ckznj8h4x000438u8aigpfb9x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -545,56 +595,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/" data-id="ckz2fj1cf0009x0vsee52bqha" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
-  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
-    
-    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2012 年 2 月 15 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発系サポートの柴田　茂 (sshibata) です。私の投稿では、Microsoft Office 製品を、Windows のプラットフォーム上で別アプリケーションから操作する場合にどんなテクノロジを検討すべきかというテーマについて記載致します。
-.NET Framework が登場するはるか前の時代から、Windows 上で動作するOffice アプリケーションに介入してアプリケーションソフト間でデータを転送・共有するための仕組みは存在していました。それが、OLE と呼ばれる規格(Object Linking and Embedding) であったり、DDE　というテクノロジであったり(Dynamic Data E...
-        <p class="article-more-link">
-          <a href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckz2fj1de0013x0vs365aegib" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/" data-id="ckznj8h56000838u8ac2f0l13" class="article-share-link">Share</a>
       
       
     </footer>
@@ -619,13 +620,20 @@ M...
 
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
     </div>
   </div>
 
@@ -636,6 +644,10 @@ M...
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/blog/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%8B%E3%82%89%E5%85%A5%E6%89%8B%E3%81%97%E3%81%9F%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%9E%E3%82%AF%E3%83%AD%E3%81%8C%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%82%8B%E6%97%A2%E5%AE%9A%E3%81%AE%E5%8B%95%E4%BD%9C%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(MC322553)/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
         
           <li>
             <a href="/blog/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%20-%20Japan%20Office%20Client%20Support%20Blog%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">お知らせ - Japan Office Client Support Blog について</a>
@@ -651,10 +663,6 @@ M...
         
           <li>
             <a href="/blog/%E3%80%8C%E3%81%93%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%94%E3%83%A5%E3%83%BC%E3%82%BF%E3%83%BC%E3%81%AB%E7%B5%84%E7%B9%94%E5%86%85%E3%81%AE%E5%88%A5%E3%81%AE%E3%82%A2%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%8C%E6%97%A2%E3%81%AB%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%8D%E3%81%A8%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/">「このコンピューターに組織内の別のアカウントが既にサインインしています」と表示される</a>
-          </li>
-        
-          <li>
-            <a href="/blog/Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E9%96%8B%E3%81%93%E3%81%86%E3%81%A8%E3%81%99%E3%82%8B%E3%81%A8%E3%80%81%E5%AE%9F%E9%9A%9B%E3%81%AB%E9%96%8B%E3%81%84%E3%81%A6%E3%81%84%E3%82%8B%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%A8%E3%81%AF%E7%95%B0%E3%81%AA%E3%82%8B%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E3%81%8C%E4%BD%BF%E7%94%A8%E4%B8%AD%E3%81%A8%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/">Office ファイルを開こうとすると、実際に開いているユーザーとは異なるユーザーが使用中と表示される</a>
           </li>
         
       </ul>
