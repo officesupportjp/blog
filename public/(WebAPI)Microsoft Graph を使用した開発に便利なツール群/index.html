@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E9%96%8B%E7%99%BA%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E7%BE%A4/image3.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E9%96%8B%E7%99%BA%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E7%BE%A4/image4.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-17T01:32:04.712Z">
+<meta property="article:modified_time" content="2022-02-18T09:47:27.597Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -130,9 +130,9 @@
 <p>今回の投稿では、Microsoft Graph を使用した開発に便利なツールをご紹介します。</p>
 <p>Microsoft Graph は 1 つのエンドポイントを介して複数の API を Office 365 およびその他の Microsoft クラウド サービスから公開するものです。</p>
 <p>概要については以下のサイトをご参考にしてください。</p>
-<p>タイトル : Microsoft Graph の概要<br>アドレス : <a href="https://graph.microsoft.io/ja-jp/docs" target="_blank" rel="noopener">https://graph.microsoft.io/ja-jp/docs</a></p>
+<p>タイトル : Microsoft Graph の概要<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/graph/overview" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/graph/overview</a></p>
 <h2 id="1-Graph-Explorer"><a href="#1-Graph-Explorer" class="headerlink" title="1. Graph Explorer"></a><strong>1. Graph Explorer</strong></h2><p>Microsoft Graph のエンドポイント (<a href="https://graph.microsoft.com/" target="_blank" rel="noopener">https://graph.microsoft.com/</a>) 配下の REST API を試すことができます。</p>
-<p>タイトル : Graph エクスプローラー<br>アドレス : <a href="https://graph.microsoft.io/ja-jp/graph-explorer" target="_blank" rel="noopener">https://graph.microsoft.io/ja-jp/graph-explorer</a></p>
+<p>タイトル : Graph エクスプローラー<br>アドレス : <a href="https://developer.microsoft.com/ja-jp/graph/graph-explorer" target="_blank" rel="noopener">https://developer.microsoft.com/ja-jp/graph/graph-explorer</a></p>
 <p>まずは、このツールを使用して Microsoft Graph に慣れることをお勧めします。</p>
 <p><img src="image1.png" alt=""></p>
 <p><strong>サイン インの有無</strong></p>
@@ -146,10 +146,9 @@
 <p>Microsoft Graph のエンドポイント (htps://graph.microsoft.com/) 配下のみが、本アプリケーションでテストできる範囲となります。</p>
 <p>統合以前の Office 365 REST API では、多様なエンドポイントを使用することになるため本ツールは使用できません。</p>
 <p><strong>手順</strong><br>以下の手順では、自分の OneDrive for Business ライブラリに存在するファイルの一覧を取得します。</p>
-<p>1-1) <a href="https://graph.microsoft.io/ja-jp/graph-explorer" target="_blank" rel="noopener">Graph Explorer</a> にアクセスします。<br>1-2) [サインイン] をクリックします。<br>1-3) ユーザー名とパスワードを入れてログインします。はじめて使用する場合は、さらに [信頼する] をクリックしてください。<br>1-4) v1.0 と GET はそのままにします。<br>1-5) 以下のようなアドレスを入力します。<br> <a href="https://graph.microsoft.com/v1.0/me/drive/root/children?$select=name" target="_blank" rel="noopener">https://graph.microsoft.com/v1.0/me/drive/root/children?$select=name</a></p>
+<p>1-1) <a href="https://developer.microsoft.com/ja-jp/graph/graph-explorer" target="_blank" rel="noopener">Graph Explorer</a> にアクセスします。<br>1-2) [サインイン] をクリックします。<br>1-3) ユーザー名とパスワードを入れてログインします。はじめて使用する場合は、さらに [信頼する] をクリックしてください。<br>1-4) v1.0 と GET はそのままにします。<br>1-5) 以下のようなアドレスを入力します。<br> <a href="https://graph.microsoft.com/v1.0/me/drive/root/children?$select=name" target="_blank" rel="noopener">https://graph.microsoft.com/v1.0/me/drive/root/children?$select=name</a></p>
 <p>参考 :<br>・<a href="https://graph.microsoft.com/v1.0/me/" target="_blank" rel="noopener">https://graph.microsoft.com/v1.0/me/</a> は Microsoft Graph のエンドポイント<br>・/drive は OneDrive API<br>・/root はルート フォルダ<br>・children は直下のアイテムを取得するプロパティ<br>・$select=name は name のみを選択する OData メソッド</p>
 <p>1-6) ルート フォルダ直下のフォルダやファイル一覧が取得できたことを確認します。</p>
-<p><strong>参考情報</strong><br>タイトル : Office Dev Show - Episode 41 - The New Microsoft Graph Explorer<br>アドレス : <a href="https://channel9.msdn.com/Shows/Office-Dev-Show/Office-Dev-Show-Episode-41-The-New-Microsoft-Graph-Explorer" target="_blank" rel="noopener">https://channel9.msdn.com/Shows/Office-Dev-Show/Office-Dev-Show-Episode-41-The-New-Microsoft-Graph-Explorer</a></p>
 <h2 id="2-Fiddler"><a href="#2-Fiddler" class="headerlink" title="2. Fiddler"></a><strong>2. Fiddler</strong></h2><p>Graph Explorer でカバーできない API (エンドポイント、HTTP メソッド) を試す場合は、<a href="http://www.telerik.com/fiddler" target="_blank" rel="noopener">Fiddler</a> を使用する方法が考えられます。</p>
 <p>もちろん <a href="https://www.getpostman.com/" target="_blank" rel="noopener">Postman</a> など、お気に入りのツールがあれば、それでも構いません。</p>
 <p>Fiddler は、一般的にトラブルシューティングの用途でアプリケーションの HTTP トレースを取得するために使用されますが、HTTP デバッガーや開発ツールとしても利用できます。今回は Fiddler の Composer という機能を使用します。</p>

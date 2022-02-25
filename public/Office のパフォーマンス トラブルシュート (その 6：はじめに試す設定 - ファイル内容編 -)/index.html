@@ -15,7 +15,7 @@
 <meta property="og:description" content="こんにちは、Office サポート チームの中村です。 パフォーマンス改善効果が期待できる設定の紹介記事 第 4 弾です。今回は、ファイル内に含まれる要素や操作内容に応じて、その機能に特化してパフォーマンス改善に効果がある設定をご案内します。 Office では、動作の一部を無効化したり、簡略化することでパフォーマンスを軽減できる場合があります。より便利な機能を提供するために行われている処理ですが">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-06T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-17T01:32:04.868Z">
+<meta property="article:modified_time" content="2022-02-18T06:19:48.732Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -123,68 +123,40 @@
         <p>こんにちは、Office サポート チームの中村です。</p>
 <p>パフォーマンス改善効果が期待できる設定の紹介記事 第 4 弾です。今回は、ファイル内に含まれる要素や操作内容に応じて、その機能に特化してパフォーマンス改善に効果がある設定をご案内します。</p>
 <p>Office では、動作の一部を無効化したり、簡略化することでパフォーマンスを軽減できる場合があります。より便利な機能を提供するために行われている処理ですが、ユーザーの利用方法次第で一部機能を制限しても実質問題ない場合にはパフォーマンス改善方法として検討できます。  </p>
-<p><strong>目次</strong></p>
-<p>1. Office クリップボードの無効化<br>2. IME 予測入力の無効化<br>3. (Excel) 自動計算の無効化<br>4. (Excel) マルチスレッド処理の設定変更<br>5. (Excel) 書式設定範囲の最小化<br>6. 各種不要な書式設定の削除  </p>
-<p><strong>1. Office</strong> <strong>クリップボードの無効化</strong></p>
-<p>Office アプリケーションには、コピーデータの履歴を保持し、過去のコピーデータを繰り返し貼り付けることができる機能が設けられています。</p>
-<p>この機能の実現のため、コピーを行うと他の Office アプリケーションに通知が行われ、通知を受け取ったアプリケーションがコピーデータを履歴に追加します。この処理によってパフォーマンスが低下することがあります。特に、ループ処理でコピーを繰り返し行うプログラム処理などで影響が生じます。</p>
-<p>この履歴機能が不要な場合、Office クリップボード機能を無効化することでパフォーマンスを改善できます。(通常の OS としてのクリップボードは引き続き利用できるため、直前のコピーデータを貼り付ける操作に影響はありません。)</p>
-<p>&lt;レジストリ&gt;</p>
-<p>キー: HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General<br>名前: AcbControl<br>種類: REG_DWORD<br>値: 2147483648 (10 進)  </p>
-<p><strong>2. IME</strong> <strong>予測入力の無効化</strong></p>
-<p>Office アプリケーションへの文字入力や変換候補の表示が遅い場合、IME の予測変換候補を表示したり、文字コメント (単語の意味を表示する機能) の表示に時間を要している場合があります。文字入力の利便性は低下しますが、ユーザーにとってこれらをあまり活用しない場合などには、これらの機能を無効化することで文字入力のパフォーマンスを改善できます。</p>
-<p>&lt;オプション&gt;</p>
-<p><u><strong>予測入力の無効化</strong></u></p>
-<p>タスク バー上の IME のアイコン (A あ などと表示されているもの) を右クリックして [プロパティ] を開き、[Microsoft IME の設定] ダイアログの [詳細設定] - [予測入力] タブ - [予測入力を使用する] のチェックをオフ</p>
-<p><u><strong>文字コメントの無効化</strong></u></p>
-<p>タスク バー上の IME のアイコン (A あ などと表示されているもの) を右クリックして [プロパティ] を開き、[Microsoft IME の設定] ダイアログの [詳細設定] - [変換] タブ - [文字コメントを表示する] のチェックをオフ</p>
-<p>&lt;レジストリ&gt;</p>
-<p><u><strong>予測入力の無効化</strong></u></p>
-<p>キー : HKEY_CURRENT_USER\SOFTWARE\Microsoft\IME\15.0\IMEJP\MSIME<br>※ Office ではなく IME の設定のため、Office のバージョンに関わらず 15.0 の配下に設定します。</p>
-<p>このキーの配下に以下 2 つのレジストリを設定</p>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a><strong>目次</strong></h2><p>1. Office クリップボードの無効化<br>2. IME 予測入力の無効化<br>3. (Excel) 自動計算の無効化<br>4. (Excel) マルチスレッド処理の設定変更<br>5. (Excel) 書式設定範囲の最小化<br>6. 各種不要な書式設定の削除<br><br> </p>
+<h2 id="1-Office-クリップボードの無効化"><a href="#1-Office-クリップボードの無効化" class="headerlink" title="1. Office クリップボードの無効化"></a><strong>1. Office</strong> <strong>クリップボードの無効化</strong></h2><p>Office アプリケーションには、コピーデータの履歴を保持し、過去のコピーデータを繰り返し貼り付けることができる機能が設けられています。<br>この機能の実現のため、コピーを行うと他の Office アプリケーションに通知が行われ、通知を受け取ったアプリケーションがコピーデータを履歴に追加します。この処理によってパフォーマンスが低下することがあります。特に、ループ処理でコピーを繰り返し行うプログラム処理などで影響が生じます。<br>この履歴機能が不要な場合、Office クリップボード機能を無効化することでパフォーマンスを改善できます。(通常の OS としてのクリップボードは引き続き利用できるため、直前のコピーデータを貼り付ける操作に影響はありません。)</p>
+<p>&lt;レジストリ&gt;<br>キー: HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General<br>名前: AcbControl<br>種類: REG_DWORD<br>値: 2147483648 (10 進)<br><br> </p>
+<h2 id="2-IME-予測入力の無効化"><a href="#2-IME-予測入力の無効化" class="headerlink" title="2. IME 予測入力の無効化"></a><strong>2. IME</strong> <strong>予測入力の無効化</strong></h2><p>Office アプリケーションへの文字入力や変換候補の表示が遅い場合、IME の予測変換候補を表示したり、文字コメント (単語の意味を表示する機能) の表示に時間を要している場合があります。文字入力の利便性は低下しますが、ユーザーにとってこれらをあまり活用しない場合などには、これらの機能を無効化することで文字入力のパフォーマンスを改善できます。</p>
+<p>&lt;オプション&gt;<br><u><strong>予測入力の無効化</strong></u><br>タスク バー上の IME のアイコン (A あ などと表示されているもの) を右クリックして [プロパティ] を開き、[Microsoft IME の設定] ダイアログの [詳細設定] - [予測入力] タブ - [予測入力を使用する] のチェックをオフ</p>
+<p><u><strong>文字コメントの無効化</strong></u><br>タスク バー上の IME のアイコン (A あ などと表示されているもの) を右クリックして [プロパティ] を開き、[Microsoft IME の設定] ダイアログの [詳細設定] - [変換] タブ - [文字コメントを表示する] のチェックをオフ</p>
+<p>&lt;レジストリ&gt;<br><u><strong>予測入力の無効化</strong></u><br>キー : HKEY_CURRENT_USER\SOFTWARE\Microsoft\IME\15.0\IMEJP\MSIME<br>※ Office ではなく IME の設定のため、Office のバージョンに関わらず 15.0 の配下に設定します。</p>
+<p>このキーの配下に以下 2 つのレジストリを設定  </p>
 <p>名前 : PredictionUseInputHistory<br>種類 : REG_DWORD<br>値 : 0</p>
 <p>名前 : PredictionUseSystemDictionary<br>種類 : REG_DWORD<br>値 : 0</p>
-<p><u><strong>文字コメントの無効化</strong></u></p>
-<p>キー : HKEY_CURRENT_USER\SOFTWARE\Microsoft\IME\15.0\IMEJP\MSIME</p>
+<p><u><strong>文字コメントの無効化</strong></u><br>キー : HKEY_CURRENT_USER\SOFTWARE\Microsoft\IME\15.0\IMEJP\MSIME</p>
 <p>このキーの配下に以下 3 つのレジストリを設定</p>
 <p>機能 : 文字コメントを表示する<br>名前 : ShowCharComment<br>種類 : REG_DWORD<br>値 : 0</p>
 <p>機能 : 環境依存文字のコメントを表示する<br>名前 : DisableCodeAreaForCodeComment<br>種類 : REG_DWORD<br>値 : 0x0000ffff (無効)</p>
-<p>機能 : 単語コメントを表示する<br>名前 : ShowWordComment<br>種類 : REG_DWORD<br>値 : 0</p>
-<p><strong>3. (Excel)</strong> <strong>自動計算の無効化</strong></p>
-<p>Excel ブックに数式が含まれており自動計算が有効になっていると、参照先のセルの値が変わるたびに計算が行われます。計算コストが高い数式や、数式の数が多い場合などには、ファイルを開くとき、オートメーションで繰り返し参照先の値を変更するときなどにパフォーマンスに影響が生じることがあります。</p>
-<p>このような場合、必要な時に手動で更新するようにしたり、オートメーションであれば全体処理の最後 (計算結果が必要となる処理の直前) で最新化することでパフォーマンスを向上できます。</p>
-<p><strong>補足</strong></p>
-<p>計算方法の設定はブック単位に保存されますが、複数のブックを同じ Excel プロセス内で開く場合は、最初に開いたブックの設定に統一されます。詳細は以下の公開情報をご参照ください。  </p>
+<p>機能 : 単語コメントを表示する<br>名前 : ShowWordComment<br>種類 : REG_DWORD<br>値 : 0<br><br></p>
+<h2 id="3-Excel-自動計算の無効化"><a href="#3-Excel-自動計算の無効化" class="headerlink" title="3. (Excel) 自動計算の無効化"></a><strong>3. (Excel)</strong> <strong>自動計算の無効化</strong></h2><p>Excel ブックに数式が含まれており自動計算が有効になっていると、参照先のセルの値が変わるたびに計算が行われます。計算コストが高い数式や、数式の数が多い場合などには、ファイルを開くとき、オートメーションで繰り返し参照先の値を変更するときなどにパフォーマンスに影響が生じることがあります。<br>このような場合、必要な時に手動で更新するようにしたり、オートメーションであれば全体処理の最後 (計算結果が必要となる処理の直前) で最新化することでパフォーマンスを向上できます。</p>
+<p><strong>補足</strong><br>計算方法の設定はブック単位に保存されますが、複数のブックを同じ Excel プロセス内で開く場合は、最初に開いたブックの設定に統一されます。詳細は以下の公開情報をご参照ください。  </p>
 <p>計算の現在のモードを Excel が決定する方法<br><a href="https://docs.microsoft.com/ja-jp/office/troubleshoot/excel/current-mode-of-calculation" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/troubleshoot/excel/current-mode-of-calculation</a></p>
-<p>&lt;オプション&gt;</p>
-<p>Excel の [オプション] – [数式] – [計算方法の設定] – [ブックの計算] を [手動] に設定<br>※ 不要な場合は [ブックの保存前に再計算を行う] もオフ</p>
-<p>&lt;プロパティ&gt;</p>
-<p>Application.Calculation プロパティ (Excel)<br><a href="https://msdn.microsoft.com/ja-jp/library/office/ff821260.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/office/ff821260.aspx</a></p>
-<p>xlCalculationManual を設定</p>
+<p>&lt;オプション&gt;<br>Excel の [オプション] – [数式] – [計算方法の設定] – [ブックの計算] を [手動] に設定<br>※ 不要な場合は [ブックの保存前に再計算を行う] もオフ</p>
+<p>&lt;プロパティ&gt;<br>Application.Calculation プロパティ (Excel)<br><a href="https://msdn.microsoft.com/ja-jp/library/office/ff821260.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/office/ff821260.aspx</a><br>xlCalculationManual を設定</p>
 <p>計算を行いたいタイミングで、以下のメソッドを実行します。</p>
 <p>Application.Calculate メソッド (Excel)<br><a href="https://msdn.microsoft.com/ja-jp/library/office/ff195517.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/office/ff195517.aspx</a></p>
 <p><strong>追加情報</strong><br>計算のパフォーマンス改善については、以下の公開情報でより詳しく紹介しています。</p>
-<p>Excel のパフォーマンス: 計算パフォーマンスの強化<br><a href="https://docs.microsoft.com/ja-jp/office/vba/excel/concepts/excel-performance/excel-improving-calculation-performance" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/excel/concepts/excel-performance/excel-improving-calculation-performance</a></p>
-<p><strong>4. (Excel)</strong> <strong>マルチスレッド処理の設定変更</strong></p>
-<p>Excel では、マルチスレッドで並行処理を行うことができます。例えば複数のセルの値を変更して再計算が必要な数式が同時に複数ある場合には、スレッドを分散して並行処理が行われます。</p>
-<p>多くの数式が変更される場合、このマルチスレッド処理で使用する CPU の数をマシンの CPU 上限まで増やすことで効率的な並行処理を行い、パフォーマンスを改善できます。また、数式以外にもマルチスレッドで並行処理を行う動作はありますので、まずは後述のオプションが無効化されていないことを確認してみてください。  </p>
-<p>&lt;オプション&gt;</p>
-<ul>
-<li>Excel の [オプション] – [詳細設定] – [数式] – [マルチスレッド計算を行う] を有効にし、[このコンピューターの全てのプロセッサを使用する] を選択</li>
-<li>Excel の [オプション] – [詳細設定] – [全般] – [マルチスレッド処理を有効にする] を有効</li>
-</ul>
-<p><strong>補足</strong></p>
-<p>リモート デスクトップで複数ユーザーが同時にマシンを使用する場合に 1 ユーザーがこの処理で CPU を占有しているため他のユーザーが遅くなる状況や、スレッドへの CPU 割り当てが何らかの理由で遅い場合などには、かえって利用する CPU 数を制限したり、マルチスレッド計算をオフにした方が早くなるケースもあります。</p>
-<p><strong>5. (Excel)</strong> <strong>書式設定範囲の最小化</strong></p>
-<p>データ数が一定でないデータを入力するためのひな形ファイルなどで、非常に多くの行にあらかじめ書式設定を行われているケースがあります。よくあるケースとしては、Excel 97-2003 形式 (.xls) の最大行数 65,536 行目まで全てにあらかじめ罫線を引いたり、セルの表示形式を設定してある場合です。このような場合、データは入力されない行も書式設定により使用済みの扱いで様々な処理の対象となり、パフォーマンスに影響を与えることがあります。実際のデータ量を考慮して、必要以上の範囲には書式を設定しないことをお勧めします。</p>
-<p><strong>6.</strong> <strong>各種不要な書式設定の削除</strong></p>
-<p>Office ファイルでは、様々な機能を用いて効率的なファイル作成ができるようになっていますが、単純なテキストなどの値と比べて、Office の機能を用いたデータはそれを処理・表示するために負荷がかかります。このため、不必要に多用したり、ファイルの版数を重ねるにつれて不要となった設定が多く残存していると、パフォーマンスの低下を招きます。</p>
-<p>以下に代表的なものを記載しますので、パフォーマンスが悪いファイルがある場合、このような機能・書式について不要なものが含まれていないか確認してみてください。</p>
-<p>&lt;パフォーマンス低下を招く要素&gt;</p>
+<p>Excel のパフォーマンス: 計算パフォーマンスの強化<br><a href="https://docs.microsoft.com/ja-jp/office/vba/excel/concepts/excel-performance/excel-improving-calculation-performance" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/excel/concepts/excel-performance/excel-improving-calculation-performance</a><br><br></p>
+<h2 id="4-Excel-マルチスレッド処理の設定変更"><a href="#4-Excel-マルチスレッド処理の設定変更" class="headerlink" title="4. (Excel) マルチスレッド処理の設定変更"></a><strong>4. (Excel)</strong> <strong>マルチスレッド処理の設定変更</strong></h2><p>Excel では、マルチスレッドで並行処理を行うことができます。例えば複数のセルの値を変更して再計算が必要な数式が同時に複数ある場合には、スレッドを分散して並行処理が行われます。<br>多くの数式が変更される場合、このマルチスレッド処理で使用する CPU の数をマシンの CPU 上限まで増やすことで効率的な並行処理を行い、パフォーマンスを改善できます。また、数式以外にもマルチスレッドで並行処理を行う動作はありますので、まずは後述のオプションが無効化されていないことを確認してみてください。  </p>
+<p>&lt;オプション&gt;<br>・Excel の [オプション] – [詳細設定] – [数式] – [マルチスレッド計算を行う] を有効にし、[このコンピューターの全てのプロセッサを使用する] を選択<br>・Excel の [オプション] – [詳細設定] – [全般] – [マルチスレッド処理を有効にする] を有効</p>
+<p><strong>補足</strong><br>リモート デスクトップで複数ユーザーが同時にマシンを使用する場合に 1 ユーザーがこの処理で CPU を占有しているため他のユーザーが遅くなる状況や、スレッドへの CPU 割り当てが何らかの理由で遅い場合などには、かえって利用する CPU 数を制限したり、マルチスレッド計算をオフにした方が早くなるケースもあります。<br><br></p>
+<h2 id="5-Excel-書式設定範囲の最小化"><a href="#5-Excel-書式設定範囲の最小化" class="headerlink" title="5. (Excel) 書式設定範囲の最小化"></a><strong>5. (Excel)</strong> <strong>書式設定範囲の最小化</strong></h2><p>データ数が一定でないデータを入力するためのひな形ファイルなどで、非常に多くの行にあらかじめ書式設定を行われているケースがあります。よくあるケースとしては、Excel 97-2003 形式 (.xls) の最大行数 65,536 行目まで全てにあらかじめ罫線を引いたり、セルの表示形式を設定してある場合です。このような場合、データは入力されない行も書式設定により使用済みの扱いで様々な処理の対象となり、パフォーマンスに影響を与えることがあります。実際のデータ量を考慮して、必要以上の範囲には書式を設定しないことをお勧めします。<br><br></p>
+<h2 id="6-各種不要な書式設定の削除"><a href="#6-各種不要な書式設定の削除" class="headerlink" title="6. 各種不要な書式設定の削除"></a><strong>6.</strong> <strong>各種不要な書式設定の削除</strong></h2><p>Office ファイルでは、様々な機能を用いて効率的なファイル作成ができるようになっていますが、単純なテキストなどの値と比べて、Office の機能を用いたデータはそれを処理・表示するために負荷がかかります。このため、不必要に多用したり、ファイルの版数を重ねるにつれて不要となった設定が多く残存していると、パフォーマンスの低下を招きます。<br>以下に代表的なものを記載しますので、パフォーマンスが悪いファイルがある場合、このような機能・書式について不要なものが含まれていないか確認してみてください。</p>
+<p>&lt;パフォーマンス低下を招く要素&gt;  </p>
 <ul>
 <li>使われていないスタイル (スタイル一覧に既定のもの以外に多くのスタイルが存在する場合は削除したり、また、実質影響のない設定内容が違うだけで、統合できるスタイルがあれば統合します)</li>
 </ul>
-<p><strong>Excel</strong></p>
+<p><strong>Excel</strong>  </p>
 <ul>
 <li>大量の図形や画像オブジェクト (行や列の削除でサイズが 0 となってしまい見えない図形がないか [オブジェクトの選択と表示] で確認して削除します)</li>
 <li>使われていない名前定義</li>
@@ -194,16 +166,18 @@
 </ul>
 <p>以下の公開情報では、ここで挙げたようなパフォーマンス改善に役立つ設定などをご案内していますが、特に各種数式について、より効率的な使い方を個別に紹介しています。お使いの数式に応じた具体的な改善方法は本資料をご参照ください。  </p>
 <p>Excel のパフォーマンス: パフォーマンスの問題を最適化するヒント<br><a href="https://docs.microsoft.com/ja-jp/office/vba/excel/concepts/excel-performance/excel-tips-for-optimizing-performance-obstructions" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/excel/concepts/excel-performance/excel-tips-for-optimizing-performance-obstructions</a></p>
-<p><strong>Word</strong></p>
+<p><strong>Word</strong>  </p>
 <ul>
 <li>スペルチェックと文章校正 (オプションの [文章校正] – [Word のスペル チェックと文章校正] の各項目を無効にします)</li>
 </ul>
-<p><strong>PowerPoint</strong></p>
+<p><strong>PowerPoint</strong>  </p>
 <ul>
 <li>複雑なアニメーション (フェード、回転、またはサイズ変更など)</li>
-<li>画像のサイズ (オプションの [詳細設定] – [イメージのサイズと画質] – [既定の解像度] の品質を下げます)</li>
+<li>画像のサイズ (オプションの [詳細設定] – [イメージのサイズと画質] – [既定の解像度] の品質を下げます)<br>
+
+</li>
 </ul>
-<p>今回の投稿は以上です。</p>
+<p>今回の投稿は以上です。<br><br></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       

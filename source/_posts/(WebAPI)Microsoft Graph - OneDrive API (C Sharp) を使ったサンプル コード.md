@@ -114,6 +114,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OneDriveDemo; //9. で作成した MyFile.cs 内の名前空間
 ```
 
   
@@ -151,7 +152,8 @@ private async Task<string> GetAccessToken(string resource, string clientid, stri
         new Uri(redirecturi),
         new PlatformParameters(PromptBehavior.Auto, null)
         // ADFS 環境で SSO ドメイン以外のテナントのユーザーを試す場合はコメント解除
-        //, new UserIdentifier(loginname, UserIdentifierType.RequiredDisplayableId)            );
+        //, new UserIdentifier(loginname, UserIdentifierType.RequiredDisplayableId)
+        );
     return authenticationResult.AccessToken;
 }
 

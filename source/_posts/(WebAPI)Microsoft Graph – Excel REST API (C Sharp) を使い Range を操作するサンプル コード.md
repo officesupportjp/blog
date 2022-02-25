@@ -39,7 +39,7 @@ Excel REST API は、OneDrive API が前提となります。OneDrive API エン
 
 *   ExcelTestForm フォーム
 *   fileListCB コンボボックス
-*   worksheetCB コンボ ボックス
+*   worksheetsCB コンボ ボックス
 *   refreshBtn ボタン
 *   saveBtn ボタン
 *   rangeGV グリッド ビュー
@@ -97,6 +97,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ExcelAPITest; //9. で作成した MyFile.cs 内の名前空間
 ```
 
 12\. フォームのメンバー変数に以下を加えます。  
@@ -109,6 +110,7 @@ const string redirecturi = "urn:getaccesstokenfordebug";
 // ADFS 環境で SSO ドメイン以外のテナントのユーザーを試す場合はコメント解除
 // const string loginname = "admin@tenant.onmicrosoft.com";
 string AccessToken;
+Range range;
 ```
 
 13\. フォームのデザインでフォームをダブルクリックし、ロード時のイベントを実装します。
@@ -347,10 +349,10 @@ Excel REST API をさらに使用する場合は、以下の情報をご参考�
 アドレス : [https://graph.microsoft.io/ja-jp/docs/api-reference/v1.0/resources/excel](https://graph.microsoft.io/ja-jp/docs/api-reference/v1.0/resources/excel)
 
 タイトル : New additions to the Excel REST APIs on the Microsoft Graph endpoint  
-アドレス : [https://dev.office.com/blogs/additions-to-excel-rest-api-on-microsoft-graph](https://dev.office.com/blogs/additions-to-excel-rest-api-on-microsoft-graph)
+アドレス : [https://devblogs.microsoft.com/microsoft365dev/additions-to-excel-rest-api-on-microsoft-graph/](https://devblogs.microsoft.com/microsoft365dev/additions-to-excel-rest-api-on-microsoft-graph/)
 
 タイトル : Power your Apps with the new Excel REST API on the Microsoft Graph  
-アドレス : [https://dev.office.com/blogs/power-your-apps-with-the-new-excel-rest-api](https://dev.office.com/blogs/power-your-apps-with-the-new-excel-rest-api)
+アドレス : [https://devblogs.microsoft.com/microsoft365dev/power-your-apps-with-the-new-excel-rest-api/](https://devblogs.microsoft.com/microsoft365dev/power-your-apps-with-the-new-excel-rest-api/)
 
 前回の投稿と繰り返しとなりますが、Json.NET に関するドキュメントは以下をご参考にしてください。
 

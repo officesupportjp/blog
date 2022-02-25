@@ -19,7 +19,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/2020%20%E5%B9%B4%204%20%E6%9C%88%E3%81%AE%E6%9B%B4%E6%96%B0%E9%81%A9%E7%94%A8%E5%BE%8C%E3%80%81%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%92%E5%90%AB%E3%82%80%E5%A4%96%E9%83%A8%E5%8F%82%E7%85%A7%E3%82%92%E8%A1%8C%E3%81%86%20VBA%20%E3%81%8C%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BE%E3%82%8C%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C/image3.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/2020%20%E5%B9%B4%204%20%E6%9C%88%E3%81%AE%E6%9B%B4%E6%96%B0%E9%81%A9%E7%94%A8%E5%BE%8C%E3%80%81%E6%97%A5%E6%9C%AC%E8%AA%9E%E3%82%92%E5%90%AB%E3%82%80%E5%A4%96%E9%83%A8%E5%8F%82%E7%85%A7%E3%82%92%E8%A1%8C%E3%81%86%20VBA%20%E3%81%8C%E8%AA%AD%E3%81%BF%E8%BE%BC%E3%81%BE%E3%82%8C%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C/image4.png">
 <meta property="article:published_time" content="2020-04-26T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-17T01:32:04.759Z">
+<meta property="article:modified_time" content="2022-02-18T05:40:11.264Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -136,16 +136,11 @@
 <p>Excel 2010 / 2013 / 2016 / 2019 / Office 365 の Excel において、2020 年 4 月の更新を適用すると、VBA を含むファイルを開くときや、Excel アドインが有効化された状態で Excel を起動すると以下のエラーが発生します。</p>
 <p><img src="image1.png" alt=""></p>
 <p><img src="image2.png" alt=""></p>
-<p>また、上記のエラーが発生した状態で、VBA を含むファイルを上書き保存すると、VBAProject が削除されます。</p>
-<p>※ 上書きにより削除された VBAProject を復元することはできません。</p>
-<p><strong>2.</strong> <strong>発生シナリオ</strong></p>
-<p>以下のようなシナリオで発生が確認されています。詳細は調査中のため、類似の他のシナリオで発生する可能性もあります。  </p>
-<p><strong>パターンA</strong></p>
-<p>VBAProject から参照するライブラリ (DLL) の名前に日本語 (DBCS) 文字が含まれている場合</p>
+<p>また、上記のエラーが発生した状態で、VBA を含むファイルを上書き保存すると、VBAProject が削除されます。<br>※ 上書きにより削除された VBAProject を復元することはできません。</p>
+<p><strong>2.</strong> <strong>発生シナリオ</strong><br>以下のようなシナリオで発生が確認されています。詳細は調査中のため、類似の他のシナリオで発生する可能性もあります。  </p>
+<p><strong>パターンA</strong><br>VBAProject から参照するライブラリ (DLL) の名前に日本語 (DBCS) 文字が含まれている場合</p>
 <p><img src="image3.png" alt=""></p>
-<p><strong>パターンB</strong></p>
-<p>VBAProject から参照する Excel ファイルの名前、またはそのファイルの格納パスに日本語 (DBCS) 文字が含まれている場合</p>
-<p>(このパターンでは、参照元のファイル形式が Excel 97-2003 形式 (.xls や .xla) でのみ発生が確認されています。)</p>
+<p><strong>パターンB</strong><br>VBAProject から参照する Excel ファイルの名前、またはそのファイルの格納パスに日本語 (DBCS) 文字が含まれている場合<br>(このパターンでは、参照元のファイル形式が Excel 97-2003 形式 (.xls や .xla) でのみ発生が確認されています。)</p>
 <p><img src="image4.png" alt="">  </p>
 <p><strong>3.</strong> <strong>対応状況</strong></p>
 <p><span style="color:#ff0000"><strong>2020/6/3 Update</strong></span></p>
@@ -155,7 +150,7 @@
 <p><strong>Microsoft 365 （Office 365)</strong><br>月次チャネル : 16.0.12730.20250<br>半期チャネル (対象指定) : 16.0.12527.20612<br>半期チャネル : 16.0.11929.20752 / 16.0.11328.20572  </p>
 <p><strong>Office 2016 / Office 2019 (市販パッケージ・PC プリインストールのクイック実行版)</strong><br>16.0.12730.20250  </p>
 <p><strong>Office 2019 (ボリュームライセンス)</strong><br>16.0.10359.20023  </p>
-<p><strong>Office 2013 (**</strong>市販パッケージ・PC プリインストールのクイック実行版<strong>**)</strong><br>15.0.5241.1000</p>
+<p><strong>Office 2013 (市販パッケージ・PC プリインストールのクイック実行版)</strong><br>15.0.5241.1000</p>
 <p><strong>Office 2016 (MSI インストーラ形式)</strong><br>May 8, 2020, update for Microsoft Office 2016 (KB3101353)<br><a href="https://support.microsoft.com/en-us/help/3101353" target="_blank" rel="noopener">https://support.microsoft.com/en-us/help/3101353</a></p>
 <p>※ 緊急対応として公開された更新プログラムのため、Microsoft Update カタログからは入手できません。公開情報内に記載の Download Center のリンクから更新プログラムのインストーラを入手してください。  </p>
 <p>2020年6月2日、Office 2016 の更新プログラム (KB4484335)<br><a href="https://support.microsoft.com/ja-jp/help/4484335" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/4484335</a></p>

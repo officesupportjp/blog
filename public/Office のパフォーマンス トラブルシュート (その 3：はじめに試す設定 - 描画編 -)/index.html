@@ -15,7 +15,7 @@
 <meta property="og:description" content="こんにちは、Office サポート チームの中村です。  以前の投稿で、Office 開発に特化して Office のパフォーマンスが低下する一般的な理由や、調査手法などをご説明しました。  Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)https:&#x2F;&#x2F;officesupportjp.github.io&#x2F;blog&#x2F;Office 開発におけるパフォーマン">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-10-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-17T01:32:04.868Z">
+<meta property="article:modified_time" content="2022-02-18T06:27:03.093Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -128,11 +128,9 @@
 <p>ただ今回からの記事では、これまでの弊社サポートへのお問い合わせ実績や Office の仕組みなどから、効果があることが多い設定をいくつかご案内したいと思います。Office アドインの処理が遅いけれど自社開発ではないので詳細な調査はできない、プレミア サポートで時間をかけて調査をする前に何か試したい、といった状況での初期対応として、以下の設定を順に試してみていただければと思います。なお、これらの設定は Office 開発に限らず、通常の利用でのパフォーマンス低下の改善にも活用できます。 </p>
 <p>多数の項目をご案内するため、記事を何回かに分けて投稿します。今回は描画に関わる設定をご案内します。</p>
 <p>OS や Office のバージョンが新しくなるにつれ、よりリッチな表現、滑らかで精密な描画を行うため、描画処理のパフォーマンスコストは増加傾向にあります。OS や Office アプリケーション内の実装で工夫している部分や、マシンの性能向上でカバーされる部分もありますが、どうしても以前のバージョンと比較してはパフォーマンスがトレードオフとなることがあり、これによって、ファイルオープン、ファイル内容の変更、シートの切り替え、スクロール、セルのフォーカス移動などでパフォーマンス影響が生じます。リッチな表現が不要な場合は、描画に関わる動作を無効化・軽減する設定を行うとパフォーマンス改善につながります。</p>
-<p><strong>目次</strong></p>
-<p>0. Office の設定変更手法<br>1. アニメーションの無効化<br>2. リアルタイム プレビューの無効化<br>3. ハードウェア グラフィック アクセラレータの設定変更<br>4. シートの表示倍率<br>5. 図のリンク (カメラ)<br>6. 数式バー表示<br>7. ステータスバー表示<br>8. (プログラム向け) 描画処理全般の停止<br>9. (プログラム向け) Excel の非表示化<br>10. (OS) アニメーションの無効化<br>11. (OS) 視覚効果<br>12. (OS) 省電力設定 ※ これは描画以外も含め、すべての動作に関わります</p>
-<h4 id="0-Office-の設定変更手法"><a href="#0-Office-の設定変更手法" class="headerlink" title="0. Office の設定変更手法"></a><strong>0. Office の設定変更手法</strong></h4><p>設定項目を案内する前に、Office の各種設定を変更する手法について説明します。</p>
-<p>Office では設定変更 GUI として、画面メニュー [オプション] や、グループポリシーで Office 管理用テンプレートが用意されています。これらの項目を設定すると、その設定内容はレジストリに保持されます。</p>
-<p>このため、ある項目の動作を制御する場合、まず以下の 3 種類が検討できます (項目により、3 種類すべてが用意されていないものもあります)。お客様の利用しやすい方法をご利用ください。</p>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a><strong>目次</strong></h2><p>0. Office の設定変更手法<br>1. アニメーションの無効化<br>2. リアルタイム プレビューの無効化<br>3. ハードウェア グラフィック アクセラレータの設定変更<br>4. シートの表示倍率<br>5. 図のリンク (カメラ)<br>6. 数式バー表示<br>7. ステータスバー表示<br>8. (プログラム向け) 描画処理全般の停止<br>9. (プログラム向け) Excel の非表示化<br>10. (OS) アニメーションの無効化<br>11. (OS) 視覚効果<br>12. (OS) 省電力設定 ※ これは描画以外も含め、すべての動作に関わります<br><br></p>
+<h2 id="0-Office-の設定変更手法"><a href="#0-Office-の設定変更手法" class="headerlink" title="0. Office の設定変更手法"></a><strong>0. Office の設定変更手法</strong></h2><p>設定項目を案内する前に、Office の各種設定を変更する手法について説明します。</p>
+<p>Office では設定変更 GUI として、画面メニュー [オプション] や、グループポリシーで Office 管理用テンプレートが用意されています。これらの項目を設定すると、その設定内容はレジストリに保持されます。<br>このため、ある項目の動作を制御する場合、まず以下の 3 種類が検討できます (項目により、3 種類すべてが用意されていないものもあります)。お客様の利用しやすい方法をご利用ください。</p>
 <ul>
 <li>オプションから変更する (オプションに項目がある場合)</li>
 <li>グループポリシーから変更する (グループポリシーの Office 管理用テンプレートに項目がある場合)</li>
@@ -141,67 +139,58 @@
 <p>また、VBA や .NET などのプログラムからの操作の場合、プロパティを利用して設定を変更できる項目もあります。プロパティには、Office の一般的な動作変更の他に、マクロの処理パフォーマンスに影響を与えるものもあります。</p>
 <p>本記事では、Office 2016 / Office 2019 / Office 365 の Excel / Word / PowerPoint を対象に、これらの設定項目を記載します。ご利用の Officeバージョンによっては、記載したメニューが用意されていない場合や、バージョン名に関わる部分を読み替える必要があります。読み替える場合、レジストリについては “16.0” の部分がバージョンによって以下のパスとなります。</p>
 <p>Office 2010 → 14.0<br>Office 2013 → 15.0</p>
-<p>一部の設定は、Access や Visio、Outlook といった他の Office アプリケーションでも有効なもの、同等の設定があるものもありますが、本記事では言及しません。</p>
-<h4 id="1-アニメーションの無効化-Excel-Word-PowerPoint"><a href="#1-アニメーションの無効化-Excel-Word-PowerPoint" class="headerlink" title="1. アニメーションの無効化 (Excel / Word / PowerPoint)"></a><strong>1. アニメーションの無効化 (Excel / Word / PowerPoint)</strong></h4><p>画面上での移動を滑らかにする動作を無効化します。設定 1 ～ 3 では影響する操作などが異なるため、それぞれお試しください。</p>
+<p>一部の設定は、Access や Visio、Outlook といった他の Office アプリケーションでも有効なもの、同等の設定があるものもありますが、本記事では言及しません。<br><br></p>
+<h2 id="1-アニメーションの無効化-Excel-Word-PowerPoint"><a href="#1-アニメーションの無効化-Excel-Word-PowerPoint" class="headerlink" title="1. アニメーションの無効化 (Excel / Word / PowerPoint)"></a><strong>1. アニメーションの無効化 (Excel / Word / PowerPoint)</strong></h2><p>画面上での移動を滑らかにする動作を無効化します。設定 1 ～ 3 では影響する操作などが異なるため、それぞれお試しください。</p>
 <p><u>設定 1</u><br>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft Office 2016] - [その他] - [Office アニメーションを無効にする]<br>設定値 : 有効  </p>
 <p>&lt;レジストリ&gt;<br>キー: HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Graphics<br>名前: DisableAnimations<br>種類: REG_DWORD<br>値: 1  </p>
-<p><u>設定 2</u></p>
-<p><strong>Excel</strong></p>
-<p>&lt;オプション&gt;<br>[簡単操作] – [操作をアニメーションで表示する] チェックをオフ  </p>
+<p><u>設定 2</u><br><strong>Excel</strong><br>&lt;オプション&gt;<br>[簡単操作] – [操作をアニメーションで表示する] チェックをオフ  </p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options<br>名前 : EnableAnimations<br>種類 : REG_DWORD<br>値 : 0  </p>
-<p><strong>Word</strong></p>
-<p>&lt;オプション&gt;<br>[簡単操作] – [操作の結果をアニメーションで表示する] のチェックをオフ  </p>
+<p><strong>Word</strong><br>&lt;オプション&gt;<br>[簡単操作] – [操作の結果をアニメーションで表示する] のチェックをオフ  </p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Options<br>名前 : AnimateScreenMove<br>種類 : REG_DWORD<br>値 : 0  </p>
 <p>※ PowerPoint には本項目はありません。</p>
-<p><u>設定 3</u>  </p>
-<p><strong>Excel</strong></p>
-<p>Application.EnableMacroAnimations プロパティを False に設定<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations</a></p>
-<p>* 既定は False ですが、マクロ内や他のアドインなどで True に設定している場合は効果が期待できます。  </p>
-<p>※ Word / PowerPoint には本項目はありません。  </p>
-<h4 id="2-リアルタイム-プレビューの無効化-Excel-Word-PowerPoint"><a href="#2-リアルタイム-プレビューの無効化-Excel-Word-PowerPoint" class="headerlink" title="2. リアルタイム プレビューの無効化 (Excel / Word / PowerPoint)"></a><strong>2. リアルタイム プレビューの無効化 (Excel / Word / PowerPoint)</strong></h4><p>例えば文字の色をカラーパレットから選択するときなど、確定前に文字に色が反映される動作を無効化します。</p>
+<p><u>設定 3</u><br><strong>Excel</strong><br>Application.EnableMacroAnimations プロパティを False に設定<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations</a><br>* 既定は False ですが、マクロ内や他のアドインなどで True に設定している場合は効果が期待できます。  </p>
+<p>※ Word / PowerPoint には本項目はありません。<br><br></p>
+<h2 id="2-リアルタイム-プレビューの無効化-Excel-Word-PowerPoint"><a href="#2-リアルタイム-プレビューの無効化-Excel-Word-PowerPoint" class="headerlink" title="2. リアルタイム プレビューの無効化 (Excel / Word / PowerPoint)"></a><strong>2. リアルタイム プレビューの無効化 (Excel / Word / PowerPoint)</strong></h2><p>例えば文字の色をカラーパレットから選択するときなど、確定前に文字に色が反映される動作を無効化します。</p>
 <p>&lt;オプション&gt;<br>[基本設定] - [ユーザー インターフェイスのオプション] - [リアルタイムのプレビュー表示機能を有効にする] のチェックをオフ  </p>
-<p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] - [&lt;アプリケーション名&gt; のオプション] - [全般] - [リアルタイムのプレビュー表示機能を有効にする]<br>設定値 : 無効  </p>
-<p>(&lt;アプリケーション名&gt; には Excel / Word / PowerPoint のいずれかが入ります。以降の記述でも同様です。)</p>
+<p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] - [&lt;アプリケーション名&gt; のオプション] - [全般] - [リアルタイムのプレビュー表示機能を有効にする]<br>設定値 : 無効<br>(&lt;アプリケーション名&gt; には Excel / Word / PowerPoint のいずれかが入ります。以降の記述でも同様です。)</p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER \Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options<br>名前 : LivePreview<br>種類 : REG_DWORD<br>値 : 0  </p>
 <p>&lt;プロパティ&gt;<br><strong>Excel</strong><br>Application.EnableLivePreview プロパティ をFalse に設定<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablelivepreview" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablelivepreview</a>  </p>
 <p><strong>Word</strong><br>Options.EnableLivePreview プロパティを False に設定<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/word.options.enablelivepreview" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/word.options.enablelivepreview</a>  </p>
-<p>※ PowerPoint はプロパティはありません</p>
-<h4 id="3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-Word-PowerPoint"><a href="#3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-Word-PowerPoint" class="headerlink" title="3. ハードウェア グラフィック アクセラレータの設定変更 (Excel / Word / PowerPoint)"></a><strong>3. ハードウェア グラフィック アクセラレータの設定変更 (Excel / Word / PowerPoint)</strong></h4><p>描画処理にハードウェアの機能を利用すると、一般的には高速になります。ただ、ハードウェアとの相性によって、有効にするとかえって一部の処理が遅くなる場合もあります。ハードウェアグラフィック アクセラレータの利用有無を変更してみてください。</p>
-<p>&lt;オプション&gt;<br>[オプション] - [詳細設定] - [ハードウェアのグラフィックアクセラレータを無効にする] のチェックを変更  </p>
-<p>※ Office 共通設定のため、いずれかのアプリケーションで変更すると、Office 全体に反映されます。  </p>
+<p>※ PowerPoint はプロパティはありません<br><br></p>
+<h2 id="3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-Word-PowerPoint"><a href="#3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-Word-PowerPoint" class="headerlink" title="3. ハードウェア グラフィック アクセラレータの設定変更 (Excel / Word / PowerPoint)"></a><strong>3. ハードウェア グラフィック アクセラレータの設定変更 (Excel / Word / PowerPoint)</strong></h2><p>描画処理にハードウェアの機能を利用すると、一般的には高速になります。ただ、ハードウェアとの相性によって、有効にするとかえって一部の処理が遅くなる場合もあります。ハードウェアグラフィック アクセラレータの利用有無を変更してみてください。</p>
+<p>&lt;オプション&gt;<br>[オプション] - [詳細設定] - [ハードウェアのグラフィックアクセラレータを無効にする] のチェックを変更<br>※ Office 共通設定のため、いずれかのアプリケーションで変更すると、Office 全体に反映されます。  </p>
 <p>&lt;グループポリシー&gt;<br>[Microsoft Office 2016] – [その他] – [ハードウェア グラフィック アクセラレータを使用しない]<br>設定値 : 有効または 無効  </p>
-<p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Graphics<br>名前 : DisableHardwareAcceleration<br>種類 : REG_DWORD<br>値 : 1  </p>
-<h4 id="4-シートの表示倍率-Excel"><a href="#4-シートの表示倍率-Excel" class="headerlink" title="4. シートの表示倍率 (Excel)"></a><strong>4. シートの表示倍率 (Excel)</strong></h4><p>Excel でシートが 100% 以外のサイズで表示されていると、シート内容の表示位置やサイズを調整して描画します。パフォーマンスが気になるブックは、倍率 100% で保存してみてください。 </p>
+<p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Graphics<br>名前 : DisableHardwareAcceleration<br>種類 : REG_DWORD<br>値 : 1<br><br></p>
+<h2 id="4-シートの表示倍率-Excel"><a href="#4-シートの表示倍率-Excel" class="headerlink" title="4. シートの表示倍率 (Excel)"></a><strong>4. シートの表示倍率 (Excel)</strong></h2><p>Excel でシートが 100% 以外のサイズで表示されていると、シート内容の表示位置やサイズを調整して描画します。パフォーマンスが気になるブックは、倍率 100% で保存してみてください。 </p>
 <p>&lt;手順&gt;<br>Excel のステータス バーをスライド、またはリボンの [表示] – [ズーム] – [100%]  </p>
-<p>&lt;プロパティ&gt;<br>Window.Zoom プロパティを 100 に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom</a></p>
-<h4 id="5-図のリンク-カメラ-Excel"><a href="#5-図のリンク-カメラ-Excel" class="headerlink" title="5. 図のリンク (カメラ) (Excel)"></a><strong>5. 図のリンク (カメラ) (Excel)</strong></h4><p>図形や画像に、数式バーでセルを参照する数式を設定すると、参照先のセルをオブジェクト内に表示できます。この状態では、参照先セルの変更有無を判定する都度再描画され、パフォーマンスが低下します。リンクが不要な場合は、図のリンクを解除して静的な内容に変更します。  </p>
+<p>&lt;プロパティ&gt;<br>Window.Zoom プロパティを 100 に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom</a><br><br></p>
+<h2 id="5-図のリンク-カメラ-Excel"><a href="#5-図のリンク-カメラ-Excel" class="headerlink" title="5. 図のリンク (カメラ) (Excel)"></a><strong>5. 図のリンク (カメラ) (Excel)</strong></h2><p>図形や画像に、数式バーでセルを参照する数式を設定すると、参照先のセルをオブジェクト内に表示できます。この状態では、参照先セルの変更有無を判定する都度再描画され、パフォーマンスが低下します。リンクが不要な場合は、図のリンクを解除して静的な内容に変更します。  </p>
 <p>&lt;手順&gt;<br>図形や画像を選択し、数式バーで数式を削除</p>
-<p>&lt;プロパティ&gt;<br>対象オブジェクトの Formula プロパティの内容をクリア<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula</a></p>
-<h4 id="6-数式バー表示-Excel"><a href="#6-数式バー表示-Excel" class="headerlink" title="6. 数式バー表示 (Excel)"></a><strong>6. 数式バー表示 (Excel)</strong></h4><p>Excel の数式バー部分は子ウィンドウになっており、数式バー自体の描画にある程度のコストがかかります。プログラムなどから繰り返し再描画を行う場合は、数式バーを非表示にすることをお試しください。</p>
-<p>&lt;オプション&gt;<br>[詳細設定] – [表示] – [数式バーを表示する] のチェックをオフ<br>※ オプションからは標準表示の状態のみ制御できます。  </p>
-<p>&lt;グループポリシー&gt;<br>[Microsoft Excel 2016] – [Excel のオプション] – [詳細設定]<br>  - [標準表示で数式バーを表示する] -&gt; 通常のウィンドウ状態での数式バー表示を制御<br>  - [全画面表示で数式バーを表示する] -&gt; 全画面表示 (Alt + V + U) での数式バー表示を制御<br>設定値 : 無効  </p>
+<p>&lt;プロパティ&gt;<br>対象オブジェクトの Formula プロパティの内容をクリア<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula</a><br><br></p>
+<h2 id="6-数式バー表示-Excel"><a href="#6-数式バー表示-Excel" class="headerlink" title="6. 数式バー表示 (Excel)"></a><strong>6. 数式バー表示 (Excel)</strong></h2><p>Excel の数式バー部分は子ウィンドウになっており、数式バー自体の描画にある程度のコストがかかります。プログラムなどから繰り返し再描画を行う場合は、数式バーを非表示にすることをお試しください。  </p>
+<p>&lt;オプション&gt;<br>[詳細設定] – [表示] – [数式バーを表示する] のチェックをオフ<br>※ オプションからは標準表示の状態のみ制御できます。    </p>
+<p>&lt;グループポリシー&gt;<br>[Microsoft Excel 2016] – [Excel のオプション] – [詳細設定]<br>  - [標準表示で数式バーを表示する] -&gt; 通常のウィンドウ状態での数式バー表示を制御<br>  - [全画面表示で数式バーを表示する] -&gt; 全画面表示 (Alt + V + U) での数式バー表示を制御<br>設定値 : 無効    </p>
 <p>&lt;レジストリ&gt;<br><strong>標準表示で数式バーを表示する</strong><br>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Excel\Options\Binaryoptions<br>名前 : ffmlaf_1_1<br>種類 : REG_DWORD<br>値 : 0  </p>
 <p><strong>全画面表示で数式バーを表示する</strong><br>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Excel\Options\Binaryoptions<br>名前 : ffmlafull_68_1<br>種類 : REG_DWORD<br>値 : 0  </p>
-<p>&lt;プロパティ&gt;<br>Application.DisplayFormulaBar プロパティ を False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar</a></p>
-<h4 id="7-ステータスバー表示-Excel-Word-PowerPoint"><a href="#7-ステータスバー表示-Excel-Word-PowerPoint" class="headerlink" title="7. ステータスバー表示 (Excel / Word / PowerPoint)"></a><strong>7. ステータスバー表示 (Excel / Word / PowerPoint)</strong></h4><p>数式バーと同様、ステータスバー自体の描画、内容の更新もパフォーマンスに影響します。手動操作では、表示内容を減らすことをお試しください。Excel では、プログラムの場合、ステータスバー自体を非表示にできます。</p>
+<p>&lt;プロパティ&gt;<br>Application.DisplayFormulaBar プロパティ を False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar</a><br><br></p>
+<h2 id="7-ステータスバー表示-Excel-Word-PowerPoint"><a href="#7-ステータスバー表示-Excel-Word-PowerPoint" class="headerlink" title="7. ステータスバー表示 (Excel / Word / PowerPoint)"></a><strong>7. ステータスバー表示 (Excel / Word / PowerPoint)</strong></h2><p>数式バーと同様、ステータスバー自体の描画、内容の更新もパフォーマンスに影響します。手動操作では、表示内容を減らすことをお試しください。Excel では、プログラムの場合、ステータスバー自体を非表示にできます。</p>
 <p>&lt;手順&gt;<br>ステータス バーを右クリックし、[ステータス バーのユーザー設定] メニューで不要な項目のチェックを外します。<br>参考) Excel のステータスバーのオプション<br><a href="https://support.office.com/ja-jp/article/6055ecd9-e20f-4a7a-a611-4481bd488c55" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/6055ecd9-e20f-4a7a-a611-4481bd488c55</a></p>
-<p>&lt;プログラム&gt;<br>Application.DisplayStatusBar プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar</a></p>
-<h4 id="8-プログラム向け-描画処理全般の停止"><a href="#8-プログラム向け-描画処理全般の停止" class="headerlink" title="8. (プログラム向け) 描画処理全般の停止"></a><strong>8. (プログラム向け) 描画処理全般の停止</strong></h4><p>プログラムの処理中は、処理途中の描画状態をユーザーに見せる必要はないことが多いため、以下のプロパティを設定して画面描画を抑止することをお試しください。(多くの描画処理が抑止されますが、完全に描画が一切行われなくなるわけではありません。)</p>
+<p>&lt;プログラム&gt;<br>Application.DisplayStatusBar プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar</a><br><br></p>
+<h2 id="8-プログラム向け-描画処理全般の停止"><a href="#8-プログラム向け-描画処理全般の停止" class="headerlink" title="8. (プログラム向け) 描画処理全般の停止"></a><strong>8. (プログラム向け) 描画処理全般の停止</strong></h2><p>プログラムの処理中は、処理途中の描画状態をユーザーに見せる必要はないことが多いため、以下のプロパティを設定して画面描画を抑止することをお試しください。(多くの描画処理が抑止されますが、完全に描画が一切行われなくなるわけではありません。)</p>
 <p><strong>Excel</strong><br>Application.ScreenUpdating プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.screenupdating" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.screenupdating</a></p>
 <p><strong>Word</strong><br>Application.ScreenUpdatingプロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/word.application.screenupdating" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/word.application.screenupdating</a></p>
-<p>※ PowerPoint はプロパティはありません  </p>
-<h4 id="9-プログラム向け-Excel-の非表示化"><a href="#9-プログラム向け-Excel-の非表示化" class="headerlink" title="9. (プログラム向け) Excel の非表示化"></a><strong>9. (プログラム向け) Excel の非表示化</strong></h4><p>外部からの Office オートメーションなどでは、プログラムの処理中にアプリケーション ウィンドウ自体を非表示にすることも有効です。以下のプロパティで非表示にできます。</p>
+<p>※ PowerPoint はプロパティはありません<br><br></p>
+<h2 id="9-プログラム向け-Excel-の非表示化"><a href="#9-プログラム向け-Excel-の非表示化" class="headerlink" title="9. (プログラム向け) Excel の非表示化"></a><strong>9. (プログラム向け) Excel の非表示化</strong></h2><p>外部からの Office オートメーションなどでは、プログラムの処理中にアプリケーション ウィンドウ自体を非表示にすることも有効です。以下のプロパティで非表示にできます。</p>
 <p><strong>Excel</strong><br>Application.Visible プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.visible" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.visible</a></p>
 <p><strong>Word</strong><br>Application.Visible プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/word.application.visible" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/word.application.visible</a></p>
-<p><strong>PowerPoint</strong><br>Application.Visible プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible</a></p>
-<h4 id="10-OS-アニメーションの無効化"><a href="#10-OS-アニメーションの無効化" class="headerlink" title="10. (OS) アニメーションの無効化"></a><strong>10. (OS) アニメーションの無効化</strong></h4><p>Office だけでなく他のアプリケーション全般に及ぶ設定ですが、OS レベルでアニメーションを無効化できます。</p>
-<p>&lt;オプション&gt;<br><strong>Wndows 10</strong><br>[設定] – [簡単操作] – [ディスプレイ] – [Windows のシンプル化と個人用設定] – [Windows にアニメーションを表示する]<br>をオフに設定し、OS を再起動してパフォーマンスを確認してください。(バージョンによりメニュー構成が異なる場合があります。見つからない場合は [設定] 画面の検索から “アニメーション” で探してみてください。)</p>
-<h4 id="11-OS-視覚効果"><a href="#11-OS-視覚効果" class="headerlink" title="11. (OS) 視覚効果"></a><strong>11. (OS) 視覚効果</strong></h4><p>OS の設定で、視覚効果を細かく制御できます。パフォーマンスを優先する設定に変更してお試しください。</p>
-<p>&lt;オプション&gt;<br>[コントロール パネル] – [システムとセキュリティ] – [システム] - [システムの詳細設定] – [詳細設定] タブ – [パフォーマンス] 内の [設定] – [視覚効果] タブで [パフォーマンスを優先する] を選択 (または [カスタム] で不要な効果のチェックをオフ)  </p>
-<h4 id="12-OS-省電力設定-※-これは描画以外も含め、すべての動作に関わります"><a href="#12-OS-省電力設定-※-これは描画以外も含め、すべての動作に関わります" class="headerlink" title="12. (OS) 省電力設定 ※ これは描画以外も含め、すべての動作に関わります"></a><strong>12. (OS) 省電力設定 ※ これは描画以外も含め、すべての動作に関わります</strong></h4><p>大幅なパフォーマンス低下で多いのはこの設定です。ノートPC では特に、省電力設定となっていることがあり、省電力設定では CPU クロック数が制限されるため、CPU に負荷がかかる様々な処理が遅延します。Office の場合、この設定によって起動やスクロールが遅いというお問い合わせを頂きます。</p>
-<p>&lt;オプション&gt;<br>[コントロール パネル] – [ハードウェアとサウンド] – [電源オプション] で現在の設定を確認できます。  </p>
-<p>“省電力” に設定されている場合は、”バランス” に変更し、OS を再起動してパフォーマンスを確認してください。  </p>
-<p>今回の投稿は以上です。</p>
+<p><strong>PowerPoint</strong><br>Application.Visible プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible</a><br><br></p>
+<h2 id="10-OS-アニメーションの無効化"><a href="#10-OS-アニメーションの無効化" class="headerlink" title="10. (OS) アニメーションの無効化"></a><strong>10. (OS) アニメーションの無効化</strong></h2><p>Office だけでなく他のアプリケーション全般に及ぶ設定ですが、OS レベルでアニメーションを無効化できます。</p>
+<p>&lt;オプション&gt;<br><strong>Wndows 10</strong><br>[設定] – [簡単操作] – [ディスプレイ] – [Windows のシンプル化と個人用設定] – [Windows にアニメーションを表示する]<br>をオフに設定し、OS を再起動してパフォーマンスを確認してください。(バージョンによりメニュー構成が異なる場合があります。見つからない場合は [設定] 画面の検索から “アニメーション” で探してみてください。)<br><br></p>
+<h2 id="11-OS-視覚効果"><a href="#11-OS-視覚効果" class="headerlink" title="11. (OS) 視覚効果"></a><strong>11. (OS) 視覚効果</strong></h2><p>OS の設定で、視覚効果を細かく制御できます。パフォーマンスを優先する設定に変更してお試しください。</p>
+<p>&lt;オプション&gt;<br>[コントロール パネル] – [システムとセキュリティ] – [システム] - [システムの詳細設定] – [詳細設定] タブ – [パフォーマンス] 内の [設定] – [視覚効果] タブで [パフォーマンスを優先する] を選択 (または [カスタム] で不要な効果のチェックをオフ)<br><br></p>
+<h2 id="12-OS-省電力設定-※-これは描画以外も含め、すべての動作に関わります"><a href="#12-OS-省電力設定-※-これは描画以外も含め、すべての動作に関わります" class="headerlink" title="12. (OS) 省電力設定 ※ これは描画以外も含め、すべての動作に関わります"></a><strong>12. (OS) 省電力設定 ※ これは描画以外も含め、すべての動作に関わります</strong></h2><p>大幅なパフォーマンス低下で多いのはこの設定です。ノートPC では特に、省電力設定となっていることがあり、省電力設定では CPU クロック数が制限されるため、CPU に負荷がかかる様々な処理が遅延します。Office の場合、この設定によって起動やスクロールが遅いというお問い合わせを頂きます。</p>
+<p>&lt;オプション&gt;<br>[コントロール パネル] – [ハードウェアとサウンド] – [電源オプション] で現在の設定を確認できます。<br>“省電力” に設定されている場合は、”バランス” に変更し、OS を再起動してパフォーマンスを確認してください。<br><br></p>
+<p>今回の投稿は以上です。<br><br></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       

@@ -15,7 +15,7 @@
 <meta property="og:description" content="(※ 2016 年 8 月 10 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。   先日、以下の blog 記事で、2016 年 7 月のセキュリティ更新プログラムを適用した後、Web 上にある Excel に偽装された HTML ファイルが開けない現象について説明していました。 タイトル : 201">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-02-17T01:32:04.759Z">
+<meta property="article:modified_time" content="2022-02-18T06:35:40.467Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -123,9 +123,9 @@
         <p>(※ 2016 年 8 月 10 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office サポート チームです。  </p>
 <p>先日、以下の blog 記事で、2016 年 7 月のセキュリティ更新プログラムを適用した後、Web 上にある Excel に偽装された HTML ファイルが開けない現象について説明していました。</p>
-<p>タイトル : 2016 年 7 月のセキュリティ更新プログラム MS16-088 適用後 Web 上の Excel に偽装したファイルが開けない<br>アドレス : <a href="https://blogs.technet.microsoft.com/officesupportjp/2016/08/02/camouflaged-excel-file-issue-after-ms16-088" target="_blank" rel="noopener">https://blogs.technet.microsoft.com/officesupportjp/2016/08/02/camouflaged-excel-file-issue-after-ms16-088</a></p>
+<p>タイトル : 2016 年 7 月のセキュリティ更新プログラム MS16-088 適用後 Web 上の Excel に偽装したファイルが開けない<br>アドレス : <a href="https://officesupportjp.github.io/blog/2016%20%E5%B9%B4%207%20%E6%9C%88%E3%81%AE%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E6%9B%B4%E6%96%B0%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%20MS16-088%20%E9%81%A9%E7%94%A8%E5%BE%8C%20Web%20%E4%B8%8A%E3%81%AE%20Excel%20%E3%81%AB%E5%81%BD%E8%A3%85%E3%81%97%E3%81%9F%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%91%E3%81%AA%E3%81%84/">https://officesupportjp.github.io/blog/2016 年 7 月のセキュリティ更新プログラム MS16-088 適用後 Web 上の Excel に偽装したファイルが開けない</a></p>
 <p>この動作はセキュリティを考慮して変更したものでしたが、HTML を Excel ファイルに偽装するような使い方をされているユーザー様からのお問い合わせを頂き、2016 年 8 月 10 日 (日本時間) に公開された以下の更新プログラムで動作を再変更しました。</p>
-<p><span style="color:#ff0000"><strong>2016/8/25 Update</strong></span><br><span style="color:#339966">Windows Update で更新プログラムが入手可能になりましたので、MSI インストール形式のインストール方法を更新しました。</span>..</p>
+<p><span style="color:#ff0000"><strong>2016/8/25 Update</strong></span><br><span style="color:#339966">Windows Update で更新プログラムが入手可能になりましたので、MSI インストール形式のインストール方法を更新しました。</span></p>
 <p><u><strong>更新プログラムの情報</strong></u></p>
 <p><strong>MSI</strong> <strong>インストール形式</strong></p>
 <p>タイトル : August 9, 2016, update for Excel 2010 (KB3115476)<br>アドレス : <a href="https://support.microsoft.com/en-us/kb/3115476" target="_blank" rel="noopener">https://support.microsoft.com/en-us/kb/3115476</a></p>
@@ -142,11 +142,9 @@
 <p>Office アプリケーションを起動し、[ファイル] タブの [アカウント] – [更新オプション] – [今すぐ更新] で今回の更新を含む最新の更新をインストールできます。自動更新に設定されている場合は、自動的に更新されます。</p>
 <p><u><strong>2016</strong> <strong>年 8</strong> <strong>月の更新プログラム適用後の動作</strong></u></p>
 <p>2016 年 7 月の更新によって開けなくなっていたシナリオで HTML を xls に偽装したファイルを開くと、ファイル形式と拡張子が異なる旨の警告メッセージを表示した上で、ユーザーが許可すると、<span style="color:#ff0000">保護されたビューで開かれるようになりました。</span></p>
-<p>(以前の動作)  </p>
-<p>ファイル形式と拡張子が異なる旨の警告メッセージを表示した上で、ユーザーが許可すると HTML 形式ファイルは通常どおり開かれていました。</p>
+<p>(以前の動作)<br>ファイル形式と拡張子が異なる旨の警告メッセージを表示した上で、ユーザーが許可すると HTML 形式ファイルは通常どおり開かれていました。</p>
 <p>以前は、HTML 形式のファイルには保護されたビューは適用されませんでしたが、今回の更新から、セキュリティ保護の目的で HTML 形式のファイルが保護されたビューで開く動作に変更されました。</p>
-<p>参考資料)  </p>
-<p>タイトル : 保護されたビューとは<br>アドレス : <a href="https://support.office.com/ja-jp/article/-d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/-d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653</a></p>
+<p>参考資料)<br>タイトル : 保護されたビューとは<br>アドレス : <a href="https://support.office.com/ja-jp/article/-d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/-d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653</a></p>
 <p><strong>関連情報</strong></p>
 <p>海外の Office サポート チームが公開している同じ動作についての blog 記事です。</p>
 <p>タイトル : Excel Workbooks may not open after installing MS16-088<br>アドレス : <a href="https://blogs.technet.microsoft.com/the_microsoft_excel_support_team_blog/2016/07/22/excel-workbooks-may-not-open-after-installing-ms16-088/" target="_blank" rel="noopener">https://blogs.technet.microsoft.com/the_microsoft_excel_support_team_blog/2016/07/22/excel-workbooks-may-not-open-after-installing-ms16-088/</a></p>

@@ -14,7 +14,7 @@ Microsoft Graph は 1 つのエンドポイントを介して複数の API を O
 概要については以下のサイトをご参考にしてください。
 
 タイトル : Microsoft Graph の概要  
-アドレス : [https://graph.microsoft.io/ja-jp/docs](https://graph.microsoft.io/ja-jp/docs)
+アドレス : [https://docs.microsoft.com/ja-jp/graph/overview](https://docs.microsoft.com/ja-jp/graph/overview)
 
 **1\. Graph Explorer**
 ----------------------
@@ -22,7 +22,7 @@ Microsoft Graph は 1 つのエンドポイントを介して複数の API を O
 Microsoft Graph のエンドポイント (https://graph.microsoft.com/) 配下の REST API を試すことができます。
 
 タイトル : Graph エクスプローラー  
-アドレス : [https://graph.microsoft.io/ja-jp/graph-explorer](https://graph.microsoft.io/ja-jp/graph-explorer)
+アドレス : [https://developer.microsoft.com/ja-jp/graph/graph-explorer](https://developer.microsoft.com/ja-jp/graph/graph-explorer)
 
 まずは、このツールを使用して Microsoft Graph に慣れることをお勧めします。
 
@@ -55,7 +55,7 @@ Microsoft Graph のエンドポイント (htps://graph.microsoft.com/) 配下の
 **手順**
 以下の手順では、自分の OneDrive for Business ライブラリに存在するファイルの一覧を取得します。
 
-1-1) [Graph Explorer](https://graph.microsoft.io/ja-jp/graph-explorer) にアクセスします。  
+1-1) [Graph Explorer](https://developer.microsoft.com/ja-jp/graph/graph-explorer) にアクセスします。  
 1-2) \[サインイン\] をクリックします。  
 1-3) ユーザー名とパスワードを入れてログインします。はじめて使用する場合は、さらに \[信頼する\] をクリックしてください。  
 1-4) v1.0 と GET はそのままにします。  
@@ -71,9 +71,6 @@ Microsoft Graph のエンドポイント (htps://graph.microsoft.com/) 配下の
 
 1-6) ルート フォルダ直下のフォルダやファイル一覧が取得できたことを確認します。
 
-**参考情報**
-タイトル : Office Dev Show - Episode 41 - The New Microsoft Graph Explorer  
-アドレス : [https://channel9.msdn.com/Shows/Office-Dev-Show/Office-Dev-Show-Episode-41-The-New-Microsoft-Graph-Explorer](https://channel9.msdn.com/Shows/Office-Dev-Show/Office-Dev-Show-Episode-41-The-New-Microsoft-Graph-Explorer)
 
 **2\. Fiddler**
 ---------------
