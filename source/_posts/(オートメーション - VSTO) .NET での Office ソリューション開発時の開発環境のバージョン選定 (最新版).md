@@ -1,6 +1,8 @@
 ---
 title: (オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)
 date: 2019-02-28
+id: cl0mdnobv00055ovs67kp420v
+alias: /(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)/
 ---
 
 (※ 2017 年 2 月 7 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

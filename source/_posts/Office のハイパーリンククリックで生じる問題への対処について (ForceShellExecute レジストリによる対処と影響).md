@@ -2,6 +2,8 @@
 title: Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響)
 date: 2019-03-09
 lastupdate: 2020-10-29
+id: cl0m7opbm001idcvs6pr2917a
+alias: /Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響)/
 ---
 
 (※ 2016 年 7 月 12 日に Japan Office Support Blog に公開した情報のアーカイブです。)

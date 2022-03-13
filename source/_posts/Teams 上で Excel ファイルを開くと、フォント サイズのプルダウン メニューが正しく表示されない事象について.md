@@ -2,6 +2,8 @@
 title: Teams 上で Excel ファイルを開くと、フォント サイズのプルダウン メニューが正しく表示されない事象について
 date: 2020-01-27
 lastupdate: 2020-03-17
+id: cl0m6umw9002mi4vse768hhor
+alias: /Teams 上で Excel ファイルを開くと、フォント サイズのプルダウン メニューが正しく表示されない事象について/
 ---
 
 こんにちは、Office サポートです。

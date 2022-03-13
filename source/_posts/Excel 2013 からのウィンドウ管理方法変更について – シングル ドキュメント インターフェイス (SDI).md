@@ -2,6 +2,8 @@
 title: Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)
 date: 2019-02-21
 lastupdate: 2020-07-06
+id: cl0n10dct000i90vs4c2a3pct
+alias: /Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)/
 ---
 
 (※ 2016 年 12 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

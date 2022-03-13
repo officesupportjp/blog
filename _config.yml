@@ -26,7 +26,7 @@ timezone: 'asia/Tokyo'
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://officesupportjp.github.io/blog
 root: /blog/
-permalink: :title/
+permalink: :id/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks

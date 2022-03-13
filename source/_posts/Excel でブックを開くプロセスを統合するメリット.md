@@ -1,6 +1,8 @@
 ---
 title: Excel でブックを開くプロセスを統合するメリット
 date: 2019-02-21
+id: cl0n10ddh000t90vsbpgv3r9l
+alias: /Excel でブックを開くプロセスを統合するメリット/
 ---
 
 (※ 2017 年 1 月 13 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

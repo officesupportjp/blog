@@ -1,6 +1,8 @@
 ---
 title: 1 つの Web ページ上の Excel ファイルが 2 つ以上直接開けない件について
 date: 2019-03-09
+id: cl0m7gho00007k8vs5dodc5y4
+alias: /1 つの Web ページ上の Excel ファイルが 2 つ以上直接開けない件について/
 ---
 
 (※ 2016 年 8 月 1 日に Japan Office Support Blog に公開した情報のアーカイブです。)

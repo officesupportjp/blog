@@ -1,6 +1,8 @@
 ---
 title: PowerShell の導入について
 date: 2019-03-09
+id: cl0m82yji002lvovs7o3d4qg9
+alias: /PowerShell の導入について/
 ---
 
 (※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。)

@@ -1,6 +1,8 @@
 ---
 title: (WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード
 date: 2019-03-01
+id: cl0m8t2aa00013gvsa2mr8xj5
+alias: /(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード/
 ---
 
 (※ 2016 年 12 月 29 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

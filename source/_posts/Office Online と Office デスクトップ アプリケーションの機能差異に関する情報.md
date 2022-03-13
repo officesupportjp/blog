@@ -2,6 +2,8 @@
 title: Office Online と Office デスクトップ アプリケーションの機能差異に関する情報
 date: 2019-03-09
 lastupdate: 2021-11-08
+id: cl0m7opbk001fdcvs05wsecb0
+alias: /Office Online と Office デスクトップ アプリケーションの機能差異に関する情報/
 ---
 
 (※ 2018 年 3 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。)

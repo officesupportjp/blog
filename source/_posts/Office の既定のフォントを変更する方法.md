@@ -2,6 +2,8 @@
 title: Office の既定のフォントを変更する方法
 date: 2019-09-17
 lastupdate: 2020-01-10
+id: cl0m75alf001rmcvses4a67bp
+alias: /Office の既定のフォントを変更する方法/
 ---
 
 こんにちは、Office サポート チームです。  

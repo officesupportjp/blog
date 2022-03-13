@@ -2,6 +2,8 @@
 title: 【お知らせ】Office サポートチーム フォーラムについて
 date: 2019-02-04
 lastupdate: 2019-02-21
+id: cl0n1linb0033okvs9wyq6kys
+alias: /【お知らせ】Office サポートチーム フォーラムについて/
 ---
 
 いつも Microsoft Office をご愛顧いただき誠にありがとうございます。  

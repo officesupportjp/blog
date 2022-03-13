@@ -16,6 +16,7 @@
     "dom-parser": "^0.1.6",
     "hexo": "^4.0.0",
     "hexo-deployer-git": "^2.1.0",
+    "hexo-generator-alias": "^1.0.0",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^2.2.0",

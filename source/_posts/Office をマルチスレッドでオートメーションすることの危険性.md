@@ -1,6 +1,8 @@
 ---
 title: Office をマルチスレッドでオートメーションすることの危険性
 date: 2019-02-25
+id: cl0mfb7b4001tnwvs5vama7sz
+alias: /Office をマルチスレッドでオートメーションすることの危険性/
 ---
 
 (※ 2017 年 1 月 30 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

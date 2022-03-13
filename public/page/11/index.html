@@ -90,9 +90,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-1. Office PIA 経由で Office 製品をオートメーションすることによる、Office オブジェクトモデルの操作" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/" class="article-date">
+    <a href="/blog/cl0mdnobv00055ovs67kp420v/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -104,14 +104,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/">1. Office PIA 経由で Office 製品をオートメーションすることによる、Office オブジェクトモデルの操作</a>
+      <a class="article-title" href="/blog/cl0mdnobv00055ovs67kp420v/">(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/" class="article-date-single">    
+        <a href="/blog/cl0mdnobv00055ovs67kp420v/" class="article-date-single">    
     
     <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
@@ -120,17 +120,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2012 年 2 月 15 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発系サポートの柴田　茂 (sshibata) です。
-本稿で表現している、Office オートメーションとは、Windows 上の全く別のアプリケーションを使用して、Office によって通常は手動やマクロによって行われる処理を、自動化する仕組みとなります。例えば、Excel のオートメーションを使用すれば、新規ブックの作成、ブックへのデータ入力、グラフの作成などの作業を自動的に実行させることができます。Excel などの Microsoft Office アプリケーションでは、通常はユーザー インターフェイスを介して手動で実行する機能のほぼすべてを、オートメーションによってプログラムから実行することができます。
-M...
+        (※ 2017 年 2 月 7 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+今回は、C# や VB.NET を使って .NET Framework 上で動作する Office をオートメーションするプログラムや、VSTO でOffice ソリューション (アドインや、プログラムが組み込まれた Office ファイル) を作成するときに必要な環境構成について記載します。
+過去の投稿で、当時の製品でのバージョン選定について記載していましたが、古い情報になってしまいましたので、本記事では、現在サポートされる製品バージョンについての最新情報を記載したいと思います。動作の仕組みの説明などは、過去の投稿で詳しく説明していますのでぜひ合わせてご参照ください。
+2017/7/...
         <p class="article-more-link">
-          <a href="/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/#more">Read More</a>
+          <a href="/blog/cl0mdnobv00055ovs67kp420v/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/1.%20Office%20PIA%20%E7%B5%8C%E7%94%B1%E3%81%A7%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%80%81Office%20%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%A2%E3%83%87%E3%83%AB%E3%81%AE%E6%93%8D%E4%BD%9C/" data-id="ckzqb7f2d00072c3p6cby1tws" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl0n2mqbz000784vs3pcj2cgf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +143,7 @@ M...
   
     <article id="post-Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+    <a href="/blog/cl0mfb7ai0013nwvs9tsk91ry/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -154,14 +155,14 @@ M...
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて</a>
+      <a class="article-title" href="/blog/cl0mfb7ai0013nwvs9tsk91ry/">Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+        <a href="/blog/cl0mfb7ai0013nwvs9tsk91ry/" class="article-date-single">    
     
     <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
@@ -174,12 +175,12 @@ M...
 こんにちは、Office 開発系サポートの柴田　茂 (sshibata) です。私の投稿では、Microsoft Office 製品を、Windows のプラットフォーム上で別アプリケーションから操作する場合にどんなテクノロジを検討すべきかというテーマについて記載致します。
 .NET Framework が登場するはるか前の時代から、Windows 上で動作するOffice アプリケーションに介入してアプリケーションソフト間でデータを転送・共有するための仕組みは存在していました。それが、OLE と呼ばれる規格(Object Linking and Embedding) であったり、DDE　というテクノロジであったり(Dynamic Data E...
         <p class="article-more-link">
-          <a href="/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
+          <a href="/blog/cl0mfb7ai0013nwvs9tsk91ry/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Microsoft%20Office%20%E8%A3%BD%E5%93%81%E3%82%92%20Windows%20%E3%81%AE%E3%83%97%E3%83%A9%E3%83%83%E3%83%88%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E4%B8%8A%E3%81%A7%E5%88%A5%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%8B%E3%82%89%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E5%A0%B4%E5%90%88%E3%81%AE%E3%83%86%E3%82%AF%E3%83%8E%E3%83%AD%E3%82%B8%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckzqb7f2x000z2c3pbwd35m4i" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ai0013nwvs9tsk91ry/" data-id="cl0n2mqd3001384vsht73exfw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -191,7 +192,7 @@ M...
   
     <article id="post-Office オートメーションで割り当てたオブジェクトを解放する - Part2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/" class="article-date">
+    <a href="/blog/cl0mfb7b5001unwvs919y8d7e/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -203,14 +204,14 @@ M...
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/">Office オートメーションで割り当てたオブジェクトを解放する - Part2</a>
+      <a class="article-title" href="/blog/cl0mfb7b5001unwvs919y8d7e/">Office オートメーションで割り当てたオブジェクトを解放する - Part2</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/" class="article-date-single">    
+        <a href="/blog/cl0mfb7b5001unwvs919y8d7e/" class="article-date-single">    
     
     <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
@@ -225,12 +226,12 @@ M...
 最初に、オブジェクト解放漏れがあると、主に以下のような事象があるということは先に述べておきます。
 ・意図とは異なる COM オブジェクトに接続され、想定とは異なる結果を返し、アプリケーションの動作に予期せぬ影響を与えます。・通常のメソッド実行にも関わらず COMEx...
         <p class="article-more-link">
-          <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/#more">Read More</a>
+          <a href="/blog/cl0mfb7b5001unwvs919y8d7e/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20-%20Part2/" data-id="ckzqb7f3j001q2c3p2kr7g9hv" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="cl0n2mqdl001u84vser39fbe8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -242,7 +243,7 @@ M...
   
     <article id="post-Office オートメーションで割り当てたオブジェクトを解放する – Part1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/" class="article-date">
+    <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -254,14 +255,14 @@ M...
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/">Office オートメーションで割り当てたオブジェクトを解放する – Part1</a>
+      <a class="article-title" href="/blog/cl0mfb7b6001vnwvs3rv43evy/">Office オートメーションで割り当てたオブジェクトを解放する – Part1</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/" class="article-date-single">    
+        <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/" class="article-date-single">    
         
     <time datetime="2021-04-27T15:00:00.000Z" itemprop="lastupdate">2021-04-28</time>    
     
@@ -277,12 +278,12 @@ M...
 2017/3/28 Updateアプリケーション終了前に一部のオブジェクトを解放するよう、サンプル コードをさらに適切な形に変更しました。
 これは...
         <p class="article-more-link">
-          <a href="/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/#more">Read More</a>
+          <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%A7%E5%89%B2%E3%82%8A%E5%BD%93%E3%81%A6%E3%81%9F%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E8%A7%A3%E6%94%BE%E3%81%99%E3%82%8B%20%E2%80%93%20Part1/" data-id="ckzqb7f3k001r2c3p601baliz" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b6001vnwvs3rv43evy/" data-id="cl0n2mqdl001v84vs32sg454l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -292,9 +293,9 @@ M...
 
 
   
-    <article id="post-Office サーバー サイド オートメーションの危険性について" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+    <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -306,14 +307,65 @@ M...
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office サーバー サイド オートメーションの危険性について</a>
+      <a class="article-title" href="/blog/cl0mfb7b8001xnwvs5pzxb66j/">Office サーバー サイド オートメーションの代替案について</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+        <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date-single">    
+    
+    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
+こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
+今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
+タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
+上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
+        <p class="article-more-link">
+          <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b8001xnwvs5pzxb66j/" data-id="cl0n2mqdm001w84vs2imogf6b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office サーバー サイド オートメーションの危険性について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/" class="article-date">
+  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mfb7b7001wnwvshfp01l5u/">Office サーバー サイド オートメーションの危険性について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/" class="article-date-single">    
     
     <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
@@ -329,63 +381,12 @@ M...
 結論からお伝えしますと Office のサーバー サイド オートメーション (非対話型オートメーション) を、マイクロソフトはサポートしておりません。
 前提として、サーバーにインストールされた Office クライアント アプリケーションを使用したオートメーションを実施して、クライアント側の処理をサーバー側で集中して代行するなどの機能をライセンスを持たないエンドユーザーに提供した場合は、Micr...
         <p class="article-more-link">
-          <a href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
+          <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckzqb7f3l001s2c3p3auoahrm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
-  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office サーバー サイド オートメーションの代替案について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
-    
-    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
-こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
-今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
-タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
-上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
-        <p class="article-more-link">
-          <a href="/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckzqb7f3o001u2c3pdkiqcqfv" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl0n2mqdm001x84vs90zy48zm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -397,7 +398,7 @@ M...
   
     <article id="post-Officeソリューション開発時の開発環境のバージョン選定について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date">
+    <a href="/blog/cl0mfb7bn002inwvse5785nd7/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -409,14 +410,14 @@ M...
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Officeソリューション開発時の開発環境のバージョン選定について</a>
+      <a class="article-title" href="/blog/cl0mfb7bn002inwvse5785nd7/">Officeソリューション開発時の開発環境のバージョン選定について</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" class="article-date-single">    
+        <a href="/blog/cl0mfb7bn002inwvse5785nd7/" class="article-date-single">    
     
     <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
@@ -433,12 +434,12 @@ M...
 新しい Visual Studio と Office バージョンについての記事を以下に投稿しました。
 タイトル : [オートメーション / VSTO] .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)アドレス : https://officesupportjp.github.i...
         <p class="article-more-link">
-          <a href="/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/#more">Read More</a>
+          <a href="/blog/cl0mfb7bn002inwvse5785nd7/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/" data-id="ckzqb7f4000292c3pc01h5thq" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bn002inwvse5785nd7/" data-id="cl0n2mqdv002g84vshmnocaby" class="article-share-link">Share</a>
       
       
     </footer>
@@ -450,7 +451,7 @@ M...
   
     <article id="post-Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Excel%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0%E3%81%AB%E6%A9%9F%E8%83%BD%E8%AA%AC%E6%98%8E%E3%82%84%E7%8B%AC%E8%87%AA%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/" class="article-date">
+    <a href="/blog/cl0mfb7ac000wnwvsen2873w5/" class="article-date">
   <time datetime="2019-02-24T15:00:00.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
     <!--  -->
@@ -462,14 +463,14 @@ M...
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Excel%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0%E3%81%AB%E6%A9%9F%E8%83%BD%E8%AA%AC%E6%98%8E%E3%82%84%E7%8B%AC%E8%87%AA%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/">Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法</a>
+      <a class="article-title" href="/blog/cl0mfb7ac000wnwvsen2873w5/">Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Excel%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0%E3%81%AB%E6%A9%9F%E8%83%BD%E8%AA%AC%E6%98%8E%E3%82%84%E7%8B%AC%E8%87%AA%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/" class="article-date-single">    
+        <a href="/blog/cl0mfb7ac000wnwvsen2873w5/" class="article-date-single">    
     
     <time datetime="2019-02-24T15:00:00.000Z" itemprop="dateUpdated">2019-02-25</time>
     
@@ -484,12 +485,12 @@ Excel には、セルに設定する式として、SUM() のように計算に�
 このブログを訪れる方の多くは、ユーザー定義関数を登録すること自体はご存知の方が多いかと思いますが、このようなユーザー定義関数を作成するときにその関数に機能説明やヘルプを追加する方法について、公開情報からは分かりづらい点もありますので、本記事で紹介したいと思います。
 1. ユーザー定義関数の作...
         <p class="article-more-link">
-          <a href="/blog/Excel%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0%E3%81%AB%E6%A9%9F%E8%83%BD%E8%AA%AC%E6%98%8E%E3%82%84%E7%8B%AC%E8%87%AA%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/#more">Read More</a>
+          <a href="/blog/cl0mfb7ac000wnwvsen2873w5/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Excel%20%E3%83%A6%E3%83%BC%E3%82%B6%E3%83%BC%E5%AE%9A%E7%BE%A9%E9%96%A2%E6%95%B0%E3%81%AB%E6%A9%9F%E8%83%BD%E8%AA%AC%E6%98%8E%E3%82%84%E7%8B%AC%E8%87%AA%E3%83%98%E3%83%AB%E3%83%97%E3%82%92%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95/" data-id="ckzqb7f2t000s2c3pcphi7610" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ac000wnwvsen2873w5/" data-id="cl0n2mqd0000w84vs622mc35i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -501,7 +502,7 @@ Excel には、セルに設定する式として、SUM() のように計算に�
   
     <article id="post-Office をマルチスレッドでオートメーションすることの危険性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/" class="article-date">
+    <a href="/blog/cl0mfb7b4001tnwvs5vama7sz/" class="article-date">
   <time datetime="2019-02-24T15:00:00.000Z" itemprop="datePublished">2019-02-25</time>
 </a>
     <!--  -->
@@ -513,14 +514,14 @@ Excel には、セルに設定する式として、SUM() のように計算に�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/">Office をマルチスレッドでオートメーションすることの危険性</a>
+      <a class="article-title" href="/blog/cl0mfb7b4001tnwvs5vama7sz/">Office をマルチスレッドでオートメーションすることの危険性</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/" class="article-date-single">    
+        <a href="/blog/cl0mfb7b4001tnwvs5vama7sz/" class="article-date-single">    
     
     <time datetime="2019-02-24T15:00:00.000Z" itemprop="dateUpdated">2019-02-25</time>
     
@@ -535,12 +536,12 @@ Excel には、セルに設定する式として、SUM() のように計算に�
 Office は STA (Single-Threaded Apartment) モデルで動作しているため、マルチスレッドからの呼び出し、特に Office に重い処理を実行させているときや、ループ処理などでマルチスレッドから大量の呼び出しを行うと、エラーが発生することがあります。
 この動作については、以下の弊社公開資料で解説していますが、開発者の皆様に知って頂く機会を増やすとともに、図等を用いてより親しみやすい内容でご案内するため、今回、本記事でも取り上げたいと思い...
         <p class="article-more-link">
-          <a href="/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/#more">Read More</a>
+          <a href="/blog/cl0mfb7b4001tnwvs5vama7sz/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%82%92%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%A7%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7/" data-id="ckzqb7f3i001o2c3pdf5y8i4w" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl0n2mqdk001t84vs77t495q4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -552,7 +553,7 @@ Office は STA (Single-Threaded Apartment) モデルで動作しているため�
   
     <article id="post-Office プロセスを自プログラム専用にすることはできません" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E8%87%AA%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%B0%82%E7%94%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/" class="article-date">
+    <a href="/blog/cl0mfb7bc0021nwvs6zie7xtv/" class="article-date">
   <time datetime="2019-02-21T15:00:00.000Z" itemprop="datePublished">2019-02-22</time>
 </a>
     <!--  -->
@@ -564,14 +565,14 @@ Office は STA (Single-Threaded Apartment) モデルで動作しているため�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E8%87%AA%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%B0%82%E7%94%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/">Office プロセスを自プログラム専用にすることはできません</a>
+      <a class="article-title" href="/blog/cl0mfb7bc0021nwvs6zie7xtv/">Office プロセスを自プログラム専用にすることはできません</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E8%87%AA%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%B0%82%E7%94%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/" class="article-date-single">    
+        <a href="/blog/cl0mfb7bc0021nwvs6zie7xtv/" class="article-date-single">    
     
     <time datetime="2019-02-21T15:00:00.000Z" itemprop="dateUpdated">2019-02-22</time>
     
@@ -585,12 +586,12 @@ Office は STA (Single-Threaded Apartment) モデルで動作しているため�
 前回の投稿で Excel のプロセスを統合することについて記載しましたが、今回はこれに関連し、Office オートメーションを行うプログラムを開発するときにプログラムから操作する Office プロセスを自分のプログラム専用にできるか、という話を記載します。
 Office オートメーションを行うプログラム開発を行う際、プログラムの処理が行いやすいよう、Office アプリケーションのプロパティを変更したり、画面を非表示にすることがあります。このとき、プログラムから行うプロパティ設定や画面の状態を、ユーザーが開いている他の Office ファイルには反映させたくないといった理由から、「ユーザ...
         <p class="article-more-link">
-          <a href="/blog/Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E8%87%AA%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%B0%82%E7%94%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/#more">Read More</a>
+          <a href="/blog/cl0mfb7bc0021nwvs6zie7xtv/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%82%92%E8%87%AA%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0%E5%B0%82%E7%94%A8%E3%81%AB%E3%81%99%E3%82%8B%E3%81%93%E3%81%A8%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%BE%E3%81%9B%E3%82%93/" data-id="ckzqb7f3q001v2c3p90ee6b0s" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="cl0n2mqdn001z84vscshd9vpu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -641,23 +642,23 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       <ul>
         
           <li>
-            <a href="/blog/Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%20SPO%20&%20OneDrive%20%E7%A7%BB%E8%A1%8C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%82%AF%E3%83%AD%20(VBA)%20%E5%BD%B1%E9%9F%BF/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
           </li>
         
           <li>
-            <a href="/blog/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%8B%E3%82%89%E5%85%A5%E6%89%8B%E3%81%97%E3%81%9F%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%9E%E3%82%AF%E3%83%AD%E3%81%8C%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%82%8B%E6%97%A2%E5%AE%9A%E3%81%AE%E5%8B%95%E4%BD%9C%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(MC322553)/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
           </li>
         
           <li>
-            <a href="/blog/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%20-%20Japan%20Office%20Client%20Support%20Blog%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">お知らせ - Japan Office Client Support Blog について</a>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
           </li>
         
           <li>
-            <a href="/blog/Teams%E3%80%81SPO%E3%80%81OneDrive%E3%80%81WebDav%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
           </li>
         
           <li>
-            <a href="/blog/Office%20%E8%A3%BD%E5%93%81%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%A7%E5%85%88%E9%80%B2%E8%AA%8D%E8%A8%BC%E3%81%8C%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
           </li>
         
       </ul>

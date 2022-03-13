@@ -1,6 +1,8 @@
 ---
 title: OneNote 2016 で背景に設定した画像が印刷時にずれる
 date: 2019-03-09
+id: cl0m82yjg002hvovsbntp6llw
+alias: /OneNote 2016 で背景に設定した画像が印刷時にずれる/
 ---
 
 (※ 2018 年 3 月 12 日に Japan Office Support Blog に公開した情報のアーカイブです。)

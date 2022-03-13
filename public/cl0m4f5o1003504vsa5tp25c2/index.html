@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553) | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Office サポート チームです。 本記事では、2022 年 4 月 より Microsoft 365 Apps への展開が開始されるインターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について説明します。この情報は、MC322553 で通知されているものです。   【前提】今回のご説明は以下公開情報でご案内している内容となります。 タイトル :">
+<meta property="og:type" content="article">
+<meta property="og:title" content="インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="こんにちは、Office サポート チームです。 本記事では、2022 年 4 月 より Microsoft 365 Apps への展開が開始されるインターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について説明します。この情報は、MC322553 で通知されているものです。   【前提】今回のご説明は以下公開情報でご案内している内容となります。 タイトル :">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/vba-macro-flowchart.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/macro-settings.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/vba-security-warning-banner.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/vba-security-risk-banner.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/file-property-security.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/trusted-publisher.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/digital-signature.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/trusted-location.png">
+<meta property="article:published_time" content="2022-02-14T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-11T07:52:38.127Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="マクロ">
+<meta property="article:tag" content="MC322553">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/vba-macro-flowchart.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m4f5o1003504vsa5tp25c2/" class="article-date">
+  <time datetime="2022-02-14T15:00:00.000Z" itemprop="datePublished">2022-02-15</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m4f5o1003504vsa5tp25c2/" class="article-date-single">    
+    
+    <time datetime="2022-02-14T15:00:00.000Z" itemprop="dateUpdated">2022-02-15</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Office サポート チームです。</p>
+<p>本記事では、2022 年 4 月 より Microsoft 365 Apps への展開が開始されるインターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について説明します。この情報は、MC322553 で通知されているものです。</p>
+<br>
+
+<h1 id="【前提】"><a href="#【前提】" class="headerlink" title="【前提】"></a>【前提】</h1><p>今回のご説明は以下公開情報でご案内している内容となります。</p>
+<p>タイトル : Macros from the internet will be blocked by default in Office<br>アドレス  : <a href="https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked</a> (日本語版 - 機械翻訳)<br>アドレス  : <a href="https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked</a> (英語版)  </p>
+<p>また、以下のとおり、ブログ記事も公開されています。</p>
+<p>タイトル : Helping users stay safe: Blocking internet macros by default in Office<br>アドレス  : <a href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805" target="_blank" rel="noopener">https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805</a> (英語版)</p>
+<br>
+
+<h1 id="【概要】"><a href="#【概要】" class="headerlink" title="【概要】"></a>【概要】</h1><p>上記公開情報で記載の概要は、Office のセキュリティ向上のため、 Office アプリケーションにてインターネットから入手した Office ファイルのマクロの実行をブロックするよう既定の動作を変更するという内容です。</p>
+<p>これまでの Office では、インターネットから入手したファイルは保護ビューでは開かれますが、保護ビューを解除して編集モードにした後のマクロの実行可否の判断には、インターネットからの入手であることは考慮されず、他のセキュリティ設定でブロックされない限りはマクロを実行できました。今回の変更で、インターネットから入手したファイルは既定でマクロ実行がブロックされるようになります。</p>
+<p>本変更はインターネットから入手したすべての Office ファイルが対象ではなく、特定の条件でマクロの有効 / 無効が決定されなかった場合にブロックされる動作となります。</p>
+<p>つまり、この条件次第でインターネットから入手するファイルのマクロを今後も実行できるようになりますので、引き続きマクロを実行したい場合は、いずれかの先に判断される条件を利用してマクロを有効にできますので、本記事で詳しく紹介します。</p>
+<p>なお、ここで言う「インターネットから入手したファイル」とは、Mark of the Web (MOTW) 属性と呼ばれる Windows によってインターネットからのファイル取得時に自動的に付与される Web マークが付与されたファイルを指します。<br>MOTW 属性が付与されていることは、ファイルのプロパティ画面で確認できます (後述の “Web マークを削除する方法” に実際の画面イメージを掲載します)。</p>
+<br>
+
+<h1 id="【本変更の対象範囲について】"><a href="#【本変更の対象範囲について】" class="headerlink" title="【本変更の対象範囲について】"></a>【本変更の対象範囲について】</h1><p>先の 公開情報 “この変更のOfficeのバージョン” に記載のとおり、本件の対象となる Office アプリケーションは Access / Excel / PowerPoint / Visio / Word です。</p>
+<p>また、本変更の対象の Office は Windows デバイスにインストールされる以下となります。</p>
+<ul>
+<li>Microsoft 365 Apps 最新チャネル (プレビュー)</li>
+<li>Microsoft 365 Apps 最新チャネル</li>
+<li>Microsoft 365 Apps 月次エンタープライズ チャネル</li>
+<li>Microsoft 365 Apps 半期エンタープライズ チャネル (プレビュー)</li>
+<li>Microsoft 365 Apps 半期エンタープライズ チャネル</li>
+<li>Office LTSC</li>
+<li>Office 2021</li>
+<li>Office 2019</li>
+<li>Office 2016</li>
+<li>Office 2013</li>
+</ul>
+<br>
+
+<h1 id="【変更される既定の動作の詳細】"><a href="#【変更される既定の動作の詳細】" class="headerlink" title="【変更される既定の動作の詳細】"></a>【変更される既定の動作の詳細】</h1><p>今回の既定の動作の変更は、先の公開情報に記載の以下フローチャートにて <span style="color:#ff0000"><strong>赤枠で囲った 7 の状況</strong></span> となった場合に該当します。</p>
+<p><img src="vba-macro-flowchart.png" alt=""></p>
+<p>上記フローチャートにおいて今回の動作変更の影響を受ける条件は以下をすべて満たす場合となります。</p>
+<ul>
+<li>開かれるマクロ付きファイルにインターネットから入手されたことを意味する Web マークが付与されている (フローチャート 1 = START)</li>
+<li>マクロ付きファイルが “信頼できる場所”  に保存されていない (フローチャート 2 = No)</li>
+<li>マクロ付きファイルが デジタル署名されていない、またはデジタル署名されているが “信頼できる発行元” に登録されている証明書と署名が一致しない (フローチャート 3 = No)</li>
+<li>クラウド ポリシー / グループ ポリシー等のポリシーにてマクロの有効 / 無効が設定されていない (フローチャート 4a,4b = No)</li>
+<li>ユーザーが以前このファイルを開いていない、または以前このファイルを開いたが表示される通知にて [コンテンツを有効にする] を選択していない (フローチャート 6 = No)</li>
+</ul>
+<p>これらの条件すべてに合致した場合、以下のとおり動作が変更となります。</p>
+<h3 id="変更前"><a href="#変更前" class="headerlink" title="変更前"></a>変更前</h3><p>以下のオプション設定に従ってマクロの有効 / 無効を決定します。</p>
+<h4 id="lt-オプション設定-Excel-アプリケーションから確認する例-gt"><a href="#lt-オプション設定-Excel-アプリケーションから確認する例-gt" class="headerlink" title="&lt;オプション設定 (Excel アプリケーションから確認する例)&gt;"></a>&lt;オプション設定 (Excel アプリケーションから確認する例)&gt;</h4><p>[ファイル] タブ - [オプション] - [トラスト センター]- [トラスト センターの設定] - [マクロの設定] - [マクロの設定] の選択</p>
+<p><img src="macro-settings.png" alt=""></p>
+<p>なお、既定の設定である “警告して、VBA マクロを有効にする” の場合、以下が出力されます。</p>
+<p><img src="vba-security-warning-banner.png" alt=""></p>
+<h3 id="変更後"><a href="#変更後" class="headerlink" title="変更後"></a>変更後</h3><p>以下のメッセージが出力されマクロの実行がブロックされます。</p>
+<p><img src="vba-security-risk-banner.png" alt=""></p>
+<br>
+
+<h1 id="【マクロを有効にする方法について】"><a href="#【マクロを有効にする方法について】" class="headerlink" title="【マクロを有効にする方法について】"></a>【マクロを有効にする方法について】</h1><p>上記の動作変更にて無効化されたマクロを有効にする方法を以下に説明します。</p>
+<h2 id="1-ポリシーでマクロを有効にする方法"><a href="#1-ポリシーでマクロを有効にする方法" class="headerlink" title="1) ポリシーでマクロを有効にする方法"></a>1) ポリシーでマクロを有効にする方法</h2><p>Office 管理用テンプレートのグループ ポリシーなどを利用し以下を設定するとインターネットから入手した Office ファイルについてもマクロを有効にできます。</p>
+<h4 id="lt-グループ-ポリシー設定-gt"><a href="#lt-グループ-ポリシー設定-gt" class="headerlink" title="&lt;グループ ポリシー設定&gt;"></a>&lt;グループ ポリシー設定&gt;</h4><ul>
+<li>Access<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Access 2016] - [アプリケーション設定] -[セキュリティ] - [セキュリティ センター]<br>&nbsp;- [インターネットから取得した Office ファイル内のマクロの実行をブロックします] : 無効</li>
+<li>Excel / PowerPoint / Visio / Word<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft xxx 2016] - [xxx のオプション] - [セキュリティ] - [セキュリティ センター]<br>&nbsp;- [インターネットから取得した Office ファイル内のマクロの実行をブロックします] : 無効<br>注) xxx はそれぞれ Excel / PowerPoint / Visio / Word です。<br>
+
+</li>
+</ul>
+<h2 id="2-特定のファイルでマクロを有効にする方法"><a href="#2-特定のファイルでマクロを有効にする方法" class="headerlink" title="2) 特定のファイルでマクロを有効にする方法"></a>2) 特定のファイルでマクロを有効にする方法</h2><p>特定のファイルでマクロを有効にする方法ついて、以下の “Web マークを削除する方法” 及び “信頼できる発行元のデジタル署名を追加する方法” があります。</p>
+<h3 id="Web-マークを削除する方法"><a href="#Web-マークを削除する方法" class="headerlink" title="Web マークを削除する方法"></a>Web マークを削除する方法</h3><p>インターネットから入手したファイルには Web マークが付与されると先ほど述べましたが、この Web マークの実体はWindows OS で広く利用されている NTFS ファイルシステムの代替データストリーム（ADS：Alternate Data Stream）に保存されているゾーン識別子 (Zone.Identifier) です。</p>
+<p>そのため、このゾーン識別子を削除すると、本動作変更の対象外となり、ローカルで作成したマクロ付きファイルと同様の動作となります。以下画面から削除する手順と PowerShell で削除する手順をそれぞれ記載します。</p>
+<h4 id="lt-ゾーン識別子の削除手順-画面-gt"><a href="#lt-ゾーン識別子の削除手順-画面-gt" class="headerlink" title="&lt;ゾーン識別子の削除手順 (画面) &gt;"></a>&lt;ゾーン識別子の削除手順 (画面) &gt;</h4><ol>
+<li>エクスプローラーから該当のマクロ付きファイルを右クリックし、[プロパティ]を表示します。</li>
+<li>[全般] タブの最下部に以下画面のように [セキュリティ] が表示されている場合は、右側の [許可する] をチェックし、[OK] をクリックします。 </li>
+</ol>
+<p><img src="file-property-security.png" alt=""></p>
+<h4 id="lt-ゾーン識別子の削除手順-PowerShell-コマンド-gt"><a href="#lt-ゾーン識別子の削除手順-PowerShell-コマンド-gt" class="headerlink" title="&lt;ゾーン識別子の削除手順 (PowerShell コマンド) &gt;"></a>&lt;ゾーン識別子の削除手順 (PowerShell コマンド) &gt;</h4><p>以下のコマンドを PowerShell で実行します。  (対象ファイル : C:\temp\sample.xlsm)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Remove-Item &#39;C:\temp\sample.xlsm&#39; -Stream Zone.Identifier;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h3 id="信頼できる発行元のデジタル署名を追加する方法"><a href="#信頼できる発行元のデジタル署名を追加する方法" class="headerlink" title="信頼できる発行元のデジタル署名を追加する方法"></a>信頼できる発行元のデジタル署名を追加する方法</h3><p>Office アプリケーション実行環境にて、”信頼できる発行元” として登録されている証明書を使用したデジタル署名がマクロに追加されている場合にはマクロが実行可能となります。</p>
+<p>この動作を利用してマクロを実行可能とするため、署名者は秘密鍵を持つ証明書で VBA マクロに署名を行い、この証明書をマクロ実行環境のユーザーの「信頼された発行元」ストアに登録します。証明書の信頼に関する動作詳細は Windows 全般の動作となるため本記事では割愛し、Office の動作に関わる部分のみ以下に記載します。</p>
+<p>以下に各 Office アプリケーション上での “信頼できる発行元” として登録されている証明書の確認方法を記載します。</p>
+<h4 id="lt-オプション設定-信頼できる発行元-gt"><a href="#lt-オプション設定-信頼できる発行元-gt" class="headerlink" title="&lt;オプション設定 - 信頼できる発行元&gt;"></a>&lt;オプション設定 - 信頼できる発行元&gt;</h4><p>[ファイル] タブ - [オプション] - [トラスト センター] - [トラスト センターの設定] -  [信頼できる発行元]</p>
+<p><img src="trusted-publisher.png" alt=""></p>
+<p>上記画面にて “信頼できる発行元” として登録されているデジタル証明書の一覧を確認することが可能です。  </p>
+<p>マクロにデジタル署名を付与する手順は以下となります。</p>
+<h4 id="lt-デジタル署名追加手順-gt"><a href="#lt-デジタル署名追加手順-gt" class="headerlink" title="&lt;デジタル署名追加手順&gt;"></a>&lt;デジタル署名追加手順&gt;</h4><ol>
+<li>マクロ付きファイルを各 Officeアプリケーションで開きます。</li>
+<li>[Alt] + [F11] キーを を押下し、Visual Basic Editor (VBE) を開きます。</li>
+<li>VBE の [ツール] タブ - [デジタル署名] をクリックします。</li>
+<li>表示されたウィンドウの [選択] をクリックし、使用する “信頼できる発行元” の証明書を選択して [OK] をクリックします。</li>
+<li>“この VBA プロジェクトは以下のように署名されています。” の下の “証明書名” に選択した証明書名が表示されたことを確認し、[OK] をクリックします。</li>
+<li>ファイルを保存して閉じます。</li>
+</ol>
+<p><img src="digital-signature.png" alt=""></p>
+<br>
+
+<h2 id="3-特定のフォルダーのファイルでマクロを有効にする方法"><a href="#3-特定のフォルダーのファイルでマクロを有効にする方法" class="headerlink" title="3) 特定のフォルダーのファイルでマクロを有効にする方法"></a>3) 特定のフォルダーのファイルでマクロを有効にする方法</h2><p>各アプリケーションの以下オプション設定で確認 / 追加可能な “信頼できる場所” に登録されているパスにマクロ付きファイルを保存をすることにより、マクロが実行可能となります。</p>
+<h4 id="lt-オプション-設定-gt"><a href="#lt-オプション-設定-gt" class="headerlink" title="&lt;オプション 設定&gt;"></a>&lt;オプション 設定&gt;</h4><p>[ファイル] タブ - [オプション] - [トラスト センター] - [トラスト センターの設定] -  [信頼できる場所]<br>注) 既定で登録された場所は特殊なフォルダですので、マクロを実行したいファイルを保存するためのフォルダは [新しい場所の追加] から任意の場所を追加することをお勧めします。</p>
+<p><img src="trusted-location.png" alt=""></p>
+<p>注) Access / Excel / PowerPoint / Visio / Word の各アプリケーションでそれぞれ異なる設定となります。</p>
+<p>なお、本設定は以下グループ ポリシーでも追加 / 削除が可能です。</p>
+<h4 id="lt-グループポリシー設定-信頼できる場所-gt"><a href="#lt-グループポリシー設定-信頼できる場所-gt" class="headerlink" title="&lt;グループポリシー設定 - 信頼できる場所&gt;"></a>&lt;グループポリシー設定 - 信頼できる場所&gt;</h4><ul>
+<li>Access<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Access 2016] - [アプリケーション設定] - [セキュリティ]<br>&nbsp;- [セキュリティ センター] - [信頼できる場所]<br>&nbsp;&nbsp;- [信頼できる場所 #1 - #20] : 有効 且つ [パス] に C:\temp などのフォルダーパスを登録します。</li>
+<li>Visio<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Visio 2016] - [Visio のオプション] -[セキュリティ]<br>&nbsp;- [セキュリティ センター]<br>&nbsp;&nbsp;- [信頼できる場所 #1 - #20] : 有効 且つ [パス] に C:\temp などのフォルダーパスを登録します。  </li>
+<li>Excel / PowerPoint / Word<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft xxx 2016] - [xxx のオプション] -[セキュリティ]<br>&nbsp;- [セキュリティ センター] - [信頼できる場所]<br>&nbsp;&nbsp;- [信頼できる場所 #1 - #20] : 有効 且つ [パス] に C:\temp などのフォルダーパスを登録します。<br>注) xxx は それぞれ Excel / PowerPoint / Word です。</li>
+</ul>
+<p>また、[信頼できる場所] 下部に表示されている [自分のネットワーク上にある信頼できる場所を許可する (推奨しません)] に対応するグループ ポリシーは以下となります。共有フォルダーなどネットワーク上のパスを指定する場合はこちらをご利用ください。</p>
+<h4 id="lt-グループポリシー設定-自分のネットワーク上にある信頼できる場所を許可する-gt"><a href="#lt-グループポリシー設定-自分のネットワーク上にある信頼できる場所を許可する-gt" class="headerlink" title="&lt;グループポリシー設定 - 自分のネットワーク上にある信頼できる場所を許可する&gt;"></a>&lt;グループポリシー設定 - 自分のネットワーク上にある信頼できる場所を許可する&gt;</h4><ul>
+<li>Access<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Access 2016] - [アプリケーション設定] - [セキュリティ]<br>&nbsp;- [セキュリティ センター] - [信頼できる場所] - [ネットワーク上の信頼できる場所を許可する]</li>
+<li>Visio<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Visio 2016] - [Visio のオプション] - [セキュリティ]<br>&nbsp;- [セキュリティ センター] - [ネットワーク上の信頼できる場所を許可する]</li>
+<li>Excel / PowerPoint / Word<br>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft xxx 2016] - [xxx のオプション] - [セキュリティ]<br>&nbsp;- [セキュリティ センター] - [信頼できる場所] - [ネットワーク上の信頼できる場所を許可する]<br>注) xxx は それぞれ Excel / PowerPoint / Word です。</li>
+</ul>
+<br>
+
+<h2 id="ご参考"><a href="#ご参考" class="headerlink" title="ご参考"></a>ご参考</h2><p>Office グループポリシー管理用テンプレートの導入手順について、以下に詳細が記載されていますので、こちらをご確認ください。</p>
+<p>タイトル : Office の管理用テンプレートを使用してグループ ポリシー (GPO) で Office 365 ProPlus を制御する<br>アドレス  : <a href="https://answers.microsoft.com/ja-jp/msoffice/forum/all/office/3ec9d79c-44ec-4273-97e2-2a6f3a1fd8ef" target="_blank" rel="noopener">https://answers.microsoft.com/ja-jp/msoffice/forum/all/office/3ec9d79c-44ec-4273-97e2-2a6f3a1fd8ef</a>  </p>
+<p>また、上記以外に Microsoft 365 管理センターより設定可能な Office にサインインしているユーザーに適用するクラウド ポリシーや Microsoft Intune を利用したグループ ポリシーを構成する方法も存在します。ご利用の Office バージョンや環境に応じてこれらもご利用ください。以下に公開情報を記載します。</p>
+<p>タイトル : Microsoft 365 Apps for enterprise 向け Office クラウド ポリシー サービスの概要<br>アドレス  : <a href="https://docs.microsoft.com/ja-jp/deployoffice/admincenter/overview-office-cloud-policy-service" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployoffice/admincenter/overview-office-cloud-policy-service</a> (日本語版 - 機械翻訳)<br>アドレス  : <a href="https://docs.microsoft.com/en-us/deployoffice/admincenter/overview-office-cloud-policy-service" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/deployoffice/admincenter/overview-office-cloud-policy-service</a> (英語版)  </p>
+<p>タイトル : Windows 10/11 テンプレートを使用して、Microsoft Intune でグループ ポリシー設定を構成する<br>アドレス  : <a href="https://docs.microsoft.com/ja-jp/mem/intune/configuration/administrative-templates-windows" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/mem/intune/configuration/administrative-templates-windows</a> (日本語版 - 機械翻訳)<br>アドレス  : <a href="https://docs.microsoft.com/en-us/mem/intune/configuration/administrative-templates-windows" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/mem/intune/configuration/administrative-templates-windows</a> (英語版)    </p>
+<br>
+
+<p>今回の投稿は以上です。</p>
+<br>
+
+<p><strong>本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/" data-id="cl0n2mqea003884vsgnrpcty6" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m4rqa2001y50vshhi75we2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">お知らせ - Japan Office Client Support Blog について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

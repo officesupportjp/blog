@@ -2,6 +2,8 @@
 title: Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる
 date: 2020-10-20
 lastupdate: 2021-02-10
+id: cl0m69xtr000o4cvs2pym5n2d
+alias: /Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる/
 ---
 
 <span style="color:#ff0000">**【最終更新日: 2021/02/10】**</span>

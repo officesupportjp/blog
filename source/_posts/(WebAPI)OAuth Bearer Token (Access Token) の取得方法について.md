@@ -1,6 +1,8 @@
 ---
 title: (WebAPI)OAuth Bearer Token (Access Token) の取得方法について
 date: 2019-03-01
+id: cl0m8t2ac00023gvs6bwo9tp2
+alias: /(WebAPI)OAuth Bearer Token (Access Token) の取得方法について/
 ---
 
 (※ 2016 年 12 月 13 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

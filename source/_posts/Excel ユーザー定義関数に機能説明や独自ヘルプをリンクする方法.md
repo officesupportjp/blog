@@ -1,6 +1,8 @@
 ---
 title: Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法
 date: 2019-02-25
+id: cl0mfb7ac000wnwvsen2873w5
+alias: /Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法/
 ---
 
 (※ 2017 年 11 月 21 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

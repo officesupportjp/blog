@@ -1,6 +1,8 @@
 ---
 title: Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について
 date: 2019-03-09
+id: cl0m7opbh001adcvs8wu5f0kk
+alias: /Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について/
 ---
 
 (※ 2017 年 9 月 26 日に Japan Office Support Blog に公開した情報のアーカイブです。)

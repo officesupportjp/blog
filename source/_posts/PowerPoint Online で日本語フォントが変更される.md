@@ -1,6 +1,8 @@
 ---
 title: PowerPoint Online で日本語フォントが変更される
 date: 2020-12-04
+id: cl0m69xv6002k4cvsan4d7rs0
+alias: /PowerPoint Online で日本語フォントが変更される/
 ---
 
 こんにちは、Office サポート チームです。

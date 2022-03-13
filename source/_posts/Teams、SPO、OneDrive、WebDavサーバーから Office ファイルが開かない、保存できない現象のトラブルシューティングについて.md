@@ -1,6 +1,8 @@
 ---
 title: Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて
 date: 2021-06-21
+id: cl0m4xkk8002oeovs8ggucayv
+alias: /Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて/
 ---
 
 こんにちは、Office サポートの西川 (直) です。  

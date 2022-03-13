@@ -1,6 +1,8 @@
 ---
 title: 日本語入力中に Office アプリケーションが異常終了する場合がある現象について
 date: 2019-03-09
+id: cl0m8t2dt003l3gvs4yrh2f4r
+alias: /日本語入力中に Office アプリケーションが異常終了する場合がある現象について/
 ---
 
 (※ 2018 年 9 月 7 日に Japan Office Support Blog に公開した情報のアーカイブです。)

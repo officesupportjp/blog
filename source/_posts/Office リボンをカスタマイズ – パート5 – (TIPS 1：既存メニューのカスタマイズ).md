@@ -1,6 +1,8 @@
 ---
 title: Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)
 date: 2019-03-01
+id: cl0mc9o210023b0vs43wag0a0
+alias: /Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)/
 ---
 
 (※ 2017 年 11 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

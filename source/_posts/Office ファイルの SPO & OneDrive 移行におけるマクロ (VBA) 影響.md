@@ -1,7 +1,8 @@
-
 ---
 title: Office ファイルの SPO & OneDrive 移行におけるマクロ (VBA) 影響
 date: 2022-02-17
+alias: /Office ファイルの SPO & OneDrive 移行におけるマクロ (VBA) 影響/
+id: cl0m4rqa2001y50vshhi75we2
 ---
 
 <br>

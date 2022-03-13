@@ -1,6 +1,8 @@
 ---
 title: Excel - PowerPoint - Visio 2016 バージョン 1801 以降で WebBrowser コントロールがユーザーフォーム外に表示される
 date: 2019-03-01
+id: cl0mc9o0y000lb0vs0gt6dkmz
+alias: /Excel - PowerPoint - Visio 2016 バージョン 1801 以降で WebBrowser コントロールがユーザーフォーム外に表示される/
 ---
 
 (※ 2018 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

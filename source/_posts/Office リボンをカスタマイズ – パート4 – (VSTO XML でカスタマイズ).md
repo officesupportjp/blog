@@ -1,6 +1,8 @@
 ---
 title: Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)
 date: 2019-03-01
+id: cl0mdnodm00245ovs9qdfdvwi
+alias: /Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)/
 ---
 
 (※ 2017 年 5 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

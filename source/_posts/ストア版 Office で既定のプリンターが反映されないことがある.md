@@ -1,6 +1,8 @@
 ---
 title: ストア版 Office で既定のプリンターが反映されないことがある
 date: 2019-05-20
+id: cl0m75amu003dmcvs55iw1i57
+alias: /ストア版 Office で既定のプリンターが反映されないことがある/
 ---
 
 こんにちは、Office サポートです。  

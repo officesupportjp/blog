@@ -1,6 +1,8 @@
 ---
 title: Office サーバー サイド オートメーションの代替案について
 date: 2019-02-28
+id: cl0mfb7b8001xnwvs5pzxb66j
+alias: /Office サーバー サイド オートメーションの代替案について/
 ---
 
 (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)

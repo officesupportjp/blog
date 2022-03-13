@@ -2,6 +2,8 @@
 title: Office 365 ProPlus で言語パックの追加に失敗する
 date: 2019-04-11
 lastupdate: 2019-12-19
+id: cl0m75al0001amcvs0tsdeksn
+alias: /Office 365 ProPlus で言語パックの追加に失敗する/
 ---
 
 こんにちは、Office サポートの西川 (直) です。  

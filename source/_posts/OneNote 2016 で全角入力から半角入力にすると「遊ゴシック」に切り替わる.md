@@ -1,6 +1,8 @@
 ---
 title: OneNote 2016 で全角入力から半角入力にすると「遊ゴシック」に切り替わる
 date: 2019-02-04
+id: cl0n1lin1002iokvs3pyk3svz
+alias: /OneNote 2016 で全角入力から半角入力にすると「遊ゴシック」に切り替わる/
 ---
 
 (※ 2016 年 11 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)

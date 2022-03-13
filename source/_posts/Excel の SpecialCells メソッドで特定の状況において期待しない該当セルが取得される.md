@@ -1,6 +1,8 @@
 ---
 title: Excel の SpecialCells メソッドで特定の状況において期待しない該当セルが取得される
 date: 2019-03-01
+id: cl0mc9o15000vb0vscpvphs5e
+alias: /Excel の SpecialCells メソッドで特定の状況において期待しない該当セルが取得される/
 ---
 
 (※ 2017 年 6 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

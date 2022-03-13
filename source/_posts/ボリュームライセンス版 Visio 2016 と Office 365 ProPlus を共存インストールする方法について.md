@@ -1,6 +1,8 @@
 ---
 title: ボリュームライセンス版 Visio 2016 と Office 365 ProPlus を共存インストールする方法について
 date: 2019-03-09
+id: cl0m8t2dr003j3gvsend6h2m8
+alias: /ボリュームライセンス版 Visio 2016 と Office 365 ProPlus を共存インストールする方法について/
 ---
 
 (※ 2017 年 4 月 7 日に Japan Office Support Blog に公開した情報のアーカイブです。)

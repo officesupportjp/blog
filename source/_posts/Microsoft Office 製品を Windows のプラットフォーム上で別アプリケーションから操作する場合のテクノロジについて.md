@@ -1,6 +1,8 @@
 ---
 title: Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて
 date: 2019-02-28
+id: cl0mfb7ai0013nwvs9tsk91ry
+alias: /Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて/
 ---
 
 (※ 2012 年 2 月 15 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

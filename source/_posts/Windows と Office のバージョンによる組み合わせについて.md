@@ -1,6 +1,8 @@
 ---
 title: Windows と Office のバージョンによる組み合わせについて
 date: 2019-03-09
+id: cl0m82yjn002uvovsc0a4anqo
+alias: /Windows と Office のバージョンによる組み合わせについて/
 ---
 
 (※ 2017 年 2 月 23 日に Japan Office Support Blog に公開した情報のアーカイブです。)

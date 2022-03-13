@@ -1,6 +1,8 @@
 ---
 title: Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)
 date: 2019-03-01
+id: cl0mc9o200021b0vscp6jdedg
+alias: /Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)/
 ---
 
 (※ 2017 年 3 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  

@@ -1,6 +1,8 @@
 ---
 title: Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない
 date: 2021-01-12
+id: cl0m4xkiy000reovs1r3cadx0
+alias: /Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない/
 ---
 
 こんにちは、Office サポート チームの中村です。

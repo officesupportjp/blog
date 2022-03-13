@@ -1,6 +1,7 @@
 ---
 title: Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について
 date: 2019-03-09
+id: cl0m7opbg0019dcvs7v7v1fkj
 ---
 
 (※ 2018 年 6 月 22 日に Japan Office Support Blog に公開した情報のアーカイブです。)こんにちは、

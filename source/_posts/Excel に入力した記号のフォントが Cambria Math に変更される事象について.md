@@ -1,6 +1,8 @@
 ---
 title: Excel に入力した記号のフォントが Cambria Math に変更される事象について
 date: 2021-03-04
+id: cl0m4xkiz000ueovs9w63bz08
+alias: /Excel に入力した記号のフォントが Cambria Math に変更される事象について/
 ---
 
 こんにちは、Office サポート チームの永田です。

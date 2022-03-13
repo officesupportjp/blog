@@ -1,6 +1,8 @@
 ---
 title: Office 2016 が行うインターネット接続について
 date: 2019-02-07
+id: cl0n10de0001a90vs28153y7h
+alias: /Office 2016 が行うインターネット接続について/
 ---
 
 (※ 2017 年 2 月 8 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)

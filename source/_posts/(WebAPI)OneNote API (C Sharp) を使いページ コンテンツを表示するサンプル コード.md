@@ -1,6 +1,8 @@
 ---
 title: (WebAPI)OneNote API (C Sharp) を使いページ コンテンツを表示するサンプル コード
 date: 2019-03-01
+id: cl0m8t2ag00043gvs6dpf43ay
+alias: /(WebAPI)OneNote API (C Sharp) を使いページ コンテンツを表示するサンプル コード/
 ---
 
 (※ 2017 年 2 月 17 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

@@ -1,6 +1,8 @@
 ---
 title: Office サーバー サイド オートメーションの危険性について
 date: 2019-02-28
+id: cl0mfb7b7001wnwvshfp01l5u
+alias: /Office サーバー サイド オートメーションの危険性について/
 ---
 
 (※ 2014 年 4 月 11 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
