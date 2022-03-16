@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="日本マイクロソフト Office Client サポート チームのブログです">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Japan Office Client Support Blog">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/page/3/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="日本マイクロソフト Office Client サポート チームのブログです">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Excel 2016 以降で結合セルの一部をコピーして貼り付けるとエラーが発生する" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umuw000pi4vsdxbv4vv5/" class="article-date">
+  <time datetime="2020-08-06T15:00:00.000Z" itemprop="datePublished">2020-08-07</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umuw000pi4vsdxbv4vv5/">Excel 2016 以降で結合セルの一部をコピーして貼り付けるとエラーが発生する</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umuw000pi4vsdxbv4vv5/" class="article-date-single">    
+    
+    <time datetime="2020-08-06T15:00:00.000Z" itemprop="dateUpdated">2020-08-07</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームの中村です。
+今回の記事では、Excel 2016 以降でプログラムから結合セルをコピーするときの動作の変更内容について記載します。(Excel 2016 以降とは、Excel 2016 / Excel 2019 / Microsoft 365 の Excel を指します。)  
+1. 現象
+Excel 2013 までのバージョンでは、プログラムで結合セルの一部を指定してコピーし、コピー元と同じ範囲のセルが結合された場所に貼り付けることができていました。Excel 2016 以降のバージョンでこの操作を行うと、「この操作を行うには、すべての結合セルを同じサイズにする必要があります。」とエラーが表示されます。
+この動作が生じる手順のサンプルを以下に記載します。  
+手順
+1. Excel で新規ブックを作成し、A1-B1 セル、A2-B2 セルをそれ...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umuw000pi4vsdxbv4vv5/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umuw000pi4vsdxbv4vv5/" data-id="cl0tck5c5000ouskj8lye9vib" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-クイック実行形式 Office 環境で、Office 以外のアプリケーションから Office の OLEDB-ODBC を利用できます" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umwp0037i4vsflq54qjb/" class="article-date">
+  <time datetime="2020-08-06T15:00:00.000Z" itemprop="datePublished">2020-08-07</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umwp0037i4vsflq54qjb/">クイック実行形式 Office 環境で、Office 以外のアプリケーションから Office の OLEDB-ODBC を利用できます</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umwp0037i4vsflq54qjb/" class="article-date-single">    
+        
+    <time datetime="2021-05-20T15:00:00.000Z" itemprop="lastupdate">2021-05-21</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームです。  
+
+2020/12/01 Update  
+Office ODBC が利用できるようになりましたので、タイトルと Office ODBC に関する箇所を修正/加筆いたしました。  
+
+
+クイック実行形式 Office 製品をインストールした環境では、Office 以外のアプリケーションから Office の OLEDB プロバイダを利用できませんでしたが、Office を以下のバージョン以降に更新すると、Office 以外のアプリケーションから Office の OLEDB プロバイダ (Microsoft.ACE.OLEDB.12.0) を利用できるようになります。  
+カレント チャネル : バージョン 2001 以降半期エンタープライズ チャネル : バージョン 2002 以降  
+また、Office ODBC ドライバは、バージョ...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umwp0037i4vsflq54qjb/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umwp0037i4vsflq54qjb/" data-id="cl0tck5cv0039uskjdrcmhh1z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office のサインインのトラブルシュートについて" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umvg001gi4vsgppfcmk0/" class="article-date">
+  <time datetime="2020-07-08T15:00:00.000Z" itemprop="datePublished">2020-07-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umvg001gi4vsgppfcmk0/">Office のサインインのトラブルシュートについて</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umvg001gi4vsgppfcmk0/" class="article-date-single">    
+        
+    <time datetime="2021-05-09T15:00:00.000Z" itemprop="lastupdate">2021-05-10</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。 
+Office のサインインを行うときに、特定のユーザーだけサインインが成功しないとお問い合わせいただくことがございます。
+この場合、以下の公開情報のとおり、サインインおよびライセンス情報のリセットをお試しいただくことで、解消する可能性がございます。
+Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする
+https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state
+ただし、上記の公開情報には手順が多く含まれているため、以下を指針としてご対応ください。
+
+
+-手順
+1. Office からサインアウトし、Office、Teams、One...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umvg001gi4vsgppfcmk0/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/" data-id="cl0tck5cd001juskj5rdlas1n" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-OneDrive などのクラウド上の日本語パスに格納されたファイルからのリンク貼り付けでエラーが発生する" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umw6002hi4vs2765aacl/" class="article-date">
+  <time datetime="2020-06-22T15:00:00.000Z" itemprop="datePublished">2020-06-23</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umw6002hi4vs2765aacl/">OneDrive などのクラウド上の日本語パスに格納されたファイルからのリンク貼り付けでエラーが発生する</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umw6002hi4vs2765aacl/" class="article-date-single">    
+    
+    <time datetime="2020-06-22T15:00:00.000Z" itemprop="dateUpdated">2020-06-23</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームの中村です。
+Office には、Excel から PowerPoint のように異なるアプリケーション間でコピー&amp;貼り付けを行うときに選択できる貼り付け形式として [リンク貼り付け] があります。
+リンク貼り付けを行うと、Excel ファイルの値の変更に連動して PowerPoint 上に貼り付けたセルの値も更新されます。また、貼り付けた部分をダブルクリックで起動すると、貼り付け元の Excel ファイルが開かれます。
+参考) 形式を選択して貼り付けhttps://support.microsoft.com/ja-jp/office/e03db6c7-8295-4529-957d-16ac8a778719
+この機能は、機能追加当初から想定されていたシナリオである ローカルやファイル サーバー上に格納された Office ファイルからのコピ...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umw6002hi4vs2765aacl/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umw6002hi4vs2765aacl/" data-id="cl0tck5cm002huskj4bkrcxck" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020 年 4 月の更新適用後、日本語を含む外部参照を行う VBA が読み込まれない問題" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umui000ci4vs1vcz49cz/" class="article-date">
+  <time datetime="2020-04-26T15:00:00.000Z" itemprop="datePublished">2020-04-27</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umui000ci4vs1vcz49cz/">2020 年 4 月の更新適用後、日本語を含む外部参照を行う VBA が読み込まれない問題</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umui000ci4vs1vcz49cz/" class="article-date-single">    
+        
+    <time datetime="2020-06-02T15:00:00.000Z" itemprop="lastupdate">2020-06-03</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        2020/5/7 UpdateOffice 365 月次チャネル / 半期チャネル、Office 2016 / 2019 市販パッケージ・PC プリインストール版向けに修正を公開しました。他のバージョン向けの修正は引き続き準備中です。  
+2020/5/8 UpdateOffice 2010 / Office 2013 MSI インストーラ向けに修正を公開しました。  
+2020/5/11 UpdateOffice 2016 MSI インストーラ向けに修正を公開しました。
+2020/5/14 UpdateOffice 2013 クイック実行向け、Office 2019 ボリューム ライセンス向け、Office 365 半期チャネル (対象指定) 向けに修正を公開しました。  
+2020/6/3 UpdateWindows Update / Microsoft Update カタログの対象と...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umui000ci4vs1vcz49cz/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umui000ci4vs1vcz49cz/" data-id="cl0tck5by000buskj9wz0bjh4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2020 年 4 月のセキュリティ更新による VBA からのネットワーク上の参照への影響" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umue000bi4vs38az4698/" class="article-date">
+  <time datetime="2020-04-16T15:00:00.000Z" itemprop="datePublished">2020-04-17</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umue000bi4vs38az4698/">2020 年 4 月のセキュリティ更新による VBA からのネットワーク上の参照への影響</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umue000bi4vs38az4698/" class="article-date-single">    
+        
+    <time datetime="2020-11-11T15:00:00.000Z" itemprop="lastupdate">2020-11-12</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        2020/10/16 Updateインターネットから入手したファイルへの参照を許可するグループポリシーの情報を追記しました。
+こんにちは、Office 開発サポート チームの中村です。
+2020 年 4 月 14 日 (米国時間) に公開されたセキュリティ更新の適用後に生じる問題として以下のサポート技術情報が公開されています。
+2020年4月の Office セキュリティ更新プログラムによって影響を受ける VBA ソリューションについてよく寄せられる質問https://support.microsoft.com/ja-jp/help/4557055
+この内容について、更新の配信を管理する運用管理者からのお問い合わせをいくつか頂いています。本フォーラム記事では、上記のサポート技術情報の内容を VBA 開発者以外にも分かりやすいようご案内したいと思います。この記事をお読みいただくことで、影響を...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umue000bi4vs38az4698/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umue000bi4vs38az4698/" data-id="cl0tck5c0000cuskjetu8h8ip" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-IRM 保護とパスワード保護を同時に付与したファイルを保存できない事象について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umv2000xi4vsgyjudhkf/" class="article-date">
+  <time datetime="2020-04-14T15:00:00.000Z" itemprop="datePublished">2020-04-15</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umv2000xi4vsgyjudhkf/">IRM 保護とパスワード保護を同時に付与したファイルを保存できない事象について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umv2000xi4vsgyjudhkf/" class="article-date-single">    
+        
+    <time datetime="2021-05-11T15:00:00.000Z" itemprop="lastupdate">2021-05-12</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームの永田です。
+クイック実行版 Office のバージョン 2003 でタイトルの通りの事象が発生することがあります。情報に更新があり次第、このブログ記事は更新される予定です。
+2020/5/12 UpdateOffice 365 月次チャネル向けに修正を公開しました。バージョン 2004 で本事象は解消しております。
+事象IRM 保護とパスワード保護を同時に付与したファイルを保存できない。
+再現手順※Excel での例
+
+RMS を利用可能な環境で、Excel を起動し、新規ブックを追加する
+[ファイル] - [情報] - [ブックの保護] - [パスワードを使用して暗号化] を選択する
+パスワード保護をかける
+[ファイル] - [情報] - [ブックの保護] - [アクセスの制限] - [アクセス制限あり] - [このブックへのアクセスを制限する...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umv2000xi4vsgyjudhkf/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umv2000xi4vsgyjudhkf/" data-id="cl0tck5c7000vuskj4o970lku" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office のパフォーマンス トラブルシュート (その 6：はじめに試す設定 - ファイル内容編 -)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umvn001ni4vsevp6168h/" class="article-date">
+  <time datetime="2020-04-06T15:00:00.000Z" itemprop="datePublished">2020-04-07</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umvn001ni4vsevp6168h/">Office のパフォーマンス トラブルシュート (その 6：はじめに試す設定 - ファイル内容編 -)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umvn001ni4vsevp6168h/" class="article-date-single">    
+        
+    <time datetime="2020-04-07T15:00:00.000Z" itemprop="lastupdate">2020-04-08</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームの中村です。
+パフォーマンス改善効果が期待できる設定の紹介記事 第 4 弾です。今回は、ファイル内に含まれる要素や操作内容に応じて、その機能に特化してパフォーマンス改善に効果がある設定をご案内します。
+Office では、動作の一部を無効化したり、簡略化することでパフォーマンスを軽減できる場合があります。より便利な機能を提供するために行われている処理ですが、ユーザーの利用方法次第で一部機能を制限しても実質問題ない場合にはパフォーマンス改善方法として検討できます。  
+目次1. Office クリップボードの無効化2. IME 予測入力の無効化3. (Excel) 自動計算の無効化4. (Excel) マルチスレッド処理の設定変更5. (Excel) 書式設定範囲の最小化6. 各種不要な書式設定の削除 
+1. Office クリップボードの無効化Of...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umvn001ni4vsevp6168h/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umvn001ni4vsevp6168h/" data-id="cl0tck5ce001nuskjayaxc7qh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office のパフォーマンス トラブルシュート (その 5：はじめに試す設定 – 起動・オープン② –)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umvm001li4vsfcvbhwrc/" class="article-date">
+  <time datetime="2020-02-25T15:00:00.000Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umvm001li4vsfcvbhwrc/">Office のパフォーマンス トラブルシュート (その 5：はじめに試す設定 – 起動・オープン② –)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umvm001li4vsfcvbhwrc/" class="article-date-single">    
+        
+    <time datetime="2020-05-12T15:00:00.000Z" itemprop="lastupdate">2020-05-13</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームの中村です。
+パフォーマンス改善効果が期待できる設定の第 3 弾です。今回は、前回に続き Office アプリケーションの起動やファイル オープンが遅い場合に効果が期待できる設定のうち、ネットワーク通信と関連する設定を紹介します。  
+目次1. SMB 通信設定 (ファイル サーバー上の共有フォルダのファイルを開く場合)2. SharePoint からファイルを開くときのキャッシュ設定3. インターネット サービスに接続する機能4. 証明書有効性確認処理補足: 適切なインターネット通信設定 (2. / 3. / 4. に関わる設定) 
+1. SMB 通信設定通常、ファイルサーバーの共有フォルダに格納された Office ファイルを開くときには、クライアントとサーバー間で SMB プロトコルで通信が行われます。SMB 2.1 を利用している場合、Le...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umvm001li4vsfcvbhwrc/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umvm001li4vsfcvbhwrc/" data-id="cl0tck5ce001muskjfbh81xnu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Teams 上で Excel ファイルを開くと、フォント サイズのプルダウン メニューが正しく表示されない事象について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m6umw9002mi4vse768hhor/" class="article-date">
+  <time datetime="2020-01-26T15:00:00.000Z" itemprop="datePublished">2020-01-27</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m6umw9002mi4vse768hhor/">Teams 上で Excel ファイルを開くと、フォント サイズのプルダウン メニューが正しく表示されない事象について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m6umw9002mi4vse768hhor/" class="article-date-single">    
+        
+    <time datetime="2020-03-16T15:00:00.000Z" itemprop="lastupdate">2020-03-17</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートです。
+本記事では、Microsoft Teams 上で Excel ファイルを開くと、フォント サイズのプルダウン メニューが正しく表示されない事象について説明します。
+2020/3/17 Update修正が公開されたため、原因および回避策を更新しました。
+現象
+Microsoft Teams 上で Excel ファイルを開くと、フォント サイズのプルダウン メニューが正しく表示されない事象が発生する場合があります。
+例えば、以下のように表示されます。
+
+原因
+この現象は弊社製品の問題であり、修正が行われました。
+回避案
+修正適用後、現象は解消します。
+または後述の対処をご確認ください。  
+&lt;Excel Online で開く&gt;
+該当のファイルを [・・・] - [ブラウザーで開く] (または [開く] - [Excel Online で開く...
+        <p class="article-more-link">
+          <a href="/blog/cl0m6umw9002mi4vse768hhor/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umw9002mi4vse768hhor/" data-id="cl0tck5cn002ouskj0683a7l0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/blog/page/2/">Prev</a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/blog/page/4/">4</a><a class="page-number" href="/blog/page/5/">5</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/13/">13</a><a class="extend next" rel="next" href="/blog/page/4/">Next</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

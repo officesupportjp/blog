@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="日本マイクロソフト Office Client サポート チームのブログです">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Japan Office Client Support Blog">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/page/2/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="日本マイクロソフト Office Client サポート チームのブログです">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-PowerPoint Online で日本語フォントが変更される" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xv6002k4cvsan4d7rs0/" class="article-date">
+  <time datetime="2020-12-03T15:00:00.000Z" itemprop="datePublished">2020-12-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xv6002k4cvsan4d7rs0/">PowerPoint Online で日本語フォントが変更される</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xv6002k4cvsan4d7rs0/" class="article-date-single">    
+    
+    <time datetime="2020-12-03T15:00:00.000Z" itemprop="dateUpdated">2020-12-04</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームです。
+本記事では、PowerPoint Online で日本語フォントが異なるフォントで表示される問題について説明します。
+現象
+PowerPoint の表内の日本語フォントが、PowerPoint Online で表示すると異なるフォントで表示されます。
+例えば、スライド マスターでテーマ フォントを Meiryo UI に設定しているプレゼンテーションで、PowerPoint Online 上では英数字用のフォント (例では Arial) で表示されます。
+  
+原因
+この現象は問題としてフィードバックを行いました。
+回避策
+以下のいずれかの回避策で現象を回避できます。
+1. 表のフォントを明示的に指定します。
+スライド マスターでテーマ フォントを設定した場合、表のフォント自体は [+本文のフォント] となりますが、表のフォントを [Mei...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xv6002k4cvsan4d7rs0/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xv6002k4cvsan4d7rs0/" data-id="cl0tck5cm002kuskjciov4wq2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 展開ツール (16.0.13328.20356) で生じる事象について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xv1002b4cvs76yt55d6/" class="article-date">
+  <time datetime="2020-11-15T15:00:00.000Z" itemprop="datePublished">2020-11-16</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xv1002b4cvs76yt55d6/">Office 展開ツール (16.0.13328.20356) で生じる事象について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xv1002b4cvs76yt55d6/" class="article-date-single">    
+        
+    <time datetime="2020-11-23T15:00:00.000Z" itemprop="lastupdate">2020-11-24</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。  
+  
+
+2020/11/19 記事の内容を更新しました
+2020/11/24 記事の内容を更新しました
+
+
+Office 展開ツール (16.0.13328.20356) にて、以下の事象が報告されておりますのでご案内いたします。  
+【事象】  
+Office 展開ツール (16.0.13328.20356) では、現時点で以下の事象が報告されております。  
+1) XMLファイルの Logging 要素 Path 属性に定義したフォルダにログファイルが出力されない  
+2) Office 展開ツールを管理者権限で実行しない場合、/download オプションでダウンロードが行えない  
+3) XMLファイルの Add 要素 Version 属性を定義した場合、.cab ファイルがダウンロードされない
+- 参考
+https:/...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xv1002b4cvs76yt55d6/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xv1002b4cvs76yt55d6/" data-id="cl0tck5ck002auskj6d3r9f19" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Windows 10 バージョン 2004 (20H1) - 20H2 で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xvc002t4cvs5918c1f6/" class="article-date">
+  <time datetime="2020-11-11T15:00:00.000Z" itemprop="datePublished">2020-11-12</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xvc002t4cvs5918c1f6/">Windows 10 バージョン 2004 以降で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xvc002t4cvs5918c1f6/" class="article-date-single">    
+        
+    <time datetime="2021-10-27T15:00:00.000Z" itemprop="lastupdate">2021-10-28</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        2020/11/24 Update「4. その他の発生シナリオ」セクションを追加し、Excel での検索・置換 (Find / Replace) での発生を追記しました。  
+2021/10/22 Update現象発生 OS と回避策に記載の対応を行った場合の既知の問題を追記しました。  
+2021/10/18 UpdateWindows 11 では修正済みであることを追記しました。  
+こんにちは、Office サポート チームの中村です。
+先日、以下の記事で同じ原因により Access フォームで発生する問題について記載していますが、VBA 関数 StrComp() も影響を受けることが分かったため、本記事にて詳細をご案内します。  
+関連記事
+Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生するhttps://off...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xvc002t4cvs5918c1f6/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xvc002t4cvs5918c1f6/" data-id="cl0tck5co002tuskj1fic8xkh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xtr000o4cvs2pym5n2d/" class="article-date">
+  <time datetime="2020-10-19T15:00:00.000Z" itemprop="datePublished">2020-10-20</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xtr000o4cvs2pym5n2d/">Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xtr000o4cvs2pym5n2d/" class="article-date-single">    
+        
+    <time datetime="2021-02-09T15:00:00.000Z" itemprop="lastupdate">2021-02-10</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        【最終更新日: 2021/02/10】
+こんにちは、Office サポートです。本記事では新たに確認された、Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる問題について説明します。  
+現象Excel for Microsoft 365 で Insert キーを押下し、上書きモードで DBCS (2 バイト文字) を編集すると、意図せず 2 文字ぶん上書きされます。  
+再現手順例) 「あいうえお」を「あいかえお」に直したい場合
+1. 任意のセルに、「あいうえお」と入力します。2.「う」のまえにカーソル入れます。3. [insert] キーで上書きモードにします。
+
+4.「か」と入力し、確定のため [Enter] キーを押します。
+結果 :「う」と「え」の部分が、「か」で上書きされて、「あいかお」になります。  
+...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xtr000o4cvs2pym5n2d/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xtr000o4cvs2pym5n2d/" data-id="cl0tck5c6000suskjekpj7bcl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-VDI 環境における Microsoft 365 Apps のライセンス認証について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xv9002p4cvscqd9c9gu/" class="article-date">
+  <time datetime="2020-10-11T15:00:00.000Z" itemprop="datePublished">2020-10-12</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xv9002p4cvscqd9c9gu/">VDI 環境における Microsoft 365 Apps のライセンス認証について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xv9002p4cvscqd9c9gu/" class="article-date-single">    
+        
+    <time datetime="2020-10-27T15:00:00.000Z" itemprop="lastupdate">2020-10-28</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。
+今回の投稿では、VDI 環境における M365Apps のライセンス認証についてご案内します。
+お問い合わせいただく中では、共有 VDI 上に M365Apps をインストールしたいというご要望をいただくことがあります。
+共有 VDI では、ユーザーが不特定の端末にログオンする場合があるため、M365Apps の 5 台の制限にかかってしまいます。
+この場合、M365Apps では以下の共有コンピュータライセンス認証のソリューションが用意されています。
+Microsoft 365 Apps に対する共有コンピューターのライセンス認証の概要
+https://docs.microsoft.com/ja-jp/deployoffice/overview-shared-computer-activation
+記載の通り、共有コンピューターの...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xv9002p4cvscqd9c9gu/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xv9002p4cvscqd9c9gu/" data-id="cl0tck5co002ruskj6u21ex5v" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-モバイル版の Office のトラブルシューティングについて" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xw5003g4cvs4ob5gcuy/" class="article-date">
+  <time datetime="2020-10-01T15:00:00.000Z" itemprop="datePublished">2020-10-02</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xw5003g4cvs4ob5gcuy/">モバイル版の Office のトラブルシューティングについて</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xw5003g4cvs4ob5gcuy/" class="article-date-single">    
+    
+    <time datetime="2020-10-01T15:00:00.000Z" itemprop="dateUpdated">2020-10-02</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。  
+今回の投稿では、モバイル版の Office のトラブルシューティングについてご案内します。
+Android や iOS で Office アプリケーションにおいて、以下のようなお問い合わせをいただくことがあります。
+・サインインができない
+・ファイルが開けない
+この場合、以下の手順でリセットすることで、事象が解消する可能性があります。
+iOS の場合1. iOS の [設定]-[&lt;Office もしくは アプリ名&gt;] をタップします。2. [&lt;Office もしくは アプリ名&gt;] をタップし、[ログイン資格情報の削除] 等のトグルを有効にします。3. アプリケーションを再起動します。  
+android の場合1. android の [設定]- [アカウント] - “Office” をタップします。2....
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xw5003g4cvs4ob5gcuy/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xw5003g4cvs4ob5gcuy/" data-id="cl0tck5cx003iuskj8q964kxf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xu000124cvsclmc5vis/" class="article-date">
+  <time datetime="2020-09-22T15:00:00.000Z" itemprop="datePublished">2020-09-23</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xu000124cvsclmc5vis/">MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xu000124cvsclmc5vis/" class="article-date-single">    
+        
+    <time datetime="2021-04-22T15:00:00.000Z" itemprop="lastupdate">2021-04-23</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。
+今回の投稿では、MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について説明します。
+MSI 版の Office 2016 とは？
+以下の Blog 記事のとおり、「SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない」現象についてお問い合わせいただく場合があります。
+Title : SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象についてURL : https://officesupportjp.github.io/blog/SharePoint Server など WebDAV が有効なサーバーから Offic...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xu000124cvsclmc5vis/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xu000124cvsclmc5vis/" data-id="cl0tck5c80011uskj6flb6fn2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 展開ツール (16.0.12827.20268) で RemoveMSI 属性を使用すると 30041-1039-30050-1039 等のエラーメッセージが表示される" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xux00254cvs8a1nb7qn/" class="article-date">
+  <time datetime="2020-09-14T15:00:00.000Z" itemprop="datePublished">2020-09-15</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xux00254cvs8a1nb7qn/">Office 展開ツール (16.0.12827.20268) で RemoveMSI 属性を使用すると 30041-1039-30050-1039 等のエラーメッセージが表示される</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xux00254cvs8a1nb7qn/" class="article-date-single">    
+        
+    <time datetime="2020-10-29T15:00:00.000Z" itemprop="lastupdate">2020-10-30</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。
+表題の件について、既知の事象が報告されておりますのでご案内いたします。
+【事象】  
+Office 展開ツール (16.0.12827.20268) で 30041-1039 や 30050-1039 のエラーメッセージが表示される
+【説明】  
+本事象は 2020/6/9 にリリースされた Office 展開ツール (Version 16.0.12827.20268) に起因した事象である可能性がございます。
+当該バージョンの Office 展開ツールでは、RemoveMSI 属性 で Office 2007 製品もアンインストールが可能となりましたが、バージョン番号が “12” から始まる一部の MSI インストール形式の製品がインストールされている環境で、アンインストールが失敗しエラーとなる事象が発生しております。
+
+本事象は...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xux00254cvs8a1nb7qn/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xux00254cvs8a1nb7qn/" data-id="cl0tck5ck0028uskj5zfs2jtp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xvc002u4cvsgc7a3bfp/" class="article-date">
+  <time datetime="2020-08-23T15:00:00.000Z" itemprop="datePublished">2020-08-24</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xvc002u4cvsgc7a3bfp/">Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xvc002u4cvsgc7a3bfp/" class="article-date-single">    
+        
+    <time datetime="2021-10-17T15:00:00.000Z" itemprop="lastupdate">2021-10-18</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+※2020/10/28 OS 観点での回避方法 (3-3) を追加しました。
+
+※2021/06/03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。
+※2021/10/18 OS 21H2 も本現象の発生対象バージョンであること、回避方法の補足、今後の修正について追記しました。
+
+
+こんにちは、Office サポート チームの佐村です。
+今回の記事では、Windows 10 バージョン 2004 上で半角カナ + カナに濁音 / 半濁音を含んでいる Access ファイルを開くとエラーが発生する状況について説明します。
+(Access のバージョンに依存性はなく Windows 10 バージョン 2004 / 20H2 / 21H1 / 21H2 上での Access アプリケーションで発生します。)
+1. 現象
+Windows 10 バージョン 2004 以降...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xvc002u4cvsgc7a3bfp/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xvc002u4cvsgc7a3bfp/" data-id="cl0tck5co002uuskj9z859h0p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-バージョン 2005 - 2006 で Office プロセスの終了が遅延する" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xw5003i4cvsdwhh72zc/" class="article-date">
+  <time datetime="2020-08-16T15:00:00.000Z" itemprop="datePublished">2020-08-17</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m69xw5003i4cvsdwhh72zc/">バージョン 2005 - 2006 で Office プロセスの終了が遅延する</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xw5003i4cvsdwhh72zc/" class="article-date-single">    
+    
+    <time datetime="2020-08-16T15:00:00.000Z" itemprop="dateUpdated">2020-08-17</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームの中村です。
+今回の記事では、Microsoft 365 / Office 2016 / Office 2019 の以下のバージョンで、Office アプリケーションの終了指示を出した後、バックグラウンドでしばらくプロセスが残存する動作について記載します。  
+現象
+通常通り Office アプリケーションの画面操作を行って×ボタンで終了したり、プログラムからの Office 操作で Quit メソッドによりアプリケーションを終了すると、Office アプリケーションの画面は消えるものの、タスク マネージャー等で確認すると、バックグラウンド プロセスとして 20 秒程度プロセスが残存した後、自動的に終了します。  
+発生バージョン
+バージョン 2005 (ビルド 12827.20470) 以降、バージョン 2006 (すべてのビルド) まで
+Mic...
+        <p class="article-more-link">
+          <a href="/blog/cl0m69xw5003i4cvsdwhh72zc/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xw5003i4cvsdwhh72zc/" data-id="cl0tck5cx003guskjekr4d4y7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/blog/">Prev</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/13/">13</a><a class="extend next" rel="next" href="/blog/page/3/">Next</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
