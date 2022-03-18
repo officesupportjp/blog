@@ -130,59 +130,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o200021b0vscp6jdedg/" data-id="cl0tck5cj0025uskjdl296knl" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mdnodn00255ovs9onm1o0p/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mdnodn00255ovs9onm1o0p/">Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mdnodn00255ovs9onm1o0p/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 11 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発サポート チームの中村です。
-今回の記事では、前回の投稿に引き続き、リボン カスタマイズ方法の例をご紹介します。
-以前の投稿で紹介した方法で、リボンのカスタマイズがファイル単位でできることはお伝えしましたが、以下のような状況の開発者の方もいるのではないでしょうか。
-・アドインとして提供する 1 つのプログラムから、ファイルによってリボンの内容を変えたい (ファイルにカスタマイズを組み込みたくない)・Office 97-2003 形式 (.xls 等) のファイルにリボン カスタマイズを行いたい・ブック内での操作に応じて動的にリボンの状態を変えたい
-これらの要望は、Office 2007 形式のアドイン (.xlam...
-        <p class="article-more-link">
-          <a href="/blog/cl0mdnodn00255ovs9onm1o0p/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodn00255ovs9onm1o0p/" data-id="cl0tck5ck0026uskj6gtt0756" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o200021b0vscp6jdedg/" data-id="ckznj8h8z002438u8f693g9m2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +181,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodo00285ovs0fooh79h/" data-id="cl0tck5ck0027uskj65lp2z6d" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodo00285ovs0fooh79h/" data-id="ckznj8h90002538u8fwib4gd5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mc9o220024b0vs9oh30xtc/">Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 3 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office 開発 サポート チームの中村です。
+今回も、リボンのカスタマイズ手順について解説していきます。今回の記事では、パート 1 で紹介した「c. VSTO からビジュアルなデザイナーを用いてカスタマイズを行う」 について紹介したいと思います。前回と同じく、サンプル作成を通して解説します。
+VSTO ビジュアルなデザイナーでリボンをカスタマイズするこの方法は、VSTO で提供されている Visual Studio 上で GUI でリボンのカスタマイズを行うビジュアルなデザイナー機能を用いてリボンをカスタマイズします。カスタマイズ内容は、VSTO ランタイムによって VSTO ソリューションのロード時にOffice が読み込む...
+        <p class="article-more-link">
+          <a href="/blog/cl0mc9o220024b0vs9oh30xtc/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o220024b0vs9oh30xtc/" data-id="ckznj8h91002938u897jb6oti" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +283,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodq002c5ovs8mkubxio/" data-id="cl0tck5cl002duskjfs34dju3" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodq002c5ovs8mkubxio/" data-id="ckznj8h92002b38u823vd9pk9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -336,7 +334,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodr002e5ovseybmbjk6/" data-id="cl0tck5cl002euskj5syj4anf" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodr002e5ovseybmbjk6/" data-id="ckznj8h93002e38u87b3978wu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -387,7 +385,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnods002f5ovs3my7b12j/" data-id="cl0tck5cl002fuskjhapz3rpy" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnods002f5ovs3my7b12j/" data-id="ckznj8h95002h38u828ledkpc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -438,7 +436,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodx002r5ovsfzvw5fh5/" data-id="cl0tck5cn002quskja1yz9e1u" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodx002r5ovsfzvw5fh5/" data-id="ckznj8h9o002q38u8c44h3dsk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -492,7 +490,7 @@ OS が Windows...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl0tck5co002suskjdedl42c2" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="ckznj8h9o002r38u80q9o6iod" class="article-share-link">Share</a>
       
       
     </footer>
@@ -546,7 +544,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl0tck5cp002wuskjeegt4qhq" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="ckznj8h9q002u38u862q257du" class="article-share-link">Share</a>
       
       
     </footer>
@@ -597,7 +595,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl0tck5bu0006uskj1wk39ihx" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="ckznj8h4x000438u8aigpfb9x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -635,7 +633,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
     </div>
   </div>
 
@@ -648,11 +646,11 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       <ul>
         
           <li>
-            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
           </li>
         
           <li>
