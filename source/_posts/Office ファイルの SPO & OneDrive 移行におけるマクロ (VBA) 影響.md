@@ -6,8 +6,15 @@ id: cl0m4rqa2001y50vshhi75we2
 ---
 
 <br>
+
+*****  
+**2022/3/18 Update**  
+2. / 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。
+*****  
+<br>
+
 こんにちは、Office サポート チームの中村です。
-<br>  
+  
 Office ファイルの保存場所として、ファイル サーバーの共有フォルダから、SharePoint Online のドキュメント ライブラリや 個人用 OneDrive / OneDrive for Business への移行を検討する企業も増えてきたかと思います。Office ファイルでは業務効率化のためマクロ (VBA) を利用されていることが多く、弊社サポートにも、マクロ ファイル自身やマクロ内で操作するファイルの保存場所がクラウドになることの影響を確認したい、というお問い合わせを時折頂きます。
   
 今後、さらにクラウド活用が進むと想定されるため、今回の記事で、このようなシナリオで一般的に生じる影響と対応方法、考慮すべき点についてまとめたいと思います。
@@ -56,8 +63,15 @@ Folder object
 <https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object>
 <br>
 
-### **補足) その他、独自にパスを解析・組み立てる処理**  
+### **補足 1) その他、独自にパスを解析・組み立てる処理**  
 マクロの独自処理として、例えばマクロ ファイル自身の格納フォルダ パスの一部を加工して処理結果ファイルの出力パスを組み立てるなど、パスのテキストを意識した処理がある場合は注意が必要です。URL 形式への変更に伴い、既存の文字列操作処理では、期待する結果が得られない場合があります。
+<br>
+
+### **補足 2) 他のファイルへの参照**
+先述したような一般的なライブラリは、クライアント マシンに登録されたものを呼び出すため、ファイルの保存場所が変わっても影響を受けません。
+しかし、他の Excel ブックを [参照設定] で参照して、そのブック内の独自に作成した VBA プロシージャを呼び出している場合、参照先のファイルをクラウドに移行すると、参照不可となります。(VBA の参照設定は URL 形式に対応していないため、参照設定を再設定してもクラウド上のファイルは参照できません。)
+
+参照設定の他にも、マクロ処理内でパスを指定して他のファイルを開いている場合は、パスの指定方法がファイルの移動後も有効な実装となっているか十分に確認してください。
 <br>
 
 ## **3. 影響を受ける場合の対処方法**
@@ -84,13 +98,13 @@ Microsoft Graph REST API v1.0 リファレンス
 
 **参考資料**  
 (WebAPI)OAuth Bearer Token (Access Token) の取得方法について  
-[https://officesupportjp.github.io/blog/(WebAPI)OAuth Bearer Token (Access Token) の取得方法について](https://officesupportjp.github.io/blog/(WebAPI)OAuth%20Bearer%20Token%20(Access%20Token)%20%E3%81%AE%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)  
+[https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/](https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/)  
 (WebAPI)Microsoft Graph を使用した開発に便利なツール群  
-[https://officesupportjp.github.io/blog/(WebAPI)Microsoft Graph を使用した開発に便利なツール群](https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E9%96%8B%E7%99%BA%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E7%BE%A4)  
+[https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/](https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/)  
 (WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード  
-[https://officesupportjp.github.io/blog/(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード](https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20-%20OneDrive%20API%20(C%20Sharp)%20%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%20%E3%82%B3%E3%83%BC%E3%83%89)  
+[https://officesupportjp.github.io/blog/cl0m8t2aa00013gvsa2mr8xj5/](https://officesupportjp.github.io/blog/cl0m8t2aa00013gvsa2mr8xj5/)  
 (WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード  
-[https://officesupportjp.github.io/blog/(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード](https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20%E2%80%93%20Excel%20REST%20API%20(C%20Sharp)%20%E3%82%92%E4%BD%BF%E3%81%84%20Range%20%E3%82%92%E6%93%8D%E4%BD%9C%E3%81%99%E3%82%8B%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%20%E3%82%B3%E3%83%BC%E3%83%89)  
+[https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/](https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/)  
 <br>
 
 ### **d. OneDrive や SharePoint ライブラリの同期フォルダを操作する**
@@ -108,6 +122,23 @@ SharePoint ライブラリを Internet Explorer で開くと、\[エクスプロ
 しかしながら、この仕組みはレガシな技術を用いており、Edge ブラウザでは対応していません。  
 また、WebDAV でのアクセスには別のサービス (WebClient サービス) が利用されるため、マクロが実行されている Office アプリの認証情報は引き継がれません。
 WebClient サービス用の認証情報の保存にはまもなくサポートを終了する Internet Explorer を利用する必要があることなどからも、新たに WebDAV パスでの利用を検討することは推奨しません。
+<br>
+
+### **e. 参照設定を Application.Run に変更する**
+参照設定で他のファイルの VBA プロシージャを呼び出している場合、参照設定を止め、以下のようにファイルを開いた上で Application.Run で実行することが検討できます。
+
+例: 
+Ref.xlsm に SampleProc() が含まれているとします。   
+
+<変更前>  
+[参照設定] から Ref.xlsm を参照し、VBA コードから SampleProc をそのまま呼び出し  
+
+<変更後>  
+参照設定は解除し、以下のように呼び出し  
+```
+Workbooks.Open "https://xxxx/Ref.xlsm"
+Application.Run "Ref.xlsm!SampleProc"
+```
 <br>
 
 ## **4. Microsoft 365 サービスへの認証とアクセス権**

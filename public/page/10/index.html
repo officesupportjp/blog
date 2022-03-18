@@ -90,56 +90,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mc9o220024b0vs9oh30xtc/">Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 3 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
-こんにちは、Office 開発 サポート チームの中村です。
-今回も、リボンのカスタマイズ手順について解説していきます。今回の記事では、パート 1 で紹介した「c. VSTO からビジュアルなデザイナーを用いてカスタマイズを行う」 について紹介したいと思います。前回と同じく、サンプル作成を通して解説します。
-VSTO ビジュアルなデザイナーでリボンをカスタマイズするこの方法は、VSTO で提供されている Visual Studio 上で GUI でリボンのカスタマイズを行うビジュアルなデザイナー機能を用いてリボンをカスタマイズします。カスタマイズ内容は、VSTO ランタイムによって VSTO ソリューションのロード時にOffice が読み込む...
-        <p class="article-more-link">
-          <a href="/blog/cl0mc9o220024b0vs9oh30xtc/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o220024b0vs9oh30xtc/" data-id="cl0vs56vp0025pwu88r0sccy9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/cl0mdnodn00255ovs9onm1o0p/" class="article-date">
@@ -182,7 +132,58 @@ VSTO ビジュアルなデザイナーでリボンをカスタマイズするこ
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodn00255ovs9onm1o0p/" data-id="cl0vs56vq0026pwu8biopaqnr" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodn00255ovs9onm1o0p/" data-id="ckzqb7f3w00212c3p0gcp56y7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mc9o210023b0vs43wag0a0/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mc9o210023b0vs43wag0a0/">Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mc9o210023b0vs43wag0a0/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 11 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発サポート チームの中村です。
+本テーマについて、前回の投稿から時間が空いてしまい申し訳ありません。
+ここまでの記事では、カスタムのリボン タブを作成するというカスタマイズ内容を例に、カスタマイズ手法についてご紹介してきました。今回の記事からは、この他によく行われるカスタマイズの実装方法をいくつか紹介しつつ、XML などの書き方のイメージを掴んでいただればと思います。
+今回の投稿で紹介する方法は、1. を除いて VSTO のビジュアルなデザイナーではカスタマイズできない内容となりますので、XML を利用して実装します。VSTO のビジュアルなデザイナーでカスタマイズしている方で以下の方法を利用したい場合は、以前の投稿...
+        <p class="article-more-link">
+          <a href="/blog/cl0mc9o210023b0vs43wag0a0/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/" data-id="ckzqb7f3x00222c3p4fjjderl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +234,7 @@ VSTO ビジュアルなデザイナーでリボンをカスタマイズするこ
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodo00285ovs0fooh79h/" data-id="cl0vs56vq0027pwu86u252ls1" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodo00285ovs0fooh79h/" data-id="ckzqb7f3y00242c3p3kj51n98" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,58 +286,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodq002c5ovs8mkubxio/" data-id="cl0vs56vt002dpwu87aae24u5" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mdnods002f5ovs3my7b12j/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mdnods002f5ovs3my7b12j/">Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mdnods002f5ovs3my7b12j/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発 サポート チームの中村です。
-ユーザーの皆様にサポート サービスをご愛顧頂いていることに厚く御礼申し上げます。
-私たち Office サポート チームでは、日々、お客様から様々なお問い合わせを頂いておりますが、ご質問の内容によっては初期の切り分けに時間を要す場合や、サポート外の構成のため、調査に取り掛かれないこともあります。このような場合、事前にお客様側である程度問題の切り分けを実施いただくことで、私たちサポート チームで、より迅速にサポートを開始することができます。
-今回の記事では、問題点の切り分けとして有効な手段をご紹介させていただくのと合わせて、サポート対象外の構成やご質問の内容を紹介させていただきます。サ...
-        <p class="article-more-link">
-          <a href="/blog/cl0mdnods002f5ovs3my7b12j/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnods002f5ovs3my7b12j/" data-id="cl0vs56vu002epwu871mk8xex" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodq002c5ovs8mkubxio/" data-id="ckzqb7f4000282c3peq7peqwc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -387,7 +337,58 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodr002e5ovseybmbjk6/" data-id="cl0vs56vu002fpwu8dsit2h72" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodr002e5ovseybmbjk6/" data-id="ckzqb7f41002a2c3p4vqv4khs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mdnods002f5ovs3my7b12j/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mdnods002f5ovs3my7b12j/">Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mdnods002f5ovs3my7b12j/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+ユーザーの皆様にサポート サービスをご愛顧頂いていることに厚く御礼申し上げます。
+私たち Office サポート チームでは、日々、お客様から様々なお問い合わせを頂いておりますが、ご質問の内容によっては初期の切り分けに時間を要す場合や、サポート外の構成のため、調査に取り掛かれないこともあります。このような場合、事前にお客様側である程度問題の切り分けを実施いただくことで、私たちサポート チームで、より迅速にサポートを開始することができます。
+今回の記事では、問題点の切り分けとして有効な手段をご紹介させていただくのと合わせて、サポート対象外の構成やご質問の内容を紹介させていただきます。サ...
+        <p class="article-more-link">
+          <a href="/blog/cl0mdnods002f5ovs3my7b12j/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnods002f5ovs3my7b12j/" data-id="ckzqb7f41002b2c3pdp9lh62k" class="article-share-link">Share</a>
       
       
     </footer>
@@ -438,7 +439,7 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodx002r5ovsfzvw5fh5/" data-id="cl0vs56w1002qpwu85cota8ij" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodx002r5ovsfzvw5fh5/" data-id="ckzqb7f46002k2c3p2ok57j8p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -492,7 +493,7 @@ OS が Windows...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl0vs56w2002spwu85q31bx0o" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="ckzqb7f49002p2c3pgibqcs13" class="article-share-link">Share</a>
       
       
     </footer>
@@ -546,7 +547,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl0vs56w4002wpwu8h0ef6c38" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="ckzqb7f49002q2c3p46zm2shu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -597,7 +598,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl0vs56t80005pwu87ku54tsw" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="ckzqb7f2700032c3pfs0285j1" class="article-share-link">Share</a>
       
       
     </footer>
