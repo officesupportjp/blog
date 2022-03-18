@@ -1,10 +1,18 @@
 ---
 title: Office の既定のフォントを変更する方法
 date: 2019-09-17
-lastupdate: 2020-01-10
+lastupdate: 2022-03-18
 id: cl0m75alf001rmcvses4a67bp
 alias: /Office の既定のフォントを変更する方法/
 ---
+
+<br>
+
+*****
+**2022/3/18 Update**  
+"3-2. エクスプローラなどでの右クリックからの新規作成" の対応を新しい PowerPoint バージョンでの動作変更に対応する手順に更新しました。
+*****
+<br>
 
 こんにちは、Office サポート チームです。  
   
@@ -206,40 +214,44 @@ PowerPoint を起動して新規プレゼンテーションを作成し、\[表�
 デスクトップなどで右クリックし、右クリック メニューの \[新規作成\] から PowerPoint プレゼンテーションを作成するときは、既定では空のファイルを作成し、このテンプレートを利用しないため設定が反映されません。右クリックで作成されるプレゼンテーションの既定のフォントを変更する場合は、以下の手順を実施します。  
   
 <u>ひな形ファイルを作成</u>  
-3-1. の設定後、"Default Theme" を選択して新規プレゼンテーションを作成し、そのままデスクトップなどに、\[PowerPoint プレゼンテーション (\*.pptx)\] 形式で "PWRPNT12.PPTX" というファイル名で保存します。  
+3-1. の設定後、"Default Theme" を選択して新規プレゼンテーションを作成し、そのままデスクトップなどに、\[PowerPoint プレゼンテーション (\*.pptx)\] 形式で "POWERPOINT.PPTX" というファイル名で保存します。  
 
 作成者の個人情報を削除するため、\[ファイル\]タブ - \[情報\] - \[問題のチェック\] - \[ドキュメント検査\] - \[検査\] をクリックし、"ドキュメントのプロパティと個人情報" にて \[すべて削除\] をクリックしてダイアログを閉じた後、ファイルを上書き保存します。
 
 <u>ひな形ファイルの展開</u>
 
-PWRPNT12.PPTX を以下のフォルダに格納します。
+1. POWERPOINT.PPTX を以下のフォルダに格納します。
 
-<MSI インストーラ形式の Office の場合>  
-%Windir%ShellNew  
+    <MSI インストーラ形式の Office の場合>  
+    %Windir%ShellNew  
+    
+    <クイック実行形式の Office の場合>  
+    C:\\Program Files\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW (OS と Office が同じ bit の場合)  
+    C:\\Program Files (x86)\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW (64 bit OS + 32 bit Office の場合)  
+
+
+2. 以下のレジストリを参照し、記載通りのレジストリ状態となっていない場合は、追加・削除します。  
+   ボリューム ライセンス版の PowerPoint 2019 までの場合は既定では以下の状態ではありません。Microsoft 365 / リテール ライセンスの PowerPoint、ボリューム ライセンスの PowerPoint 2021 以降では、初めから適切なレジストリが存在するため変更不要です。(Microsft 365 やリテール版を長期間更新していない場合は、以前の仕組みのままの場合があります。)  
+   <br>
+    
+    <存在しない場合は追加>  
+    キー : HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Classes\\.pptx\\PowerPoint.Show.12\\ShellNew  
+    名前 : FileName  
+    種類 : REG\_SZ  
+    データ : POWERPOINT.PPTX を格納したフルパス  
+    (例) C:\\Program Files (x86)\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW\\POWERPOINT.PPTX  
+    <br>
+
+    <存在する場合は削除>    
+    キー : HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Classes\\.pptx\\PowerPoint.Show.12\\ShellNew  
+    名前 : NullFile  
+    種類 : REG\_SZ  
   
-<クイック実行形式の Office の場合>  
-C:\\Program Files\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW (OS と Office が同じ bit の場合)  
-C:\\Program Files (x86)\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW (64 bit OS + 32 bit Office の場合)  
-  
-次に、以下のレジストリを追加します。  
-  
-　キー : HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Classes\\.pptx\\PowerPoint.Show.12\\ShellNew  
-　名前 : FileName  
-　種類 : REG\_SZ  
-　データ : PWRPNT12.PPTX を格納したフルパス  
-　(例) C:\\Program Files (x86)\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW\\PWRPNT12.PPTX  
-  
-さらに、以下のレジストリを削除、またはリネームします。  
-  
- キー : HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Classes\\.pptx\\PowerPoint.Show.12\\ShellNew  
- 名前 : NullFile  
- 種類 : REG\_SZ  
-  
-注:   
-HKEY\_LOCAL\_MACHINE 配下の値は、 Office の修復や更新により既定の値に変更される場合があります。最終的に、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes 配下とマージされて HKEY\_CLASSES\_ROOT に反映された内容が Office アプリケーションの動作で利用されます。  
-このため、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes\\.pptx 配下に値を設定することもできます。(既定では、HKEY\_CURRENT\_USER にはこのレジストリはありません。) この場合、ユーザーごとに設定が必要ですが、Office の修復や更新では変更されません。  
-  
-  
+    注:   
+    HKEY\_LOCAL\_MACHINE 配下の値は、Office の修復や更新により既定の値に変更される場合があります。最終的に、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes 配下とマージされて HKEY\_CLASSES\_ROOT に反映された内容が Office アプリケーションの動作で利用されます。  
+    このため、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes\\.pptx 配下に値を設定することもできます。(既定では、HKEY\_CURRENT\_USER にはこのレジストリはありません。) この場合、ユーザーごとに設定が必要ですが、Office の修復や更新では変更されません。  
+
+<br>  
   
 今回の投稿は以上です。
 
