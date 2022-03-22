@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="※2020&#x2F;10&#x2F;28 OS 観点での回避方法 (3-3) を追加しました。  ※2021&#x2F;06&#x2F;03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。 ※2021&#x2F;10&#x2F;18 OS 21H2 も本現象の発生対象バージョンであること、回避方法の補足、今後の修正について追記しました。   こんにちは、Office サポート チームの佐村です。 今回の記事では、Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="※2020&#x2F;10&#x2F;28 OS 観点での回避方法 (3-3) を追加しました。  ※2021&#x2F;06&#x2F;03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。 ※2021&#x2F;10&#x2F;18 OS 21H2 も本現象の発生対象バージョンであること、回避方法の補足、今後の修正について追記しました。   こんにちは、Office サポート チームの佐村です。 今回の記事では、Windows">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image3.png">
+<meta property="article:published_time" content="2020-08-23T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-02-17T01:32:05.010Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Windows 10 バージョン 2004 (20H1) - 20H2 上で 半角カナのフォームを含んだ Access ファイルでエラーが発生する" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" class="article-date">
+  <time datetime="2020-08-23T15:00:00.000Z" itemprop="datePublished">2020-08-24</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" class="article-date-single">    
+        
+    <time datetime="2021-10-17T15:00:00.000Z" itemprop="lastupdate">2021-10-18</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <div style="color:#ff0000">
+※2020/10/28 OS 観点での回避方法 (3-3) を追加しました。
+
+<p>※2021/06/03 OS 21H1 も本現象の発生対象バージョンであることを追加しました。</p>
+<p>※2021/10/18 OS 21H2 も本現象の発生対象バージョンであること、回避方法の補足、今後の修正について追記しました。</p>
+</div>
+
+<p>こんにちは、Office サポート チームの佐村です。</p>
+<p>今回の記事では、Windows 10 バージョン 2004 上で半角カナ + カナに濁音 / 半濁音を含んでいる Access ファイルを開くとエラーが発生する状況について説明します。</p>
+<p>(Access のバージョンに依存性はなく Windows 10 バージョン 2004 / 20H2 / 21H1 / 21H2 上での Access アプリケーションで発生します。)</p>
+<p><strong>1.</strong> <strong>現象</strong></p>
+<p>Windows 10 バージョン 2004 以降で Access ファイルを開いた時、VBA を実行しようとしたとき、VBA プロジェクトを開こうとしたとき等に以下のようなエラーが発生する可能性があります。</p>
+<p>・フォーム名 ‘半角カナを含んだフォーム名’ が正しくないか、存在しないフォームを参照しています。</p>
+<p><img src="image1.png" alt=""></p>
+<p>・データベースに含まれている VBA プロジェクトを読み取れないため、データベースを開くことができません。</p>
+<p> <img src="image2.png" alt=""></p>
+<p>「データベースに含まれている VBA プロジェクトを～」のエラーダイアログで「OK」ボタンをクリックするとファイルに保存されている VBA プロジェクトが全て削除され、Access ファイルは操作の都度保存されるため VBA プロジェクトが削除された状態でファイルが自動保存されてしまい、コードが消失して復元ができなくなる可能性があります。</p>
+<p><span style="color:#ff0000">また、フォームとの不整合状態が保持されることで以前の OS 上の Access で該当のファイルを開いても VBA が正しく参照できないといった問題が発生します。</span></p>
+<p>この動作が生じる条件は以下になります。 </p>
+<p><strong>問題発生条件</strong></p>
+<p>・Windows 10 OS バージョン 2004 <span style="color:#ff0000">以降</span> である。<span style="color:#ff0000">(Windows 11 では本現象は発生しません。)</span></p>
+<p>・Access ファイル内のフォーム名に半角カタカナを利用して濁音、半濁音のいずれかが含まれている。</p>
+<p>この条件を満たす場合、フォームに紐づく VBA プロジェクトが存在している場合や、半角カナのサブフォームを指定する際に全角で指定していると上記であげたエラーが発生します。</p>
+<p><strong>2.</strong> <strong>原因の説明</strong></p>
+<p>Access アプリケーションでは、フォーム名に関して OS で用意している機能を利用し、半角と全角とを区別せずに比較しています。</p>
+<p>そのため、以前の OS では “ガ” と “ガ” のような全角 / 半角は同じ文字列として判定されていましたが、Windows 10 バージョン 2004 <span style="color:#ff0000">以降</span> では OS の自然言語処理を担う NLS (National Language Support) バージョンが更新 (6.3) され異なる文字列として判定されてしまいます。</p>
+<p>これによって内部管理上同じとみなされることが期待されるフォームが異なるものとして認識されるためにエラーが発生します。</p>
+<p><strong>3.</strong> <strong>対応方法</strong><br>本問題について確認し、修正方法を検討いたしましたが、更新プログラム等で現在のバージョンに対する更新は仕様上出来ないことを確認いたしました。</p>
+<p>自然言語処理を担う NLS の定義に基づいて発生している問題となりますが、NLS の性質上、既存のモジュールと修正されたモジュールがネットワークシステム上で混在すると解決の難しい不整合が生じる可能性があり、そのような状況を避けるため一度リリースされたバージョンの内容を修正することができません。</p>
+<p>このため、問題があった場合には新しいバージョンの NLS を開発して新しい OS とともにリリースする必要があります。</p>
+<div style="color:#ff0000">
+現在のところ、本問題を修正した Windows 10 バージョンのリリース予定については未定となります。  
+Windows 11 では、NLS バージョンが更新されているため、この問題は修正されています。  
+これらのことから、Windows 10 バージョン 2004 以降 においては、利用者様にて問題が発生しないように対応をしていただく必要があります。
+</div>
+
+<p><strong>3-1. Access</strong> <strong>アプリケーション観点 - Access の EXE (MSACCESS.EXE) について、”Windows 8” の互換設定を行う</strong></p>
+<p>エクスプローラーで MSACCESS.EXE までを展開し、MSACCESS.EXE のプロパティから互換モードで動作するように変更します。</p>
+<p><img src="image3.png" alt=""></p>
+<p>※OfficeNN バージョン番号</p>
+<p>Office16 : Microsoft 365 Apps (Office 365 ProPlus) / Office 2019 / Office 2016</p>
+<p>Office15 : Office 2013</p>
+<p>Office14 : Office 2010</p>
+<p>-ご参考</p>
+<p>タイトル : クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法<br>URL : <a href="https://officesupportjp.github.io/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E5%BD%A2%E5%BC%8F%20(C2R)%20%E3%81%A8%20Windows%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F%20(MSI)%20%E3%82%92%E8%A6%8B%E5%88%86%E3%81%91%E3%82%8B%E6%96%B9%E6%B3%95/">https://officesupportjp.github.io/blog/クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法/</a></p>
+<p>&lt;設定変更方法 (C2R版 Office の場合)&gt;</p>
+<p>-———————–</p>
+<p>・エクスプローラー上から、MSACCESS.EXE を右クリックし、「プロパティ」を選択します。</p>
+<p>・MSACCESS.EXE のプロパティ画面で「互換性」タブを選択します。</p>
+<p>・「互換モードでこのプログラムを実行する」のチェックを ON にしてターゲットとして Windows 8 が選択されていることを確認します。</p>
+<p>・「OK」ボタンをクリックします。</p>
+<p>※元の設定に戻す場合は「互換モードでこのプログラムを実行する」のチェックを OFF にします</p>
+<p>-———————–<br><br /></p>
+<p>&lt;設定変更方法 (MSI版 Office の場合)&gt;</p>
+<p>-———————–</p>
+<p>・エクスプローラー上から、MSACCESS.EXE を右クリックし、「互換性のトラブルシューティング」を選択します。</p>
+<p>・「推奨設定を使用する」を選択する。</p>
+<p>・Windows 互換モード : Windows 8 となっていることを確認し「プログラムのテスト」ボタンをクリックします。</p>
+<p>・Access アプリケーションが起動したら×ボタンで閉じて「次へ」ボタンをクリックします。</p>
+<p>・「はい、このプログラムのこの設定を保存します」を選択します。</p>
+<p>・「閉じる」ボタンでトラブルシューティングツールを閉じます。</p>
+<p>※元の設定に戻す場合は以下のレジストリ配下の MSACCESS への設定を削除します。</p>
+<p>HKCU\Software\Microsoft\Windows NT\CurrentVersion\AppCompactFlags\Layers</p>
+<p>-———————–</p>
+<p>なお、Access をはじめ Office アプリケーションは互換性を変更した検証は実施しておらず、</p>
+<p>互換性を変更して動作させた場合に、予期しない動作が発生することがございます。</p>
+<p><strong>3-2. Access</strong> <strong>ファイル観点 - Access のフォームで半角カタカナを全角カタカナに変更する</strong></p>
+<p>Windows 10 の OS 1909 等、以前の問題が発生しない OS バージョンでフォーム等の半角カタカナを全角カタカナに統一します。</p>
+<p>VBA コードに半角カナでフォームを指定している場合等、半角カタカナのフォームを参照している処理は全角カナに修正する必要があります。</p>
+<p><span style="color:#ff0000"><strong>3-3. OS</strong> <strong>観点 – Windows OS の NLS バージョンを 6.3 から 6.2 に変更する</span></strong></p>
+<p>問題の発生しない NLS バージョン 6.2 (以前の OS で利用されていたバージョン) を利用することで本問題は発生しません。レジストリを変更して対処する必要があります。</p>
+<p>&lt;レジストリ NLS\Version の値の変更手順&gt;</p>
+<p>- 以前の NLS バージョンに戻す場合 (Access のエラーを回避する)</p>
+<p>キー : [HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions]</p>
+<p>名前 : 既定</p>
+<p>値 : 0006020F</p>
+<p>コマンド) REG ADD HKLM\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions /ve /d 0006020F /f</p>
+<p>※管理者として起動したコマンドプロンプトで実行ください。</p>
+<p>- バージョン 2004 / 20H2 の既定値 (Access のエラーが発生) に戻す場合</p>
+<p>コマンド) REG ADD HKLM\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions /ve /d 00060305 /f</p>
+<p>注意点</p>
+<p>本レジストリの変更で NLS バージョンを 6.2 に変更した OS についても弊社にてサポートいたします。</p>
+<span style="color:#ff0000">
+しかしながら、Windows のライセンス認証において本設定を行うと正常にライセンス認証が行われない場合があることを確認しております。この場合、本設定変更による回避方法はご利用いただけませんので、ライセンス認証を実行する際には上記の変更を元に戻してから実行してください。
+</span>
+
+<p>なお、アプリケーションの実装やビジネスロジックによっては、ソートの整合が崩れたり、データが不正となる可能性がありますので、何か問題が発生してお問い合わせいただく場合には、NLS バージョンを 6.2 に変更して運用していることを随時担当エンジニアにお知らせくださいますようお願いいたします。</p>
+<p>また、NLS バージョン 6.3 では合字データ (㋿ や ㍻) のソート順を変更していますので、合字を利用する場合にこのソート順が</p>
+<p>変わります (Windows 10 バージョン 1909 と同じになる) ことも合わせてご了承ください。</p>
+<p>バージョン 6.2 昇順 : ㋿ ㍻ ㍾ ㍼</p>
+<p>バージョン 6.3 昇順 : ㍾ ㍼ ㍻ ㋿</p>
+<p>ユーザーや管理者による対処不要で、更新プログラム適用等で対処ができず申し訳ありませんが、</p>
+<p>問題によって NLS バージョンの値を変更するか、MSACCESS.EXE の互換モードを下げるという</p>
+<p>対処が必要となりますことご了承くださいますようお願いいたします。  </p>
+<p><strong>補足</strong></p>
+<p>一度エラーが発生した Access ファイルは不整合の内容を保持しているため、上記対応方法を実施後もエラーが発生する可能性がございます。その場合、バックアップファイルから戻すといった修正が必要になります。</p>
+<p>今後の方針や追加の回避方法等が分かり次第本資料を更新します。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/" data-id="ckzqb7f48002o2c3p1hd9city" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/Office%20%E5%B1%95%E9%96%8B%E3%83%84%E3%83%BC%E3%83%AB%20(16.0.12827.20268)%20%E3%81%A7%20RemoveMSI%20%E5%B1%9E%E6%80%A7%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B%E3%81%A8%2030041-1039-30050-1039%20%E7%AD%89%E3%81%AE%E3%82%A8%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office 展開ツール (16.0.12827.20268) で RemoveMSI 属性を使用すると 30041-1039-30050-1039 等のエラーメッセージが表示される
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202005%20-%202006%20%E3%81%A7%20Office%20%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9%E3%81%AE%E7%B5%82%E4%BA%86%E3%81%8C%E9%81%85%E5%BB%B6%E3%81%99%E3%82%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">バージョン 2005 - 2006 で Office プロセスの終了が遅延する</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%20SPO%20&%20OneDrive%20%E7%A7%BB%E8%A1%8C%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%9E%E3%82%AF%E3%83%AD%20(VBA)%20%E5%BD%B1%E9%9F%BF/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E3%81%8B%E3%82%89%E5%85%A5%E6%89%8B%E3%81%97%E3%81%9F%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AE%E3%83%9E%E3%82%AF%E3%83%AD%E3%81%8C%E3%83%96%E3%83%AD%E3%83%83%E3%82%AF%E3%81%95%E3%82%8C%E3%82%8B%E6%97%A2%E5%AE%9A%E3%81%AE%E5%8B%95%E4%BD%9C%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20(MC322553)/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%20-%20Japan%20Office%20Client%20Support%20Blog%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Teams%E3%80%81SPO%E3%80%81OneDrive%E3%80%81WebDav%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/Office%20%E8%A3%BD%E5%93%81%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%A7%E5%85%88%E9%80%B2%E8%AA%8D%E8%A8%BC%E3%81%8C%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%95%E3%82%8C%E3%81%A6%E3%81%84%E3%82%8B%E3%81%8B%E3%82%92%E7%A2%BA%E8%AA%8D%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

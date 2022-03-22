@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響) | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2016 年 7 月 12 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの 西川 (直) です。 Office ファイルにサーバ上の他のファイルやページへのハイパーリンクを挿入したとき、環境構成によって、これをクリックすると認証ダイアログが表示されたり、正常に開かないというお問い合わせを頂きます。   このよ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響)">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m75al6001imcvs1qs635q2/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2016 年 7 月 12 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの 西川 (直) です。 Office ファイルにサーバ上の他のファイルやページへのハイパーリンクを挿入したとき、環境構成によって、これをクリックすると認証ダイアログが表示されたり、正常に開かないというお問い合わせを頂きます。   このよ">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m75al6001imcvs1qs635q2/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m75al6001imcvs1qs635q2/image2.png">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-23T04:15:00.124Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m75al6001imcvs1qs635q2/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m75al6001imcvs1qs635q2/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office のハイパーリンククリックで生じる問題への対処について (ForceShellExecute レジストリによる対処と影響)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m75al6001imcvs1qs635q2/" class="article-date-single">    
+        
+    <time datetime="2020-10-28T15:00:00.000Z" itemprop="lastupdate">2020-10-29</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2016 年 7 月 12 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポートの 西川 (直) です。</p>
+<p>Office ファイルにサーバ上の他のファイルやページへのハイパーリンクを挿入したとき、環境構成によって、これをクリックすると認証ダイアログが表示されたり、正常に開かないというお問い合わせを頂きます。  </p>
+<p>このような場合、ForceShellExecute というレジストリを設定することで事象が回避する可能性があります。  </p>
+<p>この記事では、この ForceShellExecute レジストリの説明を中心に、このような問題が生じたときの対処方法や考慮事項を記載します。  </p>
+<p><span style="color:#ff0000"><strong>2017/11/11 Update</strong></span><br><span style="color:#339966">“3.レジストリ ForceShellExecuteを設定する影響について” 内の対象製品、バージョンを明記しました。</span>  </p>
+<p><span style="color:#ff0000"><strong>2018/8/14 Update</strong></span><br><span style="color:#339966">ForceShellExecute の説明を変更しました。</span>  </p>
+<p><span style="color:#ff0000"><strong>2020/8/18 Update</strong></span><br><span style="color:#339966">Fix it ツールの廃止にともない、説明を変更しました。</span></p>
+<p><span style="color:#ff0000"><strong>2020/10/29 Update</strong></span><br><span style="color:#339966">クイック実行版 Office 用のレジストリを追加しました。</span></p>
+<p><strong>目次</strong>  </p>
+<ol>
+<li>レジストリ ForceShellExecute の説明と設定方法  </li>
+<li>レジストリ ForceShellExecute が使用される場面とは？  </li>
+<li>レジストリ ForceShellExecuteを設定する影響について  </li>
+<li>関連情報</li>
+</ol>
+<h4 id="1-レジストリ-ForceShellExecute-の説明と設定方法"><a href="#1-レジストリ-ForceShellExecute-の説明と設定方法" class="headerlink" title="1.　レジストリ ForceShellExecute の説明と設定方法"></a><strong>1.　レジストリ ForceShellExecute の説明と設定方法</strong></h4><p>レジストリ ForceShellExecute は、Office 製品で開かれたファイルに挿入されたハイパーリンクを開くときの内部動作を変更するものです。レジストリエディターより、以下のレジストリを設定して下さい。</p>
+<p><strong>レジストリパス :</strong></p>
+<p>[64 ビット版の Windows で 32 ビット版の Office をご使用の場合]  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\9.0\Common\Internet</span><br></pre></td></tr></table></figure>
+
+<p>*M365Apps 等、クイック実行版の Office をご利用されている場合、以下も設定してください</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Wow6432Node\Microsoft\Office\9.0\Common\Internet</span><br></pre></td></tr></table></figure>
+
+
+
+<p>[32ビット版の Windows で 32 ビット版の Office をご使用の場合]</p>
+<p>または</p>
+<p>[64 ビット版の Windows で 64 ビット版の Office をご使用の場合]  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\9.0\Common\Internet</span><br></pre></td></tr></table></figure>
+
+<p>*M365Apps 等、クイック実行版の Office をご利用されている場合、以下も設定してください。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\MACHINE\Software\Microsoft\Office\9.0\Common\Internet</span><br></pre></td></tr></table></figure>
+
+<p><strong>値の名前 :</strong><br>ForceShellExecute</p>
+<p><strong>データの名前 :</strong><br>DWORD型 (0: 指定しない(デフォルト) 、 1: 指定する)  </p>
+<p><strong>注: レジストリパスに含まれているバージョン番号 9.0 は、全てのバージョンの Office 製品で共通となります。</strong><br><strong>また、キーが存在しない場合は手動で作成してください。</strong></p>
+<h4 id="2-レジストリ-ForceShellExecute-が使用される場面とは？"><a href="#2-レジストリ-ForceShellExecute-が使用される場面とは？" class="headerlink" title="2.レジストリ ForceShellExecute が使用される場面とは？"></a><strong>2.レジストリ ForceShellExecute が使用される場面とは？</strong></h4><p>Office はファイル内のリンクを開くとき、 OS または IE のコンポーネントを用い、そのパスを処理します。<br>パスを処理する過程では、リンク先のサーバーがどのようなものであり、どのような機能を提供しているかなどを確認します。<br>このような処理を行う目的は、対象の Web サーバーへの到達確認や、対応している機能を確認するため等が挙げられます。<br>しかしながら、プロキシサーバを使用している場合などの特定の条件下では、認証ダイアログが表示されたり、正常に開かないといった事象が発生する可能性があります。<br>この時、レジストリ ForceShellExecute を 1 に設定すると、シンプルな形でリンクを開こうとするようになり、事象が改善する可能性があります。  </p>
+<h4 id="3-レジストリ-ForceShellExecuteを設定する影響について"><a href="#3-レジストリ-ForceShellExecuteを設定する影響について" class="headerlink" title="3.レジストリ ForceShellExecuteを設定する影響について"></a><strong>3.レジストリ ForceShellExecuteを設定する影響について</strong></h4><p>ForceShellExecute レジストリ設定を加えることで生じる制限事項があります。現在確認されている制限事項を以下に列挙します。</p>
+<p>a) Office 製品よりハイパーリンクを介してファイルを開く際、シンプルな形でリンクを開こうとするようになります。<br>そのため、Office 製品標準の方法で開かれることを想定されているアドインを使用している場合等に、<br>挙動に影響を与える可能性があります。  </p>
+<p>b) Excel 2010 のブックで、別のブックへのハイパーリンクを実行時に、対象のブックが開かない現象があります。(Excel 2010 のみが対象となります)  </p>
+<p>以下のサポート技術情報に記載されている修正プログラムを適用することで解消されます。<br>タイトル : Excel 2010 ブックにハイパーリンクをクリックするリンクを含むブックが表示されません。(自動翻訳)<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/2597992" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/2597992</a></p>
+<p>c) PowerPoint の .ppsx (スライドショー形式ファイル) から、別の .ppsx ファイルを開くリンクをクリック時、リンク元のファイルを閉じるまでリンク先が開かれません。  </p>
+<p>これは、リンク元のファイルを .pptx (PowerPoint プレゼンテーション形式ファイル)で保存することで、回避することができます。  </p>
+<p>d) Office 製品よりファイルを起動する際、以下のような警告をうながすダイアログが表示されることがあります。  </p>
+<p><img src="image1.png" alt="">  </p>
+<p>または</p>
+<p><img src="image2.png" alt=""></p>
+<p>これは、以下のサポート技術情報に記載されている方法で非表示にすることができます。</p>
+<p>タイトル : 2007 Office プログラムおよび Office 2010 プログラムでハイパーリンクの警告メッセージを有効または無効にする方法<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/925757" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/925757</a></p>
+<p>なお、Office 2013、Office 2016 についても有効な方法となりますが、レジストリキーのバージョンは以下のとおり適宜読み替えてください。  </p>
+<p>Office 2013 : 15.0  </p>
+<p>Office 2016 : 16.0  </p>
+<p>e) Excel ブックへのハイパーリンクを実行しファイルを開く際、対象ブックのリンクされているシートに移動しません。  </p>
+<p>例) 以下のようにハイパーリンクを設定していても、 ファイルを開く際、リンクされているシートに移動しません。  </p>
+<p><code>C:\Users\Public\Documents\test.xls#Sheet2!B99</code></p>
+<p>f) Word 文書へのハイパーリンクを実行しファイルを開く際、対象文書のリンクされているブックマークに移動しません。  </p>
+<p>例) 以下のようにハイパーリンクを設定していても、 ファイルを開く際、リンクされているブックマークに移動しません。  </p>
+<p><code>C:\Users\Public\Documents\test.docx#Bookmark</code></p>
+<h4 id="4-関連情報"><a href="#4-関連情報" class="headerlink" title="4.　関連情報"></a><strong>4.　関連情報</strong></h4><p>タイトル : ログオン ページやエラー ページにリダイレクトされるか、表示されたら、認証については、Office ドキュメント内の SSO の Web サイトへのハイパーリンクをクリックすると、(自動翻訳)<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/899927" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/899927</a></p>
+<p>タイトル : [OFF2003] Office 2003 で Web サイトからドキュメントを開く方法<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/838028" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/838028</a></p>
+<p>タイトル : WebDAV アクセスするためのコンポーネント (WebClient と MSDAIPP)<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/windows/win7_tips64.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/windows/win7_tips64.aspx</a></p>
+<p><strong>本情報の内容 (添付、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m75al6001imcvs1qs635q2/" data-id="cl0m75al6001imcvs1qs635q2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m75al4001fmcvs1ud7co8a/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office Viewer 製品の提供終了について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m75ala001kmcvsf5j68za2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Office Online と Office デスクトップ アプリケーションの機能差異に関する情報</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

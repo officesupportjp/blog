@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)   こんにちは、Office Developer サポートの森　健吾 (kenmori) です。 今回の投稿では、Microsoft Graph – Excel REST API を使用して、指定されたアドレスの Range オブジェクトを操作するプロ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m69xsr00034cvsdixmgyv3/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)   こんにちは、Office Developer サポートの森　健吾 (kenmori) です。 今回の投稿では、Microsoft Graph – Excel REST API を使用して、指定されたアドレスの Range オブジェクトを操作するプロ">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m69xsr00034cvsdixmgyv3/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m69xsr00034cvsdixmgyv3/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m69xsr00034cvsdixmgyv3/image3.png">
+<meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-08T09:08:18.836Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m69xsr00034cvsdixmgyv3/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xsr00034cvsdixmgyv3/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      (WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xsr00034cvsdixmgyv3/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  </p>
+<p>こんにちは、Office Developer サポートの森　健吾 (kenmori) です。</p>
+<p>今回の投稿では、Microsoft Graph – Excel REST API を使用して、指定されたアドレスの Range オブジェクトを操作するプログラムを、実際に C# で開発するエクスペリエンスをご紹介します。</p>
+<p>ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。<a href="https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20-%20OneDrive%20API%20(C%20Sharp)%20%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%9F%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB%20%E3%82%B3%E3%83%BC%E3%83%89/">前回の OneDrive API のウォークスルー</a>同様、本投稿では、現実的な実装シナリオを重視するよりも、Excel REST API を理解するためになるべくシンプルなコードにすることを心掛けています。例外処理なども含めていませんので、実際にコーディングする際には、あくまでこのコードを参考する形でご検討ください。</p>
+<p>Excel REST API は、OneDrive API が前提となります。OneDrive API エンドポイント配下で取得したファイルに対してのみ、Excel REST API は使用できます。Office 365 という前提はありますが、一度慣れてしまえばオートメーションの要件において、OpenXML などのプログラムを実装するよりも開発生産性が高いと思います。</p>
+<p><strong>事前準備</strong></p>
+<p><a href="https://officesupportjp.github.io/blog/(WebAPI)OAuth%20Bearer%20Token%20(Access%20Token)%20%E3%81%AE%E5%8F%96%E5%BE%97%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">以前の投稿</a>をもとに、Azure AD にアプリケーションの登録を完了してください。少なくとも以下の 2 つのデリゲートされたアクセス許可が必要です。</p>
+<p>・Have full access to all files user can access<br>・Sign users in</p>
+<p>その上で、クライアント ID とリダイレクト URI を控えておいてください。</p>
+<p><strong>開発手順</strong></p>
+<p>1. Visual Studio を起動し、Windows フォーム アプリケーションを開始します。<br>2. ソリューション エクスプローラにて [参照] を右クリックし、[NuGet パッケージの管理] をクリックします。</p>
+<p>3. ADAL で検索し、Microsoft.IdentityMode.Clients.ActiveDirectory をインストールします。</p>
+<p>4. [OK] をクリックし、[同意する] をクリックします。<br>5. 次に同様の操作で Newtonsoft で検索し、Newtonsoft.Json をインストールします。<br>6. 次にフォームをデザインします。</p>
+<p><img src="image1.png" alt=""></p>
+<p><strong>コントロール一覧</strong></p>
+<ul>
+<li>ExcelTestForm フォーム</li>
+<li>fileListCB コンボボックス</li>
+<li>worksheetsCB コンボ ボックス</li>
+<li>refreshBtn ボタン</li>
+<li>saveBtn ボタン</li>
+<li>rangeGV グリッド ビュー</li>
+</ul>
+<p>7. プロジェクトを右クリックし、[追加] – [新しい項目] をクリックします。<br>8. MyFile.cs を追加します。<br>9. 以下のような定義 (JSON 変換用) を記載します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">using Newtonsoft.Json;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line"></span><br><span class="line">namespace ExcelAPITest</span><br><span class="line">&#123;</span><br><span class="line">    public class MyFile</span><br><span class="line">    &#123;</span><br><span class="line">        public string Name &#123; get; set; &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public class MyFiles</span><br><span class="line">    &#123;</span><br><span class="line">        public List&lt;MyFile&gt; Value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public class WorkSheet</span><br><span class="line">    &#123;</span><br><span class="line">        public string Name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public class WorkSheets</span><br><span class="line">    &#123;</span><br><span class="line">        public List&lt;WorkSheet&gt; Value;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public class Range</span><br><span class="line">    &#123;</span><br><span class="line">        public List&lt;List&lt;string&gt;&gt; Values;</span><br><span class="line">        public List&lt;List&lt;string&gt;&gt; Formulas;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>10. フォームのコードに移動します。<br>11. using を追記しておきます。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">using Microsoft.IdentityModel.Clients.ActiveDirectory;</span><br><span class="line">using Newtonsoft.Json;</span><br><span class="line">using System;</span><br><span class="line">using System.Collections.Generic;</span><br><span class="line">using System.Net.Http;</span><br><span class="line">using System.Net.Http.Headers;</span><br><span class="line">using System.Text;</span><br><span class="line">using System.Threading.Tasks;</span><br><span class="line">using System.Windows.Forms;</span><br><span class="line">using ExcelAPITest; &#x2F;&#x2F;9. で作成した MyFile.cs 内の名前空間</span><br></pre></td></tr></table></figure>
+
+<p>12. フォームのメンバー変数に以下を加えます。<br>※ clientid や redirecturi は Azure AD で事前に登録したものを使用ください。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const string resource &#x3D; &quot;https:&#x2F;&#x2F;graph.microsoft.com&quot;;</span><br><span class="line">const string clientid &#x3D; &quot;xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx&quot;;</span><br><span class="line">const string redirecturi &#x3D; &quot;urn:getaccesstokenfordebug&quot;;</span><br><span class="line">&#x2F;&#x2F; ADFS 環境で SSO ドメイン以外のテナントのユーザーを試す場合はコメント解除</span><br><span class="line">&#x2F;&#x2F; const string loginname &#x3D; &quot;admin@tenant.onmicrosoft.com&quot;;</span><br><span class="line">string AccessToken;</span><br><span class="line">Range range;</span><br></pre></td></tr></table></figure>
+
+<p>13. フォームのデザインでフォームをダブルクリックし、ロード時のイベントを実装します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">private async void ExcelTestForm_Load(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F; デザイナーで設定しても構いません。</span><br><span class="line">    rangeGV.AllowUserToAddRows &#x3D; false;</span><br><span class="line">    rangeGV.AllowUserToDeleteRows &#x3D; false;</span><br><span class="line">    rangeGV.ColumnHeadersVisible &#x3D; false;</span><br><span class="line">    rangeGV.RowHeadersVisible &#x3D; false;</span><br><span class="line"></span><br><span class="line">    AccessToken &#x3D; await GetAccessToken(resource, clientid, redirecturi);</span><br><span class="line">    DisplayFiles();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private async Task&lt;string&gt; GetAccessToken(string resource, string clientid, string redirecturi)</span><br><span class="line">&#123;</span><br><span class="line">    AuthenticationContext authenticationContext &#x3D; new AuthenticationContext(&quot;https:&#x2F;&#x2F;login.microsoftonline.com&#x2F;common&quot;);</span><br><span class="line">    AuthenticationResult authenticationResult &#x3D; await authenticationContext.AcquireTokenAsync(</span><br><span class="line">        resource,</span><br><span class="line">        clientid,</span><br><span class="line">        new Uri(redirecturi),</span><br><span class="line">        new PlatformParameters(PromptBehavior.Auto, null)</span><br><span class="line">        &#x2F;&#x2F; ADFS 環境で SSO ドメイン以外のテナントのユーザーを試す場合はコメント解除</span><br><span class="line">        &#x2F;&#x2F;, new UserIdentifier(loginname, UserIdentifierType.RequiredDisplayableId)</span><br><span class="line">    );</span><br><span class="line">    return authenticationResult.AccessToken;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private async void DisplayFiles()</span><br><span class="line">&#123;</span><br><span class="line">    using (HttpClient httpClient &#x3D; new HttpClient())</span><br><span class="line">    &#123;</span><br><span class="line">        httpClient.DefaultRequestHeaders.Authorization &#x3D; new AuthenticationHeaderValue(&quot;Bearer&quot;, AccessToken);</span><br><span class="line">        HttpRequestMessage request &#x3D; new HttpRequestMessage(</span><br><span class="line">            HttpMethod.Get,</span><br><span class="line">            new Uri(&quot;https:&#x2F;&#x2F;graph.microsoft.com&#x2F;v1.0&#x2F;me&#x2F;drive&#x2F;root&#x2F;children?$select&#x3D;name&quot;)</span><br><span class="line">        );</span><br><span class="line">        var response &#x3D; await httpClient.SendAsync(request);</span><br><span class="line">        MyFiles files &#x3D; JsonConvert.DeserializeObject&lt;MyFiles&gt;(response.Content.ReadAsStringAsync().Result);</span><br><span class="line">        fileListCB.Items.Clear();</span><br><span class="line"></span><br><span class="line">        foreach (MyFile file in files.Value)</span><br><span class="line">        &#123;</span><br><span class="line">            if (file.Name.ToLower().EndsWith(&quot;.xlsx&quot;))</span><br><span class="line">            &#123;</span><br><span class="line">                fileListCB.Items.Add(file.Name);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        if (fileListCB.Items.Count &gt; 0)</span><br><span class="line">        &#123;</span><br><span class="line">            fileListCB.SelectedIndex &#x3D; 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>14. fileListCB の SelectedIndexChanged イベントをダブルクリックして、処理を実装します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">private async void fileListCB_SelectedIndexChanged(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    string fileLeafRef &#x3D; fileListCB.SelectedItem.ToString();</span><br><span class="line"></span><br><span class="line">    using (HttpClient httpClient &#x3D; new HttpClient())</span><br><span class="line">    &#123;</span><br><span class="line">        httpClient.DefaultRequestHeaders.Authorization &#x3D; new AuthenticationHeaderValue(&quot;Bearer&quot;, AccessToken);</span><br><span class="line"></span><br><span class="line">        HttpRequestMessage request &#x3D; new HttpRequestMessage(</span><br><span class="line">            HttpMethod.Get,</span><br><span class="line">            new Uri(string.Format(&quot;https:&#x2F;&#x2F;graph.microsoft.com&#x2F;v1.0&#x2F;me&#x2F;drive&#x2F;root:&#x2F;&#123;0&#125;:&#x2F;workbook&#x2F;worksheets&quot;, fileLeafRef))</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        var response &#x3D; await httpClient.SendAsync(request);</span><br><span class="line">        &#x2F;&#x2F; UI コントロールの表示アイテムのクリア</span><br><span class="line">        workSheetsCB.Items.Clear();</span><br><span class="line">        rangeGV.Rows.Clear();</span><br><span class="line">        rangeGV.Columns.Clear();</span><br><span class="line"></span><br><span class="line">        WorkSheets worksheets &#x3D; JsonConvert.DeserializeObject&lt;WorkSheets&gt;(response.Content.ReadAsStringAsync().Result);</span><br><span class="line">        foreach (WorkSheet worksheet in worksheets.Value)</span><br><span class="line">        &#123;</span><br><span class="line">            workSheetsCB.Items.Add(worksheet.Name);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        if (workSheetsCB.Items.Count &gt; 0)</span><br><span class="line">        &#123;</span><br><span class="line">            workSheetsCB.SelectedIndex &#x3D; 0;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>15. workSheetsCB の SelectedIndexChanged イベントをダブルクリックして、処理を実装します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">private void workSheetsCB_SelectedIndexChanged(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    DisplayData();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private async void DisplayData()</span><br><span class="line">&#123;</span><br><span class="line">    string fileLeafRef &#x3D; fileListCB.SelectedItem.ToString();</span><br><span class="line">    string WorkSheetName &#x3D; workSheetsCB.SelectedItem.ToString();</span><br><span class="line">    using (HttpClient httpClient &#x3D; new HttpClient())</span><br><span class="line">    &#123;</span><br><span class="line">        httpClient.DefaultRequestHeaders.Authorization &#x3D; new AuthenticationHeaderValue(&quot;Bearer&quot;, AccessToken);</span><br><span class="line">        HttpRequestMessage request &#x3D; new HttpRequestMessage(</span><br><span class="line">            HttpMethod.Get,</span><br><span class="line">            new Uri(string.Format(&quot;https:&#x2F;&#x2F;graph.microsoft.com&#x2F;v1.0&#x2F;me&#x2F;drive&#x2F;root:&#x2F;&#123;0&#125;:&#x2F;workbook&#x2F;worksheets(%27&#123;1&#125;%27)&#x2F;range(address&#x3D;%27A1:E5%27)&quot;, fileLeafRef, WorkSheetName))</span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">        var response &#x3D; await httpClient.SendAsync(request);</span><br><span class="line">        range &#x3D; JsonConvert.DeserializeObject&lt;Range&gt;(response.Content.ReadAsStringAsync().Result);</span><br><span class="line">        RenderRangeData(range);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private void RenderRangeData(Range range)</span><br><span class="line">&#123;</span><br><span class="line">    rangeGV.Columns.Clear();</span><br><span class="line">    &#x2F;&#x2F; 列名はダミーとする (非表示)</span><br><span class="line">    rangeGV.Columns.Add(&quot;A&quot;, &quot;A&quot;);</span><br><span class="line">    rangeGV.Columns.Add(&quot;B&quot;, &quot;B&quot;);</span><br><span class="line">    rangeGV.Columns.Add(&quot;C&quot;, &quot;C&quot;);</span><br><span class="line">    rangeGV.Columns.Add(&quot;D&quot;, &quot;D&quot;);</span><br><span class="line">    rangeGV.Columns.Add(&quot;E&quot;, &quot;E&quot;);</span><br><span class="line">    rangeGV.Rows.Clear();</span><br><span class="line">    foreach (var RowData in range.Values)</span><br><span class="line">    &#123;</span><br><span class="line">        int rowIndex &#x3D; rangeGV.Rows.Add();</span><br><span class="line">        var Row &#x3D; rangeGV.Rows[rowIndex];</span><br><span class="line">        for (int j &#x3D; 0; j &lt; RowData.Count; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            Row.Cells[j].Value &#x3D; RowData[j];</span><br><span class="line">            if (RowData[j] !&#x3D; range.Formulas[rowIndex][j])</span><br><span class="line">            &#123;</span><br><span class="line">                Row.Cells[j].ReadOnly &#x3D; true;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>16. refreshBtn をダブルクリックして、Click イベントを実装します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">private void refreshBtn_Click(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    DisplayData();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>17. saveBtn をダブルクリックして　Click イベントを実装します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">private async void saveBtn_Click(object sender, EventArgs e)</span><br><span class="line">&#123;</span><br><span class="line">    string fileLeafRef &#x3D; fileListCB.SelectedItem.ToString();</span><br><span class="line">    string WorkSheetName &#x3D; workSheetsCB.SelectedItem.ToString();</span><br><span class="line"></span><br><span class="line">    using (HttpClient httpClient &#x3D; new HttpClient())</span><br><span class="line">    &#123;</span><br><span class="line">        httpClient.DefaultRequestHeaders.Authorization &#x3D; new AuthenticationHeaderValue(&quot;Bearer&quot;, AccessToken);</span><br><span class="line">        HttpRequestMessage request &#x3D; new HttpRequestMessage(</span><br><span class="line">            new HttpMethod(&quot;PATCH&quot;),</span><br><span class="line">            new Uri(string.Format(&quot;https:&#x2F;&#x2F;graph.microsoft.com&#x2F;v1.0&#x2F;me&#x2F;drive&#x2F;root:&#x2F;&#123;0&#125;:&#x2F;workbook&#x2F;worksheets(%27&#123;1&#125;%27)&#x2F;range(address&#x3D;%27&#123;1&#125;!A1:E5%27)&quot;, fileLeafRef, WorkSheetName))</span><br><span class="line">        );</span><br><span class="line">        range &#x3D; GetRangeData();</span><br><span class="line">        request.Content &#x3D; new StringContent(JsonConvert.SerializeObject(range), Encoding.UTF8, &quot;application&#x2F;json&quot;);</span><br><span class="line">        var response &#x3D; await httpClient.SendAsync(request);</span><br><span class="line">        MessageBox.Show(response.StatusCode.ToString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">private Range GetRangeData()</span><br><span class="line">&#123;</span><br><span class="line">    int rowIndex &#x3D; 0;</span><br><span class="line">    Range temprange &#x3D; new Range();</span><br><span class="line">    List&lt;List&lt;string&gt;&gt; formulas &#x3D; new List&lt;List&lt;string&gt;&gt;();</span><br><span class="line">    List&lt;List&lt;string&gt;&gt; values &#x3D; new List&lt;List&lt;string&gt;&gt;();</span><br><span class="line">    foreach (DataGridViewRow Row in rangeGV.Rows)</span><br><span class="line">    &#123;</span><br><span class="line">        List&lt;string&gt; formulasInRow &#x3D; new List&lt;string&gt;();</span><br><span class="line">        List&lt;string&gt; valuesInRow &#x3D; new List&lt;string&gt;();</span><br><span class="line">        for (int j &#x3D; 0; j &lt; rangeGV.Columns.Count; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            string CellData &#x3D; (Row.Cells[j].Value &#x3D;&#x3D; null) ? &quot;&quot; : Row.Cells[j].Value.ToString();</span><br><span class="line">            valuesInRow.Add(CellData);</span><br><span class="line">            if (Row.Cells[j].ReadOnly)</span><br><span class="line">            &#123;</span><br><span class="line">                formulasInRow.Add(range.Formulas[rowIndex][j]);</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                formulasInRow.Add(CellData);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        formulas.Add(formulasInRow);</span><br><span class="line">        values.Add(valuesInRow);</span><br><span class="line">        rowIndex++;</span><br><span class="line">    &#125;</span><br><span class="line">    temprange.Values &#x3D; values;</span><br><span class="line">    temprange.Formulas &#x3D; formulas;</span><br><span class="line">    return temprange;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>上記ソリューションをビルドして、Excel REST API の動作をご確認ください。</p>
+<p><strong>動作概要</strong></p>
+<p>・左上から最初のコンボボックスにOneDrive 上にある xlsx ファイルを格納されます。<br>・左上から 2 番目のコンボボックス名には、ワークシート名が格納されます。<br>・ファイル名、シートをもとにセル (左上から縦横5 マス) が表示されます。<br>・数式のセルは読み取り専用になります。<br>・[Save] ボタンをクリックすると変更内容が保存されます。</p>
+<p><img src="image2.png" alt=""></p>
+<p>Excel API の大きな特徴として、更新内容は共同編集セッションで更新されます。Excel ファイルを誰かが開いているから競合するなどといった状況もありません。今回の場合更新対象のセルは左上から縦横 5 マス (A1:E5) ですので、それ以外のセルについては他ユーザーの編集は保持されます。</p>
+<p><img src="image3.png" alt=""></p>
+<p>上図は、他のユーザーがブラウザーで編集していた際の画面です。別セッションで、アプリケーションが Save をクリックした際に、シートの右上に共同編集者の更新が通知されます。</p>
+<p><strong>参考情報</strong></p>
+<p>Excel REST API をさらに使用する場合は、以下の情報をご参考にしてください。</p>
+<p>タイトル : Microsoft Graph での Excel の操作<br>アドレス : <a href="https://graph.microsoft.io/ja-jp/docs/api-reference/v1.0/resources/excel" target="_blank" rel="noopener">https://graph.microsoft.io/ja-jp/docs/api-reference/v1.0/resources/excel</a></p>
+<p>タイトル : New additions to the Excel REST APIs on the Microsoft Graph endpoint<br>アドレス : <a href="https://devblogs.microsoft.com/microsoft365dev/additions-to-excel-rest-api-on-microsoft-graph/" target="_blank" rel="noopener">https://devblogs.microsoft.com/microsoft365dev/additions-to-excel-rest-api-on-microsoft-graph/</a></p>
+<p>タイトル : Power your Apps with the new Excel REST API on the Microsoft Graph<br>アドレス : <a href="https://devblogs.microsoft.com/microsoft365dev/power-your-apps-with-the-new-excel-rest-api/" target="_blank" rel="noopener">https://devblogs.microsoft.com/microsoft365dev/power-your-apps-with-the-new-excel-rest-api/</a></p>
+<p>前回の投稿と繰り返しとなりますが、Json.NET に関するドキュメントは以下をご参考にしてください。</p>
+<p>タイトル : Json.NET Documentation<br>アドレス : <a href="http://www.newtonsoft.com/json/help/html/Introduction.htm" target="_blank" rel="noopener">http://www.newtonsoft.com/json/help/html/Introduction.htm</a></p>
+<p>タイトル : Serializing and Deserializing JSON<br>アドレス : <a href="http://www.newtonsoft.com/json/help/html/SerializingJSON.htm" target="_blank" rel="noopener">http://www.newtonsoft.com/json/help/html/SerializingJSON.htm</a></p>
+<p>開発工数削減のため、アプリケーション開発前に Graph Explorer, Fiddler や Postman などを使用して、あらかじめ使用する REST を確立しておくことをお勧めします。デバッグ方法については、以下をご参考にしてください。</p>
+<p>タイトル : [WebAPI]Microsoft Graph を使用した開発に便利なツール群<br>アドレス : <a href="https://officesupportjp.github.io/blog/(WebAPI)Microsoft%20Graph%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E9%96%8B%E7%99%BA%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E3%83%84%E3%83%BC%E3%83%AB%E7%BE%A4/">https://officesupportjp.github.io/blog/(WebAPI)Microsoft Graph を使用した開発に便利なツール群/</a></p>
+<p>Excel REST API については、今後も何度かにわけて様々なサンプルを記載しようと思います。</p>
+<p>今回の投稿は以上です。 </p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xsr00034cvsdixmgyv3/" data-id="cl0m69xsr00034cvsdixmgyv3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m69xso00024cvs924z7os6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (WebAPI)OAuth Bearer Token (Access Token) の取得方法について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m69xst00044cvsesh54x72/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">(WebAPI)OneNote API (C Sharp) を使いページ コンテンツを表示するサンプル コード</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

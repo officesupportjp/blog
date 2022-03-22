@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方) | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 ユーザーの皆様にサポート サービスをご愛顧頂いていることに厚く御礼申し上げます。 私たち Office サポート チームでは、日々、お客様から様々なお問い合わせを頂いておりますが、ご質問の内">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4rqad002e50vsf2vzh1fr/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 ユーザーの皆様にサポート サービスをご愛顧頂いていることに厚く御礼申し上げます。 私たち Office サポート チームでは、日々、お客様から様々なお問い合わせを頂いておりますが、ご質問の内">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T05:00:22.416Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m4rqad002e50vsf2vzh1fr/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m4rqad002e50vsf2vzh1fr/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office 開発 サポート チームの中村です。</p>
+<p>ユーザーの皆様にサポート サービスをご愛顧頂いていることに厚く御礼申し上げます。</p>
+<p>私たち Office サポート チームでは、日々、お客様から様々なお問い合わせを頂いておりますが、ご質問の内容によっては初期の切り分けに時間を要す場合や、サポート外の構成のため、調査に取り掛かれないこともあります。このような場合、事前にお客様側である程度問題の切り分けを実施いただくことで、私たちサポート チームで、より迅速にサポートを開始することができます。</p>
+<p>今回の記事では、問題点の切り分けとして有効な手段をご紹介させていただくのと合わせて、サポート対象外の構成やご質問の内容を紹介させていただきます。サポートに問い合わせをする・しないに関わらず、問題が発生したときの初期調査の一助としても利用できる内容となっていますので、ぜひご確認ください。</p>
+<p><span style="color:#ff0000"><strong>2018/5/7 Update</strong></span><br><span style="color:#339966">2. について、Windows OS / Office の延長サポート終了に伴いサポート対象バージョンを更新しました。</span></p>
+<p><span style="color:#ff0000"><strong>2018/6/20 Update</strong></span><br><span style="color:#339966">「6. パフォーマンス チューニング」に、本ブログの別記事へのリンクを追記しました。</span></p>
+<p><span style="color:#ff0000"><strong>2018/7/12 Update</strong></span><br><span style="color:#339966">「6. パフォーマンス チューニング」に、本ブログの別記事へのリンクをさらに追記しました。</span></p>
+<p><strong>目次</strong></p>
+<p><a href="#1-サーバーサイド-オートメーションでの現象">1. サーバーサイド オートメーションでの現象</a><br><a href="#2-Windows-Vista-Office-2007-以前での現象">2. Windows Vista / Office 2007 以前での現象</a><br><a href="#3-Visual-Basic-6-0-アプリケーションでの現象">3. Visual Basic 6.0 アプリケーションでの現象</a><br><a href="#4-サードパーティ製品との連携">4. サードパーティ製品との連携</a><br><a href="#5-複雑なプログラムでの現象">5. 複雑なプログラムでの現象</a><br><a href="#6-パフォーマンス-チューニング">6. パフォーマンス チューニング</a></p>
+<h4 id="1-サーバーサイド-オートメーションでの現象"><a href="#1-サーバーサイド-オートメーションでの現象" class="headerlink" title="1. サーバーサイド オートメーションでの現象"></a><strong>1. サーバーサイド</strong> <strong>オートメーションでの現象</strong></h4><p>このブログでも何度か取り上げていますが、Office 製品はサーバーサイド構成で利用することをサポートしていません。これについては、詳細を以下の公開情報に記載しています。</p>
+<p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a href="https://support.microsoft.com/ja-jp/help/257757" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/257757</a></p>
+<p>サーバーサイドと表現していますが、これは、無人の非対話型クライアント アプリケーションからの Office オートメーションを意味しています。Office がサーバーサイド オートメーション構成に該当するかどうかの最初のポイントは、<strong>Office アプリケーションを OS にログインしたユーザーの権限で起動しているかどうか</strong>です (実行ユーザーを指定している場合も、ユーザープロファイルや対話デスクトップの状態など、ユーザーが OS ログインしている状態とは異なる部分があり、Office の設計前提を満たしていないため、同様にサポート外の構成です) 。<a href="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">過去の投稿</a>で例を挙げながら詳細を説明していますので、併せてご確認ください。</p>
+<p><strong>切り分け方法</strong></p>
+<p>サーバーサイド オートメーションでの利用時にエラーが発生するなどのトラブルに直面した場合は、以下の切り分けを行います。</p>
+<ol>
+<li>現象が発生するマシンに直接、またはリモート デスクトップでログインし、Office を手動で起動してエラーが生じる処理と同じ操作を GUI から行う</li>
+<li>現象が発生するマシンに直接、またはリモート デスクトップでログインし、Office を起動するプログラムを手動で実行する (例 : タスクスケジューラから Office をオートメーションするバッチを起動している場合は、このバッチを手動で実行)</li>
+</ol>
+<p>なお、DCOM の構成については、変更していないことが前提となります。a や b で現象が発生する場合は、この切り分け後の構成についてサポート サービスをご提供できます。(a の方が、プログラムの実装の問題でないことが確認できますので、より調査が容易です。)</p>
+<p><strong>対応方法</strong></p>
+<p>切り分けの結果、a や b では現象が再現しない場合、サーバーサイド オートメーション独自の問題である可能性があります。現象に開発段階で直面している場合は、構成を再検討頂くことをお勧めします。以下のブログ記事で、代替案についていくつかご案内していますので、参考として頂ければ幸いです。</p>
+<p>タイトル : Office サーバー サイド オートメーションの代替案について<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの代替案について/</a></p>
+<p><span style="color:#ff0000"><strong>2018/5/7 Update</strong></span></p>
+<h4 id="2-Windows-Vista-Office-2007-以前での現象"><a href="#2-Windows-Vista-Office-2007-以前での現象" class="headerlink" title="2. Windows Vista / Office 2007 以前での現象"></a><strong>2. Windows Vista / Office 2007</strong> <strong>以前での現象</strong></h4><p>2018 年 5 月 7 日現在、サポート対象の Office 製品バージョンは Office 2010 以降です。また、Windows OS は Windows 7 およびサーバー OS では Windows Server 2008 以降をサポートしています。これ以前の Office や OS で生じたエラーについては、既にサポートを終了していますので、サポートをお受けできません。Microsoft 製品のサポート ライフサイクルについては、以下のサイトで検索できます。</p>
+<p>タイトル : 製品のライフサイクルの検索<br>アドレス : <a href="https://support.microsoft.com/ja-jp/lifecycle/search" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/lifecycle/search</a></p>
+<p><strong>切り分け方法</strong></p>
+<p>Office および OS ともにサポート対象のバージョンで同じ操作を行い、現象が再現するかどうかを確認してください。サポート対象のバージョンでも現象が再現する場合は、このサポート対象バージョンの構成についてサポートをお承りできます。</p>
+<p>さらに、既知の問題などは新しいバージョンや、サービス パック、更新プログラムで修正されている可能性がありますので、可能な限り最新の Office バージョン、かつ最新のサービス パックと更新プログラムが適用された環境で動作を確認してください。(調査の過程で、最新のバージョンでお試し頂くことをご案内する場合もあります。)  </p>
+<h4 id="3-Visual-Basic-6-0-アプリケーションでの現象"><a href="#3-Visual-Basic-6-0-アプリケーションでの現象" class="headerlink" title="3. Visual Basic 6.0 アプリケーションでの現象"></a><strong>3. Visual Basic 6.0 アプリケーションでの現象</strong></h4><p>Visual Basic 6.0 (VB6) は既にサポートを終了しているため、VB6 で実装されたプログラムが関連する問題についてはサポートをお受けできません。</p>
+<p>タイトル : 製品のライフサイクルの検索 - Visual Basic 6.0<br>アドレス : <a href="https://support.microsoft.com/ja-jp/lifecycle/search?alpha=Visual%20Basic%206.0" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/lifecycle/search?alpha=Visual%20Basic%206.0</a></p>
+<p><strong>切り分け方法</strong></p>
+<p>VBA、VBScript、VB.NET などのサポート可能な言語で同じ処理を実装し、現象が再現するかどうかを確認します。サポート対象の言語でも現象が再現する場合は、この構成についてサポートをお受けできます。</p>
+<hr>
+<p>ここからは、プロフェッショナル サポートのご契約ではお受けできない構成についてです。</p>
+<h4 id="4-サードパーティ製品との連携"><a href="#4-サードパーティ製品との連携" class="headerlink" title="4. サードパーティ製品との連携"></a><strong>4. サードパーティ製品との連携</strong></h4><p>プロフェッショナル サポートでは、現象再現の流れにおいてサードパーティ製品が関連する調査をお受けできません。</p>
+<p>例えば、Office の処理を監視するソフトウェアが導入されている環境で生じる現象や、サードパーティ製品からオートメーションで Office が実行される構成などが想定されます。</p>
+<p>タイトル : プロフェッショナル サポートの対応範囲 Q&amp;A<br>アドレス : <a href="https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx</a><br>該当箇所 : 複数製品にまたがるトラブルの切り分け</p>
+<p>プレミア サポートではこのような構成でもサポートをお受けしておりますが、サードパーティ製品の影響で現象が生じることが確認された場合、販売元会社様へのお問い合わせをお願いする場合があります。</p>
+<p><strong>切り分け方法</strong></p>
+<p>サードパーティ製品の動作を無効化、できればアンインストールして同じ処理を行い、現象が再現するかを確認します。アンインストールを推奨するのは、ソフトウェアの仕組みによっては、機能を無効化しても処理の一部は停止されないことがあるためです。この状態で現象が再現する場合は、この切り分け済みの構成についてサポートをお受けできます。</p>
+<h4 id="5-複雑なプログラムでの現象"><a href="#5-複雑なプログラムでの現象" class="headerlink" title="5. 複雑なプログラムでの現象"></a><strong>5. 複雑なプログラムでの現象</strong></h4><p>プロフェッショナル サポートでは、お客様の実際の運用コードでの現象についての調査をお受けできません。プロフェッショナル サポートは、お客様にて問題点を切り分けていただいた上での調査をお受けしております。</p>
+<p>タイトル : プロフェッショナル サポートの対応範囲 Q&amp;A<br>アドレス : <a href="https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx</a><br>該当箇所 : デバッグ支援、コード レビュー、サンプルコード提供</p>
+<p>プレミア サポートでは、運用コードについてのご支援も承っております。</p>
+<p><strong>切り分け方法</strong></p>
+<p>現象が再現する最小構成のサンプル プログラム (目安として、50 行程度までのコード) を作成頂ければ、本プログラムについてのサポートをお承りできます。一般的には、以下のような流れで運用コードからのサンプル化を実施頂くのが良いかと思います。</p>
+<ol>
+<li>まずは、現象が再現するプログラムにデバッグ ログを出力するコードを追加し、処理がどこまで進んでいるのか、つまり、どのコードでエラーが発生しているのかを確認します。(エラー箇所にばらつきがないか確認するため、複数回確認してください。)</li>
+<li>1. で確認したコードと、それを実行するための最小限のコードのみを実装したサンプル プログラムで現象が再現するかどうかを確認します。(例 : SaveAs のような保存処理でエラーとなる場合は、アプリケーションの起動、ファイルのオープン、任意の値の書き込み、保存、ファイルのクローズ、アプリケーションの終了のみを実装します。)</li>
+<li>2. の構成では現象が再現しない場合は、運用コードで保存前に行っている処理が影響する可能性があります。コードの量にもよりますが、1 つずつ運用コードの処理を追加してどのコードを追加すると現象が再現するかを確認したり、反対に全て追加して再現を確認してから処理を 1 つずつ削るなどの方法で、どの前提処理が影響するかを確認します。</li>
+<li>3. で確認した影響を与える前提処理と、エラーが生じる処理のみにあらためてサンプル コードを最小化し、現象の再現を確認します。</li>
+</ol>
+<h4 id="6-パフォーマンス-チューニング"><a href="#6-パフォーマンス-チューニング" class="headerlink" title="6. パフォーマンス チューニング"></a><strong>6. パフォーマンス</strong> <strong>チューニング</strong></h4><p>プロフェッショナル サポートでは、お客様のコードのパフォーマンス改善についてのお問い合わせをお承りしておりません。パフォーマンスの改善を図るには、お客様のコード レビューを行う必要があり、場合によってはシステム構成や処理対象のファイル構成など、多岐にわたる情報を整理した上で調査を行う必要があるためです。</p>
+<p>公開情報に記載の通り、Office 製品や OS のバージョンアップや更新プログラム適用によって現象が発生し始めた場合は、パフォーマンス低下に関するお問い合わせも承っております。</p>
+<p>タイトル : プロフェッショナル サポートの対応範囲 Q&amp;A<br>アドレス : <a href="https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/services/professional/supportqa.aspx</a><br>該当箇所 : パフォーマンス / チューニング</p>
+<p>プレミア サポートでは、パフォーマンス チューニングについてのご支援も承っております。</p>
+<p>また、以下のブログ記事でお客様自身でのパフォーマンスに関する調査の進め方をご紹介しています。最終的にはお客様自身で判断が難しい部分もありますが、可能な範囲で調査を進めたいという場合にはご参照いただければ幸いです。</p>
+<p>タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%201%EF%BC%9A%E6%A6%82%E8%A6%81%E3%81%A8%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95)/">https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 1：概要と対処方法)/</a></p>
+<p>タイトル : Office 開発におけるパフォーマンス トラブルシュート (その 2 : ボトルネックの特定)<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20%E9%96%8B%E7%99%BA%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9%20%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%20(%E3%81%9D%E3%81%AE%202%EF%BC%9A%E3%83%9C%E3%83%88%E3%83%AB%E3%83%8D%E3%83%83%E3%82%AF%E3%81%AE%E7%89%B9%E5%AE%9A)/">https://officesupportjp.github.io/blog/Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)/</a></p>
+<p><strong>切り分け方法</strong></p>
+<p>お客様コードのロジックを含む見直しが必要な調査はお受けできませんが、特定のメソッドが非常に遅いといった場合には、代替となる実装方法や、Office のオプション設定の工夫、処理対象のファイル構造の見直しなどのご提案を差し上げられる場合があります。</p>
+<p>「<strong>5.</strong> <strong>複雑なプログラムでの現象</strong>」と同じように、プログラムの中のどこで時間がかかっているかをデバッグ ログなどから確認していただき、ボトルネックとなる特定の関数についてのお問い合わせを頂ければ幸いです。</p>
+<p>ただ、処理内容によっては現在の速度が Office 製品の限界である場合もありますので、必ずパフォーマンス改善のご提案ができることをお約束はできないことを予めご了承ください。</p>
+<p>今回の投稿は以上です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4rqad002e50vsf2vzh1fr/" data-id="cl0m4rqad002e50vsf2vzh1fr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m4rqad002d50vs8520cbs1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office 開発におけるパフォーマンス トラブルシュート (その 1：概要と対処方法)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m4rqak002r50vs1ylb1f54/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqar003350vs7mj9ac31/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqaj002p50vs8niabxee/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqae002f50vs180vh7o5/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

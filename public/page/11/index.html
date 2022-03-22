@@ -90,9 +90,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-1. Office PIA 経由で Office 製品をオートメーションすることによる、Office オブジェクトモデルの操作" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cl0mfb79f0006nwvs973z6w4v/" class="article-date">
+    <a href="/blog/cl0mdnobv00055ovs67kp420v/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -104,14 +104,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mfb79f0006nwvs973z6w4v/">1. Office PIA 経由で Office 製品をオートメーションすることによる、Office オブジェクトモデルの操作</a>
+      <a class="article-title" href="/blog/cl0mdnobv00055ovs67kp420v/">(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/cl0mfb79f0006nwvs973z6w4v/" class="article-date-single">    
+        <a href="/blog/cl0mdnobv00055ovs67kp420v/" class="article-date-single">    
     
     <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
@@ -120,17 +120,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2012 年 2 月 15 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発系サポートの柴田　茂 (sshibata) です。
-本稿で表現している、Office オートメーションとは、Windows 上の全く別のアプリケーションを使用して、Office によって通常は手動やマクロによって行われる処理を、自動化する仕組みとなります。例えば、Excel のオートメーションを使用すれば、新規ブックの作成、ブックへのデータ入力、グラフの作成などの作業を自動的に実行させることができます。Excel などの Microsoft Office アプリケーションでは、通常はユーザー インターフェイスを介して手動で実行する機能のほぼすべてを、オートメーションによってプログラムから実行することができます。
-M...
+        (※ 2017 年 2 月 7 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+今回は、C# や VB.NET を使って .NET Framework 上で動作する Office をオートメーションするプログラムや、VSTO でOffice ソリューション (アドインや、プログラムが組み込まれた Office ファイル) を作成するときに必要な環境構成について記載します。
+過去の投稿で、当時の製品でのバージョン選定について記載していましたが、古い情報になってしまいましたので、本記事では、現在サポートされる製品バージョンについての最新情報を記載したいと思います。動作の仕組みの説明などは、過去の投稿で詳しく説明していますのでぜひ合わせてご参照ください。
+2017/7/...
         <p class="article-more-link">
-          <a href="/blog/cl0mfb79f0006nwvs973z6w4v/#more">Read More</a>
+          <a href="/blog/cl0mdnobv00055ovs67kp420v/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb79f0006nwvs973z6w4v/" data-id="ckzqb7f2d00072c3p6cby1tws" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl0n2mqbz000784vs3pcj2cgf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,7 +180,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ai0013nwvs9tsk91ry/" data-id="ckzqb7f2x000z2c3pbwd35m4i" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ai0013nwvs9tsk91ry/" data-id="cl0n2mqd3001384vsht73exfw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -230,7 +231,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="ckzqb7f3j001q2c3p2kr7g9hv" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="cl0n2mqdl001u84vser39fbe8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -282,7 +283,58 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b6001vnwvs3rv43evy/" data-id="ckzqb7f3k001r2c3p601baliz" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b6001vnwvs3rv43evy/" data-id="cl0n2mqdl001v84vs32sg454l" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date">
+  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mfb7b8001xnwvs5pzxb66j/">Office サーバー サイド オートメーションの代替案について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date-single">    
+    
+    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
+こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
+今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
+タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
+上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
+        <p class="article-more-link">
+          <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b8001xnwvs5pzxb66j/" data-id="cl0n2mqdm001w84vs2imogf6b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -334,58 +386,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="ckzqb7f3l001s2c3p3auoahrm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date">
-  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mfb7b8001xnwvs5pzxb66j/">Office サーバー サイド オートメーションの代替案について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date-single">    
-    
-    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
-こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
-今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
-タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
-上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
-        <p class="article-more-link">
-          <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b8001xnwvs5pzxb66j/" data-id="ckzqb7f3o001u2c3pdkiqcqfv" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl0n2mqdm001x84vs90zy48zm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -438,7 +439,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bn002inwvse5785nd7/" data-id="ckzqb7f4000292c3pc01h5thq" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bn002inwvse5785nd7/" data-id="cl0n2mqdv002g84vshmnocaby" class="article-share-link">Share</a>
       
       
     </footer>
@@ -489,7 +490,7 @@ Excel には、セルに設定する式として、SUM() のように計算に�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ac000wnwvsen2873w5/" data-id="ckzqb7f2t000s2c3pcphi7610" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ac000wnwvsen2873w5/" data-id="cl0n2mqd0000w84vs622mc35i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -540,7 +541,7 @@ Office は STA (Single-Threaded Apartment) モデルで動作しているため�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="ckzqb7f3i001o2c3pdf5y8i4w" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl0n2mqdk001t84vs77t495q4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -590,7 +591,7 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="ckzqb7f3q001v2c3p90ee6b0s" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="cl0n2mqdn001z84vscshd9vpu" class="article-share-link">Share</a>
       
       
     </footer>

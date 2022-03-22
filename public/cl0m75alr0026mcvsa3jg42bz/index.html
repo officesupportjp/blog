@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ) | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 11 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 今回の記事では、前回の投稿に引き続き、リボン カスタマイズ方法の例をご紹介します。 以前の投稿で紹介した方法で、リボンのカスタマイズがファイル単位でできることはお伝えしましたが、以下のような状">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m75alr0026mcvsa3jg42bz/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 11 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 今回の記事では、前回の投稿に引き続き、リボン カスタマイズ方法の例をご紹介します。 以前の投稿で紹介した方法で、リボンのカスタマイズがファイル単位でできることはお伝えしましたが、以下のような状">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m75alr0026mcvsa3jg42bz/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m75alr0026mcvsa3jg42bz/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m75alr0026mcvsa3jg42bz/image3.png">
+<meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T04:39:59.706Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m75alr0026mcvsa3jg42bz/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m75alr0026mcvsa3jg42bz/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m75alr0026mcvsa3jg42bz/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 11 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office 開発サポート チームの中村です。</p>
+<p>今回の記事では、<a href="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%885%20%E2%80%93%20(TIPS%201%EF%BC%9A%E6%97%A2%E5%AD%98%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/">前回の投稿</a>に引き続き、リボン カスタマイズ方法の例をご紹介します。</p>
+<p><a href="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%882%20%E2%80%93%20(%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%AB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%A0%20XML%20%E3%82%92%E8%BF%BD%E5%8A%A0)/">以前の投稿</a>で紹介した方法で、リボンのカスタマイズがファイル単位でできることはお伝えしましたが、以下のような状況の開発者の方もいるのではないでしょうか。</p>
+<p>・アドインとして提供する 1 つのプログラムから、ファイルによってリボンの内容を変えたい (ファイルにカスタマイズを組み込みたくない)<br>・Office 97-2003 形式 (.xls 等) のファイルにリボン カスタマイズを行いたい<br>・ブック内での操作に応じて動的にリボンの状態を変えたい</p>
+<p>これらの要望は、Office 2007 形式のアドイン (.xlam 等)、または VSTO カスタマイズで実現できますので、以下に具体例を用いて紹介します。Excel のカスタマイズを行われることが多いので、(これまでの記事を含め) 以下はすべて Excel を例に説明していますが、他の Office アプリケーションでも利用できます。</p>
+<p><strong>目次</strong></p>
+<p><a href="#1-xls-形式のファイルのリボン-カスタマイズを行う-アドインからファイルごとにリボンをカスタマイズする">1. .xls 形式のファイルのリボン カスタマイズを行う (アドインからファイルごとにリボンをカスタマイズする)</a><br><a href="#2-任意のタイミングでリボンの状態を変更する">2. 任意のタイミングでリボンの状態を変更する</a></p>
+<h4 id="1-xls-形式のファイルのリボン-カスタマイズを行う-アドインからファイルごとにリボンをカスタマイズする"><a href="#1-xls-形式のファイルのリボン-カスタマイズを行う-アドインからファイルごとにリボンをカスタマイズする" class="headerlink" title="1. .xls 形式のファイルのリボン カスタマイズを行う (アドインからファイルごとにリボンをカスタマイズする)"></a><strong>1. .xls 形式のファイルのリボン カスタマイズを行う (アドインからファイルごとにリボンをカスタマイズする)</strong></h4><p>.xlsx / .xlsm 形式のファイルであれば、リボン カスタマイズの XML をファイル内に組み込むことができました。一方、.xls 形式のファイルはバイナリ ファイルなのでファイル内に customUI14.xml を組み込むことができません。</p>
+<p>では、.xls ファイルでこれを実現したい場合にはどうすればいいかというと、以下のような手法が考えられます。</p>
+<ul>
+<li>.xlam 形式の Excel アドインを用意する</li>
+<li>VSTO アドインを用意する</li>
+<li>VSTO で Excel ブック (.xls) 形式のカスタマイズを作成する</li>
+</ul>
+<p>アドインに組み込んだカスタマイズを利用して、.xls 形式のファイルにもカスタマイズ情報を反映させることができます。また VSTO の場合、VSTO の仕組みとして XML を組み込むので、.xls 形式の VSTO ブックを作成することもできます。また、.xls 形式だけでなくとも、ファイルによってリボン メニューを変えたいが、ファイルごとにカスタマイズを組み込むのは難しい・・という場合もあるかと思いますので、そういった場合にもアドインからカスタマイズする方法は検討できます。</p>
+<p>今回は、.xlam 形式のアドインで、開いたファイル名によって異なるメニューを表示する方法のサンプルを例に解説します。まずは、サンプルの作成手順です。</p>
+<p><strong>手順</strong></p>
+<p>1.  新規 Excel 新規 Excel ブックを作成し、Visual Basic Editor で標準モジュールに以下のコードを記述します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">Public Sub GetEnabledMacro(control As IRibbonControl, ByRef Enabled)</span><br><span class="line">    If control.ID &#x3D; &quot;B1_Button1&quot; Then</span><br><span class="line">        If ActiveWorkbook.Name &#x3D; &quot;Book1.xls&quot; Then</span><br><span class="line">            Enabled &#x3D; True</span><br><span class="line">        Else</span><br><span class="line">            Enabled &#x3D; False</span><br><span class="line">        End If</span><br><span class="line">    ElseIf control.ID &#x3D; &quot;B2_Button1&quot; Then</span><br><span class="line">        If ActiveWorkbook.Name &#x3D; &quot;Book2.xls&quot; Then</span><br><span class="line">            Enabled &#x3D; True</span><br><span class="line">        Else</span><br><span class="line">            Enabled &#x3D; False</span><br><span class="line">        End If</span><br><span class="line">    End If</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">&#39;以下はボタンクリック時に実行されるマクロ</span><br><span class="line">Public Sub B1_Button1_Callback(control As IRibbonControl)</span><br><span class="line">    MsgBox &quot;Book1 用のボタンをクリックしました&quot;</span><br><span class="line">End Sub</span><br><span class="line"></span><br><span class="line">Public Sub B2_Button1_Callback(control As IRibbonControl)</span><br><span class="line">    MsgBox &quot;Book2 用のボタンをクリックしました&quot;</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+
+
+<ol start="2">
+<li>ファイルを .xlam 形式で保存します。</li>
+</ol>
+<p>3.  Custom UI Editor for Microsoft Office で保存した .xlam ファイルを開き、customUI14.xml を追加して以下のように記述して保存します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;customUI xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;office&#x2F;2009&#x2F;07&#x2F;customui&quot;&gt;</span><br><span class="line">    &lt;ribbon&gt;</span><br><span class="line">        &lt;tabs&gt;</span><br><span class="line">            &lt;tab id&#x3D;&quot;customTab&quot; label&#x3D;&quot;Custom Tab&quot;&gt;</span><br><span class="line">                &lt;group id&#x3D;&quot;CustomGroup&quot; label&#x3D;&quot;Custom Menu&quot;&gt;</span><br><span class="line">                    &lt;button id&#x3D;&quot;B1_Button1&quot; label&#x3D;&quot;Book1 button&quot; imageMso&#x3D;&quot;HappyFace&quot; size&#x3D;&quot;large&quot; getEnabled&#x3D;&quot;GetEnabledMacro&quot; onAction&#x3D;&quot;B1_Button1_Callback&quot; &#x2F;&gt;</span><br><span class="line">                    &lt;button id&#x3D;&quot;B2_Button1&quot; label&#x3D;&quot;Book2 button&quot; imageMso&#x3D;&quot;HappyFace&quot; size&#x3D;&quot;large&quot; getEnabled&#x3D;&quot;GetEnabledMacro&quot; onAction&#x3D;&quot;B2_Button1_Callback&quot; &#x2F;&gt;</span><br><span class="line">                &lt;&#x2F;group&gt;</span><br><span class="line">            &lt;&#x2F;tab&gt;</span><br><span class="line">        &lt;&#x2F;tabs&gt;</span><br><span class="line">    &lt;&#x2F;ribbon&gt;</span><br><span class="line">&lt;&#x2F;customUI&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>作成したアドインを有効化した状態で、ブックを開くと以下のようになります。</p>
+<p>&lt;Bool1.xls を開いた場合&gt;</p>
+<p><img src="image1.png" alt=""></p>
+<p>図 1. Book1.xls を開いた場合</p>
+<p>&lt;Book2.xls を開いた場合&gt;</p>
+<p><img src="image2.png" alt=""></p>
+<p>図 2. Book2.xls を開いた場合</p>
+<p>&lt;その他のブックを開いた場合&gt;</p>
+<p><img src="image3.png" alt=""></p>
+<p>図 3. その他のブックを開いた場合</p>
+<p><strong>解説</strong><br>この動作は、XML で button コントロールの getEnabled プロパティを使用することで実現しています。</p>
+<p>タイトル : Button.GetEnabled property<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.button.getenabled.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.button.getenabled.aspx</a></p>
+<p>サンプルのこの赤字の部分です。</p>
+<p>&lt;button id=”B1_Button1” label=”Book1 button” imageMso=”HappyFace” size=”large” <span style="color:#ff0000">getEnabled=”GetEnabledMacro”</span> onAction=”B1_Button1_Callback” /&gt;<br>&lt;button id=”B2_Button1” label=”Book2 button” imageMso=”HappyFace” size=”large” <span style="color:#ff0000">getEnabled=”GetEnabledMacro”</span> onAction=”B2_Button1_Callback” /&gt;</p>
+<p>getEnabled プロパティが設定されていると、リボンのロード時 (リボンを持つブックが開かれたタイミングで実行されます) に、指定したメソッドを実行してコントロールの有効化状態を取得します。<br>GetEnabledMacro メソッドは、アドイン ブックの標準モジュールに定義されており、ブック名とコントロール名に応じて第 2 引数 enabled に Boolean 値を返します。リボンのロード 処理は、ここで返された値に従って、コントロールを有効化 / 無効化します。</p>
+<h4 id="2-任意のタイミングでリボンの状態を変更する"><a href="#2-任意のタイミングでリボンの状態を変更する" class="headerlink" title="2. 任意のタイミングでリボンの状態を変更する"></a><strong>2. 任意のタイミングでリボンの状態を変更する</strong></h4><p>1. の例ではリボンのロード時に制御していますが、ブック内での操作に応じて有効化状態を変更することもできます。以下のように onload プロパティと Invalidate 系メソッドを用いて実装します。</p>
+<p><strong>手順</strong></p>
+<p>1. 任意のタイミングでリボン オブジェクトを操作できるよう、以下のように CustomUI クラスの onLoad プロパティを利用してリボン オブジェクトを格納しておきます。</p>
+<p>タイトル : CustomUI.OnLoad property<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.customui.onload.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.customui.onload.aspx</a></p>
+<p>&lt;XML&gt;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;customUI xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;office&#x2F;2009&#x2F;07&#x2F;customui&quot; onLoad&#x3D;&quot;ribbonLoaded&quot;&gt;</span><br><span class="line">    &lt;ribbon&gt;</span><br><span class="line">        ・・・</span><br><span class="line">    &lt;&#x2F;ribbon&gt;</span><br><span class="line">&lt;&#x2F;customUI&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>&lt;VBA&gt;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#39;XML の onLoad 定義から呼び出されるマクロ</span><br><span class="line">Public Sub ribbonLoaded(ribbon As IRibbonUI)</span><br><span class="line">    Set myRibbon &#x3D; ribbon</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+<p>onLoad プロパティで定義したメソッドはリボンのロード時呼び出されます。既定では、リボンのロードはブックごとにオープン時に行われます。上記のように実装すると、ブックが開かれて初めにリボンがロードされたときに myRibbon にブックのリボン オブジェクトが格納されます。</p>
+<p>2.  次に、リボンの制御を行いたい処理 (例えば、リボンのあるカスタム ボタンをクリックしたら、等) で、以下のいずれかのメソッドでリボンの再読み込みを実行します。これらのメソッドが実行されると、対象のコントロールの XML 定義に従ったリボンのロード処理が再実行されるので、getEnabled の再評価が行われます。</p>
+<p>タイトル : IRibbonUI.Invalidate method<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/microsoft.office.core.iribbonui.invalidate.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/microsoft.office.core.iribbonui.invalidate.aspx</a><br>リボン全体を再読み込みします。</p>
+<p>タイトル : IRibbonUI.InvalidateControl method<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/microsoft.office.core.iribbonui.invalidatecontrol.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/microsoft.office.core.iribbonui.invalidatecontrol.aspx</a><br>引数で指定したカスタム コントロールのみを再読み込みします。</p>
+<p>タイトル : IRibbonUI.InvalidateControlMso method<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/microsoft.office.core.iribbonui.invalidatecontrolmso.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/microsoft.office.core.iribbonui.invalidatecontrolmso.aspx</a><br>引数で指定した Office 組み込みのコントロールのみを再読み込みします。(既定のボタンから呼び出される処理を XML でカスタマイズしている場合などに利用します。)</p>
+<p>これらのメソッドは、以下のように 1. でリボンを格納した myRibbon オブジェクトを用いて呼び出します。(Invalidate の場合)</p>
+<p>myRibbon.Invalidate</p>
+<p>3. あとは、getEnabled から呼び出されるメソッドで、動的に制御したい条件で Enabled フラグを設定する処理を追加します。(例 : シートの変更イベントでリボンの再ロードを呼び出し、アクティブなシートによって有効なボタンを切り替える)</p>
+<p>前回の投稿と同じく、コントロールによって getEnabled 以外にも様々なプロパティが利用できますので、以下の資料などで確認してみてください。</p>
+<p>タイトル : 2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 2/3)<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/aa338199(v=office.12).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/aa338199(v=office.12).aspx</a></p>
+<p>タイトル : DocumentFormat.OpenXml.Office2010.CustomUI namespace<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.aspx</a></p>
+<p>次回は、BackStage メニューや、右クリック メニュー (コンテキスト メニュー) などのカスタマイズ方法について紹介したいと思います。</p>
+<p>今回の投稿は以上です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m75alr0026mcvsa3jg42bz/" data-id="cl0m75alr0026mcvsa3jg42bz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m75alq0025mcvsdbkth32f/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m75alr0027mcvshipn9ubi/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Office リボンをカスタマイズ – パート7 – (TIPS 3：特殊メニューのカスタマイズ)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

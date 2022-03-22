@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office サーバー サイド オートメーションの代替案について | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。) こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。   今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたし">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office サーバー サイド オートメーションの代替案について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m69xuq001w4cvsauwd18rc/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。) こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。   今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたし">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m69xuq001w4cvsauwd18rc/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m69xuq001w4cvsauwd18rc/image2.png">
+<meta property="article:published_time" content="2019-02-27T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T05:18:30.344Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m69xuq001w4cvsauwd18rc/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xuq001w4cvsauwd18rc/" class="article-date">
+  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office サーバー サイド オートメーションの代替案について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xuq001w4cvsauwd18rc/" class="article-date-single">    
+    
+    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  </p>
+<p>今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。</p>
+<p>タイトル : Office サーバー サイド オートメーションの危険性について<br>アドレス: <a href="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%8D%B1%E9%99%BA%E6%80%A7%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/</a></p>
+<p>上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされていません。</p>
+<p>・夜間にデータを集計しOffice ファイルを作成<br>・Web ページ上でファイルを選択して PDF などに変換  </p>
+<p>本投稿では、この対処方法として以下の 2 つの方法をご紹介します。</p>
+<p>1. OpenXML SDK を使用した開発を実施する。<br>2. SharePoint Server 2013 を使用し、Word / PowerPoint Automation Service を使用したドキュメント変換を実施する。  </p>
+<h3 id="1-OpenXML-SDK-を使用した開発を実施する。"><a href="#1-OpenXML-SDK-を使用した開発を実施する。" class="headerlink" title="1. OpenXML SDK を使用した開発を実施する。"></a>1. OpenXML SDK を使用した開発を実施する。</h3><p>Office サーバーサイド オートメーションの代替案として、まず筆頭に挙がるのが Open XML SDK を使用した開発となります。本ソリューションを実装するにあたり、SharePoint は必要ありません。<br>以前の 97-2003 形式 (OLE 複合ドキュメント) 形式 (例. doc, xls, ppt) とは異なり、Open XML 形式の Office ファイル (例. docx, xlsx, pptx 等) は、公開された規格にそった XML によって成り立っています。Open XML 形式の Office ファイルは、拡張子を *.zip に変更して開くと定義を確認できます。</p>
+<p>そのため、Office アプリケーションがインストールされていなくても、ファイルを編集できるようになっています。</p>
+<p>タイトル : Open XML SDK ドキュメント<br>アドレス : <a href="http://msdn.microsoft.com/ja-jp/library/bb226703.aspx" target="_blank" rel="noopener">http://msdn.microsoft.com/ja-jp/library/bb226703.aspx</a></p>
+<p>タイトル : Open XML SDK 2.0 for Microsoft Office<br>アドレス : <a href="http://www.microsoft.com/ja-jp/download/details.aspx?id=5124" target="_blank" rel="noopener">http://www.microsoft.com/ja-jp/download/details.aspx?id=5124</a></p>
+<p>ただし、多くの開発者が VBA などを通じて感覚的に養ってきたこれまでの開発手法と比較すると全く異なる内容である点や、膨大な SDK をはじめから覚えないといけないということで、移行のコスト等を敬遠していることをよく聞きます。</p>
+<p><span style="color:#ff0000">しかし、Open XML SDK 2.0 には Open XML 2.0 Productivity Tools for Microsoft Office という非常に強力な支援ツールがあります。</span><br>OpenXML Productivity Tools for Microsoft Office は上記 Open XML SDK 2.0 のサイトからダウンロードが可能です。<br>インストール後、スタートメニューから起動し、さっそく動作を見てみましょう。</p>
+<p><strong>使用手順</strong><br>1. 画面左上 [ファイルを開く] をクリックし、Office ファイルを選択して開きます。<br>2. [コードの反映] をクリックします。</p>
+<p> <img src="image1.png" alt=""> </p>
+<p><img src="image2.png" alt="">  </p>
+<p>参考) 読み込まれたファイル</p>
+<p>これだけで、今読み込んだファイルを作成するのに必要なサンプル コード (ベストなコードではない) が右ペインに自動生成されます。やはり、新規のファイルから起こすと生成されるコード量は多いですが、多くの場合は編集を実施するだけですので、必要な個所をコピーペーストしながら新規コードに移植して実装すると想像よりも簡単に実装できると思います。</p>
+<p>移行を考える場合は、このツールを駆使してコードの実装方法を確認し、必要な処理を組み込んでテストを実施するという流れになると思います。</p>
+<p>ということで、さっそく私も自動生成されたコードをもとに、さっそくパラグラフを 1 つ追加してみました。WindowsBase.dll (System.IO.Packagin 名前空間) とDocumentFormat.OpenXml.dll を参照に加え、下記のコードを実装することで Hello World という文字を含むパラグラフが以下のコードで追加されました。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">using DocumentFormat.OpenXml;</span><br><span class="line">using DocumentFormat.OpenXml.Packaging;</span><br><span class="line">using DocumentFormat.OpenXml.Wordprocessing;</span><br><span class="line"></span><br><span class="line">using (WordprocessingDocument package &#x3D; WordprocessingDocument.Open(filePath, true))</span><br><span class="line">&#123;</span><br><span class="line">    &#x2F;&#x2F; Productivity Tool が生成したコードの貼り付け</span><br><span class="line">    Paragraph paragraph1 &#x3D; new Paragraph() &#123; RsidParagraphAddition &#x3D; &quot;00496DA6&quot;, RsidRunAdditionDefault &#x3D; &quot;00104CC6&quot; &#125;;</span><br><span class="line">    Run run1 &#x3D; new Run();</span><br><span class="line">    RunProperties runProperties1 &#x3D; new RunProperties();</span><br><span class="line">    RunFonts runFonts1 &#x3D; new RunFonts() &#123; Hint &#x3D; FontTypeHintValues.EastAsia &#125;;</span><br><span class="line">    runProperties1.Append(runFonts1);</span><br><span class="line">    Text text1 &#x3D; new Text();</span><br><span class="line">    text1.Text &#x3D; &quot;Hello World&quot;;</span><br><span class="line">    run1.Append(runProperties1);</span><br><span class="line">    run1.Append(text1);</span><br><span class="line">    paragraph1.Append(run1);</span><br><span class="line">    &#x2F;&#x2F; ここまで</span><br><span class="line">    package.MainDocumentPart.Document.Body.Append(paragraph1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上記画面キャプチャを見ても一目瞭然の通り、コードはほとんど Productivity Tool が自動生成したものです。</p>
+<p>補足<br>最新バージョンとして公開されている、Open XML SDK 2.5 for Microsoft Office は、英語のみのご提供となりますが、以下のサイトよりダウンロードすることが可能となります。<br>Productivity Tool には Office 2013 フォーマットでの検証機能が追加されており、SDK のアセンブリは .NET Framework 4.0 ベースのアセンブリとして作成されております。必要に応じてご活用ください。  </p>
+<p>タイトル : Open XML SDK 2.5 for Microsoft Office<br>アドレス :<a href="http://www.microsoft.com/en-us/download/details.aspx?id=30425" target="_blank" rel="noopener">http://www.microsoft.com/en-us/download/details.aspx?id=30425</a></p>
+<h3 id="2-SharePoint-Server-2013-を使用し、Word-PowerPoint-Automation-Service-を使用したドキュメント変換を実施する。"><a href="#2-SharePoint-Server-2013-を使用し、Word-PowerPoint-Automation-Service-を使用したドキュメント変換を実施する。" class="headerlink" title="2. SharePoint Server 2013 を使用し、Word / PowerPoint Automation Service を使用したドキュメント変換を実施する。"></a>2. SharePoint Server 2013 を使用し、Word / PowerPoint Automation Service を使用したドキュメント変換を実施する。</h3><p>Open XML SDK を使用することで、ファイルの自動編集は可能になりますが、私が Office 開発サポートを実施していた際の経験からも、サーバー サイド オートメーションにおける最もよくあるお問い合わせは、ドキュメントの変換 (例. PDF) や印刷です。</p>
+<p><span style="color:#ff0000">SharePoint Server 2013 (Standard Edition 以上) では、Word と PowerPoint においてのみ、ドキュメントの変換を実現できます。</span>残念ながら、Excel ワークブックについては、ファイル変換機能を持つサービスはありません。<br>なお、Office はバックグラウンド サービスからの実行および印刷をサポートしておりません。また、このような構成で他形式のファイル (例. PDF) を印刷する場合は該当アプリケーションの開発元にご確認ください。  </p>
+<p>その他、オートメーション サービスを使用したカスタマイズは SSOM (サーバーサイド オブジェクト モデル) のみの提供となりますため、SharePoint Online では本機能はご利用いただけません。</p>
+<p><strong>Word</strong></p>
+<p>Word Automation Service が提供する ConversionJob.Start メソッドを使用した開発にて実現することが可能です。この機能は SharePoint Server 2010 以降にてご利用可能です。</p>
+<p>事前準備<br>•サーバーの全体管理コンソールの [システム設定] で、[サーバーのサービスの管理] を選択し、[Word Automation Service] が [開始] に設定されていることを確認します。<br>•サーバーの全体管理コンソールの [アプリケーション構成の管理] で [サービス アプリケーションの管理] を選択し、[Word Automation Services] および [Word Automation Services Proxy] が [開始済み] に設定されていることを確認します。</p>
+<p>タイトル : SharePoint 2010 Word Automation Services での開発<br>アドレス : <a href="http://msdn.microsoft.com/ja-jp/library/ff742315(v=office.14).aspx" target="_blank" rel="noopener">http://msdn.microsoft.com/ja-jp/library/ff742315(v=office.14).aspx</a></p>
+<p>タイトル : ConversionJob.Start method<br>アドレス : <a href="http://msdn.microsoft.com/en-us/library/office/microsoft.office.word.server.conversions.conversionjob.start.aspx" target="_blank" rel="noopener">http://msdn.microsoft.com/en-us/library/office/microsoft.office.word.server.conversions.conversionjob.start.aspx</a></p>
+<p>下記のようなコードを実装して、ドキュメントの変換を実施します。上記サイトからの抜粋となります。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">\-- 抜粋 開始 --</span><br><span class="line"></span><br><span class="line">   string siteUrl &#x3D; &quot;http:&#x2F;&#x2F;localhost&quot;;</span><br><span class="line">    &#x2F;&#x2F; If you manually installed Word automation services, then replace the name</span><br><span class="line">    &#x2F;&#x2F; in the following line with the name that you assigned to the service when</span><br><span class="line">    &#x2F;&#x2F; you installed it.</span><br><span class="line">    string wordAutomationServiceName &#x3D; &quot;Word Automation Services&quot;;</span><br><span class="line">    using (SPSite spSite &#x3D; new SPSite(siteUrl))</span><br><span class="line">    &#123;</span><br><span class="line">        ConversionJob job &#x3D; new ConversionJob(wordAutomationServiceName);</span><br><span class="line">        job.UserToken &#x3D; spSite.UserToken;</span><br><span class="line">        job.Settings.UpdateFields &#x3D; true;</span><br><span class="line">        job.Settings.OutputFormat &#x3D; SaveFormat.PDF;</span><br><span class="line">        job.AddFile(siteUrl + &quot;&#x2F;Shared%20Documents&#x2F;Test.docx&quot;,</span><br><span class="line">        siteUrl + &quot;&#x2F;Shared%20Documents&#x2F;Test.pdf&quot;);</span><br><span class="line">        job.Start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">\-- 抜粋 終了 --</span><br></pre></td></tr></table></figure>
+
+<p><strong>PowerPoint</strong></p>
+<p>PowerPoint Automation Service が提供する PdfRequest.BeginConvert メソッドを実行することでドキュメントの変換が可能です。</p>
+<p>事前準備<br>•サーバーの全体管理コンソールの [システム設定] で、[サーバーのサービスの管理] を選択し、[PowerPoint Conversion Service] が [開始] に設定されていることを確認します。<br>•サーバーの全体管理コンソールの [アプリケーション構成の管理] で [サービス アプリケーションの管理] を選択し、[PowerPoint Conversion Service Application] および [PowerPoint Conversion Service Application Proxy] が [開始済み] に設定されていることを確認します。</p>
+<p>タイトル : SharePoint 2013 の PowerPoint Automation Services<br>アドレス : <a href="http://msdn.microsoft.com/ja-jp/library/office/fp179894(v=office.15).aspx" target="_blank" rel="noopener">http://msdn.microsoft.com/ja-jp/library/office/fp179894(v=office.15).aspx</a></p>
+<p>タイトル : PdfRequest class<br>アドレス : <a href="http://msdn.microsoft.com/en-us/library/office/microsoft.office.server.powerpoint.conversion.pdfrequest(v=office.15).aspx" target="_blank" rel="noopener">http://msdn.microsoft.com/en-us/library/office/microsoft.office.server.powerpoint.conversion.pdfrequest(v=office.15).aspx</a></p>
+<p>下記のようなコードを実装して、ドキュメントの変換を実施します。上記サイトからの抜粋となります。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">\-- 抜粋 開始 --</span><br><span class="line"></span><br><span class="line">  string siteURL &#x3D; &quot;http:&#x2F;&#x2F;localhost&quot;;</span><br><span class="line">  using (SPSite site &#x3D; new SPSite(siteURL))</span><br><span class="line">  &#123;</span><br><span class="line">      using (SPWeb web &#x3D; site.OpenWeb())</span><br><span class="line">      &#123;</span><br><span class="line">          Console.WriteLine(&quot;Begin conversion&quot;);</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Get a reference to the &quot;Shared Documents&quot; library</span><br><span class="line">          &#x2F;&#x2F; and the presentation file to be converted.</span><br><span class="line">          SPFolder docs &#x3D; web.Folders[siteURL + &quot;&#x2F;Shared Documents&quot;];</span><br><span class="line">          SPFile file &#x3D; docs.Files[siteURL + &quot;&#x2F;Shared Documents&#x2F;Pres1.ppt&quot;];</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Convert the file to a stream and create an</span><br><span class="line">          &#x2F;&#x2F; SPFileStream object for the conversion output.</span><br><span class="line">          Stream fStream &#x3D; file.OpenBinaryStream();</span><br><span class="line">          SPFileStream stream &#x3D; new SPFileStream(web, 0x1000);</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Create the presentation conversion request.</span><br><span class="line">          PresentationRequest request &#x3D; new PresentationRequest(fStream, &quot;.ppt&quot;, stream);</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Send the request synchronously, passing</span><br><span class="line">          &#x2F;&#x2F; in a ‘null’ value for the callback parameter,</span><br><span class="line">          &#x2F;&#x2F; and capturing the response in the result object.</span><br><span class="line">          IAsyncResult result &#x3D; request.BeginConvert(</span><br><span class="line">              SPServiceContext.GetContext(site),</span><br><span class="line">              null,</span><br><span class="line">              null);</span><br><span class="line">          &#x2F;&#x2F; Use the EndConvert method to get the result.</span><br><span class="line">          request.EndConvert(result);</span><br><span class="line"></span><br><span class="line">          &#x2F;&#x2F; Add the converted file to the document library.</span><br><span class="line">          SPFile newFile &#x3D; docs.Files.Add(</span><br><span class="line">              &quot;newPres1.pptx&quot;,</span><br><span class="line">              stream,</span><br><span class="line">              true);</span><br><span class="line">          Console.WriteLine(&quot;Output: &#123;0&#125;&quot;, newFile.Url);</span><br><span class="line">      &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">\-- 抜粋 終了 --</span><br></pre></td></tr></table></figure>
+
+
+<p>いかがでしたでしょうか。<br>Open XML および SharePoint Server 2013 における 2 つのオートメーション サービスについてご説明しました。<br>上記情報をお役立ていただき、少しでも移行先のテクノロジーに対する抵抗をなくしていただけますと幸いです。</p>
+<p>今回の投稿は以上となります。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xuq001w4cvsauwd18rc/" data-id="cl0m69xuq001w4cvsauwd18rc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m69xup001v4cvsdprg4d8o/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office オートメーションで割り当てたオブジェクトを解放する – Part1
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m69xuq001x4cvsatkdg5yv/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Office サーバー サイド オートメーションの危険性について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

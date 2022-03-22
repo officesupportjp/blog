@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Access でメモリ不足エラーが発生する現象の対処策について | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 Access や Access ODBC&#x2F;OLEDBを使用したプログラムでは、mdb&#x2F;accdb ファイル上のテーブルへレコードを追加&#x2F;変更&#x2F;削除を行うことが可能です。 本稿では、Access および Access ODB">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Access でメモリ不足エラーが発生する現象の対処策について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m69xti000g4cvshw2meu7z/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 Access や Access ODBC&#x2F;OLEDBを使用したプログラムでは、mdb&#x2F;accdb ファイル上のテーブルへレコードを追加&#x2F;変更&#x2F;削除を行うことが可能です。 本稿では、Access および Access ODB">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-26T04:41:01.741Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Access でメモリ不足エラーが発生する現象の対処策について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m69xti000g4cvshw2meu7z/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Access でメモリ不足エラーが発生する現象の対処策について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m69xti000g4cvshw2meu7z/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポート チームです。</p>
+<p>Access や Access ODBC/OLEDBを使用したプログラムでは、mdb/accdb ファイル上のテーブルへレコードを追加/変更/削除を行うことが可能です。</p>
+<p>本稿では、Access および Access ODBC/OLEDBを使用したプログラムから、mdb/accdb ファイル内のテーブルにレコードの追加/更新/削除を繰り返し実施した際にメモリ不足が生じる現象の対処方法をご案内します。</p>
+<h3 id="現象"><a href="#現象" class="headerlink" title="現象"></a><strong>現象</strong></h3><p>Access および Access ODBC/OLEDBを使用したプログラムで mdb/accdb ファイル内のテーブルに連続したレコードを追加/更新/削除を行うと、Access および Access ODBC/OLEDBを使用したプログラムでメモリ不足エラーが発生することがあります。</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a><strong>原因</strong></h3><p>本現象は、トランザクション処理を行うためのページロックやメモリバッファが不足した場合や、Access Database Engine の処理に必要なメモリが解放されないため、アプリケーションで利用する必要なメモリが確保できない場合に発生します。</p>
+<h3 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a><strong>対処方法</strong></h3><p>この問題を解決するには、必要に応じて、指定された順序で以下の方法を実行します。</p>
+<p><strong>方法 1. レジストリ WorkingSetSleep を設定する</strong><br><strong>方法 2. レジストリ MaxLocksPerFile を設定する</strong><br><strong>方法 3. レジストリ MaxBufferSize を設定する</strong><br><strong>方法 4 Access.exe プロセスの CPU マッピングを 1 つに限定する</strong><br><strong>方法 5. プログラムを再起動する</strong><br><strong>方法 6. 一度に Insert/Update/Delete するレコード数を減らす</strong></p>
+<p><u>レジストリ エディターについて</u><br>レジストリ エディターの誤った使用は、システム全般に渡る重大な問題を引き起こす可能性があります。<br>こうした問題を解決するためには、Windows をインストールしなおさなければいけません。<br>Microsoft では、レジストリ エディターを使用することによって引き起こされた障害の解決については一切保証しておりません。<br>レジストリ エディターを使用する場合には、お客様の責任において使用してください。</p>
+<p><strong>備考 : この記事内に記載しているレジストリを変更するためには管理者権限が必要です</strong>。</p>
+<h3 id="方法-1-レジストリ-WorkingSetSleep-を設定する"><a href="#方法-1-レジストリ-WorkingSetSleep-を設定する" class="headerlink" title="方法 1.レジストリ WorkingSetSleep を設定する"></a><strong>方法 1.レジストリ WorkingSetSleep を設定する</strong></h3><p>バージョン 2010 以降の Access では、複雑なクエリを実行した際に「システム リソースの超過」というメモリ不足エラーが表示される場合があります。<br>この現象を回避するには以下のレジストリ WorkingSetSleep を作成します。</p>
+<p>キー: 作成する場所は後述の「各バージョンのキー」をご参照ください。<br>型 : DWORD<br>名前 : WorkingSetSleep<br>値 : 1</p>
+<p>補足:<br>WorkingSetSleep に 1 をセットすると、Access Database Engineで利用するメモリを確保する際に 50 ミリ秒の Sleep 処理を呼び出すように動作が変更されます。<br>この 50 ミリ秒の待機中に未使用になったメモリの解放処理が実行されることで、メモリ不足の状態を避けることができ、現象が回避できる可能性があります。<br>なお、Sleep 処理が呼び出されるため、クエリの実行時間は長くなります。</p>
+<p><u>キーの各バージョンの場所</u></p>
+<table>
+<thead>
+<tr>
+<th>バージョン</th>
+<th>インストール形式</th>
+<th>アーキテクチャ</th>
+<th>レジストリキー</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Access 2010</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\14.0\Access Connectivity Engine\Engines</td>
+<td><a href="https://support.microsoft.com/ja-jp/help/2760394/" target="_blank" rel="noopener">KB2760394</a> が適用されている必要があります。</td>
+</tr>
+<tr>
+<td>Access 2010</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines</td>
+<td><a href="https://support.microsoft.com/ja-jp/help/2760394/" target="_blank" rel="noopener">KB2760394</a> が適用されている必要があります。</td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines</td>
+<td><a href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi" target="_blank" rel="noopener">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>C2R</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\ClickToRun\<br />REGISTRY\MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>C2R</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\ClickToRun\<br />REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\Office\16.0\Access Connectivity Engine\Engines</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\MICROSOFT\Office\16.0\Access Connectivity Engine\Engines</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>C2R</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\<br />REGISTRY\MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>C2R</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\<br />MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>以上の手順で問題が解決しない場合は、作成した WorkingSetSleep のレジストリを削除するか、WorkingSetSleep に 0 を設定し、元の設定に戻します。<br>設定を戻した後、方法 2 に進みます。</p>
+<h3 id="方法-2-レジストリ-MaxLocksPerFile-を設定する"><a href="#方法-2-レジストリ-MaxLocksPerFile-を設定する" class="headerlink" title="方法 2. レジストリ MaxLocksPerFile を設定する"></a><strong>方法 2. レジストリ MaxLocksPerFile を設定する</strong></h3><p>トランザクションに必要なページロックの数が既定値を超えることでメモリ不足のエラーが発生する場合があります。</p>
+<p>多数のトランザクション処理中にエラー メッセージ “ファイルの共有ロック数が制限を超えています” が表示される<br><a href="https://support.microsoft.com/ja-jp/help/815281" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/815281</a></p>
+<p>You may receive a “There isn’t enough disk space or memory” error message when you perform an operation on an Access table<br><a href="https://support.microsoft.com/en-us/help/286153" target="_blank" rel="noopener">https://support.microsoft.com/en-us/help/286153</a></p>
+<p>キー: 作成する場所は後述の「各バージョンのキー」をご参照ください。<br>型 : DWORD<br>名前 : MaxLocksPerFile<br>値 : 200000 (10 進数)</p>
+<p>※ 既定値 : 9500 (10 進数)<br>※ MaxLocksPerFile に設定可能な値 (理論値) : 0x00000000 ～ 0xffffffff ※ 16進数<br>(0xffffffff の10 進数 : 4294967295)</p>
+<p>なお、大量のトランザクションを処理している場合は、200000 よりも大きな値を設定して、何パターンかお試しください。<br>MaxLocksPerFile を変更して改善する場合は、可能であれば、コミットするタイミングを変更しトランザクションで処理するレコード数を減らすこともご検討ください。</p>
+<p><u>キーの各バージョンの場所</u></p>
+<table>
+<thead>
+<tr>
+<th>バージョン</th>
+<th>インストール形式</th>
+<th>アーキテクチャ</th>
+<th>レジストリキー</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Access 2010</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\<br />14.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2010</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\<br />Microsoft\Office\14.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\<br />Access Connectivity Engine\Engines\ACE</td>
+<td><a href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi" target="_blank" rel="noopener">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\<br />Office\15.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>C2R</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\ClickToRun<br />\REGISTRY\MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>C2R</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\ClickToRun<br />\REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\Office<br />\16.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\<br />MICROSOFT\Office\16.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>C2R</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\<br />REGISTRY\MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>C2R</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\REGISTRY\<br />MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>以上の手順で問題が解決しない場合は、方法 3 に進みます。</p>
+<h3 id="方法-3-レジストリ-MaxBufferSize-の設定"><a href="#方法-3-レジストリ-MaxBufferSize-の設定" class="headerlink" title="方法 3. レジストリ MaxBufferSize の設定"></a><strong>方法 3. レジストリ MaxBufferSize の設定</strong></h3><p>トランザクションを実行中、大量のレコードの変更をバッファに保存する必要があるため、大量のデータを処理する場合、バッファが不足してメモリ不足が発生している可能性があります。<br>MaxBufferSize を変更後も改善しない場合は、方法 2 の MaxLocksPerFile の設定も一緒に変更した組み合わせをお試しください。<br>（例 : MaxLocksPerFile を 200000 にして、かつ、MaxBufferSize も102400 にする、等）</p>
+<p>キー: 作成する場所は後述の「各バージョンのキー」をご参照ください。<br>型 : DWORD<br>名前 : MaxBufferSize<br>値 : 102400 (10 進数)</p>
+<p>※ 既定値 : 0(10 進数)<br>※ MaxBufferSizeに設定可能な値 (理論値) : 0x00000000 ～ 0xffffffff ※ 16進数<br>(0xffffffff の10 進数 : 4294967295)</p>
+<p>なお、大量のトランザクションを処理している場合は、102400よりも大きな値を設定して、何パターンかお試しください。<br><u>キーの各バージョンの場所</u></p>
+<table>
+<thead>
+<tr>
+<th>バージョン</th>
+<th>インストール形式</th>
+<th>アーキテクチャ</th>
+<th>レジストリキー</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Access 2010</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\<br />14.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2010</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\<br />Microsoft\Office\14.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\<br />15.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\<br />Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>C2R</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\<br />ClickToRun\REGISTRY\MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2013</td>
+<td>C2R</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\ClickToRun\REGISTRY<br />\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\15.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>MSI</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\MICROSOFT\Office\<br />16.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>MSI</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\<br />MICROSOFT\Office\16.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>C2R</td>
+<td>OS と Office が同じ bit</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\<br />REGISTRY\MACHINE\SOFTWARE\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+<tr>
+<td>Access 2016</td>
+<td>C2R</td>
+<td>OS と Office の bit が異なる</td>
+<td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\<br />REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\16.0\Access Connectivity Engine\Engines\ACE</td>
+</tr>
+</tbody></table>
+<p>以上の手順で問題が解決しない場合は、MaxLocksPerFile および MaxBufferSize を既定値に戻します。<br>設定を戻した後、方法 4 に進みます。</p>
+<h3 id="方法-4-Access-exe-プロセスの-CPU-マッピングを-1-つに限定する"><a href="#方法-4-Access-exe-プロセスの-CPU-マッピングを-1-つに限定する" class="headerlink" title="方法 4 Access.exe プロセスの CPU マッピングを 1 つに限定する"></a><strong>方法 4 Access.exe プロセスの CPU マッピングを 1 つに限定する</strong></h3><p>Access はマルチスレッドで動作することを想定していないエンジンを利用しています。<br>この動作が影響してメモリ不足が生じる場合があります。</p>
+<p>回避策 :<br>1. 現象が発生している Access ファイルを開きます。<br>2. [タスク マネージャー] を起動します。タスクマネージャの [プロセス] タブで “MSACCESS.EXE” のプロセスを右クリックします。<br>3. [関係の設定] メニューを選択します。<br>4. [プロセッサの関係] ダイアログ ボックスで、任意の一つの CPU のみチェックをオンにし、その他の CPU のチェックをオフにします。<br>5. OK でダイアログを閉じます。</p>
+<p>複数コアの CPU 環境で実行中の Access が応答なしになる<br><a href="https://support.microsoft.com/ja-jp/help/2646068" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/2646068</a></p>
+<p>以上の手順で問題が解決しない場合は、方法 5 に進みます。</p>
+<h3 id="方法-5-プログラムを再起動する"><a href="#方法-5-プログラムを再起動する" class="headerlink" title="方法 5. プログラムを再起動する"></a><strong>方法 5. プログラムを再起動する</strong></h3><p>メモリ不足が発生している Access もしくは Access ODBC/OLEDBを使用したプログラムを終了し、再起動します。</p>
+<p>以上の手順で問題が解決しない場合は、方法 6 に進みます。</p>
+<h3 id="方法-6-一度に-Insert-Update-Delete-するレコード数を減らす"><a href="#方法-6-一度に-Insert-Update-Delete-するレコード数を減らす" class="headerlink" title="方法 6. 一度に Insert/Update/Delete するレコード数を減らす"></a><strong>方法 6. 一度に Insert/Update/Delete するレコード数を減らす</strong></h3><p>トランザクションで Insert/Update/Delete するレコードの数を減らします。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xti000g4cvshw2meu7z/" data-id="cl0m69xti000g4cvshw2meu7z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m69xtg000f4cvsdjs3dptz/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Access 2016 のリボンをカスタマイズする
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m69xtj000h4cvs9bkh9j6c/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C2R 版の Office をインストールすると、特定のレジストリのアクセス権限テーブル参照時に警告が発生する</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>PowerShell の導入について | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートです。   本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照く">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PowerShell の導入について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m7opcl002kdcvs8slab7xr/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートです。   本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照く">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-13T13:12:42.991Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-PowerShell の導入について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m7opcl002kdcvs8slab7xr/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      PowerShell の導入について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m7opcl002kdcvs8slab7xr/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポートです。  </p>
+<p>本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照ください。  </p>
+<p><strong>目次</strong><br>1. PowerShell の導入<br>2. 関連情報  </p>
+<p><strong>1. PowerShell の導入</strong>  </p>
+<p>1. 64 Bit OS が動作する Windows 10/8.1/8/7 の PC を準備します。  </p>
+<p>2. Windows 7 の PC に導入する場合は、前提条件を満たすために最新の Windows Update をすべて適用します。  </p>
+<p>Windows Update 適用後に OS を再起動し、その後、下記リンクから Windows Management Framework 3.0 をインストールし、 Windows PowerShell 3.0 を使用できるようにします。(Windows 10/8.1/8 の PC 場合は、本手順は不要です。)<br>タイトル : Windows Management Framework 3.0<br>アドレス : <a href="http://www.microsoft.com/en-us/download/details.aspx?id=34595" target="_blank" rel="noopener">http://www.microsoft.com/en-us/download/details.aspx?id=34595</a>  </p>
+<p>3. 下記の弊社 TechNet ページを参照し、Microsoft Online Services サインイン アシスタント、Windows PowerShell 用 Microsoft Azure Active Directory モジュール (64 ビット バージョン) をインストールします。  </p>
+<p>タイトル : Connect to Office 365 PowerShell<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/dn975125.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/dn975125.aspx</a></p>
+<p>4. PowerShell の<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を変更していない場合は、インストールした Windows PowerShell の Microsoft Azure Active Directory モジュールを管理者権限で起動し、下記コマンドを実行します。(<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">【参考 : 実行ポリシー】</a>既に変更済みの場合は、本手順は不要です。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+
+
+
+<p>なお、設定されている<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を確認するには下記のコマンドを実行します。(<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を取得してプロンプトに表示します。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>2.関連情報</strong>  </p>
+<p>関連ブログ記事をご案内いたします。  </p>
+<p>タイトル : Windows PowerShell ファースト ステップ ガイド<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx</a></p>
+<p>タイトル : PowerShell の学習<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx</a></p>
+<p>タイトル : PowerShell スクリプト<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opcl002kdcvs8slab7xr/" data-id="cl0m7opcl002kdcvs8slab7xr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m7opck002idcvsfrsp798o/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          OneNote 2016 で背景に設定した画像が印刷時にずれる
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m7opcm002mdcvs2zos99xl/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">SCCM で Office365 ProPlus の更新プログラムが必要と判定されない</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

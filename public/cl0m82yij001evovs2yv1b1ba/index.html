@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 6 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)   2017&#x2F;06&#x2F;19 Update! Office 365 Enterprise パックのライセンスにも対応したコマンドに更新   こんにちは、Office サポートの佐村です。本記事では Office 365 にて公開されている Microsoft For">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m82yij001evovs2yv1b1ba/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 6 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)   2017&#x2F;06&#x2F;19 Update! Office 365 Enterprise パックのライセンスにも対応したコマンドに更新   こんにちは、Office サポートの佐村です。本記事では Office 365 にて公開されている Microsoft For">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-02-18T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-27T07:32:41.903Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m82yij001evovs2yv1b1ba/" class="article-date">
+  <time datetime="2019-02-18T15:00:00.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m82yij001evovs2yv1b1ba/" class="article-date-single">    
+        
+    <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 6 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  </p>
+<p><strong>2017/06/19 Update! Office 365 Enterprise パックのライセンスにも対応したコマンドに更新</strong>  </p>
+<p>こんにちは、Office サポートの佐村です。<br>本記事では Office 365 にて公開されている Microsoft Forms (以下、Forms) について、PowerShell スクリプトを使用して一括でテナント全体のユーザーのライセンスを有効化、無効化する方法をご案内いたします。<br>本方法をご利用いただくことで、別サービスの無効化状況には影響せずに、Forms だけを有効化、もしくは、無効化することが可能です。  </p>
+<p><strong>目次</strong><br>1. Forms のライセンスについて<br>2. PowerShell を使用して一括で有効化する方法<br>3. PowerShell を使用して一括で無効化する方法<br>4. 関連情報  </p>
+<p><strong>1. Forms のライセンスについて</strong><br>Forms のライセンスは、現在 Office 365 Education に含まれております。<br>現在は Forms はプレビュー版として Education 契約の Office 365 に先行してリリースしておりますが、<br>今後、数カ月以内にプレビュー対象を拡大し、その他のお客様にもご利用を開始していただく予定です。<br>ライセンスの確認方法については、例えば Office 365 E5 for Faculty の場合は、下記の様に Office 365 管理センターのユーザー管理のページにてライセンスの詳細項目を表示することで確認できます。<br>[ユーザー] - [アクティブなユーザー] - “任意のユーザーを選択” - [製品ライセンス] の [編集] を選択し、起動するダイアログ上の当該テナント名をクリックしてプルダウンします。  </p>
+<p>手動でライセンスの変更を行う場合は、上記にて Microsoft Forms をオン、もしくは、オフにすることで、該当ユーザーの Forms の有効化、無効化を行うことができます。<br>しかしながら、テナント全体でオン、オフにする、といったような設定方法はないため、下記 PowerShell を使用して一括で実行する方法をご案内いたします。  </p>
+<p><strong>2. PowerShell を使用して一括で有効化する方法</strong><br>PowerShell を利用するには、以下のページで PowerShell をインストールし、事前設定を行う必要があります。<br>タイトル : PowerShell の導入について<br>アドレス : <a href="https://officesupportjp.github.io/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/PowerShell の導入について/</a><br>Power Shell を導入後、下記の有効化のスクリプト内容をコピーし、ps1 ファイルとして保存します。(例 : EnableFormsLicense.ps1)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">connect-msolservice -credential $msolcred</span><br><span class="line"></span><br><span class="line"># ライセンスが割り当てられた全ユーザーの列挙</span><br><span class="line">$users &#x3D; Get-MsolUser -All | where &#123;$_.isLicensed -eq &quot;True&quot;&#125;</span><br><span class="line"></span><br><span class="line"># ユーザー毎のライセンス&#x2F;サービスの確認と変更</span><br><span class="line">foreach ($user in $users)</span><br><span class="line">&#123;</span><br><span class="line">    write-host (&quot;Processing &quot; + $user.UserPrincipalName)</span><br><span class="line">    $licensetype &#x3D; $user | Select-Object -ExpandProperty Licenses | Sort-Object &#123; $_.Licenses &#125;</span><br><span class="line"></span><br><span class="line">    foreach ($license in $user.Licenses) </span><br><span class="line">    &#123;</span><br><span class="line">        write-host (&quot; &quot; + $license.accountskuid)</span><br><span class="line"></span><br><span class="line">        $includeFORMS &#x3D; $false</span><br><span class="line">        $disableplan &#x3D; @()</span><br><span class="line"></span><br><span class="line">    	foreach ($row in $($license.ServiceStatus))</span><br><span class="line">    	&#123;</span><br><span class="line">            # FORMS_PLAN_ が含まれるライセンスを取得</span><br><span class="line">            if ( $row.ServicePlan.ServiceName -like &quot;*FORMS_PLAN_*&quot; ) </span><br><span class="line">            &#123;</span><br><span class="line">                $includeFORMS&#x3D;$true</span><br><span class="line">                $officeFORMS&#x3D;$row.ServicePlan.ServiceName</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            if ( $row.ProvisioningStatus -eq &quot;Disabled&quot; -and $row.ServicePlan.ServiceName -notlike &quot;*FORMS_PLAN_*&quot;)</span><br><span class="line">            &#123;</span><br><span class="line">                $disableplan +&#x3D; $row.ServicePlan.ServiceName</span><br><span class="line">            &#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">        # Forms が含まれる SKU の場合、現在の設定に加え、Forms を有効化 (Enable)</span><br><span class="line">        if ($includeFORMS)</span><br><span class="line">        &#123;</span><br><span class="line">            write-host (&quot;      found FORMS service in &quot; + $license.accountskuid)</span><br><span class="line">            write-host (&quot;      current disabled services : &quot; + $disableplan )</span><br><span class="line">            $x &#x3D; New-MsolLicenseOptions -AccountSkuId $license.accountskuid -DisabledPlans $disableplan</span><br><span class="line">            Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -LicenseOptions $x</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>PowerShell を起動し、EnableFormsLicense.ps1 ファイルを保存したフォルダーに移動し、下記の様に実行します。(下記は c:\temp 以下に ps1 ファイルを保存した場合の例となります。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd c:\temp</span><br><span class="line">.\EnableFormsLicense.ps1</span><br></pre></td></tr></table></figure>
+
+<p>認証ダイアログが表示されますので、ご利用中のテナントの管理者アカウント (<a href="mailto:adminuser@tenant.onmicrosoft.com">adminuser@tenant.onmicrosoft.com</a> 等) およびパスワード情報を入力します。<br>処理中の内容が表示されますので、プロンプトが戻るまで待ちます。<br>処理完了後、ブラウザーにて Office 365 を表示していた場合は一度ブラウザーを終了させ、再度 Office 365 にサインインします。<br>ユーザーのライセンス付与状況を確認し、Forms 製品のライセンスが期待通りとなっていることを確認します。<br>また、アプリケーション ランチャー上の Forms のタイルの表示が期待通りとなっていることを確認します。  </p>
+<p><strong>3. PowerShell を使用して一括で無効化する方法</strong><br>PowerShell を利用するには、以下のページで PowerShell をインストールし、事前設定を行う必要があります。<br>タイトル : PowerShell の導入について<br>アドレス : <a href="https://blogs.technet.microsoft.com/officesupportjp/2016/06/30/powershell_installation/" target="_blank" rel="noopener">https://blogs.technet.microsoft.com/officesupportjp/2016/06/30/powershell_installation/</a><br>Power Shell を導入後、下記の無効化のスクリプト内容をコピーし、ps1 ファイルとして保存します。(例 : DisableFormsLicense.ps1)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">connect-msolservice -credential $msolcred</span><br><span class="line"></span><br><span class="line"># ライセンスが割り当てられた全ユーザーの列挙</span><br><span class="line">$users &#x3D; Get-MsolUser -All | where &#123;$_.isLicensed -eq &quot;True&quot;&#125;</span><br><span class="line"></span><br><span class="line"># ユーザー毎のライセンス&#x2F;サービスの確認と変更</span><br><span class="line">foreach ($user in $users)</span><br><span class="line">&#123;</span><br><span class="line">    write-host (&quot;Processing &quot; + $user.UserPrincipalName)</span><br><span class="line">    $licensetype &#x3D; $user | Select-Object -ExpandProperty Licenses | Sort-Object &#123; $_.Licenses &#125;</span><br><span class="line"></span><br><span class="line">    foreach ($license in $user.Licenses) </span><br><span class="line">    &#123;</span><br><span class="line">        write-host (&quot; &quot; + $license.accountskuid)</span><br><span class="line"></span><br><span class="line">        $includeFORMS &#x3D; $false</span><br><span class="line">        $disableplan &#x3D; @()</span><br><span class="line"></span><br><span class="line">    	foreach ($row in $($license.ServiceStatus))</span><br><span class="line">    	&#123;</span><br><span class="line">            # FORMS_PLAN_ が含まれるライセンスを取得</span><br><span class="line">            if ( $row.ServicePlan.ServiceName -like &quot;*FORMS_PLAN_*&quot; ) </span><br><span class="line">            &#123;</span><br><span class="line">                $includeFORMS&#x3D;$true</span><br><span class="line">                $officeFORMS&#x3D;$row.ServicePlan.ServiceName</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            if ( $row.ProvisioningStatus -eq &quot;Disabled&quot; -and $row.ServicePlan.ServiceName -notlike &quot;*FORMS_PLAN_*&quot;)</span><br><span class="line">            &#123;</span><br><span class="line">                $disableplan +&#x3D; $row.ServicePlan.ServiceName</span><br><span class="line">            &#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">        # Forms が含まれる SKU の場合、現在の設定に加え、Forms を無効化 (Disable)</span><br><span class="line">        if ($includeFORMS)</span><br><span class="line">        &#123;</span><br><span class="line">            $disableplan +&#x3D; $officeFORMS</span><br><span class="line">            write-host (&quot;      found FORMS service in &quot; + $license.accountskuid)</span><br><span class="line">            write-host (&quot;      disabled services : &quot; + $disableplan )</span><br><span class="line">            $x &#x3D; New-MsolLicenseOptions -AccountSkuId $license.accountskuid -DisabledPlans $disableplan</span><br><span class="line">            Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -LicenseOptions $x</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>PowerShell を起動し、DisableFormsLicense.ps1 ファイルを保存したフォルダーに移動し、下記の様に実行します。(下記は c:\temp 以下に ps1 ファイルを保存した場合の例となります。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd c:\temp</span><br><span class="line">.\DisableFormsLicense.ps1</span><br></pre></td></tr></table></figure>
+
+<p>認証ダイアログが表示されますので、ご利用中のテナントの管理者アカウント (<a href="mailto:adminuser@tenant.onmicrosoft.com">adminuser@tenant.onmicrosoft.com</a> 等) およびパスワード情報を入力します。<br>処理中の内容が表示されますので、プロンプトが戻るまで待ちます。<br>処理完了後、ブラウザーにて Office 365 を表示していた場合は一度ブラウザーを終了させ、再度 Office 365 にサインインします。<br>ユーザーのライセンス付与状況を確認し、Forms 製品のライセンスが期待通りとなっていることを確認します。<br>また、アプリケーション ランチャー上の Forms のタイルの表示が期待通りとなっていることを確認します。  </p>
+<p><strong>4. 関連情報</strong><br>タイトル : Enable and disable Microsoft Forms<br>アドレス : <a href="https://support.office.com/en-us/article/8dcbf3ab-f2d6-459a-b8be-8d9892132a43" target="_blank" rel="noopener">https://support.office.com/en-us/article/8dcbf3ab-f2d6-459a-b8be-8d9892132a43</a>  </p>
+<p>タイトル : Microsoft フォームについてよく寄せられる質問<br>アドレス : <a href="https://support.office.com/ja-jp/article/495c4242-6102-40a0-add8-df05ed6af61c" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/495c4242-6102-40a0-add8-df05ed6af61c</a>  </p>
+<p>タイトル : Office 365 ライセンスと Windows PowerShell: ユーザーのライセンスの状態を確認する<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/dn771772.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/dn771772.aspx</a>  </p>
+<p>タイトル : ユーザーへのライセンスの割り当て<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/dn771770.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/dn771770.aspx</a>  </p>
+<p>タイトル : サービスのライセンス情報を表示する<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/dn771771.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/dn771771.aspx</a>  </p>
+<p>タイトル : サービスにアクセスを割り当てる<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/dn771769.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/dn771769.aspx</a>  </p>
+<p>今回の投稿は以上です。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m82yij001evovs2yv1b1ba/" data-id="cl0m82yij001evovs2yv1b1ba" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m82yiv001nvovs1lw04l0b/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office のプロセス インスタンス制御について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m82yii001cvovse0n00hjv/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
