@@ -1,6 +1,7 @@
 ---
 title: Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて
 date: 2021-06-21
+lastupdate: 2022-05-30
 id: cl0m4xkk8002oeovs8ggucayv
 alias: /Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて/
 ---
@@ -13,9 +14,11 @@ alias: /Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが
 
 これらの手順を上から順にご実施ください。
 
+<br>
+
 **<実施方法>**
 
-1) Office への再サインイン
+**1) Office への再サインイン**
 
 \--------------------------------
 
@@ -29,10 +32,24 @@ alias: /Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが
 
 4\. Office を起動してサインインし、事象が解消するかをお試しください。
 
-　  
-2) Office アップロードセンターのキャッシュクリア
+
+<br>
+
+**2) Office のファイルキャッシュクリア**
 
 \---------------------------------------------------
+
+1\. Excel 等を開きます。
+
+2\. \[ファイル\] タブ - "オプション" を開きます。
+
+3\. "保存" より、"キャッシュ" の設定 - \[ファイルを閉じたときに Office ドキュメント キャッシュから削除する\] オプションでチェックを入れ有効に設定し、\[キャッシュ ファイルの削除\] を実施します。
+
+<br>
+
+Office 2016 等をご利用されている場合、上記項目が見つからない可能性があります。その場合、代わりに以下の手順をご実施ください。
+
+<br>
 
 1\. Office を全て終了します。
 
@@ -42,17 +59,9 @@ alias: /Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが
 
 4\. \[OK\] ボタンをクリックし、Microsoft Office アップロード センターの設定 ダイアログを閉じます。  
 
-上記の手順でアップロードセンターが見つからない場合、以下の手順をご実施ください。
+<br>
 
-1\. Excel 等を開きます。
-
-2\. \[ファイル\] タブ - "オプション" を開きます。
-
-3\. "保存" より、"キャッシュ" の設定 - \[ファイルを閉じたときに Office ドキュメント キャッシュから削除する\] オプションでチェックを入れ有効に設定し、\[キャッシュ ファイルの削除\] を実施します。
-
-
-　  
-3) Office アップロードセンターの完全キャッシュクリア
+**3) Office のファイルキャッシュの完全クリア**
 
 \---------------------------------------------------
 
@@ -76,9 +85,9 @@ HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Internet\\Server
 
 8\. OS を再起動します。  
 
+<br>
 
-　  
-4) Office のサインインキャッシュのクリア
+**4) Office のサインインキャッシュのクリア**
 
 \---------------------------------------------------
 
@@ -87,10 +96,14 @@ HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Internet\\Server
 Title : Office のサインインのトラブルシュートについて  
 URL : [https://officesupportjp.github.io/blog/Office のサインインのトラブルシュートについて](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
 
+<br>
+
 **\- 関連情報**
 
 Title : MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について
 
 URL : [https://officesupportjp.github.io/blog/MSI 版の Office 2016 で SPO、OneDrive、WebDav サーバーから Office ファイルが開かない、保存できない現象について](https://officesupportjp.github.io/blog/MSI%20%E7%89%88%E3%81%AE%20Office%202016%20%E3%81%A7%20SPO%E3%80%81OneDrive%E3%80%81WebDav%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
+
+<br>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**

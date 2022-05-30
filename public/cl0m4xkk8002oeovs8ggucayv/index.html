@@ -7,15 +7,15 @@
   
   <title>Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Office サポートの西川 (直) です。   今回の投稿では、Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて説明します。 以下、問題の切り分けに有用な情報を以下にご案内いたします。 これらの手順を上から順にご実施ください。 &lt;実施方法&gt; 1) Office への再サインイ">
+  <meta name="description" content="こんにちは、Office サポートの西川 (直) です。   今回の投稿では、Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて説明します。 以下、問題の切り分けに有用な情報を以下にご案内いたします。 これらの手順を上から順にご実施ください。   &lt;実施方法&gt; 1) Office への再サイ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4xkk8002oeovs8ggucayv/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="こんにちは、Office サポートの西川 (直) です。   今回の投稿では、Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて説明します。 以下、問題の切り分けに有用な情報を以下にご案内いたします。 これらの手順を上から順にご実施ください。 &lt;実施方法&gt; 1) Office への再サインイ">
+<meta property="og:description" content="こんにちは、Office サポートの西川 (直) です。   今回の投稿では、Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて説明します。 以下、問題の切り分けに有用な情報を以下にご案内いたします。 これらの手順を上から順にご実施ください。   &lt;実施方法&gt; 1) Office への再サイ">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-06-20T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-04-21T07:14:45.245Z">
+<meta property="article:modified_time" content="2022-05-30T03:55:13.358Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -112,8 +112,8 @@
       <div class="article-share">
         Last Update: 
         <a href="/blog/cl0m4xkk8002oeovs8ggucayv/" class="article-date-single">    
-    
-    <time datetime="2021-06-20T15:00:00.000Z" itemprop="dateUpdated">2021-06-21</time>
+        
+    <time datetime="2022-05-29T15:00:00.000Z" itemprop="lastupdate">2022-05-30</time>    
     
 </a>              
       </div>
@@ -124,25 +124,35 @@
 <p>今回の投稿では、Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて説明します。</p>
 <p>以下、問題の切り分けに有用な情報を以下にご案内いたします。</p>
 <p>これらの手順を上から順にご実施ください。</p>
+<br>
+
 <p><strong>&lt;実施方法&gt;</strong></p>
-<p>1) Office への再サインイン</p>
+<p><strong>1) Office への再サインイン</strong></p>
 <p>-——————————-</p>
 <p>1. Office からサインアウトし、Office を全て終了します。</p>
 <p>2. OS のスタートメニュー - 歯車 - “アカウント” - “職場または学校にアクセスする” をクリックし、”職場または学校アカウント” として表示されている項目がある場合、”切断” をクリックします</p>
 <p>※ Azure AD や AD に接続済みの項目を “切断” しますと、ドメインから外れてしまいますので、Azure AD や AD に接続済み の項目は切断しないようにご注意ください。</p>
 <p>3. OS からログオフします。(可能であれば、再起動してください)</p>
 <p>4. Office を起動してサインインし、事象が解消するかをお試しください。</p>
-<p>　<br>2) Office アップロードセンターのキャッシュクリア</p>
+<br>
+
+<p><strong>2) Office のファイルキャッシュクリア</strong></p>
 <p>-————————————————–</p>
+<p>1. Excel 等を開きます。</p>
+<p>2. [ファイル] タブ - “オプション” を開きます。</p>
+<p>3. “保存” より、”キャッシュ” の設定 - [ファイルを閉じたときに Office ドキュメント キャッシュから削除する] オプションでチェックを入れ有効に設定し、[キャッシュ ファイルの削除] を実施します。</p>
+<br>
+
+<p>Office 2016 等をご利用されている場合、上記項目が見つからない可能性があります。その場合、代わりに以下の手順をご実施ください。</p>
+<br>
+
 <p>1. Office を全て終了します。</p>
 <p>2. [スタート]-[すべてのプログラム]-[Microsoft Officeツール]-[Office アップロードセンター] をクリックし、[設定] を押下後、[キャッシュ ファイルの削除] を実施してください。</p>
 <p>3. [ファイルを閉じたときに Office ドキュメント キャッシュから削除する] オプションでチェックを入れ有効に設定します。</p>
 <p>4. [OK] ボタンをクリックし、Microsoft Office アップロード センターの設定 ダイアログを閉じます。  </p>
-<p>上記の手順でアップロードセンターが見つからない場合、以下の手順をご実施ください。</p>
-<p>1. Excel 等を開きます。</p>
-<p>2. [ファイル] タブ - “オプション” を開きます。</p>
-<p>3. “保存” より、”キャッシュ” の設定 - [ファイルを閉じたときに Office ドキュメント キャッシュから削除する] オプションでチェックを入れ有効に設定し、[キャッシュ ファイルの削除] を実施します。</p>
-<p>　<br>3) Office アップロードセンターの完全キャッシュクリア</p>
+<br>
+
+<p><strong>3) Office のファイルキャッシュの完全クリア</strong></p>
 <p>-————————————————–</p>
 <p>1. Ctrl + Shift + Esc キーを押してタスク マネージャーを起動します。</p>
 <p>2. [プロセス] タブで [MSOSYNC.EXE] が存在する場合、クリックし、[プロセスの終了] をクリックしてから、タスク マネージャーを終了します。</p>
@@ -154,19 +164,25 @@
 <p>HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet\Server Cache</p>
 <p>7. Server Cache キーを選択し、削除します。</p>
 <p>8. OS を再起動します。  </p>
-<p>　<br>4) Office のサインインキャッシュのクリア</p>
+<br>
+
+<p><strong>4) Office のサインインキャッシュのクリア</strong></p>
 <p>-————————————————–</p>
 <p>以下の記事の手順により、サインインキャッシュのクリアをご実施ください。</p>
 <p>Title : Office のサインインのトラブルシュートについて<br>URL : <a href="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office のサインインのトラブルシュートについて</a></p>
+<br>
+
 <p><strong>- 関連情報</strong></p>
 <p>Title : MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について</p>
 <p>URL : <a href="https://officesupportjp.github.io/blog/MSI%20%E7%89%88%E3%81%AE%20Office%202016%20%E3%81%A7%20SPO%E3%80%81OneDrive%E3%80%81WebDav%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/MSI 版の Office 2016 で SPO、OneDrive、WebDav サーバーから Office ファイルが開かない、保存できない現象について</a></p>
+<br>
+
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkk8002oeovs8ggucayv/" data-id="cl28oxvtw002vu8uj5s003apy" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkk8002oeovs8ggucayv/" data-id="cl0tck5cn002puskjfnq3aons" class="article-share-link">Share</a>
       
       
     </footer>
