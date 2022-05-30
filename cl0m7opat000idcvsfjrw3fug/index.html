@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Excel - PowerPoint - Visio 2016 バージョン 1801 以降で WebBrowser コントロールがユーザーフォーム外に表示される | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2018 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 今回の記事では、ユーザーフォーム上に WebBrowser コントロールを貼り付けて利用している場合に、Windows 10 バージョン 1703 以降の OS で Office 2016 を">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel - PowerPoint - Visio 2016 バージョン 1801 以降で WebBrowser コントロールがユーザーフォーム外に表示される">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m7opat000idcvsfjrw3fug/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2018 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 今回の記事では、ユーザーフォーム上に WebBrowser コントロールを貼り付けて利用している場合に、Windows 10 バージョン 1703 以降の OS で Office 2016 を">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7opat000idcvsfjrw3fug/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7opat000idcvsfjrw3fug/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7opat000idcvsfjrw3fug/image3.png">
+<meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-10-19T08:20:49.851Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m7opat000idcvsfjrw3fug/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Excel - PowerPoint - Visio 2016 バージョン 1801 以降で WebBrowser コントロールがユーザーフォーム外に表示される" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m7opat000idcvsfjrw3fug/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Excel - PowerPoint - Visio 2016 バージョン 1801 以降で WebBrowser コントロールがユーザーフォーム外に表示される
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m7opat000idcvsfjrw3fug/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2018 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office 開発サポート チームの中村です。</p>
+<p>今回の記事では、ユーザーフォーム上に WebBrowser コントロールを貼り付けて利用している場合に、Windows 10 バージョン 1703 以降の OS で Office 2016 をバージョン 1801 以降に更新すると、WebBrowser コントロールがユーザーフォームの外に表示される動作について記載します。</p>
+<p><span style="color:#FF0000"><strong>2018/2/5 Update</strong></span><br><span style="color:#339966">本現象が発生する要因となる機能 (後述の「ディスプレイで最適な解像度を使用」) の有効化を延期しました。このため、本記事の内容は今後の更新で発生する可能性がある現象としてご案内します。現時点で、本機能の有効化時期は未定です。</span></p>
+<p><span style="color:#FF0000"><strong>2018/6/8 Update</strong></span><br><span style="color:#339966">月次チャネル バージョン 1805 (16.0.9226.2114) で本機能が有効化されました。当初公開時とオプション メニュー名などが変更されたため、記事内の画面キャプチャなどを最新の状態に更新しています。</span></p>
+<h4 id="再現手順"><a href="#再現手順" class="headerlink" title="再現手順"></a><strong>再現手順</strong></h4><p>1. 新規 Excel ブックを作成し、Visual Basic Editor でユーザーフォーム (UserForm1) を追加して、WebBrowser コントロールとボタン コントロールを貼り付けます。</p>
+<p><img src="image1.png" alt=""></p>
+<p>図 1. ユーザーフォームへの WebBrowser コントロール追加</p>
+<p>2. ボタン コントロールのクリック イベント ハンドラに以下のようなコードを記述します。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub CommandButton1_Click()</span><br><span class="line">    UserForm1.WebBrowser1.Navigate2 (&quot;http:&#x2F;&#x2F;www.microsoft.com&quot;)</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+
+<p>3. F5 キーを押下して、ユーザーフォームを表示すると、以下のように WebBrowser コントロールがユーザーフォームのウィンドウ外に表示されます。</p>
+<p><img src="image2.png" alt=""></p>
+<p>図 2. WebBrowser がユーザーフォーム外に表示されている状態</p>
+<h4 id="現象詳細"><a href="#現象詳細" class="headerlink" title="現象詳細"></a><strong>現象詳細</strong></h4><p>この動作は、バージョン 1801 で追加された「ディスプレイで最適な解像度を使用」という新機能の影響で発生します。</p>
+<p>タイトル : 高解像度のモニターの office のサポート<br>アドレス : <a href="https://support.office.com/ja-jp/article/6720ca0e-be59-41f6-b629-1369f549279d" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/6720ca0e-be59-41f6-b629-1369f549279d</a> (日本語機械翻訳版)<br>アドレス : <a href="https://support.office.com/en-us/article/6720ca0e-be59-41f6-b629-1369f549279d" target="_blank" rel="noopener">https://support.office.com/en-us/article/6720ca0e-be59-41f6-b629-1369f549279d</a>(英語版)</p>
+<p>この機能の動作を制御するオプション項目「複数ディスプレイを使用する場合」で「表示を優先した最適化」が有効な場合に現象が発生します (更新後、既定では有効に設定されています)。</p>
+<p><img src="image3.png" alt=""></p>
+<p>図 3. [複数ディスプレイを使用する場合] オプション</p>
+<p>このオプションは、高解像度や複数のモニターを持つ PC 環境などでも最適な画面表示となるよう、バージョン 1801 で機能強化を行ったことで追加されました。このオプションが有効な場合、モニターの解像度を判断し、これに応じて適切な表示が行われます。</p>
+<p>一方で、WebBrowser コントロールのように、コントロールによっては、表示の際にコントロール自身のウィンドウとユーザーフォーム ウィンドウとの親子関係の設定が行われます。このときに、ユーザーフォームとコントロールのウィンドウで、それぞれ解像度の認識状況が異なると、以下の SetParent 関数のリファレンス ページに記載の通り、Windows 10 バージョン 1703 以降の OS ではエラーが返され、親子関係を設定することができません。</p>
+<p>タイトル : SetParent function<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms633541(v=vs.85).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/ms633541(v=vs.85).aspx</a></p>
+<p>&lt;公開情報より抜粋&gt;<br>Unexpected behavior or errors may occur if hWndNewParent and hWndChild are running in different DPI awareness modes. The table below outlines this behavior:</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Operation</strong></th>
+<th align="left"><strong>Windows 8.1</strong></th>
+<th align="left"><strong>Windows 10 (1607 and earlier)</strong></th>
+<th align="left"><strong>Windows 10 (1703 and later)</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">SetParent (In-Proc)</td>
+<td align="left">N/A</td>
+<td align="left"><strong>Forced reset</strong> (of current process)</td>
+<td align="left"><strong>Fail</strong> (ERROR_INVALID_STATE)</td>
+</tr>
+<tr>
+<td align="left">SetParent (Cross-Proc)</td>
+<td align="left"><strong>Forced reset</strong> (of child window’s process)</td>
+<td align="left"><strong>Forced reset</strong> (of child window’s process)</td>
+<td align="left"><strong>Forced reset</strong> (of child window’s process)</td>
+</tr>
+</tbody></table>
+<p>これらの動作の結果、WebBrowser コントロールとユーザーフォームの親子関係が設定されず、WebBrowser コントロールがユーザーフォームとは別に表示されます。</p>
+<p>WebBrowser コントロールに限らず、同じようにウィンドウを持つコントロールでは、同様に現象が発生する場合があります。(MSCOMCTL.OCX に含まれる TreeView コントロールなどのように、ウィンドウを持つコントロールでも現象が発生しないコントロールもあります。)</p>
+<p><strong>補足</strong></p>
+<ul>
+<li>「ディスプレイで最適な解像度を使用」機能は、Excel / Word / PowerPoint / Visio に追加されていますが、Word では本手順で現象は発生しません。</li>
+<li>OS が Windows 10 バージョン 1703 より古い場合は、「ディスプレイで最適な解像度を使用」オプションは表示されません。</li>
+<li>VBE のメニューの実行ボタン (緑色の右三角のボタン) や、[実行] – [Sub/ユーザーフォームの実行] から実行すると、現象は発生しません。F5 キーや、プロシージャから UserForm.Show を実行してユーザーフォームを表示する場合に発生します。</li>
+</ul>
+<h4 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a><strong>回避策</strong></h4><p><strong>1. 「ディスプレイで最適な解像度を使用」オプションを無効にする</strong></p>
+<p>先述の通り、この現象はこのオプションが有効な場合にのみ発生します。この機能が不要な場合、これをオフにして回避することができます。</p>
+<p>ユーザー全体に展開したい場合やプログラムから変更したい場合には、以下のレジストリで制御できます。ただし、設定値の反映には Office アプリケーションの再起動が必要です。アプリケーションの処理中に一時的に変更するような場合には、Office アプリケーションを起動する前にこのレジストリを変更する必要があります。</p>
+<p>キー :<br>&lt;Excel / Word / PowerPoint 向け&gt;<br>HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options<br>(&lt;アプリケーション名&gt; には、Excel / Word / PowerPointが入ります。ただ、Word は先述の通りこの手順で現象は発生しませんので回避策としての設定は必要ありません。)</p>
+<p>&lt;Visio 向け&gt;<br>HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Visio\Application</p>
+<p>名前 :<br>RenderForMonitorDpi<br>種類 :<br>REG_DWORD</p>
+<p>値 :<br>0 (0 =無効 / 1 =有効)  </p>
+<p><strong>2. カスタム作業ウィンドウで</strong> <strong>WebBrowser</strong> <strong>コントロール表示する</strong></p>
+<p>カスタム作業ウィンドウ内に WebBrowser コントロールを貼り付ける場合には、現象は発生しません。VSTO ソリューションなどでカスタム作業ウィンドウを追加し、この中で WebBrowser コントロールを使用するよう仕組みを変更することが検討できます。カスタム作業ウィンドウの作成手順は以下の公開情報を参照してください。</p>
+<p>タイトル : カスタム作業ウィンドウ<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/aa942864.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/aa942864.aspx</a>  </p>
+<p>今回の投稿は以上です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opat000idcvsfjrw3fug/" data-id="cl0m7opat000idcvsfjrw3fug" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m7opah000adcvs2m031nkh/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2017 年 7 月のセキュリティ更新適用後、VBA から一部のオブジェクトを作成できません
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m7opb4000udcvs3i5ccbmt/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Excel の CodeName プロパティが取得できない動作</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

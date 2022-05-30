@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法 | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2016 年 9 月 8 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 本記事では クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法についてご案内いたします。   [はじめに]Office 2013 以降の製品では、Office 2010 までのバ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4rqat003750vs4y34h9w7/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2016 年 9 月 8 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 本記事では クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法についてご案内いたします。   [はじめに]Office 2013 以降の製品では、Office 2010 までのバ">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4rqat003750vs4y34h9w7/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4rqat003750vs4y34h9w7/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4rqat003750vs4y34h9w7/image3.png">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-26T04:49:25.907Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m4rqat003750vs4y34h9w7/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m4rqat003750vs4y34h9w7/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m4rqat003750vs4y34h9w7/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2016 年 9 月 8 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポート チームです。</p>
+<p>本記事では クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法についてご案内いたします。  </p>
+<h3 id="はじめに"><a href="#はじめに" class="headerlink" title="[はじめに]"></a>[はじめに]</h3><p>Office 2013 以降の製品では、Office 2010 までのバージョンと同じインストール方式で動作する Windows インストーラー形式 (MSI) と呼ばれる製品とクイック実行形式 (C2R) とよばれる新しいインストール方式で動作する製品があります。</p>
+<p>インストール方式に応じて Office 更新の方式も最適なものが用意されており、正しい Office 更新方法をお選びいただくうえでも、まずはインストール方式の識別方法についてご紹介いたします。  </p>
+<p>(C2R および MSI 形式の Office の更新方法については本サイトの下部にてご案内しております。)</p>
+<p>Windows インストーラー形式 (MSI) のファイルは Windows インストーラを利用しているため、従来通り Microsoft Update による更新やサポート技術情報 (KB) の更新プログラムの適用が可能です。</p>
+<p>クイック実行についての詳細は、以下の公開情報をご参照ください。</p>
+<p>クイック実行の概要<br><a href="https://technet.microsoft.com/ja-jp/library/jj219427.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/jj219427.aspx</a></p>
+<p>Office の更新プログラムをインストールする<br><a href="https://support.office.com/ja-jp/article/2ab296f3-7f03-43a2-8e50-46de917611c5" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/2ab296f3-7f03-43a2-8e50-46de917611c5</a></p>
+<h3 id="判別方法"><a href="#判別方法" class="headerlink" title="[判別方法]"></a>[判別方法]</h3><p>Office アプリケーションから [ファイル] タブ ?  [アカウント]  をクリックした際に表示される以下の画面の  [更新オプション] の有無で判別が可能です。</p>
+<p><strong>判別方法概要</strong></p>
+<p>クイック実行形式 (C2R) : [更新オプション] ボタンがあります<br>Windows インストーラー形式 (MSI) : [更新オプション] ボタンがありません</p>
+<p><strong>確認手順</strong></p>
+<p>i. Excel を起動し、Excel ファイルを開きます。  </p>
+<p>ii. [ファイル] タブをクリックします。  </p>
+<p>iii. [アカウント] をクリックします。</p>
+<p>iv. 右側に表示される [製品情報] 以下の情報を確認して、下記のいずれであるかをご確認ください。</p>
+<p><u>&lt;クイック実行形式 (C2R) のアカウント画面&gt;</u>  </p>
+<p>[Office 更新プログラム] と [Excel のバージョン情報] が上下に並んで表示されている場合は、 クイック実行によってインストールされた Officeとなります。</p>
+<p><img src="image1.png" alt="">  </p>
+<p><u>&lt;Windows インストーラー形式 (MSI) のアカウント画面&gt;</u>  </p>
+<p>[Excel のバージョン情報] のみが表示されている場合は、従来の Windows インストーラー (MSI) を 使ってインストールされた Officeとなります。</p>
+<p><img src="image2.png" alt=""></p>
+<h3 id="更新方法"><a href="#更新方法" class="headerlink" title="[更新方法]"></a>[更新方法]</h3><p>クイック実行形式の Office は Office 製品独自の更新方法となります。  </p>
+<p>上述の &lt;クイック実行形式 のアカウント画面&gt; 内の「更新オプション」ボタンから “今すぐ更新” をクリックしていただくことで、現在ご利用の Office バージョンのチャネルの最新版の更新プログラムをダウンロードし、インストールします。</p>
+<p>Windows インストーラー形式 (MSI) の Office では、Office 2010 までと同様に Microsoft Update を使用して更新プログラムを適用します。  </p>
+<p>Microsoft Update の利用手順について詳しくは、下記のサイトを参照してください。</p>
+<p> Windows Update 利用の手順<br> <a href="https://www.microsoft.com/ja-jp/safety/pc-security/j_musteps.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/safety/pc-security/j_musteps.aspx</a></p>
+<p> Windows Update と Microsoft Update ってどう違うの?<br> <a href="https://support.microsoft.com/ja-jp/kb/914303" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/914303</a></p>
+<h3 id="補足情報"><a href="#補足情報" class="headerlink" title="[補足情報]"></a>[補足情報]</h3><p>各 Office 製品では以下のようになっています。</p>
+<p><img src="image3.png" alt=""></p>
+<p>※1<br>プリインストール版 (PIPC) とは、コンピュータをご購入いただいた際に (Office 製品を、パッケージ単体で購入して、<br>パーソナル コンピュータにインストールするのではなく) 、既にパーソナル コンピュータにインストールされている形で販売されている Office 製品のことをいいます。</p>
+<p>※2<br>ボリューム ライセンスにつきましては、以下の公開情報をご参照ください。<br> ボリューム ライセンスの概要<br> <a href="https://www.microsoft.com/ja-jp/licensing/licensing-programs/licensing-programs.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/licensing/licensing-programs/licensing-programs.aspx</a></p>
+<p>※3<br>MSDN サブスクリプション製品 につきましては、Office 2013 と Office 2016 でインストール形式が異なりますのでご注意ください。  </p>
+<p>また、MSDN サブスクリプション製品につきましては、以下の公開情報をご参照ください。  </p>
+<p> サブスクライバー ダウンロードへようこそ<br> <a href="https://msdn.microsoft.com/ja-jp/subscriptions/downloads/" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/subscriptions/downloads/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4rqat003750vs4y34h9w7/" data-id="cl0m4rqat003750vs4y34h9w7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m4rqas003550vs09xbchfy/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          インターネットから Office ファイルを開く時にエラーとなる現象について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m4rqb7003a50vs0420bgjm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">クイック実行形式の Office をインストールすると Office 以外のアプリケーションから ODBC - OLEDB が利用できない</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqar003350vs7mj9ac31/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqaj002p50vs8niabxee/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqae002f50vs180vh7o5/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

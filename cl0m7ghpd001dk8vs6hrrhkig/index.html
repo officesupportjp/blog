@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)   こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化&#x2F;無効化する方法をご案内いたしまし">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m7ghpd001dk8vs6hrrhkig/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)   こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化&#x2F;無効化する方法をご案内いたしまし">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-02-07T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-04T05:56:52.772Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m7ghpd001dk8vs6hrrhkig/" class="article-date">
+  <time datetime="2019-02-07T15:00:00.000Z" itemprop="datePublished">2019-02-08</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m7ghpd001dk8vs6hrrhkig/" class="article-date-single">    
+        
+    <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  </p>
+<p>こんにちは、Office サポートの橋村です。<br>Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化/無効化する方法をご案内いたしました。本記事では、テナント全体のユーザーではなく、指定したユーザーのみのライセンスを有効化/無効化する方法をご案内いたします。  </p>
+<p><strong>目次</strong>  </p>
+<p>1. Sway のライセンスについて<br>2. PowerShell のインストール<br>3. ユーザーリストの作成<br>4. PowerShell で指定ユーザーのみを有効化する方法<br>5. PowerShell で指定ユーザーのみを無効化する方法<br>6. ユーザーリストをスクリプトファイルと別のディレクトリに格納して実行する方法<br>7. 関連情報  </p>
+<p><strong>1. Sway のライセンスについて</strong><br>Sway のライセンスはユーザー単位で有効化/無効化を設定します。例えば、Office 365 E3 の場合は、下記の Office 365 管理センターのユーザー管理のページにて、ライセンスの詳細項目を表示することで確認、もしくは、設定することができます。  </p>
+<p>[Office 365 管理センター] - [ユーザー] - [アクティブなユーザー] - [製品ライセンス]の編集</p>
+<p><strong>2. PowerShell のインストール</strong><br>PowerShell を利用するには、以下のページに従って PowerShell の環境を構築する必要があります。  </p>
+<p>タイトル : PowerShell の導入について<br>アドレス : <a href="https://officesupportjp.github.io/blog/PowerShell%20%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/PowerShell の導入について/</a>  </p>
+<p><strong>3. ユーザーリストの作成</strong><br>テキストファイルを用いて、Sway ライセンスを有効化/無効化したいユーザーのリストを作成します。リスト構造はシンプルで、指定ユーザーのアカウントを改行して入力するだけです。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">user01@testtenant.onmicrosoft.com</span><br><span class="line">user02@testtenant.onmicrosoft.com</span><br><span class="line">user03@testtenant.onmicrosoft.com</span><br><span class="line">user04@testtenant.onmicrosoft.com</span><br><span class="line">user05@testtenant.onmicrosoft.com</span><br></pre></td></tr></table></figure>
+
+<p>このリストに入力されているユーザーのみを対象に、後述の Sway ライセンスの有効化/無効化処理が実行されます。今回の例では、作成するリストを <strong>UserList.txt</strong> というファイル名で保存します。  </p>
+<p><strong>4. PowerShell で指定ユーザーのみを有効化する方法</strong><br>下記のソースコードをコピーし、ps1 ファイルとして保存します。今回の例では、作成するスクリプトを <strong>EnableSwayLicense_UserUnit.ps1</strong> というファイル名で保存します。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># サービス名の設定</span><br><span class="line">$service_name &#x3D; &quot;SWAY&quot;</span><br><span class="line"></span><br><span class="line">connect-msolservice -credential $msolcred</span><br><span class="line"></span><br><span class="line"># 改行単位で UPN が記述されたユーザー一覧から取得</span><br><span class="line">$users &#x3D; New-Object System.Collections.ArrayList</span><br><span class="line">$list &#x3D; Get-Content &quot;UserList.txt&quot;</span><br><span class="line"></span><br><span class="line">foreach ($temp in $list) &#123;</span><br><span class="line">    $users &#x3D; $users + (Get-MsolUser -UserPrincipalName $temp)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># ユーザー毎のライセンス&#x2F;サービスの確認と変更</span><br><span class="line">foreach ($user in $users) &#123;</span><br><span class="line">    write-host (&quot;Processing &quot; + $user.UserPrincipalName)</span><br><span class="line">    $licensetype &#x3D; $user | Select-Object -ExpandProperty Licenses | Sort-Object &#123; $_.Licenses &#125;</span><br><span class="line"></span><br><span class="line">    foreach ($license in $user.Licenses) &#123;</span><br><span class="line">        write-host (&quot; &quot; + $license.accountskuid)</span><br><span class="line"></span><br><span class="line">        $includeService &#x3D; $false</span><br><span class="line">        $disableplan &#x3D; @()</span><br><span class="line"></span><br><span class="line">        foreach ($row in $($license.ServiceStatus)) &#123;</span><br><span class="line">            if ( $row.ServicePlan.ServiceName -eq $service_name ) &#123; $includeService&#x3D;$true &#125;</span><br><span class="line">            if ( $row.ProvisioningStatus -eq &quot;Disabled&quot; -and $row.ServicePlan.ServiceName -ne $service_name) &#123;</span><br><span class="line">                $disableplan +&#x3D; $row.ServicePlan.ServiceName</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        # 指定したサービスが含まれる SKU の場合、現在の設定に加え、指定したサービスを有効化 (Enable)</span><br><span class="line">        if ($includeService) &#123;</span><br><span class="line">            write-host (&quot; found Target service in &quot; + $license.accountskuid)</span><br><span class="line">            write-host (&quot; current disabled services : &quot; + $disableplan )</span><br><span class="line">            $x &#x3D; New-MsolLicenseOptions -AccountSkuId $license.accountskuid -DisabledPlans $disableplan</span><br><span class="line">            Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -LicenseOptions $x</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&lt;スクリプトファイルの実行&gt;<br>スクリプトファイルを実行する前に、先ほど作成したユーザーリスト (<strong>UserList.txt</strong>) を ps1ファイルを保存したフォルダに格納します。(<strong>EnableSwayLicense_UserUnit.ps1</strong> と <strong>UserList.txt</strong> を同一ディレクトリに格納します。) その後、PowerShell を起動し、ps1 ファイルを保存したフォルダに移動し、下記の様に実行します。(下記は c:\temp 配下に ps1 ファイルを格納した場合の例です。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd c:\temp</span><br><span class="line">.\EnableSwayLicense_UserUnit.ps1</span><br></pre></td></tr></table></figure>
+
+<p>認証ダイアログが起動しますので、ご利用中のテナントの管理者アカウント、および、パスワードを入力します。  </p>
+<p>有効化処理の内容が表示されますので、PowerShell のプロンプトが戻るまで待ちます。  </p>
+<p>処理完了後、ブラウザにて Office 365 を表示していた場合は一度ブラウザを終了させ、再度 Office 365 にサインインします。  </p>
+<p>ユーザーのライセンス付与状況を確認し、Sway 製品のライセンスがオンに設定されていることを確認します。また、アプリケーション ランチャー上の Sway のタイルが表示されていることを確認します。  </p>
+<p><strong>5. PowerShell で指定ユーザーのみを無効化する方法</strong><br>下記のソースコードをコピーし、ps1 ファイルとして保存します。今回の例では、作成するスクリプトを <strong>DisableSwayLicense_UserUnit.ps1</strong> というファイル名で保存します。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"># サービス名の設定</span><br><span class="line">$service_name &#x3D; &quot;SWAY&quot;</span><br><span class="line"></span><br><span class="line">connect-msolservice -credential $msolcred</span><br><span class="line"></span><br><span class="line"># 改行単位で UPN が記述されたユーザー一覧から取得</span><br><span class="line">$users &#x3D; New-Object System.Collections.ArrayList</span><br><span class="line">$list &#x3D; Get-Content &quot;UserList.txt&quot;</span><br><span class="line"></span><br><span class="line">foreach ($temp in $list) &#123;</span><br><span class="line">    $users &#x3D; $users + (Get-MsolUser -UserPrincipalName $temp)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"># ユーザー毎のライセンス&#x2F;サービスの確認と変更</span><br><span class="line">foreach ($user in $users) &#123;</span><br><span class="line">    write-host (&quot;Processing &quot; + $user.UserPrincipalName)</span><br><span class="line">    $licensetype &#x3D; $user | Select-Object -ExpandProperty Licenses | Sort-Object &#123; $_.Licenses &#125;</span><br><span class="line"></span><br><span class="line">    foreach ($license in $user.Licenses) &#123;</span><br><span class="line">        write-host (&quot; &quot; + $license.accountskuid)</span><br><span class="line"></span><br><span class="line">        $includeService &#x3D; $false</span><br><span class="line">        $disableplan &#x3D; @()</span><br><span class="line"></span><br><span class="line">        foreach ($row in $($license.ServiceStatus)) &#123;</span><br><span class="line">            if ( $row.ServicePlan.ServiceName -eq $service_name ) &#123; $includeService&#x3D;$true &#125;</span><br><span class="line">            if ( $row.ProvisioningStatus -eq &quot;Disabled&quot; -and $row.ServicePlan.ServiceName -ne $service_name) &#123;</span><br><span class="line">                $disableplan +&#x3D; $row.ServicePlan.ServiceName</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        # 指定したサービスが含まれる SKU の場合、現在の設定に加え、指定したサービスを無効化 (Disable)</span><br><span class="line">        if ($includeService) &#123;</span><br><span class="line">            $disableplan +&#x3D; $service_name</span><br><span class="line">            write-host (&quot; found SWAY service in &quot; + $license.accountskuid)</span><br><span class="line">            write-host (&quot; disabled services : &quot; + $disableplan )</span><br><span class="line">            $x &#x3D; New-MsolLicenseOptions -AccountSkuId $license.accountskuid -DisabledPlans $disableplan</span><br><span class="line">            Set-MsolUserLicense -UserPrincipalName $user.UserPrincipalName -LicenseOptions $x</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>&lt;スクリプトファイルの実行&gt;<br>スクリプトファイルを実行する前に、先ほど作成したユーザーリスト (<strong>UserList.txt</strong>) を ps1ファイルを保存したフォルダに格納します。(<strong>DisableSwayLicense_UserUnit.ps1</strong> と <strong>UserList.txt</strong> を同一ディレクトリに格納します。) その後、PowerShell を起動し、ps1 ファイルを保存したフォルダに移動し、下記の様に実行します。(下記は c:\temp 配下に ps1 ファイルを格納した場合の例です。)  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd c:\temp</span><br><span class="line">.\DisableSwayLicense_UserUnit.ps1</span><br></pre></td></tr></table></figure>
+
+<p>認証ダイアログが起動しますので、ご利用中のテナントの管理者アカウント、および、パスワードを入力します。  </p>
+<p>有効化処理の内容が表示されますので、PowerShell のプロンプトが戻るまで待ちます。  </p>
+<p>処理完了後、ブラウザにて Office 365 を表示していた場合は一度ブラウザを終了させ、再度 Office 365 にサインインします。  </p>
+<p>ユーザーのライセンス付与状況を確認し、Sway 製品のライセンスがオフに設定されていることを確認します。また、アプリケーション ランチャー上の Sway のタイルが表示されていないことを確認します。  </p>
+<p><strong>6. ユーザーリストをスクリプトファイルと別のディレクトリに格納して実行する方法</strong><br>ユーザーリストをスクリプトファイルと別のディレクトリに格納して実行する場合、スクリプトファイルの一部を編集する必要があります。スクリプトファイルにユーザーリストの絶対パスを記述します。  </p>
+<p>&lt;スクリプトファイルの編集&gt;<br>ps1 ファイル (<strong>EnableSwayLicense_UserUnit.ps1</strong>、もしくは、<strong>DisableSwayLicense_UserUnit.ps1</strong>) をメモ帳などのテキストエディタでひらき、8 行目に以下のコマンドがあることを確認します。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$list &#x3D; Get-Content &quot;UserList.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>コマンドのパラメータである、”<strong>UserList.txt</strong>“ を削除します。<br>なお、”<strong>UserList.txt</strong>“ を削除する際、前後のダブルクォーテーション (“) も削除します。  </p>
+<p>[3. ユーザーリストの作成] で作成したユーザーリストのパスをコピーします。エクスプローラーでユーザーリストが格納されているディレクトリ (フォルダ) に移動し、”<strong>UserList.txt</strong>“ のアイコンを [Shift] キーを押しながら右クリックします。ポップアップの一覧から [パスのコピー] を選択します。(クリップボードにパスがコピーされます。)  </p>
+<p>編集中のスクリプトファイルにもどり、先ほど削除した “<strong>UserList.txt</strong>“ の箇所に、上記でコピーしたパスを貼りつけます。貼り付けたパスの前後にダブルクォーテーション (“) が付いていることを確認します。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">例) $list &#x3D; Get-Content &quot;C:\Office365\Sway\UserList.txt&quot;</span><br></pre></td></tr></table></figure>
+
+<p>スクリプトファイルを保存して、テキストエディタをとじます。  </p>
+<p>以降のスクリプトファイルの実行手順は、上述 [4. PowerShell で指定ユーザーのみを有効化する方法]、[5. PowerShell で指定ユーザーのみを無効化する方法] のとおりです。  </p>
+<p><strong>7. 関連情報</strong><br>タイトル : Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20365%20%E3%81%AE%20Microsoft%20Forms%20%E3%82%92%20PowerShell%20%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E4%B8%80%E6%8B%AC%E3%81%A7%E6%9C%89%E5%8A%B9%E5%8C%96%E3%80%81%E7%84%A1%E5%8A%B9%E5%8C%96%20(%E5%81%9C%E6%AD%A2)%20%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について/</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghpd001dk8vs6hrrhkig/" data-id="cl0m7ghpd001dk8vs6hrrhkig" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m7ghpc001ck8vs7z6daa82/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m7ghol000ik8vs8v2raerl/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Excel 2010 以降で条件付き書式を設定したブックへのコピー &amp; ペーストに時間がかかる</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

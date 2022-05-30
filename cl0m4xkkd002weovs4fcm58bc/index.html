@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Windows Firewall が無効化されていると Office の保護ビューが開けない | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 4 月 17 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの西川 (直) です。   本記事では、Windows Firewall が無効化されていると Office の保護ビューが開けない現象について説明します。   現象   Office のドキュメントを開く際、以下のようなメッセージが表示">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows Firewall が無効化されていると Office の保護ビューが開けない">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4xkkd002weovs4fcm58bc/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 4 月 17 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの西川 (直) です。   本記事では、Windows Firewall が無効化されていると Office の保護ビューが開けない現象について説明します。   現象   Office のドキュメントを開く際、以下のようなメッセージが表示">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkkd002weovs4fcm58bc/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkkd002weovs4fcm58bc/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkkd002weovs4fcm58bc/image3.png">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-13T02:20:03.196Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m4xkkd002weovs4fcm58bc/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Windows Firewall が無効化されていると Office の保護ビューが開けない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m4xkkd002weovs4fcm58bc/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Windows Firewall が無効化されていると Office の保護ビューが開けない
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m4xkkd002weovs4fcm58bc/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 4 月 17 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポートの西川 (直) です。  </p>
+<p>本記事では、Windows Firewall が無効化されていると Office の保護ビューが開けない現象について説明します。  </p>
+<p><strong>現象</strong>  </p>
+<p>Office のドキュメントを開く際、以下のようなメッセージが表示され、保護ビューでドキュメントを開くことができません。</p>
+<p><img src="image1.png" alt="">  </p>
+<p><strong>保護ビューについて</strong>  </p>
+<p>保護ビューとは、安全でない可能性があると判断されるファイルを開く際、コンピューターを保護するため、安全なプレビュー画面で開く機能です。  </p>
+<p>保護ビューで開く際には、以下のようなメッセージが表示されます。  </p>
+<p><img src="image2.png" alt="">  </p>
+<p>保護ビューは、以下のような場合に有効になります。  </p>
+<ul>
+<li>インターネットから取得したファイル  </li>
+<li>インターネット一時フォルダなど、安全でない場所から開かれたファイル  </li>
+<li>Outlook の添付ファイルとして取得したファイル (送信元が安全ではないと定義されている場合)  </li>
+</ul>
+<p>なお、マクロ入りファイルを開く際に、以下のような、マクロが無効にされましたというメッセージが表示される場合があります。  </p>
+<p>これは、マクロは無効化されていますがファイルの編集は可能で、保護ビューで開いている状態ではありません。  </p>
+<p>そのため、本記事でご紹介するエラーメッセージが表示されるシナリオには該当しません。</p>
+<p><img src="image3.png" alt=""></p>
+<p>詳細は以下の資料をご参照ください。  </p>
+<p>保護ビューとは<br><a href="https://support.office.com/ja-jp/article/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/d6f09ac7-e6b9-4495-8e43-2bbcdbcb6653</a></p>
+<p><strong>現象が発生する環境</strong>  </p>
+<p>Windows 8、8.1、Windows 10、または、Windows 2012 ベースの OS<br>かつ<br>Office 2013、Office 2016 、またはOffice 365 Proplus クライアントアプリケーション  </p>
+<p>※ Windows 7、Office 2010 では発生しません。  </p>
+<p>かつ<br>Windows Firewall サービスが動作していない場合  </p>
+<p><span style="color:#ff0000">Windows Firewall サービスが動作している場合、コントロールパネル  - “Windows ファイアウォール” の “Windows ファイアウォールの有効化または無効化” により Windows ファイアウォールを無効化しても、本現象は発生しません。</span></p>
+<p><strong>理由</strong>  </p>
+<p>Office 2013 以降では、Windows 8 で導入されたプロセス分離環境であるアプリケーション コンテナーを利用し、よりセキュリティが強化された保護ビューで動作するようになっています。  </p>
+<p>アプリケーション コンテナーではサンドボックス環境を構築する際に Windows Firewall サービスの機能を利用するため、Windows Firewall サービスが停止している状態では保護ビューの生成に失敗します。</p>
+<p><strong>回避策</strong>  </p>
+<p>Windows Firewall サービス を有効にしていただくことで、回避が可能です。<br>なお、有効化には、管理者権限が必要となります。  </p>
+<p>1) Windows キー + R キーを押下し、ファイル名を指定して実行ダイアログ ボックスを開きます。<br>2) “Services.msc” を入力し、し、[ OK] をクリックします。<br>3) [サービス] ウィンドウで、 “Windows Firewall” の状態が “実行中” となっているかを確認します。<br>4) “実行中”ではない場合、ダブルクリックを押下し、プロパティ画面を表示します。<br>5) スタートアップの種類を “自動” とし、“開始” をクリックします。  </p>
+<p>- コマンドプロンプトを使用する方法  </p>
+<p>1) コマンドプロンプトを管理者として起動します。<br>2) “sc start mpssvc” と入力します。<br>3) 実行し、上記の “Services.msc” で、Windows Firewall が実行されていることを確認します。  </p>
+<p>また、保護ビューとして開かれる理由の一つとして、インターネットゾーンから取得したファイルを開こうとしている状況があります。<br>もし、社内 Web サイトから取得したファイルについて、オープン時に保護ビューでファイルが開かれる場合、その Web サイトがインターネットゾーンとして扱われている可能性が考えられます。<br>この場合、お使いの環境、状況に応じて、以下の手順でブラウザの設定を変更し、その Web サイトをローカルイントラネットゾーンとして取り扱われるようにしていただくことで、保護ビューで開かれる動作そのものを抑制することが可能です。  </p>
+<p>1) IE を起動し、歯車のアイコンから、インターネットオプションを開きます。<br>2) セキュリティタブを開きます。<br>3) ローカルイントラネットで、”サイト” をクリックし、”イントラネットのネットワークを自動的に検出する” にチェックをつけます。</p>
+<p>最後に、おすすめしませんが、保護ビューで開かないことで、このファイルが開けない問題を回避することも可能です。  </p>
+<p>&lt;保護ビューの無効化&gt;  </p>
+<p>1) Excel 等 Office アプリケーションを起動し、[ファイル]タブから “オプション” クリックします。<br>2) “セキュリティセンター” から “セキュリティセンターの設定” をクリックします。<br>3) “保護ビュー” から、環境の状況に応じて、チェックを外します。<br>4) OK をクリックし、設定を終了します。  </p>
+<p>&lt;信頼できる場所の追加&gt;  </p>
+<p>1) Excel 等 Office アプリケーションを起動し、[ファイル]タブから “オプション” クリックします。<br>2) “セキュリティセンター” から “セキュリティセンターの設定” をクリックします。<br>3) “信頼できる場所” から、“新しい場所の追加…” をクリックします。<br>4) 信頼できる場所として追加するフォルダのパスを追加します。例えば、以下のようなパスを追加します。<br>C:\Users\testuser\Documents\信頼済みフォルダ  </p>
+<p>5) OK をクリックし、設定を終了します。<br>6) 上で信頼できる場所として追加したフォルダに、保護ビューで開かれるファイルを移動します。<br>7) 信頼できる場所として追加したフォルダから、ファイルを開きます。  </p>
+<p><strong>関連資料</strong><br>Can’t preview Office documents in Outlook if Windows Firewall Service is disabled<br><a href="https://support.microsoft.com/en-us/help/2912722" target="_blank" rel="noopener">https://support.microsoft.com/en-us/help/2912722</a></p>
+<p>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkkd002weovs4fcm58bc/" data-id="cl0m4xkkd002weovs4fcm58bc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m4xkkc002ueovsf6mugor0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Windows と Office のバージョンによる組み合わせについて
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m4xkke002yeovs6w3g9fwj/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">“Microsoft Barcode Control” について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4xkk1002beovs87lwadzx/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
