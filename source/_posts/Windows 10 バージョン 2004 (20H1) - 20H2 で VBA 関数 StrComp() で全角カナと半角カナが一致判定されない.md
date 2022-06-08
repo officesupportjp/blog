@@ -1,7 +1,7 @@
 ---
 title: Windows 10 バージョン 2004 以降で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない
 date: 2020-11-12
-lastupdate: 2021-10-28
+lastupdate: 2022-06-08
 id: cl0m69xvc002t4cvs5918c1f6
 alias: /Windows 10 バージョン 2004 以降で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない/
 ---
@@ -15,7 +15,8 @@ alias: /Windows 10 バージョン 2004 以降で VBA 関数 StrComp() で全角
 <span style="color:#ff0000">**2021/10/18 Update**</span>  
 <span style="color:#339966">Windows 11 では修正済みであることを追記しました。</span>  
 
-  
+<span style="color:#ff0000">**2022/6/8 Update**</span>  
+<span style="color:#339966">Windows 10 向けの更新情報を追記しました。</span>   
   
 
 こんにちは、Office サポート チームの中村です。
@@ -25,7 +26,7 @@ alias: /Windows 10 バージョン 2004 以降で VBA 関数 StrComp() で全角
 **関連記事**
 
 Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する  
-[https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/](https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/)  
+[https://officesupportjp.github.io/blog/cl0m69xvc002u4cvsgc7a3bfp/](https://officesupportjp.github.io/blog/cl0m69xvc002u4cvsgc7a3bfp/)  
 
 #### **1\. 現象**
 
@@ -82,16 +83,33 @@ Windows 10 update history - Updates for Windows 10, version 21H1
 
 |**Symptom**|**Workaround**|
 |:---|:---|
-|Certain Japanese half-width Katakana and full-width Katakana characters that have a consonant mark aren’t interpreted as the same character. When you use the **CompareStringEx()** function with the _NORM\_IGNOREWIDTH_ flag to compare them, these characters are evaluated as different because of an issue in the sorting rule**.** This issue affects all the updates starting on June 9, 2020 for Windows 10, version 2004.|Currently, there is no workaround for this issue.|
+|Certain Japanese half-width Katakana and full-width Katakana characters that have a consonant mark aren’t interpreted as the same character. When you use the **CompareStringEx()** function with the _NORM\_IGNOREWIDTH_ flag to compare them, these characters are evaluated as different because of an issue in the sorting rule**.** This issue affects all the updates starting on June 9, 2020 for Windows 10, version 2004.|12/9/20:<br>  1. Open the Command Prompt window (cmd.exe) with elevated privileges.<br>  2. Run “reg add HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions /ve /d 0006020F /f”<br>  3. Restart the computer or processes to see the full effect.<br><br>  **Important** If you have not installed KB4586853 or later on the computer, setting an invalid value in this registry might prevent the computer from starting up.<br><br> This workaround reverts the National Language Support (NLS) sorting rule to version 6.2, which is used in Windows 10, version 1909 and earlier. When sharing data between systems, consider applying the workaround consistently. If you use this workaround, conduct sufficient testing and evaluations to mitigate problems caused by different sorting rule versions on multiple systems.|
 
-※ 次期リリース予定の Windows 10 バージョン 21H2 においても引き続きこの問題は発生します。
+※ Windows 10 バージョン 21H2 においても引き続きこの問題は発生します。
   
 
 #### **3\. 対応状況 / 回避策**
 
 Windows 11 では、NLS バージョン 6.4 に更新され、この問題は修正されています。  
-Windows 10 の現象が発生するバージョンでは、以下のいずれかの回避策で現象を回避できます。
-  
+Windows 10 向けには、問題が修正された NLS バージョン 6.4 を利用できるようにする更新プログラムが公開されました。
+
+**問題への対応を行った Windows 10 の更新プログラム**  
+June 2, 2022—KB5014023 (OS Builds 19042.1741, 19043.1741, and 19044.1741) Preview
+[https://support.microsoft.com/en-us/topic/65ac6a5d-439a-4e88-b431-a5e2d4e2516a](https://support.microsoft.com/en-us/topic/65ac6a5d-439a-4e88-b431-a5e2d4e2516a)
+
+この更新を適用すると、Windows 10 で NLS バージョン 6.4 を利用できるようになります。ただし、実際に 6.4 を利用するよう構成するには、以下のレジストリを設定する必要があります。
+
+キー : HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Nls\Sorting\Versions  
+名前 : (既定)  
+種類 : REG_DWORD  
+値 : 0x00060403 (16 進数)
+
+注意:  
+本レジストリの変更で NLS バージョンを 6.4 に変更した OS についてもサポートします。
+ただし、アプリケーションの実装やビジネスロジックによっては、ソートの整合が崩れたり、データが不正となる可能性がありますので、何か問題が発生してお問い合わせいただく場合には、NLS バージョンを 6.4 に変更して運用していることを担当エンジニアにお知らせください。
+
+
+ 更新プログラムの適用以外には、後述のいずれかの回避策で現象を回避できます。 
 
 **a.** **比較対象の文字列を全角、または半角に統一する**
 
@@ -141,12 +159,13 @@ Access : MSACCESS.EXE
 
 **d. レジストリを使用して NLS バージョンを以前のバージョン (6.2) に変更する**
 
-システム全体で影響を受けるため、Office 以外のアプリケーションも以前の NLS バージョンを使用するようになります。アプリケーションの実装やビジネスロジックによっては、ソートの整合が崩れたり、データが不正となる可能性があります。
+システム全体で影響を受けるため、Office 以外のアプリケーションも以前の NLS バージョンを使用するようになります。アプリケーションの実装やビジネスロジックによっては、ソートの整合が崩れたり、データが不正となる可能性があります。  
+また実際に、「令和」合字データのソートや、Windows ライセンス認証で問題が生じることが確認されていますので、d 案を採用いただくよりは、先述の対応を行った更新プログラムの適用が可能であれば、NLS バージョン 6.4 への変更をお勧めします。
 
 c. / d. の具体的な設定方法や注意点については、既に公開された Access フォームの現象をご案内する以下のフォーラム記事で説明していますので、こちらを参照してください。
 
 Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する  
-[https://officesupportjp.github.io/blog/Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/](https://officesupportjp.github.io/blog/Windows%2010%20%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%202004%20(20H1)%20-%2020H2%20%E4%B8%8A%E3%81%A7%20%E5%8D%8A%E8%A7%92%E3%82%AB%E3%83%8A%E3%81%AE%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E5%90%AB%E3%82%93%E3%81%A0%20Access%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%A7%E3%82%A8%E3%83%A9%E3%83%BC%E3%81%8C%E7%99%BA%E7%94%9F%E3%81%99%E3%82%8B/)
+[https://officesupportjp.github.io/blog/cl0m69xvc002u4cvsgc7a3bfp/](https://officesupportjp.github.io/blog/cl0m69xvc002u4cvsgc7a3bfp/)  
 
 ※ 参照箇所  
 c 案 : 3-1. Access アプリケーション観点 - Access の EXE (MSACCESS.EXE) について、"Windows 8" の互換設定を行う  
