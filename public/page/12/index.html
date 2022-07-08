@@ -131,7 +131,7 @@ Office は STA (Single-Threaded Apartment) モデルで動作しているため�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl4hy59jz001rusvsh9rl1w7s" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl0vs56vk001tpwu8hvwc1zik" class="article-share-link">Share</a>
       
       
     </footer>
@@ -181,7 +181,7 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="cl4hy59k20020usvs9s1rb7v3" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="cl0vs56vo0021pwu84c9x5ut4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -233,7 +233,7 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/" data-id="cl4hy59iz000kusvs84np5x9f" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/" data-id="cl0vs56to000kpwu89ye7eyav" class="article-share-link">Share</a>
       
       
     </footer>
@@ -285,7 +285,7 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10ddh000t90vsbpgv3r9l/" data-id="cl4hy59jg000tusvsd96n1st5" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10ddh000t90vsbpgv3r9l/" data-id="cl0vs56uc000upwu8cqfxa916" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +337,7 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/" data-id="cl4hy59jz001qusvs4zzl9a0v" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/" data-id="cl0vs56vi001mpwu881rofkwm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -387,7 +387,57 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001e90vs1mrp11zq/" data-id="cl4hy59jv001husvs56jgeb09" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001e90vs1mrp11zq/" data-id="cl0vs56vc001cpwu863uzd9if" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date">
+  <time datetime="2019-02-07T15:00:00.000Z" itemprop="datePublished">2019-02-08</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n10de1001d90vs6xzb5ynb/">Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date-single">    
+        
+    <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
+こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化/無効化する方法をご案内いたしました。本記事では、テナント全体のユーザーではなく、指定したユーザーのみのライセンスを有効化/無効化する方法をご案内いたします。  
+目次  
+1. Sway のライセンスについて2. PowerShell のインストール3. ユーザーリストの作成4. PowerShell で指定ユーザーのみを有効化する方法5. PowerShell で指定ユーザーのみを無効化する方法6. ユーザーリストをスクリプト...
+        <p class="article-more-link">
+          <a href="/blog/cl0n10de1001d90vs6xzb5ynb/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001d90vs6xzb5ynb/" data-id="cl0vs56vd001dpwu8daku8wab" class="article-share-link">Share</a>
       
       
     </footer>
@@ -439,57 +489,7 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001b90vsbowhgnig/" data-id="cl4hy59jt001cusvsdnx0ck2j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date">
-  <time datetime="2019-02-07T15:00:00.000Z" itemprop="datePublished">2019-02-08</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0n10de1001d90vs6xzb5ynb/">Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date-single">    
-        
-    <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
-こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化/無効化する方法をご案内いたしました。本記事では、テナント全体のユーザーではなく、指定したユーザーのみのライセンスを有効化/無効化する方法をご案内いたします。  
-目次  
-1. Sway のライセンスについて2. PowerShell のインストール3. ユーザーリストの作成4. PowerShell で指定ユーザーのみを有効化する方法5. PowerShell で指定ユーザーのみを無効化する方法6. ユーザーリストをスクリプト...
-        <p class="article-more-link">
-          <a href="/blog/cl0n10de1001d90vs6xzb5ynb/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001d90vs6xzb5ynb/" data-id="cl4hy59ju001gusvsfvzqga6p" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001b90vsbowhgnig/" data-id="cl0vs56ve001fpwu860tlhd1u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -543,7 +543,7 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcu000j90vsghpb14v9/" data-id="cl4hy59iq000gusvsavp89usn" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcu000j90vsghpb14v9/" data-id="cl0vs56to000jpwu87945hpbw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -596,7 +596,7 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001a90vs28153y7h/" data-id="cl4hy59jn0015usvsf327exj9" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001a90vs28153y7h/" data-id="cl0vs56v90017pwu8cnqs517q" class="article-share-link">Share</a>
       
       
     </footer>
