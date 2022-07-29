@@ -1,7 +1,7 @@
 ---
 title: インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)
 date: 2022-02-18
-lastupdate: 2022-07-08
+lastupdate: 2022-07-29
 tags: 
 - マクロ
 - MC322553
@@ -21,9 +21,14 @@ id: cl0m4f5o1003504vsa5tp25c2
 <span style="color:#ff0000">**2022/07/08 Update**</span>  
 <span style="color:#339966">最新チャネルへのリリースがロールバックされたため、冒頭の記載を変更しました。</span>  
 
+<span style="color:#ff0000">**2022/07/29 Update**</span>  
+<span style="color:#339966">最新チャネルへのリリース再開されたため、記載を変更しました。</span>  
+
+<br>
+
 こんにちは、Office サポート チームです。
 
-本記事では、2022 年 4 月 より Microsoft 365 Apps への展開が開始されるインターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について説明します。本記事に記載の既定の動作変更は 7 月 6 日に最新チャネルにおいてリリースが中止され、ロールバックが実施されました。MC322553 も本内容で更新されています。しかしながら、最新チャネル (プレビュー) においては引き続き本既定の動作変更が適用されているため、本ブログにて掲載を継続します。なお、リリースの状況は 【前提】に記載の公開情報より確認可能です。
+本記事では、2022 年 4 月 より Microsoft 365 Apps への展開が開始されるインターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について説明します。本記事に記載の既定の動作変更は 7 月 27 日 (米国時間) に最新チャネルにおいてリリースが開始されました。
 
 <br>
 
@@ -39,6 +44,8 @@ id: cl0m4f5o1003504vsa5tp25c2
 
 タイトル : Helping users stay safe: Blocking internet macros by default in Office  
 アドレス  : [https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805](https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805) (英語版)
+
+上記公開情報 / ブログ記事には最新状況の更新がされている場合があるため、適宜ご確認ください。
 
 <br>
 
@@ -74,11 +81,9 @@ id: cl0m4f5o1003504vsa5tp25c2
 - Microsoft 365 Apps 月次エンタープライズ チャネル
 - Microsoft 365 Apps 半期エンタープライズ チャネル (プレビュー)
 - Microsoft 365 Apps 半期エンタープライズ チャネル
-- Office LTSC
-- Office 2021
-- Office 2019
-- Office 2016
-- Office 2013
+- 製品版 Office 2021
+- 製品版 Office 2019
+- 製品版 Office 2016
 
 <br>
 
