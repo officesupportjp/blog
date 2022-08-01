@@ -6,7 +6,7 @@
   <link href="/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2022-07-08T08:26:47.768Z</updated>
+  <updated>2022-08-01T13:40:47.774Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ストア アドインを利用したファイルを一元展開で利用できるようになりました</title>
+    <link href="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/"/>
+    <id>https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/</id>
+    <published>2022-08-01T15:00:00.000Z</published>
+    <updated>2022-08-01T13:40:47.774Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。</p><p>以前の Microsoft 365 Apps では、Office ストアから入手した Web アドインの情報が埋め込まれた Office ファイルを、ストアの利用が禁止されているユーザー環境で開くと、該当の Web アドインが一元展開から配信されていたとしてもアドインが利用できませんでした。Microsoft 365 Apps でこの動作が改善され、このようなシナリオでも利用が可能となりましたので、本記事では、この改善の詳細について説明します。</p><h1 id="【前提】"><a href="#【前提】" class="headerlink" title="【前提】"></a>【前提】</h1><p>本記事に記載の “一元展開” とは、<a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 管理センター</a> より実施可能な設定で以下公開情報に掲載されています。  </p><p>タイトル : アドインの一元展開が組織で機能するかどうかを確認する<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/centralized-deployment-of-add-ins" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/centralized-deployment-of-add-ins</a>    </p><p>タイトル : Microsoft 365 管理センターにアドインをデプロイする<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-deployment-of-add-ins" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-deployment-of-add-ins</a>    </p><p>上記に従って一元展開をすると以下のように [Office アドイン] 画面の [管理者による管理] タブから指定したアドインを利用できるようになります。</p><p><img src="Office_Store_Admin_Managed.png" alt=""></p><p>特定の Web アドインのみの利用を許可したいテナントで、一元展開を活用して利用するアドインのみを展開し、Office ストアの利用を禁止する以下の 1) 2) のいずれかの設定も併せて適用するという利用方法が多く採用されています。</p><h3 id="1-Microsoft-365-管理センターでストアを禁止する設定"><a href="#1-Microsoft-365-管理センターでストアを禁止する設定" class="headerlink" title="1) Microsoft 365 管理センターでストアを禁止する設定"></a>1) Microsoft 365 管理センターでストアを禁止する設定</h3><p>Microsoft 365 管理センターにおいてストアを禁止する手順は以下となります。 後述する 2) の場合は、デスクトップ アプリケーションのみが対象となりますが、本設定は Office for the Web (Web 版 Office) も対象となります。</p><h4 id="lt-設定手順-gt"><a href="#lt-設定手順-gt" class="headerlink" title="&lt;設定手順&gt;"></a>&lt;設定手順&gt;</h4><ol><li><a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 管理センター</a> へグローバル管理者などでサインインします。</li><li>[設定] - [組織設定] をクリックします。</li><li>[組織設定] 画面 - [サービス] タブ に表示されている [ユーザーが所有するアプリとサービス] をクリックします。</li><li>表示された設定で [ユーザーが Office Store にアクセスすることを許可する] のチェックを外し、[保存] をクリックします。  </li></ol><p>なお、本設定を適用すると、[Office アドイン] 画面の [ストア] タブに Office ストアが利用できない旨のメッセージが表示され、ストアが利用禁止になります。</p><br><h3 id="2-ポリシーでストアを禁止する設定"><a href="#2-ポリシーでストアを禁止する設定" class="headerlink" title="2) ポリシーでストアを禁止する設定"></a>2) ポリシーでストアを禁止する設定</h3><p>Office 管理用テンプレートのグループ ポリシーなどを利用し以下を設定すると [Office アドイン] 画面の [ストア] タブが非表示になり、ストアから入手した Web アドインが利用できなくなります。</p><h4 id="lt-グループ-ポリシー設定-gt"><a href="#lt-グループ-ポリシー設定-gt" class="headerlink" title="&lt;グループ ポリシー設定&gt;"></a>&lt;グループ ポリシー設定&gt;</h4><p>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Office 2016] - [アプリケーション設定] -[セキュリティ] - [セキュリティ センター]<br>&nbsp;- [Office ストアのブロック] : 有効  </p><p>なお、上記ポリシーは Office デスクトップ アプリケーションの [トラスト センターの設定] - [信頼できるアドイン カタログ] - [Office ストアの Web アドインの起動を許可しない。] の強制的にチェック有りにし、変更不可とする設定となります。</p><h1 id="【改善内容】"><a href="#【改善内容】" class="headerlink" title="【改善内容】"></a>【改善内容】</h1><p>上記【前提】のように、ストアを利用禁止して一元展開で一部アドインを展開している環境において、以前は ストアから入手したアドインを利用している Office ファイルを開いた場合、表示されたアドインには、以下のような画面が表示され、アドインを利用することができませんでした。</p><p><img src="Office_Store_Addin_Blocked1.png" alt=""></p><p><img src="Office_Store_Addin_Blocked2.png" alt=""></p><p>これは、Office ファイルの作成時にどこからアドインが挿入されたがファイル内に記録されているためです。従来は、同じアドインが一元展開で利用できる状況でも、ストアから挿入したアドインとして記録されている場合は、一元展開のアドインが使われることはありませんでした。  </p><p>実運用で特にこの状況に直面する例として、Power Apps や Power BI、Dynamics のサイトから Office ファイルにデータを埋め込んで出力するシナリオの報告を多く頂いていました。これらのシナリオでは、ストア アドインの情報がファイルに埋め込まれます。</p><h4 id="lt-Power-Apps-gt"><a href="#lt-Power-Apps-gt" class="headerlink" title="&lt;Power Apps&gt;"></a>&lt;Power Apps&gt;</h4><p>タイトル : テーブル データを Excel で開く<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/powerapps/maker/data-platform/data-platform-excel-addin" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/powerapps/maker/data-platform/data-platform-excel-addin</a><br>該当箇所 : テーブル データを Excel で開く　　</p><h4 id="lt-Power-BI-gt"><a href="#lt-Power-BI-gt" class="headerlink" title="&lt;Power BI&gt;"></a>&lt;Power BI&gt;</h4><p>タイトル : PowerPoint にライブ Power BI レポート ページを追加する<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=export" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=export</a><br>該当箇所 : “[エクスポート] オプションを使用する” に関する記述  </p><h4 id="lt-Dynamics-365-gt"><a href="#lt-Dynamics-365-gt" class="headerlink" title="&lt;Dynamics 365&gt;"></a>&lt;Dynamics 365&gt;</h4><p>- Excel<br>タイトル : Excel 用 Microsoft Dynamics AX アドインの使用について<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-excel" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-excel</a><br>- Word<br>タイトル : Word 用 Microsoft Dynamics AX アドインの使用について<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-word" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-word</a><br>※ Dynamics については、設定次第で一元展開したアドインを利用する設定も可能ですが、既定ではストア アドインを利用します。</p><p>本記事の改善によって、ファイルにストアからダウンロードしたアドインの情報が記録されていたとしても、一元展開で同じアドインを展開していれば、上記画面が表示されることなく、自動的に 一元展開されたアドインを利用することが可能になりました。</p><p>また同様に、従来はテナント A で一元展開されたアドインを用いて作成したファイルをテナント B で開いた場合も、テナント A の一元展開アドインの情報が記録されているため、以下画面が表示されて利用ができませんでした。</p><p><img src="Admin_Managed_Addin_Blocked.png" alt=""></p><p>今回の改善は同じアドインであれば、展開方法に依存せず利用できるというものです。そのため、こちらのケースでも本改善によって自動的にストア アドインやテナント B の一元展開アドインを利用できます。</p><h1 id="【利用可能な-Office-バージョン】"><a href="#【利用可能な-Office-バージョン】" class="headerlink" title="【利用可能な Office バージョン】"></a>【利用可能な Office バージョン】</h1><p>上記機能が利用可能な Office バージョンは、Microsoft 365 Apps の各更新チャネルにおいてそれぞれ以下が対象となります。</p><ul><li>Microsoft 365 Apps 最新チャネル - バージョン 2107 (ビルド 14228.20204) 及びそれ以降</li><li>Microsoft 365 Apps 月次エンタープライズ チャネル - バージョン 2107 (ビルド 14228.20324) 及びそれ以降</li><li>Microsoft 365 Apps 半期エンタープライズ チャネル - バージョン 2202 (ビルド 14931.20604) 及びそれ以降</li></ul><br><p>今回の投稿は以上です。</p><br><p><strong>本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;こんにちは、Office サポート チームです。&lt;/p&gt;
+&lt;p&gt;以前の Microsoft 365 Apps では、Office ストアから入手した Web アドインの情報が埋め込まれた Office ファイルを、ストアの利用が禁止されているユーザー環境で開くと、該当の W
+      
+    
+    </summary>
+    
+    
+    
+      <category term="アドイン" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/"/>
+    
+      <category term="一元展開" scheme="https://officesupportjp.github.io/blog/tags/%E4%B8%80%E5%85%83%E5%B1%95%E9%96%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する</title>
@@ -469,31 +496,6 @@
         &lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;/p&gt;
 &lt;p&gt;今回の投稿では、MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について説明します。&lt;/p&gt;
 &lt;p&gt;&lt;a 
-      
-    
-    </summary>
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Office 展開ツール (16.0.12827.20268) で RemoveMSI 属性を使用すると 30041-1039-30050-1039 等のエラーメッセージが表示される</title>
-    <link href="https://officesupportjp.github.io/blog/cl0m69xux00254cvs8a1nb7qn/"/>
-    <id>https://officesupportjp.github.io/blog/cl0m69xux00254cvs8a1nb7qn/</id>
-    <published>2020-09-14T15:00:00.000Z</published>
-    <updated>2022-03-18T00:57:19.329Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。</p><p>表題の件について、既知の事象が報告されておりますのでご案内いたします。</p><p><strong>【事象】</strong>  </p><p>Office 展開ツール (16.0.12827.20268) で 30041-1039 や 30050-1039 のエラーメッセージが表示される</p><p><strong>【説明】</strong>  </p><p>本事象は 2020/6/9 にリリースされた Office 展開ツール (Version 16.0.12827.20268) に起因した事象である可能性がございます。</p><p>当該バージョンの Office 展開ツールでは、RemoveMSI 属性 で Office 2007 製品もアンインストールが可能となりましたが、<br>バージョン番号が “12” から始まる一部の MSI インストール形式の製品がインストールされている環境で、アンインストールが失敗しエラーとなる事象が発生しております。</p><div style="color:#ff0000">本事象は、最新の Office 展開ツールで改善されておりますので、最新の Office 展開ツールをご利用いただきますようお願いいたします。<p>Title : Release history for Office Deployment Tool<br>URL : <a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/officeupdates/odt-release-history</a><br>-—————抜粋開始—————-  </p><p>October 29, 2020<br>Version 16.0.13328.20292 (setup.exe version 16.0.13328.20290)<br>• Resolves an issue where certain Office 2007 products may unexpectedly block installation when using RemoveMSI  </p><p>-—————抜粋終了—————-  </p><p>Title : Office Deployment Tool<br>URL : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=49117" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=49117</a>  </p></div><p><del>本不具合については、リリース時期はまだ未定ですが、次期バージョンの ODT で修正される見込みとなっております</del></p><p><del><strong>【回避策】</strong></del>  </p><p><del>以下の何れかの回避策をご実施いただけますようお願いいたします。</del></p><p><del>・Office 2007 製品をコントロールパネルからアンインストールするか、以下の資料の OffScrub07.vbs により Office 2007 製品をアンインストールしてください。</del>  </p><p><del><a href="https://github.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/tree/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls" target="_blank" rel="noopener">https://github.com/OfficeDev/Office-IT-Pro-Deployment-Scripts/tree/master/Office-ProPlus-Deployment/Remove-PreviousOfficeInstalls</a></del>  </p><p><del>・RemoveMSI 属性を削除してください</del></p><p><del><strong>【参考】</strong></del>  </p><p><del>Release history for Office Deployment Tool</del></p><p><del><a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener"></a><a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/officeupdates/odt-release-history</a></del>  </p><p><strong>2020/10/15 :</strong> <strong>回避策について説明を追記しました。</strong></p><p><strong>2020/10/30 :</strong> <strong>回避策について対応バージョンを変更しました。</strong></p><p>今回の投稿は以上です。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;/p&gt;
-&lt;p&gt;表題の件について、既知の事象が報告されておりますのでご案内いたします。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;【事象】&lt;/strong&gt;  &lt;/p&gt;
-&lt;p&gt;Office 展開ツール (16.0.12827.20
       
     
     </summary>
