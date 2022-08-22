@@ -90,57 +90,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mdnodx002r5ovsfzvw5fh5/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mdnodx002r5ovsfzvw5fh5/">VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mdnodx002r5ovsfzvw5fh5/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 2 月 16 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発 サポート チームの多田です。
-今回は、.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降では使用できない件、およびその対処策についてご案内します。
-はじめにVSTOソリューションをインストール時や、初回起動時にユーザーに信頼するかどうかの確認ダイアログを表示させたくない、といった理由から、VSTO ソリューションへの信頼をあらかじめ付与したい場合があります。信頼を付与する方法として、従来、VSTO では UserInclusionList クラスおよび AddInSecurityEntryクラスが用意されていました。
-参考) 方法: 信頼のリストのエントリを追加...
-        <p class="article-more-link">
-          <a href="/blog/cl0mdnodx002r5ovsfzvw5fh5/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodx002r5ovsfzvw5fh5/" data-id="cl450n6w0002tk03par5pad41" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/cl0mdnody002s5ovs5vpp069a/" class="article-date">
@@ -185,7 +134,7 @@ OS が Windows...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl450n6w4002xk03pewqo219h" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl703atiy002te0to5aenbga3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,7 +188,57 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl450n6wp0032k03pd8mh6d8y" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl703atj0002we0to7znf0c0m" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mc9o200021b0vscp6jdedg/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mc9o200021b0vscp6jdedg/">Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mc9o200021b0vscp6jdedg/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 3 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office 開発 サポート チームの中村です。
+今回の投稿は、前回に引き続き、リボンのカスタマイズについての投稿です。今回は、前回の投稿で紹介した 「a. OpenXML 形式のファイルにカスタム XML を追加してカスタマイズを行う」 方法について、サンプルの作成を通して手順とポイントの解説をしていきます。
+ファイルにカスタム XML を追加してリボンをカスタマイズする前回の投稿で説明したように、Excel, Word, PowerPoint の Office 2007 形式のファイルは Open XML 構造になっています。Open XML ファイル フォーマットでは、ファイル内容が記述された xml ファイルと、それらの関...
+        <p class="article-more-link">
+          <a href="/blog/cl0mc9o200021b0vscp6jdedg/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o200021b0vscp6jdedg/" data-id="cl703atjp0039e0toemve5w3y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -290,7 +289,7 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl450n6p90004k03pbtaldd7s" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl703atft0004e0to8jjrcaky" class="article-share-link">Share</a>
       
       
     </footer>
@@ -340,7 +339,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb79f0006nwvs973z6w4v/" data-id="cl450n6pd0005k03pe5todgkf" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb79f0006nwvs973z6w4v/" data-id="cl703atg40007e0to8ushanqy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -389,7 +388,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ai0013nwvs9tsk91ry/" data-id="cl450n6re0013k03pd3usfdqh" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ai0013nwvs9tsk91ry/" data-id="cl703athi0012e0todp1qfhtj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -441,7 +440,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b6001vnwvs3rv43evy/" data-id="cl450n6sx001uk03p3kd1c4fg" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b6001vnwvs3rv43evy/" data-id="cl703ati6001ue0toe9asbq21" class="article-share-link">Share</a>
       
       
     </footer>
@@ -492,58 +491,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="cl450n6t0001vk03pd53dfjt1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date">
-  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mfb7b8001xnwvs5pzxb66j/">Office サーバー サイド オートメーションの代替案について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date-single">    
-    
-    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
-こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
-今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
-タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
-上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
-        <p class="article-more-link">
-          <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b8001xnwvs5pzxb66j/" data-id="cl450n6t3001wk03p0bn0h2jj" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="cl703ati7001ve0to94e7fta6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -595,7 +543,58 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl450n6t5001xk03p5jk4hjvy" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl703ati8001we0to3s5b2j8h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date">
+  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mfb7b8001xnwvs5pzxb66j/">Office サーバー サイド オートメーションの代替案について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date-single">    
+    
+    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
+こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
+今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
+タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
+上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
+        <p class="article-more-link">
+          <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b8001xnwvs5pzxb66j/" data-id="cl703atig0025e0todzfm6x04" class="article-share-link">Share</a>
       
       
     </footer>

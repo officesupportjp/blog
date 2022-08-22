@@ -90,9 +90,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-(WebAPI)OAuth Bearer Token (Access Token) の取得方法について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cl0m8t2aa00013gvsa2mr8xj5/" class="article-date">
+    <a href="/blog/cl0m8t2ac00023gvs6bwo9tp2/" class="article-date">
   <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
 </a>
     <!--  -->
@@ -104,14 +104,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0m8t2aa00013gvsa2mr8xj5/">(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード</a>
+      <a class="article-title" href="/blog/cl0m8t2ac00023gvs6bwo9tp2/">(WebAPI)OAuth Bearer Token (Access Token) の取得方法について</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/cl0m8t2aa00013gvsa2mr8xj5/" class="article-date-single">    
+        <a href="/blog/cl0m8t2ac00023gvs6bwo9tp2/" class="article-date-single">    
     
     <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
     
@@ -120,20 +120,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2016 年 12 月 29 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+        (※ 2016 年 12 月 13 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
 こんにちは、Office Developer サポートの森　健吾 (kenmori) です。
-今回の投稿では、Microsoft Graph – OneDrive API を実際に C# で開発するエクスペリエンスをご紹介します。
-ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。本投稿では、現実的な実装シナリオを重視するよりも、OneDrive API を理解するためになるべくシンプルなコードにすることを心掛けています。
-例外処理なども含めていませんので、実際にコーディングする際には、あくまでこのコードを参考する形でご検討ください。
-事前準備
-以前の投...
+今回の投稿では、Access Token を取得する簡単なツールの作成方法をご紹介します。
+開発およびデバッグを進める上で、以下のように Azure AD にアプリケーションを登録し、ADAL (ライブラリ) を使用した C# アプリケーションを開発しておくことで、アクセス トークンを常に取得できる状況にしておくと便利だと思います。
+今回ご紹介する方法は、たくさんあるうちの 1 つの方法ですが、この手法に慣れていない方を対象に可能な限り簡略化した手順にさせていただきましたので、是非ご参考にしてください。
+1. Azure Portal 側の操作1) ...
         <p class="article-more-link">
-          <a href="/blog/cl0m8t2aa00013gvsa2mr8xj5/#more">Read More</a>
+          <a href="/blog/cl0m8t2ac00023gvs6bwo9tp2/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2aa00013gvsa2mr8xj5/" data-id="cl450n6ov0001k03p1ebihn34" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/" data-id="cl703atfk0001e0to56vfezob" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m8t2a400003gvsgcr96w6h/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m8t2a400003gvsgcr96w6h/">(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m8t2a400003gvsgcr96w6h/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office Developer サポートの森　健吾 (kenmori) です。
+今回の投稿では、Microsoft Graph – Excel REST API を使用して、指定されたアドレスの Range オブジェクトを操作するプログラムを、実際に C# で開発するエクスペリエンスをご紹介します。
+ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。前回の OneDrive API のウォークスルー同様、本投稿では、現実的な実装シナリオを重視するよりも、Excel REST API を理解するためになるべくシンプルなコードにすることを心掛...
+        <p class="article-more-link">
+          <a href="/blog/cl0m8t2a400003gvsgcr96w6h/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/" data-id="cl703atfo0002e0toearq4l1p" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,59 +235,7 @@ Microsoft Graph は 1 つのエンドポイントを介して複数の API を O
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/" data-id="cl450n6oz0002k03p01b04rta" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-(WebAPI)OAuth Bearer Token (Access Token) の取得方法について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0m8t2ac00023gvs6bwo9tp2/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0m8t2ac00023gvs6bwo9tp2/">(WebAPI)OAuth Bearer Token (Access Token) の取得方法について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0m8t2ac00023gvs6bwo9tp2/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2016 年 12 月 13 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office Developer サポートの森　健吾 (kenmori) です。
-今回の投稿では、Access Token を取得する簡単なツールの作成方法をご紹介します。
-開発およびデバッグを進める上で、以下のように Azure AD にアプリケーションを登録し、ADAL (ライブラリ) を使用した C# アプリケーションを開発しておくことで、アクセス トークンを常に取得できる状況にしておくと便利だと思います。
-今回ご紹介する方法は、たくさんあるうちの 1 つの方法ですが、この手法に慣れていない方を対象に可能な限り簡略化した手順にさせていただきましたので、是非ご参考にしてください。
-1. Azure Portal 側の操作1) ...
-        <p class="article-more-link">
-          <a href="/blog/cl0m8t2ac00023gvs6bwo9tp2/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/" data-id="cl450n6p20003k03p593j7pyi" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/" data-id="cl703atfq0003e0to1qg8dyss" class="article-share-link">Share</a>
       
       
     </footer>
@@ -288,7 +285,7 @@ Microsoft Graph は 1 つのエンドポイントを介して複数の API を O
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ag00043gvs6dpf43ay/" data-id="cl450n6pf0006k03pdv67bti6" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ag00043gvs6dpf43ay/" data-id="cl703atfz0005e0to8mqlf9kd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -342,7 +339,7 @@ Microsoft Graph は 1 つのエンドポイントを介して複数の API を O
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0l000bb0vsf8n5en1k/" data-id="cl450n6pu000bk03pgbotel7p" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0l000bb0vsf8n5en1k/" data-id="cl703atgi000be0togxjlasw7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -393,59 +390,7 @@ Microsoft Graph は 1 つのエンドポイントを介して複数の API を O
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/" data-id="cl450n6q6000ik03p2bed9w9q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Excel の CodeName プロパティが取得できない動作" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mc9o14000tb0vs85lvc2xs/">Excel の CodeName プロパティが取得できない動作</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 2 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発 サポート チームの中村です。
-今回は、Excel の CodeName プロパティの動作について、開発時に気付きづらい動作上の注意点を記載します。この状況に直面した開発者の皆様へのヒントになれば幸いです。
-Excel をオートメーションするとき、ブックやシートを特定するために、CodeName プロパティを使用できます。CodeName プロパティは、Visual Basic Editor (VBE) のプロパティ ウィンドウの [(オブジェクト名)] で確認できる値です。
-Excel の CodeName プロパティは、以下の 3 つのオブジェクトに用意されています。
-タイトル : Workbook.CodeNa...
-        <p class="article-more-link">
-          <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o14000tb0vs85lvc2xs/" data-id="cl450n6qu000uk03pdo3fce3g" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/" data-id="cl703atgn000ee0to7zjuan6t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -497,7 +442,7 @@ Excel には、SpecialCells メソッドという、引数に指定した条件�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/" data-id="cl450n6qy000vk03pfl3p7xb8" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/" data-id="cl703athc000ve0to58mjh3ta" class="article-share-link">Share</a>
       
       
     </footer>
@@ -548,7 +493,59 @@ Excel には、SpecialCells メソッドという、引数に指定した条件�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o17000zb0vs3hta6j0c/" data-id="cl450n6r6000yk03pdi1m0dt2" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o17000zb0vs3hta6j0c/" data-id="cl703athe000we0toa19s7ctm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Excel の CodeName プロパティが取得できない動作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mc9o14000tb0vs85lvc2xs/">Excel の CodeName プロパティが取得できない動作</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 2 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+今回は、Excel の CodeName プロパティの動作について、開発時に気付きづらい動作上の注意点を記載します。この状況に直面した開発者の皆様へのヒントになれば幸いです。
+Excel をオートメーションするとき、ブックやシートを特定するために、CodeName プロパティを使用できます。CodeName プロパティは、Visual Basic Editor (VBE) のプロパティ ウィンドウの [(オブジェクト名)] で確認できる値です。
+Excel の CodeName プロパティは、以下の 3 つのオブジェクトに用意されています。
+タイトル : Workbook.CodeNa...
+        <p class="article-more-link">
+          <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o14000tb0vs85lvc2xs/" data-id="cl703athf000ye0to3qyhfvo6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -599,7 +596,7 @@ Office 2016 には色々なラ...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o1b0014b0vsbsrk3ew0/" data-id="cl450n6rf0014k03p0ehualo4" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o1b0014b0vsbsrk3ew0/" data-id="cl703athh0011e0toea748zve" class="article-share-link">Share</a>
       
       
     </footer>

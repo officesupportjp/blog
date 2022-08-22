@@ -90,9 +90,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Access 2016 のリボンをカスタマイズする" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Access でメモリ不足エラーが発生する現象の対処策について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cl0m7ghok000hk8vs3g1i3uwj/" class="article-date">
+    <a href="/blog/cl0m7ghoi000fk8vs8yjpdr8b/" class="article-date">
   <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
 </a>
     <!--  -->
@@ -104,14 +104,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0m7ghok000hk8vs3g1i3uwj/">Access 2016 のリボンをカスタマイズする</a>
+      <a class="article-title" href="/blog/cl0m7ghoi000fk8vs8yjpdr8b/">Access でメモリ不足エラーが発生する現象の対処策について</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/cl0m7ghok000hk8vs3g1i3uwj/" class="article-date-single">    
+        <a href="/blog/cl0m7ghoi000fk8vs8yjpdr8b/" class="article-date-single">    
     
     <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
     
@@ -120,70 +120,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2017 年 12 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office サポート チームです。  
-ユーザー単位で Access 2016 自体の組み込みのリボンを非表示にするには、[Access のオプション] (※ 1) で設定可能ですが、ファイル単位で変更する場合、RibbonXML を利用します。
-本記事では、Access 2016 で .accdb ファイル毎に組み込みのリボンを非表示にする方法を説明します。  
-※ 1. [Access のオプション] - [リボンのユーザー設定] で非表示にするリボンをチェックオフします。
-組み込みのリボンを非表示にする方法Access の起動時にカスタマイズされたリボンを読み込むには、その設定を USysRibbons という名前のテーブルに保存する必要があ...
+        (※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office サポート チームです。
+Access や Access ODBC/OLEDBを使用したプログラムでは、mdb/accdb ファイル上のテーブルへレコードを追加/変更/削除を行うことが可能です。
+本稿では、Access および Access ODBC/OLEDBを使用したプログラムから、mdb/accdb ファイル内のテーブルにレコードの追加/更新/削除を繰り返し実施した際にメモリ不足が生じる現象の対処方法をご案内します。
+現象Access および Access ODBC/OLEDBを使用したプログラムで mdb/accdb ファイル内のテーブルに連続したレコードを追加/更新/削除を行うと、Access および Access ODBC/OL...
         <p class="article-more-link">
-          <a href="/blog/cl0m7ghok000hk8vs3g1i3uwj/#more">Read More</a>
+          <a href="/blog/cl0m7ghoi000fk8vs8yjpdr8b/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghok000hk8vs3g1i3uwj/" data-id="cl450n6q4000gk03p1ehv5f7v" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-C2R 版の Office をインストールすると、特定のレジストリのアクセス権限テーブル参照時に警告が発生する" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0m7ghoj000gk8vsf6s42i7t/" class="article-date">
-  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0m7ghoj000gk8vsf6s42i7t/">C2R 版の Office をインストールすると、特定のレジストリのアクセス権限テーブル参照時に警告が発生する</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0m7ghoj000gk8vsf6s42i7t/" class="article-date-single">    
-    
-    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 11 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office サポートの佐村です。  
-本記事では、Office 365 ProPlus や、MSDN で提供している C2R インストーラー形式の Office をインストールした後、特定のレジストリの「アクセス許可」を参照すると警告が表示される現象についてご案内いたします。  
-現象  
-64 bit の OS に C2R インストーラー形式の Office をインストールした後、以下の操作を行うと警告が表示されます。1. レジストリエディターを起動します。2. 以下のキーまで移動します。キー : HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node3. 新しいキーを作成します。(例 : test)4. 作成したキー上で...
-        <p class="article-more-link">
-          <a href="/blog/cl0m7ghoj000gk8vsf6s42i7t/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoj000gk8vsf6s42i7t/" data-id="cl450n6q5000hk03p5d7f7mda" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoi000fk8vs8yjpdr8b/" data-id="cl703atgp000he0to655x238l" class="article-share-link">Share</a>
       
       
     </footer>
@@ -235,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghor000nk8vsf3ka62dj/" data-id="cl450n6qj000nk03pg1a5ch1c" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghor000nk8vsf3ka62dj/" data-id="cl703atgz000ne0to76li1dpu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -291,7 +239,7 @@ Azure Rights Management および Active Directory Rights Management は、ド�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoz000yk8vsfakza883/" data-id="cl450n6r8000zk03p9y8e3ep9" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoz000yk8vsfakza883/" data-id="cl703athb000ue0tobgff7tod" class="article-share-link">Share</a>
       
       
     </footer>
@@ -345,7 +293,7 @@ Azure Rights Management および Active Directory Rights Management は、ド�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7opb80010dcvs1xqm1hbg/" data-id="cl450n6ra0010k03p1sv7air5" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opb80010dcvs1xqm1hbg/" data-id="cl703athe000xe0to2uck4xos" class="article-share-link">Share</a>
       
       
     </footer>
@@ -395,62 +343,7 @@ Microsoft Forms は、これまでプレビュー版としてOffice 365 の 教�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7opba0012dcvsezl78z14/" data-id="cl450n6rd0012k03phqv23t5d" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0m7opbe0017dcvs06fk2wqc/" class="article-date">
-  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0m7opbe0017dcvs06fk2wqc/">Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0m7opbe0017dcvs06fk2wqc/" class="article-date-single">    
-    
-    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 11 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office サポートの西川 (直) です。 本記事では、表題の事象についてご説明いたします。  
-現象
-Office 2010/2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus バージョンを 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更されます。
-再現手順例 :
-
-Office 2010 (既定)、Office 365 ProPlus (バージョン 1709 (ビルド 8528.2147)) が共存している環境を用意します
-Office 365 ProPlus を バージョン 1710 (ビルド 8625.2132) に更新します
-Ex...
-        <p class="article-more-link">
-          <a href="/blog/cl0m7opbe0017dcvs06fk2wqc/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbe0017dcvs06fk2wqc/" data-id="cl450n6rn0018k03pduijbm0n" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opba0012dcvsezl78z14/" data-id="cl703athj0014e0tod0o52jja" class="article-share-link">Share</a>
       
       
     </footer>
@@ -507,7 +400,7 @@ dll の名前は他のファイル名で表示される場合もあ...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbg0019dcvs7v7v1fkj/" data-id="cl450n6ro0019k03p5q7o123a" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbg0019dcvs7v7v1fkj/" data-id="cl703athj0015e0to2oz1arp5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -558,7 +451,116 @@ Office 365 ProPlus の最新のバージョンでは、この表示を...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbh001adcvs8wu5f0kk/" data-id="cl450n6rs001ck03p0jcs01ip" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbh001adcvs8wu5f0kk/" data-id="cl703athl0018e0to558neab5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m7opbe0017dcvs06fk2wqc/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m7opbe0017dcvs06fk2wqc/">Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m7opbe0017dcvs06fk2wqc/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 11 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office サポートの西川 (直) です。 本記事では、表題の事象についてご説明いたします。  
+現象
+Office 2010/2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus バージョンを 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更されます。
+再現手順例 :
+
+Office 2010 (既定)、Office 365 ProPlus (バージョン 1709 (ビルド 8528.2147)) が共存している環境を用意します
+Office 365 ProPlus を バージョン 1710 (ビルド 8625.2132) に更新します
+Ex...
+        <p class="article-more-link">
+          <a href="/blog/cl0m7opbe0017dcvs06fk2wqc/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbe0017dcvs06fk2wqc/" data-id="cl703athl0019e0to7jc85boc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office Online と Office デスクトップ アプリケーションの機能差異に関する情報" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m7opbk001fdcvs05wsecb0/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m7opbk001fdcvs05wsecb0/">Office Online と Office デスクトップ アプリケーションの機能差異に関する情報</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m7opbk001fdcvs05wsecb0/" class="article-date-single">    
+        
+    <time datetime="2021-11-07T15:00:00.000Z" itemprop="lastupdate">2021-11-08</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2018 年 3 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office サポートです。
+今回の投稿では、Office Online と Office デスクトップ アプリケーションの機能差異に関する情報について、現在公開されている公開資料を中心にご紹介いたします。
+以下の資料は、2018 年 3 月 27 日時点の情報になります。
+更新情報: 2018/12/10 「6. よくある質問」を更新しました。更新情報: 2021/11/08 「6. よくある質問」を更新しました。
+目次  
+1. 全般2. Excel 関連資料3. Word 関連資料4. PowerPoint 関連資料5. OneNote 関連資料6. よくある質問
+1. 全般Office Online とOfficeデスクトップ アプリケーション...
+        <p class="article-more-link">
+          <a href="/blog/cl0m7opbk001fdcvs05wsecb0/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbk001fdcvs05wsecb0/" data-id="cl703athq001ce0todliyhqii" class="article-share-link">Share</a>
       
       
     </footer>
@@ -613,7 +615,7 @@ Office Viewer の提供終了について米国の弊社開発チームの Blog 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbl001gdcvs7kbb0ngv/" data-id="cl450n6rw001fk03ph8o0dmq2" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbl001gdcvs7kbb0ngv/" data-id="cl703athr001de0tocnkg29fe" class="article-share-link">Share</a>
       
       
     </footer>
