@@ -14,11 +14,11 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2017 年 11 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 本テーマについて、前回の投稿から時間が空いてしまい申し訳ありません。 ここまでの記事では、カスタムのリボン タブを作成するというカスタマイズ内容を例に、カスタマイズ手法についてご紹介してきまし">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/image2.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image3.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:43.370Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.555Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -32,19 +32,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -53,7 +53,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -66,10 +66,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -130,43 +126,39 @@
 <p>ここまでの記事では、カスタムのリボン タブを作成するというカスタマイズ内容を例に、カスタマイズ手法についてご紹介してきました。今回の記事からは、この他によく行われるカスタマイズの実装方法をいくつか紹介しつつ、XML などの書き方のイメージを掴んでいただればと思います。</p>
 <p>今回の投稿で紹介する方法は、1. を除いて VSTO のビジュアルなデザイナーではカスタマイズできない内容となりますので、XML を利用して実装します。VSTO のビジュアルなデザイナーでカスタマイズしている方で以下の方法を利用したい場合は、<a href="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%884%20%E2%80%93%20(VSTO%20XML%20%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/">以前の投稿</a>の例でも行っていたように、ビジュアルなデザイナーで作成したリボンを XML へエクスポートできます。</p>
 <p><strong>目次</strong></p>
-<p><a href="#はじめに-開発時に便利な機能">はじめに : 開発時に便利な機能</a></p>
-<p><a href="#1-既存のタブをすべて表示しない方法">1. 既存のタブをすべて表示しない方法</a></p>
-<p><a href="#2-既存のリボン-メニューを無効化する方法">2. 既存のリボン メニューを無効化する方法</a></p>
+<p><a href="#%E3%81%AF%E3%81%98%E3%82%81%E3%81%AB-%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AB%E4%BE%BF%E5%88%A9%E3%81%AA%E6%A9%9F%E8%83%BD">はじめに : 開発時に便利な機能</a></p>
+<p><a href="#1-%E6%97%A2%E5%AD%98%E3%81%AE%E3%82%BF%E3%83%96%E3%82%92%E3%81%99%E3%81%B9%E3%81%A6%E8%A1%A8%E7%A4%BA%E3%81%97%E3%81%AA%E3%81%84%E6%96%B9%E6%B3%95">1. 既存のタブをすべて表示しない方法</a></p>
+<p><a href="#2-%E6%97%A2%E5%AD%98%E3%81%AE%E3%83%AA%E3%83%9C%E3%83%B3-%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%92%E7%84%A1%E5%8A%B9%E5%8C%96%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95">2. 既存のリボン メニューを無効化する方法</a></p>
 <h4 id="はじめに-開発時に便利な機能"><a href="#はじめに-開発時に便利な機能" class="headerlink" title="はじめに : 開発時に便利な機能"></a><strong>はじめに : 開発時に便利な機能</strong></h4><p>Office で以下のオプションを有効にすると、リボン カスタマイズ用の XML の記述エラーをハンドリングすることができます。<br>無視して問題ないエラーも通知されるため、運用上はお勧めしませんが、開発時にはこのオプションを有効にしておくと実装上の問題点を確認しやすくなります。</p>
 <p>&lt;該当の設定項目&gt;<br>[ファイル] タブ - [オプション] – [詳細設定] – [全般] セクション – [アドイン ユーザー インターフェイスに関するエラーを表示する]</p>
 <h4 id="1-既存のタブをすべて表示しない方法"><a href="#1-既存のタブをすべて表示しない方法" class="headerlink" title="1. 既存のタブをすべて表示しない方法"></a><strong>1. 既存のタブをすべて表示しない方法</strong></h4><p>アプリケーション経由で Excel ファイルを操作して、ユーザーに自由な編集を極力させたくない場合などに利用される方法です。</p>
 <p>リボン クラスに用意されている StartFromScratch プロパティを利用します。この方法を用いると、[ファイル] タブ以外の全てのタブと、クイック アクセス ツールバーのアイコンを非表示にできます。</p>
 <p>記述方法は非常にシンプルです。<ribbon> クラスで startFromScrach を True に指定します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;customui xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;office&#x2F;2009&#x2F;07&#x2F;customui&quot;&gt;</span><br><span class="line">    &lt;ribbon startfromscratch&#x3D;&quot;true&quot;&gt;&lt;&#x2F;ribbon&gt;</span><br><span class="line">&lt;&#x2F;customui&gt;</span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;customui xmlns=&quot;http://schemas.microsoft.com/office/2009/07/customui&quot;&gt;</span><br><span class="line">    &lt;ribbon startfromscratch=&quot;true&quot;&gt;&lt;/ribbon&gt;</span><br><span class="line">&lt;/customui&gt;</span><br></pre></td></tr></table></figure>
 
 <p>タイトル : Ribbon.StartFromScratch property</p>
-<p>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.ribbon.startfromscratch.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.ribbon.startfromscratch.aspx</a></p>
+<p>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.ribbon.startfromscratch.aspx">https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.ribbon.startfromscratch.aspx</a></p>
 <p>ビジュアルなデザイナーで設定する場合は、リボン全体を選択した状態で [プロパティ] ウィンドウの [動作] グループに [StartFromScratch] プロパティがありますので、これを True に設定します。</p>
 <p>この設定を行ったファイルを開くと、以下のようになり [ファイル] タブだけが表示されます。</p>
-<p><img src="image1.png" alt=""></p>
+<p><img src="/blog/image1.png"></p>
 <p>図 1. StartFromScrach によるカスタマイズ後の状態</p>
 <p>この設定を行っても、右クリック メニューは使用できます。これらも禁止したい場合は、合わせてカスタマイズしてください。(右クリック メニューのカスタマイズは次の投稿で紹介予定です。)</p>
 <p>いったんこの設定で既定のタブはすべて非表示にした状態で、合わせてカスタム タブの定義を追加することで、ユーザーに利用させたいメニューだけを表示するといった運用も可能です。</p>
-<h4 id="2-既存のリボン-メニューを無効化する方法"><a href="#2-既存のリボン-メニューを無効化する方法" class="headerlink" title="2. 既存のリボン メニューを無効化する方法"></a><strong>2. 既存のリボン メニューを無効化する方法</strong></h4><p>1. のようにすべての既存メニューを利用できないようにしたいわけではないけれど、一部のタブやグループを非表示 / 無効化したい、という場合は、対象項目の visible プロパティを false に指定します。</p>
+<h4 id="2-既存のリボン-メニューを無効化する方法"><a href="#2-既存のリボン-メニューを無効化する方法" class="headerlink" title="2. 既存のリボン メニューを無効化する方法"></a><strong>2. 既存のリボン メニューを無効化する方法</strong></h4><p>1. のようにすべての既存メニューを利用できないようにしたいわけではないけれど、一部のタブやグループを非表示 &#x2F; 無効化したい、という場合は、対象項目の visible プロパティを false に指定します。</p>
 <p>以下の例では、ribbon クラス で [ホーム] タブを非表示にし、かつ、[挿入] タブ内の [テーブル] グループを非表示にしています。また、command クラスを利用して [画像] メニューを無効化しています。(なお、既定グループ内の一部メニューだけを非表示にすることはできません。この場合は、グループ全体を非表示にした後、必要なメニューのみを含むグループを独自に追加してください。)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;customUI xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;office&#x2F;2009&#x2F;07&#x2F;customui&quot;&gt;</span><br><span class="line">    &lt;commands&gt;</span><br><span class="line">        &lt;command idMso&#x3D;&quot;PictureInsertFromFile&quot; enabled&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;&#x2F;commands&gt;</span><br><span class="line">    &lt;ribbon&gt;</span><br><span class="line">        &lt;tabs&gt;</span><br><span class="line">            &lt;tab idMso&#x3D;&quot;TabHome&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">            &lt;tab idMso&#x3D;&quot;TabInsert&quot;&gt;</span><br><span class="line">                &lt;group idMso&#x3D;&quot;GroupInsertTablesExcel&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">            &lt;&#x2F;tab&gt;</span><br><span class="line">        &lt;&#x2F;tabs&gt;</span><br><span class="line">    &lt;&#x2F;ribbon&gt;</span><br><span class="line">&lt;&#x2F;customUI&gt;</span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;customUI xmlns=&quot;http://schemas.microsoft.com/office/2009/07/customui&quot;&gt;</span><br><span class="line">    &lt;commands&gt;</span><br><span class="line">        &lt;command idMso=&quot;PictureInsertFromFile&quot; enabled=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;/commands&gt;</span><br><span class="line">    &lt;ribbon&gt;</span><br><span class="line">        &lt;tabs&gt;</span><br><span class="line">            &lt;tab idMso=&quot;TabHome&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">            &lt;tab idMso=&quot;TabInsert&quot;&gt;</span><br><span class="line">                &lt;group idMso=&quot;GroupInsertTablesExcel&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">            &lt;/tab&gt;</span><br><span class="line">        &lt;/tabs&gt;</span><br><span class="line">    &lt;/ribbon&gt;</span><br><span class="line">&lt;/customUI&gt;</span><br></pre></td></tr></table></figure>
 
 <p>&lt;既定の状態&gt;</p>
-<p><img src="image2.png" alt=""></p>
+<p><img src="/blog/image2.png"></p>
 <p>図 2. 既定の [挿入] タブのメニュー</p>
 <p>&lt;カスタム XML を読み込んだ状態&gt;</p>
-<p><img src="image3.png" alt=""></p>
+<p><img src="/blog/image3.png"></p>
 <p>図 3. カスタマイズ後の [挿入] タブのメニュー</p>
 <p><strong>TIPS 1 : コントロール、グループ、タブ名の確認方法</strong></p>
 <p>組み込みメニューのコントロ―ル名は、以下に一覧が用意されています。</p>
-<p>タイトル : Office 2010 Help Files: Office Fluent User Interface Control Identifiers<br>アドレス : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=6627" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=6627</a></p>
-<p>タイトル : Office 2013 Help Files: Office Fluent User Interface Control Identifiers<br>アドレス : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=36798" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=36798</a></p>
-<p>タイトル : Office 2016 Help Files: Office Fluent User Interface Control Identifiers<br>アドレス : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=50745" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=50745</a></p>
+<p>タイトル : Office 2010 Help Files: Office Fluent User Interface Control Identifiers<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=6627">https://www.microsoft.com/en-us/download/details.aspx?id=6627</a></p>
+<p>タイトル : Office 2013 Help Files: Office Fluent User Interface Control Identifiers<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=36798">https://www.microsoft.com/en-us/download/details.aspx?id=36798</a></p>
+<p>タイトル : Office 2016 Help Files: Office Fluent User Interface Control Identifiers<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=50745">https://www.microsoft.com/en-us/download/details.aspx?id=50745</a></p>
 <p>[ファイル] タブ – [オプション] – [リボンのユーザー設定] でメニューの一覧を表示してマウス ポインタを項目の上に移動すると、ツールチップでコントロール名を確認することができます。</p>
 <p>特定のメニューを制御したい場合に、まず [リボンのユーザー設定] でメニュー名を確認して、コントロール一覧からこれを探し、対象のメニューが含まれるグループ名やタブ名を探す、といった流れでこれらの情報を活用して XML を記述してみてください。</p>
 <p><strong>TIPS 2 : 他のリボン カスタマイズ方法</strong></p>
@@ -182,8 +174,8 @@
 <li>何らかの操作に応じて動的にメニューの状態を変更したい (次回投稿で実装方法について説明予定です。)</li>
 </ul>
 <p>今回は、2 つのカスタマイズ方法を紹介してみました。ここでは無効化に関する visible や enabled プロパティのカスタマイズを紹介しましたが、その他のプロパティについてもカスタマイズできますので、以下のリファレンスなどを参考に利用できるプロパティを確認してみてください。</p>
-<p>タイトル : 2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 2/3)<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/aa338199(v=office.12).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/aa338199(v=office.12).aspx</a></p>
-<p>タイトル : DocumentFormat.OpenXml.Office2010.CustomUI namespace<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.aspx</a></p>
+<p>タイトル : 2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 2&#x2F;3)<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/aa338199(v=office.12).aspx">https://msdn.microsoft.com/ja-jp/library/aa338199(v=office.12).aspx</a></p>
+<p>タイトル : DocumentFormat.OpenXml.Office2010.CustomUI namespace<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.aspx">https://msdn.microsoft.com/en-us/library/office/documentformat.openxml.office2010.customui.aspx</a></p>
 <p>次回はもう少し複雑な条件でのリボン カスタマイズや、xls ファイルのカスタマイズをしたい場合の方法にについて紹介します。</p>
 <p>今回の投稿は以上です。</p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
@@ -191,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/" data-id="cl703atif0024e0to2btxegbz" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/" data-id="cl7h73xn2002530rb0n0h35w2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -200,19 +192,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/cl0mdnodn00255ovs9onm1o0p/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)
+          Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)
         
       </div>
     </a>
   
   
-    <a href="/blog/cl0mdnodo00285ovs0fooh79h/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0mdnodn00255ovs9onm1o0p/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Office リボンをカスタマイズ – パート7 – (TIPS 3：特殊メニューのカスタマイズ)</div>
+      <div class="article-nav-title">Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)</div>
     </a>
   
 </nav>

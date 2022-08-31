@@ -15,7 +15,7 @@
 <meta property="og:description" content="(※ 2017 年 1 月 24 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの 佐村 です。   本記事では、32 bit の Word アプリケーションでドキュメントを印刷した場合、いくつかのオブジェクトが印刷されない現象について説明します。 現象Word ドキュメントに多数のオブジェクトを配置している状態で印">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:42.793Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.258Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -62,10 +62,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -130,16 +126,21 @@
 <p>メモリ不足に起因する以下の現象も確認しています。<br>・挿入された画像データ部分が赤いバツ印のアイコンで表示されない。<br>・以下のメッセージが表示される。<br>「ディスクがいっぱいです。空き容量を増やすか、文書を他のドライブに保存してください。<br>次の操作を行ってください。<br>* 必要のない文書、プログラムまたはウィンドウを閉じます。<br>* 文書を他のドライブに保存します。」</p>
 <p>なお、OS からはメモリが空いているように見えても実際には連続したメモリ領域が必要なため本現象が発生する可能性があります。  </p>
 <p><strong>回避方法</strong><br>1. オブジェクトの数を減らす<br>2. FavorTiledPrinting レジストリを設定する (効果に限りがあります)<br>3. 64bit 版の Office を利用する</p>
-<p>1) オブジェクトの数を減らす<br>-——————————————————-<br>大量のオブジェクトの印刷処理でメモリを消費している場合、オブジェクトの数を減らしていただくことを検討ください。<br>複数のオブジェクトを図として保存し、1 つの図として配置するといったことが検討いただけます。<br>なお、複数のオブジェクトをグループ化することでグループ化処理が追加されるため、メモリを多く消費する可能性がございます。<br>大量のオブジェクトを多数グループ化している場合、グループ化を解除することで現象を回避できる可能性があります。</p>
-<p>2) FavorTiledPrinting レジストリを設定する (効果に限りがあります)<br>-——————————————————-<br>ご利用の Word のバージョンが Office 2010 のサービスパック 2 以降の場合、<br>以下のレジストリを設定することで、メモリ利用の最適化が行われ現象の発生を回避できる可能性があります。<br>しかし、扱うファイルによっては本レジストリを設定しても効果がない可能性がございます。<br>※本レジストリ設定後、Word アプリケーションの再起動が必要です。OS の再起動は必要ありません。<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Gfx<br>名前 : FavorTiledPrinting<br>種類 : REG_DWORD<br>値 : 1</p>
-<p>3) 64bit 版の Office を利用する<br>-——————————————————-<br>原因に記載の通り、ユーザー領域としてのメモリ領域が枯渇することで本記事の現象が発生するため、<br>64bit 版の Office を利用すると本現象は発生しません。<br>ただし、64bit 版の Office では 32bit 版で提供されているコントロールやアドインが利用できないといった<br>ことがあるため、ご選択いただく場合には事前にその影響度について検討いただく必要があります。  </p>
+<ol>
+<li><p>オブジェクトの数を減らす<br>-——————————————————-<br>大量のオブジェクトの印刷処理でメモリを消費している場合、オブジェクトの数を減らしていただくことを検討ください。<br>複数のオブジェクトを図として保存し、1 つの図として配置するといったことが検討いただけます。<br>なお、複数のオブジェクトをグループ化することでグループ化処理が追加されるため、メモリを多く消費する可能性がございます。<br>大量のオブジェクトを多数グループ化している場合、グループ化を解除することで現象を回避できる可能性があります。</p>
+</li>
+<li><p>FavorTiledPrinting レジストリを設定する (効果に限りがあります)<br>-——————————————————-<br>ご利用の Word のバージョンが Office 2010 のサービスパック 2 以降の場合、<br>以下のレジストリを設定することで、メモリ利用の最適化が行われ現象の発生を回避できる可能性があります。<br>しかし、扱うファイルによっては本レジストリを設定しても効果がない可能性がございます。<br>※本レジストリ設定後、Word アプリケーションの再起動が必要です。OS の再起動は必要ありません。<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\14.0\Gfx<br>名前 : FavorTiledPrinting<br>種類 : REG_DWORD<br>値 : 1</p>
+</li>
+<li><p>64bit 版の Office を利用する<br>-——————————————————-<br>原因に記載の通り、ユーザー領域としてのメモリ領域が枯渇することで本記事の現象が発生するため、<br>64bit 版の Office を利用すると本現象は発生しません。<br>ただし、64bit 版の Office では 32bit 版で提供されているコントロールやアドインが利用できないといった<br>ことがあるため、ご選択いただく場合には事前にその影響度について検討いただく必要があります。</p>
+</li>
+</ol>
 <p><strong>補足</strong><br>今回は、Word で発生するメモリ不足による印刷時の現象について説明しましたが、<br>32 bit アプリケーションでは利用できるメモリ領域が 2GB までという制限があります。<br>PowerPoint や Excel といった他の Office アプリケーションでも、大量のオブジェクトや非常にサイズの大きい<br>ページを扱う場合には、エラーが発生する可能性があります。<br>その場合、本ブログに寄稿している内容がお役立ていただけると思います。</p>
 <p><strong>本情報の内容 ( 添付文書、リンク先などを含む ) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghog000dk8vs2ovx9yyp/" data-id="cl703atgf000ae0to65y4777u" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghog000dk8vs2ovx9yyp/" data-id="cl7h73xfk000d30rb8s27bp2b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,9 +159,9 @@
     </a>
   
   
-    <a href="/blog/cl0m7gho60009k8vs2wd828cr/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghof000ck8vscdxhanmb/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">2016 年 7 月のセキュリティ更新プログラム MS16-088 適用後 Web 上の Excel に偽装したファイルが開けない</div>
+      <div class="article-nav-title">Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない</div>
     </a>
   
 </nav>

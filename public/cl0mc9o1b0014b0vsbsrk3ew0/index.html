@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2018 年 5 月 15 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。久しぶりの投稿になります。 このタイトルの記事では、新しい提供方法である「Microsoft ストア版 Office 2016」における、これまでの Office との違いについて、Office">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o1b0014b0vsbsrk3ew0/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:43.045Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.399Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -30,19 +30,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mc9o1b0014b0vsbsrk3ew0/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -51,7 +51,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -64,10 +64,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -131,55 +127,50 @@
 <p>インターネットなどからサイズの小さいインストーラをダウンロードして実行し、インストールの中で実行モジュールのダウンロード等を行います。最低限の準備ができると Office を使い始めることができ、バックグラウンドで残りのインスト―ルが行われることから、クイック実行と呼ばれます。</p>
 <p>Office 2016 では、現在このクイック実行形式が主流となっており、製品の修正、新機能の追加などは、基本的にこのクイック実行形式に対して行われます。</p>
 <p>クイック実行形式は、Microsoft Application Virtualization (App-V) のテクノロジに基づいてストリーミングおよび仮想化されて提供されています。詳細は以下の公開情報をご参照ください。</p>
-<p>参考)<br>タイトル : クイック実行の概要<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/jj219427.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/jj219427.aspx</a></p>
+<p>参考)<br>タイトル : クイック実行の概要<br>アドレス : <a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/jj219427.aspx">https://technet.microsoft.com/ja-jp/library/jj219427.aspx</a></p>
 <h5 id="1-2-MSI-インストーラ形式"><a href="#1-2-MSI-インストーラ形式" class="headerlink" title="1-2. MSI インストーラ形式"></a><strong>1-2. MSI インストーラ形式</strong></h5><p>ボリューム ライセンスがこの提供形式です。</p>
 <p>以前からある、DVD ディスクなどに焼かれた MSI インストーラを用いてインストールする形式で、インストールされる実行モジュールなどは全てインストーラに含まれており、オフラインでインストールできます。</p>
 <p>Office 2016 では、MSI インストーラ形式は長期安定稼働版と位置付けており、セキュリティ更新以外の修正、新機能の追加はほとんど行われません。このため、最新の更新を適用しても、C2R 形式で利用できる機能が含まれていないことがあります。</p>
 <h5 id="1-3-Microsoft-ストア版-Office-2016-Centennial版"><a href="#1-3-Microsoft-ストア版-Office-2016-Centennial版" class="headerlink" title="1-3. Microsoft ストア版 Office 2016 (Centennial版)"></a><strong>1-3. Microsoft ストア版 Office 2016 (Centennial版)</strong></h5><p>今回の記事で説明する提供形式です。現時点でこの形式で Office 2016 が提供されているのは、最近のプレインストール (PIPC) 版の一部と、Windows 10 S が搭載された Surface Laptop のいずれかとなります。</p>
-<p>参考)<br>タイトル : Office 2016 プレインストール版 (PIPC) 製品インストール - Office 2016 セットアップ<br>アドレス : <a href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_setup.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_setup.aspx</a></p>
-<p>タイトル : Surface Laptop のご紹介<br>アドレス : <a href="https://support.microsoft.com/ja-jp/help/4037229/surface-meet-surface-laptop" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/4037229/surface-meet-surface-laptop</a></p>
+<p>参考)<br>タイトル : Office 2016 プレインストール版 (PIPC) 製品インストール - Office 2016 セットアップ<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_setup.aspx">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_setup.aspx</a></p>
+<p>タイトル : Surface Laptop のご紹介<br>アドレス : <a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/4037229/surface-meet-surface-laptop">https://support.microsoft.com/ja-jp/help/4037229/surface-meet-surface-laptop</a></p>
 <p>この形式では、Office 2016 は Microsoft ストアを通じてインストールや更新を行います。他のストア アプリと同様、この方法で提供される Office 2016 はユニバーサル Windows プラットフォーム (UWP) でパッケージ化されています (デスクトップ ブリッジという方法を用いています)。このような仕組みを Centennial とも呼ぶため、Microsoft ストア版 Office は「Office Centennial」とも呼ばれます。UWP パッケージ化されたアプリは、ファイル システムやレジストリなどが UWP パッケージ独自の構成となり、また、動作上もそのままアプリを実行する場合とは異なる点があります。</p>
 <p>Microsoft ストア版 Office にも、不具合の修正や新機能の追加は行われていきます。更新は Microsoft ストアによって管理されます。</p>
-<p>参考)<br>タイトル : ユニバーサル Windows プラットフォームの紹介<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/windows/uwp/get-started/universal-application-platform-guide" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/windows/uwp/get-started/universal-application-platform-guide</a></p>
-<p>タイトル : デスクトップ ブリッジの内側<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/windows/uwp/porting/desktop-to-uwp-behind-the-scenes" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/windows/uwp/porting/desktop-to-uwp-behind-the-scenes</a></p>
+<p>参考)<br>タイトル : ユニバーサル Windows プラットフォームの紹介<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/windows/uwp/get-started/universal-application-platform-guide">https://docs.microsoft.com/ja-jp/windows/uwp/get-started/universal-application-platform-guide</a></p>
+<p>タイトル : デスクトップ ブリッジの内側<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/windows/uwp/porting/desktop-to-uwp-behind-the-scenes">https://docs.microsoft.com/ja-jp/windows/uwp/porting/desktop-to-uwp-behind-the-scenes</a></p>
 <p>比較的新しい技術になるため、情報がまだまだ充実しておらず申し訳ありませんが、このブログでは、Microsoft ストア版 Office 2016 で他の提供形式と異なる動作となる点や留意点などについて、Office 開発観点で注目すべき点を随時ご紹介していきたいと思います。</p>
 <p><strong>補足</strong> <strong>: Office 2016</strong> <strong>提供形式の見分け方</strong></p>
 <p>自身の端末がどの提供形式の Office 2016 を使っているかを確認する方法については、以下をご参照ください。</p>
-<p>タイトル : クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法<br>アドレス : <a href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi/" target="_blank" rel="noopener">https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi/</a></p>
-<p>タイトル : FAQ よく寄せられる質問<br>アドレス : <a href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx</a><br>該当箇所 : “セットアップ前” – “プレインストールされた Office 2016 のアプリ形式を確認する方法がありますか。”</p>
+<p>タイトル : クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法<br>アドレス : <a target="_blank" rel="noopener" href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi/">https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi&#x2F;</a></p>
+<p>タイトル : FAQ よく寄せられる質問<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx</a><br>該当箇所 : “セットアップ前” – “プレインストールされた Office 2016 のアプリ形式を確認する方法がありますか。”</p>
 <p>Office アプリケーションを起動して、[ファイル] タブ – [アカウント] の以下の箇所でも確認できます。(以下は Excel の　Microsoft ストア版の例)</p>
-<p><img src="image1.png" alt=""></p>
+<p><img src="/blog/image1.png"></p>
 <p>図1. [アカウント] メニューでの提供方式の表示</p>
 <h4 id="2-Microsoft-ストア版-Office-2016-の-DLL-読み込み動作"><a href="#2-Microsoft-ストア版-Office-2016-の-DLL-読み込み動作" class="headerlink" title="2. Microsoft ストア版 Office 2016 の DLL 読み込み動作"></a><strong>2. Microsoft</strong> <strong>ストア版</strong> <strong>Office 2016</strong> <strong>の</strong> <strong>DLL</strong> <strong>読み込み動作</strong></h4><p>さて、本題です。Microsoft ストア版 Office 2016 で C2R 版や MSI 版と動作が異なる点として、DLL 読み込み時の検索パスが異なります。</p>
 <p>例えば、VBA で以下のように記述するとします。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Private Declare Sub MyFunc Lib &quot;TEST.dll&quot; () </span><br><span class="line">Sub Sample()</span><br><span class="line">    MyFunc</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Private Declare Sub MyFunc Lib &quot;TEST.dll&quot; () </span><br><span class="line">Sub Sample()</span><br><span class="line">    MyFunc</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
 
 <p>この VBA を実行するとき、Office は TEST.dll をいくつかのフォルダから検索し、見つかったら DLL を読み込み、MyFunc を呼び出すことができます。</p>
 <p>C2R 版や MSI 版では、以下の公開情報で紹介されている OS の既定の動作に則ってフォルダを検索します。</p>
-<p>タイトル : Windows が使用する DLL 検索パス<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/7d83bc18.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/7d83bc18.aspx</a></p>
+<p>タイトル : Windows が使用する DLL 検索パス<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/7d83bc18.aspx">https://msdn.microsoft.com/ja-jp/library/7d83bc18.aspx</a></p>
+<p> </p>
 <p>&lt;検索対象フォルダ (上記公開情報より抜粋)&gt;</p>
 <p>1.実行中のプロセスの実行形式モジュールがあるフォルダー。</p>
 <p><span style="color:#ff0000">2.現在のフォルダー。</span></p>
 <p>3.Windows システム フォルダー。 このフォルダーへのパスは、GetSystemDirectory 関数が取得します。</p>
 <p><span style="color:#ff0000">4.Windows ディレクトリ。 このフォルダーへのパスは、GetWindowsDirectory 関数が取得します。</span></p>
 <p><span style="color:#ff0000">5.環境変数 PATH 内に記述されたフォルダー。</span></p>
-<p><span style="color:#ff0000"><strong>Microsoft ストア版 Office では、上記赤字で示した 2. / 4. / 5. のフォルダは検索されません。</strong></span></p>
+<p><span style="color:#ff0000"><strong>Microsoft ストア版 Office では、上記赤字で示した 2. &#x2F; 4. &#x2F; 5. のフォルダは検索されません。</strong></span></p>
 <p>以下の公開情報で述べられたカレント フォルダから DLL を読み込む危険性などを考慮し、セキュリティ強化を図る目的で、Microsoft ストア版 Office ではこのような動作になっています。</p>
-<p>タイトル : DLL プリロード攻撃を防止するためのライブラリの安全な読み込み<br>アドレス : <a href="https://support.microsoft.com/ja-jp/help/2389418" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/2389418</a></p>
+<p>タイトル : DLL プリロード攻撃を防止するためのライブラリの安全な読み込み<br>アドレス : <a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/2389418">https://support.microsoft.com/ja-jp/help/2389418</a></p>
 <p>したがって、例えば Excel マクロ ファイルと一緒に DLL を配布して同じフォルダに格納し、マクロ ファイル内でファイルの格納フォルダに移動 (ChDir) した上で DLL を冒頭のサンプル マクロのようにパスを指定せずに読み込む、といった動作を期待している場合、ストア版 Office では期待した通りに動作しません。</p>
 <h4 id="3-対応方法"><a href="#3-対応方法" class="headerlink" title="3. 対応方法"></a><strong>3. 対応方法</strong></h4><h5 id="3-1-プログラムで検索パスを指定する"><a href="#3-1-プログラムで検索パスを指定する" class="headerlink" title="3-1. プログラムで検索パスを指定する"></a><strong>3-1.</strong> <strong>プログラムで検索パスを指定する</strong></h5><p>DLL を読み込む処理の前に、SetDllDirectory API などを用いて、DLL 検索パスを明示的に指定してください。</p>
-<p>タイトル : SetDllDirectory function<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms686203.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/ms686203.aspx</a>  </p>
-<p>または、VBA の Declare ステートメントで DLL をフルパスで指定して読み込むようにします。ただし、DLL の構成がシンプルなものであればこの方法で問題ありませんが、DLL からさらに別の DLL を読み込むような場合は、ここでも検索パスの問題が生じますのでご注意ください。  </p>
-<p>DLL 読み込み後、必要に応じて SetDllDirectory API を Null 指定で呼び出して検索パスをリセットできます。  </p>
-<p>DLL 格納パスが複数のパスに分かれている場合などは、Windows 8 以降では AddDllDirectory API も利用できます。</p>
-<p>タイトル : AddDllDirectory function<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/hh310513.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/hh310513.aspx</a></p>
+<p>タイトル : SetDllDirectory function<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms686203.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/ms686203.aspx</a><br> <br>または、VBA の Declare ステートメントで DLL をフルパスで指定して読み込むようにします。ただし、DLL の構成がシンプルなものであればこの方法で問題ありませんが、DLL からさらに別の DLL を読み込むような場合は、ここでも検索パスの問題が生じますのでご注意ください。<br> <br>DLL 読み込み後、必要に応じて SetDllDirectory API を Null 指定で呼び出して検索パスをリセットできます。<br> <br>DLL 格納パスが複数のパスに分かれている場合などは、Windows 8 以降では AddDllDirectory API も利用できます。</p>
+<p>タイトル : AddDllDirectory function<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/hh310513.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/hh310513.aspx</a></p>
 <h5 id="3-2-C2R-版-Office-に変更する"><a href="#3-2-C2R-版-Office-に変更する" class="headerlink" title="3-2. C2R 版 Office に変更する"></a><strong>3-2. C2R</strong> <strong>版</strong> <strong>Office</strong> <strong>に変更する</strong></h5><p>PIPC 向けに提供された Microsoft ストア版 Office 2016 は、再インストールによって C2R 版の Office をインストールすることができます。</p>
 <p>再インストール手順については、以下の公開情報をご参照ください。以下で「デスクトップ アプリ版 Office 2016」と呼ばれるものが、C2R 版の Office 2016 を指します。</p>
-<p>タイトル : Office 2016 プレインストール版 (PIPC) 製品インストール - 再インストール<br>アドレス : <a href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_re_setup.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_re_setup.aspx</a>  </p>
-<p>Microsoft ストア版 Office 2016 からデスクトップ アプリ版 Office 2016 への入れ替えについては、FAQ にも記載がありますので合わせてご参照ください。</p>
-<p>タイトル : Office 2016 プレインストール版 (PIPC) 製品インストール - FAQ よく寄せられる質問<br>アドレス : <a href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx</a></p>
+<p>タイトル : Office 2016 プレインストール版 (PIPC) 製品インストール - 再インストール<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_re_setup.aspx">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_re_setup.aspx</a><br> <br>Microsoft ストア版 Office 2016 からデスクトップ アプリ版 Office 2016 への入れ替えについては、FAQ にも記載がありますので合わせてご参照ください。</p>
+<p>タイトル : Office 2016 プレインストール版 (PIPC) 製品インストール - FAQ よく寄せられる質問<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx">https://www.microsoft.com/ja-jp/office/2016/pipcsetup/pipc_faq.aspx</a></p>
 <p>注 :<br>Surface Laptop の場合は、Windows 10S OS 自体がストア アプリのみの動作を許可する仕組みとなるため、デスクトップ アプリ版 Office 2016 をインストールすることはできません。</p>
 <p>今回の投稿は以上です。</p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
@@ -187,7 +178,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o1b0014b0vsbsrk3ew0/" data-id="cl703athh0011e0toea748zve" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o1b0014b0vsbsrk3ew0/" data-id="cl7h73xkd001430rbe4q0a3wu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -196,19 +187,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/cl0mc9o17000zb0vs3hta6j0c/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Excel の CodeName プロパティが取得できない動作
+          KB 3191877 の適用後に VBA のコンパイルエラーが発生する
         
       </div>
     </a>
   
   
-    <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0mc9o210022b0vs0kgsgh76/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)</div>
+      <div class="article-nav-title">Office リボンをカスタマイズ - パート1 - (カスタマイズ手法と仕組み)</div>
     </a>
   
 </nav>

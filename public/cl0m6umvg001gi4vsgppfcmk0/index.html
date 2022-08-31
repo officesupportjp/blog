@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="こんにちは、Office サポートの西川 (直) です。  Office のサインインを行うときに、特定のユーザーだけサインインが成功しないとお問い合わせいただくことがございます。 この場合、以下の公開情報のとおり、サインインおよびライセンス情報のリセットをお試しいただくことで、解消する可能性がございます。 Microsoft 365 Apps for enterprise のライセンス認証の状態">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/image01.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image01.png">
 <meta property="article:published_time" content="2020-07-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:43.113Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.430Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -30,19 +30,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/image01.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image01.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -51,7 +51,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -64,10 +64,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -115,7 +111,7 @@
         Last Update: 
         <a href="/blog/cl0m6umvg001gi4vsgppfcmk0/" class="article-date-single">    
         
-    <time datetime="2021-05-09T15:00:00.000Z" itemprop="lastupdate">2021-05-10</time>    
+    <time datetime="2021-05-10T00:00:00.000Z" itemprop="lastupdate">2021-05-10</time>    
     
 </a>              
       </div>
@@ -126,43 +122,43 @@
 <p>Office のサインインを行うときに、特定のユーザーだけサインインが成功しないとお問い合わせいただくことがございます。</p>
 <p>この場合、以下の公開情報のとおり、サインインおよびライセンス情報のリセットをお試しいただくことで、解消する可能性がございます。</p>
 <p>Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする</p>
-<p><a href="https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state</a></p>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state">https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state</a></p>
 <p>ただし、上記の公開情報には手順が多く含まれているため、以下を指針としてご対応ください。</p>
 <br>
 
 <p><strong>-手順</strong></p>
 <p>1. Office からサインアウトし、Office、Teams、OneDrive 同期クライアントを全て終了します。</p>
 <p>2. 公開情報内の “OLicenseCleanup.vbs” をご実施ください</p>
-<p>※ コマンドプロンプトを右クリック→管理者権限で起動し、コマンドプロンプト上で OLicenseCleanup.vbs を実行してください。実行しても完了ダイアログ等は表示されず、処理はバックグラウンドで終了いたします。</p>
-<p>※ ログオンユーザーに管理者権限がない場合、スクリプトを 2 回実行する必要があります。ログオンユーザーではダブルクリックで OLicenseCleanup.vbs を実行します。その後、コマンドプロンプトを右クリック→管理者権限として別の管理者ユーザーのアカウントで起動し、コマンドプロンプト上で OLicenseCleanup.vbs を実行してください。実行しても完了ダイアログ等は表示されず、処理はバックグラウンドで終了いたします。</p>
+<p>※ コマンドプロンプトを右クリック→管理者権限で起動し、コマンドプロンプト上で OLicenseCleanup.vbs を実行してください。実行しても完了ダイアログ等は表示されず、処理はバックグラウンドで終了いたします。</p>
+<p>※ ログオンユーザーに管理者権限がない場合、スクリプトを 2 回実行する必要があります。ログオンユーザーではダブルクリックで OLicenseCleanup.vbs を実行します。その後、コマンドプロンプトを右クリック→管理者権限として別の管理者ユーザーのアカウントで起動し、コマンドプロンプト上で OLicenseCleanup.vbs を実行してください。実行しても完了ダイアログ等は表示されず、処理はバックグラウンドで終了いたします。</p>
 <br>
 
 <p>&lt;以降、<a href="https://officesupportjp.github.io/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E5%BD%A2%E5%BC%8F%20(C2R)%20%E3%81%A8%20Windows%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F%20(MSI)%20%E3%82%92%E8%A6%8B%E5%88%86%E3%81%91%E3%82%8B%E6%96%B9%E6%B3%95/">クイック実行形式 (C2R) の Office のみご実施ください</a>&gt;</p>
 <p>3. 公開情報内の “社内参加から資格情報をクリアする” のとおり、[職場または学校にアクセスする] からアカウントを切断してください。<br>※ Azure AD や AD に接続済みの項目を “切断” しますと、ドメインから外れてしまいますので、Azure AD や AD に接続済み の項目は切断しないようにご注意ください。</p>
-<p><img src="image01.png" alt="">  </p>
-<p>4. (1 の手順でサインアウトを実施できていない場合)”Signoutofwamaccounts.ps1” をご実施ください。</p>
-<p>  もし、”Signoutofwamaccounts.ps1” が文字化けしている場合、本記事下部のスクリプトをご利用ください。</p>
+<p><img src="/blog/image01.png">  </p>
+<p>4. (1 の手順でサインアウトを実施できていない場合)”Signoutofwamaccounts.ps1” をご実施ください。</p>
+<p>  もし、”Signoutofwamaccounts.ps1” が文字化けしている場合、本記事下部のスクリプトをご利用ください。</p>
 <p>5. 以下の 1 から 5 の手順を実施します。</p>
-<p><a href="https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/sign-in-issues" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/sign-in-issues</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. エクスプローラーを開き、アドレス バーに次の場所を入力します。%LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts</span><br><span class="line">2. Ctrl + A キーを押して、すべてを選択します。</span><br><span class="line">3. 選択したファイルを右クリックして、[削除] を選択します。</span><br><span class="line">4. エクスプローラーのアドレス バーに次の場所を入力します。%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts</span><br><span class="line">5. すべてのファイルを選択して削除します。</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/sign-in-issues">https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/sign-in-issues</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1. エクスプローラーを開き、アドレス バーに次の場所を入力します。%LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts</span><br><span class="line">2. Ctrl + A キーを押して、すべてを選択します。</span><br><span class="line">3. 選択したファイルを右クリックして、[削除] を選択します。</span><br><span class="line">4. エクスプローラーのアドレス バーに次の場所を入力します。%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts</span><br><span class="line">5. すべてのファイルを選択して削除します。</span><br></pre></td></tr></table></figure>
 
 <p>6. OS からサインアウト、または、OS を再起動してください</p>
 <p>7. OS にサインインし、Office にサインインできるかをお試しください。</p>
 <br>
 
 <p><strong>■ 補足 : [職場または学校にアクセスする] のアカウントの削除について</strong></p>
-<p>===========================</p>
+<p>=&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</p>
 <p>Windows 10 上で Microsoft 365 Apps for enterprise 等のクイック実行版の Office をご利用されている場合、Windows 10 の「職場または学校にアクセスする」に登録されているアカウントを使用する動きを行う場合があります。</p>
 <p>「職場または学校にアクセスする」に何らかの問題が生じている場合、以下の手順をお試しください。</p>
 <p>- 手順</p>
-<p>1. 以下のサイトから WPJCleanUp.zip を対象のクライアント端末にダウンロードします。<br><a href="https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip" target="_blank" rel="noopener">https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip</a>  </p>
+<p>1. 以下のサイトから WPJCleanUp.zip を対象のクライアント端末にダウンロードします。<br><a target="_blank" rel="noopener" href="https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip">https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip</a>  </p>
 <p>2. クライアント端末に ＜対象ユーザー＞ でログオンし、WPJCleanUp.zip を任意のフォルダに展開します。</p>
 <p>3. CleanupTool に含まれている WPJCleanp.cmd を実行します。</p>
 <p>※ダブルクリックにて実行時、[Windows によって PC が保護されました] と表示された場合は [詳細情報] をクリックし、表示された [実行] をクリックします。<br>4. クライアント端末を再起動します。  </p>
 <br>
 
 <p><strong>- signoutofwamaccounts.ps1</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">if(-not [Windows.Foundation.Metadata.ApiInformation,Windows,ContentType&#x3D;WindowsRuntime]::IsMethodPresent(&quot;Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager&quot;, &quot;FindAllAccountsAsync&quot;))</span><br><span class="line">&#123;</span><br><span class="line">    throw &quot;This script is not supported on this Windows version. Please, use CleanupWPJ.cmd.&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Add-Type -AssemblyName System.Runtime.WindowsRuntime</span><br><span class="line"></span><br><span class="line">Function AwaitAction($WinRtAction) &#123;</span><br><span class="line">  $asTask &#x3D; ([System.WindowsRuntimeSystemExtensions].GetMethods() | ? &#123; $_.Name -eq &#39;AsTask&#39; -and $_.GetParameters().Count -eq 1 -and !$_.IsGenericMethod &#125;)[0]</span><br><span class="line">  $netTask &#x3D; $asTask.Invoke($null, @($WinRtAction))</span><br><span class="line">  $netTask.Wait(-1) | Out-Null</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Function Await($WinRtTask, $ResultType) &#123;</span><br><span class="line">  $asTaskGeneric &#x3D; ([System.WindowsRuntimeSystemExtensions].GetMethods() | ? &#123; $_.Name -eq &#39;AsTask&#39; -and $_.GetParameters().Count -eq 1 -and $_.GetParameters()[0].ParameterType.Name -eq &#39;IAsyncOperation&#96;1&#39; &#125;)[0]</span><br><span class="line">  $asTask &#x3D; $asTaskGeneric.MakeGenericMethod($ResultType)</span><br><span class="line">  $netTask &#x3D; $asTask.Invoke($null, @($WinRtTask))</span><br><span class="line">  $netTask.Wait(-1) | Out-Null</span><br><span class="line">  $netTask.Result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$provider &#x3D; Await ([Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager,Windows,ContentType&#x3D;WindowsRuntime]::FindAccountProviderAsync(&quot;https:&#x2F;&#x2F;login.microsoft.com&quot;, &quot;organizations&quot;)) ([Windows.Security.Credentials.WebAccountProvider,Windows,ContentType&#x3D;WindowsRuntime])</span><br><span class="line"></span><br><span class="line">$accounts &#x3D; Await ([Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager,Windows,ContentType&#x3D;WindowsRuntime]::FindAllAccountsAsync($provider, &quot;d3590ed6-52b3-4102-aeff-aad2292ab01c&quot;)) ([Windows.Security.Authentication.Web.Core.FindAllAccountsResult,Windows,ContentType&#x3D;WindowsRuntime])</span><br><span class="line"></span><br><span class="line">$accounts.Accounts | % &#123; AwaitAction ($_.SignOutAsync(&quot;d3590ed6-52b3-4102-aeff-aad2292ab01c&quot;)) &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">if(-not [Windows.Foundation.Metadata.ApiInformation,Windows,ContentType=WindowsRuntime]::IsMethodPresent(&quot;Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager&quot;, &quot;FindAllAccountsAsync&quot;))</span><br><span class="line">&#123;</span><br><span class="line">    throw &quot;This script is not supported on this Windows version. Please, use CleanupWPJ.cmd.&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Add-Type -AssemblyName System.Runtime.WindowsRuntime</span><br><span class="line"></span><br><span class="line">Function AwaitAction($WinRtAction) &#123;</span><br><span class="line">  $asTask = ([System.WindowsRuntimeSystemExtensions].GetMethods() | ? &#123; $_.Name -eq &#x27;AsTask&#x27; -and $_.GetParameters().Count -eq 1 -and !$_.IsGenericMethod &#125;)[0]</span><br><span class="line">  $netTask = $asTask.Invoke($null, @($WinRtAction))</span><br><span class="line">  $netTask.Wait(-1) | Out-Null</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Function Await($WinRtTask, $ResultType) &#123;</span><br><span class="line">  $asTaskGeneric = ([System.WindowsRuntimeSystemExtensions].GetMethods() | ? &#123; $_.Name -eq &#x27;AsTask&#x27; -and $_.GetParameters().Count -eq 1 -and $_.GetParameters()[0].ParameterType.Name -eq &#x27;IAsyncOperation`1&#x27; &#125;)[0]</span><br><span class="line">  $asTask = $asTaskGeneric.MakeGenericMethod($ResultType)</span><br><span class="line">  $netTask = $asTask.Invoke($null, @($WinRtTask))</span><br><span class="line">  $netTask.Wait(-1) | Out-Null</span><br><span class="line">  $netTask.Result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$provider = Await ([Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager,Windows,ContentType=WindowsRuntime]::FindAccountProviderAsync(&quot;https://login.microsoft.com&quot;, &quot;organizations&quot;)) ([Windows.Security.Credentials.WebAccountProvider,Windows,ContentType=WindowsRuntime])</span><br><span class="line"></span><br><span class="line">$accounts = Await ([Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager,Windows,ContentType=WindowsRuntime]::FindAllAccountsAsync($provider, &quot;d3590ed6-52b3-4102-aeff-aad2292ab01c&quot;)) ([Windows.Security.Authentication.Web.Core.FindAllAccountsResult,Windows,ContentType=WindowsRuntime])</span><br><span class="line"></span><br><span class="line">$accounts.Accounts | % &#123; AwaitAction ($_.SignOutAsync(&quot;d3590ed6-52b3-4102-aeff-aad2292ab01c&quot;)) &#125;</span><br></pre></td></tr></table></figure>
 
 <br>
 
@@ -170,15 +166,15 @@
 <p>Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について<br><a href="https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%A7%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E6%8E%A5%E7%B6%9A%E3%81%8C%E3%81%AA%E3%81%84%E6%97%A8%E3%81%AE%E3%83%A1%E3%83%83%E3%82%BB%E3%83%BC%E3%82%B8%E3%81%8C%E8%A1%A8%E7%A4%BA%E3%81%95%E3%82%8C%E3%82%8B%E4%BA%8B%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について</a></p>
 <br>
 
-<p><strong>2020/10/28 :</strong> <strong>[職場または学校にアクセスする] のアカウントの削除についてを追加しました。</strong></p>
-<p><strong>2021/5/10 : ログオンユーザーに管理者権限がない場合の手順を変更しました。</strong></p>
-<p><strong>2022/3/16 : キャッシュ削除手順を追加しました。</strong></p>
+<p><strong>2020&#x2F;10&#x2F;28 :</strong> <strong>[職場または学校にアクセスする] のアカウントの削除についてを追加しました。</strong></p>
+<p><strong>2021&#x2F;5&#x2F;10 : ログオンユーザーに管理者権限がない場合の手順を変更しました。</strong></p>
+<p><strong>2022&#x2F;3&#x2F;16 : キャッシュ削除手順を追加しました。</strong></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/" data-id="cl703athw001ie0to36hc937g" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/" data-id="cl7h73xkn001i30rbdfdvcukd" class="article-share-link">Share</a>
       
       
     </footer>

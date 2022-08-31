@@ -15,7 +15,7 @@
 <meta property="og:description" content="(※ 2018 年 9 月 7 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。   本記事では、Windows 10 や Windows Server 2016 上で Office アプリケーションにて日本語入力をしている時に、Office アプリケーションが異常終了する現象について説明します。 201">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:43.851Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.789Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -62,10 +62,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -123,19 +119,19 @@
         <p>(※ 2018 年 9 月 7 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office サポート チームです。  </p>
 <p>本記事では、Windows 10 や Windows Server 2016 上で Office アプリケーションにて日本語入力をしている時に、Office アプリケーションが異常終了する現象について説明します。</p>
-<p><span style="color:#ff0000">2018/12/18 update</span><br><span style="color:#339966">「- 回避方法」 の冒頭に情報を追加しました。</span></p>
+<p><span style="color:#ff0000">2018&#x2F;12&#x2F;18 update</span><br><span style="color:#339966">「- 回避方法」 の冒頭に情報を追加しました。</span></p>
 <h2 id="現象"><a href="#現象" class="headerlink" title="- 現象"></a><strong>-</strong> <strong>現象</strong></h2><p>Windows 10 や Windows Server 2016 上で OS に付属の Microsoft IME を利用して日本語入力をしているときに、入力中の Office アプリケーションが異常終了する場合があります。  </p>
 <p>入力中の文字や文字数等、明確な現象再現のための条件はなく、不定期に発生する現象です。</p>
 <p>アプリケーションの異常終了は様々な要因で発生しますが、Microsoft IME で既定で有効になっている 「予測入力」 の機能をご利用になられている場合、現象の一因としてこの 「予測入力」 機能の影響が考えられます。  </p>
 <p>アプリケーションの異常終了に伴いアプリケーション イベント ログに記録される Application Error イベント ID 1000 のログに記録される [障害が発生しているモジュール名] が IMJPAPI.DLL となっている場合、「予測入力」 機能の影響で異常終了が生じている可能性がございます。</p>
-<h2 id="回避方法"><a href="#回避方法" class="headerlink" title="- 回避方法"></a><strong>-</strong> <strong>回避方法</strong></h2><p><span style="color:#ff0000">2018/12/18 update</span></p>
+<h2 id="回避方法"><a href="#回避方法" class="headerlink" title="- 回避方法"></a><strong>-</strong> <strong>回避方法</strong></h2><p><span style="color:#ff0000">2018&#x2F;12&#x2F;18 update</span></p>
 <p>Windows 10 のバージョン 1703 以前をご利用いただいている場合、バージョン 1709 以降に更新いただくことで、現象の回避が見込まれます。バージョン 1709 以降をご利用の環境で現象が発生している場合は、本記事に記載の現象とは異なる要因で現象が発生していることが考えられます。</p>
 <p>イベント ログをご確認いただいた結果 「予測入力」 機能の影響が疑われる場合、以下の設定変更にて 「予測入力」 の機能を無効にしていただくことで現象を回避できる可能性がございます。</p>
 <ol>
 <li>タスク バー上の IME のアイコン (A あ などと表示されているもの) を右クリックし、[プロパティ] メニューを選択します。</li>
-<li>[Microsoft IME の設定] ダイアログで [詳細設定] ボタンを押します。</li>
-<li>[予測入力] タブの [予測入力を使用する] のチェックをオフにします。</li>
-<li>OK で [Microsoft IME の詳細設定] ダイアログを閉じます。  </li>
+<li> [Microsoft IME の設定] ダイアログで [詳細設定] ボタンを押します。</li>
+<li> [予測入力] タブの [予測入力を使用する] のチェックをオフにします。</li>
+<li> OK で [Microsoft IME の詳細設定] ダイアログを閉じます。</li>
 </ol>
 <p>なお、この設定変更を行った場合、予測入力の機能はご利用いただけなくなりますが、その他の日本語入力機能への影響はなく各アプリケーションにて日本語入力をすることが可能です。</p>
 <h2 id="状況"><a href="#状況" class="headerlink" title="- 状況"></a><strong>-</strong> <strong>状況</strong></h2><p>本動作につきまして、追加での情報が確認できましたら、本ブログを更新させていただきます。</p>
@@ -143,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2dt003l3gvs4yrh2f4r/" data-id="cl703atkq003xe0to0ekre3eq" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2dt003l3gvs4yrh2f4r/" data-id="cl7h73xr2003u30rbflc2apue" class="article-share-link">Share</a>
       
       
     </footer>
@@ -152,19 +148,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/cl0m8t2ds003k3gvsdsa5g21h/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/cl0m8t2dl003b3gvs6w8z8co4/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          数式エディター 3.0 の機能削除について
+          クイック実行形式の Office をインストールすると Office 以外のアプリケーションから ODBC - OLEDB が利用できない
         
       </div>
     </a>
   
   
-    <a href="/blog/cl0m8t2aa00013gvsa2mr8xj5/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0m8t2ds003k3gvsdsa5g21h/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード</div>
+      <div class="article-nav-title">数式エディター 3.0 の機能削除について</div>
     </a>
   
 </nav>

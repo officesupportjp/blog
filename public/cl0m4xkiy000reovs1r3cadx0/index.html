@@ -14,13 +14,13 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="こんにちは、Office サポート チームの中村です。 Excel には、ワークシートのスクロール可能な範囲を設定する ScrollArea というシート プロパティが用意されています。本記事では、このScrollArea プロパティを設定したとき、キーボードの矢印キーや Tab キーなどで選択セルを移動したとき、ウィンドウに表示されていないセルに移動しても、そのセルが画面に表示されるようシートが">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image2.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image3.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image4.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image5.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image4.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image5.png">
 <meta property="article:published_time" content="2021-01-11T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:42.919Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.336Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -34,19 +34,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -55,7 +55,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -68,10 +68,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -130,15 +126,15 @@
 <p>Excel には、ワークシートのスクロール可能な範囲を設定する ScrollArea というシート プロパティが用意されています。本記事では、このScrollArea プロパティを設定したとき、キーボードの矢印キーや Tab キーなどで選択セルを移動したとき、ウィンドウに表示されていないセルに移動しても、そのセルが画面に表示されるようシートがスクロールしない動作について記載します。  </p>
 <h4 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a><strong>1. 現象</strong></h4><p>以下の画面キャプチャをご覧ください。この画面では、O2 セルが現在選択されていますが、画面右端に見切れて表示された状態になっています。(赤枠部分)</p>
 <p>通常、例えば A2 セルから右矢印キーや、Tab キーで B2、C2・・・と順に列を移動すると、選択状態のセル全体がウィンドウ内に見える位置に自動的にスクロールされます。しかしながら、後述の状況においては、この画面キャプチャのように十分にスクロールされない場合があります。またこのあと、O 列以降のセルに移動してもこの位置のままスクロールしません。</p>
-<p><img src="image1.png" alt="">  </p>
+<p><img src="/blog/image1.png">  </p>
 <h4 id="2-現象が発生する状況"><a href="#2-現象が発生する状況" class="headerlink" title="2. 現象が発生する状況"></a><strong>2. 現象が発生する状況</strong></h4><p>この動作に直面する主な状況は、ワークシートの ScrollArea プロパティが設定された状態で、かつセルの幅や高さが広げられているときに、スクロール可能範囲の終端に近いセルに移動する場合です。</p>
-<p>Excel が画面外の領域にスクロールするときに、スクロール後のウィンドウ内に表示するシート範囲などを、セルの幅や高さ / ウィンドウのサイズ / 残りのスクロール可能範囲などの要素を基に算出します。これらの要素の組み合わせ次第で、スクロール後の表示位置を期待通りに算出できない場合があり、この現象が発生します。</p>
+<p>Excel が画面外の領域にスクロールするときに、スクロール後のウィンドウ内に表示するシート範囲などを、セルの幅や高さ &#x2F; ウィンドウのサイズ &#x2F; 残りのスクロール可能範囲などの要素を基に算出します。これらの要素の組み合わせ次第で、スクロール後の表示位置を期待通りに算出できない場合があり、この現象が発生します。</p>
 <p>また、Excel バージョンによっても細かな動作は異なるため、例えば同じファイルを同じウィンドウ サイズで開いても、スクロールしなくなる動作が生じる列や行はバージョンによって異なる場合があります。</p>
 <p>発生に関わる条件をまとめると以下の通りです。</p>
 <p><strong>条件 1:</strong><br>ワークシートの ScrollArea プロパティが設定されていること</p>
 <p>※プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。</p>
-<p>ScrollArea プロパティ (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea</a></p>
-<p><img src="image2.png" alt=""></p>
+<p>ScrollArea プロパティ (Excel)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea</a></p>
+<p><img src="/blog/image2.png"></p>
 <p><strong>条件 2:</strong><br>以下の要素等の組み合わせによって発生</p>
 <ul>
 <li>選択セルから ScrollArea プロパティの終端までの残りの幅・高さ</li>
@@ -147,22 +143,22 @@
 <li>シートの倍率</li>
 <li>ウィンドウ サイズなどの算出に関わるディスプレイの拡大縮小、スケール設定</li>
 </ul>
-<p>この動作は、ユーザーの利用上、不便な場合がある動作であることは認識しておりますが、現状のスクロール動作の内部処理上の制約として、現時点でサポートされる全てのバージョンの Excel で発生しうる制限動作となっています。(2021/1/12 現在、サポート対象の Excel は Excel 2013 / 2016 / 2019 / Office 365 の Excel です。)  </p>
+<p>この動作は、ユーザーの利用上、不便な場合がある動作であることは認識しておりますが、現状のスクロール動作の内部処理上の制約として、現時点でサポートされる全てのバージョンの Excel で発生しうる制限動作となっています。(2021&#x2F;1&#x2F;12 現在、サポート対象の Excel は Excel 2013 &#x2F; 2016 &#x2F; 2019 &#x2F; Office 365 の Excel です。)  </p>
 <h4 id="3-回避策"><a href="#3-回避策" class="headerlink" title="3. 回避策"></a><strong>3. 回避策</strong></h4><p>この動作が生じるファイルやウィンドウ サイズなどの構成でも、以下のいずれかの方法でスクロールできます。  </p>
 <h5 id="3-1-スクロールバーでスクロールする"><a href="#3-1-スクロールバーでスクロールする" class="headerlink" title="3-1. スクロールバーでスクロールする"></a><strong>3-1. スクロールバーでスクロールする</strong></h5><p>マウス操作でスクロール バーによってスクロールすると、画面をスクロールできます。</p>
 <p>以下は、先述のファイルでスクロール バーの右矢印 (赤枠部分) をマウスで操作してスクロールした例です。</p>
-<p><img src="image3.png" alt="">  </p>
+<p><img src="/blog/image3.png">  </p>
 <h5 id="3-2-ScrollArea-を広げる、または解除する"><a href="#3-2-ScrollArea-を広げる、または解除する" class="headerlink" title="3-2. ScrollArea を広げる、または解除する"></a><strong>3-2. ScrollArea を広げる、または解除する</strong></h5><p>移動先のセルから、ScrollArea の終端までの幅や高さが十分に広い場合には、正常にスクロールできます。</p>
 <p>例えば A～Q 列にあるテーブルの範囲だけスクロールするさせるため、ScrollArea プロパティに A ～ Q 列を設定しているとします。これを、例えば Z 列など、ある程度余裕を持った範囲をスクロールできるよう設定すると、実際にスクロールしたい範囲では期待通りスクロールできます。(どの列までを ScrollArea に設定すれば問題ないかは、条件 2 の各要素に依存します。具体的な値は定められませんが、実際の環境・ファイルで動作を確認しながら、余裕を持った範囲を設定してください。)</p>
 <p>ScrollArea を広げるにあたって、例えば上記の例であれば、テーブル外の R ～ Z 列のセルを選択させたくない場合は、シート保護の設定で [ロックされたセル範囲の選択] を無効にすることでセル選択を禁止できます。  </p>
 <p><strong>設定手順:</strong><br>1. 選択させたくないセル (上記の例では R ～ Z 列) のセルを右クリックし、[セルの書式設定] – [保護] で [ロック] を有効にします。(既定では有効です。)</p>
 <p>2. 反対に、選択を可能とするセル (上記の例では A ~ Q 列) は同様のメニューで、[ロック] を無効にします。</p>
 <p>3. [校閲] タブ – [シートの保護] – “このシートのすべてのユーザーに許可する操作” の一覧で [ロックされたセル範囲の選択] のチェックを外します。</p>
-<p><img src="image4.png" alt=""><br><img src="image5.png" alt=""></p>
+<p><img src="/blog/image4.png"><br><img src="/blog/image5.png"></p>
 <p>VBA などのプログラムからは、以下で設定できます。</p>
-<p>Worksheet. EnableSelection プロパティ (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection</a></p>
+<p>Worksheet. EnableSelection プロパティ (Excel)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection</a></p>
 <p>このプロパティで xlUnlockedCells を設定します。このプロパティは、ワークシートを保護した状態でのみ有効ですので、さらに以下の Protect メソッドでワークシートを保護します。</p>
-<p>Protect メソッド (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect</a></p>
+<p>Protect メソッド (Excel)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect</a></p>
 <p>また、選択セルの移動を制限することが ScrollArea プロパティを設定している目的である場合は、上記の設定を代わりに行うことで、ScrollArea プロパティの設定自体を削除することも検討できます。(ただし、スクロール バーの操作ではスクロールできます。)</p>
 <p>ScrollArea 設定を削除する場合は、プログラムからは ScrollArea プロパティに空の値 (“”) を設定してください。プロパティ ウィンドウの場合は、ScrollArea プロパティの値を削除してください。  </p>
 <p>今回の投稿は以上です。  </p>
@@ -171,7 +167,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/" data-id="cl703ath3000qe0to62e17t2a" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/" data-id="cl7h73xgp000r30rbapkl0jmo" class="article-share-link">Share</a>
       
       
     </footer>

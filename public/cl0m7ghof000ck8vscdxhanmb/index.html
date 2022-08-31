@@ -7,19 +7,19 @@
   
   <title>Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(※ 2018 年 2 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。) 2018&#x2F;6&#x2F;26 UpdateC2R インストーラー形式の Access 2016 バージョン 1806 で本問題が修正されました。 こんにちは、Office サポートの佐村です。 本記事では、Access 2013 以降で、列が多い (およそ 14 以上) 場合に「ク">
+  <meta name="description" content="(※ 2018 年 2 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。) 2018&#x2F;6&#x2F;26 UpdateC2R インストーラー形式の Access 2016 バージョン 1806 で本問題が修正されました。 こんにちは、Office サポートの佐村です。 本記事では、Access 2013 以降で、列が多い (およそ 14">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="(※ 2018 年 2 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。) 2018&#x2F;6&#x2F;26 UpdateC2R インストーラー形式の Access 2016 バージョン 1806 で本問題が修正されました。 こんにちは、Office サポートの佐村です。 本記事では、Access 2013 以降で、列が多い (およそ 14 以上) 場合に「ク">
+<meta property="og:description" content="(※ 2018 年 2 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。) 2018&#x2F;6&#x2F;26 UpdateC2R インストーラー形式の Access 2016 バージョン 1806 で本問題が修正されました。 こんにちは、Office サポートの佐村です。 本記事では、Access 2013 以降で、列が多い (およそ 14">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/image2.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/image3.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/image4.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image4.png">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:42.793Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.258Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,19 +33,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -54,7 +54,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -67,10 +67,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -126,29 +122,29 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>(※ 2018 年 2 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
-<p><span style="color:#ff0000"><strong>2018/6/26 Update</strong></span><br><span style="color:#339966">C2R インストーラー形式の Access 2016 バージョン 1806 で本問題が修正されました。</span></p>
+<p><span style="color:#ff0000"><strong>2018&#x2F;6&#x2F;26 Update</strong></span><br><span style="color:#339966">C2R インストーラー形式の Access 2016 バージョン 1806 で本問題が修正されました。</span></p>
 <p>こんにちは、Office サポートの佐村です。</p>
 <p>本記事では、Access 2013 以降で、列が多い (およそ 14 以上) 場合に「クロス集計クエリ ウィザード」で列見出しとして<br>表示できないフィールドがある現象について説明します。</p>
 <p><strong>現象</strong>  </p>
 <p>Access 2013 以降で、列 (Column) が多いテーブルに対して「クロス集計クエリ ウィザード」を用いた場合、<br>列見出しに設定するフィールドの選択欄で最後のフィールドが表示されません。</p>
 <p>再現手順 :<br>1. 新規 Access データベースを作成し、列の多いテーブルを作成します (例として 30 列準備します)。<br>2. リボンメニュー [作成] – [クエリ] – [クエリ ウィザード] を選択します。<br>3. 新しいクエリから「クロス集計クエリ ウィザード」を選択して「OK」ボタンをクリックします。<br>4. クロス集計クエリ ウィザードで、対象のテーブルを手順1. で作成したテーブルとし、「次へ」ボタンをクリックします。<br>5. 行見出しとして使うフィールドを選択する画面で「選択可能なフィールド」で最終列が上半分までしか表示されません (選択は可能です)。</p>
-<p><img src="image1.png" alt=""></p>
+<p><img src="/blog/image1.png"></p>
 <p>6. 任意のフィールドを選択し、「次へ」ボタンをクリックします。<br>7. 列見出しとして使うフィールドを選択する画面が表示されます。  </p>
 <p>結果 :<br>手順 7 で、列見出しとして使うフィールドを選択する画面で選択するフィールドに、最終フィールドが表示されず、選択できません。  </p>
-<p>以下の画面では、 Column30 が存在していますが、Column30 が表示されず選択することが出来ません。<br><a href="https://msdnshared.blob.core.windows.net/media/2018/02/CrossQuery2.jpg" target="_blank" rel="noopener"></a></p>
-<p><img src="image2.png" alt="">  </p>
+<p>以下の画面では、 Column30 が存在していますが、Column30 が表示されず選択することが出来ません。<br><a target="_blank" rel="noopener" href="https://msdnshared.blob.core.windows.net/media/2018/02/CrossQuery2.jpg"></a></p>
+<p><img src="/blog/image2.png">  </p>
 <p><strong>原因</strong>  </p>
 <p>Access 2013 以降で発生します。<br>日本語でローカライズされた Access のウィザード画面の表示の問題によりこの現象が発生します。<br>(英語版の Access 2013 以降では本現象は発生しません)  </p>
-<p><strong>解決方法 <span style="color:#ff0000">※2018/6/26 Update</span></strong></p>
+<p><strong>解決方法 <span style="color:#ff0000">※2018&#x2F;6&#x2F;26 Update</span></strong></p>
 <p>Access 2016 C2R インストーラー形式の 2018年6月25日にリリースされた月次チャネルバージョン 1806 (10228.20080) で修正されました。  </p>
 <p>このバージョン以降では、クロス集計ウィザードで列の多いテーブルを指定しても列が指定できなくなるという問題は発生しません。  </p>
 <p>なお、現在のところ MSI 形式での修正プログラムのリリース予定はありません。  </p>
 <p>本修正ビルドは 2018年9月に「半期チャネル(対象指定)」、2019年1月に「半期チャネル」にリリースされます。  </p>
 <p><strong>運用回避方法</strong><br>以下のいずれかの方法で回避します。<br>A) クロス集計クエリ ウィザードの列見出しではいったん別の列を選択し、「クエリデザイン」で改めて正しい列を指定する<br>B) クエリを SQL ビューで表示し、PIVOT 句に指定する列を書き換える<br>C) 英語版の Access 2016 を利用する<br>D) 列の少ないテーブルで運用する<br>E) 列の最後にダミー列を追加する</p>
 <p>A) の対処方法では、一度列見出しとして別のフィールドを選択し、クロス集計クエリ ウィザードの完了画面で<br>「クエリのデザインを編集する」を選択して「完了」ボタンをクリックします。</p>
-<p><img src="image3.png" alt="">  </p>
+<p><img src="/blog/image3.png">  </p>
 <p>クロス集計クエリをデザインビューで開いた画面に遷移するので、列見出しを本来設定したかった列に設定しなおします。  </p>
-<p><a href="https://msdnshared.blob.core.windows.net/media/2018/02/CrossQuery4.jpg" target="_blank" rel="noopener"></a><img src="image4.png" alt="">  </p>
+<p><a target="_blank" rel="noopener" href="https://msdnshared.blob.core.windows.net/media/2018/02/CrossQuery4.jpg"></a><img src="/blog/image4.png">  </p>
 <p>なお、デザインビューで、表示を「SQL ビュー」に変更することで、SQL クエリを表示できるため、PIVOT 句を直接別のフィールドに変更することも可能です。(対象方法 B)  </p>
 <p><strong>今後の修正予定について</strong><br>Access 2013 および Access 2016 の MSI インストーラー形式では、修正される予定はございません。<br>上述の「対処方法」によって運用にてクエリを作成することをご検討くださいますようお願いいたします。  </p>
 <p>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>
@@ -156,7 +152,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/" data-id="cl703atgo000ge0tofdq0bajs" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghof000ck8vscdxhanmb/" data-id="cl7h73xfk000e30rb30kzbvxz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -165,19 +161,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/cl0m7ghok000hk8vs3g1i3uwj/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghog000dk8vs2ovx9yyp/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Access 2016 のリボンをカスタマイズする
+          32bit の Word アプリケーションで、印刷した際に一部のオブジェクトが印刷されない現象について
         
       </div>
     </a>
   
   
-    <a href="/blog/cl0m7ghoi000fk8vs8yjpdr8b/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghok000hk8vs3g1i3uwj/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Access でメモリ不足エラーが発生する現象の対処策について</div>
+      <div class="article-nav-title">Access 2016 のリボンをカスタマイズする</div>
     </a>
   
 </nav>

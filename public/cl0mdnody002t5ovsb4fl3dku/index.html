@@ -15,7 +15,7 @@
 <meta property="og:description" content="(※ 2018 年 6 月 11 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 今回の記事では、Word 2016 からテキスト形式のメールを送信するときの以下の動作について記載します。1. は Word 2016 での意図した仕様変更による動作です。2. は、Word">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:43.693Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.664Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -62,10 +62,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -125,7 +121,7 @@
 <p>今回の記事では、Word 2016 からテキスト形式のメールを送信するときの以下の動作について記載します。1. は Word 2016 での意図した仕様変更による動作です。2. は、Word 2016 製品の不具合によって生じます。</p>
 <ol>
 <li>メール タイトルや本文などが UTF-8 で送信される</li>
-<li>差し込み印刷でタイトルは ANSI(SJIS) / 本文は UTF-8 で送信される</li>
+<li>差し込み印刷でタイトルは ANSI(SJIS) &#x2F; 本文は UTF-8 で送信される</li>
 </ol>
 <p>Word 2016 からのテキスト形式のメールの送信では、Simple MAPIを使用しています。以下に記載する動作変更への対応として、Simple MAPI API が拡張され、従来 ANSI 用であった関数で UTF-8 が送信可能となっています。後述の通り、お手数をおかけしますが、メール アプリケーションを作成されている開発者様には、Simple MAPI の UTF-8 対応をお願いいたします。</p>
 <h4 id="1-Word-2016-でのテキストメールの-UTF-8-への変更"><a href="#1-Word-2016-でのテキストメールの-UTF-8-への変更" class="headerlink" title="1. Word 2016 でのテキストメールの UTF-8 への変更"></a><strong>1. Word 2016</strong> <strong>でのテキストメールの UTF-8 への変更</strong></h4><p>Word 2013 まで、差し込み印刷や共有などの機能で Word からテキスト形式のメールを送信すると、タイトル、本文、添付ファイル名などの文字情報は、ANSI (SJIS) で送信されていました。しかしながら、グローバルで様々な言語を扱う上で ANSI では表現できない文字が多く、これらの文字への対応要望を多くいただいていました。</p>
@@ -135,9 +131,9 @@
 <p>Word 2016 はシステム要件として、Windows 7 SP1 上でも動作します。テキスト形式メールの UTF-8 への対応にあたり、Windows 7 SP1 上でも UTF-8 として送信可能とするため、MapiMessage 構造体の ulReserved パラメーターを拡張し、ここに設定された値が 0 であれば ANSI、CP_UTF8 (UTF-8 のコード ページ) であれば UTF-8 と見分けられるようにしました。</p>
 <p>Word 2016 でのテキスト形式メール送信時には MAPISendMail() 関数を引き続き呼び出し、ulReserved パラメーターに CP_UTF8 を指定して、メッセージの内容は UTF-8 でエンコードした状態で MapiMessage 構造体に格納してテキスト形式のメールを送信します。Outlook 2016 はこの拡張に対応しており、ulReserved パラメーターの値を判断して UTF-8 の場合も正しくデコードして表示します。</p>
 <p>参考)</p>
-<p>タイトル : MAPISendMail function<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd296721.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/dd296721.aspx</a></p>
-<p>タイトル : MapiMessage structure<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd296732.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/dd296732.aspx</a><br>※ ulReserved パラメーターの拡張後の設定値が記載されています</p>
-<p>タイトル : Code Page Identifiers<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756.aspx</a></p>
+<p>タイトル : MAPISendMail function<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd296721.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd296721.aspx</a></p>
+<p>タイトル : MapiMessage structure<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd296732.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd296732.aspx</a><br>※ ulReserved パラメーターの拡張後の設定値が記載されています</p>
+<p>タイトル : Code Page Identifiers<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd317756.aspx</a></p>
 <p><strong>対応方法</strong></p>
 <p>メール アプリケーションの開発者様には、MAPISendMail() 関数で MapiMessage 構造体の ulReserved パラメーターに CP_UTF8 が指定され、文字が UTF-8 でエンコードされて送信される場合に正しく表示できるようご対応をお願いしております。</p>
 <p>エンド ユーザー様がこの状況に直面している場合、以下のような回避策をお試しください。</p>
@@ -149,9 +145,9 @@
 <h4 id="2-差し込み印刷でタイトルのみ文字化けする"><a href="#2-差し込み印刷でタイトルのみ文字化けする" class="headerlink" title="2. 差し込み印刷でタイトルのみ文字化けする"></a><strong>2. 差し込み印刷でタイトルのみ文字化けする</strong></h4><p>この現象は、最新バージョンをご利用の場合、ボリュームライセンス版の Office 2016 でのみ発生します。クイック実行版および Microsoft ストア アプリ版の Office 2016 では修正済みの動作です。</p>
 <p>1. で記載した変更により、Word 2016 からのテキスト形式のメールでは、UTF-8 を使用することを想定しています。しかしながら、製品の問題により、<strong>差し込み印刷からのテキスト形式メール送信のとき、タイトルのみ ANSI (SJIS) のまま送信される現象が発生します</strong>。</p>
 <p>この問題は、クイック実行版、および Microsoft ストア アプリ版の Office 2016 では既に修正されており、タイトル、本文ともに UTF-8 で送信されます。</p>
-<p><span style="color:#ff0000"><strong>2018/8/20 Update</strong></span></p>
+<p><span style="color:#ff0000"><strong>2018&#x2F;8&#x2F;20 Update</strong></span></p>
 <p>以下の更新プログラムで、ボリューム ライセンス版の Office 2016 にも修正を行い、タイトル、本文ともに UTF-8 で送信されるようになりました。</p>
-<p>文書番号 : 4032258<br>タイトル : Word 2016 (KB4032258) の更新プログラムを 2018 年 8 月 7日<br>アドレス : <a href="https://support.microsoft.com/ja-jp/help/4032258" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/4032258</a></p>
+<p>文書番号 : 4032258<br>タイトル : Word 2016 (KB4032258) の更新プログラムを 2018 年 8 月 7日<br>アドレス : <a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/4032258">https://support.microsoft.com/ja-jp/help/4032258</a></p>
 <p><strong>回避策</strong></p>
 <p>ご不便をおかけして申し訳ありませんが、現象が発生するバージョンの Office を利用している場合は以下の回避策をご検討ください。</p>
 <ul>
@@ -165,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl703atj0002we0to7znf0c0m" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl7h73xp3003430rb6ihi67c6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -184,9 +180,9 @@
     </a>
   
   
-    <a href="/blog/cl0mc9o200021b0vscp6jdedg/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0mdnobv00055ovs67kp420v/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)</div>
+      <div class="article-nav-title">(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)</div>
     </a>
   
 </nav>

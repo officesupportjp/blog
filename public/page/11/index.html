@@ -31,14 +31,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -47,7 +47,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -60,10 +60,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -89,6 +85,57 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mdnodx002r5ovsfzvw5fh5/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mdnodx002r5ovsfzvw5fh5/">VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mdnodx002r5ovsfzvw5fh5/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 2 月 16 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの多田です。
+今回は、.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降では使用できない件、およびその対処策についてご案内します。
+はじめにVSTOソリューションをインストール時や、初回起動時にユーザーに信頼するかどうかの確認ダイアログを表示させたくない、といった理由から、VSTO ソリューションへの信頼をあらかじめ付与したい場合があります。信頼を付与する方法として、従来、VSTO では UserInclusionList クラスおよび AddInSecurityEntryクラスが用意されていました。
+参考) 方法: 信頼のリストのエントリを追加...
+        <p class="article-more-link">
+          <a href="/blog/cl0mdnodx002r5ovsfzvw5fh5/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodx002r5ovsfzvw5fh5/" data-id="cl7h73xox002w30rbgm2f1ldv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -123,18 +170,18 @@
         (※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
 こんにちは、Office 開発 サポート チームの 遠藤です。
 今回は、Windows 10 への対応を行われているお客様からいくつかいただくもので、Excel がクラッシュしてしまう、という問題について報告したいと思います。
-2017/4/13 update本 Blog で紹介した問題については、2017 年 4 月から提供を開始しました Windows 10 Creators Update にて修正されました。
+2017&#x2F;4&#x2F;13 update本 Blog で紹介した問題については、2017 年 4 月から提供を開始しました Windows 10 Creators Update にて修正されました。
 この問題は以下の条件下で発生します。
-(条件の 1 から 4 は必須条件となります。5 については、結果的に何かしらのオブジェクトを破棄するような処理が影響する可能性があり、5  は一例となります。)
+(条件の 1 から 4 は必須条件となります。5 については、結果的に何かしらのオブジェクトを破棄するような処理が影響する可能性があり、5  は一例となります。)
 
-OS が Windows...
+OS...
         <p class="article-more-link">
           <a href="/blog/cl0mdnody002s5ovs5vpp069a/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl703atiy002te0to5aenbga3" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl7h73xoy002z30rbf7eohkyf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -179,66 +226,16 @@ OS が Windows...
 今回の記事では、Word 2016 からテキスト形式のメールを送信するときの以下の動作について記載します。1. は Word 2016 での意図した仕様変更による動作です。2. は、Word 2016 製品の不具合によって生じます。
 
 メール タイトルや本文などが UTF-8 で送信される
-差し込み印刷でタイトルは ANSI(SJIS) / 本文は UTF-8 で送信される
+差し込み印刷でタイトルは ANSI(SJIS) &#x2F; 本文は UTF-8 で送信される
 
-Word 2016 からのテキスト形式のメールの送信では、Simple MAPIを使用しています。以下に記載する動作変更への対応として、Simple MAPI API が拡張され、従来 ANSI 用であった関数で...
+Word 2016 からのテキスト形式のメールの送信では、Simple MAPIを使用しています。以下に記載する動作変更への対応として、Simple MAPI API が拡張され、従来 ANSI 用であ...
         <p class="article-more-link">
           <a href="/blog/cl0mdnody002t5ovsb4fl3dku/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl703atj0002we0to7znf0c0m" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mc9o200021b0vscp6jdedg/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mc9o200021b0vscp6jdedg/">Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mc9o200021b0vscp6jdedg/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 3 月 6 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
-こんにちは、Office 開発 サポート チームの中村です。
-今回の投稿は、前回に引き続き、リボンのカスタマイズについての投稿です。今回は、前回の投稿で紹介した 「a. OpenXML 形式のファイルにカスタム XML を追加してカスタマイズを行う」 方法について、サンプルの作成を通して手順とポイントの解説をしていきます。
-ファイルにカスタム XML を追加してリボンをカスタマイズする前回の投稿で説明したように、Excel, Word, PowerPoint の Office 2007 形式のファイルは Open XML 構造になっています。Open XML ファイル フォーマットでは、ファイル内容が記述された xml ファイルと、それらの関...
-        <p class="article-more-link">
-          <a href="/blog/cl0mc9o200021b0vscp6jdedg/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o200021b0vscp6jdedg/" data-id="cl703atjp0039e0toemve5w3y" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002t5ovsb4fl3dku/" data-id="cl7h73xp3003430rb6ihi67c6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -282,14 +279,14 @@ Word 2016 からのテキスト形式のメールの送信では、Simple MAPI�
 こんにちは、Office 開発 サポート チームの中村です。
 今回は、C# や VB.NET を使って .NET Framework 上で動作する Office をオートメーションするプログラムや、VSTO でOffice ソリューション (アドインや、プログラムが組み込まれた Office ファイル) を作成するときに必要な環境構成について記載します。
 過去の投稿で、当時の製品でのバージョン選定について記載していましたが、古い情報になってしまいましたので、本記事では、現在サポートされる製品バージョンについての最新情報を記載したいと思います。動作の仕組みの説明などは、過去の投稿で詳しく説明していますのでぜひ合わせてご参照ください。
-2017/7/...
+2017&#x...
         <p class="article-more-link">
           <a href="/blog/cl0mdnobv00055ovs67kp420v/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl703atft0004e0to8jjrcaky" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl7h73xf1000530rbec7v9j5h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -339,7 +336,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb79f0006nwvs973z6w4v/" data-id="cl703atg40007e0to8ushanqy" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb79f0006nwvs973z6w4v/" data-id="cl7h73xf4000730rbe83e2vr3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -388,59 +385,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ai0013nwvs9tsk91ry/" data-id="cl703athi0012e0todp1qfhtj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office オートメーションで割り当てたオブジェクトを解放する – Part1" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/" class="article-date">
-  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mfb7b6001vnwvs3rv43evy/">Office オートメーションで割り当てたオブジェクトを解放する – Part1</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/" class="article-date-single">    
-        
-    <time datetime="2021-04-27T15:00:00.000Z" itemprop="lastupdate">2021-04-28</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2012 年 2 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。
-今回の投稿では、Office オートメーションの実装コードで割り当てたオブジェクトを解放するというテーマにて記載いたします。.NET Framework 上で動作するカスタム アプリケーションにおいて、Office オートメーションで処理を実装する場合には割り当てたオブジェクトを確実に解放することをお勧めします。
-2016/12/2 Updateサンプル コードを中間オブジェクトも解放するよう、より適切な形に変更しました。
-2017/3/28 Updateアプリケーション終了前に一部のオブジェクトを解放するよう、サンプル コードをさらに適切な形に変更しました。
-これは...
-        <p class="article-more-link">
-          <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b6001vnwvs3rv43evy/" data-id="cl703ati6001ue0toe9asbq21" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ai0013nwvs9tsk91ry/" data-id="cl7h73xkc001330rb5p917fsu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -480,7 +425,7 @@ M...
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2012 年 2 月 28 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+        (※ 2012 年 2 月 28 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
 こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。  
 今回の投稿では、Office オートメーションの実装コードで割り当てたオブジェクトを解放する – Part1 の続編を記載いたします。続編では、前回の投稿でベスト プラクティスとして紹介した解放処理に対して解説を実施した後、正しくオブジェクト解放を実施しない場合に生じる影響についてご紹介します。
 最初に、オブジェクト解放漏れがあると、主に以下のような事象があるということは先に述べておきます。
@@ -491,7 +436,109 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="cl703ati7001ve0to94e7fta6" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="cl7h73xmc001u30rb62a15f1t" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office オートメーションで割り当てたオブジェクトを解放する – Part1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/" class="article-date">
+  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mfb7b6001vnwvs3rv43evy/">Office オートメーションで割り当てたオブジェクトを解放する – Part1</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/" class="article-date-single">    
+        
+    <time datetime="2021-04-28T00:00:00.000Z" itemprop="lastupdate">2021-04-28</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2012 年 2 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。
+今回の投稿では、Office オートメーションの実装コードで割り当てたオブジェクトを解放するというテーマにて記載いたします。.NET Framework 上で動作するカスタム アプリケーションにおいて、Office オートメーションで処理を実装する場合には割り当てたオブジェクトを確実に解放することをお勧めします。
+2016&#x2F;12&#x2F;2 Updateサンプル コードを中間オブジェクトも解放するよう、より適切な形に変更しました。
+2017&#x2F;3&#x2F;28 Updateアプリケーション終了前に一部のオブジェクトを解放するよう、サンプル コード...
+        <p class="article-more-link">
+          <a href="/blog/cl0mfb7b6001vnwvs3rv43evy/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b6001vnwvs3rv43evy/" data-id="cl7h73xmd001v30rbg6ybgqv8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date">
+  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mfb7b8001xnwvs5pzxb66j/">Office サーバー サイド オートメーションの代替案について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date-single">    
+    
+    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
+こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
+今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
+タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
+上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
+        <p class="article-more-link">
+          <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b8001xnwvs5pzxb66j/" data-id="cl7h73xme001w30rbd3ojf3ye" class="article-share-link">Share</a>
       
       
     </footer>
@@ -543,58 +590,7 @@ M...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl703ati8001we0to3s5b2j8h" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office サーバー サイド オートメーションの代替案について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date">
-  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mfb7b8001xnwvs5pzxb66j/">Office サーバー サイド オートメーションの代替案について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" class="article-date-single">    
-    
-    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2014年 5 月 7 日に Japan SharePoint Support Team Blog に公開した情報のアーカイブです。)
-こんにちは、SharePoint サポートの 森　健吾 (kenmori) です。  
-今回の投稿では、Office 開発サポートを担当していた時期に記載した下記投稿 Office サーバーサイド オートメーションの危険性の続編として、その代替案を記載いたします。
-タイトル : Office サーバー サイド オートメーションの危険性についてアドレス: https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの危険性について/
-上記投稿のおさらいとなりますが、例えば以下のような機能を Web サーバー上で Office API を使用したオートメーションで実装することはサポートされ...
-        <p class="article-more-link">
-          <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b8001xnwvs5pzxb66j/" data-id="cl703atig0025e0todzfm6x04" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl7h73xmf001x30rb2xxl006h" class="article-share-link">Share</a>
       
       
     </footer>

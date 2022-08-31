@@ -15,7 +15,7 @@
 <meta property="og:description" content="(※ 2016 年 6 月 30 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートです。   本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照く">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:43.603Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.617Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -62,10 +62,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -125,31 +121,27 @@
 <p>本記事では、スクリプトを処理する時に必要となる PowerShell の導入手順についてご案内します。Office 365 にて公開されている製品において、ユーザー管理の一括処理等でスクリプトコマンドを実行する時などにご参照ください。  </p>
 <p><strong>目次</strong><br>1. PowerShell の導入<br>2. 関連情報  </p>
 <p><strong>1. PowerShell の導入</strong>  </p>
-<p>1. 64 Bit OS が動作する Windows 10/8.1/8/7 の PC を準備します。  </p>
+<p>1. 64 Bit OS が動作する Windows 10&#x2F;8.1&#x2F;8&#x2F;7 の PC を準備します。  </p>
 <p>2. Windows 7 の PC に導入する場合は、前提条件を満たすために最新の Windows Update をすべて適用します。  </p>
-<p>Windows Update 適用後に OS を再起動し、その後、下記リンクから Windows Management Framework 3.0 をインストールし、 Windows PowerShell 3.0 を使用できるようにします。(Windows 10/8.1/8 の PC 場合は、本手順は不要です。)<br>タイトル : Windows Management Framework 3.0<br>アドレス : <a href="http://www.microsoft.com/en-us/download/details.aspx?id=34595" target="_blank" rel="noopener">http://www.microsoft.com/en-us/download/details.aspx?id=34595</a>  </p>
+<p>Windows Update 適用後に OS を再起動し、その後、下記リンクから Windows Management Framework 3.0 をインストールし、 Windows PowerShell 3.0 を使用できるようにします。(Windows 10&#x2F;8.1&#x2F;8 の PC 場合は、本手順は不要です。)<br>タイトル : Windows Management Framework 3.0<br>アドレス : <a target="_blank" rel="noopener" href="http://www.microsoft.com/en-us/download/details.aspx?id=34595">http://www.microsoft.com/en-us/download/details.aspx?id=34595</a>  </p>
 <p>3. 下記の弊社 TechNet ページを参照し、Microsoft Online Services サインイン アシスタント、Windows PowerShell 用 Microsoft Azure Active Directory モジュール (64 ビット バージョン) をインストールします。  </p>
-<p>タイトル : Connect to Office 365 PowerShell<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/dn975125.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/dn975125.aspx</a></p>
-<p>4. PowerShell の<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を変更していない場合は、インストールした Windows PowerShell の Microsoft Azure Active Directory モジュールを管理者権限で起動し、下記コマンドを実行します。(<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">【参考 : 実行ポリシー】</a>既に変更済みの場合は、本手順は不要です。)  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
+<p>タイトル : Connect to Office 365 PowerShell<br>アドレス : <a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/dn975125.aspx">https://technet.microsoft.com/ja-jp/library/dn975125.aspx</a></p>
+<p>4. PowerShell の<a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx">実行ポリシー</a>を変更していない場合は、インストールした Windows PowerShell の Microsoft Azure Active Directory モジュールを管理者権限で起動し、下記コマンドを実行します。(<a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx">【参考 : 実行ポリシー】</a>既に変更済みの場合は、本手順は不要です。)  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned</span><br></pre></td></tr></table></figure>
 
-
-
-<p>なお、設定されている<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を確認するには下記のコマンドを実行します。(<a href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx" target="_blank" rel="noopener">実行ポリシー</a>を取得してプロンプトに表示します。)  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
-
-
+<p>なお、設定されている<a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx">実行ポリシー</a>を確認するには下記のコマンドを実行します。(<a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/hh847748.aspx">実行ポリシー</a>を取得してプロンプトに表示します。)  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy</span><br></pre></td></tr></table></figure>
 
 <p><strong>2.関連情報</strong>  </p>
 <p>関連ブログ記事をご案内いたします。  </p>
-<p>タイトル : Windows PowerShell ファースト ステップ ガイド<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx</a></p>
-<p>タイトル : PowerShell の学習<br>アドレス : <a href="https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx</a></p>
-<p>タイトル : PowerShell スクリプト<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting</a></p>
+<p>タイトル : Windows PowerShell ファースト ステップ ガイド<br>アドレス : <a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx">https://technet.microsoft.com/ja-jp/library/aa973757(VS.85).aspx</a></p>
+<p>タイトル : PowerShell の学習<br>アドレス : <a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx">https://technet.microsoft.com/ja-jp/library/cc281945(v=sql.105).aspx</a></p>
+<p>タイトル : PowerShell スクリプト<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting">https://msdn.microsoft.com/ja-jp/powershell/scripting/powershell-scripting</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m82yji002lvovs7o3d4qg9/" data-id="cl703atir002ie0toa87l7cpb" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m82yji002lvovs7o3d4qg9/" data-id="cl7h73xoq002o30rb96qy3xko" class="article-share-link">Share</a>
       
       
     </footer>

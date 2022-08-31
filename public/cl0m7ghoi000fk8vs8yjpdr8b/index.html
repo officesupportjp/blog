@@ -7,15 +7,15 @@
   
   <title>Access でメモリ不足エラーが発生する現象の対処策について | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 Access や Access ODBC&#x2F;OLEDBを使用したプログラムでは、mdb&#x2F;accdb ファイル上のテーブルへレコードを追加&#x2F;変更&#x2F;削除を行うことが可能です。 本稿では、Access および Access ODB">
+  <meta name="description" content="(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 Access や Access ODBC&#x2F;OLEDBを使用したプログラムでは、mdb&#x2F;accdb ファイル上のテーブルへレコードを追加&#x2F;変更&#x2F;削除を行うことが可能です。 本稿では、A">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Access でメモリ不足エラーが発生する現象の対処策について">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m7ghoi000fk8vs8yjpdr8b/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 Access や Access ODBC&#x2F;OLEDBを使用したプログラムでは、mdb&#x2F;accdb ファイル上のテーブルへレコードを追加&#x2F;変更&#x2F;削除を行うことが可能です。 本稿では、Access および Access ODB">
+<meta property="og:description" content="(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 Access や Access ODBC&#x2F;OLEDBを使用したプログラムでは、mdb&#x2F;accdb ファイル上のテーブルへレコードを追加&#x2F;変更&#x2F;削除を行うことが可能です。 本稿では、A">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:42.817Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.289Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -62,10 +62,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -122,12 +118,12 @@
       
         <p>(※ 2017 年 2 月 16 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office サポート チームです。</p>
-<p>Access や Access ODBC/OLEDBを使用したプログラムでは、mdb/accdb ファイル上のテーブルへレコードを追加/変更/削除を行うことが可能です。</p>
-<p>本稿では、Access および Access ODBC/OLEDBを使用したプログラムから、mdb/accdb ファイル内のテーブルにレコードの追加/更新/削除を繰り返し実施した際にメモリ不足が生じる現象の対処方法をご案内します。</p>
-<h3 id="現象"><a href="#現象" class="headerlink" title="現象"></a><strong>現象</strong></h3><p>Access および Access ODBC/OLEDBを使用したプログラムで mdb/accdb ファイル内のテーブルに連続したレコードを追加/更新/削除を行うと、Access および Access ODBC/OLEDBを使用したプログラムでメモリ不足エラーが発生することがあります。</p>
+<p>Access や Access ODBC&#x2F;OLEDBを使用したプログラムでは、mdb&#x2F;accdb ファイル上のテーブルへレコードを追加&#x2F;変更&#x2F;削除を行うことが可能です。</p>
+<p>本稿では、Access および Access ODBC&#x2F;OLEDBを使用したプログラムから、mdb&#x2F;accdb ファイル内のテーブルにレコードの追加&#x2F;更新&#x2F;削除を繰り返し実施した際にメモリ不足が生じる現象の対処方法をご案内します。</p>
+<h3 id="現象"><a href="#現象" class="headerlink" title="現象"></a><strong>現象</strong></h3><p>Access および Access ODBC&#x2F;OLEDBを使用したプログラムで mdb&#x2F;accdb ファイル内のテーブルに連続したレコードを追加&#x2F;更新&#x2F;削除を行うと、Access および Access ODBC&#x2F;OLEDBを使用したプログラムでメモリ不足エラーが発生することがあります。</p>
 <h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a><strong>原因</strong></h3><p>本現象は、トランザクション処理を行うためのページロックやメモリバッファが不足した場合や、Access Database Engine の処理に必要なメモリが解放されないため、アプリケーションで利用する必要なメモリが確保できない場合に発生します。</p>
 <h3 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a><strong>対処方法</strong></h3><p>この問題を解決するには、必要に応じて、指定された順序で以下の方法を実行します。</p>
-<p><strong>方法 1. レジストリ WorkingSetSleep を設定する</strong><br><strong>方法 2. レジストリ MaxLocksPerFile を設定する</strong><br><strong>方法 3. レジストリ MaxBufferSize を設定する</strong><br><strong>方法 4 Access.exe プロセスの CPU マッピングを 1 つに限定する</strong><br><strong>方法 5. プログラムを再起動する</strong><br><strong>方法 6. 一度に Insert/Update/Delete するレコード数を減らす</strong></p>
+<p><strong>方法 1. レジストリ WorkingSetSleep を設定する</strong><br><strong>方法 2. レジストリ MaxLocksPerFile を設定する</strong><br><strong>方法 3. レジストリ MaxBufferSize を設定する</strong><br><strong>方法 4 Access.exe プロセスの CPU マッピングを 1 つに限定する</strong><br><strong>方法 5. プログラムを再起動する</strong><br><strong>方法 6. 一度に Insert&#x2F;Update&#x2F;Delete するレコード数を減らす</strong></p>
 <p><u>レジストリ エディターについて</u><br>レジストリ エディターの誤った使用は、システム全般に渡る重大な問題を引き起こす可能性があります。<br>こうした問題を解決するためには、Windows をインストールしなおさなければいけません。<br>Microsoft では、レジストリ エディターを使用することによって引き起こされた障害の解決については一切保証しておりません。<br>レジストリ エディターを使用する場合には、お客様の責任において使用してください。</p>
 <p><strong>備考 : この記事内に記載しているレジストリを変更するためには管理者権限が必要です</strong>。</p>
 <h3 id="方法-1-レジストリ-WorkingSetSleep-を設定する"><a href="#方法-1-レジストリ-WorkingSetSleep-を設定する" class="headerlink" title="方法 1.レジストリ WorkingSetSleep を設定する"></a><strong>方法 1.レジストリ WorkingSetSleep を設定する</strong></h3><p>バージョン 2010 以降の Access では、複雑なクエリを実行した際に「システム リソースの超過」というメモリ不足エラーが表示される場合があります。<br>この現象を回避するには以下のレジストリ WorkingSetSleep を作成します。</p>
@@ -149,21 +145,21 @@
 <td>MSI</td>
 <td>OS と Office が同じ bit</td>
 <td>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\14.0\Access Connectivity Engine\Engines</td>
-<td><a href="https://support.microsoft.com/ja-jp/help/2760394/" target="_blank" rel="noopener">KB2760394</a> が適用されている必要があります。</td>
+<td><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/2760394/">KB2760394</a> が適用されている必要があります。</td>
 </tr>
 <tr>
 <td>Access 2010</td>
 <td>MSI</td>
 <td>OS と Office の bit が異なる</td>
 <td>HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines</td>
-<td><a href="https://support.microsoft.com/ja-jp/help/2760394/" target="_blank" rel="noopener">KB2760394</a> が適用されている必要があります。</td>
+<td><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/2760394/">KB2760394</a> が適用されている必要があります。</td>
 </tr>
 <tr>
 <td>Access 2013</td>
 <td>MSI</td>
 <td>OS と Office が同じ bit</td>
 <td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\Access Connectivity Engine\Engines</td>
-<td><a href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi" target="_blank" rel="noopener">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></td>
+<td><a target="_blank" rel="noopener" href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></td>
 </tr>
 <tr>
 <td>Access 2013</td>
@@ -217,8 +213,8 @@
 </tbody></table>
 <p>以上の手順で問題が解決しない場合は、作成した WorkingSetSleep のレジストリを削除するか、WorkingSetSleep に 0 を設定し、元の設定に戻します。<br>設定を戻した後、方法 2 に進みます。</p>
 <h3 id="方法-2-レジストリ-MaxLocksPerFile-を設定する"><a href="#方法-2-レジストリ-MaxLocksPerFile-を設定する" class="headerlink" title="方法 2. レジストリ MaxLocksPerFile を設定する"></a><strong>方法 2. レジストリ MaxLocksPerFile を設定する</strong></h3><p>トランザクションに必要なページロックの数が既定値を超えることでメモリ不足のエラーが発生する場合があります。</p>
-<p>多数のトランザクション処理中にエラー メッセージ “ファイルの共有ロック数が制限を超えています” が表示される<br><a href="https://support.microsoft.com/ja-jp/help/815281" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/815281</a></p>
-<p>You may receive a “There isn’t enough disk space or memory” error message when you perform an operation on an Access table<br><a href="https://support.microsoft.com/en-us/help/286153" target="_blank" rel="noopener">https://support.microsoft.com/en-us/help/286153</a></p>
+<p>多数のトランザクション処理中にエラー メッセージ “ファイルの共有ロック数が制限を超えています” が表示される<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/815281">https://support.microsoft.com/ja-jp/help/815281</a></p>
+<p>You may receive a “There isn’t enough disk space or memory” error message when you perform an operation on an Access table<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/en-us/help/286153">https://support.microsoft.com/en-us/help/286153</a></p>
 <p>キー: 作成する場所は後述の「各バージョンのキー」をご参照ください。<br>型 : DWORD<br>名前 : MaxLocksPerFile<br>値 : 200000 (10 進数)</p>
 <p>※ 既定値 : 9500 (10 進数)<br>※ MaxLocksPerFile に設定可能な値 (理論値) : 0x00000000 ～ 0xffffffff ※ 16進数<br>(0xffffffff の10 進数 : 4294967295)</p>
 <p>なお、大量のトランザクションを処理している場合は、200000 よりも大きな値を設定して、何パターンかお試しください。<br>MaxLocksPerFile を変更して改善する場合は、可能であれば、コミットするタイミングを変更しトランザクションで処理するレコード数を減らすこともご検討ください。</p>
@@ -252,7 +248,7 @@
 <td>MSI</td>
 <td>OS と Office が同じ bit</td>
 <td>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\15.0\<br />Access Connectivity Engine\Engines\ACE</td>
-<td><a href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi" target="_blank" rel="noopener">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></td>
+<td><a target="_blank" rel="noopener" href="https://blogs.technet.microsoft.com/officesupportjp/2016/09/08/howto_c2r_or_msi">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></td>
 </tr>
 <tr>
 <td>Access 2013</td>
@@ -382,17 +378,17 @@
 <p>以上の手順で問題が解決しない場合は、MaxLocksPerFile および MaxBufferSize を既定値に戻します。<br>設定を戻した後、方法 4 に進みます。</p>
 <h3 id="方法-4-Access-exe-プロセスの-CPU-マッピングを-1-つに限定する"><a href="#方法-4-Access-exe-プロセスの-CPU-マッピングを-1-つに限定する" class="headerlink" title="方法 4 Access.exe プロセスの CPU マッピングを 1 つに限定する"></a><strong>方法 4 Access.exe プロセスの CPU マッピングを 1 つに限定する</strong></h3><p>Access はマルチスレッドで動作することを想定していないエンジンを利用しています。<br>この動作が影響してメモリ不足が生じる場合があります。</p>
 <p>回避策 :<br>1. 現象が発生している Access ファイルを開きます。<br>2. [タスク マネージャー] を起動します。タスクマネージャの [プロセス] タブで “MSACCESS.EXE” のプロセスを右クリックします。<br>3. [関係の設定] メニューを選択します。<br>4. [プロセッサの関係] ダイアログ ボックスで、任意の一つの CPU のみチェックをオンにし、その他の CPU のチェックをオフにします。<br>5. OK でダイアログを閉じます。</p>
-<p>複数コアの CPU 環境で実行中の Access が応答なしになる<br><a href="https://support.microsoft.com/ja-jp/help/2646068" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/2646068</a></p>
+<p>複数コアの CPU 環境で実行中の Access が応答なしになる<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/2646068">https://support.microsoft.com/ja-jp/help/2646068</a></p>
 <p>以上の手順で問題が解決しない場合は、方法 5 に進みます。</p>
-<h3 id="方法-5-プログラムを再起動する"><a href="#方法-5-プログラムを再起動する" class="headerlink" title="方法 5. プログラムを再起動する"></a><strong>方法 5. プログラムを再起動する</strong></h3><p>メモリ不足が発生している Access もしくは Access ODBC/OLEDBを使用したプログラムを終了し、再起動します。</p>
+<h3 id="方法-5-プログラムを再起動する"><a href="#方法-5-プログラムを再起動する" class="headerlink" title="方法 5. プログラムを再起動する"></a><strong>方法 5. プログラムを再起動する</strong></h3><p>メモリ不足が発生している Access もしくは Access ODBC&#x2F;OLEDBを使用したプログラムを終了し、再起動します。</p>
 <p>以上の手順で問題が解決しない場合は、方法 6 に進みます。</p>
-<h3 id="方法-6-一度に-Insert-Update-Delete-するレコード数を減らす"><a href="#方法-6-一度に-Insert-Update-Delete-するレコード数を減らす" class="headerlink" title="方法 6. 一度に Insert/Update/Delete するレコード数を減らす"></a><strong>方法 6. 一度に Insert/Update/Delete するレコード数を減らす</strong></h3><p>トランザクションで Insert/Update/Delete するレコードの数を減らします。</p>
+<h3 id="方法-6-一度に-Insert-x2F-Update-x2F-Delete-するレコード数を減らす"><a href="#方法-6-一度に-Insert-x2F-Update-x2F-Delete-するレコード数を減らす" class="headerlink" title="方法 6. 一度に Insert&#x2F;Update&#x2F;Delete するレコード数を減らす"></a><strong>方法 6. 一度に Insert&#x2F;Update&#x2F;Delete するレコード数を減らす</strong></h3><p>トランザクションで Insert&#x2F;Update&#x2F;Delete するレコードの数を減らします。</p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoi000fk8vs8yjpdr8b/" data-id="cl703atgp000he0to655x238l" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoi000fk8vs8yjpdr8b/" data-id="cl7h73xfm000g30rb07oidylh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -401,19 +397,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/cl0m7ghof000ck8vscdxhanmb/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghok000hk8vs3g1i3uwj/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない
+          Access 2016 のリボンをカスタマイズする
         
       </div>
     </a>
   
   
-    <a href="/blog/cl0m7ghor000nk8vsf3ka62dj/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghoj000gk8vsf6s42i7t/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac</div>
+      <div class="article-nav-title">C2R 版の Office をインストールすると、特定のレジストリのアクセス権限テーブル参照時に警告が発生する</div>
     </a>
   
 </nav>

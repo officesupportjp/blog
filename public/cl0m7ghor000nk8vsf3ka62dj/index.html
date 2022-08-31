@@ -14,10 +14,10 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="[English Follows]  こんにちは、Office サポートの山本です。 本記事では Excel 2016 for Mac で [ページ設定] で設定した [先頭ページ番号] の数字から、印刷時にページ番号が開始しない動作についてご説明します。   現象macOS 版の Excel 2016 において、以下の手順で先頭ページ番号を指定し印刷した場合には、指定した先頭ページ番号が有効とな">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghor000nk8vsf3ka62dj/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghor000nk8vsf3ka62dj/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:42.870Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.305Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -31,19 +31,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m7ghor000nk8vsf3ka62dj/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -52,7 +52,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -65,10 +65,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -127,34 +123,34 @@
 <p> こんにちは、Office サポートの山本です。</p>
 <p>本記事では Excel 2016 for Mac で [ページ設定] で設定した [先頭ページ番号] の数字から、印刷時にページ番号が開始しない動作についてご説明します。  </p>
 <p><strong>現象</strong><br>macOS 版の Excel 2016 において、以下の手順で先頭ページ番号を指定し印刷した場合には、指定した先頭ページ番号が有効とならず、必ず “1” から開始されます。</p>
-<p>- 手順<br>1. “Excel for Mac” を起動しブックを開きます。<br>2. [ファイル] - [ページ設定] の [先頭ページ番号] にて、以下のように “1” 以外の番号を設定します。<br><img src="image1.png" alt="">  </p>
+<p>- 手順<br>1. “Excel for Mac” を起動しブックを開きます。<br>2. [ファイル] - [ページ設定] の [先頭ページ番号] にて、以下のように “1” 以外の番号を設定します。<br><img src="/blog/image1.png">  </p>
 <p>3. ブックのフッター等に、ページ番号を挿入します。<br> 指定した先頭ページ番号からページ番号が挿入されます。<br>4. [印刷] を実行します。<br>5. 結果、ページ番号が指定した先頭ページ番号ではなく “1” から開始します。  </p>
 <p><strong>原因</strong><br>現時点の Excel 2016 for Mac の機能として、[ファイル] - [ページ設定] から [先頭ページ番号] を指定した場合にも、この設定値が有効とならないことが原因です。  </p>
 <p><strong>対処方法</strong><br>現状ご案内可能な回避策としては、[先頭ページ番号] を利用せずに、手動でページ番号を設定する方法にてご対応ください。  </p>
-<p>例) 先頭ページ番号を 1+n ページ目から開始したい場合、ブックのフッター等で &amp;[ページ番号] の後に “+n “ を追加します。  </p>
+<p>例) 先頭ページ番号を 1+n ページ目から開始したい場合、ブックのフッター等で &amp;[ページ番号] の後に “+n “ を追加します。  </p>
 <p>Page &amp;[ページ番号]+n  </p>
 <p><strong>今後の修正予定について</strong><br>本現象については 2018 年 8 月 23 日において修正対応の予定はございません。<br>今後 [ページ設定] 画面の変更や、機能追加などが行われた場合には、本ブログにて随時ご案内させていただく予定です。</p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 <p><span style="color:#ff0000">[English]</span></p>
 <p><span style="color:#0000ff"><strong>“First page number” is not effective when printing on Excel 2016 for Mac</strong></span></p>
-<p><strong>Symptom</strong><br>If you print a book on Excel 2016 for Mac by using First page number option, the expected page number is not printed and the first page number is always “1”.</p>
+<p><strong>Symptom</strong><br>If you print a book on Excel 2016 for Mac by using First page number option, the expected page number is not printed and the first page number is always “1”.</p>
 <p>- Steps  </p>
 <p>1. Start “Excel for Mac” and open a book.<br>2. Select [File] - [Page Setup] and set any number (besides “1”) on [First page number].  </p>
-<p><img src="image2.png" alt=""> <a href="https://msdnshared.blob.core.windows.net/media/2018/08/Excel_PageSetup_en.png" target="_blank" rel="noopener"></a> 3. Insert the page number to the book (e.g. footer) and check the expected number is displayed.  </p>
+<p><img src="/blog/image2.png"> <a target="_blank" rel="noopener" href="https://msdnshared.blob.core.windows.net/media/2018/08/Excel_PageSetup_en.png"></a> 3. Insert the page number to the book (e.g. footer) and check the expected number is displayed.  </p>
 <p>4. Select [Print].  </p>
 <p>5. Check the printed page number and the first page number is “1”.</p>
 <p><strong>Cause</strong><br>[File] - [Page Setup]- [First page number] is not available as of now.</p>
 <p><strong>Workaround</strong><br>Set the page number manually.</p>
-<p>e.g. If you want to set the first page number as 1+n, type “+n “ after the &amp;[Page] code in the footer.  </p>
+<p>e.g. If you want to set the first page number as 1+n, type “+n “ after the &amp;[Page] code in the footer.  </p>
 <p>Page &amp;[Page]+n</p>
-<p><strong>Status</strong><br>There is no plan for fix as of 8/23/2018.  </p>
+<p><strong>Status</strong><br>There is no plan for fix as of 8&#x2F;23&#x2F;2018.  </p>
 <p>We will update in this blog if there are changes in [Page Setup] page or new feature is added.</p>
 <p><strong>Information in this article (including attached documents and links) is as of date of article’s creation.</strong><br><strong>Please note that this may be changed without notice.</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghor000nk8vsf3ka62dj/" data-id="cl703atgz000ne0to76li1dpu" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghor000nk8vsf3ka62dj/" data-id="cl7h73xgl000n30rbeeflcrcs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -163,11 +159,11 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/cl0m7ghoi000fk8vs8yjpdr8b/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghoj000gk8vsf6s42i7t/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Access でメモリ不足エラーが発生する現象の対処策について
+          C2R 版の Office をインストールすると、特定のレジストリのアクセス権限テーブル参照時に警告が発生する
         
       </div>
     </a>

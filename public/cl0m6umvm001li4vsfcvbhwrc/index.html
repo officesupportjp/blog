@@ -15,7 +15,7 @@
 <meta property="og:description" content="こんにちは、Office サポート チームの中村です。 パフォーマンス改善効果が期待できる設定の第 3 弾です。今回は、前回に続き Office アプリケーションの起動やファイル オープンが遅い場合に効果が期待できる設定のうち、ネットワーク通信と関連する設定を紹介します。   目次1. SMB 通信設定 (ファイル サーバー上の共有フォルダのファイルを開く場合)2. SharePoint からファ">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-02-25T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:43.133Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.446Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -62,10 +62,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -113,7 +109,7 @@
         Last Update: 
         <a href="/blog/cl0m6umvm001li4vsfcvbhwrc/" class="article-date-single">    
         
-    <time datetime="2020-05-12T15:00:00.000Z" itemprop="lastupdate">2020-05-13</time>    
+    <time datetime="2020-05-13T00:00:00.000Z" itemprop="lastupdate">2020-05-13</time>    
     
 </a>              
       </div>
@@ -122,44 +118,44 @@
       
         <p>こんにちは、Office サポート チームの中村です。</p>
 <p>パフォーマンス改善効果が期待できる設定の第 3 弾です。今回は、前回に続き Office アプリケーションの起動やファイル オープンが遅い場合に効果が期待できる設定のうち、ネットワーク通信と関連する設定を紹介します。  </p>
-<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a><strong>目次</strong></h2><p>1. SMB 通信設定 (ファイル サーバー上の共有フォルダのファイルを開く場合)<br>2. SharePoint からファイルを開くときのキャッシュ設定<br>3. インターネット サービスに接続する機能<br>4. 証明書有効性確認処理<br>補足: 適切なインターネット通信設定 (2. / 3. / 4. に関わる設定)<br><br> </p>
+<h2 id="目次"><a href="#目次" class="headerlink" title="目次"></a><strong>目次</strong></h2><p>1. SMB 通信設定 (ファイル サーバー上の共有フォルダのファイルを開く場合)<br>2. SharePoint からファイルを開くときのキャッシュ設定<br>3. インターネット サービスに接続する機能<br>4. 証明書有効性確認処理<br>補足: 適切なインターネット通信設定 (2. &#x2F; 3. &#x2F; 4. に関わる設定)<br><br> </p>
 <h2 id="1-SMB-通信設定"><a href="#1-SMB-通信設定" class="headerlink" title="1. SMB 通信設定"></a><strong>1. SMB</strong> <strong>通信設定</strong></h2><p>通常、ファイルサーバーの共有フォルダに格納された Office ファイルを開くときには、クライアントとサーバー間で SMB プロトコルで通信が行われます。SMB 2.1 を利用している場合、Lease 機能が利用できます。一般的にはこの機能によりクライアントにキャッシュが保持されることで SMB 通信によるネットワーク トラフィックを削減し、ファイル オープンのパフォーマンスは向上しますが、ウィルス対策ソフトの動作などの影響を受け、この機能が Office ファイルを開くパフォーマンスの低下を招く場合があります。このような場合は以下レジストリを設定して Lease 機能を無効化することが検討できます。(Lease 機能を無効化すると、Lease 機能より少し古い仕組みの Oplock 機能によるキャッシュが行われます。) また、現在無効な場合は有効にすると速くなる可能性があります。</p>
-<p>参考) Client caching features: Oplock vs. Lease<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fblogs.msdn.microsoft.com%2Fopenspecification%2F2009%2F05%2F22%2Fclient-caching-features-oplock-vs-lease%2F&data=02%7C01%7Ckanakamu%40microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243459967&sdata=eYDBezWpWECafLxmGvYpQmmsRuhUKzg6seCgGh71or0%3D&reserved=0" target="_blank" rel="noopener">https://blogs.msdn.microsoft.com/openspecification/2009/05/22/client-caching-features-oplock-vs-lease/  
+<p>参考) Client caching features: Oplock vs. Lease<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://blogs.msdn.microsoft.com/openspecification/2009/05/22/client-caching-features-oplock-vs-lease/&data=02%7C01%7Ckanakamu@microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243459967&sdata=eYDBezWpWECafLxmGvYpQmmsRuhUKzg6seCgGh71or0=&reserved=0">https://blogs.msdn.microsoft.com/openspecification/2009/05/22/client-caching-features-oplock-vs-lease/  
 </a></p>
-<p>&lt;レジストリ&gt;<br>キー : HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Lanmanserver\Parameters<br>名前: DisableLeasing<br>種類: REG_DWORD<br>値: (有効: 0 / 無効: 1)<br>* 設定後、OS を再起動してください。<br><br>  </p>
-<h2 id="2-SharePoint-からファイルを開くときのキャッシュ設定"><a href="#2-SharePoint-からファイルを開くときのキャッシュ設定" class="headerlink" title="2. SharePoint からファイルを開くときのキャッシュ設定"></a><strong>2.</strong> <strong>SharePoint からファイルを開くときのキャッシュ設定</strong></h2><p>SharePoint のドキュメント ライブラリから Office ファイルを開くときには、独自のキャッシュの仕組みなどを用いた通信が行われます。<br>プロキシを介している環境などにおいて、Office アプリケーションから SharePoint サーバーへの名前解決や HTTP 通信での CONNECT / OPTIONS / GET などの要求に対し、応答がすぐに返るようネットワーク通信周りが適切に構成されていない場合に、処理のタイムアウトを待つことで Office ファイルのオープンが遅延する場合があります。このような場合には、この処理を無効化することで起動パフォーマンスを改善できます。  </p>
+<p>&lt;レジストリ&gt;<br>キー : HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Lanmanserver\Parameters<br>名前: DisableLeasing<br>種類: REG_DWORD<br>値: (有効: 0 &#x2F; 無効: 1)<br>* 設定後、OS を再起動してください。<br><br>  </p>
+<h2 id="2-SharePoint-からファイルを開くときのキャッシュ設定"><a href="#2-SharePoint-からファイルを開くときのキャッシュ設定" class="headerlink" title="2. SharePoint からファイルを開くときのキャッシュ設定"></a><strong>2.</strong> <strong>SharePoint からファイルを開くときのキャッシュ設定</strong></h2><p>SharePoint のドキュメント ライブラリから Office ファイルを開くときには、独自のキャッシュの仕組みなどを用いた通信が行われます。<br>プロキシを介している環境などにおいて、Office アプリケーションから SharePoint サーバーへの名前解決や HTTP 通信での CONNECT &#x2F; OPTIONS &#x2F; GET などの要求に対し、応答がすぐに返るようネットワーク通信周りが適切に構成されていない場合に、処理のタイムアウトを待つことで Office ファイルのオープンが遅延する場合があります。このような場合には、この処理を無効化することで起動パフォーマンスを改善できます。  </p>
 <p>&lt;グループポリシー&gt;<br>[Microsoft Office 2016] – [Microsoft Office ドキュメント キャッシュ] – [最初に Office ドキュメント キャッシュからドキュメントを開く]<br>設定値 : 無効  </p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet<br>名前 : DisableServerReachability<br>種類 : REG_DWORD<br>値 : 1<br><br></p>
 <h2 id="3-インターネット-サービスに接続する機能"><a href="#3-インターネット-サービスに接続する機能" class="headerlink" title="3. インターネット サービスに接続する機能"></a><strong>3.</strong> <strong>インターネット サービスに接続する機能</strong></h2><p>Office には多数のオンライン サービスを利用する機能があります。これらの機能では、Office の起動時やファイル オープン時、リボンのタブ移動時など、各機能に適したタイミングでバックグラウンドでそのサービスのサイトへの通信が生じます。2. のネットワークコスト確認処理と同様、ネットワーク構成によってはこの通信への応答が返るまでに時間を要し、パフォーマンスに影響を与えます。<br>オンライン サービスを利用する必要がない場合は、それらの機能を無効化する設定を行うことでパフォーマンスを改善できます。オンライン サービスの無効化を行う方法は、Office 365 バージョン 1904 でのプライバシー コントロールの新機能追加に伴い、この前後で大きく異なっています。  </p>
-<p><u><strong>Office 2016 / 2019 / Office 365</strong> <strong>バージョン 1903 以前</strong></u><br>以下の過去投稿でオンライン サービスを無効化する方法をご案内しています。</p>
+<p><u><strong>Office 2016 &#x2F; 2019 &#x2F; Office 365</strong> <strong>バージョン 1903 以前</strong></u><br>以下の過去投稿でオンライン サービスを無効化する方法をご案内しています。</p>
 <p>Office 2016 が行うインターネット接続について<br><a href="https://officesupportjp.github.io/blog/Office%202016%20%E3%81%8C%E8%A1%8C%E3%81%86%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%8D%E3%83%83%E3%83%88%E6%8E%A5%E7%B6%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office 2016 が行うインターネット接続について/</a></p>
 <p>オプションについては上記記事で言及されていないため、以下に記載します。  </p>
 <p>&lt;オプション&gt;<br>いずれか 1 つのアプリケーションから設定を変更すると、他のアプリケーションの動作にも反映されます。<br>[ファイル] – [オプション] – [セキュリティ センター] – [セキュリティ センターの設定] – [プライバシー オプション] – [Office を Microsoft のオンラインサービスに接続して、使用状況や環境設定に関連する機能を提供できるようにしますか?] のチェックを外す</p>
 <p>また、グループポリシーでは個別の機能ごとに無効化する設定が用意されているものもありますが、今回の記事では個々の機能の設定については割愛します。  </p>
 <p><u><strong>Office 365</strong> <strong>バージョン 1904 以降</strong></u><br>バージョン 1904 でプライバシー コントロール機能が追加され、Office アプリケーションから送信する診断データ、および利用できるオンライン サービス (この変更以降、”接続エクスペリエンス” と呼ばれます) の整理と新たな制御方法が用意されました。詳細は以下の公開情報でご案内しています。</p>
-<p>Office 365 ProPlus のプライバシー コントロールの概要<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2FDeployOffice%2Fprivacy%2Foverview-privacy-controls&data=02%7C01%7Ckanakamu%40microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243479954&sdata=K03qU0PwWzaoM3QT3SEiANDyWFRrfOr7nCyYy1Kc4iE%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/DeployOffice/privacy/overview-privacy-controls</a></p>
-<p>ポリシーの設定を使用して、Office 365 ProPlus のプライバシー コントロールを管理する<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2FDeployOffice%2Fprivacy%2Fmanage-privacy-controls&data=02%7C01%7Ckanakamu%40microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243479954&sdata=OKNN0OPC3H1qZ2Wr2HTkZutS2BZI4U2ejpB%2BPYz0wO4%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/DeployOffice/privacy/manage-privacy-controls</a></p>
-<p>Office 365 ProPlus の Office クラウドポリシーサービスの概要<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2FDeployOffice%2Foverview-office-cloud-policy-service&data=02%7C01%7Ckanakamu%40microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243489949&sdata=A%2BXdhY5lbj%2B4XBATbWlKSCgyyFBVZbHMKJFwpvPnfWs%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/DeployOffice/overview-office-cloud-policy-service</a><br>* OS ログインユーザーに対する Active Directory グループポリシー制御の他に、Office 365 クラウドポリシーを用いて Office にログインしている Office 365 ユーザーに対する制御を行うこともできます。</p>
+<p>Office 365 ProPlus のプライバシー コントロールの概要<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/DeployOffice/privacy/overview-privacy-controls&data=02%7C01%7Ckanakamu@microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243479954&sdata=K03qU0PwWzaoM3QT3SEiANDyWFRrfOr7nCyYy1Kc4iE=&reserved=0">https://docs.microsoft.com/ja-jp/DeployOffice/privacy/overview-privacy-controls</a></p>
+<p>ポリシーの設定を使用して、Office 365 ProPlus のプライバシー コントロールを管理する<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/DeployOffice/privacy/manage-privacy-controls&data=02%7C01%7Ckanakamu@microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243479954&sdata=OKNN0OPC3H1qZ2Wr2HTkZutS2BZI4U2ejpB+PYz0wO4=&reserved=0">https://docs.microsoft.com/ja-jp/DeployOffice/privacy/manage-privacy-controls</a></p>
+<p>Office 365 ProPlus の Office クラウドポリシーサービスの概要<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/DeployOffice/overview-office-cloud-policy-service&data=02%7C01%7Ckanakamu@microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243489949&sdata=A+XdhY5lbj+4XBATbWlKSCgyyFBVZbHMKJFwpvPnfWs=&reserved=0">https://docs.microsoft.com/ja-jp/DeployOffice/overview-office-cloud-policy-service</a><br>* OS ログインユーザーに対する Active Directory グループポリシー制御の他に、Office 365 クラウドポリシーを用いて Office にログインしている Office 365 ユーザーに対する制御を行うこともできます。</p>
 <p>状況によって細かな制御が必要になるため、上記資料を参照してご利用の環境、使い方に合った設定としていただければと思いますが、切り分けのため、最も厳しい設定としてすべてを無効化するには以下を設定します。  </p>
 <p>&lt;グループ ポリシー&gt;<br>[Microsoft Office 2016] – [プライバシー] – [セキュリティ センター] – [Officeで接続エクスペリエンスの使用を許可する]<br>設定値 : 無効  </p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\Privacy<br>名前 : DisconnectedState<br>種類 : REG_DWORD<br>値 : 2<br><br></p>
-<h2 id="4-証明書有効性確認処理"><a href="#4-証明書有効性確認処理" class="headerlink" title="4. 証明書有効性確認処理"></a><strong>4.</strong> <strong>証明書有効性確認処理</strong></h2><p>Office アプリケーションに含まれるモジュールや、サードパーティ提供を含むアドインの多くでは、ファイルに対して証明書による署名が行われています。Office の起動時にはこれらのモジュール、アドインを読みこみますが、その際に署名が有効なものであるかを検証します。署名の検証プロセスでは、署名に使用されている証明書やそのルート証明書について有効性を確認する処理が行われます。このために、インターネットに証明書の情報を取得しに行きますが、2. / 3. と同様、端末のネットワーク構成によってはこの処理でタイムアウト待ちが生じ、起動遅延に繋がります。<br>このような場合、この証明書の確認処理を行わないようにすることができます。本来これを無効化するとセキュリティ強度は低下しますが、タイムアウト待ちが生じている環境では元々確認は行えていないため、無効化しても状況に変わりはありません。</p>
+<h2 id="4-証明書有効性確認処理"><a href="#4-証明書有効性確認処理" class="headerlink" title="4. 証明書有効性確認処理"></a><strong>4.</strong> <strong>証明書有効性確認処理</strong></h2><p>Office アプリケーションに含まれるモジュールや、サードパーティ提供を含むアドインの多くでは、ファイルに対して証明書による署名が行われています。Office の起動時にはこれらのモジュール、アドインを読みこみますが、その際に署名が有効なものであるかを検証します。署名の検証プロセスでは、署名に使用されている証明書やそのルート証明書について有効性を確認する処理が行われます。このために、インターネットに証明書の情報を取得しに行きますが、2. &#x2F; 3. と同様、端末のネットワーク構成によってはこの処理でタイムアウト待ちが生じ、起動遅延に繋がります。<br>このような場合、この証明書の確認処理を行わないようにすることができます。本来これを無効化するとセキュリティ強度は低下しますが、タイムアウト待ちが生じている環境では元々確認は行えていないため、無効化しても状況に変わりはありません。</p>
 <p>証明書の有効性確認では、「証明書失効確認処理 (CRL)」と「ルート証明書更新処理 (CTL)」があり、それぞれの無効化方法をご案内できるもののみ記載します。  </p>
 <p>&lt;設定&gt;<br><strong>証明書失効確認の無効化</strong><br>Internet Explorer の [ツール] – [インターネット オプション] – [詳細設定] - [発行元証明書の取り消しを確認する] のチェックをオフにする  </p>
 <p>&lt;グループポリシー&gt;<br><strong>ルート証明書更新プログラムの無効化</strong><br>[コンピュータの構成] – [Windowsの設定] - [セキュリティの設定] - [公開キーのポリシー] - [証明書パス検証の設定] - [ネットワークの取得] タブ - [これらのポリシーの設定を定義する] のチェックを有効にし、 [Microsoft ルート証明書プログラムで証明書を自動更新する] のチェックを外す  </p>
 <p>&lt;レジストリ&gt;<br><strong>ルート証明書更新プログラムの無効化</strong><br>キー： HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\SystemCertificates\AuthRoot<br>名前 : DisableRootAutoUpdate<br>種類 : REG_DWORD<br>値： 1  </p>
-<p><strong>証明書失効確認の無効化</strong><br>キー : HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing<br>名前 : State<br>種類 : REG_DWORD<br>値 : 他の設定と合わせて 1 つのレジストリで管理するためユーザーの設定状況によって値は異なります。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IE が既定の設定に対して証明書失効確認の無効化のみを設定した場合は 0x23E00 (10進数: 146944) になります。</p>
+<p><strong>証明書失効確認の無効化</strong><br>キー : HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\WinTrust\Trust Providers\Software Publishing<br>名前 : State<br>種類 : REG_DWORD<br>値 : 他の設定と合わせて 1 つのレジストリで管理するためユーザーの設定状況によって値は異なります。<br>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;IE が既定の設定に対して証明書失効確認の無効化のみを設定した場合は 0x23E00 (10進数: 146944) になります。</p>
 <p><strong>補足: 適切なインターネット通信設定</strong><br>上記では、状況次第でタイムアウトにつながる機能の通信を抑止する方法を案内しましたが、機能を無効化しなくても、このような通信が行われたときに、即座に通信不可の応答が返れば問題ありません。このためには、一般的に以下の点にご注意ください。</p>
 <p><strong>・名前解決が正常に行えるようにする、または解決できない旨の応答が速やかに返るようにする</strong><br>DNS サーバーのフォワード設定で不必要に転送が行われないようにしたり、Office の接続先アドレスを DNS サーバーの名前解決リストや、状況次第では hosts に追加します。これはダミーのアドレスでも構いません。</p>
-<p><strong>・Office からの接続要求にすぐに応答を返す (正否は不問)</strong><br>名前解決はできた場合、その接続先への接続を行います。接続確立にタイムアウトが起きないよう、ネットワーク構成を確認します。<br>適切に応答が返るよう構成すべき Office の接続先情報は以下の公開情報を参照してください。Office 365 向けの情報ですが、Office 2016 / 2019 でもほとんど同じです。</p>
-<p>Office 365 の URL と IP アドレスの範囲<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice365%2Fenterprise%2Furls-and-ip-address-ranges&data=02%7C01%7Ckanakamu%40microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243489949&sdata=0LhO6Mzjw3tJVmIXx84RQQVc%2FVtQjTit4zdRcjiwFhI%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office365/enterprise/urls-and-ip-address-ranges</a><br><br></p>
+<p><strong>・Office からの接続要求にすぐに応答を返す (正否は不問)</strong><br>名前解決はできた場合、その接続先への接続を行います。接続確立にタイムアウトが起きないよう、ネットワーク構成を確認します。<br>適切に応答が返るよう構成すべき Office の接続先情報は以下の公開情報を参照してください。Office 365 向けの情報ですが、Office 2016 &#x2F; 2019 でもほとんど同じです。</p>
+<p>Office 365 の URL と IP アドレスの範囲<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office365/enterprise/urls-and-ip-address-ranges&data=02%7C01%7Ckanakamu@microsoft.com%7Cb92b5dc872414bd5e88e08d7a565dd88%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637159729243489949&sdata=0LhO6Mzjw3tJVmIXx84RQQVc/VtQjTit4zdRcjiwFhI=&reserved=0">https://docs.microsoft.com/ja-jp/office365/enterprise/urls-and-ip-address-ranges</a><br><br></p>
 <p>今回の投稿は以上です。<br><br></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m6umvm001li4vsfcvbhwrc/" data-id="cl703athy001le0to4c0g040i" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m6umvm001li4vsfcvbhwrc/" data-id="cl7h73xkp001m30rbgkt71mps" class="article-share-link">Share</a>
       
       
     </footer>

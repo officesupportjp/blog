@@ -14,11 +14,11 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2018 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 今回の記事では、ユーザーフォーム上に WebBrowser コントロールを貼り付けて利用している場合に、Windows 10 バージョン 1703 以降の OS で Office 2016 を">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/image2.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/image3.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-19T02:54:42.834Z">
+<meta property="article:modified_time" content="2022-08-31T05:28:58.289Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -32,19 +32,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
-    <link rel="manifest" href="/blog/icons/site.webmanifest">
-    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="msapplication-config" content="icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -53,7 +53,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.2.0"></head>
 
 <body>
   <div id="container">
@@ -66,10 +66,6 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
-        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -127,39 +123,37 @@
         <p>(※ 2018 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office 開発サポート チームの中村です。</p>
 <p>今回の記事では、ユーザーフォーム上に WebBrowser コントロールを貼り付けて利用している場合に、Windows 10 バージョン 1703 以降の OS で Office 2016 をバージョン 1801 以降に更新すると、WebBrowser コントロールがユーザーフォームの外に表示される動作について記載します。</p>
-<p><span style="color:#FF0000"><strong>2018/2/5 Update</strong></span><br><span style="color:#339966">本現象が発生する要因となる機能 (後述の「ディスプレイで最適な解像度を使用」) の有効化を延期しました。このため、本記事の内容は今後の更新で発生する可能性がある現象としてご案内します。現時点で、本機能の有効化時期は未定です。</span></p>
-<p><span style="color:#FF0000"><strong>2018/6/8 Update</strong></span><br><span style="color:#339966">月次チャネル バージョン 1805 (16.0.9226.2114) で本機能が有効化されました。当初公開時とオプション メニュー名などが変更されたため、記事内の画面キャプチャなどを最新の状態に更新しています。</span></p>
+<p><span style="color:#FF0000"><strong>2018&#x2F;2&#x2F;5 Update</strong></span><br><span style="color:#339966">本現象が発生する要因となる機能 (後述の「ディスプレイで最適な解像度を使用」) の有効化を延期しました。このため、本記事の内容は今後の更新で発生する可能性がある現象としてご案内します。現時点で、本機能の有効化時期は未定です。</span></p>
+<p><span style="color:#FF0000"><strong>2018&#x2F;6&#x2F;8 Update</strong></span><br><span style="color:#339966">月次チャネル バージョン 1805 (16.0.9226.2114) で本機能が有効化されました。当初公開時とオプション メニュー名などが変更されたため、記事内の画面キャプチャなどを最新の状態に更新しています。</span></p>
 <h4 id="再現手順"><a href="#再現手順" class="headerlink" title="再現手順"></a><strong>再現手順</strong></h4><p>1. 新規 Excel ブックを作成し、Visual Basic Editor でユーザーフォーム (UserForm1) を追加して、WebBrowser コントロールとボタン コントロールを貼り付けます。</p>
-<p><img src="image1.png" alt=""></p>
+<p><img src="/blog/image1.png"></p>
 <p>図 1. ユーザーフォームへの WebBrowser コントロール追加</p>
 <p>2. ボタン コントロールのクリック イベント ハンドラに以下のようなコードを記述します。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub CommandButton1_Click()</span><br><span class="line">    UserForm1.WebBrowser1.Navigate2 (&quot;http:&#x2F;&#x2F;www.microsoft.com&quot;)</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
-
-
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub CommandButton1_Click()</span><br><span class="line">    UserForm1.WebBrowser1.Navigate2 (&quot;http://www.microsoft.com&quot;)</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
 <p>3. F5 キーを押下して、ユーザーフォームを表示すると、以下のように WebBrowser コントロールがユーザーフォームのウィンドウ外に表示されます。</p>
-<p><img src="image2.png" alt=""></p>
+<p><img src="/blog/image2.png"></p>
 <p>図 2. WebBrowser がユーザーフォーム外に表示されている状態</p>
 <h4 id="現象詳細"><a href="#現象詳細" class="headerlink" title="現象詳細"></a><strong>現象詳細</strong></h4><p>この動作は、バージョン 1801 で追加された「ディスプレイで最適な解像度を使用」という新機能の影響で発生します。</p>
-<p>タイトル : 高解像度のモニターの office のサポート<br>アドレス : <a href="https://support.office.com/ja-jp/article/6720ca0e-be59-41f6-b629-1369f549279d" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/6720ca0e-be59-41f6-b629-1369f549279d</a> (日本語機械翻訳版)<br>アドレス : <a href="https://support.office.com/en-us/article/6720ca0e-be59-41f6-b629-1369f549279d" target="_blank" rel="noopener">https://support.office.com/en-us/article/6720ca0e-be59-41f6-b629-1369f549279d</a>(英語版)</p>
+<p>タイトル : 高解像度のモニターの office のサポート<br>アドレス : <a target="_blank" rel="noopener" href="https://support.office.com/ja-jp/article/6720ca0e-be59-41f6-b629-1369f549279d">https://support.office.com/ja-jp/article/6720ca0e-be59-41f6-b629-1369f549279d</a> (日本語機械翻訳版)<br>アドレス : <a target="_blank" rel="noopener" href="https://support.office.com/en-us/article/6720ca0e-be59-41f6-b629-1369f549279d">https://support.office.com/en-us/article/6720ca0e-be59-41f6-b629-1369f549279d</a>(英語版)</p>
 <p>この機能の動作を制御するオプション項目「複数ディスプレイを使用する場合」で「表示を優先した最適化」が有効な場合に現象が発生します (更新後、既定では有効に設定されています)。</p>
-<p><img src="image3.png" alt=""></p>
+<p><img src="/blog/image3.png"></p>
 <p>図 3. [複数ディスプレイを使用する場合] オプション</p>
-<p>このオプションは、高解像度や複数のモニターを持つ PC 環境などでも最適な画面表示となるよう、バージョン 1801 で機能強化を行ったことで追加されました。このオプションが有効な場合、モニターの解像度を判断し、これに応じて適切な表示が行われます。</p>
+<p> <br>このオプションは、高解像度や複数のモニターを持つ PC 環境などでも最適な画面表示となるよう、バージョン 1801 で機能強化を行ったことで追加されました。このオプションが有効な場合、モニターの解像度を判断し、これに応じて適切な表示が行われます。</p>
 <p>一方で、WebBrowser コントロールのように、コントロールによっては、表示の際にコントロール自身のウィンドウとユーザーフォーム ウィンドウとの親子関係の設定が行われます。このときに、ユーザーフォームとコントロールのウィンドウで、それぞれ解像度の認識状況が異なると、以下の SetParent 関数のリファレンス ページに記載の通り、Windows 10 バージョン 1703 以降の OS ではエラーが返され、親子関係を設定することができません。</p>
-<p>タイトル : SetParent function<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms633541(v=vs.85).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/ms633541(v=vs.85).aspx</a></p>
+<p>タイトル : SetParent function<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms633541(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/ms633541(v=vs.85).aspx</a></p>
 <p>&lt;公開情報より抜粋&gt;<br>Unexpected behavior or errors may occur if hWndNewParent and hWndChild are running in different DPI awareness modes. The table below outlines this behavior:</p>
 <table>
 <thead>
 <tr>
 <th align="left"><strong>Operation</strong></th>
-<th align="left"><strong>Windows 8.1</strong></th>
+<th align="left"><strong>Windows 8.1</strong></th>
 <th align="left"><strong>Windows 10 (1607 and earlier)</strong></th>
 <th align="left"><strong>Windows 10 (1703 and later)</strong></th>
 </tr>
 </thead>
 <tbody><tr>
 <td align="left">SetParent (In-Proc)</td>
-<td align="left">N/A</td>
+<td align="left">N&#x2F;A</td>
 <td align="left"><strong>Forced reset</strong> (of current process)</td>
 <td align="left"><strong>Fail</strong> (ERROR_INVALID_STATE)</td>
 </tr>
@@ -174,27 +168,25 @@
 <p>WebBrowser コントロールに限らず、同じようにウィンドウを持つコントロールでは、同様に現象が発生する場合があります。(MSCOMCTL.OCX に含まれる TreeView コントロールなどのように、ウィンドウを持つコントロールでも現象が発生しないコントロールもあります。)</p>
 <p><strong>補足</strong></p>
 <ul>
-<li>「ディスプレイで最適な解像度を使用」機能は、Excel / Word / PowerPoint / Visio に追加されていますが、Word では本手順で現象は発生しません。</li>
+<li>「ディスプレイで最適な解像度を使用」機能は、Excel &#x2F; Word &#x2F; PowerPoint &#x2F; Visio に追加されていますが、Word では本手順で現象は発生しません。</li>
 <li>OS が Windows 10 バージョン 1703 より古い場合は、「ディスプレイで最適な解像度を使用」オプションは表示されません。</li>
-<li>VBE のメニューの実行ボタン (緑色の右三角のボタン) や、[実行] – [Sub/ユーザーフォームの実行] から実行すると、現象は発生しません。F5 キーや、プロシージャから UserForm.Show を実行してユーザーフォームを表示する場合に発生します。</li>
+<li>VBE のメニューの実行ボタン (緑色の右三角のボタン) や、[実行] – [Sub&#x2F;ユーザーフォームの実行] から実行すると、現象は発生しません。F5 キーや、プロシージャから UserForm.Show を実行してユーザーフォームを表示する場合に発生します。</li>
 </ul>
 <h4 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a><strong>回避策</strong></h4><p><strong>1. 「ディスプレイで最適な解像度を使用」オプションを無効にする</strong></p>
 <p>先述の通り、この現象はこのオプションが有効な場合にのみ発生します。この機能が不要な場合、これをオフにして回避することができます。</p>
 <p>ユーザー全体に展開したい場合やプログラムから変更したい場合には、以下のレジストリで制御できます。ただし、設定値の反映には Office アプリケーションの再起動が必要です。アプリケーションの処理中に一時的に変更するような場合には、Office アプリケーションを起動する前にこのレジストリを変更する必要があります。</p>
-<p>キー :<br>&lt;Excel / Word / PowerPoint 向け&gt;<br>HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options<br>(&lt;アプリケーション名&gt; には、Excel / Word / PowerPointが入ります。ただ、Word は先述の通りこの手順で現象は発生しませんので回避策としての設定は必要ありません。)</p>
+<p>キー :<br>&lt;Excel &#x2F; Word &#x2F; PowerPoint 向け&gt;<br>HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options<br>(&lt;アプリケーション名&gt; には、Excel &#x2F; Word &#x2F; PowerPointが入ります。ただ、Word は先述の通りこの手順で現象は発生しませんので回避策としての設定は必要ありません。)</p>
 <p>&lt;Visio 向け&gt;<br>HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Visio\Application</p>
 <p>名前 :<br>RenderForMonitorDpi<br>種類 :<br>REG_DWORD</p>
-<p>値 :<br>0 (0 =無効 / 1 =有効)  </p>
-<p><strong>2. カスタム作業ウィンドウで</strong> <strong>WebBrowser</strong> <strong>コントロール表示する</strong></p>
+<p>値 :<br>0 (0 &#x3D;無効 &#x2F; 1 &#x3D;有効)<br> <br><strong>2. カスタム作業ウィンドウで</strong> <strong>WebBrowser</strong> <strong>コントロール表示する</strong></p>
 <p>カスタム作業ウィンドウ内に WebBrowser コントロールを貼り付ける場合には、現象は発生しません。VSTO ソリューションなどでカスタム作業ウィンドウを追加し、この中で WebBrowser コントロールを使用するよう仕組みを変更することが検討できます。カスタム作業ウィンドウの作成手順は以下の公開情報を参照してください。</p>
-<p>タイトル : カスタム作業ウィンドウ<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/aa942864.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/aa942864.aspx</a>  </p>
-<p>今回の投稿は以上です。</p>
+<p>タイトル : カスタム作業ウィンドウ<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/aa942864.aspx">https://msdn.microsoft.com/ja-jp/library/aa942864.aspx</a><br> <br>今回の投稿は以上です。</p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/" data-id="cl703atgn000ee0to7zjuan6t" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/" data-id="cl7h73xfo000i30rbe0tp19dz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -213,9 +205,9 @@
     </a>
   
   
-    <a href="/blog/cl0mc9o15000vb0vscpvphs5e/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0mc9o14000tb0vs85lvc2xs/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Excel の SpecialCells メソッドで特定の状況において期待しない該当セルが取得される</div>
+      <div class="article-nav-title">Excel の CodeName プロパティが取得できない動作</div>
     </a>
   
 </nav>
