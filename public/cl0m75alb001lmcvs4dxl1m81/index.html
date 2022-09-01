@@ -15,7 +15,7 @@
 <meta property="og:description" content="こんにちは、Office サポート チームの中村です。 前回に続いて、パフォーマンス改善効果が期待できる設定をご紹介します。 今回は、Office アプリケーションの起動が遅い場合、およびファイルを開くのが遅い状況に効果が期待できる設定を紹介します。 一般的なユーザー操作では Office ファイルをダブルクリックで開くことが多く、このような場合は起動とファイルを開く操作がまとめて行われ、どちらの">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-12-18T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.446Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.957Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -62,6 +62,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -128,11 +132,11 @@
 <p>&lt;オプション&gt;<br>[ファイル] – [オプション] – [アドイン] – [管理] (画面下部) で無効化したいアドインの種類 (&lt;アプリケーション名&gt;アドイン または COM アドイン) を選択し、[設定] をクリックして起動したダイアログで無効化したいアドインのチェックをオフ</p>
 <p>補足:</p>
 <ul>
-<li>(Excel を例に説明) Excelアドインは、VBA で実装された xlam &#x2F; xla 拡張子の Excel ブック形式のアドインです。一方、COM アドインは、C# &#x2F; VB.NET で作成された VSTO アドインや、C++ 等で実装されたDLL 形式のアドインを指します。</li>
+<li>(Excel を例に説明) Excelアドインは、VBA で実装された xlam / xla 拡張子の Excel ブック形式のアドインです。一方、COM アドインは、C# / VB.NET で作成された VSTO アドインや、C++ 等で実装されたDLL 形式のアドインを指します。</li>
 <li>Web アドインと呼ばれる JavaScript で実装されるアドインはこのメニューからは確認できません。[挿入] – [アドイン] から確認、無効化しますが本記事では詳細は割愛します。</li>
 <li>ほとんどのアドインはユーザーごとに登録されているため、ユーザーそれぞれで上記作業が必要です。一方、アドインによってはマシン レベルでインストールされており、一般ユーザーの権限で無効化できないものもあります。</li>
 </ul>
-<p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] – [その他] – [非管理対象のアドインをすべてブロックする]<br>(&lt;アプリケーション名&gt; には Excel &#x2F; Word &#x2F; PowerPoint のいずれかが入ります。以降の記述でも同様です。)<br>設定値 : 有効<br>※ 個別に無効化するのではなく、有効にするアドインを全て管理するための設定です。合わせて [管理対象アドインの一覧] ポリシーで有効化するアドインを指定します。</p>
+<p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] – [その他] – [非管理対象のアドインをすべてブロックする]<br>(&lt;アプリケーション名&gt; には Excel / Word / PowerPoint のいずれかが入ります。以降の記述でも同様です。)<br>設定値 : 有効<br>※ 個別に無効化するのではなく、有効にするアドインを全て管理するための設定です。合わせて [管理対象アドインの一覧] ポリシーで有効化するアドインを指定します。</p>
 <p>&lt;レジストリ&gt;<br><strong>Excel</strong> <strong>アドイン</strong><br>以下のアドインを管理するレジストリを削除します。<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options<br>名前 : OPENn (OPEN, OPEN1, OPEN2・・・と増加していきます)<br>種類 : REG_SZ<br>値 : アドイン ファイルのフルパス (アドインフォルダに格納されている場合はファイル名のみ)  </p>
 <p><strong>Word</strong> <strong>アドイン</strong><br>Word アドインは起動中のプロセスでのみ読み込まれ、次回起動時には読み込まれません。このため、レジストリであらかじめ無効化するシナリオが想定されないため割愛します。</p>
 <p><strong>PowerPoint</strong> <strong>アドイン</strong><br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\PowerPoint\AddIns\&lt;アドインファイル名 (拡張子なし)&gt;<br>名前 : AutoLoad<br>種類 : REG_DWORD<br>値 : 0  </p>
@@ -142,7 +146,7 @@
 <p>&lt;オプション&gt;<br>OS の [設定] – [デバイス] – [プリンターとスキャナー] – [Windows で通常使うプリンターを管理する] のチェックをオフ</p>
 <h3 id="2-2-通常使うプリンターをローカルプリンターに変更する"><a href="#2-2-通常使うプリンターをローカルプリンターに変更する" class="headerlink" title="2-2. 通常使うプリンターをローカルプリンターに変更する"></a><strong>2-2.</strong> <strong>通常使うプリンターをローカルプリンターに変更する</strong></h3><p>&lt;オプション&gt;<br>[コントロール パネル] – [ハードウェアとサウンド] – [デバイスとプリンター] で、通常使うプリンターに設定されている (緑のチェック マークがついている) プリンターを ”Mcicrosoft XPS Document Writer” などのローカル プリンターに変更</p>
 <p>&lt;プロパティ&gt;<br>プログラムの開始時に ActivePrinter プロパティをローカルプリンターに変更し、ファイル オープンやプリンタ―関連処理を行った後、最後に元に戻す</p>
-<p><strong>Excel</strong><br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.activeprinter&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832219521&sdata=HrFp+cdSWaW3/pVDwvhoc3FVUtojBfJMUcSjxcYhSTc=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.activeprinter</a><br><strong>Word</strong><br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/word.application.activeprinter&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832229518&sdata=fD3vukAn/LLS25q/ZH0LcNgc8adue9Kg1RYhDIcXxD8=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/word.application.activeprinter</a><br><strong>PowerPoint</strong><br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.activeprinter&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832229518&sdata=lZtZ7RnC9yaxk/jT3KVCCkmi1Cjsiso90OMvCt37ijA=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.activeprinter</a><br><br></p>
+<p><strong>Excel</strong><br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.application.activeprinter&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832219521&sdata=HrFp%2BcdSWaW3%2FpVDwvhoc3FVUtojBfJMUcSjxcYhSTc%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.activeprinter</a><br><strong>Word</strong><br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fword.application.activeprinter&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832229518&sdata=fD3vukAn%2FLLS25q%2FZH0LcNgc8adue9Kg1RYhDIcXxD8%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/word.application.activeprinter</a><br><strong>PowerPoint</strong><br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fpowerpoint.application.activeprinter&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832229518&sdata=lZtZ7RnC9yaxk%2FjT3KVCCkmi1Cjsiso90OMvCt37ijA%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.activeprinter</a><br><br></p>
 <h3 id="3-ユーザー設定のビュー削除-Excel-共有ブック"><a href="#3-ユーザー設定のビュー削除-Excel-共有ブック" class="headerlink" title="3. ユーザー設定のビュー削除 (Excel 共有ブック)"></a><strong>3. ユーザー設定のビュー削除 (Excel 共有ブック)</strong></h3><p>Excel でブックの共有設定 (レガシ機能) が行われているとき、そのブックをこれまでに開いたユーザーごとの表示設定がブックに保存されています。ビュー設定の情報が増えると、ブックを開くときに読み込みのため時間がかかりますので、不要なビュー設定を削除することでパフォーマンスを改善できます。</p>
 <p><strong>既存ビューの削除</strong><br>対象の Excel ブックを開き、[表示] – [ユーザー設定のビュー] に表示されたビューから不要なものを選択して [削除] を実行します。</p>
 <p>また、ビューの情報には既定で印刷設定情報が含まれます。これを含む場合、2. で説明したようなプリンター関連の処理によってパフォーマンスが低下します。以下の設定を行うと、そのブックのビューには以後、印刷設定を含めないようにできます。ビューは保存したいが少しでもパフォーマンスを改善したい、という場合に利用できます。</p>
@@ -150,33 +154,33 @@
 <p>&lt;手順&gt;<br>1) 対象の Excel ブックを開き、[ブックの共有 (レガシ)] – [詳細設定] – [個人用ビューに含む] – [印刷の設定] のチェックをオフ<br>2) [編集] タブで [新しい共同編集機能ではなく、以前の共有ブック機能を使用します。] のチェックを一旦オフにして [OK] をクリック<br>3) [新しい共同編集機能ではなく、以前の共有ブック機能を使用します。] を再度有効にしてブックを保存<br>※ [ブックの共有 (レガシ)] メニューは既定ではリボンに表示されません。表示する方法は以下補足に記載のリンク先をご覧ください。</p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Excel\Options<br>名前 : QFE_Sitka<br>種類 : REG_DWORD<br>値 : 1  </p>
 <p>補足:<br>現在ブックの共有機能は互換性のために残されているレガシ機能の位置づけとなり、Excel を複数のユーザーで同時編集する場合、共同編集機能を推奨しています。</p>
-<p>共有ブック機能について<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://support.office.com/ja-jp/article/49b833c0-873b-48d8-8bf2-c1c59a628534&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832239510&sdata=DB5s6KZTEyhoXVIIDiWCYU78Y3glw3291SK/ZCMrGaw=&reserved=0">https://support.office.com/ja-jp/article/49b833c0-873b-48d8-8bf2-c1c59a628534</a><br><br></p>
+<p>共有ブック機能について<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.office.com%2Fja-jp%2Farticle%2F49b833c0-873b-48d8-8bf2-c1c59a628534&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832239510&sdata=DB5s6KZTEyhoXVIIDiWCYU78Y3glw3291SK%2FZCMrGaw%3D&reserved=0" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/49b833c0-873b-48d8-8bf2-c1c59a628534</a><br><br></p>
 <h3 id="4-改ページ情報の非表示-Excel"><a href="#4-改ページ情報の非表示-Excel" class="headerlink" title="4. 改ページ情報の非表示 (Excel)"></a><strong>4. 改ページ情報の非表示 (Excel)</strong></h3><p>Excel 改ページ設定を行うと、2. で述べたようにプリンター関連処理でパフォーマンスが低下します。これを避けるための方法を紹介します。</p>
 <h3 id="4-1-保存時の標準ビュー設定"><a href="#4-1-保存時の標準ビュー設定" class="headerlink" title="4-1. 保存時の標準ビュー設定"></a><strong>4-1.</strong> <strong>保存時の標準ビュー設定</strong></h3><p>[改ページ プレビュー] や [ページ レイアウト ビュー] の状態でブックを保存すると、次に開いたときもこのビューの状態で開かれ、プリンター情報の取得が発生します。これを避けるため、保存時に標準ビューに変更して保存します。  </p>
 <p>&lt;設定&gt;<br>[表示] タブ – [ブックの表示] – [標準]</p>
-<p>&lt;プロパティ&gt;<br>Window.View プロパティに xlNormalView を設定<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/excel.window.view&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832239510&sdata=pwSYp5RZNiu5gzvH6dpZF5pchHxBlppSgYuEB5io1pw=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/excel.window.view</a></p>
+<p>&lt;プロパティ&gt;<br>Window.View プロパティに xlNormalView を設定<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.window.view&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832239510&sdata=pwSYp5RZNiu5gzvH6dpZF5pchHxBlppSgYuEB5io1pw%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.window.view</a></p>
 <h3 id="4-2-Worksheet-DisplayPageBreaks-の設定"><a href="#4-2-Worksheet-DisplayPageBreaks-の設定" class="headerlink" title="4-2. Worksheet.DisplayPageBreaks の設定"></a><strong>4-2. Worksheet.DisplayPageBreaks</strong> <strong>の設定</strong></h3><p>一旦改ページを設定すると、標準ビューでも、改ページ位置が表示されるようになります。この状態でもパフォーマンス低下が生じる場合があります。主にプログラムからの処理が遅い場合に、初めに設定すると有効なプロパティです。</p>
-<p>&lt;プロパティ&gt;<br>Worksheet.DisplayPageBreaks プロパティ を False に設定<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.displaypagebreaks&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=04OYmavm2zYeMu5FldVB4rLZt2yV5RUpklZDO5bCRVs=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.displaypagebreaks</a><br><br></p>
+<p>&lt;プロパティ&gt;<br>Worksheet.DisplayPageBreaks プロパティ を False に設定<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.worksheet.displaypagebreaks&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=04OYmavm2zYeMu5FldVB4rLZt2yV5RUpklZDO5bCRVs%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.displaypagebreaks</a><br><br></p>
 <h2 id="5-ファイル・フォルダ履歴削除"><a href="#5-ファイル・フォルダ履歴削除" class="headerlink" title="5. ファイル・フォルダ履歴削除"></a><strong>5.</strong> <strong>ファイル・フォルダ履歴削除</strong></h2><p>Office の [開く] や [名前を付けて保存] メニューに表示される最近開いたファイルやフォルダーの情報が多く残されていると、その読み込みに時間を要します。情報を減らすことでパフォーマンスを改善できます。</p>
-<p>&lt;オプション&gt;<br><strong>現時点での履歴情報をクリアする</strong><br>個別削除: [ファイル] タブ – [開く] でファイルやフォルダーの履歴から削除しても良い項目を右クリックし [一覧から削除]<br>一括削除: [ファイル] タブ – [開く] でファイルやフォルダーの履歴で任意のファイル&#x2F;フォルダを右クリックし [固定されていない項目をクリア]<br>※ あらかじめ [一覧にピン留め] しておくと、一括削除時に残すことができます。</p>
+<p>&lt;オプション&gt;<br><strong>現時点での履歴情報をクリアする</strong><br>個別削除: [ファイル] タブ – [開く] でファイルやフォルダーの履歴から削除しても良い項目を右クリックし [一覧から削除]<br>一括削除: [ファイル] タブ – [開く] でファイルやフォルダーの履歴で任意のファイル/フォルダを右クリックし [固定されていない項目をクリア]<br>※ あらかじめ [一覧にピン留め] しておくと、一括削除時に残すことができます。</p>
 <p><strong>今後の履歴情報保持数を変更する</strong><br><u>ファイル</u><br>[詳細設定] – [表示] – [最近使ったブックの一覧に表示するブックの数] を少ない数に変更 (0 も設定可能) ※ Excel の例<br>(“ブック” の部分は、Word の場合は “文書”、PowerPoint は “プレゼンテーション”)<br><u>フォルダ</u><br>[詳細設定] – [表示] – [最近使ったフォルダーの一覧から固定表示を解除するフォルダーの数] を少ない数に変更</p>
 <p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] – [&lt;アプリケーション名&gt; のオプション] - [詳細設定]<br>– [最近使ったブック (ドキュメント、プレゼンテーション) の一覧に表示するブック(ドキュメント、プレゼンテーション) の数]<br>– [最近使用したフォルダーの一覧に表示するフォルダーの数]<br>設定値 : 表示したい数 (最小値は 0)</p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options\File MRU (ファイル)<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options\Place MRU (フォルダ)  </p>
 <p><strong>現時点での履歴情報をクリアする場合は以下を削除</strong><br>名前 : Item n (n には 1 ~ の連番が入ります)<br>種類 : REG_SZ<br>値 : ファイルまたはフォルダのフルパス  </p>
 <p><strong>今後の履歴情報保持数を変更する場合は以下の値を変更</strong><br>名前 : Max Display<br>種類 : REG_DWORD<br>値 : 履歴を保持したい数<br> <br> </p>
-<h2 id="6-ファイル検証の無効化"><a href="#6-ファイル検証の無効化" class="headerlink" title="6. ファイル検証の無効化"></a><strong>6.</strong> <strong>ファイル検証の無効化</strong></h2><p>バイナリ形式ファイル (xls &#x2F; doc &#x2F; ppt など) を開くときには、ファイル検証処理が行われます。ファイル検証処理は、バイナリ形式であるこれらのファイルのフォーマットが正しいかをチェックし、不正なファイルを検出する仕組みです。(Office 2007 形式 (xlsx &#x2F; docx &#x2F; pptx) 等に対してはファイル検証は行われません。) この検証に時間を要する場合、セキュリティが十分担保されている環境であればファイル検証を無効化してパフォーマンスを改善できます。</p>
-<p>参考) Office 2016 の Office ファイル検証を使った、ファイル形式攻撃の防止<br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/DeployOffice/security/prevent-file-format-attacks-by-using-file-validation-in-office&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=OJKjGU/bD8vIdClW0KqjaVmRRS/3U/6IBjo0V8MWydM=&reserved=0">https://docs.microsoft.com/ja-jp/DeployOffice/security/prevent-file-format-attacks-by-using-file-validation-in-office</a></p>
+<h2 id="6-ファイル検証の無効化"><a href="#6-ファイル検証の無効化" class="headerlink" title="6. ファイル検証の無効化"></a><strong>6.</strong> <strong>ファイル検証の無効化</strong></h2><p>バイナリ形式ファイル (xls / doc / ppt など) を開くときには、ファイル検証処理が行われます。ファイル検証処理は、バイナリ形式であるこれらのファイルのフォーマットが正しいかをチェックし、不正なファイルを検出する仕組みです。(Office 2007 形式 (xlsx / docx / pptx) 等に対してはファイル検証は行われません。) この検証に時間を要する場合、セキュリティが十分担保されている環境であればファイル検証を無効化してパフォーマンスを改善できます。</p>
+<p>参考) Office 2016 の Office ファイル検証を使った、ファイル形式攻撃の防止<br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2FDeployOffice%2Fsecurity%2Fprevent-file-format-attacks-by-using-file-validation-in-office&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=OJKjGU%2FbD8vIdClW0KqjaVmRRS%2F3U%2F6IBjo0V8MWydM%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/DeployOffice/security/prevent-file-format-attacks-by-using-file-validation-in-office</a></p>
 <p>セキュリティ上、基本的にはファイル検証機能の無効化は推奨しません。無効にする場合はバイナリ形式ファイルがインターネットなどの安全でない場所から入手されないことを十分に確認してください。</p>
 <p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] – [&lt;アプリケーション名&gt; のオプション] – [セキュリティ] – [ファイル検証機能をオフにする]<br>設定値 : 有効</p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Security\FileValidation<br>  ※ Policies 配下のみ有効です。<br>エントリ名 : EnableOnLoad<br>型 : REG_DWORD<br>値 : 0  </p>
 <p>&lt;プロパティ&gt;<br>Application.Filevalidation プロパティを false に設定</p>
-<p><strong>Excel</strong><br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.filevalidation&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=6wC1wtjSQOox+sMhfmwHe41mejqY8fjNn3gWKjEoqCA=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.filevalidation</a><br><strong>Word</strong><br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/word.application.filevalidation&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832259499&sdata=x1tV+xToA10xKanVXM1NIDDtFJq3eTDooZ3jlGnyHSA=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/word.application.filevalidation</a><br><strong>PowerPoint</strong><br><a target="_blank" rel="noopener" href="https://nam06.safelinks.protection.outlook.com/?url=https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.filevalidation&data=02%7C01%7Ckanakamu@microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832259499&sdata=LmPSMmVE0OfqX0gFTU6o1F5+KTed9uffv9CA3nVc6ZU=&reserved=0">https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.filevalidation</a><br><br></p>
+<p><strong>Excel</strong><br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fexcel.application.filevalidation&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832249506&sdata=6wC1wtjSQOox%2BsMhfmwHe41mejqY8fjNn3gWKjEoqCA%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.filevalidation</a><br><strong>Word</strong><br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fword.application.filevalidation&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832259499&sdata=x1tV%2BxToA10xKanVXM1NIDDtFJq3eTDooZ3jlGnyHSA%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/word.application.filevalidation</a><br><strong>PowerPoint</strong><br><a href="https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fja-jp%2Foffice%2Fvba%2Fapi%2Fpowerpoint.application.filevalidation&data=02%7C01%7Ckanakamu%40microsoft.com%7C88d7890adb404767999008d7796fe66c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637111393832259499&sdata=LmPSMmVE0OfqX0gFTU6o1F5%2BKTed9uffv9CA3nVc6ZU%3D&reserved=0" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/powerpoint.application.filevalidation</a><br><br></p>
 <p>今回の投稿は以上です。<br><br><br><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m75alb001lmcvs4dxl1m81/" data-id="cl7h73xkp001l30rbebfh9ee8" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m75alb001lmcvs4dxl1m81/" data-id="cl4hy59jw001lusvs5u4o0v0c" class="article-share-link">Share</a>
       
       
     </footer>

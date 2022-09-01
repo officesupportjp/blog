@@ -14,10 +14,10 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2017 年 12 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。   ユーザー単位で Access 2016 自体の組み込みのリボンを非表示にするには、[Access のオプション] (※ 1) で設定可能ですが、ファイル単位で変更する場合、RibbonXML を利用します。 本記事で">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghok000hk8vs3g1i3uwj/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghok000hk8vs3g1i3uwj/image2.png">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.289Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.855Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -31,19 +31,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m7ghok000hk8vs3g1i3uwj/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -52,7 +52,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -65,6 +65,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -151,7 +155,7 @@
 </tr>
 </tbody></table>
 <ol start="3">
-<li><strong>USysRibbons</strong> テーブルをデータシートビューで開き、各列に、次のデータを入力します。</li>
+<li><strong>USysRibbons</strong> テーブルをデータシートビューで開き、各列に、次のデータを入力します。  </li>
 </ol>
 <table>
 <thead>
@@ -166,7 +170,7 @@
 </tr>
 <tr>
 <td><strong>RibbonXML</strong></td>
-<td>&lt;customUI xmlns&#x3D;”<a target="_blank" rel="noopener" href="http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;">http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;</a><br />&lt;ribbon startFromScratch&#x3D;”true”&#x2F;&gt;<br />&lt;&#x2F;customUI&gt;</td>
+<td>&lt;customUI xmlns=”<a href="http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;" target="_blank" rel="noopener">http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;</a><br />&lt;ribbon startFromScratch=”true”/&gt;<br />&lt;/customUI&gt;</td>
 </tr>
 </tbody></table>
 <ol start="4">
@@ -186,17 +190,17 @@
 <li><p>手順 1 で作成したファイルを開きます。以下のように [ファイル] タブだけが表示されます。</p>
 </li>
 </ol>
-<p><img src="/blog/image1.png"></p>
+<p><img src="image1.png" alt=""></p>
 <p>以下の RibbonXML を使用した場合は、[ファイル] タブのバックステージビューにある [閉じる] ボタン以外が非表示になります。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;customUI xmlns=&quot;http://schemas.microsoft.com/office/2009/07/customui&quot;&gt;</span><br><span class="line">  &lt;ribbon startFromScratch=&quot;true&quot;&gt;</span><br><span class="line">  &lt;/ribbon&gt;</span><br><span class="line">  &lt;backstage&gt;</span><br><span class="line">    &lt;button idMso=&quot;ApplicationOptionsDialog&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;button idMso=&quot;FileSave&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;!-- [閉じる] ボタンのみ visible=&quot;true&quot; にして表示させています --&gt;</span><br><span class="line">    &lt;button idMso=&quot;FileCloseDatabase&quot; visible=&quot;true&quot; /&gt;</span><br><span class="line">    &lt;tab idMso=&quot;TabInfo&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;tab idMso=&quot;TabRecent&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;tab idMso=&quot;TabSave&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;tab idMso=&quot;TabPrint&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;tab idMso=&quot;TabOfficeStart&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;tab idMso=&quot;TabHelp&quot; visible=&quot;false&quot; /&gt;</span><br><span class="line">    &lt;tab idMso=&quot;TabOfficeFeedback&quot; visible=&quot;false&quot;/&gt;</span><br><span class="line">  &lt;/backstage&gt;</span><br><span class="line">&lt;/customUI&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;customUI xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;office&#x2F;2009&#x2F;07&#x2F;customui&quot;&gt;</span><br><span class="line">  &lt;ribbon startFromScratch&#x3D;&quot;true&quot;&gt;</span><br><span class="line">  &lt;&#x2F;ribbon&gt;</span><br><span class="line">  &lt;backstage&gt;</span><br><span class="line">    &lt;button idMso&#x3D;&quot;ApplicationOptionsDialog&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;button idMso&#x3D;&quot;FileSave&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;!-- [閉じる] ボタンのみ visible&#x3D;&quot;true&quot; にして表示させています --&gt;</span><br><span class="line">    &lt;button idMso&#x3D;&quot;FileCloseDatabase&quot; visible&#x3D;&quot;true&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabInfo&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabRecent&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabSave&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabPrint&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabOfficeStart&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabHelp&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabOfficeFeedback&quot; visible&#x3D;&quot;false&quot;&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;backstage&gt;</span><br><span class="line">&lt;&#x2F;customUI&gt;</span><br></pre></td></tr></table></figure>
 
-<p> <img src="/blog/image2.png"> </p>
+<p> <img src="image2.png" alt=""> </p>
 <p>※ リボンの表示が変更されない場合は、上述の XML をメモ帳へ一度コピーし、メモ帳経由で RibbonXML フィールドに貼り付けください。</p>
 <h3 id="RibbonXML-解説"><a href="#RibbonXML-解説" class="headerlink" title="RibbonXML 解説"></a><strong>RibbonXML 解説</strong></h3><ul>
 <li><p>startFromScratch属性を true に設定すると、[ファイル] タブ以外の既存のリボン タブすべてが非表示になります。</p>
 </li>
 <li><p>Office 2010 以降の機能である、Backstage ビューをカスタマイズするため、  </p>
-<p>Office 2010 以降の名前空間 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui"> を使用しています。</p>
+<p>Office 2010 以降の名前空間 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui"> を使用しています。  </p>
 </li>
 </ul>
 <p>[ファイル] タブの各項目の RibbonXML です。</p>
@@ -209,55 +213,55 @@
 </thead>
 <tbody><tr>
 <td>情報</td>
-<td>&lt;tab idMso&#x3D;”TabInfo” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;tab idMso=”TabInfo” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>新規</td>
-<td>&lt;tab idMso&#x3D;”TabOfficeStart” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;tab idMso=”TabOfficeStart” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>開く</td>
-<td>&lt;tab idMso&#x3D;”TabRecent” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;tab idMso=”TabRecent” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>上書き保存</td>
-<td>&lt;button idMso&#x3D;”FileSave” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;button idMso=”FileSave” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>名前を付けて保存</td>
-<td>&lt;tab idMso&#x3D;”TabSave” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;tab idMso=”TabSave” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>印刷</td>
-<td>&lt;tab idMso&#x3D;”TabPrint” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;tab idMso=”TabPrint” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>閉じる</td>
-<td>&lt;button idMso&#x3D;”FileCloseDatabase” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;button idMso=”FileCloseDatabase” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>アカウント</td>
-<td>&lt;tab idMso&#x3D;”TabHelp” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;tab idMso=”TabHelp” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>オプション</td>
-<td>&lt;button idMso&#x3D;”ApplicationOptionsDialog” visible&#x3D;”false” &#x2F;&gt;</td>
+<td>&lt;button idMso=”ApplicationOptionsDialog” visible=”false” /&gt;</td>
 </tr>
 <tr>
 <td>フィードバック</td>
-<td>&lt;tab idMso&#x3D;”TabOfficeFeedback” visible&#x3D;”false”&#x2F;&gt;</td>
+<td>&lt;tab idMso=”TabOfficeFeedback” visible=”false”/&gt;</td>
 </tr>
 </tbody></table>
 <h3 id="参考情報"><a href="#参考情報" class="headerlink" title="参考情報"></a><strong>参考情報</strong></h3><p>RibbonXML で使用するコントロールのID (idMso) が記載されているファイルを以下サイトからダウンロードできます。</p>
 <p>Office 2016 製品の Office Fluent User Interface Control Identifiers</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3/Office%202016">https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3/Office%202016</a></p>
+<p><a href="https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3/Office%202016" target="_blank" rel="noopener">https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3/Office%202016</a></p>
 <p>Office 2013 製品の Office Fluent User Interface Control Identifiers</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3">https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3</a></p>
+<p><a href="https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3" target="_blank" rel="noopener">https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghok000hk8vs3g1i3uwj/" data-id="cl7h73xfl000f30rb3djq82de" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghok000hk8vs3g1i3uwj/" data-id="cl4hy59ip000fusvs3dd48cnz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -266,19 +270,19 @@
     
 <nav id="article-nav">
   
-    <a href="/blog/cl0m7ghof000ck8vscdxhanmb/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghoj000gk8vsf6s42i7t/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない
+          C2R 版の Office をインストールすると、特定のレジストリのアクセス権限テーブル参照時に警告が発生する
         
       </div>
     </a>
   
   
-    <a href="/blog/cl0m7ghoi000fk8vs8yjpdr8b/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7ghog000dk8vs2ovx9yyp/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Access でメモリ不足エラーが発生する現象の対処策について</div>
+      <div class="article-nav-title">32bit の Word アプリケーションで、印刷した際に一部のオブジェクトが印刷されない現象について</div>
     </a>
   
 </nav>

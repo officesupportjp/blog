@@ -31,14 +31,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -47,7 +47,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -60,6 +60,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -86,9 +90,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Office リボンをカスタマイズ - パート1 - (カスタマイズ手法と仕組み)" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cl0mc9o210022b0vs0kgsgh76/" class="article-date">
+    <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date">
   <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
 </a>
     <!--  -->
@@ -100,14 +104,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mc9o210022b0vs0kgsgh76/">Office リボンをカスタマイズ - パート1 - (カスタマイズ手法と仕組み)</a>
+      <a class="article-title" href="/blog/cl0mc9o220024b0vs9oh30xtc/">Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/cl0mc9o210022b0vs0kgsgh76/" class="article-date-single">    
+        <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date-single">    
     
     <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
     
@@ -116,17 +120,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2017 年 2 月 20 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+        (※ 2017 年 3 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
 こんにちは、Office 開発 サポート チームの中村です。
-今回の記事では、Office のリボンをカスタマイズする方法について記載します。このテーマについては、複数回に渡ってご紹介していく予定ですが、今回はまず、概要を記載したいと思います。
-1. Office リボンのカスタマイズ方法Office 2003 までは、メニューのカスタマイズを行うときには、Commandbars オブジェクトを用いて VBA などのプログラムからカスタマイズしていました。Office 2007 からメニューがリボンに変更され、これに伴って新しいカスタマイズ方法が登場しました。Office 2007 以降でも Commandbars オブジェクトを利用してもある...
+今回も、リボンのカスタマイズ手順について解説していきます。今回の記事では、パート 1 で紹介した「c. VSTO からビジュアルなデザイナーを用いてカスタマイズを行う」 について紹介したいと思います。前回と同じく、サンプル作成を通して解説します。
+VSTO ビジュアルなデザイナーでリボンをカスタマイズするこの方法は、VSTO で提供されている Visual Studio 上で GUI でリボンのカスタマイズを行うビジュアルなデザイナー機能を用いてリボンをカスタマイズします。カスタマイズ内容は、VSTO ランタイムによって VSTO ソリューションのロード時にOffice が読み込む...
         <p class="article-more-link">
-          <a href="/blog/cl0mc9o210022b0vs0kgsgh76/#more">Read More</a>
+          <a href="/blog/cl0mc9o220024b0vs9oh30xtc/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o210022b0vs0kgsgh76/" data-id="cl7h73xmx002130rb7yy33ucb" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o220024b0vs9oh30xtc/" data-id="cl4hy59k30021usvs2boldetu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -176,107 +180,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o200021b0vscp6jdedg/" data-id="cl7h73xmz002230rb45a6gr99" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mc9o220024b0vs9oh30xtc/">Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 3 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
-こんにちは、Office 開発 サポート チームの中村です。
-今回も、リボンのカスタマイズ手順について解説していきます。今回の記事では、パート 1 で紹介した「c. VSTO からビジュアルなデザイナーを用いてカスタマイズを行う」 について紹介したいと思います。前回と同じく、サンプル作成を通して解説します。
-VSTO ビジュアルなデザイナーでリボンをカスタマイズするこの方法は、VSTO で提供されている Visual Studio 上で GUI でリボンのカスタマイズを行うビジュアルなデザイナー機能を用いてリボンをカスタマイズします。カスタマイズ内容は、VSTO ランタイムによって VSTO ソリューションのロード時にOffice が読み込む...
-        <p class="article-more-link">
-          <a href="/blog/cl0mc9o220024b0vs9oh30xtc/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o220024b0vs9oh30xtc/" data-id="cl7h73xn0002330rb0kwq3hi3" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mdnodm00245ovs9qdfdvwi/">Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 5 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発 サポート チームの中村です。
-Office リボンのカスタマイズ方法について数回にわたってご紹介していますが、パート 1 でご紹介した 3 つの方法のうち、最後の方法 「b. VSTO から XML を用いてカスタマイズを行う」について詳しく紹介したいと思います。
-VSTO XML でリボンをカスタマイズするこの方法は、Visual Studio を使って VSTO ソリューションを開発し、このソリューションの中に、リボンをカスタマイズする XML とカスタマイズで実行したい処理 (コールバック関数) を実装します。ビジュアルなデザイナーと同じように、カスタマイズ内容は VSTO ランタイムによって VSTO ソ...
-        <p class="article-more-link">
-          <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/" data-id="cl7h73xn1002430rb94a9f9sw" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o200021b0vscp6jdedg/" data-id="cl4hy59k30022usvs7udp9kzq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +231,107 @@ VSTO XML でリボンをカスタマイズするこの方法は、Visual Studio 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/" data-id="cl7h73xn2002530rb0n0h35w2" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o210023b0vs43wag0a0/" data-id="cl4hy59k30023usvs81atg6f6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office リボンをカスタマイズ - パート1 - (カスタマイズ手法と仕組み)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mc9o210022b0vs0kgsgh76/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mc9o210022b0vs0kgsgh76/">Office リボンをカスタマイズ - パート1 - (カスタマイズ手法と仕組み)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mc9o210022b0vs0kgsgh76/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 2 月 20 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+今回の記事では、Office のリボンをカスタマイズする方法について記載します。このテーマについては、複数回に渡ってご紹介していく予定ですが、今回はまず、概要を記載したいと思います。
+1. Office リボンのカスタマイズ方法Office 2003 までは、メニューのカスタマイズを行うときには、Commandbars オブジェクトを用いて VBA などのプログラムからカスタマイズしていました。Office 2007 からメニューがリボンに変更され、これに伴って新しいカスタマイズ方法が登場しました。Office 2007 以降でも Commandbars オブジェクトを利用してもある...
+        <p class="article-more-link">
+          <a href="/blog/cl0mc9o210022b0vs0kgsgh76/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o210022b0vs0kgsgh76/" data-id="cl4hy59k40024usvs6vegav2p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mdnodm00245ovs9qdfdvwi/">Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 5 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発 サポート チームの中村です。
+Office リボンのカスタマイズ方法について数回にわたってご紹介していますが、パート 1 でご紹介した 3 つの方法のうち、最後の方法 「b. VSTO から XML を用いてカスタマイズを行う」について詳しく紹介したいと思います。
+VSTO XML でリボンをカスタマイズするこの方法は、Visual Studio を使って VSTO ソリューションを開発し、このソリューションの中に、リボンをカスタマイズする XML とカスタマイズで実行したい処理 (コールバック関数) を実装します。ビジュアルなデザイナーと同じように、カスタマイズ内容は VSTO ランタイムによって VSTO ソ...
+        <p class="article-more-link">
+          <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/" data-id="cl4hy59k40025usvs0vi9h1d2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -379,7 +383,7 @@ VSTO XML でリボンをカスタマイズするこの方法は、Visual Studio 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodn00255ovs9onm1o0p/" data-id="cl7h73xn3002630rbaxri2qpe" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodn00255ovs9onm1o0p/" data-id="cl4hy59k40026usvsdk5j2ogr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -421,16 +425,16 @@ VSTO XML でリボンをカスタマイズするこの方法は、Visual Studio 
       
         (※ 2017 年 12 月 26 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
 こんにちは、Office 開発サポートの中村です。
-これまで 6 回にわたってリボン カスタマイズについて記事を公開してきましたが、今回でいったん最後の記事の予定です。最後に、特殊なメニューである BackStage ビュー &#x2F; 右クリックで表示されるコンテキスト メニュー &#x2F; クイック アクセス ツール バーのカスタマイズ方法をご紹介します。 目次1. BackStage ビューのカスタマイズ2. 右クリック メニューのカスタマイズ3. クイック アクセス ツールバーのカスタマイズ
-   
-1. BackStage ビューのカスタマイズBackStage ビューは、Office 2010 から導入された [ファイル] タ...
+これまで 6 回にわたってリボン カスタマイズについて記事を公開してきましたが、今回でいったん最後の記事の予定です。最後に、特殊なメニューである BackStage ビュー / 右クリックで表示されるコンテキスト メニュー / クイック アクセス ツール バーのカスタマイズ方法をご紹介します。  
+目次1. BackStage ビューのカスタマイズ2. 右クリック メニューのカスタマイズ3. クイック アクセス ツールバーのカスタマイズ
+1. BackStage ビューのカスタマイズBackStage ビューは、Office 2010 から導入された [ファイル] タブ内のメニューを指します...
         <p class="article-more-link">
           <a href="/blog/cl0mdnodo00285ovs0fooh79h/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodo00285ovs0fooh79h/" data-id="cl7h73xn4002730rb93lyher6" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodo00285ovs0fooh79h/" data-id="cl4hy59k50028usvs4vq70h0v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -472,68 +476,17 @@ VSTO XML でリボンをカスタマイズするこの方法は、Visual Studio 
       
         (※ 2018 年 6 月 20 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
 こんにちは、Office 開発サポート チームの中村です。
-2018&#x2F;7&#x2F;12 Updateボトルネック特定手法についてのパート 2 記事を公開しました。
+2018/7/12 Updateボトルネック特定手法についてのパート 2 記事を公開しました。
 Office 開発において、「期待するパフォーマンスが出ない」「利用する Office のバージョンによってパフォーマンスが低下する」といったお問い合わせを頂くことがあります。今回の記事では、このような状況で改善を図るためにどのように調査・検討を進めればよいかを記載します。
 今回は全体の流れと Office におけるパフォーマンスの考え方などを紹介しています。ボトルネックの特定手法については、以下のパート 2 の記事をご参照ください。
-タイトル : Office 開発にお...
+タイトル : Office 開発におけるパフォーマンス ...
         <p class="article-more-link">
           <a href="/blog/cl0mdnodq002c5ovs8mkubxio/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodq002c5ovs8mkubxio/" data-id="cl7h73xn9002e30rb5xsk9kqs" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mdnodr002e5ovseybmbjk6/" class="article-date">
-  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mdnodr002e5ovseybmbjk6/">Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mdnodr002e5ovseybmbjk6/" class="article-date-single">    
-    
-    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2018 年 7 月 12 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発サポート チームの中村です。
-前回の投稿で、Office 開発のパフォーマンスに関する調査の進め方をご紹介しました。その中で予告した通り、今回の記事ではボトルネックとなるコードの特定手法について、特定作業に使えるサンプル コードとともに詳しく解説していきます。
-今回も、「Office バージョンアップに伴い、これまで利用していたプログラムのパフォーマンスが低下した」という場合を例に説明します。コードの掲載などのため記事が長くなりますがご容赦ください。
-目次1. 説明用サンプル プログラムの紹介2. デバッグ ログの追加 (関数単位)3. デバッグ ログの解析4. デバッグ ログの追加 (行単位)5. 関数単位の時刻...
-        <p class="article-more-link">
-          <a href="/blog/cl0mdnodr002e5ovseybmbjk6/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodr002e5ovseybmbjk6/" data-id="cl7h73xna002f30rb1e48268s" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodq002c5ovs8mkubxio/" data-id="cl4hy59k7002eusvsgmbx40k7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -584,7 +537,58 @@ Office 開発において、「期待するパフォーマンスが出ない」�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnods002f5ovs3my7b12j/" data-id="cl7h73xna002g30rb5zc30zod" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnods002f5ovs3my7b12j/" data-id="cl4hy59k7002fusvsf7srhs9h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mdnodr002e5ovseybmbjk6/" class="article-date">
+  <time datetime="2019-02-28T15:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0mdnodr002e5ovseybmbjk6/">Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mdnodr002e5ovseybmbjk6/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T15:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2018 年 7 月 12 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office 開発サポート チームの中村です。
+前回の投稿で、Office 開発のパフォーマンスに関する調査の進め方をご紹介しました。その中で予告した通り、今回の記事ではボトルネックとなるコードの特定手法について、特定作業に使えるサンプル コードとともに詳しく解説していきます。
+今回も、「Office バージョンアップに伴い、これまで利用していたプログラムのパフォーマンスが低下した」という場合を例に説明します。コードの掲載などのため記事が長くなりますがご容赦ください。
+目次1. 説明用サンプル プログラムの紹介2. デバッグ ログの追加 (関数単位)3. デバッグ ログの解析4. デバッグ ログの追加 (行単位)5. 関数単位の時刻...
+        <p class="article-more-link">
+          <a href="/blog/cl0mdnodr002e5ovseybmbjk6/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodr002e5ovseybmbjk6/" data-id="cl4hy59k8002gusvscpw4324g" class="article-share-link">Share</a>
       
       
     </footer>

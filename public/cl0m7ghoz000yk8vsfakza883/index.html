@@ -14,10 +14,10 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2016 年 8 月 15 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、日本マイクロソフト Office サポート チーム鈴木です。   今回は、IRM 暗号化ファイルを Office で利用する際に制限される機能についてご案内します。 なお、 本記事は公開時点の情報のため、今後動作が変更される可能性があります。   目次   1">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghoz000yk8vsfakza883/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7ghoz000yk8vsfakza883/image2.png">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.383Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.917Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -31,19 +31,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m7ghoz000yk8vsfakza883/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -52,7 +52,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -65,6 +65,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -130,12 +134,12 @@
 <p><strong>1. IRM の概要</strong>  </p>
 <p>Azure Rights Management および Active Directory Rights Management は、ドキュメント レベルの情報保護テクノロジです。<br>Office は、IRM (Information Rights Management) 機能によって、ドキュメントの暗号化および復号化を行います。<br>IRM 機能により、例えば以下のような暗号化が実現できます。</p>
 <ul>
-<li><p>作成者は指定したユーザーにのみドキュメントの閲覧&#x2F;変更権限を付与できます。  </p>
+<li><p>作成者は指定したユーザーにのみドキュメントの閲覧/変更権限を付与できます。  </p>
 </li>
 <li><p>Server の権利ポリシーテンプレートにて、細かい権限の付与が可能です。</p>
 </li>
 </ul>
-<p>タイトル : Office 2013 で Information Rights Management を計画する<br>URL : <a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/cc179103.aspx">https://technet.microsoft.com/ja-jp/library/cc179103.aspx</a></p>
+<p>タイトル : Office 2013 で Information Rights Management を計画する<br>URL : <a href="https://technet.microsoft.com/ja-jp/library/cc179103.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/cc179103.aspx</a></p>
 <p><strong>2. 制限される機能</strong>  </p>
 <p>IRM 暗号化ファイルを Office で利用すると、保有する権限により使用が制限される機能があります。  </p>
 <p>例えば、フル コントロール権限を保有しないユーザーは、編集を含むすべての権限を保有する場合も、以下の機能の使用が制限されます。  </p>
@@ -150,20 +154,20 @@
 <p>権限による機能の利用可否を確認するには、Office アプリケーションのリボンから判断します。  </p>
 <p>機能が制限されている場合は、リボンアイコンがグレーアウトされる、またはマウスオーバーにて “ドキュメントのアクセス許可が制限されています。” と表示されます。</p>
 <p>以下はコピー権限を持たないユーザーでの例です。</p>
-<p><img src="/blog/image1.png">  </p>
+<p><img src="image1.png" alt="">  </p>
 <p><strong>3. 外部の Office アプリケーションから IRM 暗号化ファイルの呼び出し</strong>  </p>
 <p>外部の Office アプリケーションから IRM 暗号化ファイルを呼び出す際に、エラーとなり接続が制限されます。  </p>
 <p>例えば、Word で、差し込み文書を作成時に、IRM 暗号化の Excel ファイルを元データとして参照する場合には差し込みが行えません。  </p>
 <p>以下のメッセージが表示されます。</p>
-<p><img src="/blog/image2.png"></p>
-<p>これは、他のアプリケーションが Excel ファイルを参照してデータの読み書きを実施する場合、Excel を起動することなく Excel ISAM ドライバというモジュールを介した処理が行われますが、IRM やパスワードで暗号化&#x2F;保護された Excel を開く場合には、セキュリティの観点から、利用することを許容していないための動作です。</p>
+<p><img src="image2.png" alt=""></p>
+<p>これは、他のアプリケーションが Excel ファイルを参照してデータの読み書きを実施する場合、Excel を起動することなく Excel ISAM ドライバというモジュールを介した処理が行われますが、IRM やパスワードで暗号化/保護された Excel を開く場合には、セキュリティの観点から、利用することを許容していないための動作です。</p>
 <p>差し込みを行うには、予め元データとして参照するファイルを開いた状態で指定します。</p>
 <p>本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoz000yk8vsfakza883/" data-id="cl7h73xk1000y30rb0r86633v" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7ghoz000yk8vsfakza883/" data-id="cl4hy59ji000xusvs5pbb20qk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -182,9 +186,9 @@
     </a>
   
   
-    <a href="/blog/cl0m7opb80010dcvs1xqm1hbg/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/blog/cl0m7opba0012dcvsezl78z14/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Large Address Aware に対応した Excel 2013 - Excel 2016</div>
+      <div class="article-nav-title">Microsoft Forms でよく本サポートに寄せられるお問い合わせ</div>
     </a>
   
 </nav>

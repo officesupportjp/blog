@@ -7,15 +7,15 @@
   
   <title>Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響 | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2022&#x2F;3&#x2F;18 Update2. &#x2F; 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。    こんにちは、Office サポート チームの中村です。 Office ファイルの保存場所として、ファイル サーバーの共有フォルダから、SharePoint Online のドキュメント ライブラリや 個人用 OneDriv">
+  <meta name="description" content="2022&#x2F;3&#x2F;18 Update2. &#x2F; 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。    こんにちは、Office サポート チームの中村です。 Office ファイルの保存場所として、ファイル サーバーの共有フォルダから、SharePoint Online のドキュメント ライブラリや 個人用 OneDrive &#x2F; OneDrive fo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4rqa2001y50vshhi75we2/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="2022&#x2F;3&#x2F;18 Update2. &#x2F; 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。    こんにちは、Office サポート チームの中村です。 Office ファイルの保存場所として、ファイル サーバーの共有フォルダから、SharePoint Online のドキュメント ライブラリや 個人用 OneDriv">
+<meta property="og:description" content="2022&#x2F;3&#x2F;18 Update2. &#x2F; 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。    こんにちは、Office サポート チームの中村です。 Office ファイルの保存場所として、ファイル サーバーの共有フォルダから、SharePoint Online のドキュメント ライブラリや 個人用 OneDrive &#x2F; OneDrive fo">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-02-16T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.492Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.991Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -62,6 +62,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -119,22 +123,22 @@
         <br>
 
 <hr>
-<p><strong>2022&#x2F;3&#x2F;18 Update</strong><br>2. &#x2F; 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。</p>
+<p><strong>2022/3/18 Update</strong><br>2. / 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。</p>
 <hr>
 <br>
 
 <p>こんにちは、Office サポート チームの中村です。</p>
-<p>Office ファイルの保存場所として、ファイル サーバーの共有フォルダから、SharePoint Online のドキュメント ライブラリや 個人用 OneDrive &#x2F; OneDrive for Business への移行を検討する企業も増えてきたかと思います。Office ファイルでは業務効率化のためマクロ (VBA) を利用されていることが多く、弊社サポートにも、マクロ ファイル自身やマクロ内で操作するファイルの保存場所がクラウドになることの影響を確認したい、というお問い合わせを時折頂きます。</p>
+<p>Office ファイルの保存場所として、ファイル サーバーの共有フォルダから、SharePoint Online のドキュメント ライブラリや 個人用 OneDrive / OneDrive for Business への移行を検討する企業も増えてきたかと思います。Office ファイルでは業務効率化のためマクロ (VBA) を利用されていることが多く、弊社サポートにも、マクロ ファイル自身やマクロ内で操作するファイルの保存場所がクラウドになることの影響を確認したい、というお問い合わせを時折頂きます。</p>
 <p>今後、さらにクラウド活用が進むと想定されるため、今回の記事で、このようなシナリオで一般的に生じる影響と対応方法、考慮すべき点についてまとめたいと思います。<br><br></p>
 <h2 id="1-クラウド移行で変化すること"><a href="#1-クラウド移行で変化すること" class="headerlink" title="1. クラウド移行で変化すること"></a><strong>1. クラウド移行で変化すること</strong></h2><p>ファイルの格納場所を変更したとき、マクロに影響を与える要素は主に以下の 2 点です。</p>
-<p>・フォルダやファイルのパスが UNC 共有パス形式 (\\Server\folder) から URL 形式 (http:&#x2F;&#x2F;tenantname.sharepoint.com&#x2F;xxxx など) に変わる<br>・SharePoint や OneDrive によってアクセス権が管理される<br><br></p>
+<p>・フォルダやファイルのパスが UNC 共有パス形式 (\\Server\folder) から URL 形式 (http://tenantname.sharepoint.com/xxxx など) に変わる<br>・SharePoint や OneDrive によってアクセス権が管理される<br><br></p>
 <h2 id="2-ファイル-パス変更の影響"><a href="#2-ファイル-パス変更の影響" class="headerlink" title="2. ファイル パス変更の影響"></a><strong>2. ファイル パス変更の影響</strong></h2><p>マクロからファイルやフォルダを操作するときに使用する関数によっては、URL 形式に対応していません。このような関数を利用している場合は、マクロ処理の見直しが必要です。以下に、マクロで主に使用されるファイル操作関数の URL 形式対応状況を記載します。<br><br></p>
-<h3 id="Excel-x2F-Word-x2F-PowerPoint-のライブラリ"><a href="#Excel-x2F-Word-x2F-PowerPoint-のライブラリ" class="headerlink" title="Excel &#x2F; Word &#x2F; PowerPoint のライブラリ"></a><strong>Excel &#x2F; Word &#x2F; PowerPoint のライブラリ</strong></h3><p>これらのアプリ用のライブラリ Microsoft xxx 16.0 Object Library (xxx は各種アプリ名) で提供されるファイル操作メソッドやプロパティは、Web 上のファイルを直接読み書きすることを想定しているため、基本的に URL 形式を扱うことができます。これらのメソッド・プロパティを利用している場合は、特に対応の必要はありません。<br>例) Excel の Workbooks.Open や Workbook.Path<br>※ Access ファイルは Web から直接開くことができず、ダウンロードしてから開くため URL 形式を扱うことは想定されません。<br><br></p>
+<h3 id="Excel-Word-PowerPoint-のライブラリ"><a href="#Excel-Word-PowerPoint-のライブラリ" class="headerlink" title="Excel / Word / PowerPoint のライブラリ"></a><strong>Excel / Word / PowerPoint のライブラリ</strong></h3><p>これらのアプリ用のライブラリ Microsoft xxx 16.0 Object Library (xxx は各種アプリ名) で提供されるファイル操作メソッドやプロパティは、Web 上のファイルを直接読み書きすることを想定しているため、基本的に URL 形式を扱うことができます。これらのメソッド・プロパティを利用している場合は、特に対応の必要はありません。<br>例) Excel の Workbooks.Open や Workbook.Path<br>※ Access ファイルは Web から直接開くことができず、ダウンロードしてから開くため URL 形式を扱うことは想定されません。<br><br></p>
 <p><strong>補足情報</strong><br>エクスプローラーで、OneDrive や SharePoint ライブラリの同期フォルダからファイルを開く場合、以前の Office バージョンでは、ThisWorkbook.Path などで開いたファイルのパスを取得すると、同期フォルダのローカル パスが返されました。<br>Microsoft 365 の最新チャネル バージョン 1903 および半期チャネル バージョン 2008 以降は、この操作シナリオでも、サーバー側の URL パスが返るようになりました。<br>古い Office バージョンを利用する場合は、取得されるパスが異なることに注意してください。<br><br></p>
 <h3 id="VBA-関数"><a href="#VBA-関数" class="headerlink" title="VBA 関数"></a><strong>VBA 関数</strong></h3><p>Dir や Open といった VBA 関数は、URL 形式に対応していません。以下に、ファイル操作に関わる主な VBA 関数がまとめられていますが、ここに記載されている関数を利用している場合、他の仕組みへの変更を検討してください。</p>
-<p>Directories and files keyword summary<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/directories-and-files-keyword-summary">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/directories-and-files-keyword-summary</a><br>Input and output keyword summary<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/input-and-output-keyword-summary">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/input-and-output-keyword-summary</a><br><br></p>
+<p>Directories and files keyword summary<br><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/directories-and-files-keyword-summary" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/directories-and-files-keyword-summary</a><br>Input and output keyword summary<br><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/input-and-output-keyword-summary" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/input-and-output-keyword-summary</a><br><br></p>
 <h3 id="FileSystemObject-ライブラリ"><a href="#FileSystemObject-ライブラリ" class="headerlink" title="FileSystemObject ライブラリ"></a><strong>FileSystemObject ライブラリ</strong></h3><p>Scripting.FileSystemObject ライブラリで提供される各種メソッドは、URL 形式に対応していません。以下の公開情報で Scripting.FileSystemObject ライブラリで提供されるファイル・フォルダ操作メソッドがまとめられています。これらを利用している場合は、他の仕組みへの変更を検討してください。</p>
-<p>FileSystemObject object<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object</a><br>File object<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object</a><br>Folder object<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object</a><br><br></p>
+<p>FileSystemObject object<br><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/filesystemobject-object</a><br>File object<br><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/file-object</a><br>Folder object<br><a href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object</a><br><br></p>
 <h3 id="補足-1-その他、独自にパスを解析・組み立てる処理"><a href="#補足-1-その他、独自にパスを解析・組み立てる処理" class="headerlink" title="補足 1) その他、独自にパスを解析・組み立てる処理"></a><strong>補足 1) その他、独自にパスを解析・組み立てる処理</strong></h3><p>マクロの独自処理として、例えばマクロ ファイル自身の格納フォルダ パスの一部を加工して処理結果ファイルの出力パスを組み立てるなど、パスのテキストを意識した処理がある場合は注意が必要です。URL 形式への変更に伴い、既存の文字列操作処理では、期待する結果が得られない場合があります。<br><br></p>
 <h3 id="補足-2-他のファイルへの参照"><a href="#補足-2-他のファイルへの参照" class="headerlink" title="補足 2) 他のファイルへの参照"></a><strong>補足 2) 他のファイルへの参照</strong></h3><p>先述したような一般的なライブラリは、クライアント マシンに登録されたものを呼び出すため、ファイルの保存場所が変わっても影響を受けません。<br>しかし、他の Excel ブックを [参照設定] で参照して、そのブック内の独自に作成した VBA プロシージャを呼び出している場合、参照先のファイルをクラウドに移行すると、参照不可となります。(VBA の参照設定は URL 形式に対応していないため、参照設定を再設定してもクラウド上のファイルは参照できません。)</p>
 <p>参照設定の他にも、マクロ処理内でパスを指定して他のファイルを開いている場合は、パスの指定方法がファイルの移動後も有効な実装となっているか十分に確認してください。<br><br></p>
@@ -142,30 +146,30 @@
 <h3 id="a-Office-ライブラリを用いて操作する"><a href="#a-Office-ライブラリを用いて操作する" class="headerlink" title="a. Office ライブラリを用いて操作する"></a><strong>a. Office ライブラリを用いて操作する</strong></h3><p>先述の通り、Microsoft xxx 16.0 Object Library で提供されるメソッド・プロパティは基本的に URL 形式を扱うことができます。そして、Word や Excel は、テキスト ファイルを扱うこともできます。現在 VBA 関数や FileSystemObject でテキスト ファイルを操作している場合には、これを Word や Excel アプリで Microsoft xxx 16.0 Object Library を用いて扱うよう変更することが検討できます。<br><br></p>
 <h3 id="b-不要なファイル・フォルダ操作を止める"><a href="#b-不要なファイル・フォルダ操作を止める" class="headerlink" title="b. 不要なファイル・フォルダ操作を止める"></a><strong>b. 不要なファイル・フォルダ操作を止める</strong></h3><p>例えば、次回利用時に引き継ぎたい内容を動的に保持する設定ファイルを別ファイルとして用意し、これを読み書きするために対応していない関数を使っている、というシナリオを考えます。このような場合、これをマクロ ファイル自身のどこかに保持する (Excel の非表示シート、Word の隠し文字、ファイルのユーザー設定プロパティ等) ことで、他のファイルへの読み書きを行わないようにする、といった対応もマクロの内容次第では検討できます。<br><br></p>
 <h3 id="c-Graph-API-に変更する-ファイル操作と-Excel-操作が対応"><a href="#c-Graph-API-に変更する-ファイル操作と-Excel-操作が対応" class="headerlink" title="c. Graph API に変更する (ファイル操作と Excel 操作が対応)"></a><strong>c. Graph API に変更する (ファイル操作と Excel 操作が対応)</strong></h3><p>SharePoint Online や OneDrive に対し、HTTP リクエスト ベースで操作する API として Graph API が提供されています。現在、SharePoint ライブラリや OneDrive のフォルダ・ファイル自体の操作 (作成やコピー、削除など) と、Excel ファイルの操作用 API が利用できます。ただし、プログラムの実装イメージがマクロと大きく異なりますので、Graph API 自体の利用に習熟している開発者向けの代替案です。  </p>
-<p>Microsoft Graph API を使用する<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/graph/use-the-api">https://docs.microsoft.com/ja-jp/graph/use-the-api</a><br>Microsoft Graph REST API v1.0 リファレンス<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/graph/api/overview">https://docs.microsoft.com/ja-jp/graph/api/overview</a>  </p>
+<p>Microsoft Graph API を使用する<br><a href="https://docs.microsoft.com/ja-jp/graph/use-the-api" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/graph/use-the-api</a><br>Microsoft Graph REST API v1.0 リファレンス<br><a href="https://docs.microsoft.com/ja-jp/graph/api/overview" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/graph/api/overview</a>  </p>
 <p>現時点では、マクロで可能な全ての操作が Graph API からも行えるものではありませんが、簡単な操作は可能です。ただし、一般的に、マクロから呼び出すことには適していません。一般的には、独立したアプリケーションを作成して HTTP リクエストを発行し、Web 上のファイルを操作します。また、Microsoft 365 サービスへの認証も考慮する必要があります。  </p>
 <p><strong>参考資料</strong><br>(WebAPI)OAuth Bearer Token (Access Token) の取得方法について<br><a href="https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/">https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/</a><br>(WebAPI)Microsoft Graph を使用した開発に便利なツール群<br><a href="https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/">https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/</a><br>(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード<br><a href="https://officesupportjp.github.io/blog/cl0m8t2aa00013gvsa2mr8xj5/">https://officesupportjp.github.io/blog/cl0m8t2aa00013gvsa2mr8xj5/</a><br>(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード<br><a href="https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/">https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/</a><br><br></p>
 <h3 id="d-OneDrive-や-SharePoint-ライブラリの同期フォルダを操作する"><a href="#d-OneDrive-や-SharePoint-ライブラリの同期フォルダを操作する" class="headerlink" title="d. OneDrive や SharePoint ライブラリの同期フォルダを操作する"></a><strong>d. OneDrive や SharePoint ライブラリの同期フォルダを操作する</strong></h3><p>OneDrive 同期クライアントで、ファイル格納フォルダをクライアント コンピューターと同期すると、ローカルの同期フォルダにファイルがコピーされます。この同期フォルダに対してマクロから操作を行うと、通常のローカル パスとして扱うことができます。(なお、先述の通り、ThisWorkbook.Path の結果は最新の Microsoft 365 では URL 形式になり、同期フォルダのローカル パスではない点にご注意ください。)  </p>
-<p>Windows の OneDrive とファイルを同期する<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/office/615391c4-2bd3-4aae-a42a-858262e42a49">https://support.microsoft.com/ja-jp/office/615391c4-2bd3-4aae-a42a-858262e42a49</a>  </p>
+<p>Windows の OneDrive とファイルを同期する<br><a href="https://support.microsoft.com/ja-jp/office/615391c4-2bd3-4aae-a42a-858262e42a49" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/office/615391c4-2bd3-4aae-a42a-858262e42a49</a>  </p>
 <p>ただし、マクロから編集した内容がサーバー上へ同期されることは、マクロの動作としては保証されません。マクロからは、ローカルの同期フォルダへの操作が成功することをもって成功と判断されます。ネットワークの問題で同期に失敗したり、クラウド上のファイルに他のユーザーから競合する変更が行われて同期エラーが生じるなど、クラウド上にマクロの実行結果が期待通り反映されない可能性についての考慮が必要です。<br><br></p>
 <h4 id="補足-WebDAV-パスでのアクセス"><a href="#補足-WebDAV-パスでのアクセス" class="headerlink" title="補足: WebDAV パスでのアクセス"></a><strong>補足: WebDAV パスでのアクセス</strong></h4><p>SharePoint ライブラリを Internet Explorer で開くと、[エクスプローラ―で開く] というメニューが使用でき、”\\SharePoint サイト\DavWWWRoot\Folder” のような UNC パスで、ライブラリが開かれていました。これは、WebDAV と呼ばれる Web フォルダを読み書き可能とする技術を用いて​実現されています。<br>以前は、このパスを用いてマクロからアクセスすることも検討できる方法の 1 つでした。<br>しかしながら、この仕組みはレガシな技術を用いており、Edge ブラウザでは対応していません。<br>また、WebDAV でのアクセスには別のサービス (WebClient サービス) が利用されるため、マクロが実行されている Office アプリの認証情報は引き継がれません。<br>WebClient サービス用の認証情報の保存にはまもなくサポートを終了する Internet Explorer を利用する必要があることなどからも、新たに WebDAV パスでの利用を検討することは推奨しません。<br><br></p>
 <h3 id="e-参照設定を-Application-Run-に変更する"><a href="#e-参照設定を-Application-Run-に変更する" class="headerlink" title="e. 参照設定を Application.Run に変更する"></a><strong>e. 参照設定を Application.Run に変更する</strong></h3><p>参照設定で他のファイルの VBA プロシージャを呼び出している場合、参照設定を止め、以下のようにファイルを開いた上で Application.Run で実行することが検討できます。</p>
 <p>例:<br>Ref.xlsm に SampleProc() が含まれているとします。   </p>
 <p>&lt;変更前&gt;<br>[参照設定] から Ref.xlsm を参照し、VBA コードから SampleProc をそのまま呼び出し  </p>
 <p>&lt;変更後&gt;<br>参照設定は解除し、以下のように呼び出し  </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Workbooks.Open &quot;https://xxxx/Ref.xlsm&quot;</span><br><span class="line">Application.Run &quot;Ref.xlsm!SampleProc&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Workbooks.Open &quot;https:&#x2F;&#x2F;xxxx&#x2F;Ref.xlsm&quot;</span><br><span class="line">Application.Run &quot;Ref.xlsm!SampleProc&quot;</span><br></pre></td></tr></table></figure>
 <br>
 
 <h2 id="4-Microsoft-365-サービスへの認証とアクセス権"><a href="#4-Microsoft-365-サービスへの認証とアクセス権" class="headerlink" title="4. Microsoft 365 サービスへの認証とアクセス権"></a><strong>4. Microsoft 365 サービスへの認証とアクセス権</strong></h2><p>対応方法のうち、引き続きマクロから Microsoft 365 サービス上のファイルへのアクセスを行う “a. Office ライブラリを用いて操作する” の場合、マクロが実行されている Office アプリケーションにサインインしているユーザーとして認証が行われます。このため、マクロ実行時の Office サインイン ユーザーに、マクロで操作するファイルへのアクセス権を付与する必要があります。<br><br></p>
 <h2 id="5-サポートされる-Office-クライアント-アプリケーション"><a href="#5-サポートされる-Office-クライアント-アプリケーション" class="headerlink" title="5. サポートされる Office クライアント アプリケーション"></a><strong>5. サポートされる Office クライアント アプリケーション</strong></h2><p>マクロからの操作においても、Microsoft 365 サービスとの接続がサポートされる Office クライアント アプリケーションがサポート対象です。サポートされる製品は、以下の公開情報でご確認ください。</p>
-<p>Office versions and connectivity to Microsoft 365 services<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/deployoffice/endofsupport/microsoft-365-services-connectivity">https://docs.microsoft.com/en-us/deployoffice/endofsupport/microsoft-365-services-connectivity</a></p>
+<p>Office versions and connectivity to Microsoft 365 services<br><a href="https://docs.microsoft.com/en-us/deployoffice/endofsupport/microsoft-365-services-connectivity" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/deployoffice/endofsupport/microsoft-365-services-connectivity</a></p>
 <p>今回の投稿は以上です。<br><br></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m4rqa2001y50vshhi75we2/" data-id="cl7h73xmf001y30rbfs1ue3j5" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4rqa2001y50vshhi75we2/" data-id="cl4hy59k1001yusvs5d1zguor" class="article-share-link">Share</a>
       
       
     </footer>

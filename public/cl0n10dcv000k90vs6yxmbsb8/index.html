@@ -7,18 +7,18 @@
   
   <title>Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。 本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。 2018&#x2F;02&#x2F;08 Update">
+  <meta name="description" content="(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。 本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。 2018&#x2F;02&#x2F;08 Update[対処方法] セクシ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0n10dcv000k90vs6yxmbsb8/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。 本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。 2018&#x2F;02&#x2F;08 Update">
+<meta property="og:description" content="(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。) こんにちは、Office サポートの町口です。 本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。 2018&#x2F;02&#x2F;08 Update[対処方法] セクシ">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2017/10/01-1024x768.jpg">
 <meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro-1024x768.jpg">
 <meta property="og:image" content="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround-1024x768.jpg">
 <meta property="article:published_time" content="2019-02-03T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.305Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.866Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -37,14 +37,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -53,7 +53,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -66,6 +66,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -123,7 +127,7 @@
         <p>(※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office サポートの町口です。</p>
 <p>本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。</p>
-<p><span style="color:#ff0000"><strong>2018&#x2F;02&#x2F;08 Update</strong></span><br><span style="color:#339966">[対処方法] セクションに修正プログラムの情報を追記しました。</span></p>
+<p><span style="color:#ff0000"><strong>2018/02/08 Update</strong></span><br><span style="color:#339966">[対処方法] セクションに修正プログラムの情報を追記しました。</span></p>
 <h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Excel 2013 以降で、先に任意のExcel ファイルを開いている状態にして、<br>次に、前回画面サイズが最小化された状態のファイルを保護されたビューで開くとき、<br>メッセージ バーやシート領域が描画されず、グレーの状態となります。</p>
 <p>再現手順:</p>
 <ol>
@@ -132,31 +136,31 @@
 <li>タスクバーに表示されたExcel のアイコンを右クリックして[ウィンドウを閉じる] をクリックします。</li>
 <li>「’&lt;ファイル名&gt;‘ の変更内容を保存しますか?」のメッセージで[保存] をクリックします。</li>
 <li>手順4 で保存したファイルではなく、新規ブックや任意の別のブックをダブルクリックで開きます。</li>
-<li>Shift キーを押下しながら、手順4 で保存したファイルのアイコンを右クリックして、[保護ビューで開く] をクリックします。</li>
+<li>Shift キーを押下しながら、手順4 で保存したファイルのアイコンを右クリックして、[保護ビューで開く] をクリックします。  </li>
 </ol>
-<p><a target="_blank" rel="noopener" href="https://msdnshared.blob.core.windows.net/media/2017/10/01.jpg"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/01-1024x768.jpg"></a></p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/2017/10/01.jpg" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/01-1024x768.jpg" alt=""></a></p>
 <p>結果:</p>
 <p>手順6 で開いたファイルのメッセージバーやシート領域が描画されず、グレーの状態となります。</p>
-<p><a target="_blank" rel="noopener" href="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro.jpg"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro-1024x768.jpg"></a></p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro.jpg" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/02_repro-1024x768.jpg" alt=""></a></p>
 <h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>Excel 2013 およびExcel 2016 の問題により発生しています。</p>
 <h1 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h1><p>以下のいずれかの方法で回避します。</p>
 <p><strong>&lt;&lt; 事前に発生しないようにする方法&gt;&gt;</strong></p>
 <p>以下のいずれかの方法で、現象の発生を防ぎます。</p>
 <p>a) 保護ビューで開くファイルを最小化した状態で保存しないようにする<br>b) 先に別のファイルを開かない</p>
-<p><span style="color:#ff0000"><strong>!! 2018&#x2F;02&#x2F;08 Update !!</strong></span></p>
+<p><span style="color:#ff0000"><strong>!! 2018/02/08 Update !!</strong></span></p>
 <p>c) Excel 2016 クイック実行版を更新する</p>
 <p>Excel 2016 クイック実行版については、<strong>バージョン 1801 (ビルド 9001.2138 クイック実行)</strong> で修正しました。</p>
-<p>2018 年 2 月 1 日以降、更新プログラム チャネル「月次チャネル&#x2F;Monthly Channel」でバージョン 1801 (ビルド 9001.2138 クイック実行) を受信することができます。  </p>
+<p>2018 年 2 月 1 日以降、更新プログラム チャネル「月次チャネル/Monthly Channel」でバージョン 1801 (ビルド 9001.2138 クイック実行) を受信することができます。  </p>
 <p>[ファイル] – [アカウント] – [更新オプション] の [今すぐ更新] や ODT を利用して、バージョン 1801 (ビルド 9001.2138 クイック実行) 以上のバージョンに更新してください。</p>
 <p><strong>&lt;&lt; 現象発生後に対応する方法&gt;&gt;</strong></p>
 <p>保護ビューで開いたファイルで、メッセージバー以下が描画されずグレーの状態となった場合は、<br>[ファイル] - [情報] - [編集を有効にする] をクリックして、通常ビューで開きます。</p>
-<p><a target="_blank" rel="noopener" href="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround.jpg"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround-1024x768.jpg"></a></p>
+<p><a href="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround.jpg" target="_blank" rel="noopener"><img src="https://msdnshared.blob.core.windows.net/media/2017/10/03_workaround-1024x768.jpg" alt=""></a></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcv000k90vs6yxmbsb8/" data-id="cl7h73xfv000l30rb33qh52yi" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcv000k90vs6yxmbsb8/" data-id="cl4hy59iu000iusvs2aw74gzh" class="article-share-link">Share</a>
       
       
     </footer>

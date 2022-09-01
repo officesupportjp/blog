@@ -7,16 +7,16 @@
   
   <title>Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)   こんにちは、Office 開発 サポート チームの 遠藤です。 今回は、Windows 10 への対応を行われているお客様からいくつかいただくもので、Excel がクラッシュしてしまう、という問題について報告したいと思います。 2017&#x2F;">
+  <meta name="description" content="(※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)   こんにちは、Office 開発 サポート チームの 遠藤です。 今回は、Windows 10 への対応を行われているお客様からいくつかいただくもので、Excel がクラッシュしてしまう、という問題について報告したいと思います。 2017&#x2F;4&#x2F;13">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="(※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)   こんにちは、Office 開発 サポート チームの 遠藤です。 今回は、Windows 10 への対応を行われているお客様からいくつかいただくもので、Excel がクラッシュしてしまう、という問題について報告したいと思います。 2017&#x2F;">
+<meta property="og:description" content="(※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)   こんにちは、Office 開発 サポート チームの 遠藤です。 今回は、Windows 10 への対応を行われているお客様からいくつかいただくもので、Excel がクラッシュしてしまう、という問題について報告したいと思います。 2017&#x2F;4&#x2F;13">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/image1.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.649Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:59.104Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -30,19 +30,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -51,7 +51,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -64,6 +64,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -121,20 +125,22 @@
         <p>(※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  </p>
 <p>こんにちは、Office 開発 サポート チームの 遠藤です。</p>
 <p>今回は、Windows 10 への対応を行われているお客様からいくつかいただくもので、Excel がクラッシュしてしまう、という問題について報告したいと思います。</p>
-<p><span style="color:#ff0000"><strong>2017&#x2F;4&#x2F;13 update</strong></span><br><span style="color:#339966">本 Blog で紹介した問題については、2017 年 4 月から提供を開始しました Windows 10 Creators Update にて修正されました。</span></p>
+<p><span style="color:#ff0000"><strong>2017/4/13 update</strong></span><br><span style="color:#339966">本 Blog で紹介した問題については、2017 年 4 月から提供を開始しました Windows 10 Creators Update にて修正されました。</span></p>
 <p>この問題は以下の条件下で発生します。</p>
-<p>(条件の 1 から 4 は必須条件となります。<br>5 については、結果的に何かしらのオブジェクトを破棄するような処理が影響する可能性があり、5  は一例となります。)</p>
+<p>(条件の 1 から 4 は必須条件となります。<br>5 については、結果的に何かしらのオブジェクトを破棄するような処理が影響する可能性があり、5  は一例となります。)</p>
 <ol>
 <li>OS が Windows 10 Version 1607 (Anniversary Update) であること</li>
 <li>Excel をオートメーションで操作していること</li>
 <li>Excel 内部から結果的にプリンタ情報を取得する処理を行うこと</li>
-<li>“Windows で通常使うプリンターを管理する” が既定値である “オン” になっていること<img src="/blog/image1.png"></li>
-<li>Workbook オブジェクトの Close メソッドを呼び出すこと</li>
+<li>“Windows で通常使うプリンターを管理する” が既定値である “オン” になっていること<img src="image1.png" alt=""></li>
+<li>Workbook オブジェクトの Close メソッドを呼び出すこと  </li>
 </ol>
 <p>なお、この問題は任意の Excel バージョンで発生し、以下のコードを VBScript (.vbs) と保存して実行すると再現できます。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Set xlApp = CreateObject(&quot;Excel.Application&quot;)</span><br><span class="line">xlApp.Visible = True</span><br><span class="line"></span><br><span class="line">Set xlBook = xlApp.Workbooks.Add</span><br><span class="line"></span><br><span class="line">xlBook.Sheets(1).Range(&quot;A1:B2&quot;).Value = &quot;Sample&quot;</span><br><span class="line">xlBook.Sheets(1).PageSetup.PrintArea = &quot;A1:B2&quot;</span><br><span class="line">xlBook.Close False</span><br><span class="line"></span><br><span class="line">MsgBox &quot;少し待機し、Excel がクラッシュしないかを確認します&quot;  </span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Set xlApp &#x3D; CreateObject(&quot;Excel.Application&quot;)</span><br><span class="line">xlApp.Visible &#x3D; True</span><br><span class="line"></span><br><span class="line">Set xlBook &#x3D; xlApp.Workbooks.Add</span><br><span class="line"></span><br><span class="line">xlBook.Sheets(1).Range(&quot;A1:B2&quot;).Value &#x3D; &quot;Sample&quot;</span><br><span class="line">xlBook.Sheets(1).PageSetup.PrintArea &#x3D; &quot;A1:B2&quot;</span><br><span class="line">xlBook.Close False</span><br><span class="line"></span><br><span class="line">MsgBox &quot;少し待機し、Excel がクラッシュしないかを確認します&quot;</span><br></pre></td></tr></table></figure>
 
-<p>4 の “Windows で通常使うプリンターを管理する” は、Windows 10 Version 1511 から追加された機能ですが、Windows 10 Version 1607 で機能が拡張されたことに伴って発生します。</p>
+
+
+<p>4 の “Windows で通常使うプリンターを管理する” は、Windows 10 Version 1511 から追加された機能ですが、Windows 10 Version 1607 で機能が拡張されたことに伴って発生します。</p>
 <p>この問題に対しては、今年の春以降に予定している Windows 10 の大型アップデートで対応する予定となっているため、現時点では “Windows で通常使うプリンターを管理する” をオフにすることで対応をお願いできればと思います。</p>
 <p>今回の投稿は以上です。</p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
@@ -142,7 +148,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl7h73xoy002z30rbf7eohkyf" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnody002s5ovs5vpp069a/" data-id="cl4hy59km002xusvsa4v4adze" class="article-share-link">Share</a>
       
       
     </footer>

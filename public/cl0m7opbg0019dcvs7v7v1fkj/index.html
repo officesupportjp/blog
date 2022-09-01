@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2018 年 6 月 22 日に Japan Office Support Blog に公開した情報のアーカイブです。)こんにちは、 Office サポート チームです。 本記事では、Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7opbg0019dcvs7v7v1fkj/image1.png">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.399Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.934Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -30,19 +30,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m7opbg0019dcvs7v7v1fkj/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -51,7 +51,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -64,6 +64,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -123,13 +127,13 @@
 <p>本記事では、Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について案内します。</p>
 <h1 id="1-現象"><a href="#1-現象" class="headerlink" title="1 現象"></a><strong>1 現象</strong></h1><p>Office 2016 アプリケーションの起動時に、以下のメッセージが表示されることがあります。</p>
 <p>(例) Excel 起動時のメッセージ</p>
-<p><img src="/blog/image1.png">  </p>
+<p><img src="image1.png" alt="">  </p>
 <p><strong>補足 :</strong></p>
 <ul>
 <li><p>Office 2016 をインストールしている環境で、Office アプリケーション以外で上記メッセージが表示した場合においても、本記事の「対処方法」をお試しください。</p>
 </li>
 <li><p>dll の名前は他のファイル名で表示される場合もあります。  </p>
-<p>(例)<br>“コンピュータにapi-ms-win-crt-runtime-l1-1-0.dllがないため、プログラムを開始できません。この問題を解決するには、プログラムを再インストールしてみてください。”</p>
+<p>(例)<br>“コンピュータにapi-ms-win-crt-runtime-l1-1-0.dllがないため、プログラムを開始できません。この問題を解決するには、プログラムを再インストールしてみてください。”  </p>
 </li>
 </ul>
 <h1 id="2-原因"><a href="#2-原因" class="headerlink" title="2 原因"></a><strong>2 原因</strong></h1><p>Office 2016 アプリケーションを実行するには、Visual C++ ランタイムのコンポーネントが必要です。</p>
@@ -141,10 +145,10 @@
 <h3 id="方法2-Microsoft-ダウンロードセンターから-Windows-更新プログラムをダウンロードしてインストールする"><a href="#方法2-Microsoft-ダウンロードセンターから-Windows-更新プログラムをダウンロードしてインストールする" class="headerlink" title="方法2. Microsoft ダウンロードセンターから Windows 更新プログラムをダウンロードしてインストールする"></a><strong>方法2. Microsoft ダウンロードセンターから Windows 更新プログラムをダウンロードしてインストールする</strong></h3><p>KB2999226 の更新プログラムを Microsoft ダウンロードセンターからダウンロードし、適用します。  </p>
 <p>KB2999226 の更新プログラムは、Windows OS のバージョンやアーキテクチャに合わせてリリースされています。</p>
 <p>以下のサポート技術情報に記載されているリンクから、現象が発生しているPC 端末に合わせた更新プログラムをダウンロードしてください。</p>
-<p><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/kb/2999226">2999226</a> Windows での汎用の C ランタイムの更新プログラム  </p>
+<p><a href="https://support.microsoft.com/ja-jp/kb/2999226" target="_blank" rel="noopener">2999226</a> Windows での汎用の C ランタイムの更新プログラム  </p>
 <p><strong>補足:</strong><br>Windows 8.1 または Windows Server 2012 R2 では、KB2999226 の適用前提条件として、次の Windows 更新プログラムが適用されている必要があります。</p>
-<p>1．KB2919442<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/2919442">2919442</a> March 2014 servicing stack update for Windows 8.1 and Windows Server 2012 R2  </p>
-<p>2．KB2919355<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/2919355">2919355</a> Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014  </p>
+<p>1．KB2919442<br><a href="https://support.microsoft.com/ja-jp/help/2919442" target="_blank" rel="noopener">2919442</a> March 2014 servicing stack update for Windows 8.1 and Windows Server 2012 R2  </p>
+<p>2．KB2919355<br><a href="https://support.microsoft.com/ja-jp/help/2919355" target="_blank" rel="noopener">2919355</a> Windows RT 8.1, Windows 8.1, and Windows Server 2012 R2 update: April 2014  </p>
 <p>インストールされていない場合は、次の順序でこれらの更新を適用してください。  </p>
 <p>1 番目 : KB2919442</p>
 <p>2 番目 : KB2919355</p>
@@ -152,15 +156,15 @@
 <p><strong>注意点 :</strong></p>
 <ul>
 <li>ダウンロード時に、KB2919355 だけでなく clearcompressionflag.exe にもチェックを入れてダウンロードしてください。<br>ダウンロード後は、KB2919355 のインストール前に clearcompressionflag.exe を実行してください。</li>
-<li>KB2919355 が適用できない場合は、以下の KB3021910 を適用後に再度お試しください。</li>
+<li>KB2919355 が適用できない場合は、以下の KB3021910 を適用後に再度お試しください。  </li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/help/3021910">3021910</a>　April 2015 servicing stack update for Windows 8.1 and Windows Server 2012 R2  </p>
+<p><a href="https://support.microsoft.com/ja-jp/help/3021910" target="_blank" rel="noopener">3021910</a>　April 2015 servicing stack update for Windows 8.1 and Windows Server 2012 R2  </p>
 <p><strong>※ 本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbg0019dcvs7v7v1fkj/" data-id="cl7h73xkh001930rb51q65vud" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbg0019dcvs7v7v1fkj/" data-id="cl4hy59js001ausvs8u7gftn1" class="article-share-link">Share</a>
       
       
     </footer>

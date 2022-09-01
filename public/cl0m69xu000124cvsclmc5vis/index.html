@@ -15,7 +15,7 @@
 <meta property="og:description" content="こんにちは、Office サポートの西川 (直) です。 今回の投稿では、MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について説明します。 MSI 版の Office 2016 とは？ 以下の Blog 記事のとおり、「SPO、OneDrive、WebDavサーバーから Office ファイルが開か">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-09-22T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.399Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.927Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -62,6 +62,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -109,7 +113,7 @@
         Last Update: 
         <a href="/blog/cl0m69xu000124cvsclmc5vis/" class="article-date-single">    
         
-    <time datetime="2021-04-23T00:00:00.000Z" itemprop="lastupdate">2021-04-23</time>    
+    <time datetime="2021-04-22T15:00:00.000Z" itemprop="lastupdate">2021-04-23</time>    
     
 </a>              
       </div>
@@ -120,13 +124,13 @@
 <p>今回の投稿では、MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について説明します。</p>
 <p><a href="https://officesupportjp.github.io/blog/%E3%82%AF%E3%82%A4%E3%83%83%E3%82%AF%E5%AE%9F%E8%A1%8C%E5%BD%A2%E5%BC%8F%20(C2R)%20%E3%81%A8%20Windows%20%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%A9%E3%83%BC%E5%BD%A2%E5%BC%8F%20(MSI)%20%E3%82%92%E8%A6%8B%E5%88%86%E3%81%91%E3%82%8B%E6%96%B9%E6%B3%95/">MSI 版の Office 2016 とは？</a></p>
 <p>以下の Blog 記事のとおり、「SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない」現象についてお問い合わせいただく場合があります。</p>
-<p>Title : SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について<br>URL : <a href="https://officesupportjp.github.io/blog/SharePoint%20Server%20%E3%81%AA%E3%81%A9%20WebDAV%20%E3%81%8C%E6%9C%89%E5%8A%B9%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について</a>  </p>
+<p>Title : SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について<br>URL : <a href="https://officesupportjp.github.io/blog/SharePoint%20Server%20%E3%81%AA%E3%81%A9%20WebDAV%20%E3%81%8C%E6%9C%89%E5%8A%B9%E3%81%AA%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について</a>  </p>
 <p>上記の Blog 記事の方法では改善せず、ご利用されているのが MSI 版の Office 2016 の場合、セキュリティ更新のみ等、限定的に更新プログラムを適用していることに起因している可能性があります。</p>
 <p>この場合、Microsoft Update を適用するか、少なくとも、以下のモジュールの更新プログラムを適用し、事象が回避するかをご確認いただくと解消する可能性があります。</p>
 <p><strong>&lt;実施方法&gt;</strong></p>
 <p>URL を開き、以下に列挙するモジュールの “Non-security” と “Security release” の日付を比較し、新しい方の KB の更新プログラムを適用してください。</p>
 <p>なお、”Security KB superseded” は “置き換えられたセキュリティ更新の KB” を意味いたしますので、適用する必要はありません。</p>
-<p>Title : List of the most current .msp files for Office 2016 products<br>URL : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/officeupdates/msp-files-office-2016">https://docs.microsoft.com/en-us/officeupdates/msp-files-office-2016</a></p>
+<p>Title : List of the most current .msp files for Office 2016 products<br>URL : <a href="https://docs.microsoft.com/en-us/officeupdates/msp-files-office-2016" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/officeupdates/msp-files-office-2016</a></p>
 <p>・ace-x-none<br>・csi-x-none<br>・mso-x-none<br>・msodll20-x-none<br>・msodll30-x-none<br>・msodll40ui-x-none<br>・msodll99l-x-none<br>・orgidcrl-x-none<br>・msmipc-x-none</p>
 <p>今回の投稿は以上です。  </p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
@@ -134,7 +138,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m69xu000124cvsclmc5vis/" data-id="cl7h73xk4001130rbar5j468g" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m69xu000124cvsclmc5vis/" data-id="cl4hy59jj000zusvs1w9ed6ur" class="article-share-link">Share</a>
       
       
     </footer>

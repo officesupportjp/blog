@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2017 年 1 月 30 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 今回は、Office をオートメーションするアプリケーションをマルチスレッドで作成する際の注意点について記載します。 Office は STA (Single-Threaded Apartm">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/image1.png">
 <meta property="article:published_time" content="2019-02-24T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.461Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.975Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -30,19 +30,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -51,7 +51,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -64,6 +64,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -123,22 +127,22 @@
 <p>今回は、Office をオートメーションするアプリケーションをマルチスレッドで作成する際の注意点について記載します。</p>
 <p>Office は STA (Single-Threaded Apartment) モデルで動作しているため、マルチスレッドからの呼び出し、特に Office に重い処理を実行させているときや、ループ処理などでマルチスレッドから大量の呼び出しを行うと、エラーが発生することがあります。</p>
 <p>この動作については、以下の弊社公開資料で解説していますが、開発者の皆様に知って頂く機会を増やすとともに、図等を用いてより親しみやすい内容でご案内するため、今回、本記事でも取り上げたいと思います。</p>
-<p>タイトル : Office でのスレッドのサポート<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/8sesy69e.aspx">https://msdn.microsoft.com/ja-jp/library/8sesy69e.aspx</a></p>
-<p>目次<br><a href="#1-STA-%E3%81%A8%E3%81%AF%EF%BC%9F">1. STA とは？</a><br><a href="#2-%E3%83%9E%E3%83%AB%E3%83%81%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89%E3%81%8B%E3%82%89%E3%81%AE%E5%91%BC%E3%81%B3%E5%87%BA%E3%81%97%E3%81%A7%E6%83%B3%E5%AE%9A%E3%81%95%E3%82%8C%E3%82%8B%E3%82%A8%E3%83%A9%E3%83%BC">2. マルチスレッドからの呼び出しで想定されるエラー</a><br><a href="#3-%E5%AF%BE%E5%87%A6%E6%96%B9%E6%B3%95">3. 対処方法</a>  </p>
+<p>タイトル : Office でのスレッドのサポート<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/8sesy69e.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/8sesy69e.aspx</a></p>
+<p>目次<br><a href="#1-STA-とは？">1. STA とは？</a><br><a href="#2-マルチスレッドからの呼び出しで想定されるエラー">2. マルチスレッドからの呼び出しで想定されるエラー</a><br><a href="#3-対処方法">3. 対処方法</a>  </p>
 <h4 id="1-STA-とは？"><a href="#1-STA-とは？" class="headerlink" title="1. STA とは？"></a>1. STA とは？</h4><p>プロセスのスレッド モデルには、大きく分けて STA と MTA (Multi-Threaded Apartment) モデルがありますが、Office は STA を採用しています。(主に GUI でユーザー操作を行うアプリケーションでは、処理の整合性を確保するための実装が MTA と比較して容易なため、STA が採用されることが多いと思います。)</p>
 <p>STA モデルである Office では、他プロセスからの COM オブジェクト呼び出しは、全て一元的にウィンドウ メッセージとしてキューイングされます。Office プロセス内部では、ウィンドウ メッセージ キューから　COM 呼び出し要求が取り出され、適切なスレッドで COM オブジェクトの処理が実行されます。</p>
-<p><img src="/blog/image1.png">  </p>
+<p><img src="image1.png" alt="">  </p>
 <p>図 1. STA の仕組み</p>
-<p>例え話を用いてもう少し噛み砕いて説明すると、プロセス ＝ マンション、スレッド &#x3D; マンション内の各部屋、とイメージすると分かりやすいかと思います。</p>
-<p>STA モデルのアプリケーションは、管理人がいるオートロック マンションのようなものです。他プロセス (&#x3D;マンションの訪問者) は、各部屋の住人に用事 (&#x3D;COM オブジェクトの呼び出し) がありマンションを訪れると、まずは管理人に用件を伝えます。各部屋の住人 (&#x3D; COM オブジェクト) への取次は、すべてこの管理人を通して行われます。訪問者が直接部屋を訪問することはできません。</p>
+<p>例え話を用いてもう少し噛み砕いて説明すると、プロセス ＝ マンション、スレッド = マンション内の各部屋、とイメージすると分かりやすいかと思います。</p>
+<p>STA モデルのアプリケーションは、管理人がいるオートロック マンションのようなものです。他プロセス (=マンションの訪問者) は、各部屋の住人に用事 (=COM オブジェクトの呼び出し) がありマンションを訪れると、まずは管理人に用件を伝えます。各部屋の住人 (= COM オブジェクト) への取次は、すべてこの管理人を通して行われます。訪問者が直接部屋を訪問することはできません。</p>
 <p>また、ここからが本記事で説明したいポイントですが、管理人は 1 人しかいないので、各部屋の住人に順次訪問者の用件を取り次いでいきます。このため、訪問者が多いとすぐに用件を受け付けてもらえなかったり、後で出直してきてね、と言われることもあるのです。このような状況が、次の項目で記載するエラー発生時には起きています。</p>
 <p>参考資料)<br>STAの詳細については以下の公開資料をご参照ください。</p>
-<p>タイトル : [OLE] OLE スレッド モデルの概要としくみ<br>アドレス : <a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/kb/150777">https://support.microsoft.com/ja-jp/kb/150777</a>  </p>
+<p>タイトル : [OLE] OLE スレッド モデルの概要としくみ<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/150777" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/150777</a>  </p>
 <h4 id="2-マルチスレッドからの呼び出しで想定されるエラー"><a href="#2-マルチスレッドからの呼び出しで想定されるエラー" class="headerlink" title="2. マルチスレッドからの呼び出しで想定されるエラー"></a>2. マルチスレッドからの呼び出しで想定されるエラー</h4><p>STA モデルをサポートする Office に対して、マルチスレッドから同時に COM 呼び出しを行うと、例えば 0x8001010A や 0x80010001 といった COMException が発生することがあります (これらのエラーコード自体は汎用的なものですので、他の原因で生じることもあります)。</p>
 <p>マルチスレッドからの呼び出しで COMException に陥るシナリオとして、例えば以下のようなケースが考えられます。</p>
 <ul>
-<li> Office でモーダル ダイアログが表示されており、他の要求が受け付けられない状態である</li>
-<li> 先行処理に時間がかかっていたり、マルチスレッドからループなどで大量の処理要求が行われたことで、Office がビジー状態である</li>
+<li>Office でモーダル ダイアログが表示されており、他の要求が受け付けられない状態である</li>
+<li>先行処理に時間がかかっていたり、マルチスレッドからループなどで大量の処理要求が行われたことで、Office がビジー状態である</li>
 </ul>
 <p>1. の図で示す通り、Office プロセスは COM 呼び出しをキューイングしますので、Office の処理中に COM 呼び出しを行うと、直ちに COMException が生じるとは限りません。(Office の状態によっては、即座に COMException が生じることもあります。) ただし、Office 内部スレッドとの連携に使用するウィンドウ メッセージ キューの許容量 (既定で最大 10,000 個) を超えた場合などには、COM 呼び出し要求が受け付けられず、COMException に陥ることになります。</p>
 <p>1. でのマンションの例で言えば、管理人が優先度の高い訪問者の対応をしていたり、対応待ちの列が長すぎたりすると、新たな訪問者は追い返されてしまうこともあるわけです。  </p>
@@ -148,14 +152,14 @@
 <p>ただし、<a href="https://officesupportjp.github.io/blog/Excel%202013%20%E3%81%8B%E3%82%89%E3%81%AE%E3%82%A6%E3%82%A3%E3%83%B3%E3%83%89%E3%82%A6%E7%AE%A1%E7%90%86%E6%96%B9%E6%B3%95%E5%A4%89%E6%9B%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%20%E2%80%93%20%E3%82%B7%E3%83%B3%E3%82%B0%E3%83%AB%20%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%20%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%BC%E3%83%95%E3%82%A7%E3%82%A4%E3%82%B9%20(SDI)/">以前の投稿</a>で Office は 1 プロセスで複数のファイルが開かれるとご案内しているとおり、プログラムからの処理中にユーザー操作などで他の処理要求が行われることを完全に防ぐことはできません。ユーザー操作によって Office アプリケーションがビジー状態となっているところにアプリケーションから COM 呼び出しが行われても、同様に受け付けられません。また、モーダル ダイアログの例であれば、いつ閉じられるかはユーザー次第なのでどれくらいリトライすべきかの判断も難しいところです。</p>
 <p>この記事でお伝えしたいのは、まずは自身のプログラムからの処理だけを見たときに問題が生じないよう、STA の処理の仕組みについて考慮頂きたいということです。その上で、実際の運用上、ユーザー操作や他のプログラムとの関係でどうしても発生してしまうエラーについては、運用対処やメッセージ ダイアログでユーザーに注意を促すなどの対応をご検討ください。</p>
 <p>参考資料)<br>本記事でご紹介した Office は STA モデルであるということは、Office でサーバーサイド オートメーションがサポートされない理由の 1 つでもあります。以下の資料にも記載がございますので、参考までにご案内します。</p>
-<p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/kb/257757">https://support.microsoft.com/ja-jp/kb/257757</a><br>該当箇所 : 再入可能性とスケーラビリティ</p>
+<p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/257757" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/257757</a><br>該当箇所 : 再入可能性とスケーラビリティ</p>
 <p>今回の投稿は以上です。</p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl7h73xmb001t30rb4bpx90qr" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl4hy59jz001rusvsh9rl1w7s" class="article-share-link">Share</a>
       
       
     </footer>

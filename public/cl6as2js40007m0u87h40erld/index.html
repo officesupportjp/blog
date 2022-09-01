@@ -14,29 +14,29 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="こんにちは、Office サポート チームです。 以前の Microsoft 365 Apps では、Office ストアから入手した Web アドインの情報が埋め込まれた Office ファイルを、ストアの利用が禁止されているユーザー環境で開くと、該当の Web アドインが一元展開から配信されていたとしてもアドインが利用できませんでした。Microsoft 365 Apps でこの動作が改善され">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/Office_Store_Admin_Managed.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/Office_Store_Addin_Blocked1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/Office_Store_Addin_Blocked2.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/Admin_Managed_Addin_Blocked.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/Office_Store_Admin_Managed.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/Office_Store_Addin_Blocked1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/Office_Store_Addin_Blocked2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/Admin_Managed_Addin_Blocked.png">
 <meta property="article:published_time" content="2022-08-01T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.774Z">
+<meta property="article:modified_time" content="2022-09-01T03:15:55.975Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="アドイン">
 <meta property="article:tag" content="一元展開">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/Office_Store_Admin_Managed.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/Office_Store_Admin_Managed.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -45,7 +45,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -58,6 +58,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -105,7 +109,7 @@
         Last Update: 
         <a href="/blog/cl6as2js40007m0u87h40erld/" class="article-date-single">    
         
-    <time datetime="2022-08-02T00:00:00.000Z" itemprop="lastupdate">2022-08-02</time>    
+    <time datetime="2022-08-01T15:00:00.000Z" itemprop="lastupdate">2022-08-02</time>    
     
 </a>              
       </div>
@@ -114,36 +118,36 @@
       
         <p>こんにちは、Office サポート チームです。</p>
 <p>以前の Microsoft 365 Apps では、Office ストアから入手した Web アドインの情報が埋め込まれた Office ファイルを、ストアの利用が禁止されているユーザー環境で開くと、該当の Web アドインが一元展開から配信されていたとしてもアドインが利用できませんでした。Microsoft 365 Apps でこの動作が改善され、このようなシナリオでも利用が可能となりましたので、本記事では、この改善の詳細について説明します。</p>
-<h1 id="【前提】"><a href="#【前提】" class="headerlink" title="【前提】"></a>【前提】</h1><p>本記事に記載の “一元展開” とは、<a target="_blank" rel="noopener" href="https://admin.microsoft.com/#/homepage">Microsoft 365 管理センター</a> より実施可能な設定で以下公開情報に掲載されています。  </p>
-<p>タイトル : アドインの一元展開が組織で機能するかどうかを確認する<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/centralized-deployment-of-add-ins">https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/centralized-deployment-of-add-ins</a>    </p>
-<p>タイトル : Microsoft 365 管理センターにアドインをデプロイする<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-deployment-of-add-ins">https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-deployment-of-add-ins</a>    </p>
+<h1 id="【前提】"><a href="#【前提】" class="headerlink" title="【前提】"></a>【前提】</h1><p>本記事に記載の “一元展開” とは、<a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 管理センター</a> より実施可能な設定で以下公開情報に掲載されています。  </p>
+<p>タイトル : アドインの一元展開が組織で機能するかどうかを確認する<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/centralized-deployment-of-add-ins" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/centralized-deployment-of-add-ins</a>    </p>
+<p>タイトル : Microsoft 365 管理センターにアドインをデプロイする<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-deployment-of-add-ins" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/microsoft-365/admin/manage/manage-deployment-of-add-ins</a>    </p>
 <p>上記に従って一元展開をすると以下のように [Office アドイン] 画面の [管理者による管理] タブから指定したアドインを利用できるようになります。</p>
-<p><img src="/blog/Office_Store_Admin_Managed.png"></p>
+<p><img src="Office_Store_Admin_Managed.png" alt=""></p>
 <p>特定の Web アドインのみの利用を許可したいテナントで、一元展開を活用して利用するアドインのみを展開し、Office ストアの利用を禁止する以下の 1) 2) のいずれかの設定も併せて適用するという利用方法が多く採用されています。</p>
 <h3 id="1-Microsoft-365-管理センターでストアを禁止する設定"><a href="#1-Microsoft-365-管理センターでストアを禁止する設定" class="headerlink" title="1) Microsoft 365 管理センターでストアを禁止する設定"></a>1) Microsoft 365 管理センターでストアを禁止する設定</h3><p>Microsoft 365 管理センターにおいてストアを禁止する手順は以下となります。 後述する 2) の場合は、デスクトップ アプリケーションのみが対象となりますが、本設定は Office for the Web (Web 版 Office) も対象となります。</p>
 <h4 id="lt-設定手順-gt"><a href="#lt-設定手順-gt" class="headerlink" title="&lt;設定手順&gt;"></a>&lt;設定手順&gt;</h4><ol>
-<li><a target="_blank" rel="noopener" href="https://admin.microsoft.com/#/homepage">Microsoft 365 管理センター</a> へグローバル管理者などでサインインします。</li>
+<li><a href="https://admin.microsoft.com/#/homepage" target="_blank" rel="noopener">Microsoft 365 管理センター</a> へグローバル管理者などでサインインします。</li>
 <li>[設定] - [組織設定] をクリックします。</li>
 <li>[組織設定] 画面 - [サービス] タブ に表示されている [ユーザーが所有するアプリとサービス] をクリックします。</li>
-<li>表示された設定で [ユーザーが Office Store にアクセスすることを許可する] のチェックを外し、[保存] をクリックします。</li>
+<li>表示された設定で [ユーザーが Office Store にアクセスすることを許可する] のチェックを外し、[保存] をクリックします。  </li>
 </ol>
 <p>なお、本設定を適用すると、[Office アドイン] 画面の [ストア] タブに Office ストアが利用できない旨のメッセージが表示され、ストアが利用禁止になります。</p>
 <br>
 
 <h3 id="2-ポリシーでストアを禁止する設定"><a href="#2-ポリシーでストアを禁止する設定" class="headerlink" title="2) ポリシーでストアを禁止する設定"></a>2) ポリシーでストアを禁止する設定</h3><p>Office 管理用テンプレートのグループ ポリシーなどを利用し以下を設定すると [Office アドイン] 画面の [ストア] タブが非表示になり、ストアから入手した Web アドインが利用できなくなります。</p>
-<h4 id="lt-グループ-ポリシー設定-gt"><a href="#lt-グループ-ポリシー設定-gt" class="headerlink" title="&lt;グループ ポリシー設定&gt;"></a>&lt;グループ ポリシー設定&gt;</h4><p>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Office 2016] - [アプリケーション設定] -[セキュリティ] - [セキュリティ センター]<br>&amp;nbsp;- [Office ストアのブロック] : 有効  </p>
+<h4 id="lt-グループ-ポリシー設定-gt"><a href="#lt-グループ-ポリシー設定-gt" class="headerlink" title="&lt;グループ ポリシー設定&gt;"></a>&lt;グループ ポリシー設定&gt;</h4><p>[ユーザーの構成] - [ポリシー] - [管理用テンプレート]<br>- [Microsoft Office 2016] - [アプリケーション設定] -[セキュリティ] - [セキュリティ センター]<br>&nbsp;- [Office ストアのブロック] : 有効  </p>
 <p>なお、上記ポリシーは Office デスクトップ アプリケーションの [トラスト センターの設定] - [信頼できるアドイン カタログ] - [Office ストアの Web アドインの起動を許可しない。] の強制的にチェック有りにし、変更不可とする設定となります。</p>
 <h1 id="【改善内容】"><a href="#【改善内容】" class="headerlink" title="【改善内容】"></a>【改善内容】</h1><p>上記【前提】のように、ストアを利用禁止して一元展開で一部アドインを展開している環境において、以前は ストアから入手したアドインを利用している Office ファイルを開いた場合、表示されたアドインには、以下のような画面が表示され、アドインを利用することができませんでした。</p>
-<p><img src="/blog/Office_Store_Addin_Blocked1.png"></p>
-<p><img src="/blog/Office_Store_Addin_Blocked2.png"></p>
+<p><img src="Office_Store_Addin_Blocked1.png" alt=""></p>
+<p><img src="Office_Store_Addin_Blocked2.png" alt=""></p>
 <p>これは、Office ファイルの作成時にどこからアドインが挿入されたがファイル内に記録されているためです。従来は、同じアドインが一元展開で利用できる状況でも、ストアから挿入したアドインとして記録されている場合は、一元展開のアドインが使われることはありませんでした。  </p>
 <p>実運用で特にこの状況に直面する例として、Power Apps や Power BI、Dynamics のサイトから Office ファイルにデータを埋め込んで出力するシナリオの報告を多く頂いていました。これらのシナリオでは、ストア アドインの情報がファイルに埋め込まれます。</p>
-<h4 id="lt-Power-Apps-gt"><a href="#lt-Power-Apps-gt" class="headerlink" title="&lt;Power Apps&gt;"></a>&lt;Power Apps&gt;</h4><p>タイトル : テーブル データを Excel で開く<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/powerapps/maker/data-platform/data-platform-excel-addin">https://docs.microsoft.com/ja-jp/powerapps/maker/data-platform/data-platform-excel-addin</a><br>該当箇所 : テーブル データを Excel で開く　　</p>
-<h4 id="lt-Power-BI-gt"><a href="#lt-Power-BI-gt" class="headerlink" title="&lt;Power BI&gt;"></a>&lt;Power BI&gt;</h4><p>タイトル : PowerPoint にライブ Power BI レポート ページを追加する<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=export">https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=export</a><br>該当箇所 : “[エクスポート] オプションを使用する” に関する記述  </p>
-<h4 id="lt-Dynamics-365-gt"><a href="#lt-Dynamics-365-gt" class="headerlink" title="&lt;Dynamics 365&gt;"></a>&lt;Dynamics 365&gt;</h4><p>- Excel<br>タイトル : Excel 用 Microsoft Dynamics AX アドインの使用について<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-excel">https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-excel</a><br>- Word<br>タイトル : Word 用 Microsoft Dynamics AX アドインの使用について<br>アドレス : <a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-word">https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-word</a><br>※ Dynamics については、設定次第で一元展開したアドインを利用する設定も可能ですが、既定ではストア アドインを利用します。</p>
+<h4 id="lt-Power-Apps-gt"><a href="#lt-Power-Apps-gt" class="headerlink" title="&lt;Power Apps&gt;"></a>&lt;Power Apps&gt;</h4><p>タイトル : テーブル データを Excel で開く<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/powerapps/maker/data-platform/data-platform-excel-addin" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/powerapps/maker/data-platform/data-platform-excel-addin</a><br>該当箇所 : テーブル データを Excel で開く　　</p>
+<h4 id="lt-Power-BI-gt"><a href="#lt-Power-BI-gt" class="headerlink" title="&lt;Power BI&gt;"></a>&lt;Power BI&gt;</h4><p>タイトル : PowerPoint にライブ Power BI レポート ページを追加する<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=export" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/power-bi/collaborate-share/service-power-bi-powerpoint-add-in-install?tabs=export</a><br>該当箇所 : “[エクスポート] オプションを使用する” に関する記述  </p>
+<h4 id="lt-Dynamics-365-gt"><a href="#lt-Dynamics-365-gt" class="headerlink" title="&lt;Dynamics 365&gt;"></a>&lt;Dynamics 365&gt;</h4><p>- Excel<br>タイトル : Excel 用 Microsoft Dynamics AX アドインの使用について<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-excel" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-excel</a><br>- Word<br>タイトル : Word 用 Microsoft Dynamics AX アドインの使用について<br>アドレス : <a href="https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-word" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/dynamicsax-2012/appuser-itpro/about-using-the-microsoft-dynamics-ax-add-in-for-word</a><br>※ Dynamics については、設定次第で一元展開したアドインを利用する設定も可能ですが、既定ではストア アドインを利用します。</p>
 <p>本記事の改善によって、ファイルにストアからダウンロードしたアドインの情報が記録されていたとしても、一元展開で同じアドインを展開していれば、上記画面が表示されることなく、自動的に 一元展開されたアドインを利用することが可能になりました。</p>
 <p>また同様に、従来はテナント A で一元展開されたアドインを用いて作成したファイルをテナント B で開いた場合も、テナント A の一元展開アドインの情報が記録されているため、以下画面が表示されて利用ができませんでした。</p>
-<p><img src="/blog/Admin_Managed_Addin_Blocked.png"></p>
+<p><img src="Admin_Managed_Addin_Blocked.png" alt=""></p>
 <p>今回の改善は同じアドインであれば、展開方法に依存せず利用できるというものです。そのため、こちらのケースでも本改善によって自動的にストア アドインやテナント B の一元展開アドインを利用できます。</p>
 <h1 id="【利用可能な-Office-バージョン】"><a href="#【利用可能な-Office-バージョン】" class="headerlink" title="【利用可能な Office バージョン】"></a>【利用可能な Office バージョン】</h1><p>上記機能が利用可能な Office バージョンは、Microsoft 365 Apps の各更新チャネルにおいてそれぞれ以下が対象となります。</p>
 <ul>
@@ -161,7 +165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/" data-id="cl7h73xqw003k30rb849u270l" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl6as2js40007m0u87h40erld/" data-id="cl7ih7dob00024svs9yiz1sfr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">アドイン</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E4%B8%80%E5%85%83%E5%B1%95%E9%96%8B/" rel="tag">一元展開</a></li></ul>

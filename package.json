@@ -10,7 +10,7 @@
     "getpage": "node getpage.js"
   },
   "hexo": {
-    "version": "6.2.0"
+    "version": "4.2.1"
   },
   "dependencies": {
     "dom-parser": "^0.1.6",

@@ -7,15 +7,15 @@
   
   <title>SCCM で Office365 ProPlus の更新プログラムが必要と判定されない | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="(※ 2017 年 8 月 3 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの西川 (直)です。   ※ 2018&#x2F;08&#x2F;14 : 記事の構成を変更しました。   ※ 2018&#x2F;12&#x2F;5 : 記事の構成を変更しました。   ※ 2020&#x2F;10&#x2F;16 : 反">
+  <meta name="description" content="(※ 2017 年 8 月 3 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの西川 (直)です。   ※ 2018&#x2F;08&#x2F;14 : 記事の構成を変更しました。   ※ 2018&#x2F;12&#x2F;5 : 記事の構成を変更しました。   ※ 2020&#x2F;10&#x2F;16 : 反映に関する説明を追記しました。  SCCM (更新プログラム">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SCCM で Office365 ProPlus の更新プログラムが必要と判定されない">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m82yjj002nvovs5qg4he0l/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="(※ 2017 年 8 月 3 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの西川 (直)です。   ※ 2018&#x2F;08&#x2F;14 : 記事の構成を変更しました。   ※ 2018&#x2F;12&#x2F;5 : 記事の構成を変更しました。   ※ 2020&#x2F;10&#x2F;16 : 反">
+<meta property="og:description" content="(※ 2017 年 8 月 3 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポートの西川 (直)です。   ※ 2018&#x2F;08&#x2F;14 : 記事の構成を変更しました。   ※ 2018&#x2F;12&#x2F;5 : 記事の構成を変更しました。   ※ 2020&#x2F;10&#x2F;16 : 反映に関する説明を追記しました。  SCCM (更新プログラム">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.617Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:59.094Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,14 +33,14 @@
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -49,7 +49,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -62,6 +62,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -109,7 +113,7 @@
         Last Update: 
         <a href="/blog/cl0m82yjj002nvovs5qg4he0l/" class="article-date-single">    
         
-    <time datetime="2020-10-16T00:00:00.000Z" itemprop="lastupdate">2020-10-16</time>    
+    <time datetime="2020-10-15T15:00:00.000Z" itemprop="lastupdate">2020-10-16</time>    
     
 </a>              
       </div>
@@ -118,42 +122,42 @@
       
         <p>(※ 2017 年 8 月 3 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office サポートの西川 (直)です。  </p>
-<p><span style="color:#ff0000">※ 2018&#x2F;08&#x2F;14 : 記事の構成を変更しました。</span>  </p>
-<p><span style="color:#ff0000">※ 2018&#x2F;12&#x2F;5 : 記事の構成を変更しました。</span>  </p>
-<p><span style="color:#ff0000">※ 2020&#x2F;10&#x2F;16 : 反映に関する説明を追記しました。</span> </p>
+<p><span style="color:#ff0000">※ 2018/08/14 : 記事の構成を変更しました。</span>  </p>
+<p><span style="color:#ff0000">※ 2018/12/5 : 記事の構成を変更しました。</span>  </p>
+<p><span style="color:#ff0000">※ 2020/10/16 : 反映に関する説明を追記しました。</span> </p>
 <p>SCCM (更新プログラム 1602 以降) では、Office 365 ProPlus の更新プログラムを管理できるようになりました。</p>
-<p>System Center Configuration Manager を使用して Office 365 ProPlus の更新プログラムを管理する<br><a target="_blank" rel="noopener" href="https://support.office.com/ja-jp/article/b4a17328-fcfe-40bf-9202-58d7cbf1cede">https://support.office.com/ja-jp/article/b4a17328-fcfe-40bf-9202-58d7cbf1cede</a></p>
+<p>System Center Configuration Manager を使用して Office 365 ProPlus の更新プログラムを管理する<br><a href="https://support.office.com/ja-jp/article/b4a17328-fcfe-40bf-9202-58d7cbf1cede" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/b4a17328-fcfe-40bf-9202-58d7cbf1cede</a></p>
 <p>本記事では、SCCM (System Center Configuration Manager) で Office365 ProPlus の更新プログラムが必要と判定されない現象について説明します。</p>
 <p><u><strong>現象</strong></u>  </p>
 <p>オンプレミス環境の共有フォルダ等、ローカルソースより更新プログラムを配布している環境から、SCCM より更新プログラムを配布するように構成を変更した場合、SCCM クライアント上に該当の更新プログラムが表示されず、更新が適用できない場合があります。  </p>
 <p><u><strong>対処方法</strong></u>  </p>
 <p>以下の手順を 1 から順に実施します。そして、コンピューターを再起動し、<strong>最大 24 時間経過後、</strong>SCCM や Office のスキャンが行われることで現象が改善する可能性があります。</p>
 <p><strong>手順 1. “Office 365 クライアント管理” を有効にします。</strong>  </p>
-<p>System Center Configuration Manager を使用して Office 365 ProPlus の更新プログラムを管理する<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager">https://docs.microsoft.com/ja-jp/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager</a></p>
+<p>System Center Configuration Manager を使用して Office 365 ProPlus の更新プログラムを管理する<br><a href="https://docs.microsoft.com/ja-jp/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager</a></p>
 <p>※ “Configuration Manager からの更新を受信できるように Office 365 クライアントを有効にする” をご確認ください</p>
 <p><strong>手順 2.</strong> CDNBaseUrl の値が、更新対象のチャネルの URL となっているか確認し、正しくない場合は修正します。  </p>
 <p>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration<br>名前 : CDNBaseUrl<br>型 : REG_SZ<br>値 : チャネルの構成状況により、以下の何れかを設定します。  </p>
-<p>月次チャネル:<br><a target="_blank" rel="noopener" href="http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60">http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60</a></p>
-<p>半期チャネル (対象指定) :<br><a target="_blank" rel="noopener" href="http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf">http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf</a></p>
-<p>半期チャネル:<br><a target="_blank" rel="noopener" href="http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114">http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114</a></p>
+<p>月次チャネル:<br><a href="http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60" target="_blank" rel="noopener">http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60</a></p>
+<p>半期チャネル (対象指定) :<br><a href="http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf" target="_blank" rel="noopener">http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf</a></p>
+<p>半期チャネル:<br><a href="http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114" target="_blank" rel="noopener">http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114</a></p>
 <p><strong>手順 3.</strong> グループポリシーにて “更新プログラムのパス” が設定されている場合は “未構成”、もしくは “無効” に設定します。  </p>
 <p>場所：[コンピューターの構成] - [管理用テンプレート] – [Microsoft Office 2016 (マシン)] – [更新] – “更新プログラムのパス”</p>
 <p><strong>手順 4</strong>. Office 展開ツール (ODT) の Configuration.xml で UpdatePath 属性 (更新プログラムのパス) を設定している場合は、以下のレジストリを削除します。  </p>
 <p>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration<br>名前 : UpdateUrl</p>
 <p><strong>手順 5.</strong> グループポリシーにて “チャネルの更新” を “有効” とし、チャネルを設定します。  </p>
 <p>場所：[コンピューターの構成] - [管理用テンプレート] – [Microsoft Office 2016 (マシン)] – [更新] – “チャネルの更新”  </p>
-<p>※ 注意点 : “チャネルの更新”  を設定すると、SCCM もしくはインターネットから更新プログラムを取得するようになります。SCCM で管理しない端末に設定する際はご留意ください。  </p>
+<p>※ 注意点 : “チャネルの更新”  を設定すると、SCCM もしくはインターネットから更新プログラムを取得するようになります。SCCM で管理しない端末に設定する際はご留意ください。  </p>
 <p><span style="color:#ff0000">※ Office 365 ProPlus のインストール時にチャネルが混在していない場合は、手順 5 は不要です。</span>  </p>
 <ul>
 <li><strong>事象が改善されない場合</strong></li>
 </ul>
-<p>Office 展開ツールを使用し、Configure オプションにより、Office を再度インストールしてください。<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/deployoffice/overview-of-the-office-2016-deployment-tool">https://docs.microsoft.com/ja-jp/deployoffice/overview-of-the-office-2016-deployment-tool</a></p>
+<p>Office 展開ツールを使用し、Configure オプションにより、Office を再度インストールしてください。<br><a href="https://docs.microsoft.com/ja-jp/deployoffice/overview-of-the-office-2016-deployment-tool" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/deployoffice/overview-of-the-office-2016-deployment-tool</a></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m82yjj002nvovs5qg4he0l/" data-id="cl7h73xor002p30rb9ykf20xb" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m82yjj002nvovs5qg4he0l/" data-id="cl4hy59ki002pusvsgw1y54cc" class="article-share-link">Share</a>
       
       
     </footer>

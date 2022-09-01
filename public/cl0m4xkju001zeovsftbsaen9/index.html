@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="こんにちは、Office サポート チームの半田です。この記事では、Office ファイルを開こうとすると、実際に開いているユーザーとは異なるユーザーが使用中と表示されることがある事象と、その対処策について説明します。   現象通常、既に別のユーザーが開いているファイルを開こうとすると、以下のように別のユーザーがファイルを編集中である旨のメッセージが表示されます。このとき、実際には TestUse">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkju001zeovsftbsaen9/image1.png">
 <meta property="article:published_time" content="2021-03-10T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.492Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.992Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -30,19 +30,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m4xkju001zeovsftbsaen9/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -51,7 +51,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -64,6 +64,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -120,23 +124,23 @@
       
         <p>こんにちは、Office サポート チームの半田です。<br>この記事では、Office ファイルを開こうとすると、実際に開いているユーザーとは<br>異なるユーザーが使用中と表示されることがある事象と、その対処策について説明します。  </p>
 <p><strong>現象</strong><br>通常、既に別のユーザーが開いているファイルを開こうとすると、以下のように別のユーザーがファイルを編集中である旨のメッセージが表示されます。<br>このとき、実際には TestUserA がファイルを開いていないにも関わらず TestUserA がファイルを使用中と表示されたり、<br>誰も当該ファイルを開いていないにも関わらず、別のユーザーがファイルを使用中と表示される事象が発生することがあります。  </p>
-<p><img src="/blog/image1.png" alt="別のユーザーが既にファイルを開いていると表示されるメッセージ">  </p>
+<p><img src="image1.png" alt="別のユーザーが既にファイルを開いていると表示されるメッセージ">  </p>
 <p><strong>Office の動作について</strong><br>この事象の原因と対処策について説明する前に、関連する Office の動作について解説します。  </p>
 <p>基本的に、Office アプリは既存のファイルを開く際、開こうとしているファイルが存在するフォルダ内に<br>~$&lt;ファイル名&gt; という名前の一時ファイルを作成し、この ~$ つきの一時ファイルに自身のユーザー名を記録します。<br>例えば、”TestFile.xlsx” というファイルを開く場合は、”~$TestFile.xlsx” という一時ファイルを作成して、自分自身のユーザー名を記録します。<br>(補足: *.xls や Access ファイルなどの一部の Office ファイルについては、開いても ~$ つきファイルは作成されません)  </p>
-<p>これにより、既に別のユーザーによって開かれている Office ファイルを開こうとすると<br>同フォルダ内に存在する ~$ つきファイルに記録されているユーザー名を確認することで<br>当該のファイルが誰によって開かれているか確認&#x2F;通知することが可能になっています。  </p>
+<p>これにより、既に別のユーザーによって開かれている Office ファイルを開こうとすると<br>同フォルダ内に存在する ~$ つきファイルに記録されているユーザー名を確認することで<br>当該のファイルが誰によって開かれているか確認/通知することが可能になっています。  </p>
 <p>なおこの ~$ つきのファイルは、対応する Office ファイルが閉じられると同時に削除されます。  </p>
 <p><strong>考えられる原因</strong><br>Office アプリは、開こうとしているファイルと同じフォルダに、対応する ~$ つきの一時ファイルが存在しないか確認し、<br>存在している場合、そのファイル内に記録されているユーザー名をもとに、誰がファイルを開いているのか通知します。  </p>
 <p>この ~$ つきの一時ファイルは、対応する Office ファイルが閉じられると同時に削除されることが期待されますが<br>Office がクラッシュしたり、クライアント - ファイルサーバー間の接続が突然切断されるなどの予期しない動作が発生した場合、<br>削除されずに残存する場合があります。  </p>
 <p>この場合、予期せず残存した ~$ つきファイルに起因して、実際とは異なるユーザーがファイルを使用中と表示されたり<br>誰も当該ファイルを開いていないにも関わらず、別のユーザーがファイルを使用中と表示される事象が発生することがあります。  </p>
 <p><strong>検討される対処策</strong><br>~$ つきファイルの残存に起因して発生している事象については、この ~$ つきファイルを削除することで改善することが期待できます。<br>なお、エクスプローラーで ~$ つきファイルを表示させるためには、[フォルダー オプション] – [表示] から、以下の設定を行う必要があります。  </p>
-<p>・[隠しファイル、隠しフォルダー、および隠しドライブを表示する] : [有効]<br>・[保護されたオペレーティング システム ファイルを表示しない (推奨)] : [無効]   </p>
+<p>・[隠しファイル、隠しフォルダー、および隠しドライブを表示する] : [有効]<br>・[保護されたオペレーティング システム ファイルを表示しない (推奨)] : [無効]   </p>
 <p>また、~$ つきのファイルは、ファイルを開いているユーザー情報を格納するためのファイルであるため<br>このファイルを削除しても、元の Office ファイルの情報が欠落することはありません。  </p>
 <p>今回の投稿は以上です。<br><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkju001zeovsftbsaen9/" data-id="cl7h73xmw001z30rb52s6d4px" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkju001zeovsftbsaen9/" data-id="cl4hy59k2001zusvshapy20ce" class="article-share-link">Share</a>
       
       
     </footer>

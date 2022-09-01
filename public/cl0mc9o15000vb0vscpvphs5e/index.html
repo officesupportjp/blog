@@ -14,12 +14,12 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2017 年 6 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 Excel には、SpecialCells メソッドという、引数に指定した条件に合致するセルを返すメソッドが用意されています。 タイトル : Range.SpecialCells メソッド (">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image3.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image4.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/image4.png">
 <meta property="article:published_time" content="2019-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-08-31T05:28:58.336Z">
+<meta property="article:modified_time" content="2022-06-08T01:38:58.895Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Microsoft">
 <meta property="article:tag" content="Office">
@@ -33,19 +33,19 @@
 <meta property="article:tag" content="オフィス">
 <meta property="article:tag" content="サポート">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
   
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
-    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="icons/browserconfig.xml">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
   
   
@@ -54,7 +54,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
   <div id="container">
@@ -67,6 +67,10 @@
       <h1 id="logo-wrap">
         <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
       </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
       
     </div>
     <div id="header-inner" class="inner">
@@ -124,14 +128,14 @@
         <p>(※ 2017 年 6 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
 <p>こんにちは、Office 開発サポート チームの中村です。</p>
 <p>Excel には、SpecialCells メソッドという、引数に指定した条件に合致するセルを返すメソッドが用意されています。</p>
-<p>タイトル : Range.SpecialCells メソッド (Excel)<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/office/ff196157.aspx">https://msdn.microsoft.com/ja-jp/library/office/ff196157.aspx</a></p>
+<p>タイトル : Range.SpecialCells メソッド (Excel)<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/office/ff196157.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/office/ff196157.aspx</a></p>
 <p>現在の Excel の動作では、特定の処理の流れでこのメソッドを使用するとき、期待した範囲が取得できないことがあります。</p>
 <p>今回の記事では、この動作について詳細を記載します。この動作が生じる状況に該当する場合は、後述の回避策で対応することをご検討ください。</p>
-<p><span style="color:#ff0000"><strong>2017&#x2F;7&#x2F;13 Update</strong></span><br><span style="color:#339966">この動作は、Excel 製品の制限事項であることを追記しました。</span></p>
-<p><strong>目次</strong><br><a href="#1-%E5%86%8D%E7%8F%BE%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB"><strong>1. 再現サンプル</strong></a></p>
-<p><a href="#1-1-%E5%86%8D%E7%8F%BE%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E6%A7%8B%E6%88%90"><strong>1-1. 再現ファイル構成</strong></a><br><a href="#1-2-%E3%82%B5%E3%83%B3%E3%83%97%E3%83%AB-%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0"><strong>1-2. サンプル プログラム</strong></a></p>
-<p><a href="#2-%E5%86%8D%E7%8F%BE%E6%89%8B%E9%A0%86%E3%81%A8%E7%8F%BE%E8%B1%A1"><strong>2. 再現手順と現象</strong></a><br><a href="#3-%E7%99%BA%E7%94%9F%E6%9D%A1%E4%BB%B6%E3%81%A8%E5%8E%9F%E5%9B%A0"><strong>3. 発生条件と原因</strong></a><br><a href="#4-%E5%9B%9E%E9%81%BF%E7%AD%96"><strong>4. 回避策</strong></a></p>
-<p><a href="#4-1-DisplayAlerts-%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%AB-False-%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B"><strong>4-1. DisplayAlerts プロパティに False を設定する</strong></a><br><a href="#4-2-%E4%BA%8B%E5%89%8D%E3%81%AB-SpecialCells-%E3%83%A1%E3%82%BD%E3%83%83%E3%83%89%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B"><strong>4-2. 事前に SpecialCells メソッドを実行する</strong></a></p>
+<p><span style="color:#ff0000"><strong>2017/7/13 Update</strong></span><br><span style="color:#339966">この動作は、Excel 製品の制限事項であることを追記しました。</span></p>
+<p><strong>目次</strong><br><a href="#1-再現サンプル"><strong>1. 再現サンプル</strong></a></p>
+<p><a href="#1-1-再現ファイル構成"><strong>1-1. 再現ファイル構成</strong></a><br><a href="#1-2-サンプル-プログラム"><strong>1-2. サンプル プログラム</strong></a></p>
+<p><a href="#2-再現手順と現象"><strong>2. 再現手順と現象</strong></a><br><a href="#3-発生条件と原因"><strong>3. 発生条件と原因</strong></a><br><a href="#4-回避策"><strong>4. 回避策</strong></a></p>
+<p><a href="#4-1-DisplayAlerts-プロパティに-False-を設定する"><strong>4-1. DisplayAlerts プロパティに False を設定する</strong></a><br><a href="#4-2-事前に-SpecialCells-メソッドを実行する"><strong>4-2. 事前に SpecialCells メソッドを実行する</strong></a></p>
 <h4 id="1-再現サンプル"><a href="#1-再現サンプル" class="headerlink" title="1. 再現サンプル"></a><strong>1. 再現サンプル</strong></h4><p>今回の現象は、発生条件が込み入っていますので、まずは現象が再現するファイルとサンプル プログラムを用いて、具体的な動作を説明します。</p>
 <h5 id="1-1-再現ファイル構成"><a href="#1-1-再現ファイル構成" class="headerlink" title="1-1. 再現ファイル構成"></a><strong>1-1. 再現ファイル構成</strong></h5><p>以下のような構成の Excel ファイルを作成します。</p>
 <ul>
@@ -142,14 +146,16 @@
 <p>空のシートを用意します。(発生条件としては、「SpecialCells メソッドの指定条件に合致するセルがないこと」です。)</p>
 <p><strong>&lt;シート 2&gt;</strong></p>
 <p>外部ブックへのリンクを含む数式を設定します。</p>
-<p>例) &#x3D;[testBook.xlsx]Sheet1!A1</p>
+<p>例) =[testBook.xlsx]Sheet1!A1</p>
 <p>このリンクは、再現手順実行時に更新できない状況であることが条件となります。このため、のちに再現手順を実行するときに、リンク先ブック (testBook.xlsx) を同時に開いたり、再現ファイルと同じフォルダに配置しないでください。</p>
 </li>
 </ul>
 <h5 id="1-2-サンプル-プログラム"><a href="#1-2-サンプル-プログラム" class="headerlink" title="1-2. サンプル プログラム"></a><strong>1-2. サンプル プログラム</strong></h5><p>1-1. で作成した数式を含むブックのオープン時にマクロが実行されるよう、ThisWorkbook オブジェクトに以下のマクロを記述します。SpecialCells メソッドで、数式を含むセルを検索し、合致したセルのアドレスをダイアログに表示するマクロです。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    MsgBox &quot;Sheet1:&quot; &amp; Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas).Address</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    MsgBox &quot;Sheet1:&quot; &amp; Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas).Address</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+
+
 <p>このサンプル プログラムのポイントは、SpecialCells メソッドを、該当セルがないシートに対して実行することです。今回、シート1 には何も記述していないため、該当セルはありません。この場合、本来の動作では、以下のようなエラー メッセージが表示されます。</p>
-<p><img src="/blog/image1.png"></p>
+<p><img src="image1.png" alt=""></p>
 <p>図 1. SpecialCells メソッドで該当セルがない場合の想定された動作</p>
 <p>上記の手順で作成したファイルを保存します。</p>
 <h4 id="2-再現手順と現象"><a href="#2-再現手順と現象" class="headerlink" title="2. 再現手順と現象"></a><strong>2. 再現手順と現象</strong></h4><p>次に、再現手順を説明します。今回の現象は、再現手順にも条件があります。</p>
@@ -164,17 +170,17 @@
 <li>[オプション] – [セキュリティ センターの設定] で [マクロの設定] を [すべてのマクロを有効にする] に、かつ、[外部コンテンツ] の [ブック リンクのセキュリティ設定] を [すべてのブック リンクの自動更新を有効にする] に設定します。(※ 以後、全てのファイルにこの設定が有効になりますので、検証後元に戻してください。)</li>
 </ul>
 <p>次に、表示されるリンクの更新確認ダイアログで、[更新する] をクリックします。(ここで [更新しない] を選択すると、現象は発生しません。)</p>
-<p><img src="/blog/image2.png"></p>
+<p><img src="image2.png" alt=""></p>
 <p>図 2. 外部リンク更新確認ダイアログ</p>
 <p>すると次に、以下のダイアログが表示されますので、[続行] をクリックします。</p>
-<p><img src="/blog/image3.png"></p>
+<p><img src="image3.png" alt=""></p>
 <p>図 3. 外部リンク更新不可通知ダイアログ</p>
 <p>この結果、「該当するセルが見つかりません」というエラーが期待されますが、現象発生時は、以下のようにセル全体 ($1:$1048576) が結果として返されます。</p>
-<p><img src="/blog/image4.png"></p>
+<p><img src="image4.png" alt=""></p>
 <p>図 4. 現象発生時の結果</p>
 <h4 id="3-発生条件と原因"><a href="#3-発生条件と原因" class="headerlink" title="3. 発生条件と原因"></a><strong>3. 発生条件と原因</strong></h4><p>ここまでに説明した発生条件をまとめると、以下の通りです。</p>
 <p><strong>&lt;ファイル作成時の条件&gt;</strong></p>
-<p>1. ブック内に外部ブックへのリンクが存在すること</p>
+<p>1. ブック内に外部ブックへのリンクが存在すること</p>
 <p>2. SpecialCells メソッドで初めにチェック対象とするシートに、条件に合致するセルがないこと</p>
 <p><strong>&lt;実行手順の条件&gt;</strong></p>
 <p>3. ブックが信頼されており、ブックを開いたときにリンクの更新とマクロの実行が行われること</p>
@@ -182,20 +188,20 @@
 <p>5. 外部ブックへのリンクが更新できないこと</p>
 <p>これらの条件をすべて満たすとき、ブックオープン時の外部リンク更新の過程で、リンクが更新できない旨のエラーとして [図 3. 外部リンク更新不可通知ダイアログ] が表示されます。</p>
 <p>このエラーの発生によって、Excel の内部処理では、他のエラーを含め、一時的にエラーが無視される状態となります。この間に SpecialCells メソッドが実行されると、「該当するセルが見つかりません」というエラーも無視されます。その結果、SpecialCells メソッドの結果として該当セルはないものの、エラーは発生していないという意図しない状況が生じ、シート内のセル全体が返されます。</p>
-<h4 id="4-回避策"><a href="#4-回避策" class="headerlink" title="4. 回避策"></a><strong>4. 回避策</strong></h4><p><span style="color:#ff0000"><strong>2017&#x2F;7&#x2F;13 Update</strong></span></p>
+<h4 id="4-回避策"><a href="#4-回避策" class="headerlink" title="4. 回避策"></a><strong>4. 回避策</strong></h4><p><span style="color:#ff0000"><strong>2017/7/13 Update</strong></span></p>
 <p>本動作については、Excel 製品の制限事項となります。以下の回避策での対処をご検討ください。</p>
 <p>プログラムにて、以下のいずれかの対応を行うことで再現条件を避けることができ、この現象を回避できます。</p>
 <h5 id="4-1-DisplayAlerts-プロパティに-False-を設定する"><a href="#4-1-DisplayAlerts-プロパティに-False-を設定する" class="headerlink" title="4-1. DisplayAlerts プロパティに False を設定する"></a><strong>4-1. DisplayAlerts プロパティに False を設定する</strong></h5><p>先述の発生時の動作に記載のとおり、[図 3. 外部リンク更新不可通知ダイアログ] が表示されることによって、エラーが無視される状況が生じます。</p>
 <p>このため、このダイアログを表示しないよう、SpecialCells メソッドの実行直前に DisplayAlerts プロパティを False に設定することで回避できます。</p>
-<p>タイトル : Application.DisplayAlerts プロパティ (Excel)<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/office/ff839782.aspx">https://msdn.microsoft.com/ja-jp/library/office/ff839782.aspx</a></p>
+<p>タイトル : Application.DisplayAlerts プロパティ (Excel)<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/office/ff839782.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/office/ff839782.aspx</a></p>
 <p><strong>&lt;回避策 4-1. を追加したサンプル プログラム&gt;</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    Application.DisplayAlerts = False &#x27;回避コード : メッセージ通知を抑止</span><br><span class="line">    MsgBox &quot;Sheet1:&quot; &amp; Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas).Address</span><br><span class="line">    Application.DisplayAlerts = True &#x27;回避コード : メッセージ通知抑止を元に戻す</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    Application.DisplayAlerts &#x3D; False &#39;回避コード : メッセージ通知を抑止</span><br><span class="line">    MsgBox &quot;Sheet1:&quot; &amp; Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas).Address</span><br><span class="line">    Application.DisplayAlerts &#x3D; True &#39;回避コード : メッセージ通知抑止を元に戻す</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
 
 <p>この対処方法の場合、[図 3. 外部リンク更新不可通知ダイアログ] は、ユーザーに通知されません。</p>
 <h5 id="4-2-事前に-SpecialCells-メソッドを実行する"><a href="#4-2-事前に-SpecialCells-メソッドを実行する" class="headerlink" title="4-2. 事前に SpecialCells メソッドを実行する"></a><strong>4-2. 事前に SpecialCells メソッドを実行する</strong></h5><p>[図 3. 外部リンク更新不可通知ダイアログ] は、当該ブックでの初回の SpecialCells 実行タイミングで表示されます。</p>
 <p>このため、実際に結果を使用する SpecialCells メソッドの実行前に、ダミーで SpecialCells メソッドを実行し、この結果は利用しないといった対応方法も検討できます。</p>
 <p><strong>&lt;回避策 4-2. を追加したサンプル プログラム&gt;</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas) &#x27;回避コード : ダミーの SpecialCells メソッド実行</span><br><span class="line">    MsgBox &quot;Sheet1:&quot; &amp; Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas).Address</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas) &#39;回避コード : ダミーの SpecialCells メソッド実行</span><br><span class="line">    MsgBox &quot;Sheet1:&quot; &amp; Worksheets(1).Cells.SpecialCells(xlCellTypeFormulas).Address</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure>
 
 <p>この方法では、[図 3. 外部リンク更新不可通知ダイアログ] がユーザーに通知されます。</p>
 <p>今回の投稿は以上です。</p>
@@ -204,7 +210,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/" data-id="cl7h73xgs000v30rbec1mhv6p" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/" data-id="cl4hy59jh000wusvsftlm13e0" class="article-share-link">Share</a>
       
       
     </footer>
