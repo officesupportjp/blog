@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 9 月 26 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 今回は Office 365 ProPlus で バックステージ ビューの [ファイル] - [名前を付けて保存] などに表示される SharePoint Online 等のオンラインストレージを非表示にする方法についてご">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/ckz2fj1dh001cx0vs5v52bfej/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 9 月 26 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 今回は Office 365 ProPlus で バックステージ ビューの [ファイル] - [名前を付けて保存] などに表示される SharePoint Online 等のオンラインストレージを非表示にする方法についてご">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/ckz2fj1dh001cx0vs5v52bfej/image1.png">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-26T05:05:09.193Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/ckz2fj1dh001cx0vs5v52bfej/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/ckz2fj1dh001cx0vs5v52bfej/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/ckz2fj1dh001cx0vs5v52bfej/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 9 月 26 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポート チームです。</p>
+<p>今回は Office 365 ProPlus で バックステージ ビューの [ファイル] - [名前を付けて保存] などに表示される SharePoint Online 等のオンラインストレージを非表示にする方法についてご案内します。</p>
+<h4 id="説明"><a href="#説明" class="headerlink" title="説明"></a><strong>説明</strong></h4><p>Office 365 ProPlusでは、バックステージ ビューの [ファイル] - [名前を付けて保存] 等のメニューに SharePoint Online や OneDrive のオンラインストレージが表示されます。<br>※バックステージビューは、その他「開く」や「上書き保存」メニューにも共通で表示されます。</p>
+<p>Office 365 ProPlus の最新のバージョンでは、この表示をレジストリやグループポリシーにて非表示にすることが可能です。<br>具体的な制御方法は、後述の 【方法】 の項で記載いたしますが、各方法には利用可能なバージョンや対象となる製品がありますので、下記の一覧を参照ください。</p>
+<p>方法 1 、方法 2 では、Office 365 ProPlus の Excel / Word /PowerPoint アプリケーションを対象に、SharePoint / OneDrive for Business / 個人用 OneDrive を制御することが可能ですが、Publisher と Visio は対象外となります。</p>
+<p>また、方法 1 、2が利用可能なバージョンは、Current Channel (CC) は、1610 以降、 First Release for Deferred Channel (FRDC) と Deferred Channel (DC) では 1701 以降となります。</p>
+<p>方法 3 では、Office 365 ProPlus に限らず、Office 2016 アプリケーションにてバージョンに依存なく利用可能で、個人用 OneDrive のみを制御する方法となり、この方法は、Publisher と Visio も制御可能となります。</p>
+<p>- 各方法の対象の製品 -</p>
+<p><img src="image1.png" alt=""></p>
+<p>目的の環境に合わせて、制御方法をご検討ください。</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a><strong>方法</strong></h4><p>以下に記載する方法 1 から 方法 3 を利用して、制御が可能です。</p>
+<p>-—————–<br>方法 1 . レジストリで設定する<br>-—————–<br>直接レジストリに以下の値を設定することで、バックステージ ビューのオンラインストレージを非表示にすることが可能です。</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet</p>
+<p>名前 : OnlineStorage</p>
+<p>種類 : DWORD</p>
+<p>値     : 3</p>
+<p>(値の説明)</p>
+<p>0 = 無効 (すべての場所が表示されます)</p>
+<p>1 = 個人向け OneDrive を非表示にします</p>
+<p>2 = OneDrive for Business と SharePoint Online を非表示にします</p>
+<p>3 = Microsoft のオンライン機能をすべて非表示にします</p>
+<p>-—————–<br>方法 2 . グループ ポリシーを利用する<br>-—————–</p>
+<p>Office 2016 のグループ ポリシーを利用して、バックステージ ビューのオンラインストレージを非表示にすることも可能です。</p>
+<p>2-1. グループ ポリシー エディター を起動して、左側のペインで以下まで選択します。<br>  [ユーザーの構成] -  [管理用テンプレート] - [Microsoft Office 2016] -  [その他]</p>
+<p>2-2. 右側のウィンドウで [Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] を選択します。</p>
+<p>2-3. [Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] の項目画面で、[有効] を選択し、オプションを [すべて非表示] として [適用] をクリックします。</p>
+<p>このグループ ポリシーの設定は、以下のレジストリ値を追加することでも同じ効果となります。</p>
+<p> キー: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\Internet</p>
+<p> 名前 : OnlineStorage</p>
+<p> 種類 : REG_DWORD</p>
+<p> 値     : 3</p>
+<p>-—————–<br>方法 3. 個人用の OneDrive のみを非表示にする方法<br>-—————–</p>
+<p>以下の 2 つの方法では、個人用の OneDrive のみを非表示にし、SharePoint と OneDrive for Business は表示したままにすることが可能です。<br>この方法は、Office 365 ProPlus に限らず、Office Professinal Plus 2016 でも有効になります。</p>
+<p>方法 3-1. レジストリから個人用 OneDrive のみを非表示にする<br>-———<br>以下のレジストリを設定することで、個人用の OneDrive のみが非表示になります。</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General</p>
+<p>名前 : SkyDriveSignInOption</p>
+<p>種類 : DWORD</p>
+<p>値    : 0</p>
+<p>方法 3-2. グループ ポリシーから個人用 OneDrive のみを非表示にする<br>-———<br>グループポリシーから個人用の OneDrive のみ非表示にするには、以下の設定を行います。</p>
+<p>3-2-1. グループ ポリシー エディター を起動して、左側のペインで以下まで選択します。<br>  [ユーザーの構成] - [管理用テンプレート] - [Microsoft Office 2016] - [その他]</p>
+<p>3-2-2. 右側のウィンドウで [OneDrive のサインインを表示する] を選択します。</p>
+<p>3-2-3. [OneDrive のサインインを表示する] の項目画面で、[無効] を選択し [適用] をクリックします。</p>
+<p>このグループ ポリシーの設定は、以下のレジストリ値を追加することでも同じ効果となります。</p>
+<p> キー: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\General</p>
+<p> 名前 : SkyDriveSignInOption</p>
+<p> 種類 : REG_DWORD</p>
+<p> 値     : 0</p>
+<h5 id="参考サイト"><a href="#参考サイト" class="headerlink" title="参考サイト"></a><strong>参考サイト</strong></h5><p>グループ ポリシーにつきましては、以下の弊社サイトにて詳しくご案内しております。<br>タイトル : グループ ポリシー管理での ADMX ファイルの使用に関するステップ バイ ステップ ガイド<br>URL   : <a href="https://technet.microsoft.com/ja-jp/library/cc709647(v=WS.10).aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/cc709647(v=WS.10).aspx</a></p>
+<p>Office 2016 対象の管理用テンプレートは、以下からご入手いただけます。<br>タイトル : Office 2016 Administrative Template files (ADMX/ADML) and Office Customization Tool<br>URL   : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=49030" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=49030</a></p>
+<p>* 注意事項</p>
+<p>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/ckz2fj1dh001cx0vs5v52bfej/" data-id="ckz2fj1dh001cx0vs5v52bfej" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/ckz2fj1dg0019x0vs05d576q2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/ckz2fj1dk001fx0vs2x4m6sl4/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Office Online と Office デスクトップ アプリケーションの機能差異に関する情報</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0hwwq4p0001cgvsgsoj5mte/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/1/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/ckz2fj1e60033x0vsdkne5c9r/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/ckz2fj1e0002nx0vs3miyg8wm/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/ckz2fj1dw002bx0vs7z6mf9g1/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

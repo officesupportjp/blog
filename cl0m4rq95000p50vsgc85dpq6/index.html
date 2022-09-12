@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="【最終更新日: 2021&#x2F;02&#x2F;10】 こんにちは、Office サポートです。本記事では新たに確認された、Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる問題について説明します。   現象Excel for Microsoft 365 で Insert キーを押下し、上書きモードで DBCS (2 バイト文字) を編集す">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4rq95000p50vsgc85dpq6/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="【最終更新日: 2021&#x2F;02&#x2F;10】 こんにちは、Office サポートです。本記事では新たに確認された、Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる問題について説明します。   現象Excel for Microsoft 365 で Insert キーを押下し、上書きモードで DBCS (2 バイト文字) を編集す">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4rq95000p50vsgc85dpq6/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4rq95000p50vsgc85dpq6/image2.png">
+<meta property="article:published_time" content="2020-10-19T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-08T05:25:08.894Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m4rq95000p50vsgc85dpq6/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m4rq95000p50vsgc85dpq6/" class="article-date">
+  <time datetime="2020-10-19T15:00:00.000Z" itemprop="datePublished">2020-10-20</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m4rq95000p50vsgc85dpq6/" class="article-date-single">    
+        
+    <time datetime="2021-02-09T15:00:00.000Z" itemprop="lastupdate">2021-02-10</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span style="color:#ff0000"><strong>【最終更新日: 2021/02/10】</strong></span></p>
+<p>こんにちは、Office サポートです。<br>本記事では新たに確認された、Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる問題について説明します。  </p>
+<p><strong>現象</strong><br>Excel for Microsoft 365 で Insert キーを押下し、<br>上書きモードで DBCS (2 バイト文字) を編集すると、意図せず 2 文字ぶん上書きされます。  </p>
+<p><strong>再現手順</strong><br>例) 「あい<strong>う</strong>えお」を「あい<strong>か</strong>えお」に直したい場合</p>
+<p>1. 任意のセルに、「あいうえお」と入力します。<br>2.「う」のまえにカーソル入れます。<br>3. [insert] キーで上書きモードにします。</p>
+<p><img src="image1.png" alt=""></p>
+<p>4.「か」と入力し、確定のため [Enter] キーを押します。</p>
+<p>結果 :<br>「う」と「え」の部分が、「か」で上書きされて、「あいかお」になります。  </p>
+<p><img src="image2.png" alt=""></p>
+<p>期待する結果は、「あいかえお」です。  </p>
+<p><strong>解決方法</strong>  </p>
+<p>以下の更新チャネル/バージョンで修正しました。<br>下記以降の更新チャネル/バージョンに更新することで解決します。</p>
+<p>　最新チャネル (プレビュー) : バージョン 2012 (ビルド 13530.20064)<br>　最新チャネル : バージョン 2012 (ビルド 13530.20316)<br>　半期エンタープライズ チャネル (プレビュー) : バージョン 2008 (ビルド 13127.21064)<br>　半期エンタープライズ チャネル : バージョン 2008 (ビルド 13127.21064)</p>
+<p>　月次エンタープライズ チャネル : バージョン 2012 (ビルド 13530.20528)</p>
+<p><strong>回避策</strong><br>[insert] キーで挿入モードに切り替えて、編集します。  </p>
+<p><strong>状況</strong><br>マイクロソフトでは、この問題をこの資料の対象製品として記載されているマイクロソフト製品の問題として認識しています  </p>
+<p><strong>更新履歴</strong><br>2021/01/14 : 解決方法を追加しました。</p>
+<p>2021/02/10 : 解決方法に、月次エンタープライズ チャネルを追加しました。  </p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4rq95000p50vsgc85dpq6/" data-id="cl0m4rq95000p50vsgc85dpq6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m4rqam002u50vsbeew3il6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Windows 10 バージョン 2004 以降で VBA 関数 StrComp() で全角カナと半角カナが一致判定されない
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m4rqak002q50vs9h71cvud/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">VDI 環境における Microsoft 365 Apps のライセンス認証について</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqar003350vs7mj9ac31/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqaj002p50vs8niabxee/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0m4rqae002f50vs180vh7o5/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

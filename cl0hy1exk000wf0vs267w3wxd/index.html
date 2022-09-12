@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法 | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 11 月 21 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 Excel には、セルに設定する式として、SUM() のように計算に関するものや、IF() のように論理条件を制御するものなど、様々なワークシート関数が用意されています。既存のワークシート関">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 11 月 21 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発サポート チームの中村です。 Excel には、セルに設定する式として、SUM() のように計算に関するものや、IF() のように論理条件を制御するものなど、様々なワークシート関数が用意されています。既存のワークシート関">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image4.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image5.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image6.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image7.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image8.png">
+<meta property="article:published_time" content="2019-02-24T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-08-31T11:17:27.352Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0hy1exk000wf0vs267w3wxd/" class="article-date">
+  <time datetime="2019-02-24T15:00:00.000Z" itemprop="datePublished">2019-02-25</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Excel ユーザー定義関数に機能説明や独自ヘルプをリンクする方法
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0hy1exk000wf0vs267w3wxd/" class="article-date-single">    
+    
+    <time datetime="2019-02-24T15:00:00.000Z" itemprop="dateUpdated">2019-02-25</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 11 月 21 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office 開発サポート チームの中村です。</p>
+<p>Excel には、セルに設定する式として、SUM() のように計算に関するものや、IF() のように論理条件を制御するものなど、様々なワークシート関数が用意されています。既存のワークシート関数で要望を満たすものがない場合、マクロで実装した独自処理を、ユーザー定義関数として登録することができます。</p>
+<p>このブログを訪れる方の多くは、ユーザー定義関数を登録すること自体はご存知の方が多いかと思いますが、このようなユーザー定義関数を作成するときにその関数に機能説明やヘルプを追加する方法について、公開情報からは分かりづらい点もありますので、本記事で紹介したいと思います。</p>
+<h4 id="1-ユーザー定義関数の作成"><a href="#1-ユーザー定義関数の作成" class="headerlink" title="1. ユーザー定義関数の作成"></a>1. ユーザー定義関数の作成</h4><p>関数説明の登録やヘルプのリンクの前に、まずはユーザー定義関数を登録する方法を確認します。</p>
+<p>ユーザー定義関数の作成は、VBA の標準モジュールに Function 関数を記述するだけですぐに利用できます。以下の例は、TestUDF という名前の関数を作成し、引数 1 に数値、引数 2 に文字列を渡すと、これらを組み合わせて文章を作成して返却する関数です。(Public でなくともユーザー定義関数として利用できます。アドインなどで複数ブックからの利用を想定している場合は Public を付与します。)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Public Function TestUDF(num As Integer, str As String) As String</span><br><span class="line">    TestUDF &#x3D; &quot;No.&quot; &amp; num &amp; &quot;は&quot; &amp; str &amp; &quot;です&quot;</span><br><span class="line">End Function</span><br></pre></td></tr></table></figure>
+
+<p>このような VBA コードを追加した状態でシート上でセルに直接関数を入力すると、すぐに利用できます。</p>
+<p><img src="image1.png" alt="">  </p>
+<p>図 1. TestUDF 利用イメージ</p>
+<p>ただこのままの状態では、Excel に標準で用意されているワークシート関数で表示される利用方法の説明やヘルプ ファイルなどが表示されません。</p>
+<h4 id="2-関数の情報を登録する"><a href="#2-関数の情報を登録する" class="headerlink" title="2. 関数の情報を登録する"></a>2. 関数の情報を登録する</h4><p>関数を任意のカテゴリに追加したり、リボン メニューの [数式] タブ – [関数の挿入] で確認できる関数の説明やヘルプをユーザー定義関数にも表示させるには、Application.MacroOptions メソッドを実行します。ユーザー定義関数の機能を提供するマクロ ファイルのWorkbook_Open イベントなどで登録するよう実装できます。</p>
+<p>タイトル : Application.MacroOptions メソッド (Excel)<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/vba/excel-vba/articles/application-macrooptions-method-excel" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/vba/excel-vba/articles/application-macrooptions-method-excel</a></p>
+<p>例えば以下のように記述して実行すると、下図の画面キャプチャのようにユーザー定義関数の説明を表示できます。</p>
+<pre><code>Sub RegisterTestUDF()
+    Application.MacroOptions Macro:=&quot;TestUDF&quot;, Description:=&quot;引数 1 と 2 を組み合わせて文章を作成する関数です。&quot;, _
+    Category:=&quot;文字列操作&quot;, ArgumentDescriptions:=Array(&quot;引数 1 : 整数&quot;, &quot;引数 2 : 文字列&quot;), _
+    HelpFile:=&quot;http://www.microsoft.com/help/helpPage.html&quot;
+End Sub</code></pre><p><img src="image2.png" alt="">  </p>
+<p>図 2. 関数の説明 1</p>
+<p><img src="image3.png" alt="">  </p>
+<p>図 3. 関数の説明 2</p>
+<p><img src="image4.png" alt="">  </p>
+<p>図 4. 関数の説明 3</p>
+<p>補足</p>
+<p>なお、残念ながら以下のようなセル入力時の関数一覧のツールチップや、関数入力時のインテリセンスは、ユーザー定義関数については表示することはできません。</p>
+<p><img src="image5.png" alt="">  </p>
+<p>図 5. ユーザー定義関数では定義できない情報 1</p>
+<p><img src="image6.png" alt="">  </p>
+<p>図 6. ユーザー定義関数では定義できない情報 2</p>
+<h4 id="3-ヘルプ情報を登録する"><a href="#3-ヘルプ情報を登録する" class="headerlink" title="3. ヘルプ情報を登録する"></a>3. ヘルプ情報を登録する</h4><p>Application.MacroOptions メソッドでは、HelpFile パラメーターで、ユーザー定義関数にヘルプ情報をリンクすることもできます。先述のサンプル コードにもすでに記載してあります。</p>
+<p>ヘルプ ファイルをリンクすると、関数の一覧で「この関数のヘルプ」をクリックしたときに、リンクしたヘルプ ページが表示されます。</p>
+<p><img src="image7.png" alt="">  </p>
+<p>図 7. 関数のヘルプ</p>
+<p><strong>注:</strong></p>
+<p>以下のようにカテゴリから関数を選択するときに表示されるヒントの [詳細情報] からヘルプ ページを検索する動作はカスタマイズできません。既定の Excel ヘルプからの Excel 関数に関する記事の検索結果が表示されます。 </p>
+<p><img src="image8.png" alt="">  </p>
+<p>図 8. 関数の詳細情報</p>
+<p>この HelpFile パラメーターに指定できるファイルには、以下ような種類があります。</p>
+<p><strong>a. Web サイトの URL (例 : HelpFile:=”<a href="http://www.microsoft.com/help/helpPage.html" target="_blank" rel="noopener">http://www.microsoft.com/help/helpPage.html</a>“)</strong></p>
+<p>Web サイト上にヘルプページを公開し、URL を指定することができます。最新のExcel 2016 では、Excel 標準のヘルプもすべてオンラインになっています。</p>
+<p>なお、ローカル PC に .html ファイルを格納して、ローカル パスを指定することはできません。</p>
+<p><strong>b. .chm ファイル (例 : HelpFile:=”C:\AppName\HelpFile.chm”)</strong></p>
+<p>インターネットに接続できない環境などでは、ローカル PC 等に .chm 形式で作成したファイルのパスを指定することもできます。</p>
+<p>ただし、.chm を作成する「HTML Help Workshop」アプリケーションは既にサポートを終了した製品となります。現在も以下のリンクよりダウンロードを行うことはできますが、作成方法については開発者の皆様自身でご解決ください。</p>
+<p>関連情報</p>
+<p>タイトル : カスタム ヘルプ トピックの作成<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/cc389851.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/cc389851.aspx</a></p>
+<p>タイトル : Microsoft HTML Help Downloads<br>アドレス : <a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms669985(v=vs.85).aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/windows/desktop/ms669985(v=vs.85).aspx</a></p>
+<p>タイトル : HTML Help Workshop and Documentation<br>アドレス : <a href="https://www.microsoft.com/en-us/download/details.aspx?id=21138" target="_blank" rel="noopener">https://www.microsoft.com/en-us/download/details.aspx?id=21138</a></p>
+<p><strong>c. .hlp ファイル(例 : HelpFile:=”C:\AppName\HelpFile.htm”)</strong></p>
+<p>ローカル PC 等に格納した WinHelp (.hlp) 形式のファイルのパスを指定することもできます。</p>
+<p>ただし、WinHelp 形式は古いファイル形式となりますので、Windows Vista 以降の OS では既定では開くことができません。以下のサポート技術情報の [解決策] でご案内している更新プログラムを適用する必要があります。また、Windows 10 向けには更新プログラムは用意されておらず、WinHelp ファイルはサポートされません。</p>
+<p><strong>.hlp ファイルを開くのに必要な更新プログラム</strong></p>
+<p>文書番号 : 917607</p>
+<p>タイトル : Windows ベースのプログラムでヘルプを開こうとすると、「機能は含まれていません」または「ヘルプはサポートされていません」とエラーが表示されます<br>アドレス : <a href="https://support.microsoft.com/ja-jp/help/917607" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/help/917607</a></p>
+<p>参考資料</p>
+<p>タイトル : ヘルプ ファイル (WinHelp)<br>アドレス : <a href="https://msdn.microsoft.com/ja-jp/library/ew744dk7.aspx" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/library/ew744dk7.aspx</a></p>
+<p>今回の投稿は以上です。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0hy1exk000wf0vs267w3wxd/" data-id="cl0hy1exk000wf0vs267w3wxd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0hy1eye002hf0vs82gp3ah0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Officeソリューション開発時の開発環境のバージョン選定について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0hy1ey3001tf0vscgdb586m/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Office をマルチスレッドでオートメーションすることの危険性</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0hy1ey6001yf0vs34w59227/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0hy1eyp0036f0vs4vzg4891/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0hy1eyo0034f0vs3htgbovl/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0hy1eyi002pf0vs0ofqdytr/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl0hy1eyb0029f0vs6rz8al5a/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

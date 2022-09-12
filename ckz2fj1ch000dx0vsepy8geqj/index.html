@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Access 2016 のリボンをカスタマイズする | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 12 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。   ユーザー単位で Access 2016 自体の組み込みのリボンを非表示にするには、[Access のオプション] (※ 1) で設定可能ですが、ファイル単位で変更する場合、RibbonXML を利用します。 本記事で">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Access 2016 のリボンをカスタマイズする">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/ckz2fj1ch000dx0vsepy8geqj/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 12 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。   ユーザー単位で Access 2016 自体の組み込みのリボンを非表示にするには、[Access のオプション] (※ 1) で設定可能ですが、ファイル単位で変更する場合、RibbonXML を利用します。 本記事で">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/ckz2fj1ch000dx0vsepy8geqj/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/ckz2fj1ch000dx0vsepy8geqj/image2.png">
+<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-23T05:03:17.805Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/ckz2fj1ch000dx0vsepy8geqj/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Access 2016 のリボンをカスタマイズする" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/ckz2fj1ch000dx0vsepy8geqj/" class="article-date">
+  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Access 2016 のリボンをカスタマイズする
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/ckz2fj1ch000dx0vsepy8geqj/" class="article-date-single">    
+    
+    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 12 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポート チームです。  </p>
+<p>ユーザー単位で Access 2016 自体の組み込みのリボンを非表示にするには、[Access のオプション] (※ 1) で設定可能ですが、ファイル単位で変更する場合、RibbonXML を利用します。</p>
+<p>本記事では、Access 2016 で .accdb ファイル毎に組み込みのリボンを非表示にする方法を説明します。  </p>
+<p>※ 1. [Access のオプション] - [リボンのユーザー設定] で非表示にするリボンをチェックオフします。</p>
+<h3 id="組み込みのリボンを非表示にする方法"><a href="#組み込みのリボンを非表示にする方法" class="headerlink" title="組み込みのリボンを非表示にする方法"></a><strong>組み込みのリボンを非表示にする方法</strong></h3><p>Access の起動時にカスタマイズされたリボンを読み込むには、その設定を <strong>USysRibbons</strong> という名前のテーブルに保存する必要があります。<br>このテーブルにリボンを非表示にする RibbonXML を入力します。</p>
+<p><strong>手順</strong>  </p>
+<ol>
+<li>Access 2016 で空のデータベースを新規作成します。</li>
+<li><strong>USysRibbons</strong> テーブルを次の構成で作成します。</li>
+</ol>
+<p><strong>USysRibbons</strong> テーブル:</p>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>データ型</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>RibbonName</strong></td>
+<td>短いテキスト型<br />(Text)</td>
+<td>このカスタマイズに関連付けられる<br />カスタム リボンの名前が含まれます。</td>
+</tr>
+<tr>
+<td><strong>RibbonXML</strong></td>
+<td>長いテキスト型<br />(Memo)</td>
+<td>リボンのカスタマイズを定義する<br />リボン拡張 XML (RibbonX) が含まれます。</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li><strong>USysRibbons</strong> テーブルをデータシートビューで開き、各列に、次のデータを入力します。  </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>列名</th>
+<th>値</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>RibbongName</strong></td>
+<td>HideTheRibbon</td>
+</tr>
+<tr>
+<td><strong>RibbonXML</strong></td>
+<td>&lt;customUI xmlns=”<a href="http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;" target="_blank" rel="noopener">http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;</a><br />&lt;ribbon startFromScratch=”true”/&gt;<br />&lt;/customUI&gt;</td>
+</tr>
+</tbody></table>
+<ol start="4">
+<li><p>設定した <strong>UsysRibbons</strong> テーブルの設定を読み込ませるため、ファイルを一旦閉じます。</p>
+</li>
+<li><p>手順 1 で作成したファイルを再度開きます。</p>
+</li>
+<li><p>[ファイル] - [オプション] をクリックします。</p>
+</li>
+<li><p>[Access のオプション] にある [現在のデータベース] を選択します。  </p>
+<p>[リボンとツール バーのオプション] セクションで [リボン名] ボックスから HideTheRibbon を選択します。</p>
+</li>
+<li><p>オプションを閉じます。</p>
+</li>
+<li><p>Access を終了します</p>
+</li>
+<li><p>手順 1 で作成したファイルを開きます。以下のように [ファイル] タブだけが表示されます。</p>
+</li>
+</ol>
+<p><img src="image1.png" alt=""></p>
+<p>以下の RibbonXML を使用した場合は、[ファイル] タブのバックステージビューにある [閉じる] ボタン以外が非表示になります。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;customUI xmlns&#x3D;&quot;http:&#x2F;&#x2F;schemas.microsoft.com&#x2F;office&#x2F;2009&#x2F;07&#x2F;customui&quot;&gt;</span><br><span class="line">  &lt;ribbon startFromScratch&#x3D;&quot;true&quot;&gt;</span><br><span class="line">  &lt;&#x2F;ribbon&gt;</span><br><span class="line">  &lt;backstage&gt;</span><br><span class="line">    &lt;button idMso&#x3D;&quot;ApplicationOptionsDialog&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;button idMso&#x3D;&quot;FileSave&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;!-- [閉じる] ボタンのみ visible&#x3D;&quot;true&quot; にして表示させています --&gt;</span><br><span class="line">    &lt;button idMso&#x3D;&quot;FileCloseDatabase&quot; visible&#x3D;&quot;true&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabInfo&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabRecent&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabSave&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabPrint&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabOfficeStart&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabHelp&quot; visible&#x3D;&quot;false&quot; &#x2F;&gt;</span><br><span class="line">    &lt;tab idMso&#x3D;&quot;TabOfficeFeedback&quot; visible&#x3D;&quot;false&quot;&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;backstage&gt;</span><br><span class="line">&lt;&#x2F;customUI&gt;</span><br></pre></td></tr></table></figure>
+
+<p> <img src="image2.png" alt=""> </p>
+<p>※ リボンの表示が変更されない場合は、上述の XML をメモ帳へ一度コピーし、メモ帳経由で RibbonXML フィールドに貼り付けください。</p>
+<h3 id="RibbonXML-解説"><a href="#RibbonXML-解説" class="headerlink" title="RibbonXML 解説"></a><strong>RibbonXML 解説</strong></h3><ul>
+<li><p>startFromScratch属性を true に設定すると、[ファイル] タブ以外の既存のリボン タブすべてが非表示になります。</p>
+</li>
+<li><p>Office 2010 以降の機能である、Backstage ビューをカスタマイズするため、  </p>
+<p>Office 2010 以降の名前空間 <customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui"> を使用しています。  </p>
+</li>
+</ul>
+<p>[ファイル] タブの各項目の RibbonXML です。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>情報</td>
+<td>&lt;tab idMso=”TabInfo” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>新規</td>
+<td>&lt;tab idMso=”TabOfficeStart” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>開く</td>
+<td>&lt;tab idMso=”TabRecent” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>上書き保存</td>
+<td>&lt;button idMso=”FileSave” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>名前を付けて保存</td>
+<td>&lt;tab idMso=”TabSave” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>印刷</td>
+<td>&lt;tab idMso=”TabPrint” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>閉じる</td>
+<td>&lt;button idMso=”FileCloseDatabase” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>アカウント</td>
+<td>&lt;tab idMso=”TabHelp” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>オプション</td>
+<td>&lt;button idMso=”ApplicationOptionsDialog” visible=”false” /&gt;</td>
+</tr>
+<tr>
+<td>フィードバック</td>
+<td>&lt;tab idMso=”TabOfficeFeedback” visible=”false”/&gt;</td>
+</tr>
+</tbody></table>
+<h3 id="参考情報"><a href="#参考情報" class="headerlink" title="参考情報"></a><strong>参考情報</strong></h3><p>RibbonXML で使用するコントロールのID (idMso) が記載されているファイルを以下サイトからダウンロードできます。</p>
+<p>Office 2016 製品の Office Fluent User Interface Control Identifiers</p>
+<p><a href="https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3/Office%202016" target="_blank" rel="noopener">https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3/Office%202016</a></p>
+<p>Office 2013 製品の Office Fluent User Interface Control Identifiers</p>
+<p><a href="https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3" target="_blank" rel="noopener">https://github.com/OfficeDev/office-fluent-ui-command-identifiers/tree/576b8a46950d1ca12f6b57a3b65498852ae988d3</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/ckz2fj1ch000dx0vsepy8geqj/" data-id="ckz2fj1ch000dx0vsepy8geqj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/ckz2fj1cg000cx0vscyj334tu/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          32bit の Word アプリケーションで、印刷した際に一部のオブジェクトが印刷されない現象について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/ckz2fj1ch000ex0vs6mvp60mq/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl0hwwq4p0001cgvsgsoj5mte/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+          </li>
+        
+          <li>
+            <a href="/blog/1/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/ckz2fj1e60033x0vsdkne5c9r/">お知らせ - Japan Office Client Support Blog について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/ckz2fj1e0002nx0vs3miyg8wm/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+          </li>
+        
+          <li>
+            <a href="/blog/ckz2fj1dw002bx0vs7z6mf9g1/">Office 製品のサインインで先進認証が有効化、無効化されているかを確認する方法について</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
