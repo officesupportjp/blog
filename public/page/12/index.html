@@ -90,9 +90,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Office サーバー サイド オートメーションの危険性について" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Office オートメーションで割り当てたオブジェクトを解放する - Part2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/" class="article-date">
+    <a href="/blog/cl0mfb7b5001unwvs919y8d7e/" class="article-date">
   <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
@@ -104,14 +104,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mfb7b7001wnwvshfp01l5u/">Office サーバー サイド オートメーションの危険性について</a>
+      <a class="article-title" href="/blog/cl0mfb7b5001unwvs919y8d7e/">Office オートメーションで割り当てたオブジェクトを解放する - Part2</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/" class="article-date-single">    
+        <a href="/blog/cl0mfb7b5001unwvs919y8d7e/" class="article-date-single">    
     
     <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
@@ -120,19 +120,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2014 年 4 月 11 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。
-今回の投稿では、Office サーバー サイド オートメーション (非対話型オートメーション) に対する正しい理解を持っていただくことを目的として記載いたします。
-はじめに
-結論からお伝えしますと Office のサーバー サイド オートメーション (非対話型オートメーション) を、マイクロソフトはサポートしておりません。
-前提として、サーバーにインストールされた Office クライアント アプリケーションを使用したオートメーションを実施して、クライアント側の処理をサーバー側で集中して代行するなどの機能をライセンスを持たないエンドユーザーに提供した場合は、Micr...
+        (※ 2012 年 2 月 28 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。  
+今回の投稿では、Office オートメーションの実装コードで割り当てたオブジェクトを解放する – Part1 の続編を記載いたします。続編では、前回の投稿でベスト プラクティスとして紹介した解放処理に対して解説を実施した後、正しくオブジェクト解放を実施しない場合に生じる影響についてご紹介します。
+最初に、オブジェクト解放漏れがあると、主に以下のような事象があるということは先に述べておきます。
+・意図とは異なる COM オブジェクトに接続され、想定とは異なる結果を返し、アプリケーションの動作に予期せぬ影響を与えます。・通常のメソッド実行にも関わらず COMEx...
         <p class="article-more-link">
-          <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/#more">Read More</a>
+          <a href="/blog/cl0mfb7b5001unwvs919y8d7e/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl7ocagfi001u306yac4x2c8q" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b5001unwvs919y8d7e/" data-id="cl7y7yrwm001x1cseen5qfshq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bn002inwvse5785nd7/" data-id="cl7ocagg4002e306y9uh42cv4" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bn002inwvse5785nd7/" data-id="cl7y7yrwu002h1csed0cfhgo9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +235,7 @@ Excel には、セルに設定する式として、SUM() のように計算に�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ac000wnwvsen2873w5/" data-id="cl7ocagev000w306y0ow8428u" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7ac000wnwvsen2873w5/" data-id="cl7y7yrw1000w1cse19bz92s6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -287,7 +286,7 @@ Office は STA (Single-Threaded Apartment) モデルで動作しているため�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl7ocagff001q306y6oqdb1u2" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b4001tnwvs5vama7sz/" data-id="cl7y7yrwm001u1cse7agc4rsa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,7 +336,7 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="cl7ocagfk001x306y0dlndnn0" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="cl7y7yrwn00201cse8gz93qpt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -389,7 +388,7 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/" data-id="cl7ocagea000j306yartob1xd" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/" data-id="cl7y7yrux000l1cse0apq7637" class="article-share-link">Share</a>
       
       
     </footer>
@@ -441,7 +440,7 @@ Office オートメーションを行うプログラム開発を行う際、プ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10ddh000t90vsbpgv3r9l/" data-id="cl7ocages000s306y55w319my" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10ddh000t90vsbpgv3r9l/" data-id="cl7y7yrvp000s1cse2yfth05d" class="article-share-link">Share</a>
       
       
     </footer>
@@ -493,7 +492,7 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/" data-id="cl7ocagfd001m306y685u1tq5" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/" data-id="cl7y7yrwk001o1csehd0cec3t" class="article-share-link">Share</a>
       
       
     </footer>
@@ -543,7 +542,7 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001e90vs1mrp11zq/" data-id="cl7ocagh3003j306ygo2iecbc" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001e90vs1mrp11zq/" data-id="cl7y7yrwg001e1cse524ideij" class="article-share-link">Share</a>
       
       
     </footer>
@@ -553,9 +552,9 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
 
 
   
-    <article id="post-Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date">
+    <a href="/blog/cl0n10de0001b90vsbowhgnig/" class="article-date">
   <time datetime="2019-02-07T15:00:00.000Z" itemprop="datePublished">2019-02-08</time>
 </a>
     <!--  -->
@@ -567,14 +566,14 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0n10de1001d90vs6xzb5ynb/">Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について</a>
+      <a class="article-title" href="/blog/cl0n10de0001b90vsbowhgnig/">Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date-single">    
+        <a href="/blog/cl0n10de0001b90vsbowhgnig/" class="article-date-single">    
         
     <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
     
@@ -583,17 +582,19 @@ Office アプリケーションは MDI (Multi Document Interface) アプリケ�
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
-こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化/無効化する方法をご案内いたしました。本記事では、テナント全体のユーザーではなく、指定したユーザーのみのライセンスを有効化/無効化する方法をご案内いたします。  
+        (※ 2016 年 6 月 8 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
+こんにちは、Office サポートの佐村です。本記事では Office 365 にて公開されている Sway について、PowerShell スクリプトを使用して一括でテナント全体のユーザーのライセンスを有効化、無効化する方法をご案内いたします。  
+2016/07/27 updateOffice 365 管理センター - [サービス設定] - [Sway] -  “組織全体に対して Sway をオンまたはオフにします。”の設定が廃止されました。  
 目次  
-1. Sway のライセンスについて2. PowerShell のインストール3. ユーザーリストの作成4. PowerShell で指定ユーザーのみを有効化する方法5. PowerShell で指定ユーザーのみを無効化する方法6. ユーザーリストをスクリプト...
+1. Sway のライセンスについて2. PowerShell を使用して一括で有効化する方法3. PowerShell を使用して一括で無効化する方法4. 関連情報  
+1. Sway のライ...
         <p class="article-more-link">
-          <a href="/blog/cl0n10de1001d90vs6xzb5ynb/#more">Read More</a>
+          <a href="/blog/cl0n10de0001b90vsbowhgnig/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001d90vs6xzb5ynb/" data-id="cl7ocagf6001b306y2lg51sty" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001b90vsbowhgnig/" data-id="cl7y7yrwf001c1cse1kuw23cz" class="article-share-link">Share</a>
       
       
     </footer>

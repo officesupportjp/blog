@@ -90,9 +90,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cl0n10de0001b90vsbowhgnig/" class="article-date">
+    <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date">
   <time datetime="2019-02-07T15:00:00.000Z" itemprop="datePublished">2019-02-08</time>
 </a>
     <!--  -->
@@ -104,14 +104,14 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0n10de0001b90vsbowhgnig/">Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について</a>
+      <a class="article-title" href="/blog/cl0n10de1001d90vs6xzb5ynb/">Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について</a>
     </h1>
   
 
       </header>
       <div class="article-share">
         Last Update: 
-        <a href="/blog/cl0n10de0001b90vsbowhgnig/" class="article-date-single">    
+        <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date-single">    
         
     <time datetime="2019-03-21T15:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
     
@@ -120,19 +120,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        (※ 2016 年 6 月 8 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
-こんにちは、Office サポートの佐村です。本記事では Office 365 にて公開されている Sway について、PowerShell スクリプトを使用して一括でテナント全体のユーザーのライセンスを有効化、無効化する方法をご案内いたします。  
-2016/07/27 updateOffice 365 管理センター - [サービス設定] - [Sway] -  “組織全体に対して Sway をオンまたはオフにします。”の設定が廃止されました。  
+        (※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
+こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化/無効化する方法をご案内いたしました。本記事では、テナント全体のユーザーではなく、指定したユーザーのみのライセンスを有効化/無効化する方法をご案内いたします。  
 目次  
-1. Sway のライセンスについて2. PowerShell を使用して一括で有効化する方法3. PowerShell を使用して一括で無効化する方法4. 関連情報  
-1. Sway のライ...
+1. Sway のライセンスについて2. PowerShell のインストール3. ユーザーリストの作成4. PowerShell で指定ユーザーのみを有効化する方法5. PowerShell で指定ユーザーのみを無効化する方法6. ユーザーリストをスクリプト...
         <p class="article-more-link">
-          <a href="/blog/cl0n10de0001b90vsbowhgnig/#more">Read More</a>
+          <a href="/blog/cl0n10de1001d90vs6xzb5ynb/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001b90vsbowhgnig/" data-id="cl7ocaghb003x306y3fwldc8a" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001d90vs6xzb5ynb/" data-id="cl7y7yrwg001d1cse1et7axp1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -186,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcu000j90vsghpb14v9/" data-id="cl7ocageb000k306y0zvs96kp" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcu000j90vsghpb14v9/" data-id="cl7y7yrux000j1cseg4z30iku" class="article-share-link">Share</a>
       
       
     </footer>
@@ -239,7 +237,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001a90vs28153y7h/" data-id="cl7ocagf40017306y0hqigbke" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001a90vs28153y7h/" data-id="cl7y7yrwe00181csedm8z421m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -295,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcv000k90vs6yxmbsb8/" data-id="cl7ocageb000l306y8wc1egb6" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcv000k90vs6yxmbsb8/" data-id="cl7y7yrux000k1cse5i648z07" class="article-share-link">Share</a>
       
       
     </footer>
@@ -349,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcz000n90vsaznd04om/" data-id="cl7ocageo000m306y73zbc76k" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcz000n90vsaznd04om/" data-id="cl7y7yrv2000m1cse3qfzgz46" class="article-share-link">Share</a>
       
       
     </footer>
@@ -406,60 +404,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n1lilx000nokvs9i0o288v/" data-id="cl7ocagep000o306yc04v37jq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Office 2010 に Ogl.dll の更新プログラムが適用されない" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0n1lim70016okvsef1sfvh1/" class="article-date">
-  <time datetime="2019-02-03T15:00:00.000Z" itemprop="datePublished">2019-02-04</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0n1lim70016okvsef1sfvh1/">Office 2010 に Ogl.dll の更新プログラムが適用されない</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0n1lim70016okvsef1sfvh1/" class="article-date-single">    
-        
-    <time datetime="2021-04-13T15:00:00.000Z" itemprop="lastupdate">2021-04-14</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 6 月 19 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
-こんにちは、Office サポートの町口です。  
-本記事では Office 2010 に Ogl.dll の更新プログラムが適用されない (適用の必要がない) パターンについて説明します。
-説明Windows Vista 以降の OS 上の Office 2010 の環境には、システム内に Ogl.dll 自体が存在しないため Ogl.dll の脆弱性はありません。  
-ご安心ください。  
-そのため、ご利用の環境の OS が Windows Vista 以降である場合は、Office 2010 のセキュリティ更新プログラムとして Ogl.dll が公開されても適用する必要はありません。
-2017 年 6 月以降にリリースされた Ogl.dll の更新...
-        <p class="article-more-link">
-          <a href="/blog/cl0n1lim70016okvsef1sfvh1/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n1lim70016okvsef1sfvh1/" data-id="cl7ocagf20015306y59fs98it" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lilx000nokvs9i0o288v/" data-id="cl7y7yrv3000n1cse45u9f7gt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -513,7 +458,60 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n1lim60015okvs47xm0v9h/" data-id="cl7ocagf30016306y78p09mzn" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lim60015okvs47xm0v9h/" data-id="cl7y7yrwd00151csehxb11edd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 2010 に Ogl.dll の更新プログラムが適用されない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n1lim70016okvsef1sfvh1/" class="article-date">
+  <time datetime="2019-02-03T15:00:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n1lim70016okvsef1sfvh1/">Office 2010 に Ogl.dll の更新プログラムが適用されない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n1lim70016okvsef1sfvh1/" class="article-date-single">    
+        
+    <time datetime="2021-04-13T15:00:00.000Z" itemprop="lastupdate">2021-04-14</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 6 月 19 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートの町口です。  
+本記事では Office 2010 に Ogl.dll の更新プログラムが適用されない (適用の必要がない) パターンについて説明します。
+説明Windows Vista 以降の OS 上の Office 2010 の環境には、システム内に Ogl.dll 自体が存在しないため Ogl.dll の脆弱性はありません。  
+ご安心ください。  
+そのため、ご利用の環境の OS が Windows Vista 以降である場合は、Office 2010 のセキュリティ更新プログラムとして Ogl.dll が公開されても適用する必要はありません。
+2017 年 6 月以降にリリースされた Ogl.dll の更新...
+        <p class="article-more-link">
+          <a href="/blog/cl0n1lim70016okvsef1sfvh1/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lim70016okvsef1sfvh1/" data-id="cl7y7yrwd00161cse1wc7f0fm" class="article-share-link">Share</a>
       
       
     </footer>
@@ -566,7 +564,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n1lin1002iokvs3pyk3svz/" data-id="cl7ocagg4002f306ydhw08kpn" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lin1002iokvs3pyk3svz/" data-id="cl7y7yrwv002j1cse8717cfku" class="article-share-link">Share</a>
       
       
     </footer>
@@ -619,7 +617,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0n1lin9002zokvsexey1pgh/" data-id="cl7ocaggu0035306ybf2w9iwq" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lin9002zokvsexey1pgh/" data-id="cl7y7yrx700381cse8pl687c5" class="article-share-link">Share</a>
       
       
     </footer>
