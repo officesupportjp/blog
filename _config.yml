@@ -19,7 +19,7 @@ keywords:
  - オフィス
  - サポート
 author: Office Support Japan
-language: en
+language: jp
 timezone: 'asia/Tokyo'
 
 # URL
@@ -41,7 +41,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - google36b1ab610c7a83db.html
+  - google9abcd3b1ef946b3d.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -54,6 +54,9 @@ external_link:
 filename_case: 0
 render_drafts: false
 post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true
 relative_link: false
 future: true
 highlight:
@@ -121,4 +124,9 @@ github:
 # hexo-generator-sitemap (https://github.com/hexojs/hexo-generator-sitemap)  
 sitemap:  
   path: sitemap.xml
-  
+
+
+alias:
+  (WebAPI)Microsoft%20Graph%20-%20OneDrive%20API%20(C%20Sharp)%20を使ったサンプル%20コード/index.html: cl0m8t2aa00013gvsa2mr8xj5/index.html
+  (WebAPI)Microsoft%20Graph%20–%20Excel%20REST%20API%20(C%20Sharp)%20を使い%20Range%20を操作するサンプル%20コード/index.html: cl0m8t2a400003gvsgcr96w6h/index.html
+  (WebAPI)Microsoft%20Graph%20を使用した開発に便利なツール群/index.html: cl0m8t2ae00033gvsbtlo3btc/index.html

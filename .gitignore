@@ -4,3 +4,7 @@ db.json
 *.log
 node_modules/
 .deploy*/
+public/
+
+tools/*.csv
+tools/*.txt
