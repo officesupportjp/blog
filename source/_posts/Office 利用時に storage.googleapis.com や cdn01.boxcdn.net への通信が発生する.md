@@ -1,7 +1,10 @@
 ---
 title: Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する
-date: 2022-06-19
+date: '2022-06-19'
 id: cl4hy59k50027usvsc5k6cuto
+tags:
+  - クラウド ストレージ
+
 ---
 <span style="color:#ff0000">2022/08/19 Update\
 [対応案] の内容を更新しました</span> 

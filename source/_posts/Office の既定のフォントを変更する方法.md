@@ -1,9 +1,11 @@
 ---
 title: Office の既定のフォントを変更する方法
-date: 2019-09-17
-lastupdate: 2022-09-12
+date: '2019-09-17'
+lastupdate: '2022-03-18'
 id: cl0m75alf001rmcvses4a67bp
-alias: /Office の既定のフォントを変更する方法/
+tags:
+  - フォント
+
 ---
 
 <br>
@@ -11,9 +13,6 @@ alias: /Office の既定のフォントを変更する方法/
 *****
 **2022/3/18 Update**  
 "3-2. エクスプローラなどでの右クリックからの新規作成" の対応を新しい PowerPoint バージョンでの動作変更に対応する手順に更新しました。
-
-**2022/9/12 Update**  
-"1-2. エクスプローラなどでの右クリックからの新規作成" に更新時に元に戻る動作の補足と、これを避ける設定方法を追記しました。
 *****
 <br>
 
@@ -136,35 +135,9 @@ EXCEL12.XLSX を以下のフォルダに格納します。(元々存在する EX
   
 <クイック実行形式の Office の場合>  
 C:\\Program Files\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW (OS と Office が同じ bit の場合)  
-C:\\Program Files (x86)\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW (64 bit OS + 32 bit Office の場合)    
-<br>
-注:
-上記フォルダー内のファイルは、Office の修復や更新により既定のファイルに戻る場合があります。
-これを避ける場合は、以下の手順でレジストリを変更して新規作成時に参照するファイル パスを変更します。
-
-<u>修復や更新で元に戻らない対応方法</u>  
-
-1. EXCEL12.XLSX を Office のインストール フォルダーとは異なる任意のローカル フォルダーに格納します。  
-    (例) C:\ExcelNewTemplate
-
-
-2. 以下のレジストリを作成します。   
-   <br>
-    
-    キー : HKEY_CURRENT_USER\SOFTWARE\Classes\\.xlsx\Excel.Sheet.12\ShellNew  
-    名前 : FileName  
-    種類 : REG\_SZ  
-    データ : EXCEL12.XLSX を格納したフルパス　
-    (例) C:\ExcelNewTemplate\EXCEL12.XLSX  
-   <br>
-    
-    <レジストリの説明>  
-    元の EXCEL12.XLSX を参照する設定は、HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Classes\\.xlsx\Excel.Sheet.12\ShellNew で定義されています。ただ、この値も Office の修復や更新により既定の値に変更される場合があるため、これを書き換えても設定は維持されません。  
-    HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Classes 配下は、最終的に、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes 配下とマージされて HKEY\_CLASSES\_ROOT に反映された内容が Office アプリケーションで利用されます。
-    このとき、異なる値が  設定されていると、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes 配下が優先されますので、上記で作成する値が利用されます。  
-    上記で作成する HKEY\_CURRENT\_USER\\SOFTWARE\\Classes 配下の値は、Office の修復や更新時には変更されません。ただし、ユーザーごとに設定が必要です。  
-
-<br>  
+C:\\Program Files (x86)\\Microsoft Office\\root\\VFS\\Windows\\SHELLNEW (64 bit OS + 32 bit Office の場合)  
+  
+  
 
 #### **2\. Word**
 
@@ -277,13 +250,11 @@ PowerPoint を起動して新規プレゼンテーションを作成し、\[表�
     種類 : REG\_SZ  
   
     注:   
-    HKEY\_LOCAL\_MACHINE 配下の値は、Office の修復や更新により既定の値に変更される場合があります。最終的に、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes 配下とマージされて HKEY\_CLASSES\_ROOT に反映された内容が Office アプリケーションで利用されます。  
+    HKEY\_LOCAL\_MACHINE 配下の値は、Office の修復や更新により既定の値に変更される場合があります。最終的に、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes 配下とマージされて HKEY\_CLASSES\_ROOT に反映された内容が Office アプリケーションの動作で利用されます。  
     このため、HKEY\_CURRENT\_USER\\SOFTWARE\\Classes\\.pptx 配下に値を設定することもできます。(既定では、HKEY\_CURRENT\_USER にはこのレジストリはありません。) この場合、ユーザーごとに設定が必要ですが、Office の修復や更新では変更されません。  
 
 <br>  
   
-今回の投稿は以上です。  
-
-
+今回の投稿は以上です。
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**

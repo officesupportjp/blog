@@ -1,9 +1,11 @@
 ---
 title: VDI 環境における Microsoft 365 Apps のライセンス認証について
-date: 2020-10-12
-lastupdate: 2020-10-28
+date: '2020-10-12'
+lastupdate: '2020-10-28'
 id: cl0m69xv9002p4cvscqd9c9gu
-alias: /VDI 環境における Microsoft 365 Apps のライセンス認証について/
+tags:
+  - サインイン、認証
+
 ---
 
 こんにちは、Office サポートの西川 (直) です。

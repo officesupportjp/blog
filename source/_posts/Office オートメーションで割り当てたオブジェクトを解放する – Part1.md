@@ -1,9 +1,11 @@
 ---
 title: Office オートメーションで割り当てたオブジェクトを解放する – Part1
-date: 2019-02-28
-lastupdate: 2021-04-28
+date: '2019-02-28'
+lastupdate: '2021-04-28'
 id: cl0mfb7b6001vnwvs3rv43evy
-alias: /Office オートメーションで割り当てたオブジェクトを解放する – Part1/
+tags:
+  - オートメーション
+
 ---
 
 (※ 2012 年 2 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

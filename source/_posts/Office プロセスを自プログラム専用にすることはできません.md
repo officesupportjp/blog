@@ -1,8 +1,10 @@
 ---
 title: Office プロセスを自プログラム専用にすることはできません
-date: 2019-02-22
+date: '2019-02-22'
 id: cl0mfb7bc0021nwvs6zie7xtv
-alias: /Office プロセスを自プログラム専用にすることはできません/
+tags:
+  - SDI
+
 ---
 
 (※ 2017 年 1 月 17 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

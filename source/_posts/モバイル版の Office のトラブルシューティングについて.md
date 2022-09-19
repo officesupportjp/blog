@@ -1,8 +1,10 @@
 ---
 title: モバイル版の Office のトラブルシューティングについて
-date: 2020-10-02
+date: '2020-10-02'
 id: cl0m69xw5003g4cvs4ob5gcuy
-alias: /モバイル版の Office のトラブルシューティングについて/
+tags:
+  - ''
+
 ---
 
 こんにちは、Office サポートの西川 (直) です。  

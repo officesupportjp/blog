@@ -1,8 +1,10 @@
 ---
 title: Office 製品の UserVoice のご案内
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m7opci002edcvsdxujfuvz
-alias: /Office 製品の UserVoice のご案内/
+tags:
+  - お知らせ
+
 ---
 
 (※ 2017 年 6 月 8 日に Japan Office Support Blog に公開した情報のアーカイブです。)

@@ -1,8 +1,10 @@
 ---
 title: (WebAPI)Microsoft Graph を使用した開発に便利なツール群
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0m8t2ae00033gvsbtlo3btc
-alias: /(WebAPI)Microsoft Graph を使用した開発に便利なツール群/
+tags:
+  - Graph API
+
 ---
 
 (※ 2016 年 12 月 13 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

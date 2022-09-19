@@ -1,9 +1,11 @@
 ---
 title: クイック実行形式の Office をインストールすると Office 以外のアプリケーションから ODBC - OLEDB が利用できない
-date: 2019-03-09
-lastupdate: 2020-08-07
+date: '2019-03-09'
+lastupdate: '2020-08-07'
 id: cl0m8t2dl003b3gvs6w8z8co4
-alias: /クイック実行形式の Office をインストールすると Office 以外のアプリケーションから ODBC - OLEDB が利用できない/
+tags:
+  - オートメーション
+
 ---
 
 Update: 2020/08/07  

@@ -1,8 +1,10 @@
 ---
 title: お知らせ - Japan Office Client Support Blog について
-date: 2022-01-31
+date: '2022-01-31'
 id: cl0m4xkl00039eovs4fp4ffbt
-alias: /お知らせ - Japan Office Client Support Blog について/
+tags:
+  - お知らせ
+
 ---
 
 いつも Microsoft Office をご愛顧いただき誠にありがとうございます。

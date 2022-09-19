@@ -1,8 +1,10 @@
 ---
 title: VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0mdnodx002r5ovsfzvw5fh5
-alias: /VSTO：.NET 3.5 で使用していた UserInclusionList クラスが .NET 4.0 以降は使用できない/
+tags:
+  - オートメーション
+
 ---
 
 (※ 2017 年 2 月 16 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

@@ -1,8 +1,11 @@
 ---
 title: Large Address Aware に対応した Excel 2013 - Excel 2016
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m7opb80010dcvs1xqm1hbg
-alias: /Large Address Aware に対応した Excel 2013 - Excel 2016/
+tags:
+  - Excel
+  - パフォーマンス
+
 ---
 
 こんにちは、Office サポートの佐村です。  

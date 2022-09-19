@@ -1,9 +1,12 @@
 ---
 title: Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する
-date: 2020-08-24
-lastupdate: 2022-06-08
+date: '2020-08-24'
+lastupdate: '2022-06-08'
 id: cl0m69xvc002u4cvsgc7a3bfp
-alias: /Windows 10 バージョン 2004 以降で 半角カナのフォームを含んだ Access ファイルでエラーが発生する/
+tags:
+  - Access
+  - VBA マクロ
+
 ---
 ※2020/10/28 OS 観点での回避方法 (3-3) を追加しました。
 

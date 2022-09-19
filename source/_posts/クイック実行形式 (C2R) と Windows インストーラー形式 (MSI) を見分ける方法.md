@@ -1,8 +1,10 @@
 ---
 title: クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m8t2dj00393gvs3r7oar2m
-alias: /クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法/
+tags:
+  - インストール
+
 ---
 
 (※ 2016 年 9 月 8 日に Japan Office Support Blog に公開した情報のアーカイブです。)

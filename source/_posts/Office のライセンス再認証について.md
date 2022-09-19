@@ -1,8 +1,10 @@
 ---
 title: Office のライセンス再認証について
-date: 2019-03-22
+date: '2019-03-22'
 id: cl0m75alf001qmcvsf6zeacqg
-alias: /Office のライセンス再認証について/
+tags:
+  - サインイン、認証
+
 ---
 
 (※ 本記事は Office Support Team Blog JAPAN に公開していた情報のアーカイブです。)

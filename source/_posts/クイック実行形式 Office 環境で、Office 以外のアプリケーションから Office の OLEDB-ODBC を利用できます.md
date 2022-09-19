@@ -1,9 +1,11 @@
 ---
 title: クイック実行形式 Office 環境で、Office 以外のアプリケーションから Office の OLEDB-ODBC を利用できます
-date: 2020-08-07
-lastupdate: 2021-05-21
+date: '2020-08-07'
+lastupdate: '2021-05-21'
 id: cl0m6umwp0037i4vsflq54qjb
-alias: /クイック実行形式 Office 環境で、Office 以外のアプリケーションから Office の OLEDB-ODBC を利用できます/
+tags:
+  - オートメーション
+
 ---
 
 こんにちは、Office サポート チームです。  

@@ -1,8 +1,10 @@
 ---
 title: Officeソリューション開発時の開発環境のバージョン選定について
-date: 2019-02-28
+date: '2019-02-28'
 id: cl0mfb7bn002inwvse5785nd7
-alias: /Officeソリューション開発時の開発環境のバージョン選定について/
+tags:
+  - オートメーション
+
 ---
 
 (※ 2012 年 5 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

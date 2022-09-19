@@ -1,8 +1,10 @@
 ---
 title: Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない
-date: 2019-02-04
+date: '2019-02-04'
 id: cl0n10dcz000n90vsaznd04om
-alias: /Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない/
+tags:
+  - ''
+
 ---
 
 (※ 2016 年 10 月 26 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)

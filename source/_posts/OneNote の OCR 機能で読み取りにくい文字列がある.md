@@ -1,10 +1,10 @@
 ---
-title: OneNote の OCR 機能で読み取りにくい文字列がある # ファイル名と同じ
-date: 2022-04-21 # 日付
-tags: # オプション（複数指定可能）
-- OneNote
-- OCR
+title: OneNote の OCR 機能で読み取りにくい文字列がある
+date: '2022-04-21'
+tags:
+  - ''
 id: cl28oxvt6002ku8uj1ose6ej2
+
 ---
 
 こんにちは、Office サポート チームの永田です。

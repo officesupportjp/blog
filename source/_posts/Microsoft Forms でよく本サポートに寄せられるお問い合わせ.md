@@ -1,9 +1,11 @@
 ---
 title: Microsoft Forms でよく本サポートに寄せられるお問い合わせ
-date: 2019-03-09
-lastupdate: 2019-08-30
+date: '2019-03-09'
+lastupdate: '2019-08-30'
 id: cl0m7opba0012dcvsezl78z14
-alias: /Microsoft Forms でよく本サポートに寄せられるお問い合わせ/
+tags:
+  - SwayForms
+
 ---
 
 (※ 2017 年 9 月 5 日に Japan Office Support Blog に公開した情報のアーカイブです。)

@@ -1,8 +1,12 @@
 ---
-title: Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について
-date: 2019-03-09
+title: >-
+  Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン
+  1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について
+date: '2019-03-09'
 id: cl0m7opbe0017dcvs06fk2wqc
-alias: /Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について/
+tags:
+  - インストール
+
 ---
 
 (※ 2017 年 11 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。)

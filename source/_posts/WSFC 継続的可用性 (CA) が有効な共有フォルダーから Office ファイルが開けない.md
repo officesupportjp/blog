@@ -1,8 +1,10 @@
 ---
 title: WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない
-date: 2022-08-12
+date: '2022-08-12'
 id: cl6q3dt1k0000ks3pemokg0de
-alias: /WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない/
+tags:
+  - ファイル I/O
+
 ---
 
 こんにちは、Office サポート チームの中村です。

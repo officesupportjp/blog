@@ -1,8 +1,10 @@
 ---
 title: Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0mc9o220024b0vs9oh30xtc
-alias: /Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)/
+tags:
+  - リボン カスタマイズ
+
 ---
 
 (※ 2017 年 3 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  

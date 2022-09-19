@@ -1,9 +1,11 @@
 ---
 title: Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について
-date: 2019-02-19
-lastupdate: 2019-03-22
+date: '2019-02-19'
+lastupdate: '2019-03-22'
 id: cl0n10de1001e90vs1mrp11zq
-alias: /Office 365 の Microsoft Forms を PowerShell を使用して一括で有効化、無効化 (停止) する方法について/
+tags:
+  - SwayForms
+
 ---
 
 (※ 2017 年 6 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  

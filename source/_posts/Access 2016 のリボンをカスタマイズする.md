@@ -1,8 +1,11 @@
 ---
 title: Access 2016 のリボンをカスタマイズする
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m7ghok000hk8vs3g1i3uwj
-alias: /Access 2016 のリボンをカスタマイズする/
+tags:
+  - Access
+  - リボン カスタマイズ
+
 ---
 
 (※ 2017 年 12 月 29 日に Japan Office Support Blog に公開した情報のアーカイブです。)

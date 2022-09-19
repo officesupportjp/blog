@@ -1,8 +1,12 @@
 ---
-title: Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac
-date: 2019-03-09
+title: >-
+  Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not
+  effective when printing on Excel 2016 for Mac
+date: '2019-03-09'
 id: cl0m7ghor000nk8vsf3ka62dj
-alias: /Excel 2016 for Mac での印刷時に先頭ページ番号の設定ができない – “First page number” is not effective when printing on Excel 2016 for Mac/
+tags:
+  - 印刷
+
 ---
 
 <span style="color:#ff0000">\[English Follows\]</span>

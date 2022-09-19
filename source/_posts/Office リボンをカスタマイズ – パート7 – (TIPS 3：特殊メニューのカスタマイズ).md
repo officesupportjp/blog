@@ -1,8 +1,10 @@
 ---
 title: Office リボンをカスタマイズ – パート7 – (TIPS 3：特殊メニューのカスタマイズ)
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0mdnodo00285ovs0fooh79h
-alias: /Office リボンをカスタマイズ – パート7 – (TIPS 3：特殊メニューのカスタマイズ)/
+tags:
+  - リボン カスタマイズ
+
 ---
 
 (※ 2017 年 12 月 26 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

@@ -1,8 +1,10 @@
 ---
 title: “Microsoft Barcode Control” について
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m82yjq002zvovsh02539lo
-alias: /“Microsoft Barcode Control” について/
+tags:
+  - Access
+
 ---
 
 (※ 2017 年 7 月 5 日に Japan Office Support Blog に公開した情報のアーカイブです。)

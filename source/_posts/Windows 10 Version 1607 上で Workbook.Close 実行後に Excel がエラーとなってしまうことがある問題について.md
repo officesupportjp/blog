@@ -1,8 +1,10 @@
 ---
 title: Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0mdnody002s5ovs5vpp069a
-alias: /Windows 10 Version 1607 上で Workbook.Close 実行後に Excel がエラーとなってしまうことがある問題について/
+tags:
+  - オートメーション
+
 ---
 
 (※ 2017 年 1 月 27 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  

@@ -1,8 +1,10 @@
 ---
 title: Excel の CodeName プロパティが取得できない動作
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0mc9o14000tb0vs85lvc2xs
-alias: /Excel の CodeName プロパティが取得できない動作/
+tags:
+  - オートメーション
+
 ---
 
 (※ 2017 年 2 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

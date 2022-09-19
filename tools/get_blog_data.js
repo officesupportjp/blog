@@ -53,9 +53,10 @@ function csv_export(){
 function csv_import(){
     
     const csvData = read_csv();
-
-    for (var i in csvData){
-        var data = fs.readFileSync(path.join(postsDir, csvData[i]['filename']), 'utf8');
+    const allNames = fs.readdirSync(postsDir);
+    const files = allNames.filter(file => /.*\.md$/.test(file));
+    for(var i in files){
+        var data = fs.readFileSync(path.join(postsDir, files[i]), 'utf8');
 
         // json の取得
         var header = data.match(/^---[\s\S]+?---/) ?? [''];
@@ -63,12 +64,16 @@ function csv_import(){
             schema: yaml.JSON_SCHEMA
         });
 
-        delete tags_json['alias'];
-        tags_json['tags'] = csvData[i]['tags']
+        var target = csvData.find((v) => v['id'] == tags_json['id']);
+        if(target !== null && target !== undefined){
+            console.log(target);
+            delete tags_json['alias'];
+            tags_json['tags'] = target['tags']
 
-        data = data.replace(/^---[\s\S]+?---/, '---\n' + yaml.dump(tags_json) + '\n---');
+            data = data.replace(/^---[\s\S]+?---/, '---\n' + yaml.dump(tags_json) + '\n---');
 
-        fs.writeFileSync(path.join(postsDir, csvData[i]['filename']),data, 'utf8');
+            fs.writeFileSync(path.join(postsDir, files[i]), data, 'utf8');    
+        }
     }
 }
 
@@ -88,8 +93,8 @@ function get_alias(){
         });
         
         if(tags_json['alias'] !== null){
-            var title = (tags_json['title'] ?? '').replace(/ /g, '%20');
-            var id = tags_json['id'] ?? '';
+            var title = tags_json['title'];
+            var id = tags_json['id'];
             aliasData.push(title+'/index.html: '+id+'/index.html');
         }
     }
@@ -108,7 +113,6 @@ function read_csv(){
     return records;
 }
 
-//var re = read_csv();
+csv_import();
 
-//console.log(re);
 //get_alias();

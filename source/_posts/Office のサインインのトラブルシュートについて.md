@@ -1,9 +1,11 @@
 ---
 title: Office のサインインのトラブルシュートについて
-date: 2020-07-09
-lastupdate: 2021-05-10
+date: '2020-07-09'
+lastupdate: '2021-05-10'
 id: cl0m6umvg001gi4vsgppfcmk0
-alias: /Office のサインインのトラブルシュートについて/
+tags:
+  - サインイン、認証
+
 ---
 
 こんにちは、Office サポートの西川 (直) です。 

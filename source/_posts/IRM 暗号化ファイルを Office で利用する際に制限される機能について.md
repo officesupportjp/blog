@@ -1,8 +1,10 @@
 ---
 title: IRM 暗号化ファイルを Office で利用する際に制限される機能について
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m7ghoz000yk8vsfakza883
-alias: /IRM 暗号化ファイルを Office で利用する際に制限される機能について/
+tags:
+  - ''
+
 ---
 
 (※ 2016 年 8 月 15 日に Japan Office Support Blog に公開した情報のアーカイブです。)

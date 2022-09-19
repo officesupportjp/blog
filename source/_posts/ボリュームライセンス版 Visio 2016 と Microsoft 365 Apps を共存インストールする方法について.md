@@ -1,8 +1,10 @@
 ---
 title: ボリュームライセンス版 Visio 2016 と Microsoft 365 Apps を共存インストールする方法について
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m8t2dr003j3gvsend6h2m8
-alias: /ボリュームライセンス版 Visio 2016 と Microsoft 365 Apps を共存インストールする方法について/
+tags:
+  - インストール
+
 ---
 
 <span style="color:#ff0000">**2022/08/24 Update** </span>  

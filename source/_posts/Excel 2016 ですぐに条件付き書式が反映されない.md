@@ -1,8 +1,10 @@
 ---
 title: Excel 2016 ですぐに条件付き書式が反映されない
-date: 2019-02-04
+date: '2019-02-04'
 id: cl0n1lilx000nokvs9i0o288v
-alias: /Excel 2016 ですぐに条件付き書式が反映されない/
+tags:
+  - ''
+
 ---
 
 (※ 2016 年 11 月 14 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  

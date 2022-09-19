@@ -1,12 +1,11 @@
 ---
 title: インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)
-date: 2022-02-18
-lastupdate: 2022-07-29
-tags: 
-- マクロ
-- MC322553
-alias: /インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)/
+date: '2022-02-18'
+lastupdate: '2022-07-29'
+tags:
+  - VBA マクロ
 id: cl0m4f5o1003504vsa5tp25c2
+
 ---
 
 <span style="color:#ff0000">**2022/03/18 Update**</span>  

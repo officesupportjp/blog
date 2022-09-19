@@ -1,9 +1,11 @@
 ---
 title: SCCM で Office365 ProPlus の更新プログラムが必要と判定されない
-date: 2019-03-09
-lastupdate: 2020-10-16
+date: '2019-03-09'
+lastupdate: '2020-10-16'
 id: cl0m82yjj002nvovs5qg4he0l
-alias: /SCCM で Office365 ProPlus の更新プログラムが必要と判定されない/
+tags:
+  - 更新
+
 ---
 
 (※ 2017 年 8 月 3 日に Japan Office Support Blog に公開した情報のアーカイブです。)

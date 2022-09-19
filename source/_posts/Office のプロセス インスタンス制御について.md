@@ -1,9 +1,11 @@
 ---
 title: Office のプロセス インスタンス制御について
-date: 2019-02-21
-lastupdate: 2019-02-25
+date: '2019-02-21'
+lastupdate: '2019-02-25'
 id: cl0n10de6001p90vsaa9n6gy8
-alias: /Office のプロセス インスタンス制御について/
+tags:
+  - SDI
+
 ---
 
 (※ 2012 年 2 月 14 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

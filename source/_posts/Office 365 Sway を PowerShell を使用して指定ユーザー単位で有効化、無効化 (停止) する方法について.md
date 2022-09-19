@@ -1,9 +1,11 @@
 ---
 title: Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について
-date: 2019-02-08
-lastupdate: 2019-03-22
+date: '2019-02-08'
+lastupdate: '2019-03-22'
 id: cl0n10de1001d90vs6xzb5ynb
-alias: /Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について/
+tags:
+  - SwayForms
+
 ---
 
 (※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  

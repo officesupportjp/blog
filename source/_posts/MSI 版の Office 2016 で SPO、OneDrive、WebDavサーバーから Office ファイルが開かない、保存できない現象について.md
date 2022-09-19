@@ -1,9 +1,12 @@
 ---
 title: MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について
-date: 2020-09-23
-lastupdate: 2021-04-23
+date: '2020-09-23'
+lastupdate: '2021-04-23'
 id: cl0m69xu000124cvsclmc5vis
-alias: /MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について/
+tags:
+  - ファイル I/O
+  - クラウド ストレージ
+
 ---
 
 こんにちは、Office サポートの西川 (直) です。

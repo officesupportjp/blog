@@ -1,8 +1,10 @@
 ---
 title: Office の自動更新が行われない事象について
-date: 2019-12-19
+date: '2019-12-19'
 id: cl0m75alh001tmcvsdyspb36m
-alias: /Office の自動更新が行われない事象について/
+tags:
+  - 更新
+
 ---
 
 こんにちは、Office サポートの西川 (直) です。  

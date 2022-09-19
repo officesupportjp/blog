@@ -1,8 +1,10 @@
 ---
 title: Office Viewer 製品の提供終了について
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m7opbl001gdcvs7kbb0ngv
-alias: /Office Viewer 製品の提供終了について/
+tags:
+  - お知らせ
+
 ---
 
 (※ 2017 年 9 月 4 日に Japan Office Support Blog に公開した情報のアーカイブです。)

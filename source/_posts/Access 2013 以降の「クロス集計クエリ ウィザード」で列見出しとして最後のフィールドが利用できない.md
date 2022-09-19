@@ -1,8 +1,10 @@
 ---
 title: Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m7ghof000ck8vscdxhanmb
-alias: /Access 2013 以降の「クロス集計クエリ ウィザード」で列見出しとして最後のフィールドが利用できない/
+tags:
+  - Access
+
 ---
 
 (※ 2018 年 2 月 27 日に Japan Office Support Blog に公開した情報のアーカイブです。)

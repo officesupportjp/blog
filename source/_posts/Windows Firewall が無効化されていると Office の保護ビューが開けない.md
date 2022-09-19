@@ -1,8 +1,10 @@
 ---
 title: Windows Firewall が無効化されていると Office の保護ビューが開けない
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m82yjo002vvovs6ze3b7ob
-alias: /Windows Firewall が無効化されていると Office の保護ビューが開けない/
+tags:
+  - ファイル I/O
+
 ---
 
 (※ 2017 年 4 月 17 日に Japan Office Support Blog に公開した情報のアーカイブです。)

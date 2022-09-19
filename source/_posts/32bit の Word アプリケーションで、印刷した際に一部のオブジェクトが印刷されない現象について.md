@@ -1,8 +1,10 @@
 ---
 title: 32bit の Word アプリケーションで、印刷した際に一部のオブジェクトが印刷されない現象について
-date: 2019-03-09
+date: '2019-03-09'
 id: cl0m7ghog000dk8vs2ovx9yyp
-alias: /32bit の Word アプリケーションで、印刷した際に一部のオブジェクトが印刷されない現象について/
+tags:
+  - 印刷
+
 ---
 
 (※ 2017 年 1 月 24 日に Japan Office Support Blog に公開した情報のアーカイブです。)

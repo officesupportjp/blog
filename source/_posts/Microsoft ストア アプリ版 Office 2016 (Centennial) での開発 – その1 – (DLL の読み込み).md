@@ -1,8 +1,10 @@
 ---
 title: Microsoft ストア アプリ版 Office 2016 (Centennial) での開発 – その1 – (DLL の読み込み)
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0mc9o1b0014b0vsbsrk3ew0
-alias: /Microsoft ストア アプリ版 Office 2016 (Centennial) での開発 – その1 – (DLL の読み込み)/
+tags:
+  - ストア アプリ開発
+
 ---
 
 (※ 2018 年 5 月 15 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

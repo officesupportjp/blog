@@ -1,8 +1,10 @@
 ---
 title: Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)
-date: 2019-03-01
+date: '2019-03-01'
 id: cl0mdnodn00255ovs9onm1o0p
-alias: /Office リボンをカスタマイズ – パート6 – (TIPS 2：動的なカスタマイズ)/
+tags:
+  - リボン カスタマイズ
+
 ---
 
 (※ 2017 年 11 月 9 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)

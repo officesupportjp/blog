@@ -1,7 +1,12 @@
 ---
-title: 暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する
-date: 2022-09-06
+title: >-
+  暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages
+  フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する
+date: '2022-09-06'
 id: cl7pvphjn0000a46ygd3m4nro
+tags:
+  - ''
+
 ---
 
 こんにちは、Office サポート チームです。  
