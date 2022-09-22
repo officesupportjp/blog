@@ -172,7 +172,8 @@ alias:
   Office 2010 に Wwlibcxm.dll の更新プログラムが適用されない/index.html: cl0n1lim60015okvs47xm0v9h/index.html
   Office 2010-2013 (既定) と Office 365 ProPlus の共存環境で Office 365 ProPlus をバージョン 1710 に更新すると Excel の関連付けが Office 365 ProPlus に変更される事象について/index.html: cl0m7opbe0017dcvs06fk2wqc/index.html
   Office 2016 が行うインターネット接続について/index.html: cl0n10de0001a90vs28153y7h/index.html
-  Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について/index.html: cl0m7opbg0019dcvs7v7v1fkj/index.html
+  # 「　|  」が使用できないため削除　
+  # Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について/index.html: cl0m7opbg0019dcvs7v7v1fkj/index.html
   Office 365 ProPlus で言語パックの追加に失敗する/index.html: cl0m75al0001amcvs0tsdeksn/index.html
   Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について/index.html: cl0m7opbh001adcvs8wu5f0kk/index.html
   Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について/index.html: cl0n10de0001b90vsbowhgnig/index.html
