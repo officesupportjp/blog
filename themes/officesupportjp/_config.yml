@@ -34,14 +34,14 @@ google_analytics:
 gauges_analytics:
 
 favicon:
-  ico: icons/favicon.ico
-  small: icons/favicon-16x16.png
-  medium: icons/favicon-32x32.png
-  apple_touch_icon: icons/apple-touch-icon.png
-  webmanifest: icons/site.webmanifest
-  safari_pinned_tab: icons/safari-pinned-tab.svg
-  android_manifest: icons/manifest.json
-  ms_browserconfig: icons/browserconfig.xml
+  ico: /icons/favicon.ico
+  small: /icons/favicon-16x16.png
+  medium: /icons/favicon-32x32.png
+  apple_touch_icon: /icons/apple-touch-icon.png
+  webmanifest: /icons/site.webmanifest
+  safari_pinned_tab: /icons/safari-pinned-tab.svg
+  android_manifest: /icons/manifest.json
+  ms_browserconfig: /icons/browserconfig.xml
 
 twitter:
 google_plus:

@@ -27,14 +27,14 @@
     <link rel="alternate" href="<%= url_for(theme.rss) %>" title="<%= config.title %>" type="application/atom+xml">
   <% } %>
   <% if (theme.favicon) { %>
-    <link rel="apple-touch-icon" sizes="180x180" href="<%- theme.root%><%- theme.favicon.apple_touch_icon %>">
-    <link rel="icon" type="image/png" sizes="32x32" href="<%- theme.root %><%- theme.favicon.medium %>">
-    <link rel="icon" type="image/png" sizes="16x16" href="<%- theme.root %><%- theme.favicon.small %>">
-    <link rel="manifest" href="<%- theme.root %><%- theme.favicon.webmanifest %>">
-    <link rel="mask-icon" href="<%- theme.root %><%- theme.favicon.safari_pinned_tab %>" color="#5bbad5">
-    <link rel="shortcut icon" href="<%- theme.root %><%- theme.favicon.ico %>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= url_for(theme.favicon.apple_touch_icon) %>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= url_for(theme.favicon.medium) %>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= url_for(theme.favicon.small) %>">
+    <link rel="manifest" href="<%= url_for(theme.favicon.webmanifest) %>">
+    <link rel="mask-icon" href="<%= url_for(theme.favicon.safari_pinned_tab) %>" color="#5bbad5">
+    <link rel="shortcut icon" href="<%= url_for(theme.favicon.ico) %>">
     <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="<%- theme.root %><%- theme.favicon.ms_browserconfig %>">
+    <meta name="msapplication-config" content="<%= url_for(theme.favicon.ms_browserconfig) %>">
     <meta name="theme-color" content="#ffffff">
   <% } %>
   <% if (config.highlight.enable){ %>
