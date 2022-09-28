@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Office サポート チームの中村です。 Excel には、ワークシートのスクロール可能な範囲を設定する ScrollArea というシート プロパティが用意されています。本記事では、このScrollArea プロパティを設定したとき、キーボードの矢印キーや Tab キーなどで選択セルを移動したとき、ウィンドウに表示されていないセルに移動しても、そのセルが画面に表示されるようシートが">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="こんにちは、Office サポート チームの中村です。 Excel には、ワークシートのスクロール可能な範囲を設定する ScrollArea というシート プロパティが用意されています。本記事では、このScrollArea プロパティを設定したとき、キーボードの矢印キーや Tab キーなどで選択セルを移動したとき、ウィンドウに表示されていないセルに移動しても、そのセルが画面に表示されるようシートが">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image4.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image5.png">
+<meta property="article:published_time" content="2021-01-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-28T05:24:50.518Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="オートメーション">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m4xkiy000reovs1r3cadx0/" class="article-date">
+  <time datetime="2021-01-12T00:00:00.000Z" itemprop="datePublished">2021-01-12</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m4xkiy000reovs1r3cadx0/" class="article-date-single">    
+    
+    <time datetime="2021-01-12T00:00:00.000Z" itemprop="dateUpdated">2021-01-12</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Office サポート チームの中村です。</p>
+<p>Excel には、ワークシートのスクロール可能な範囲を設定する ScrollArea というシート プロパティが用意されています。本記事では、このScrollArea プロパティを設定したとき、キーボードの矢印キーや Tab キーなどで選択セルを移動したとき、ウィンドウに表示されていないセルに移動しても、そのセルが画面に表示されるようシートがスクロールしない動作について記載します。  </p>
+<h4 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a><strong>1. 現象</strong></h4><p>以下の画面キャプチャをご覧ください。この画面では、O2 セルが現在選択されていますが、画面右端に見切れて表示された状態になっています。(赤枠部分)</p>
+<p>通常、例えば A2 セルから右矢印キーや、Tab キーで B2、C2・・・と順に列を移動すると、選択状態のセル全体がウィンドウ内に見える位置に自動的にスクロールされます。しかしながら、後述の状況においては、この画面キャプチャのように十分にスクロールされない場合があります。またこのあと、O 列以降のセルに移動してもこの位置のままスクロールしません。</p>
+<p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image1.png">  </p>
+<h4 id="2-現象が発生する状況"><a href="#2-現象が発生する状況" class="headerlink" title="2. 現象が発生する状況"></a><strong>2. 現象が発生する状況</strong></h4><p>この動作に直面する主な状況は、ワークシートの ScrollArea プロパティが設定された状態で、かつセルの幅や高さが広げられているときに、スクロール可能範囲の終端に近いセルに移動する場合です。</p>
+<p>Excel が画面外の領域にスクロールするときに、スクロール後のウィンドウ内に表示するシート範囲などを、セルの幅や高さ &#x2F; ウィンドウのサイズ &#x2F; 残りのスクロール可能範囲などの要素を基に算出します。これらの要素の組み合わせ次第で、スクロール後の表示位置を期待通りに算出できない場合があり、この現象が発生します。</p>
+<p>また、Excel バージョンによっても細かな動作は異なるため、例えば同じファイルを同じウィンドウ サイズで開いても、スクロールしなくなる動作が生じる列や行はバージョンによって異なる場合があります。</p>
+<p>発生に関わる条件をまとめると以下の通りです。</p>
+<p><strong>条件 1:</strong><br>ワークシートの ScrollArea プロパティが設定されていること</p>
+<p>※プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。</p>
+<p>ScrollArea プロパティ (Excel)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea</a></p>
+<p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image2.png"></p>
+<p><strong>条件 2:</strong><br>以下の要素等の組み合わせによって発生</p>
+<ul>
+<li>選択セルから ScrollArea プロパティの終端までの残りの幅・高さ</li>
+<li>Excel ブック画面のウィンドウ サイズ</li>
+<li>各セルの幅や高さ</li>
+<li>シートの倍率</li>
+<li>ウィンドウ サイズなどの算出に関わるディスプレイの拡大縮小、スケール設定</li>
+</ul>
+<p>この動作は、ユーザーの利用上、不便な場合がある動作であることは認識しておりますが、現状のスクロール動作の内部処理上の制約として、現時点でサポートされる全てのバージョンの Excel で発生しうる制限動作となっています。(2021&#x2F;1&#x2F;12 現在、サポート対象の Excel は Excel 2013 &#x2F; 2016 &#x2F; 2019 &#x2F; Office 365 の Excel です。)  </p>
+<h4 id="3-回避策"><a href="#3-回避策" class="headerlink" title="3. 回避策"></a><strong>3. 回避策</strong></h4><p>この動作が生じるファイルやウィンドウ サイズなどの構成でも、以下のいずれかの方法でスクロールできます。  </p>
+<h5 id="3-1-スクロールバーでスクロールする"><a href="#3-1-スクロールバーでスクロールする" class="headerlink" title="3-1. スクロールバーでスクロールする"></a><strong>3-1. スクロールバーでスクロールする</strong></h5><p>マウス操作でスクロール バーによってスクロールすると、画面をスクロールできます。</p>
+<p>以下は、先述のファイルでスクロール バーの右矢印 (赤枠部分) をマウスで操作してスクロールした例です。</p>
+<p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image3.png">  </p>
+<h5 id="3-2-ScrollArea-を広げる、または解除する"><a href="#3-2-ScrollArea-を広げる、または解除する" class="headerlink" title="3-2. ScrollArea を広げる、または解除する"></a><strong>3-2. ScrollArea を広げる、または解除する</strong></h5><p>移動先のセルから、ScrollArea の終端までの幅や高さが十分に広い場合には、正常にスクロールできます。</p>
+<p>例えば A～Q 列にあるテーブルの範囲だけスクロールするさせるため、ScrollArea プロパティに A ～ Q 列を設定しているとします。これを、例えば Z 列など、ある程度余裕を持った範囲をスクロールできるよう設定すると、実際にスクロールしたい範囲では期待通りスクロールできます。(どの列までを ScrollArea に設定すれば問題ないかは、条件 2 の各要素に依存します。具体的な値は定められませんが、実際の環境・ファイルで動作を確認しながら、余裕を持った範囲を設定してください。)</p>
+<p>ScrollArea を広げるにあたって、例えば上記の例であれば、テーブル外の R ～ Z 列のセルを選択させたくない場合は、シート保護の設定で [ロックされたセル範囲の選択] を無効にすることでセル選択を禁止できます。  </p>
+<p><strong>設定手順:</strong><br>1. 選択させたくないセル (上記の例では R ～ Z 列) のセルを右クリックし、[セルの書式設定] – [保護] で [ロック] を有効にします。(既定では有効です。)</p>
+<p>2. 反対に、選択を可能とするセル (上記の例では A ~ Q 列) は同様のメニューで、[ロック] を無効にします。</p>
+<p>3. [校閲] タブ – [シートの保護] – “このシートのすべてのユーザーに許可する操作” の一覧で [ロックされたセル範囲の選択] のチェックを外します。</p>
+<p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image4.png"><br><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image5.png"></p>
+<p>VBA などのプログラムからは、以下で設定できます。</p>
+<p>Worksheet. EnableSelection プロパティ (Excel)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection</a></p>
+<p>このプロパティで xlUnlockedCells を設定します。このプロパティは、ワークシートを保護した状態でのみ有効ですので、さらに以下の Protect メソッドでワークシートを保護します。</p>
+<p>Protect メソッド (Excel)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect</a></p>
+<p>また、選択セルの移動を制限することが ScrollArea プロパティを設定している目的である場合は、上記の設定を代わりに行うことで、ScrollArea プロパティの設定自体を削除することも検討できます。(ただし、スクロール バーの操作ではスクロールできます。)</p>
+<p>ScrollArea 設定を削除する場合は、プログラムからは ScrollArea プロパティに空の値 (“”) を設定してください。プロパティ ウィンドウの場合は、ScrollArea プロパティの値を削除してください。  </p>
+<p>今回の投稿は以上です。  </p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/" data-id="cl8kyfiko001im86y34o1doia" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m4xkl2003deovs5ntr794w/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          クリップボード アクセスの競合による Office でのコピー-貼り付け失敗
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m69xv6002k4cvsan4d7rs0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">PowerPoint Online で日本語フォントが変更される</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 16.25px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 15px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 12.5px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl8lbafua0000vg6yhn5ahyju/">ボリュームライセンス版 Visio 2019、Project 2019 または Visio 2021、Project 2021 と Microsoft 365 Apps を共存インストールする方法について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl7pvphjn0000a46ygd3m4nro/">暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6q3dt1k0000ks3pemokg0de/">WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6as2js40007m0u87h40erld/">ストア アドインを利用したファイルを一元展開で利用できるようになりました</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl4hy59k50027usvsc5k6cuto/">Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

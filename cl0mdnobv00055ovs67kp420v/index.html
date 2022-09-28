@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版) | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 2 月 7 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 今回は、C# や VB.NET を使って .NET Framework 上で動作する Office をオートメーションするプログラムや、VSTO でOffice ソリューション (アドインや、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 2 月 7 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 今回は、C# や VB.NET を使って .NET Framework 上で動作する Office をオートメーションするプログラムや、VSTO でOffice ソリューション (アドインや、">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/image2.png">
+<meta property="article:published_time" content="2019-02-28T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-28T05:24:50.488Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="オートメーション">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-(オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mdnobv00055ovs67kp420v/" class="article-date">
+  <time datetime="2019-02-28T00:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      (オートメーション - VSTO) .NET での Office ソリューション開発時の開発環境のバージョン選定 (最新版)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mdnobv00055ovs67kp420v/" class="article-date-single">    
+    
+    <time datetime="2019-02-28T00:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 2 月 7 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office 開発 サポート チームの中村です。</p>
+<p>今回は、C# や VB.NET を使って .NET Framework 上で動作する Office をオートメーションするプログラムや、VSTO でOffice ソリューション (アドインや、プログラムが組み込まれた Office ファイル) を作成するときに必要な環境構成について記載します。</p>
+<p><a href="https://officesupportjp.github.io/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">過去の投稿</a>で、当時の製品でのバージョン選定について記載していましたが、古い情報になってしまいましたので、本記事では、現在サポートされる製品バージョンについての最新情報を記載したいと思います。動作の仕組みの説明などは、<a href="https://officesupportjp.github.io/blog/Office%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E9%96%8B%E7%99%BA%E6%99%82%E3%81%AE%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AE%E3%83%90%E3%83%BC%E3%82%B8%E3%83%A7%E3%83%B3%E9%81%B8%E5%AE%9A%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">過去の投稿</a>で詳しく説明していますのでぜひ合わせてご参照ください。</p>
+<p><span style="color:#ff0000"><strong>2017&#x2F;7&#x2F;14 Update</strong></span><br><span style="color:#339966">Visual Studio 2017 と .NET Framework 4.7 の情報を追記しました。</span></p>
+<p><span style="color:#ff0000"><strong>2018&#x2F;1&#x2F;16 Update</strong></span><br><span style="color:#339966">「表2. VSTO 開発環境の組み合わせ」の実行環境で利用される VSTO Runtime と Office のバージョンの組み合わせを表内に追記しました。</span></p>
+<p><strong>目次</strong></p>
+<p><a href="#1-%E5%B0%8E%E5%85%A5-%E2%80%93-%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AB%E5%BF%85%E8%A6%81%E3%81%AA%E3%82%82%E3%81%AE">1. 導入 – 開発環境に必要なもの</a><br><a href="#2-Office-%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%A0%B4%E5%90%88">2. Office オートメーションの場合</a><br><a href="#3-VSTO-%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E5%A0%B4%E5%90%88">3. VSTO ソリューションの場合</a><br><a href="#4-%E3%81%9D%E3%81%AE%E4%BB%96%E6%A7%8B%E6%88%90%E3%81%AB%E9%96%A2%E3%81%99%E3%82%8B%E6%B3%A8%E6%84%8F%E7%82%B9">4. その他構成に関する注意点</a><br><a href="#5-%E5%8F%82%E8%80%83%E8%B3%87%E6%96%99">5. 参考資料</a></p>
+<h4 id="1-導入-–-開発環境に必要なもの"><a href="#1-導入-–-開発環境に必要なもの" class="headerlink" title="1. 導入 – 開発環境に必要なもの"></a><strong>1. 導入 – 開発環境に必要なもの</strong></h4><p>.NET Framework 上で動作する Office をオートメーションするプログラムや VSTOを開発する際、開発環境に必要な製品は、以前から変わりなく以下の 4 点です。</p>
+<ul>
+<li>Visual Studio</li>
+<li>.NET Framework</li>
+<li>Office</li>
+<li>Office Primary Interop Assembly (PIA) ※ PIA は、通常、Officeと一緒にインストールされますので、あまり意識する必要はありません。</li>
+</ul>
+<p>これらの製品の組み合わせとして、どのような組み合わせを選ぶことができるのかを以下にご案内します。  </p>
+<h4 id="2-Office-オートメーションの場合"><a href="#2-Office-オートメーションの場合" class="headerlink" title="2. Office オートメーションの場合"></a><strong>2. Office オートメーションの場合</strong></h4><p>まずは、Office を外部からオートメーションするとき (例えば、Windows フォームアプリケーションを作成して、フォーム上のボタンを押下すると Office アプリケーションを起動して処理を行う、といったプログラム) の開発環境について記載します。.NET Framework 上で動作するプログラムでは、Office PIA (Microsoft.Office.Interop.Excel 等のアセンブリのことです) への参照を追加することで、公開された COM オブジェクトを利用して Office をオートメーションできます。</p>
+<p>このような場合に、開発環境として選択できる構成は下表のとおりです。</p>
+<p><strong>表1. Office オートメーション開発環境の組み合わせ</strong></p>
+<p><img src="/blog/cl0mdnobv00055ovs67kp420v/image1.png"></p>
+<p>※ 初期状態ではターゲットできない .NET Framework バージョンもあります。その場合は、以下のリンクから必要な Developer pack をインストールしてください。</p>
+<p>タイトル : Targeting .NET Platforms</p>
+<p>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/net/targeting">https://www.microsoft.com/net/targeting</a></p>
+<p><strong>補足) Office PIA の要否</strong></p>
+<p>表に示すとおり、.NET Framework 3.5 以前と 4.0 以降で、実行環境で利用可能な Office バージョンが異なります。これは、Office PIA について以下のように動作が変更されたためです。</p>
+<p>.NET Frameowork 3.5 以前は、Office PIA を実行環境でも参照できる必要がありました。Office PIA には上位互換性はありますが、下位互換性がありません。このため、実行環境で Office PIA を参照できるよう、実行環境の　Office バージョンと同等または下位の Office バージョンで開発する必要がありました。(例: 実行環境が Office 2010 であれば、開発環境は Office 2010 または Office 2007 で作成します。開発環境に Office 2013 や Office 2016 を使用すると、実行環境で Office PIA が参照できず実行できません。)</p>
+<p>一方、.NET Framework 4.0 以降では、既定で Office PIA の情報はビルド時にソリューションに埋め込まれるようになりました ([相互運用型の埋め込み] プロパティが True の場合)。このため、実行環境に Office PIA が必要ないので、開発環境より下位バージョンの Office でも動作させることができます。 (例: Office 2016 環境で開発したプログラムを、Office 2010 環境で実行できます。) なお、.NET Framework 4.0 以降でも、[相互運用型の埋め込み] を無効にしたり、以前の Office には存在しない機能を利用した場合は、古いバージョンの Office では動作しませんのでご注意ください。</p>
+<p>また、下位バージョンで存在した機能が上位バージョンで利用できないことは多くはありませんが、様々な理由により一部機能が削除・動作変更されることもありますので、この場合には上位互換性も保証されません。これを考慮すると、.NET Framework 4.0 以降であっても、実行環境と同等または下位の Office バージョンで開発することをお勧めします。  </p>
+<h4 id="3-VSTO-ソリューションの場合"><a href="#3-VSTO-ソリューションの場合" class="headerlink" title="3. VSTO ソリューションの場合"></a><strong>3. VSTO ソリューションの場合</strong></h4><p>VSTO のテンプレート等を含む開発ツールは、Visual Studio に含まれる Office 開発ツール (Microsoft Office Developer Tools) によってインストールされます。このため、Visual Studio のバージョンと Office バージョンの組み合わせに厳密な制限があります。また、プロジェクトがターゲットする .NET Framework も厳密に決められています。さらに、実行環境には VSTO のランタイムが必要になります。</p>
+<p>以下の表に従って、開発環境を選定してください。</p>
+<p><strong>表2. VSTO 開発環境の組み合わせ</strong></p>
+<p><img src="/blog/cl0mdnobv00055ovs67kp420v/image2.png"></p>
+<p>※ VSTO Runtime は Office に同梱されていますが、以下より最新版をダウンロードできますので可能な限り最新版をご利用ください。</p>
+<p>タイトル : Visual Studio 2010 Tools for Office Runtime<br>アドレス : <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=54251">https://www.microsoft.com/en-us/download/details.aspx?id=54251  
+</a><br>* 2017&#x2F;2&#x2F;7 時点最新バージョン : 10.0.60825</p>
+<p><strong>補足) 他の考慮事項</strong></p>
+<p>Office PIA や Office 機能の互換性については、2. と同様ですので、実行環境と同等または下位の Office バージョンで開発することをお勧めします。</p>
+<p>ただし、本記事では詳しい説明は省略しますが、VSTOマニフェストへの署名に利用する証明書を SHA-256 アルゴリズムで暗号化する場合は、Visual Studio 2013 Update 3 以降を利用し、ターゲット フレームワークに .NET Framework 4.5 以降を指定する必要があります。  </p>
+<h4 id="4-その他構成に関する注意点"><a href="#4-その他構成に関する注意点" class="headerlink" title="4. その他構成に関する注意点"></a><strong>4. その他構成に関する注意点</strong></h4><p>過去の投稿と同様、最新バージョンにおいても、開発環境においては複数バージョンの Office が混在する環境はサポートしていません。</p>
+<p>また、開発環境にクイック実行で提供される Office 2010 を利用することはサポートされません。Office 2013 以降のクイック実行提供版は開発環境で利用可能です。  </p>
+<h4 id="5-参考資料"><a href="#5-参考資料" class="headerlink" title="5. 参考資料"></a><strong>5. 参考資料</strong></h4><p>このブログ記事の内容は、以下の資料などを基に記述しています。</p>
+<p>タイトル : 異なるバージョンの Microsoft Office でのソリューションの実行<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/bb772080.aspx">https://msdn.microsoft.com/ja-jp/library/bb772080.aspx</a></p>
+<p>タイトル : Office ソリューションを開発できるようにコンピューターを構成する<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/bb398242.aspx">https://msdn.microsoft.com/ja-jp/library/bb398242.aspx</a></p>
+<p>タイトル : 方法 : Office のプライマリ相互運用機能アセンブリをインストールする<br>アドレス : <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/ja-jp/library/kh3965hw.aspx">http://msdn.microsoft.com/ja-jp/library/kh3965hw.aspx</a></p>
+<p>タイトル : 方法 : プライマリ相互運用機能アセンブリを利用して Office アプリケーションを使用する<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/dww0e04a.aspx">https://msdn.microsoft.com/ja-jp/library/dww0e04a.aspx</a></p>
+<p>今回の投稿は以上です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnobv00055ovs67kp420v/" data-id="cl8kyfijj0008m86y3v3oguok" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0mdnody002t5ovsb4fl3dku/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          Word 2016 からメールを送信すると文字化けする
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0mfb79f0006nwvs973z6w4v/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">1. Office PIA 経由で Office 製品をオートメーションすることによる、Office オブジェクトモデルの操作</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 16.25px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 15px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 12.5px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl8lbafua0000vg6yhn5ahyju/">ボリュームライセンス版 Visio 2019、Project 2019 または Visio 2021、Project 2021 と Microsoft 365 Apps を共存インストールする方法について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl7pvphjn0000a46ygd3m4nro/">暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6q3dt1k0000ks3pemokg0de/">WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6as2js40007m0u87h40erld/">ストア アドインを利用したファイルを一元展開で利用できるようになりました</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl4hy59k50027usvsc5k6cuto/">Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

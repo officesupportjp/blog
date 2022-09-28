@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ) | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 5 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 Office リボンのカスタマイズ方法について数回にわたってご紹介していますが、パート 1 でご紹介した 3 つの方法のうち、最後の方法 「b. VSTO から XML を用いてカスタマイズ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 5 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発 サポート チームの中村です。 Office リボンのカスタマイズ方法について数回にわたってご紹介していますが、パート 1 でご紹介した 3 つの方法のうち、最後の方法 「b. VSTO から XML を用いてカスタマイズ">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image4.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image5.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image6.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image7.png">
+<meta property="article:published_time" content="2019-03-01T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-28T05:24:50.565Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="リボン カスタマイズ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" class="article-date">
+  <time datetime="2019-03-01T00:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office リボンをカスタマイズ – パート4 – (VSTO XML でカスタマイズ)
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0mdnodm00245ovs9qdfdvwi/" class="article-date-single">    
+    
+    <time datetime="2019-03-01T00:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 5 月 19 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office 開発 サポート チームの中村です。</p>
+<p>Office リボンのカスタマイズ方法について数回にわたってご紹介していますが、パート 1 でご紹介した 3 つの方法のうち、最後の方法 「b. VSTO から XML を用いてカスタマイズを行う」について詳しく紹介したいと思います。</p>
+<h4 id="VSTO-XML-でリボンをカスタマイズする"><a href="#VSTO-XML-でリボンをカスタマイズする" class="headerlink" title="VSTO XML でリボンをカスタマイズする"></a><strong>VSTO XML</strong> <strong>でリボンをカスタマイズする</strong></h4><p>この方法は、Visual Studio を使って VSTO ソリューションを開発し、このソリューションの中に、リボンをカスタマイズする XML とカスタマイズで実行したい処理 (コールバック関数) を実装します。ビジュアルなデザイナーと同じように、カスタマイズ内容は VSTO ランタイムによって VSTO ソリューションのロード時にOffice が読み込むことができるよう解釈され、リボンにカスタマイズが反映されます。</p>
+<p>この VSTO で XML を用いる方法は、ビジュアルなデザイナーで作成したリボンを変換して作成することもできます。このため、一からリボン カスタマイズ XML を記述することはハードルが高いと感じる方でも、まずはビジュアルなデザイナーで作成して XML に変換した後、XML でしかできないカスタマイズを追加するといった開発手法も検討できます。</p>
+<p>今回のサンプル作成でも、ビジュアルなデザイナーで作成したリボンから変換する方法をご紹介していきます。</p>
+<p><strong>メリット</strong></p>
+<ul>
+<li><p>VSTO はアドインおよびドキュメント形式のカスタマイズが作成できますので、リボン カスタマイズを反映させたい範囲に応じたソリューションが開発できます。</p>
+</li>
+<li><p>ビジュアルなデザイナーではカスタマイズできない変更も行うことができます。ビジュアルなデザイナーと XML でカスタマイズできることの差異については、以下の公開情報を参照してください。主な利点として、XML では、組み込みのタブ、グループ、コントロールについて幅広くカスタマイズを行うことができます。  </p>
+<p>タイトル : リボンの概要</p>
+<p>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/bb386097.aspx">https://msdn.microsoft.com/ja-jp/library/bb386097.aspx</a></p>
+</li>
+</ul>
+<p><strong>制約事項</strong></p>
+<ul>
+<li>VSTO で提供される機能のため、VSTO としての開発が必要です。C++ で開発された COM アドイン等からは利用できないことや、VSTOのインストール方法 (通常は ClickOnce) などを検討する必要があります。</li>
+</ul>
+<h4 id="今回のテーマ"><a href="#今回のテーマ" class="headerlink" title="今回のテーマ"></a><strong>今回のテーマ</strong></h4><p>今回の記事では、サンプルの作成を通して以下を実現する方法をお伝えしたいと思います。</p>
+<ul>
+<li>VSTO アドインでビジュアルなデザイナーからリボン XML を作成する方法</li>
+<li>XML でリボンをカスタマイズする方法</li>
+</ul>
+<h4 id="サンプルの動作"><a href="#サンプルの動作" class="headerlink" title="サンプルの動作"></a><strong>サンプルの動作</strong></h4><p>比較しやすいよう、これまでと同じく、[Custom Tab] タブに表示された [Custom Button] をクリックするとメッセージ ボックスを表示をするサンプルを作成してみます。</p>
+<p><img src="/blog/cl0mdnodm00245ovs9qdfdvwi/image1.png"></p>
+<p> 図 1. サンプル プログラムの動作</p>
+<h4 id="1-ビジュアルなデザイナーでリボンをカスタマイズする-VSTO-ソリューションを作成"><a href="#1-ビジュアルなデザイナーでリボンをカスタマイズする-VSTO-ソリューションを作成" class="headerlink" title="1. ビジュアルなデザイナーでリボンをカスタマイズする VSTO ソリューションを作成"></a><strong>1. ビジュアルなデザイナーでリボンをカスタマイズする VSTO ソリューションを作成</strong></h4><p>まずは、以前の投稿 (<a href="https://officesupportjp.github.io/blog/Office%20%E3%83%AA%E3%83%9C%E3%83%B3%E3%82%92%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%20%E2%80%93%20%E3%83%91%E3%83%BC%E3%83%883%20%E2%80%93%20(VSTO%20%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%83%87%E3%82%B6%E3%82%A4%E3%83%8A%E3%83%BC%E3%81%A7%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA)/">Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)</a> の手順で、ひな形となるサンプル Excel アドインを作成します。今回は、ソリューションの名前を「SampleExcelAddin_XML」にします。</p>
+<p>※ 前回のビジュアルなデザイナーで作成したサンプル アドインが有効な状態でテストする場合、今回のサンプルと区別がつくよう、リボンのボタン名やグループ名などを適宜変更してください。</p>
+<h4 id="2-カスタマイズ内容を-XML-に変換"><a href="#2-カスタマイズ内容を-XML-に変換" class="headerlink" title="2. カスタマイズ内容を XML に変換"></a><strong>2. カスタマイズ内容を XML に変換</strong></h4><p>Visual Studio のビジュアルなデザイナー上で右クリックし、[リボンを XML にエクスポート] をクリックします。</p>
+<p><img src="/blog/cl0mdnodm00245ovs9qdfdvwi/image2.png"></p>
+<p>図 2. リボンを XML にエクスポート</p>
+<p>そうすると、「RIbbon.cs」と、「Ribbon.xml」という XML ファイルがソリューションに追加されます。</p>
+<p><img src="/blog/cl0mdnodm00245ovs9qdfdvwi/image3.png"></p>
+<p>図 3. Ribbon.cs と Ribbon.xml</p>
+<p>Ribbon.xml には、以下のようなリボンのカスタマイズ内容を表す XML コードが自動生成されているのを確認できます。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;customUI onLoad=&quot;Ribbon_Load&quot; xmlns=&quot;http://schemas.microsoft.com/office/2006/01/customui&quot;&gt;</span><br><span class="line">  &lt;ribbon&gt;</span><br><span class="line">    &lt;tabs&gt;</span><br><span class="line">      &lt;tab id=&quot;customTab&quot; label=&quot;Custom Tab&quot;&gt;</span><br><span class="line">        &lt;group id=&quot;customGroup&quot; label=&quot;Custom Group&quot;&gt;</span><br><span class="line">          &lt;button id=&quot;customButton&quot; imageMso=&quot;HappyFace&quot; onAction=&quot;customButton_Click&quot; label=&quot;Custom Button&quot; size=&quot;large&quot; /&gt;</span><br><span class="line">        &lt;/group&gt;</span><br><span class="line">      &lt;/tab&gt;</span><br><span class="line">    &lt;/tabs&gt;</span><br><span class="line">  &lt;/ribbon&gt;</span><br><span class="line">&lt;/customUI&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-CreateRibbonExtensibilityObject-メソッドのオーバーライド"><a href="#3-CreateRibbonExtensibilityObject-メソッドのオーバーライド" class="headerlink" title="3. CreateRibbonExtensibilityObject メソッドのオーバーライド"></a><strong>3. CreateRibbonExtensibilityObject メソッドのオーバーライド</strong></h4><p>Ribbon.cs を開きます。以下のように、コード中にコメントで次に必要な作業が記載されています。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// TODO:  リボン (XML) アイテムを有効にするには、次の手順に従います。</span><br><span class="line"></span><br><span class="line">// 1: 次のコード ブロックを ThisAddin、ThisWorkbook、ThisDocument のいずれかのクラスにコピーします。</span><br><span class="line"></span><br><span class="line">//  protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()</span><br><span class="line">//  &#123;</span><br><span class="line">//      return new Ribbon();</span><br><span class="line">//  &#125;</span><br><span class="line"></span><br><span class="line">// 2. ボタンのクリックなど、ユーザーの操作を処理するためのコールバック メソッドを、このクラスの</span><br><span class="line">//    &quot;リボンのコールバック&quot; 領域に作成します。メモ: このリボンがリボン デザイナーからエクスポートされたものである場合は、</span><br><span class="line">//    イベント ハンドラー内のコードをコールバック メソッドに移動し、リボン拡張機能 (RibbonX) のプログラミング モデルで</span><br><span class="line">//    動作するように、コードを変更します。</span><br><span class="line"></span><br><span class="line">// 3. リボン XML ファイルのコントロール タグに、コードで適切なコールバック メソッドを識別するための属性を割り当てます。  </span><br><span class="line"></span><br><span class="line">// 詳細については、Visual Studio Tools for Office ヘルプにあるリボン XML のドキュメントを参照してください。</span><br></pre></td></tr></table></figure>
+
+<p>説明の通り、まずは ThisAddin クラスに以下のコードを追加します。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">protected override Microsoft.Office.Core.IRibbonExtensibility CreateRibbonExtensibilityObject()</span><br><span class="line">&#123;</span><br><span class="line">    return new Ribbon();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>このコードを記述しておくことで、Excel を起動してアドインが読み込まれたときに、VSTO で XML を用いてカスタマイズしたリボンの内容が Excel 上に反映されます。なお、new で生成するのは、「Ribbon.cs」に定義された IRibbonExtensibility クラスです。クラス名を任意に変更した場合は、上記のコードも合わせて変更してください。</p>
+<h4 id="lt-解説-gt-XML-でリボンをカスタマイズするときにコールバック関数を呼び出す仕組み"><a href="#lt-解説-gt-XML-でリボンをカスタマイズするときにコールバック関数を呼び出す仕組み" class="headerlink" title="&lt;解説&gt; XML でリボンをカスタマイズするときにコールバック関数を呼び出す仕組み"></a><strong>&lt;解説&gt; XML でリボンをカスタマイズするときにコールバック関数を呼び出す仕組み</strong></h4><p>次の手順を説明する前に、XML でリボンをカスタマイズするときにコールバック関数が呼び出される仕組みについて解説します。</p>
+<p>ビジュアルなデザイナーでリボンをカスタマイズしたときは、イベント ハンドラーでコールバック関数を追加しました。XML でリボンを カスタマイズする場合は、ユーザー操作に対応する「属性」を XML に記述し、ここからコールバック関数を呼び出すよう実装します。</p>
+<p>「属性」は、XML のコントロール タグに指定する要素です。コントロールのプロパティを表す属性もありますが、「特定の操作が行われたら指定したコールバック関数を呼び出す」という属性がそれぞれのリボン コントロールに定義されています。また、この属性は、コントロールごとにそのコントロールに適したものが用意されています。</p>
+<p>例えば、ボタン コントロールでは、ボタンをクリックすると「onAction」属性で設定したコールバック関数を呼び出します。コンボボックス コントロールでは、選択値を変更すると、「onChange」属性に設定したコールバック関数が呼び出されます。そして、onAction や onChange 属性に設定するコールバック関数を、リボン クラスに記述します。このとき、各コントロールの属性によって、引数に渡される内容は決められていますので、適切な引数を受け取るよう、コールバック関数を実装してください。</p>
+<p>上記の説明を図に表すと、以下のようになります。(この図のコードは、作成中のサンプルとは異なります。また、コードは一部を抜粋しています。)</p>
+<p><img src="/blog/cl0mdnodm00245ovs9qdfdvwi/image4.png"></p>
+<p>図 4. コールバック関数を呼び出す仕組み  </p>
+<p>コントロールごとに利用できる属性と、その引数 (シグネチャ) の一覧は以下の資料を参照してください。</p>
+<p>タイトル : 2007 Office Fluent リボンをカスタマイズする (開発者向け) (パート 3&#x2F;3)<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/aa722523.aspx">https://msdn.microsoft.com/ja-jp/library/aa722523.aspx</a></p>
+<p>該当箇所 : コールバック プロシージャごとに正しいシグネチャを判定するにはどうすればいいですか? &#x2F; 各リボン属性が示す内容を調べるにはどうすればいいですか?</p>
+<h4 id="4-コールバック関数の追加"><a href="#4-コールバック関数の追加" class="headerlink" title="4. コールバック関数の追加"></a><strong>4. コールバック関数の追加</strong></h4><p>それではサンプルの作成手順に戻り、コードのコメント TODO の 2. に記載の通り、コールバック関数を作成します。</p>
+<p>コールバック関数には、リボンの操作によって行いたい処理を記述します。今回は、ボタン コントロールのクリックでメッセージ ボックスを表示したいので、onAction 属性から呼び出されるコールバック関数を、Ribbon.cs 内の、Visual Studio によって作成された “#region リボンのコールバック” の中に記述します。</p>
+<p><img src="/blog/cl0mdnodm00245ovs9qdfdvwi/image5.png"></p>
+<p>図 5. コールバック関数の追加</p>
+<p><strong>ポイント</strong></p>
+<ul>
+<li>コールバック関数は、public で定義します。</li>
+<li>今回のサンプルでは、コールバック関数の名前は「customButtonOnAction」としましたが、これは次の手順で変更する XML と対応していれば、任意の名前で構いません。</li>
+<li>ボタン コントロールの onAction 属性で渡される引数を受け取るよう記述します。この場合、「Office.IRibbonControl control」 です。</li>
+</ul>
+<h4 id="5-XML-への属性の追加"><a href="#5-XML-への属性の追加" class="headerlink" title="5. XML への属性の追加"></a><strong>5. XML への属性の追加</strong></h4><p>4. で作成したコールバック関数をボタンのクリック時に呼び出すよう、Ribbon.xml の customButton タグの要素として、onAction 属性を記述します。</p>
+<p>今回の場合、はじめにビジュアルなデザイナーでイベント ハンドラーを作成しているため、すでに onAction 要素は追加されています。呼び出すコールバック関数名を、4. に合わせて「customButtonOnAction」に変更します。</p>
+<p><img src="/blog/cl0mdnodm00245ovs9qdfdvwi/image6.png"></p>
+<p>図 6. XML への属性追加</p>
+<p><strong>6. ビルドして実行する</strong></p>
+<p>以上で、XML でのリボン カスタマイズの手順は完了です。F5 キーでプロジェクトをビルドしてデバッグ実行すると、動作を確認できます。</p>
+<p>なお、ビジュアルなデザイナーで作成した Ribbon1.cs (Ribbon1.Designer.cs が子コードになっているもの) はもう必要ありませんので、削除します。</p>
+<p><img src="/blog/cl0mdnodm00245ovs9qdfdvwi/image7.png"></p>
+<p>図 7.ビジュアルなデザイナーで作成した不要なコード</p>
+<h4 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a><strong>参考資料</strong></h4><p>今回説明した内容は、以下の資料を基にしています。</p>
+<p>タイトル : リボン XML<br>アドレス : <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/library/aa942866.aspx">https://msdn.microsoft.com/ja-jp/library/aa942866.aspx</a></p>
+<p>ここまで 3 回にわたって紹介してきた Office リボンをカスタマイズする方法の詳細を紹介してきました。あと何回かこのテーマで記事を投稿予定です。これ以降は、よく行われるカスタマイズ内容について、XML の書き方の具体例などに触れていきたいと思っています。</p>
+<p>今回の投稿は以上です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0mdnodm00245ovs9qdfdvwi/" data-id="cl8kyfim8004om86yf6ck7nkv" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0mc9o220024b0vs9oh30xtc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0mc9o210023b0vs43wag0a0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Office リボンをカスタマイズ – パート5 – (TIPS 1：既存メニューのカスタマイズ)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 16.25px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 15px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 12.5px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl8lbafua0000vg6yhn5ahyju/">ボリュームライセンス版 Visio 2019、Project 2019 または Visio 2021、Project 2021 と Microsoft 365 Apps を共存インストールする方法について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl7pvphjn0000a46ygd3m4nro/">暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6q3dt1k0000ks3pemokg0de/">WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6as2js40007m0u87h40erld/">ストア アドインを利用したファイルを一元展開で利用できるようになりました</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl4hy59k50027usvsc5k6cuto/">Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

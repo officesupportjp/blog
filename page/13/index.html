@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="日本マイクロソフト Office Client サポート チームのブログです">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Japan Office Client Support Blog">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/page/13/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="日本マイクロソフト Office Client サポート チームのブログです">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="Microsoft">
+<meta property="article:tag" content="Office">
+<meta property="article:tag" content="Support">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="Word">
+<meta property="article:tag" content="PowerPoint">
+<meta property="article:tag" content="OneNote">
+<meta property="article:tag" content="Access">
+<meta property="article:tag" content="マイクロソフト">
+<meta property="article:tag" content="オフィス">
+<meta property="article:tag" content="サポート">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n10de0001b90vsbowhgnig/" class="article-date">
+  <time datetime="2019-02-08T00:00:00.000Z" itemprop="datePublished">2019-02-08</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n10de0001b90vsbowhgnig/">Office 365 Sway を PowerShell を使用して一括で有効化、無効化 (停止) する方法について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n10de0001b90vsbowhgnig/" class="article-date-single">    
+        
+    <time datetime="2019-03-22T00:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 6 月 8 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
+こんにちは、Office サポートの佐村です。本記事では Office 365 にて公開されている Sway について、PowerShell スクリプトを使用して一括でテナント全体のユーザーのライセンスを有効化、無効化する方法をご案内いたします。  
+2016&#x2F;07&#x2F;27 updateOffice 365 管理センター - [サービス設定] - [Sway] -  “組織全体に対して Sway をオンまたはオフにします。”の設定が廃止されました。  
+目次  
+1. Sway のライセンスについて2. PowerShell を使用して一括で有効化する方法3. PowerShell を使用して一括で無効化する方法4. 関連情報  
+1...
+        <p class="article-more-link">
+          <a href="/blog/cl0n10de0001b90vsbowhgnig/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001b90vsbowhgnig/" data-id="cl8kyfilc002vm86yg64waxwx" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date">
+  <time datetime="2019-02-08T00:00:00.000Z" itemprop="datePublished">2019-02-08</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n10de1001d90vs6xzb5ynb/">Office 365 Sway を PowerShell を使用して指定ユーザー単位で有効化、無効化 (停止) する方法について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n10de1001d90vs6xzb5ynb/" class="article-date-single">    
+        
+    <time datetime="2019-03-22T00:00:00.000Z" itemprop="lastupdate">2019-03-22</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 8 月 16 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
+こんにちは、Office サポートの橋村です。Office 365 で公開されている Sway アプリケーションについて、以前に PowerShell スクリプトを使用して、テナント全体のユーザーのライセンスを一括して有効化&#x2F;無効化する方法をご案内いたしました。本記事では、テナント全体のユーザーではなく、指定したユーザーのみのライセンスを有効化&#x2F;無効化する方法をご案内いたします。  
+目次  
+1. Sway のライセンスについて2. PowerShell のインストール3. ユーザーリストの作成4. PowerShell で指定ユーザーのみを有効化する方法5. PowerShell で指定ユーザーのみを無効化する方法6. ユーザ...
+        <p class="article-more-link">
+          <a href="/blog/cl0n10de1001d90vs6xzb5ynb/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de1001d90vs6xzb5ynb/" data-id="cl8kyfile002xm86yhuip3rnc" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Excel 2010 以降で条件付き書式を設定したブックへのコピー &amp; ペーストに時間がかかる" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n10dcu000j90vsghpb14v9/" class="article-date">
+  <time datetime="2019-02-07T00:00:00.000Z" itemprop="datePublished">2019-02-07</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n10dcu000j90vsghpb14v9/">Excel 2010 以降で条件付き書式を設定したブックへのコピー &amp; ペーストに時間がかかる</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n10dcu000j90vsghpb14v9/" class="article-date-single">    
+    
+    <time datetime="2019-02-07T00:00:00.000Z" itemprop="dateUpdated">2019-02-07</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 8 月 14 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートの町口です。  
+本記事では、Excel 2010 以降で条件付き書式を設定したブックへのコピー&amp; ペーストに時間がかかる現象について説明します。
+現象Excel 2007 と比較して、Excel 2010 以降では、条件付き書式を設定ブックへのコピー&amp; ペーストに時間がかかります。
+原因貼り付けした際、ブック内の条件付き書式の再評価が行われますが、
+この再評価処理がExcel 2010 以降でより綿密に行われるようになり、処理量が増えています。
+その結果、多くの条件付き書式が設定されているブックでは、Excel 2007 と比較して、この再評価処理に顕著に時間がかかります。
+この動作は仕様変更の影響によ...
+        <p class="article-more-link">
+          <a href="/blog/cl0n10dcu000j90vsghpb14v9/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcu000j90vsghpb14v9/" data-id="cl8kyfikd0011m86yd17vfx5c" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 2016 が行うインターネット接続について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n10de0001a90vs28153y7h/" class="article-date">
+  <time datetime="2019-02-07T00:00:00.000Z" itemprop="datePublished">2019-02-07</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n10de0001a90vs28153y7h/">Office 2016 が行うインターネット接続について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n10de0001a90vs28153y7h/" class="article-date-single">    
+    
+    <time datetime="2019-02-07T00:00:00.000Z" itemprop="dateUpdated">2019-02-07</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 2 月 8 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートです。本記事では Office 2016 が行うインターネット接続について説明します。
+説明Office 2016 では起動時や一部の機能でインターネットへ接続する動作になっています。
+この動作は想定された動作です。
+具体的な接続先は、以下の資料で案内しています。
+ Office 365 ProPlus でのネットワーク要求
+ https://support.office.com/ja-jp/article/Office-365-ProPlus-%E3%81%A7%E3%81%AE%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E8%A6%81%E6%B1%82...
+        <p class="article-more-link">
+          <a href="/blog/cl0n10de0001a90vs28153y7h/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10de0001a90vs28153y7h/" data-id="cl8kyfil8002mm86y25swerpw" class="article-share-link">共有</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n10dcv000k90vs6yxmbsb8/" class="article-date">
+  <time datetime="2019-02-04T00:00:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n10dcv000k90vs6yxmbsb8/">Excel 2013 以降のバージョンでファイルを保護ビューで開くときにシート領域が描画されない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n10dcv000k90vs6yxmbsb8/" class="article-date-single">    
+    
+    <time datetime="2019-02-04T00:00:00.000Z" itemprop="dateUpdated">2019-02-04</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 10 月 6 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートの町口です。
+本記事では、Excel 2013 以降で、前回画面サイズが最小化された状態のファイルを保護ビューで開くときに、シート領域が描画されない現象について説明します。
+2018&#x2F;02&#x2F;08 Update[対処方法] セクションに修正プログラムの情報を追記しました。
+現象Excel 2013 以降で、先に任意のExcel ファイルを開いている状態にして、次に、前回画面サイズが最小化された状態のファイルを保護されたビューで開くとき、メッセージ バーやシート領域が描画されず、グレーの状態となります。
+再現手順:
+
+新規ブックを作成し、一旦保存します。
+ファイルに何らかの編集を加えて、ウィンドウを最小化...
+        <p class="article-more-link">
+          <a href="/blog/cl0n10dcv000k90vs6yxmbsb8/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcv000k90vs6yxmbsb8/" data-id="cl8kyfikf0015m86ye80qd0pa" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n10dcz000n90vsaznd04om/" class="article-date">
+  <time datetime="2019-02-04T00:00:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n10dcz000n90vsaznd04om/">Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n10dcz000n90vsaznd04om/" class="article-date-single">    
+    
+    <time datetime="2019-02-04T00:00:00.000Z" itemprop="dateUpdated">2019-02-04</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 10 月 26 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートの町口です。本記事では新たに確認された、Excel 2013 以降のバージョンで正しく横 (項目) 軸ラベルが更新されない問題について説明します。
+!! Update !!
+2017&#x2F;02&#x2F;09　Excel 2013 Windows インストーラー版の解決方法を追加しました。
+2017&#x2F;02&#x2F;23　Excel 2013 クイック実行版と Excel 2016 クイック実行版 (FRDC) の解決方法を追加しました。
+2017&#x2F;02&#x2F;23　Excel 2016 クイック実行版の解決方法 (CC) を追加しました。
+2017&#x2F;03&#x2F;15　Exc...
+        <p class="article-more-link">
+          <a href="/blog/cl0n10dcz000n90vsaznd04om/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n10dcz000n90vsaznd04om/" data-id="cl8kyfikg0017m86y1nlxbyjd" class="article-share-link">共有</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Excel 2016 ですぐに条件付き書式が反映されない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n1lilx000nokvs9i0o288v/" class="article-date">
+  <time datetime="2019-02-04T00:00:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n1lilx000nokvs9i0o288v/">Excel 2016 ですぐに条件付き書式が反映されない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n1lilx000nokvs9i0o288v/" class="article-date-single">    
+    
+    <time datetime="2019-02-04T00:00:00.000Z" itemprop="dateUpdated">2019-02-04</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 11 月 14 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)  
+2016/11/9 更新:  
+この不具合の修正を含む MSI 向けの修正をリリースいたしましたので、[対処方法] セクションを更新しました。
+
+  
+  
+
+こんにちは、Office サポートの町口です。本記事では新たに確認された、Excel 2016 ですぐに条件付き書式が反映されない問題について説明します。
+現象以下のような条件付き書式を設定したファイルを Excel 2016 で開いた場合、セルに値を入力しても、条件付き書式がすぐに反映されず、セルの背景色が更新されません。
+条件付き書式の例 :セルに値を設定していない場合にセルの背景色を黄色に設定し、セルに値が入っているときにはセルの背景色を無色にする。設定内容詳細は再現手順に記載します。...
+        <p class="article-more-link">
+          <a href="/blog/cl0n1lilx000nokvs9i0o288v/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lilx000nokvs9i0o288v/" data-id="cl8kyfiki001cm86y9w6o67yx" class="article-share-link">共有</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 2010 に Ogl.dll の更新プログラムが適用されない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n1lim70016okvsef1sfvh1/" class="article-date">
+  <time datetime="2019-02-04T00:00:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n1lim70016okvsef1sfvh1/">Office 2010 に Ogl.dll の更新プログラムが適用されない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n1lim70016okvsef1sfvh1/" class="article-date-single">    
+        
+    <time datetime="2021-04-14T00:00:00.000Z" itemprop="lastupdate">2021-04-14</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 6 月 19 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートの町口です。  
+本記事では Office 2010 に Ogl.dll の更新プログラムが適用されない (適用の必要がない) パターンについて説明します。
+説明Windows Vista 以降の OS 上の Office 2010 の環境には、システム内に Ogl.dll 自体が存在しないため Ogl.dll の脆弱性はありません。  
+ご安心ください。  
+そのため、ご利用の環境の OS が Windows Vista 以降である場合は、Office 2010 のセキュリティ更新プログラムとして Ogl.dll が公開されても適用する必要はありません。
+2017 年 6 月以降にリリースされた Ogl.dll の更新...
+        <p class="article-more-link">
+          <a href="/blog/cl0n1lim70016okvsef1sfvh1/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lim70016okvsef1sfvh1/" data-id="cl8kyfil5002gm86y9zxw6o43" class="article-share-link">共有</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Office 2010 に Wwlibcxm.dll の更新プログラムが適用されない" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n1lim60015okvs47xm0v9h/" class="article-date">
+  <time datetime="2019-02-04T00:00:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n1lim60015okvs47xm0v9h/">Office 2010 に Wwlibcxm.dll の更新プログラムが適用されない</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n1lim60015okvs47xm0v9h/" class="article-date-single">    
+        
+    <time datetime="2021-04-14T00:00:00.000Z" itemprop="lastupdate">2021-04-14</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 6 月 19 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートの町口です。
+本記事ではOffice 2010 にWwlibcxm.dll の更新プログラムが適用されない(適用の必要がない) パターンについて説明します。
+説明Wwlibcxm.dll は、英語圏の特殊な環境のみに存在するコンポーネントです。
+日本で日本語版のOffice 2010 をご利用の場合には、システム内にこのdll は存在しないため、Wwlibcxm.dll の脆弱性はありません。  
+ご安心ください。
+そのため、システム内に Wwlibcxm.dll が存在しない場合には、Office 2010 のセキュリティ更新プログラムとしてWwlibcxm.dll が公開されても適用する必要はありません。
+2017 ...
+        <p class="article-more-link">
+          <a href="/blog/cl0n1lim60015okvs47xm0v9h/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lim60015okvs47xm0v9h/" data-id="cl8kyfil6002im86y1imsbo9w" class="article-share-link">共有</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-OneNote 2016 で全角入力から半角入力にすると「遊ゴシック」に切り替わる" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0n1lin1002iokvs3pyk3svz/" class="article-date">
+  <time datetime="2019-02-04T00:00:00.000Z" itemprop="datePublished">2019-02-04</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0n1lin1002iokvs3pyk3svz/">OneNote 2016 で全角入力から半角入力にすると「遊ゴシック」に切り替わる</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0n1lin1002iokvs3pyk3svz/" class="article-date-single">    
+    
+    <time datetime="2019-02-04T00:00:00.000Z" itemprop="dateUpdated">2019-02-04</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 11 月 29 日に Office Support Team Blog JAPAN に公開した情報のアーカイブです。)
+こんにちは、Office サポートの町口です。本記事では新たに確認された、OneNote 2016 で既定のフォントを設定していても、全角入力から半角入力にすると「遊ゴシック」に切り替わる問題について説明します。
+2017&#x2F;10&#x2F;18 Update[対処方法] セクションに修正プログラム (クイック実行形式) の情報を追記しました。
+2018&#x2F;10&#x2F;30 Update[対処方法] セクションに修正プログラム (Windows インストーラー形式) の情報を追記しました。
+現象OneNote 2016 でオプションやグループポリシーで、既定のフォントを「ＭＳ Ｐゴシック」等に設定していても、
+全角入力から半角入力に...
+        <p class="article-more-link">
+          <a href="/blog/cl0n1lin1002iokvs3pyk3svz/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0n1lin1002iokvs3pyk3svz/" data-id="cl8kyfimt005lm86y9tko9jm1" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/blog/page/12/">戻る</a><a class="page-number" href="/blog/">1</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/11/">11</a><a class="page-number" href="/blog/page/12/">12</a><span class="page-number current">13</span><a class="page-number" href="/blog/page/14/">14</a><a class="extend next" rel="next" href="/blog/page/14/">次へ</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 16.25px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 15px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 12.5px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl8lbafua0000vg6yhn5ahyju/">ボリュームライセンス版 Visio 2019、Project 2019 または Visio 2021、Project 2021 と Microsoft 365 Apps を共存インストールする方法について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl7pvphjn0000a46ygd3m4nro/">暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6q3dt1k0000ks3pemokg0de/">WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6as2js40007m0u87h40erld/">ストア アドインを利用したファイルを一元展開で利用できるようになりました</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl4hy59k50027usvsc5k6cuto/">Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

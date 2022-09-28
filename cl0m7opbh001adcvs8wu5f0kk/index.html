@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="(※ 2017 年 9 月 26 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 今回は Office 365 ProPlus で バックステージ ビューの [ファイル] - [名前を付けて保存] などに表示される SharePoint Online 等のオンラインストレージを非表示にする方法についてご">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m7opbh001adcvs8wu5f0kk/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="(※ 2017 年 9 月 26 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 今回は Office 365 ProPlus で バックステージ ビューの [ファイル] - [名前を付けて保存] などに表示される SharePoint Online 等のオンラインストレージを非表示にする方法についてご">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m7opbh001adcvs8wu5f0kk/image1.png">
+<meta property="article:published_time" content="2019-03-09T00:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-28T05:24:50.534Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="クラウド ストレージ">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m7opbh001adcvs8wu5f0kk/image1.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m7opbh001adcvs8wu5f0kk/" class="article-date">
+  <time datetime="2019-03-09T00:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Office 365 ProPlus アプリケーションでバックステージビューのオンラインストレージを非表示にする方法について
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m7opbh001adcvs8wu5f0kk/" class="article-date-single">    
+    
+    <time datetime="2019-03-09T00:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>(※ 2017 年 9 月 26 日に Japan Office Support Blog に公開した情報のアーカイブです。)</p>
+<p>こんにちは、Office サポート チームです。</p>
+<p>今回は Office 365 ProPlus で バックステージ ビューの [ファイル] - [名前を付けて保存] などに表示される SharePoint Online 等のオンラインストレージを非表示にする方法についてご案内します。</p>
+<h4 id="説明"><a href="#説明" class="headerlink" title="説明"></a><strong>説明</strong></h4><p>Office 365 ProPlusでは、バックステージ ビューの [ファイル] - [名前を付けて保存] 等のメニューに SharePoint Online や OneDrive のオンラインストレージが表示されます。<br>※バックステージビューは、その他「開く」や「上書き保存」メニューにも共通で表示されます。</p>
+<p>Office 365 ProPlus の最新のバージョンでは、この表示をレジストリやグループポリシーにて非表示にすることが可能です。<br>具体的な制御方法は、後述の 【方法】 の項で記載いたしますが、各方法には利用可能なバージョンや対象となる製品がありますので、下記の一覧を参照ください。</p>
+<p>方法 1 、方法 2 では、Office 365 ProPlus の Excel &#x2F; Word &#x2F;PowerPoint アプリケーションを対象に、SharePoint &#x2F; OneDrive for Business &#x2F; 個人用 OneDrive を制御することが可能ですが、Publisher と Visio は対象外となります。</p>
+<p>また、方法 1 、2が利用可能なバージョンは、Current Channel (CC) は、1610 以降、 First Release for Deferred Channel (FRDC) と Deferred Channel (DC) では 1701 以降となります。</p>
+<p>方法 3 では、Office 365 ProPlus に限らず、Office 2016 アプリケーションにてバージョンに依存なく利用可能で、個人用 OneDrive のみを制御する方法となり、この方法は、Publisher と Visio も制御可能となります。</p>
+<p>- 各方法の対象の製品 -</p>
+<p><img src="/blog/cl0m7opbh001adcvs8wu5f0kk/image1.png"></p>
+<p>目的の環境に合わせて、制御方法をご検討ください。</p>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a><strong>方法</strong></h4><p>以下に記載する方法 1 から 方法 3 を利用して、制御が可能です。</p>
+<p>-—————–<br>方法 1 . レジストリで設定する<br>-—————–<br>直接レジストリに以下の値を設定することで、バックステージ ビューのオンラインストレージを非表示にすることが可能です。</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet</p>
+<p>名前 : OnlineStorage</p>
+<p>種類 : DWORD</p>
+<p>値     : 3</p>
+<p>(値の説明)</p>
+<p>0 &#x3D; 無効 (すべての場所が表示されます)</p>
+<p>1 &#x3D; 個人向け OneDrive を非表示にします</p>
+<p>2 &#x3D; OneDrive for Business と SharePoint Online を非表示にします</p>
+<p>3 &#x3D; Microsoft のオンライン機能をすべて非表示にします</p>
+<p>-—————–<br>方法 2 . グループ ポリシーを利用する<br>-—————–</p>
+<p>Office 2016 のグループ ポリシーを利用して、バックステージ ビューのオンラインストレージを非表示にすることも可能です。</p>
+<p>2-1. グループ ポリシー エディター を起動して、左側のペインで以下まで選択します。<br>  [ユーザーの構成] -  [管理用テンプレート] - [Microsoft Office 2016] -  [その他]</p>
+<p>2-2. 右側のウィンドウで [Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] を選択します。</p>
+<p>2-3. [Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] の項目画面で、[有効] を選択し、オプションを [すべて非表示] として [適用] をクリックします。</p>
+<p>このグループ ポリシーの設定は、以下のレジストリ値を追加することでも同じ効果となります。</p>
+<p> キー: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\Internet</p>
+<p> 名前 : OnlineStorage</p>
+<p> 種類 : REG_DWORD</p>
+<p> 値     : 3</p>
+<p>-—————–<br>方法 3. 個人用の OneDrive のみを非表示にする方法<br>-—————–</p>
+<p>以下の 2 つの方法では、個人用の OneDrive のみを非表示にし、SharePoint と OneDrive for Business は表示したままにすることが可能です。<br>この方法は、Office 365 ProPlus に限らず、Office Professinal Plus 2016 でも有効になります。</p>
+<p>方法 3-1. レジストリから個人用 OneDrive のみを非表示にする<br>-———<br>以下のレジストリを設定することで、個人用の OneDrive のみが非表示になります。</p>
+<p>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\General</p>
+<p>名前 : SkyDriveSignInOption</p>
+<p>種類 : DWORD</p>
+<p>値    : 0</p>
+<p>方法 3-2. グループ ポリシーから個人用 OneDrive のみを非表示にする<br>-———<br>グループポリシーから個人用の OneDrive のみ非表示にするには、以下の設定を行います。</p>
+<p>3-2-1. グループ ポリシー エディター を起動して、左側のペインで以下まで選択します。<br>  [ユーザーの構成] - [管理用テンプレート] - [Microsoft Office 2016] - [その他]</p>
+<p>3-2-2. 右側のウィンドウで [OneDrive のサインインを表示する] を選択します。</p>
+<p>3-2-3. [OneDrive のサインインを表示する] の項目画面で、[無効] を選択し [適用] をクリックします。</p>
+<p>このグループ ポリシーの設定は、以下のレジストリ値を追加することでも同じ効果となります。</p>
+<p> キー: HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Common\General</p>
+<p> 名前 : SkyDriveSignInOption</p>
+<p> 種類 : REG_DWORD</p>
+<p> 値     : 0</p>
+<h5 id="参考サイト"><a href="#参考サイト" class="headerlink" title="参考サイト"></a><strong>参考サイト</strong></h5><p>グループ ポリシーにつきましては、以下の弊社サイトにて詳しくご案内しております。<br>タイトル : グループ ポリシー管理での ADMX ファイルの使用に関するステップ バイ ステップ ガイド<br>URL   : <a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/cc709647(v=WS.10).aspx">https://technet.microsoft.com/ja-jp/library/cc709647(v=WS.10).aspx</a></p>
+<p>Office 2016 対象の管理用テンプレートは、以下からご入手いただけます。<br>タイトル : Office 2016 Administrative Template files (ADMX&#x2F;ADML) and Office Customization Tool<br>URL   : <a target="_blank" rel="noopener" href="https://www.microsoft.com/en-us/download/details.aspx?id=49030">https://www.microsoft.com/en-us/download/details.aspx?id=49030</a></p>
+<p>* 注意事項</p>
+<p>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m7opbh001adcvs8wu5f0kk/" data-id="cl8kyfilc002tm86y19slbflo" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/cl0m7opbg0019dcvs7v7v1fkj/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          Office 2016 アプリケーション起動時に「コンピューターに api-ms-win-crt-heap-|1-1-0.dll がないため、プログラムを開始できません。」等のメッセージが表示される現象について
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/cl0m7opbk001fdcvs05wsecb0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">Office Online と Office デスクトップ アプリケーションの機能差異に関する情報</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 16.25px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 15px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 12.5px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/cl8lbafua0000vg6yhn5ahyju/">ボリュームライセンス版 Visio 2019、Project 2019 または Visio 2021、Project 2021 と Microsoft 365 Apps を共存インストールする方法について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl7pvphjn0000a46ygd3m4nro/">暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6q3dt1k0000ks3pemokg0de/">WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl6as2js40007m0u87h40erld/">ストア アドインを利用したファイルを一元展開で利用できるようになりました</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cl4hy59k50027usvsc5k6cuto/">Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
