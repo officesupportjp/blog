@@ -246,10 +246,6 @@ Office 展開ツール を利用する際の xml ファイル、および、コ�
 
 https://technet.microsoft.com/ja-jp/library/jj219422.aspx
 
-同一コンピューター上に異なるバージョンの Office、Project、Visio をインストールするためのサポート対象シナリオ
-
-https://technet.microsoft.com/ja-jp/library/mt712177(v=office.16).aspx
-
 Visio の展開ガイド
 
 https://learn.microsoft.com/ja-jp/deployoffice/deployment-guide-for-visio
