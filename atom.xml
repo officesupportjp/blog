@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2022-09-28T07:38:00.329Z</updated>
+  <updated>2022-09-30T01:36:51.024Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PowerPoint でのカラー印刷について</title>
+    <link href="https://officesupportjp.github.io/blog/cl8ntfhk30000246y446z0u65/"/>
+    <id>https://officesupportjp.github.io/blog/cl8ntfhk30000246y446z0u65/</id>
+    <published>2022-09-30T00:00:00.000Z</published>
+    <updated>2022-09-30T01:36:51.024Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、PowerPoint でカラー印刷に対応したプリンターに印刷をする際の色の設定について説明します。</p><h2 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h2><p>PowerPoint では印刷時に “カラー”、”グレースケール”、”単純白黒” のいずれかの設定を選んで印刷することができます。</p><p><img src="/blog/cl8ntfhk30000246y446z0u65/image1.png"></p><p>PowerPoint の既定の設定では、プリンター ドライバーの既定の設定よりも PowerPoint で印刷時に選択した設定が優先されて印刷されます。<br>プリンターから印刷された印刷結果が、PowerPoint で印刷時に選択した設定ではなく、プリンター ドライバーの既定の設定となって印刷される場合、以下のレジストリ値が設定されている可能性があります。<br><br><br><br></p><p>キー</p><p>HKEY_CURRENT_USER\Software\Microsoft\Office&lt;以下参照&gt;\PowerPoint</p><p>Office 2013 の場合 : 15.0<br>Office 2016、2019、2021、Microsoft 365 Apps の場合 : 16.0</p><p>値の名前 : IgnoreDevModeColor<br>値の種類 : REG_DWORD<br>設定されている値 : 1</p><p>レジストリ値が 1 でセットされている場合の動作としては、以下のようになります。</p><p>プリンターの既定設定 : カラー<br>PowerPoint の設定 : 単純白黒</p><p>印刷結果 : カラー</p><p>なお、本レジストリ値は、Office 製品をインストールした既定の状態では設定されていません。</p><p>PowerPoint からの印刷で色の設定が期待通りに動作しない場合、こちらの設定がされていないかご確認をお願いいたします。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、PowerPoint でカラー印刷に対応したプリンターに印刷をする際の色の設定について説明します。&lt;/p&gt;
+&lt;h2 id=&quot;事象の詳細&quot;&gt;&lt;a href=&quot;#事象の詳細&quot; class=&quot;headerlin</summary>
+      
+    
+    
+    
+    
+    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>ボリュームライセンス版 Visio 2019、Project 2019 または Visio 2021、Project 2021 と Microsoft 365 Apps を共存インストールする方法について</title>
@@ -460,27 +483,6 @@
     
     
     <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる</title>
-    <link href="https://officesupportjp.github.io/blog/cl0m69xtr000o4cvs2pym5n2d/"/>
-    <id>https://officesupportjp.github.io/blog/cl0m69xtr000o4cvs2pym5n2d/</id>
-    <published>2020-10-20T00:00:00.000Z</published>
-    <updated>2022-09-28T05:24:50.518Z</updated>
-    
-    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>【最終更新日: 2021&#x2F;02&#x2F;10】</strong></span></p><p>こんにちは、Office サポートです。<br>本記事では新たに確認された、Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる問題について説明します。  </p><p><strong>現象</strong><br>Excel for Microsoft 365 で Insert キーを押下し、<br>上書きモードで DBCS (2 バイト文字) を編集すると、意図せず 2 文字ぶん上書きされます。  </p><p><strong>再現手順</strong><br>例) 「あい<strong>う</strong>えお」を「あい<strong>か</strong>えお」に直したい場合</p><p>1. 任意のセルに、「あいうえお」と入力します。<br>2.「う」のまえにカーソル入れます。<br>3. [insert] キーで上書きモードにします。</p><p><img src="/blog/cl0m69xtr000o4cvs2pym5n2d/image1.png"></p><p>4.「か」と入力し、確定のため [Enter] キーを押します。</p><p>結果 :<br>「う」と「え」の部分が、「か」で上書きされて、「あいかお」になります。  </p><p><img src="/blog/cl0m69xtr000o4cvs2pym5n2d/image2.png"></p><p>期待する結果は、「あいかえお」です。  </p><p><strong>解決方法</strong>  </p><p>以下の更新チャネル&#x2F;バージョンで修正しました。<br>下記以降の更新チャネル&#x2F;バージョンに更新することで解決します。</p><p>　最新チャネル (プレビュー) : バージョン 2012 (ビルド 13530.20064)<br>　最新チャネル : バージョン 2012 (ビルド 13530.20316)<br>　半期エンタープライズ チャネル (プレビュー) : バージョン 2008 (ビルド 13127.21064)<br>　半期エンタープライズ チャネル : バージョン 2008 (ビルド 13127.21064)</p><p>　月次エンタープライズ チャネル : バージョン 2012 (ビルド 13530.20528)</p><p><strong>回避策</strong><br>[insert] キーで挿入モードに切り替えて、編集します。  </p><p><strong>状況</strong><br>マイクロソフトでは、この問題をこの資料の対象製品として記載されているマイクロソフト製品の問題として認識しています  </p><p><strong>更新履歴</strong><br>2021&#x2F;01&#x2F;14 : 解決方法を追加しました。</p><p>2021&#x2F;02&#x2F;10 : 解決方法に、月次エンタープライズ チャネルを追加しました。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;【最終更新日: 2021&amp;#x2F;02&amp;#x2F;10】&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;こんにちは、Office サポートです。&lt;br&gt;本記事では新たに確認された、Excel for </summary>
-      
-    
-    
-    
     
   </entry>
   
