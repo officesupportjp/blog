@@ -9,7 +9,8 @@
     "server": "hexo server",
     "getpage": "node getpage.js",
     "export": "node tools/export.js",
-    "import": "node tools/import.js"
+    "import": "node tools/import.js",
+    "readme": "node tools/readmepage.js"
   },
   "hexo": {
     "version": "6.3.0"
