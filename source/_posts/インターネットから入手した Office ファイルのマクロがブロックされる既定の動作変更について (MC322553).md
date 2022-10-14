@@ -1,7 +1,7 @@
 ---
 title: インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)
 date: '2022-02-18'
-lastupdate: '2022-07-29'
+lastupdate: '2022-10-14'
 tags:
   - VBA マクロ
 id: cl0m4f5o1003504vsa5tp25c2
@@ -10,9 +10,10 @@ id: cl0m4f5o1003504vsa5tp25c2
 
 <span style="color:#ff0000">**2022/03/18 Update**</span>  
 <span style="color:#339966">- "【インターネット入手ファイルとみなされるシナリオ】" を追記しました。</span>  
+
 <span style="color:#339966">- "【マクロを有効にする方法について】" 内に以下を追記しました。</span>  
-<span style="color:#339966">&nbsp;&nbsp;- "1) ポリシーでマクロを有効にする方法" に [マクロの設定] による制御が実施されることを追記しました。</span>  
-<span style="color:#339966">&nbsp;&nbsp;- "4) Web 上のファイルを開くシナリオで、信頼済みサイトに登録する方法" を追記しました。</span>  
+<span style="color:#339966"> "1) ポリシーでマクロを有効にする方法" に [マクロの設定] による制御が実施されることを追記しました。</span>  
+<span style="color:#339966"> "4) Web 上のファイルを開くシナリオで、信頼済みサイトに登録する方法" を追記しました。</span>  
 
 <span style="color:#ff0000">**2022/06/08 Update**</span>  
 <span style="color:#339966">ネットワーク共有がインターネット ゾーンとみなされるシナリオについて追記しました。</span>  
@@ -22,6 +23,9 @@ id: cl0m4f5o1003504vsa5tp25c2
 
 <span style="color:#ff0000">**2022/07/29 Update**</span>  
 <span style="color:#339966">最新チャネルへのリリース再開されたため、記載を変更しました。</span>  
+
+<span style="color:#ff0000">**2022/10/14 Update**</span>  
+<span style="color:#339966">本動作変更に関する新しいブログ記事「インターネット入手マクロ ブロックのトラブルシュートの流れ」へのリンクを追加しました。</span>  
 
 <br>
 
@@ -36,15 +40,21 @@ id: cl0m4f5o1003504vsa5tp25c2
 今回のご説明は以下公開情報でご案内している内容となります。
 
 タイトル : Macros from the internet will be blocked by default in Office  
-アドレス  : [https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked](https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked) (日本語版 - 機械翻訳)  
-アドレス  : [https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked](https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked) (英語版)  
+アドレス : [https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked](https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked) (日本語版 - 機械翻訳)  
+アドレス : [https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked](https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked) (英語版)  
 
 また、以下のとおり、ブログ記事も公開されています。
 
 タイトル : Helping users stay safe: Blocking internet macros by default in Office  
-アドレス  : [https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805](https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805) (英語版)
+アドレス : [https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805](https://techcommunity.microsoft.com/t5/microsoft-365-blog/helping-users-stay-safe-blocking-internet-macros-by-default-in/ba-p/3071805) (英語版)
 
 上記公開情報 / ブログ記事には最新状況の更新がされている場合があるため、適宜ご確認ください。
+
+**追加情報**  
+この記事では変更の詳細をご説明していますが、ブロックされる理由は複数あります。実際にこの変更でマクロがブロックされる動作に直面した場合に、どの理由でブロックされているかを特定する流れについて以下のブログを作成しましたので、合わせてご参照ください。
+
+タイトル : インターネット入手マクロ ブロックのトラブルシュートの流れ
+アドレス : [https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/](https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/)
 
 <br>
 
@@ -127,7 +137,7 @@ id: cl0m4f5o1003504vsa5tp25c2
 
 上記の動作変更にて無効化されたマクロを有効にする方法を以下に説明します。
 
-## 1) ポリシーでマクロを有効にする方法
+## <p id="EnableVBA-1">1) ポリシーでマクロを有効にする方法</p>
 Office 管理用テンプレートのグループ ポリシーなどを利用し以下を設定するとインターネットから入手した Office ファイルについてもマクロを有効にできます。
 
 #### <グループ ポリシー設定>
@@ -148,7 +158,7 @@ Office 管理用テンプレートのグループ ポリシーなどを利用し
 
 <br>
 
-## 2) 特定のファイルでマクロを有効にする方法
+## <p id="EnableVBA-2">2) 特定のファイルでマクロを有効にする方法</p>
 特定のファイルでマクロを有効にする方法ついて、以下の "Web マークを削除する方法" 及び "信頼できる発行元のデジタル署名を追加する方法" があります。
 ### Web マークを削除する方法
 インターネットから入手したファイルには Web マークが付与されると先ほど述べましたが、この Web マークの実体はWindows OS で広く利用されている NTFS ファイルシステムの代替データストリーム（ADS：Alternate Data Stream）に保存されているゾーン識別子 (Zone.Identifier) です。
@@ -198,7 +208,7 @@ Office アプリケーション実行環境にて、"信頼できる発行元" �
 
 <br>
 
-## 3) 特定のフォルダーのファイルでマクロを有効にする方法
+## <p id="EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</p>
 各アプリケーションの以下オプション設定で確認 / 追加可能な "信頼できる場所" に登録されているパスにマクロ付きファイルを保存をすることにより、マクロが実行可能となります。
 
 #### <オプション 設定>  
@@ -248,7 +258,7 @@ Office アプリケーション実行環境にて、"信頼できる発行元" �
 
 <br>
 
-## 4) Web ・ネットワーク共有上のファイルを開くシナリオで、信頼済みサイトに登録する方法
+## <p id="EnableVBA-4">4) Web ・ネットワーク共有上のファイルを開くシナリオで、信頼済みサイトに登録する方法</p>
 自社 Web サイトや社内ファイル サーバーなど、安全が保証されている場所の Office ファイルを開く場合は、Web サイトまたはサーバーを信頼済みサイトに登録すると、インターネット入手ファイルとみなされずマクロを有効にできます。
 
 #### <信頼済みサイト登録手順>
