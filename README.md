@@ -113,6 +113,7 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [Word 2016 からメールを送信すると文字化けする](./source/_posts/Word%202016%20からメールを送信すると文字化けする.md)
 - [Word 2016 の 2018 年 3 月 セキュリティ更新プログラム KB4011730 を適用すると、ファイルを開くまたは保存時にクラッシュする](./source/_posts/Word%202016%20の%202018%20年%203%20月%20セキュリティ更新プログラム%20KB4011730%20を適用すると、ファイルを開くまたは保存時にクラッシュする.md)
 - [Word for Mac での印刷時のカラー設定の表記差異について](./source/_posts/Word%20for%20Mac%20での印刷時のカラー設定の表記差異について.md)
+- [Word での印刷で意図しない塗りつぶしが生じる](./source/_posts/Word%20での印刷で意図しない塗りつぶしが生じる.md)
 - [WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない](./source/_posts/WSFC%20継続的可用性%20(CA)%20が有効な共有フォルダーから%20Office%20ファイルが開けない.md)
 - [“Microsoft Barcode Control” について](./source/_posts/“Microsoft%20Barcode%20Control”%20について.md)
 - [「このコンピューターに組織内の別のアカウントが既にサインインしています」と表示される](./source/_posts/「このコンピューターに組織内の別のアカウントが既にサインインしています」と表示される.md)
