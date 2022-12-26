@@ -1,6 +1,7 @@
 # Japan Office Client Support Blog
 
 Go to the [blog site](https://officesupportjp.github.io/blog/).
+
 # Articles
 - [(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード](./source/_posts/(WebAPI)Microsoft%20Graph%20-%20OneDrive%20API%20(C%20Sharp)%20を使ったサンプル%20コード.md)
 - [(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード](./source/_posts/(WebAPI)Microsoft%20Graph%20–%20Excel%20REST%20API%20(C%20Sharp)%20を使い%20Range%20を操作するサンプル%20コード.md)
@@ -74,7 +75,7 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [Office サーバー サイド オートメーションの危険性について](./source/_posts/Office%20サーバー%20サイド%20オートメーションの危険性について.md)
 - [Office ファイルの SPO & OneDrive 移行におけるマクロ (VBA) 影響](./source/_posts/Office%20ファイルの%20SPO%20&%20OneDrive%20移行におけるマクロ%20(VBA)%20影響.md)
 - [Office ファイルを開こうとすると、実際に開いているユーザーとは異なるユーザーが使用中と表示される](./source/_posts/Office%20ファイルを開こうとすると、実際に開いているユーザーとは異なるユーザーが使用中と表示される.md)
-- [Office プロセスを自プログラム専用にすることはできません](./source/_posts/Office%20プロセスを自プログラム専用にすることはできません.md)
+- [Office プロセスを自プログラム専用にする方法](./source/_posts/Office%20プロセスを自プログラム専用にする方法.md)
 - [Office リボンをカスタマイズ - パート1 - (カスタマイズ手法と仕組み)](./source/_posts/Office%20リボンをカスタマイズ%20-%20パート1%20-%20(カスタマイズ手法と仕組み).md)
 - [Office リボンをカスタマイズ – パート2 – (ファイルにカスタム XML を追加)](./source/_posts/Office%20リボンをカスタマイズ%20–%20パート2%20–%20(ファイルにカスタム%20XML%20を追加).md)
 - [Office リボンをカスタマイズ – パート3 – (VSTO ビジュアルなデザイナーでカスタマイズ)](./source/_posts/Office%20リボンをカスタマイズ%20–%20パート3%20–%20(VSTO%20ビジュアルなデザイナーでカスタマイズ).md)
@@ -138,3 +139,4 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [数式エディター 3.0 の機能削除について](./source/_posts/数式エディター%203.0%20の機能削除について.md)
 - [日本語入力中に Office アプリケーションが異常終了する場合がある現象について](./source/_posts/日本語入力中に%20Office%20アプリケーションが異常終了する場合がある現象について.md)
 - [暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する](./source/_posts/暗号化された%20Office%20ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの%20%localappdata%%20フォルダ配下%20Packages%20フォルダに%20oice_xx_xxxxxxxx_xxxxxxxx_xxxx%20フォルダが残存する.md)
+
