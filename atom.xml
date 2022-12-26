@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2022-10-14T04:48:24.151Z</updated>
+  <updated>2022-12-26T04:17:36.133Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Office プロセスを自プログラム専用にする方法</title>
+    <link href="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/"/>
+    <id>https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/</id>
+    <published>2022-12-26T00:00:00.000Z</published>
+    <updated>2022-12-26T04:17:36.133Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p><strong>2022&#x2F;12&#x2F;26 Update</strong><br>Microsoft 365 Apps での動作をベースに全体的に記事の構成を改訂しました。</p><hr><br><p>こんにちは、Office 開発 サポート チームです。</p><p><a href="https://officesupportjp.github.io/blog/cl0n10ddh000t90vsbpgv3r9l">前回の投稿</a>で Excel のプロセスを統合することについて記載しましたが、今回はこれに関連し、Office を操作するプログラムを開発するときに、プログラムから操作する Office プロセスを自分のプログラム専用にできるか、という話を記載します。<br><br></p><p>Office を操作するプログラム開発を行う際、プログラムの処理が行いやすいよう、Office アプリケーションのプロパティを変更したり、画面を非表示にすることがあります。このとき、プログラムから行うプロパティ設定や画面の状態を、ユーザーが開いている他の Office ファイルには反映させたくないといった理由から、「ユーザーが起動する Office とプログラムが起動する Office でプロセスを分けたい」というご相談を頂くことがあります。<br><br></p><p><strong><h4>実現方法</h4></strong><br><u>Excel</u><br>COM オートメーションで Office を起動してください。 (CreateObject や new、CoCreateInstance など)  </p><p><u>Word &#x2F; PowerPoint</u><br>このような動作を実現する方法はありません。</p><p><strong><h4>既定の動作</h4></strong><br>過去投稿で、Office では起動方法によって、既に起動されたプロセスがある場合には、これを利用して新しいファイルを開く動作となることをご紹介しています。  </p><p>過去の投稿)<br>タイトル : Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/">https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/</a></p><p>タイトル : Office のプロセス インスタンス制御について<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/">https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/</a></p><br><p><strong><h4>対応方法 1</h4></strong><br>過去投稿でご案内している Excel の &#x2F;x コマンドライン スイッチや DisableMergeInstance レジストリのように、アプリ起動時に新規プロセスで起動するよう変更できる起動方法も一部用意されています。このような仕組みを用いて、後からユーザーがファイルを開くときに、起動済みのプログラム用のプロセスで開かれることを、ある程度は防ぐことができます。  </p><p>しかし、このような構成を行っても、例えば以下のような方法で 2 つめの Office ファイルを開くと、既存プロセスで開かれます。 </p><ul><li>Offie ファイルをダブル クリックする</li><li>OLE 埋め込みオブジェクトとして埋め込まれた Office ファイルを開く</li><li>他の Office オートメーションを行うプログラムが Process.Start 等の方法で Office プログラムを起動してファイルを開く</li></ul><br><p><strong><h4>対応方法 2</h4></strong><br>Excel のみは、COM オートメーションでプロセスを起動すると、以下のどちらのシナリオでも、起動した Excel プロセスが既存プロセスにマージされるのを防ぐことができます。</p><ul><li>既にプロセスが存在する状態で COM オートメーションでプロセスを起動する</li><li>COM オートメーションでプロセスを起動した後、ユーザーが新たにアプリを起動したりファイルを開く<br></li></ul><p>ただし、プログラムから起動したプロセスの Excel 画面を表示状態にしてユーザー操作可能とする場合、その画面内の操作 ([ファイル] - [開く] など) でファイルを開く場合は、そのプロセス内で開きます。<br><br></p><p><strong><h4>補足</h4></strong><br>リモートデスクトップで複数のユーザーが 1 つの端末にログインして Office を利用する場合、ユーザー間でプロセスが統合されることはありません。ただし、これを利用して意図的にログインしていないユーザーで Office を起動するような動作は、Office のサポート外の構成となります (Office のサーバーサイド オートメーションと呼ばれる構成に該当します) 。Office の起動ユーザーは、必ずログインしているユーザーで行う必要があります。  </p><p>Office のサーバーサイド オートメーションについては、公開情報や本ブログの過去投稿でご案内しています。  </p><p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/257757">https://support.microsoft.com/ja-jp/kb/257757</a>  </p><p>タイトル : Office サーバー サイド オートメーションの危険性について<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/">https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/</a>  </p><br><p><strong><h4>図解</h4></strong><br>文章だけでは分かり辛い点もあるかと思いますので、以下に Excel の動作を例にどのような動作になるか、図を用いて説明します。Microsoft 365 Excel での既定の設定の場合を代表として解説します。Excel 以外のアプリでは動作が異なるため注意してください。<br><br></p><p>まず、以下に自分のプログラムが初めに Excel プロセスを起動した後、他の方法で Excel を利用する場合の動作を図解します。(ここで初めにプログラムからプロセスを起動するときは、Process.Start のように COM オートメーションではない方法での起動を想定しています。)</p><p><img src="/blog/image1.png">  </p><p>図 1. 自プログラム (Process.Start) → 他の方法</p><br><p>一方、&lt;対応方法 2&gt; に記載したように COM オートメーションでプロセスを起動した場合の図です。COM オートメーションで起動したプロセスには、他の操作によりファイルを開いた場合もマージされません。<br>※ ただし先述の通り、①で起動したプロセス内での操作で開くファイルは①のプロセスで開かれます。([開く] メニューからの操作や、OLE 埋め込みファイルを開く場合など)</p><p><img src="/blog/image4.png">  </p><p>図 2. 自プログラム (COM オートメーション) → 他の方法</p><br><p>次に、先にユーザー操作などですでに Excel プロセスを起動しているところに、自プログラムが Excel を起動した場合について図解します。</p><p><img src="/blog/image2.png">  </p><p>図 3. 他の方法 → 自プログラム</p><br><p>また、複数のプロセスが存在する場合の動作はさらに複雑です。以下の図に示す通り、既存プロセスに統合される場合にどちらのプロセスに統合されるかは、明確に決められておりません。</p><p><img src="/blog/image3.png">  </p><p>図 4. 複数プロセスが存在する場合</p><br><p>以上の通り、Excel では COM オートメーションにより、自プログラムから起動したプロセスを自身専用にすることができますが、Word や PowerPoint では実現できません。また、Excel でも設計によっては、Process.Start 等の起動方法の方が実装しやすい処理もあるかと思いますので、このような場合は、プロセスの専用化とのトレードオフが生じます。</p><p>プロセスのマージが生じるようなプログラムを設計する場合は、自ブログラムで起動する Office プロセスがユーザー操作や他のプログラムで起動されるプロセスと統合されても問題ない動作となるよう設計してください。<br><br></p><p>今回の投稿は以上です。<br><br></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;2022&amp;#x2F;12&amp;#x2F;26 Update&lt;/strong&gt;&lt;br&gt;Microsoft 365 Apps での動作をベースに全体的に記事の構成を改訂しました。&lt;/p&gt;
+&lt;hr&gt;
+&lt;br&gt;
+
+&lt;p&gt;こんにちは、Office 開発 サポート</summary>
+      
+    
+    
+    
+    
+    <category term="SDI" scheme="https://officesupportjp.github.io/blog/tags/SDI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word での印刷で意図しない塗りつぶしが生じる</title>
+    <link href="https://officesupportjp.github.io/blog/cla7qogkl006pa0jo434segs3/"/>
+    <id>https://officesupportjp.github.io/blog/cla7qogkl006pa0jo434segs3/</id>
+    <published>2022-11-08T00:00:00.000Z</published>
+    <updated>2022-11-30T01:30:21.445Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Word で文書を印刷した際、編集画面や印刷プレビューでの表示とは異なり、画像データの一部が塗りつぶされた状態で印刷されてしまう現象について説明します。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Word 文書に以下のような構成の画像データを貼り付けて印刷した場合、編集時や印刷プレビューでは白もしくはグレー等の色で表示されている箇所がすべて塗りつぶされた状態で印刷されてしまう場合があります。</p><p>  ・EMF 形式のデータで構成される画像データを貼り付けている。<br>  ・EMF 形式のデータ内で、透過処理を行ったビットマップが使用されている。</p><p>例えば黒色の矩形のビットマップを透過処理にてグレーに見えるように表示させている画像データが貼られている Word 文書を印刷した時、画像データの当該箇所が黒で塗りつぶされた状態で印刷されてしまう場合があります。</p><h2 id="回避方法"><a href="#回避方法" class="headerlink" title="回避方法"></a>回避方法</h2><p>上記の要因で発生している現象につきましては、ご使用のプリンター ドライバーの設定でスプール ファイルの形式を変更可能であれば EMF スプール形式を選択いただくことで、現象を回避できる場合があります。<br>具体的な設定方法はプリンター ドライバーごとに異なりますので、各プリンター ドライバーのヘルプ等を参照くださいますようお願いいたします。</p><p>プリンター ドライバーの設定でスプール ファイルの形式を変更できないプリンターの場合は、以下のような手順で問題が発生する画像データをコピーしてビットマップとして貼り付けなおすことで現象を回避できる場合があります。なお、この手順の場合、印刷結果として出力される画像の変更前と比較して精度が低くなる可能性がございます。</p><p>ビットマップ形式で貼り付けなおす手順の例</p><ol><li>あらかじめオリジナルのファイルをコピーするなどしてバックアップしておきます。</li><li>Word で当該ファイルを開きます。</li><li>問題の生じる画像データを右クリックし、[切り取り] メニューを選択します。</li><li>Word の [ホーム] タブ内の [貼り付け] ボタン下の矢印をクリックして [貼り付けのオプション] より [形式を選択して貼り付け] を選択します。</li><li>「形式を選択して貼り付け」 ダイアログで [ビットマップ] を選択して OK を押して貼り付けます。</li><li>貼り付けられた画像データを確認し、別名を付けて保存します。</li></ol><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Word で文書を印刷した際、編集画面や印刷プレビューでの表示とは異なり、画像データの一部が塗りつぶされた状態で印刷されてしまう現象について説明します。&lt;/p&gt;
+&lt;h2 id=&quot;現象&quot;&gt;&lt;a href=&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word for Mac での印刷時のカラー設定の表記差異について</title>
+    <link href="https://officesupportjp.github.io/blog/cl9dgphrg0000m4vsb52864vv/"/>
+    <id>https://officesupportjp.github.io/blog/cl9dgphrg0000m4vsb52864vv/</id>
+    <published>2022-10-18T15:00:00.000Z</published>
+    <updated>2022-11-30T01:30:21.441Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。</p><p>この記事では、Word for Mac での印刷時のカラー設定に関して、<br>確認されている動作をご案内いたします。</p><br /><h1 id="事象詳細"><a href="#事象詳細" class="headerlink" title="事象詳細"></a>事象詳細</h1><p>Word for Mac では、ご利用のドライバ等によって、<br>以下二か所から、カラー設定を行うことが可能です。<br>※実際の見た目はご利用のプリンタ・プリンタドライバ等によって異なります。</p><ul><li>[印刷部数と印刷ページ] メニュー<br><img src="/blog/cl9dgphrg0000m4vsb52864vv/%E5%8D%B0%E5%88%B7%E9%83%A8%E6%95%B0%E3%81%A8%E5%8D%B0%E5%88%B7%E3%83%9A%E3%83%BC%E3%82%B8.png"></li></ul><br><ul><li>[プリンタの機能] メニュー<br><img src="/blog/cl9dgphrg0000m4vsb52864vv/%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%81%AE%E6%A9%9F%E8%83%BD.png"></li></ul><br><p>それぞれの設定の変更を繰り返す際、Word for Mac の動作に影響を受け、<br>[印刷部数と印刷ページ] メニューと [プリンタの機能] メニュー の印刷のカラー印刷設定の表記が、<br>一方では “白黒で印刷する設定”, 一方では “カラーで印刷する設定” のように、<br>異なるカラー印刷設定を示す場合があることが確認されております。  </p><br><p>恐れ入りますが、現時点で有効な回避方法はございません。<br>Word for Mac を再起動すると再度両方の設定が一致した状態となりますので、<br>事象発生時には Word for Mac を再起動する、<br>印刷時に期待したカラー設定で印刷されているか印刷結果を再確認するなどによって、<br>ご対応くださいますようお願いいたします。  </p><br><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;/p&gt;
+&lt;p&gt;この記事では、Word for Mac での印刷時のカラー設定に関して、&lt;br&gt;確認されている動作をご案内いたします。&lt;/p&gt;
+&lt;br /&gt;
+
+&lt;h1 id=&quot;事象詳細&quot;&gt;&lt;a href=&quot;#事象詳細&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>インターネット入手マクロ ブロックのトラブルシュートの流れ</title>
@@ -410,80 +486,6 @@
     
     
     <category term="コピー＆ペースト" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない</title>
-    <link href="https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/"/>
-    <id>https://officesupportjp.github.io/blog/cl0m4xkiy000reovs1r3cadx0/</id>
-    <published>2021-01-12T00:00:00.000Z</published>
-    <updated>2022-10-06T07:31:23.122Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。</p><p>Excel には、ワークシートのスクロール可能な範囲を設定する ScrollArea というシート プロパティが用意されています。本記事では、このScrollArea プロパティを設定したとき、キーボードの矢印キーや Tab キーなどで選択セルを移動したとき、ウィンドウに表示されていないセルに移動しても、そのセルが画面に表示されるようシートがスクロールしない動作について記載します。  </p><h4 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a><strong>1. 現象</strong></h4><p>以下の画面キャプチャをご覧ください。この画面では、O2 セルが現在選択されていますが、画面右端に見切れて表示された状態になっています。(赤枠部分)</p><p>通常、例えば A2 セルから右矢印キーや、Tab キーで B2、C2・・・と順に列を移動すると、選択状態のセル全体がウィンドウ内に見える位置に自動的にスクロールされます。しかしながら、後述の状況においては、この画面キャプチャのように十分にスクロールされない場合があります。またこのあと、O 列以降のセルに移動してもこの位置のままスクロールしません。</p><p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image1.png">  </p><h4 id="2-現象が発生する状況"><a href="#2-現象が発生する状況" class="headerlink" title="2. 現象が発生する状況"></a><strong>2. 現象が発生する状況</strong></h4><p>この動作に直面する主な状況は、ワークシートの ScrollArea プロパティが設定された状態で、かつセルの幅や高さが広げられているときに、スクロール可能範囲の終端に近いセルに移動する場合です。</p><p>Excel が画面外の領域にスクロールするときに、スクロール後のウィンドウ内に表示するシート範囲などを、セルの幅や高さ &#x2F; ウィンドウのサイズ &#x2F; 残りのスクロール可能範囲などの要素を基に算出します。これらの要素の組み合わせ次第で、スクロール後の表示位置を期待通りに算出できない場合があり、この現象が発生します。</p><p>また、Excel バージョンによっても細かな動作は異なるため、例えば同じファイルを同じウィンドウ サイズで開いても、スクロールしなくなる動作が生じる列や行はバージョンによって異なる場合があります。</p><p>発生に関わる条件をまとめると以下の通りです。</p><p><strong>条件 1:</strong><br>ワークシートの ScrollArea プロパティが設定されていること</p><p>※プログラムからは Worksheet オブジェクトのプロパティや、Visual Basic Editor でプロパティ ウィンドウからも設定・確認できます。</p><p>ScrollArea プロパティ (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.scrollarea</a></p><p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image2.png"></p><p><strong>条件 2:</strong><br>以下の要素等の組み合わせによって発生</p><ul><li>選択セルから ScrollArea プロパティの終端までの残りの幅・高さ</li><li>Excel ブック画面のウィンドウ サイズ</li><li>各セルの幅や高さ</li><li>シートの倍率</li><li>ウィンドウ サイズなどの算出に関わるディスプレイの拡大縮小、スケール設定</li></ul><p>この動作は、ユーザーの利用上、不便な場合がある動作であることは認識しておりますが、現状のスクロール動作の内部処理上の制約として、現時点でサポートされる全てのバージョンの Excel で発生しうる制限動作となっています。(2021&#x2F;1&#x2F;12 現在、サポート対象の Excel は Excel 2013 &#x2F; 2016 &#x2F; 2019 &#x2F; Office 365 の Excel です。)  </p><h4 id="3-回避策"><a href="#3-回避策" class="headerlink" title="3. 回避策"></a><strong>3. 回避策</strong></h4><p>この動作が生じるファイルやウィンドウ サイズなどの構成でも、以下のいずれかの方法でスクロールできます。  </p><h5 id="3-1-スクロールバーでスクロールする"><a href="#3-1-スクロールバーでスクロールする" class="headerlink" title="3-1. スクロールバーでスクロールする"></a><strong>3-1. スクロールバーでスクロールする</strong></h5><p>マウス操作でスクロール バーによってスクロールすると、画面をスクロールできます。</p><p>以下は、先述のファイルでスクロール バーの右矢印 (赤枠部分) をマウスで操作してスクロールした例です。</p><p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image3.png">  </p><h5 id="3-2-ScrollArea-を広げる、または解除する"><a href="#3-2-ScrollArea-を広げる、または解除する" class="headerlink" title="3-2. ScrollArea を広げる、または解除する"></a><strong>3-2. ScrollArea を広げる、または解除する</strong></h5><p>移動先のセルから、ScrollArea の終端までの幅や高さが十分に広い場合には、正常にスクロールできます。</p><p>例えば A～Q 列にあるテーブルの範囲だけスクロールするさせるため、ScrollArea プロパティに A ～ Q 列を設定しているとします。これを、例えば Z 列など、ある程度余裕を持った範囲をスクロールできるよう設定すると、実際にスクロールしたい範囲では期待通りスクロールできます。(どの列までを ScrollArea に設定すれば問題ないかは、条件 2 の各要素に依存します。具体的な値は定められませんが、実際の環境・ファイルで動作を確認しながら、余裕を持った範囲を設定してください。)</p><p>ScrollArea を広げるにあたって、例えば上記の例であれば、テーブル外の R ～ Z 列のセルを選択させたくない場合は、シート保護の設定で [ロックされたセル範囲の選択] を無効にすることでセル選択を禁止できます。  </p><p><strong>設定手順:</strong><br>1. 選択させたくないセル (上記の例では R ～ Z 列) のセルを右クリックし、[セルの書式設定] – [保護] で [ロック] を有効にします。(既定では有効です。)</p><p>2. 反対に、選択を可能とするセル (上記の例では A ~ Q 列) は同様のメニューで、[ロック] を無効にします。</p><p>3. [校閲] タブ – [シートの保護] – “このシートのすべてのユーザーに許可する操作” の一覧で [ロックされたセル範囲の選択] のチェックを外します。</p><p><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image4.png"><br><img src="/blog/cl0m4xkiy000reovs1r3cadx0/image5.png"></p><p>VBA などのプログラムからは、以下で設定できます。</p><p>Worksheet. EnableSelection プロパティ (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.enableselection</a></p><p>このプロパティで xlUnlockedCells を設定します。このプロパティは、ワークシートを保護した状態でのみ有効ですので、さらに以下の Protect メソッドでワークシートを保護します。</p><p>Protect メソッド (Excel)<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect">https://docs.microsoft.com/ja-jp/office/vba/api/excel.worksheet.protect</a></p><p>また、選択セルの移動を制限することが ScrollArea プロパティを設定している目的である場合は、上記の設定を代わりに行うことで、ScrollArea プロパティの設定自体を削除することも検討できます。(ただし、スクロール バーの操作ではスクロールできます。)</p><p>ScrollArea 設定を削除する場合は、プログラムからは ScrollArea プロパティに空の値 (“”) を設定してください。プロパティ ウィンドウの場合は、ScrollArea プロパティの値を削除してください。  </p><p>今回の投稿は以上です。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;/p&gt;
-&lt;p&gt;Excel には、ワークシートのスクロール可能な範囲を設定する ScrollArea というシート プロパティが用意されています。本記事では、このScrollArea プロパティを設定したとき、キーボード</summary>
-      
-    
-    
-    
-    
-    <category term="オートメーション" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PowerPoint Online で日本語フォントが変更される</title>
-    <link href="https://officesupportjp.github.io/blog/cl0m69xv6002k4cvsan4d7rs0/"/>
-    <id>https://officesupportjp.github.io/blog/cl0m69xv6002k4cvsan4d7rs0/</id>
-    <published>2020-12-04T00:00:00.000Z</published>
-    <updated>2022-10-06T07:31:23.172Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。</p><p>本記事では、PowerPoint Online で日本語フォントが異なるフォントで表示される問題について説明します。</p><p><strong>現象</strong></p><p>PowerPoint の表内の日本語フォントが、PowerPoint Online で表示すると異なるフォントで表示されます。</p><p>例えば、スライド マスターでテーマ フォントを Meiryo UI に設定しているプレゼンテーションで、PowerPoint Online 上では英数字用のフォント (例では Arial) で表示されます。</p><p><img src="/blog/cl0m69xv6002k4cvsan4d7rs0/image1.png">  </p><p><strong>原因</strong></p><p>この現象は問題としてフィードバックを行いました。</p><p><strong>回避策</strong></p><p>以下のいずれかの回避策で現象を回避できます。</p><p>1. 表のフォントを明示的に指定します。</p><p>スライド マスターでテーマ フォントを設定した場合、表のフォント自体は [+本文のフォント] となりますが、表のフォントを [Meiryo UI] など明示的に指定します。</p><p>2. 英数字用フォントを変更します。</p><p>スライド マスターでテーマ フォントの英数字用フォントとして、[Meiryo UI] など日本語に設定したいフォントを指定します。</p><p>新たな情報が確認された場合には、この記事に追記する形で公開していく予定です。</p><p>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;/p&gt;
-&lt;p&gt;本記事では、PowerPoint Online で日本語フォントが異なるフォントで表示される問題について説明します。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;現象&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;PowerPoint の</summary>
-      
-    
-    
-    
-    
-    <category term="フォント" scheme="https://officesupportjp.github.io/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Office 展開ツール (16.0.13328.20356) で生じる事象について</title>
-    <link href="https://officesupportjp.github.io/blog/cl0m69xv1002b4cvs76yt55d6/"/>
-    <id>https://officesupportjp.github.io/blog/cl0m69xv1002b4cvs76yt55d6/</id>
-    <published>2020-11-16T00:00:00.000Z</published>
-    <updated>2022-10-06T07:31:23.160Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。  </p><div style="color:#ff0000">  <p><strong>2020&#x2F;11&#x2F;19 記事の内容を更新しました</strong></p><p><strong>2020&#x2F;11&#x2F;24 記事の内容を更新しました</strong></p></div><p>Office 展開ツール (16.0.13328.20356) にて、以下の事象が報告されておりますのでご案内いたします。  </p><p><strong>【事象】</strong>  </p><p>Office 展開ツール (16.0.13328.20356) では、現時点で以下の事象が報告されております。  </p><ol><li><p>XMLファイルの Logging 要素 Path 属性に定義したフォルダにログファイルが出力されない  </p></li><li><p>Office 展開ツールを管理者権限で実行しない場合、&#x2F;download オプションでダウンロードが行えない  </p></li><li><p>XMLファイルの Add 要素 Version 属性を定義した場合、.cab ファイルがダウンロードされない</p></li></ol><p><strong>- 参考</strong></p><p><a href="https://docs.microsoft.com/ja-jp/officeupdates/odt-release-history"></a><a href="https://docs.microsoft.com/en-us/officeupdates/odt-release-history">https://docs.microsoft.com/en-us/officeupdates/odt-release-history</a>  </p><div style="color:#ff0000">  <p><strong>1) については、Office 展開ツールの仕様変更によるものとなります。今後、Logging 要素 Path 属性はご利用いただけません。</strong></p><p><strong>2) と 3) については、</strong></p><p><strong>最新の Office 展開ツールにて修正されておりますので、最新の Office 展開ツールをご利用いただきますようお願いいたします。</strong></p></div><p><strong>今回の投稿は以上です。</strong>  </p><p>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。  &lt;/p&gt;
-&lt;div style=&quot;color:#ff0000&quot;&gt;  
-
-&lt;p&gt;&lt;strong&gt;2020&amp;#x2F;11&amp;#x2F;19 記事の内容を更新しました&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;20</summary>
-      
-    
-    
-    
-    
-    <category term="インストール" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/"/>
     
   </entry>
   
