@@ -14,16 +14,16 @@
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="2022&#x2F;12&#x2F;26 UpdateMicrosoft 365 Apps での動作をベースに全体的に記事の構成を改訂しました。    こんにちは、Office 開発 サポート チームです。 前回の投稿で Excel のプロセスを統合することについて記載しましたが、今回はこれに関連し、Office を操作するプログラムを開発するときに、プログラムから操作する Office プロセ">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image1.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image4.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image2.png">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/image3.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/image1.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/image4.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/image2.png">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/image3.png">
 <meta property="article:published_time" content="2022-12-26T00:00:00.000Z">
 <meta property="article:modified_time" content="2022-12-26T04:17:36.133Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="SDI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/image1.png">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/image1.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
@@ -157,22 +157,22 @@
 
 <p><strong><h4>図解</h4></strong><br>文章だけでは分かり辛い点もあるかと思いますので、以下に Excel の動作を例にどのような動作になるか、図を用いて説明します。Microsoft 365 Excel での既定の設定の場合を代表として解説します。Excel 以外のアプリでは動作が異なるため注意してください。<br><br></p>
 <p>まず、以下に自分のプログラムが初めに Excel プロセスを起動した後、他の方法で Excel を利用する場合の動作を図解します。(ここで初めにプログラムからプロセスを起動するときは、Process.Start のように COM オートメーションではない方法での起動を想定しています。)</p>
-<p><img src="/blog/image1.png">  </p>
+<p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image1.png">  </p>
 <p>図 1. 自プログラム (Process.Start) → 他の方法</p>
 <br>
 
 <p>一方、&lt;対応方法 2&gt; に記載したように COM オートメーションでプロセスを起動した場合の図です。COM オートメーションで起動したプロセスには、他の操作によりファイルを開いた場合もマージされません。<br>※ ただし先述の通り、①で起動したプロセス内での操作で開くファイルは①のプロセスで開かれます。([開く] メニューからの操作や、OLE 埋め込みファイルを開く場合など)</p>
-<p><img src="/blog/image4.png">  </p>
+<p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image4.png">  </p>
 <p>図 2. 自プログラム (COM オートメーション) → 他の方法</p>
 <br>
 
 <p>次に、先にユーザー操作などですでに Excel プロセスを起動しているところに、自プログラムが Excel を起動した場合について図解します。</p>
-<p><img src="/blog/image2.png">  </p>
+<p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image2.png">  </p>
 <p>図 3. 他の方法 → 自プログラム</p>
 <br>
 
 <p>また、複数のプロセスが存在する場合の動作はさらに複雑です。以下の図に示す通り、既存プロセスに統合される場合にどちらのプロセスに統合されるかは、明確に決められておりません。</p>
-<p><img src="/blog/image3.png">  </p>
+<p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image3.png">  </p>
 <p>図 4. 複数プロセスが存在する場合</p>
 <br>
 
@@ -184,7 +184,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="clc4agfzk0000xwse5kznflp3" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/" data-id="clc4aphc1004e6wse7k6jdfq0" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li></ul>
