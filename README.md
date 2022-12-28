@@ -115,6 +115,7 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [Word 2016 の 2018 年 3 月 セキュリティ更新プログラム KB4011730 を適用すると、ファイルを開くまたは保存時にクラッシュする](./source/_posts/Word%202016%20の%202018%20年%203%20月%20セキュリティ更新プログラム%20KB4011730%20を適用すると、ファイルを開くまたは保存時にクラッシュする.md)
 - [Word for Mac での印刷時のカラー設定の表記差異について](./source/_posts/Word%20for%20Mac%20での印刷時のカラー設定の表記差異について.md)
 - [Word での印刷で意図しない塗りつぶしが生じる](./source/_posts/Word%20での印刷で意図しない塗りつぶしが生じる.md)
+- [Word 文書内の図の位置がずれて印刷される現象について](./source/_posts/Word%20文書内の図の位置がずれて印刷される現象について.md)
 - [WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない](./source/_posts/WSFC%20継続的可用性%20(CA)%20が有効な共有フォルダーから%20Office%20ファイルが開けない.md)
 - [“Microsoft Barcode Control” について](./source/_posts/“Microsoft%20Barcode%20Control”%20について.md)
 - [「このコンピューターに組織内の別のアカウントが既にサインインしています」と表示される](./source/_posts/「このコンピューターに組織内の別のアカウントが既にサインインしています」と表示される.md)
@@ -139,4 +140,3 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [数式エディター 3.0 の機能削除について](./source/_posts/数式エディター%203.0%20の機能削除について.md)
 - [日本語入力中に Office アプリケーションが異常終了する場合がある現象について](./source/_posts/日本語入力中に%20Office%20アプリケーションが異常終了する場合がある現象について.md)
 - [暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する](./source/_posts/暗号化された%20Office%20ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの%20%localappdata%%20フォルダ配下%20Packages%20フォルダに%20oice_xx_xxxxxxxx_xxxxxxxx_xxxx%20フォルダが残存する.md)
-
