@@ -13,24 +13,14 @@
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2014 年 4 月 11 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。) こんにちは、Office 開発系サポート 森　健吾 (kenmori) です。 今回の投稿では、Office サーバー サイド オートメーション (非対話型オートメーション) に対する正しい理解を持っていただくことを目的として記載いたします。 はじめに">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/image1.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/image2.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/image3.png">
-<meta property="article:published_time" content="2019-02-27T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-16T08:48:29.857Z">
+<meta property="article:published_time" content="2019-02-28T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-11T07:22:29.293Z">
 <meta property="article:author" content="Office Support Japan">
-<meta property="article:tag" content="Microsoft">
-<meta property="article:tag" content="Office">
-<meta property="article:tag" content="Support">
-<meta property="article:tag" content="Excel">
-<meta property="article:tag" content="Word">
-<meta property="article:tag" content="PowerPoint">
-<meta property="article:tag" content="OneNote">
-<meta property="article:tag" content="Access">
-<meta property="article:tag" content="マイクロソフト">
-<meta property="article:tag" content="オフィス">
-<meta property="article:tag" content="サポート">
+<meta property="article:tag" content="オートメーション">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/image1.png">
   
@@ -53,7 +43,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -80,12 +70,16 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
@@ -97,7 +91,7 @@
         <section id="main"><article id="post-Office サーバー サイド オートメーションの危険性について" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/" class="article-date">
-  <time datetime="2019-02-27T15:00:00.000Z" itemprop="datePublished">2019-02-28</time>
+  <time datetime="2019-02-28T00:00:00.000Z" itemprop="datePublished">2019-02-28</time>
 </a>
     <!--  -->
   </div>
@@ -117,7 +111,7 @@
         Last Update: 
         <a href="/blog/cl0mfb7b7001wnwvshfp01l5u/" class="article-date-single">    
     
-    <time datetime="2019-02-27T15:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
+    <time datetime="2019-02-28T00:00:00.000Z" itemprop="dateUpdated">2019-02-28</time>
     
 </a>              
       </div>
@@ -131,7 +125,7 @@
 <p>結論からお伝えしますと Office のサーバー サイド オートメーション (非対話型オートメーション) を、マイクロソフトはサポートしておりません。</p>
 <p>前提として、サーバーにインストールされた Office クライアント アプリケーションを使用したオートメーションを実施して、クライアント側の処理をサーバー側で集中して代行するなどの機能をライセンスを持たないエンドユーザーに提供した場合は、Microsoft 製品に対するライセンス違反にも該当する可能性があります。<br>また、技術的な観点からもこれらの実装は危険であるため、実装しないでください。</p>
 <p>以下のサポート技術情報は詳細な内容が記載された文書ですが、この文書をもとに、サーバー サイド オートメーションがどのような実装なのか、なぜサポートされないかという点について解説させていただきます。</p>
-<p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a href="http://support.microsoft.com/kb/257757/ja" target="_blank" rel="noopener">http://support.microsoft.com/kb/257757/ja</a></p>
+<p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a target="_blank" rel="noopener" href="http://support.microsoft.com/kb/257757/ja">http://support.microsoft.com/kb/257757/ja</a></p>
 <p><strong>1. サーバー サイド オートメーションに該当する条件について</strong></p>
 <p>サーバー サイド オートメーションという名称を使っていますが、技術的に非対話型のセッションで起動されたクライアント アプリケーションからのオートメーションを総称してこう呼んでいます。つまり、サーバー上での実装に限定されず、通常のクライアント環境でこのような実装を行ったとしても、サポートされない実装に該当することになります。</p>
 <p>以下のようなアプリケーションで実装した場合は、サポートされない実装に該当します。</p>
@@ -146,19 +140,19 @@
 <p><strong>前提情報</strong> <strong>1 :</strong> <strong>対話的なログオン</strong> <strong>セッションについて</strong></p>
 <p>パソコンを起動する時を想像してください。通常、ユーザーはパソコンを起動して、しばらくするとユーザー名とパスワードを入力してログオンします。その後デスクトップが表示される動作になります。簡潔に言いますと、このログオン セッションが対話的なログオン セッションとなります。このデスクトップで実行されたアプリケーションは、対話的なログオン セッション上で動作しているということになります。</p>
 <p>では、Web アプリケーションなどのバックグラウンド サービスはどうでしょうか。これらのアプリケーションを起動した際にも非対話型のデスクトップが生成され、その中でアプリケーションが動作します。このようなアプリケーションから Office オートメーションを実施した場合、この非対話型のデスクトップ上で Office アプリケーションが動く結果となります。</p>
-<p><img src="image1.png" alt="">  </p>
+<p><img src="/blog/cl0mfb7b7001wnwvshfp01l5u/image1.png">  </p>
 <p>念のため記載しますが、実行アカウントは関係ありません。対話操作が可能なユーザー (SYSTEM、LOCAL SERVICE、NETWORK SERVICE などのアカウント以外) で起動しても、バックグラウンド サービスで起動すれば、それだけで非対話セッションに該当します。</p>
 <p><strong>前提情報</strong> <strong>2 : Office</strong> <strong>オートメーションの動きについて</strong></p>
 <p>前提として Office オートメーションとは、Office アプリケーションの処理を自動化するということになります。この点については、正しく理解して実装を検討する必要があります。<br>カスタム アプリケーション上で Office オブジェクトを生成して処理を実施した場合は、Office アプリケーションが起動し、Office アプリケーションに対してリモート プロシージャーコールによるプロセス間通信を確立し、処理命令とその結果がやり取りされる動作となります。</p>
 <p>さらに、Office アプリケーションは Windows フォーム アプリケーションです。Windows フォーム アプリケーションはウィンドウの描画に携わる UI メイン スレッドを 1 つしか所持できません。<br>Office オートメーションで処理を実装する場合に気を付けるべき点として、クライアント側をいくら多重化したとしても、サーバー側の実行スレッドは常に 1 本で動作しているという点があります。</p>
 <p>つまり、サーバー側でアクセスが集中した際に高いパフォーマンスを発揮することもできず、ビジーの際にはクライアントからの処理要求を拒否する事態に陥ることになります。</p>
-<p><img src="image2.png" alt="">  </p>
+<p><img src="/blog/cl0mfb7b7001wnwvshfp01l5u/image2.png">  </p>
 <p>これらの制限に対する様々な誤解はありますが、上記 2 つの前提として記載した制限事項はどちらも Office アプリケーションを Windows フォーム アプリケーション以外のものに作り替えない限り、問題を克服することはできません。</p>
 <p><strong>解説</strong> <strong>:</strong> <strong>サーバー</strong> <strong>サイド</strong> <strong>オートメーションの問題について</strong></p>
 <p>それでは、実際に問題について記載していきます。以下になぜサーバー サイド オートメーションが動作上サポートされないか、その主な理由をまとめます。</p>
 <p><strong>問題</strong> <strong>1 :</strong> <strong>非対話デスクトップで実行することの問題について</strong></p>
 <p>Office アプリケーションは、上述の通り Windows アプリケーションです。つまり、ユーザーが見える場所に描画されることを前提としています。<br>そのため、Office アプリケーションは、オートメーションによる処理を実行している場合においても、予期しない内部エラーが生じた場合や、メソッドの引数等が省略され動作を確認する際などに、ダイアログを表示してユーザーに操作を促す場合があります。</p>
-<p><img src="image3.png" alt="">  </p>
+<p><img src="/blog/cl0mfb7b7001wnwvshfp01l5u/image3.png">  </p>
 <p>想像できる通り、裏で起動している上図のような非対話デスクトップにモーダル ダイアログが表示された場合、誰もクリックすることができません。Office オートメーションを使用したプログラムを実装する場合は対話的に操作することが前提となりますので、画面上に現れたダイアログに応じられないような状況下で動作させるべきではありません。</p>
 <p>さらに、モーダル ダイアログというものは、一般的に UI メイン スレッドをスピンロックさせ、モーダルダイアログ以外のウィンドウやコントロールなどへの操作を無効化します。この状況下に陥った場合は、Office オートメーションで使用できる UI メインスレッドがハングした状況になり、それ以降の命令を一切受け付けることができなくなります。</p>
 <p>プロセスを再起動し、再度アプリケーション インスタンスを起動することで回避は可能であるものの、このような不正な処理を実装している状況下においては、開いていた文書等が確実に復元できる保証はありません。</p>
@@ -169,10 +163,10 @@
 <p>Office アプリケーションは、オートメーションによって起動された場合においても、実行時にはユーザー ID を使用します。該当ユーザーのプロファイルに基づき、HKEY_CURRENT_USER 配下のレジストリ キー設定や、該当ユーザー プロファイルが保持する Local Settings 等のファイルシステムを読み込んで操作します。</p>
 <p>そのため、これらのプロファイルを持たないアカウント (例. SYSTEM や IWAM_[servername] アカウントなど) では、Office が適切な初期化に失敗する場合があります。</p>
 <p>また、ユーザー プロファイルのロードはサーバー サイド処理におけるパフォーマンス劣化を招くとして、Windows Server 2008 以降で IIS から統合モードでアプリケーション プールを作成する場合などでは、バックグラウンド プロセスにおいてプロファイルを既定でロードしないよう設計されています。</p>
-<p>タイトル : アプリケーション プール ID<br>アドレス : <a href="http://technet.microsoft.com/ja-jp/library/ee886292.aspx" target="_blank" rel="noopener">http://technet.microsoft.com/ja-jp/library/ee886292.aspx</a><br>参考箇所 : ユーザー プロファイル</p>
+<p>タイトル : アプリケーション プール ID<br>アドレス : <a target="_blank" rel="noopener" href="http://technet.microsoft.com/ja-jp/library/ee886292.aspx">http://technet.microsoft.com/ja-jp/library/ee886292.aspx</a><br>参考箇所 : ユーザー プロファイル</p>
 <p>上記の観点からもサーバー サイドでオートメーションを実行する場合は様々な問題があり、仮に動作できても安定性やパフォーマンスなど様々や面で問題があるということに至ります。</p>
 <p><strong>3.</strong> <strong>サーバー</strong> <strong>サイド</strong> <strong>オートメーションの代替案について</strong></p>
-<p><span style="color:#ff0000"><strong>2014/05/07 更新</strong></span></p>
+<p><span style="color:#ff0000"><strong>2014&#x2F;05&#x2F;07 更新</strong></span></p>
 <p>サーバーサイド オートメーションの代替案については、下記投稿に記載させていただきました。<br>移行をご検討いただく際には、ご参考にしていただけますと幸いです。</p>
 <p>タイトル : Office サーバー サイド オートメーションの代替案について<br>アドレス : <a href="https://officesupportjp.github.io/blog/Office%20%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%20%E3%82%B5%E3%82%A4%E3%83%89%20%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%81%AE%E4%BB%A3%E6%9B%BF%E6%A1%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/">https://officesupportjp.github.io/blog/Office サーバー サイド オートメーションの代替案について/</a></p>
 <p><strong>結論</strong></p>
@@ -182,9 +176,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl0tck5ci001xuskj7k2f384m" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/" data-id="cl0tck5ci001xuskj7k2f384m" class="article-share-link">共有</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li></ul>
+
     </footer>
   </div>
   
@@ -192,7 +188,7 @@
 <nav id="article-nav">
   
     <a href="/blog/cl0mfb7b8001xnwvs5pzxb66j/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">次の記事</strong>
       <div class="article-nav-title">
         
           Office サーバー サイド オートメーションの代替案について
@@ -202,7 +198,7 @@
   
   
     <a href="/blog/cl0mfb7bn002inwvse5785nd7/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">前の記事</strong>
       <div class="article-nav-title">Officeソリューション開発時の開発環境のバージョン選定について</div>
     </a>
   
@@ -220,9 +216,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">タグ</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OCR/" rel="tag">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OneNote/" rel="tag">OneNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
     </div>
   </div>
 
@@ -230,9 +226,18 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 17.5px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 16.25px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16.25px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
     </div>
   </div>
 
@@ -240,28 +245,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最近の投稿</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/cl28oxvt6002ku8uj1ose6ej2/">OneNote の OCR 機能で読み取りにくい文字列がある</a>
+            <a href="/blog/cld8jp0gd00422skj5eabeqvb/">「必要なサービスが無効になっています」と表示される現象について</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+            <a href="/blog/clc72h24j0001v0jo35060br5/">Word 文書内の図の位置がずれて印刷される現象について</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+            <a href="/blog/cl0mfb7bc0021nwvs6zie7xtv/">Office プロセスを自プログラム専用にする方法</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+            <a href="/blog/cla7qogkl006pa0jo434segs3/">Word での印刷で意図しない塗りつぶしが生じる</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+            <a href="/blog/cl9dgphrg0000m4vsb52864vv/">Word for Mac での印刷時のカラー設定の表記差異について</a>
           </li>
         
       </ul>
@@ -276,7 +281,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2022 Office Support Japan<br>      
+      &copy; 2023 Office Support Japan<br>      
     </div>
   </div>
 </footer>
@@ -286,6 +291,10 @@
     <a href="/blog/" class="mobile-nav-link">Home</a>
   
     <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
   
 </nav>
     

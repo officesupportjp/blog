@@ -13,21 +13,11 @@
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m75al9001jmcvs2kbq9c9w/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="こんにちは、Office サポート チームの中村です。  以前の投稿で、Office 開発に特化して Office のパフォーマンスが低下する一般的な理由や、調査手法などをご説明しました。  Office 開発におけるパフォーマンス トラブルシュート (その 1 : 概要と対処方法)https:&#x2F;&#x2F;officesupportjp.github.io&#x2F;blog&#x2F;Office 開発におけるパフォーマン">
-<meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-10-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-16T08:48:29.846Z">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2019-10-29T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-11T07:22:29.293Z">
 <meta property="article:author" content="Office Support Japan">
-<meta property="article:tag" content="Microsoft">
-<meta property="article:tag" content="Office">
-<meta property="article:tag" content="Support">
-<meta property="article:tag" content="Excel">
-<meta property="article:tag" content="Word">
-<meta property="article:tag" content="PowerPoint">
-<meta property="article:tag" content="OneNote">
-<meta property="article:tag" content="Access">
-<meta property="article:tag" content="マイクロソフト">
-<meta property="article:tag" content="オフィス">
-<meta property="article:tag" content="サポート">
+<meta property="article:tag" content="パフォーマンス">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
@@ -49,7 +39,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -76,12 +66,16 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
@@ -93,7 +87,7 @@
         <section id="main"><article id="post-Office のパフォーマンス トラブルシュート (その 3：はじめに試す設定 - 描画編 -)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/cl0m75al9001jmcvs2kbq9c9w/" class="article-date">
-  <time datetime="2019-10-28T15:00:00.000Z" itemprop="datePublished">2019-10-29</time>
+  <time datetime="2019-10-29T00:00:00.000Z" itemprop="datePublished">2019-10-29</time>
 </a>
     <!--  -->
   </div>
@@ -113,7 +107,7 @@
         Last Update: 
         <a href="/blog/cl0m75al9001jmcvs2kbq9c9w/" class="article-date-single">    
     
-    <time datetime="2019-10-28T15:00:00.000Z" itemprop="dateUpdated">2019-10-29</time>
+    <time datetime="2019-10-29T00:00:00.000Z" itemprop="dateUpdated">2019-10-29</time>
     
 </a>              
       </div>
@@ -137,10 +131,10 @@
 <li>レジストリを変更する (オプションやグループポリシーに対応するレジストリを直接変更する場合、メニューはなくレジストリのみで制御可能な場合)</li>
 </ul>
 <p>また、VBA や .NET などのプログラムからの操作の場合、プロパティを利用して設定を変更できる項目もあります。プロパティには、Office の一般的な動作変更の他に、マクロの処理パフォーマンスに影響を与えるものもあります。</p>
-<p>本記事では、Office 2016 / Office 2019 / Office 365 の Excel / Word / PowerPoint を対象に、これらの設定項目を記載します。ご利用の Officeバージョンによっては、記載したメニューが用意されていない場合や、バージョン名に関わる部分を読み替える必要があります。読み替える場合、レジストリについては “16.0” の部分がバージョンによって以下のパスとなります。</p>
+<p>本記事では、Office 2016 &#x2F; Office 2019 &#x2F; Office 365 の Excel &#x2F; Word &#x2F; PowerPoint を対象に、これらの設定項目を記載します。ご利用の Officeバージョンによっては、記載したメニューが用意されていない場合や、バージョン名に関わる部分を読み替える必要があります。読み替える場合、レジストリについては “16.0” の部分がバージョンによって以下のパスとなります。</p>
 <p>Office 2010 → 14.0<br>Office 2013 → 15.0</p>
 <p>一部の設定は、Access や Visio、Outlook といった他の Office アプリケーションでも有効なもの、同等の設定があるものもありますが、本記事では言及しません。<br><br></p>
-<h2 id="1-アニメーションの無効化-Excel-Word-PowerPoint"><a href="#1-アニメーションの無効化-Excel-Word-PowerPoint" class="headerlink" title="1. アニメーションの無効化 (Excel / Word / PowerPoint)"></a><strong>1. アニメーションの無効化 (Excel / Word / PowerPoint)</strong></h2><p>画面上での移動を滑らかにする動作を無効化します。設定 1 ～ 3 では影響する操作などが異なるため、それぞれお試しください。</p>
+<h2 id="1-アニメーションの無効化-Excel-x2F-Word-x2F-PowerPoint"><a href="#1-アニメーションの無効化-Excel-x2F-Word-x2F-PowerPoint" class="headerlink" title="1. アニメーションの無効化 (Excel &#x2F; Word &#x2F; PowerPoint)"></a><strong>1. アニメーションの無効化 (Excel &#x2F; Word &#x2F; PowerPoint)</strong></h2><p>画面上での移動を滑らかにする動作を無効化します。設定 1 ～ 3 では影響する操作などが異なるため、それぞれお試しください。</p>
 <p><u>設定 1</u><br>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft Office 2016] - [その他] - [Office アニメーションを無効にする]<br>設定値 : 有効  </p>
 <p>&lt;レジストリ&gt;<br>キー: HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Graphics<br>名前: DisableAnimations<br>種類: REG_DWORD<br>値: 1  </p>
 <p><u>設定 2</u><br><strong>Excel</strong><br>&lt;オプション&gt;<br>[簡単操作] – [操作をアニメーションで表示する] チェックをオフ  </p>
@@ -148,42 +142,42 @@
 <p><strong>Word</strong><br>&lt;オプション&gt;<br>[簡単操作] – [操作の結果をアニメーションで表示する] のチェックをオフ  </p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Word\Options<br>名前 : AnimateScreenMove<br>種類 : REG_DWORD<br>値 : 0  </p>
 <p>※ PowerPoint には本項目はありません。</p>
-<p><u>設定 3</u><br><strong>Excel</strong><br>Application.EnableMacroAnimations プロパティを False に設定<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations</a><br>* 既定は False ですが、マクロ内や他のアドインなどで True に設定している場合は効果が期待できます。  </p>
-<p>※ Word / PowerPoint には本項目はありません。<br><br></p>
-<h2 id="2-リアルタイム-プレビューの無効化-Excel-Word-PowerPoint"><a href="#2-リアルタイム-プレビューの無効化-Excel-Word-PowerPoint" class="headerlink" title="2. リアルタイム プレビューの無効化 (Excel / Word / PowerPoint)"></a><strong>2. リアルタイム プレビューの無効化 (Excel / Word / PowerPoint)</strong></h2><p>例えば文字の色をカラーパレットから選択するときなど、確定前に文字に色が反映される動作を無効化します。</p>
+<p><u>設定 3</u><br><strong>Excel</strong><br>Application.EnableMacroAnimations プロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablemacroanimations</a><br>* 既定は False ですが、マクロ内や他のアドインなどで True に設定している場合は効果が期待できます。  </p>
+<p>※ Word &#x2F; PowerPoint には本項目はありません。<br><br></p>
+<h2 id="2-リアルタイム-プレビューの無効化-Excel-x2F-Word-x2F-PowerPoint"><a href="#2-リアルタイム-プレビューの無効化-Excel-x2F-Word-x2F-PowerPoint" class="headerlink" title="2. リアルタイム プレビューの無効化 (Excel &#x2F; Word &#x2F; PowerPoint)"></a><strong>2. リアルタイム プレビューの無効化 (Excel &#x2F; Word &#x2F; PowerPoint)</strong></h2><p>例えば文字の色をカラーパレットから選択するときなど、確定前に文字に色が反映される動作を無効化します。</p>
 <p>&lt;オプション&gt;<br>[基本設定] - [ユーザー インターフェイスのオプション] - [リアルタイムのプレビュー表示機能を有効にする] のチェックをオフ  </p>
-<p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] - [&lt;アプリケーション名&gt; のオプション] - [全般] - [リアルタイムのプレビュー表示機能を有効にする]<br>設定値 : 無効<br>(&lt;アプリケーション名&gt; には Excel / Word / PowerPoint のいずれかが入ります。以降の記述でも同様です。)</p>
+<p>&lt;グループポリシー&gt;<br>[ユーザーの設定] - [Microsoft &lt;アプリケーション名&gt; 2016] - [&lt;アプリケーション名&gt; のオプション] - [全般] - [リアルタイムのプレビュー表示機能を有効にする]<br>設定値 : 無効<br>(&lt;アプリケーション名&gt; には Excel &#x2F; Word &#x2F; PowerPoint のいずれかが入ります。以降の記述でも同様です。)</p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER \Software\Microsoft\Office\16.0\&lt;アプリケーション名&gt;\Options<br>名前 : LivePreview<br>種類 : REG_DWORD<br>値 : 0  </p>
-<p>&lt;プロパティ&gt;<br><strong>Excel</strong><br>Application.EnableLivePreview プロパティ をFalse に設定<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablelivepreview" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablelivepreview</a>  </p>
-<p><strong>Word</strong><br>Options.EnableLivePreview プロパティを False に設定<br><a href="https://docs.microsoft.com/ja-jp/office/vba/api/word.options.enablelivepreview" target="_blank" rel="noopener">https://docs.microsoft.com/ja-jp/office/vba/api/word.options.enablelivepreview</a>  </p>
+<p>&lt;プロパティ&gt;<br><strong>Excel</strong><br>Application.EnableLivePreview プロパティ をFalse に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablelivepreview">https://docs.microsoft.com/ja-jp/office/vba/api/excel.application.enablelivepreview</a>  </p>
+<p><strong>Word</strong><br>Options.EnableLivePreview プロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/vba/api/word.options.enablelivepreview">https://docs.microsoft.com/ja-jp/office/vba/api/word.options.enablelivepreview</a>  </p>
 <p>※ PowerPoint はプロパティはありません<br><br></p>
-<h2 id="3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-Word-PowerPoint"><a href="#3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-Word-PowerPoint" class="headerlink" title="3. ハードウェア グラフィック アクセラレータの設定変更 (Excel / Word / PowerPoint)"></a><strong>3. ハードウェア グラフィック アクセラレータの設定変更 (Excel / Word / PowerPoint)</strong></h2><p>描画処理にハードウェアの機能を利用すると、一般的には高速になります。ただ、ハードウェアとの相性によって、有効にするとかえって一部の処理が遅くなる場合もあります。ハードウェアグラフィック アクセラレータの利用有無を変更してみてください。</p>
+<h2 id="3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-x2F-Word-x2F-PowerPoint"><a href="#3-ハードウェア-グラフィック-アクセラレータの設定変更-Excel-x2F-Word-x2F-PowerPoint" class="headerlink" title="3. ハードウェア グラフィック アクセラレータの設定変更 (Excel &#x2F; Word &#x2F; PowerPoint)"></a><strong>3. ハードウェア グラフィック アクセラレータの設定変更 (Excel &#x2F; Word &#x2F; PowerPoint)</strong></h2><p>描画処理にハードウェアの機能を利用すると、一般的には高速になります。ただ、ハードウェアとの相性によって、有効にするとかえって一部の処理が遅くなる場合もあります。ハードウェアグラフィック アクセラレータの利用有無を変更してみてください。</p>
 <p>&lt;オプション&gt;<br>[オプション] - [詳細設定] - [ハードウェアのグラフィックアクセラレータを無効にする] のチェックを変更<br>※ Office 共通設定のため、いずれかのアプリケーションで変更すると、Office 全体に反映されます。  </p>
 <p>&lt;グループポリシー&gt;<br>[Microsoft Office 2016] – [その他] – [ハードウェア グラフィック アクセラレータを使用しない]<br>設定値 : 有効または 無効  </p>
 <p>&lt;レジストリ&gt;<br>キー : HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Graphics<br>名前 : DisableHardwareAcceleration<br>種類 : REG_DWORD<br>値 : 1<br><br></p>
 <h2 id="4-シートの表示倍率-Excel"><a href="#4-シートの表示倍率-Excel" class="headerlink" title="4. シートの表示倍率 (Excel)"></a><strong>4. シートの表示倍率 (Excel)</strong></h2><p>Excel でシートが 100% 以外のサイズで表示されていると、シート内容の表示位置やサイズを調整して描画します。パフォーマンスが気になるブックは、倍率 100% で保存してみてください。 </p>
 <p>&lt;手順&gt;<br>Excel のステータス バーをスライド、またはリボンの [表示] – [ズーム] – [100%]  </p>
-<p>&lt;プロパティ&gt;<br>Window.Zoom プロパティを 100 に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom</a><br><br></p>
+<p>&lt;プロパティ&gt;<br>Window.Zoom プロパティを 100 に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom">https://docs.microsoft.com/en-us/office/vba/api/excel.window.zoom</a><br><br></p>
 <h2 id="5-図のリンク-カメラ-Excel"><a href="#5-図のリンク-カメラ-Excel" class="headerlink" title="5. 図のリンク (カメラ) (Excel)"></a><strong>5. 図のリンク (カメラ) (Excel)</strong></h2><p>図形や画像に、数式バーでセルを参照する数式を設定すると、参照先のセルをオブジェクト内に表示できます。この状態では、参照先セルの変更有無を判定する都度再描画され、パフォーマンスが低下します。リンクが不要な場合は、図のリンクを解除して静的な内容に変更します。  </p>
 <p>&lt;手順&gt;<br>図形や画像を選択し、数式バーで数式を削除</p>
-<p>&lt;プロパティ&gt;<br>対象オブジェクトの Formula プロパティの内容をクリア<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula</a><br><br></p>
+<p>&lt;プロパティ&gt;<br>対象オブジェクトの Formula プロパティの内容をクリア<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula">https://docs.microsoft.com/en-us/office/vba/api/excel.range.formula</a><br><br></p>
 <h2 id="6-数式バー表示-Excel"><a href="#6-数式バー表示-Excel" class="headerlink" title="6. 数式バー表示 (Excel)"></a><strong>6. 数式バー表示 (Excel)</strong></h2><p>Excel の数式バー部分は子ウィンドウになっており、数式バー自体の描画にある程度のコストがかかります。プログラムなどから繰り返し再描画を行う場合は、数式バーを非表示にすることをお試しください。  </p>
 <p>&lt;オプション&gt;<br>[詳細設定] – [表示] – [数式バーを表示する] のチェックをオフ<br>※ オプションからは標準表示の状態のみ制御できます。    </p>
-<p>&lt;グループポリシー&gt;<br>[Microsoft Excel 2016] – [Excel のオプション] – [詳細設定]<br>  - [標準表示で数式バーを表示する] -&gt; 通常のウィンドウ状態での数式バー表示を制御<br>  - [全画面表示で数式バーを表示する] -&gt; 全画面表示 (Alt + V + U) での数式バー表示を制御<br>設定値 : 無効    </p>
+<p>&lt;グループポリシー&gt;<br>[Microsoft Excel 2016] – [Excel のオプション] – [詳細設定]<br>  - [標準表示で数式バーを表示する] -&gt; 通常のウィンドウ状態での数式バー表示を制御<br>  - [全画面表示で数式バーを表示する] -&gt; 全画面表示 (Alt + V + U) での数式バー表示を制御<br>設定値 : 無効    </p>
 <p>&lt;レジストリ&gt;<br><strong>標準表示で数式バーを表示する</strong><br>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Excel\Options\Binaryoptions<br>名前 : ffmlaf_1_1<br>種類 : REG_DWORD<br>値 : 0  </p>
 <p><strong>全画面表示で数式バーを表示する</strong><br>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\Office\16.0\Excel\Options\Binaryoptions<br>名前 : ffmlafull_68_1<br>種類 : REG_DWORD<br>値 : 0  </p>
-<p>&lt;プロパティ&gt;<br>Application.DisplayFormulaBar プロパティ を False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar</a><br><br></p>
-<h2 id="7-ステータスバー表示-Excel-Word-PowerPoint"><a href="#7-ステータスバー表示-Excel-Word-PowerPoint" class="headerlink" title="7. ステータスバー表示 (Excel / Word / PowerPoint)"></a><strong>7. ステータスバー表示 (Excel / Word / PowerPoint)</strong></h2><p>数式バーと同様、ステータスバー自体の描画、内容の更新もパフォーマンスに影響します。手動操作では、表示内容を減らすことをお試しください。Excel では、プログラムの場合、ステータスバー自体を非表示にできます。</p>
-<p>&lt;手順&gt;<br>ステータス バーを右クリックし、[ステータス バーのユーザー設定] メニューで不要な項目のチェックを外します。<br>参考) Excel のステータスバーのオプション<br><a href="https://support.office.com/ja-jp/article/6055ecd9-e20f-4a7a-a611-4481bd488c55" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/6055ecd9-e20f-4a7a-a611-4481bd488c55</a></p>
-<p>&lt;プログラム&gt;<br>Application.DisplayStatusBar プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar</a><br><br></p>
+<p>&lt;プロパティ&gt;<br>Application.DisplayFormulaBar プロパティ を False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displayformulabar</a><br><br></p>
+<h2 id="7-ステータスバー表示-Excel-x2F-Word-x2F-PowerPoint"><a href="#7-ステータスバー表示-Excel-x2F-Word-x2F-PowerPoint" class="headerlink" title="7. ステータスバー表示 (Excel &#x2F; Word &#x2F; PowerPoint)"></a><strong>7. ステータスバー表示 (Excel &#x2F; Word &#x2F; PowerPoint)</strong></h2><p>数式バーと同様、ステータスバー自体の描画、内容の更新もパフォーマンスに影響します。手動操作では、表示内容を減らすことをお試しください。Excel では、プログラムの場合、ステータスバー自体を非表示にできます。</p>
+<p>&lt;手順&gt;<br>ステータス バーを右クリックし、[ステータス バーのユーザー設定] メニューで不要な項目のチェックを外します。<br>参考) Excel のステータスバーのオプション<br><a target="_blank" rel="noopener" href="https://support.office.com/ja-jp/article/6055ecd9-e20f-4a7a-a611-4481bd488c55">https://support.office.com/ja-jp/article/6055ecd9-e20f-4a7a-a611-4481bd488c55</a></p>
+<p>&lt;プログラム&gt;<br>Application.DisplayStatusBar プロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar">https://docs.microsoft.com/en-us/office/vba/api/excel.application.displaystatusbar</a><br><br></p>
 <h2 id="8-プログラム向け-描画処理全般の停止"><a href="#8-プログラム向け-描画処理全般の停止" class="headerlink" title="8. (プログラム向け) 描画処理全般の停止"></a><strong>8. (プログラム向け) 描画処理全般の停止</strong></h2><p>プログラムの処理中は、処理途中の描画状態をユーザーに見せる必要はないことが多いため、以下のプロパティを設定して画面描画を抑止することをお試しください。(多くの描画処理が抑止されますが、完全に描画が一切行われなくなるわけではありません。)</p>
-<p><strong>Excel</strong><br>Application.ScreenUpdating プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.screenupdating" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.screenupdating</a></p>
-<p><strong>Word</strong><br>Application.ScreenUpdatingプロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/word.application.screenupdating" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/word.application.screenupdating</a></p>
+<p><strong>Excel</strong><br>Application.ScreenUpdating プロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.screenupdating">https://docs.microsoft.com/en-us/office/vba/api/excel.application.screenupdating</a></p>
+<p><strong>Word</strong><br>Application.ScreenUpdatingプロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/word.application.screenupdating">https://docs.microsoft.com/en-us/office/vba/api/word.application.screenupdating</a></p>
 <p>※ PowerPoint はプロパティはありません<br><br></p>
 <h2 id="9-プログラム向け-Excel-の非表示化"><a href="#9-プログラム向け-Excel-の非表示化" class="headerlink" title="9. (プログラム向け) Excel の非表示化"></a><strong>9. (プログラム向け) Excel の非表示化</strong></h2><p>外部からの Office オートメーションなどでは、プログラムの処理中にアプリケーション ウィンドウ自体を非表示にすることも有効です。以下のプロパティで非表示にできます。</p>
-<p><strong>Excel</strong><br>Application.Visible プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.visible" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/excel.application.visible</a></p>
-<p><strong>Word</strong><br>Application.Visible プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/word.application.visible" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/word.application.visible</a></p>
-<p><strong>PowerPoint</strong><br>Application.Visible プロパティを False に設定<br><a href="https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible" target="_blank" rel="noopener">https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible</a><br><br></p>
+<p><strong>Excel</strong><br>Application.Visible プロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/excel.application.visible">https://docs.microsoft.com/en-us/office/vba/api/excel.application.visible</a></p>
+<p><strong>Word</strong><br>Application.Visible プロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/word.application.visible">https://docs.microsoft.com/en-us/office/vba/api/word.application.visible</a></p>
+<p><strong>PowerPoint</strong><br>Application.Visible プロパティを False に設定<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible">https://docs.microsoft.com/en-us/office/vba/api/powerpoint.application.visible</a><br><br></p>
 <h2 id="10-OS-アニメーションの無効化"><a href="#10-OS-アニメーションの無効化" class="headerlink" title="10. (OS) アニメーションの無効化"></a><strong>10. (OS) アニメーションの無効化</strong></h2><p>Office だけでなく他のアプリケーション全般に及ぶ設定ですが、OS レベルでアニメーションを無効化できます。</p>
 <p>&lt;オプション&gt;<br><strong>Wndows 10</strong><br>[設定] – [簡単操作] – [ディスプレイ] – [Windows のシンプル化と個人用設定] – [Windows にアニメーションを表示する]<br>をオフに設定し、OS を再起動してパフォーマンスを確認してください。(バージョンによりメニュー構成が異なる場合があります。見つからない場合は [設定] 画面の検索から “アニメーション” で探してみてください。)<br><br></p>
 <h2 id="11-OS-視覚効果"><a href="#11-OS-視覚効果" class="headerlink" title="11. (OS) 視覚効果"></a><strong>11. (OS) 視覚効果</strong></h2><p>OS の設定で、視覚効果を細かく制御できます。パフォーマンスを優先する設定に変更してお試しください。</p>
@@ -196,9 +190,11 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m75al9001jmcvs2kbq9c9w/" data-id="cl0tck5cd001kuskj76cxavil" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m75al9001jmcvs2kbq9c9w/" data-id="cl0tck5cd001kuskj76cxavil" class="article-share-link">共有</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li></ul>
+
     </footer>
   </div>
   
@@ -206,7 +202,7 @@
 <nav id="article-nav">
   
     <a href="/blog/cl0m75amr003amcvsd7ms8h6l/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">次の記事</strong>
       <div class="article-nav-title">
         
           クイック実行版の Office を展開している環境で Office のサインインに失敗する (ライセンス認証が失敗する)事象について
@@ -216,7 +212,7 @@
   
   
     <a href="/blog/cl0m75alf001rmcvses4a67bp/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">前の記事</strong>
       <div class="article-nav-title">Office の既定のフォントを変更する方法</div>
     </a>
   
@@ -234,9 +230,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">タグ</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OCR/" rel="tag">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OneNote/" rel="tag">OneNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
     </div>
   </div>
 
@@ -244,9 +240,18 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 17.5px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 16.25px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16.25px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
     </div>
   </div>
 
@@ -254,28 +259,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最近の投稿</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/cl28oxvt6002ku8uj1ose6ej2/">OneNote の OCR 機能で読み取りにくい文字列がある</a>
+            <a href="/blog/cld8jp0gd00422skj5eabeqvb/">「必要なサービスが無効になっています」と表示される現象について</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+            <a href="/blog/clc72h24j0001v0jo35060br5/">Word 文書内の図の位置がずれて印刷される現象について</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+            <a href="/blog/cl0mfb7bc0021nwvs6zie7xtv/">Office プロセスを自プログラム専用にする方法</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+            <a href="/blog/cla7qogkl006pa0jo434segs3/">Word での印刷で意図しない塗りつぶしが生じる</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+            <a href="/blog/cl9dgphrg0000m4vsb52864vv/">Word for Mac での印刷時のカラー設定の表記差異について</a>
           </li>
         
       </ul>
@@ -290,7 +295,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2022 Office Support Japan<br>      
+      &copy; 2023 Office Support Japan<br>      
     </div>
   </div>
 </footer>
@@ -300,6 +305,10 @@
     <a href="/blog/" class="mobile-nav-link">Home</a>
   
     <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
   
 </nav>
     

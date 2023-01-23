@@ -13,24 +13,14 @@
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
 <meta property="og:description" content="(※ 2016 年 9 月 8 日に Japan Office Support Blog に公開した情報のアーカイブです。) こんにちは、Office サポート チームです。 本記事では クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法についてご案内いたします。   [はじめに]Office 2013 以降の製品では、Office 2010 までのバ">
-<meta property="og:locale" content="en_US">
+<meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/image1.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/image2.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/image3.png">
-<meta property="article:published_time" content="2019-03-08T15:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-16T08:48:29.913Z">
+<meta property="article:published_time" content="2019-03-09T00:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-11T07:22:29.308Z">
 <meta property="article:author" content="Office Support Japan">
-<meta property="article:tag" content="Microsoft">
-<meta property="article:tag" content="Office">
-<meta property="article:tag" content="Support">
-<meta property="article:tag" content="Excel">
-<meta property="article:tag" content="Word">
-<meta property="article:tag" content="PowerPoint">
-<meta property="article:tag" content="OneNote">
-<meta property="article:tag" content="Access">
-<meta property="article:tag" content="マイクロソフト">
-<meta property="article:tag" content="オフィス">
-<meta property="article:tag" content="サポート">
+<meta property="article:tag" content="インストール">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/image1.png">
   
@@ -53,7 +43,7 @@
   
 <link rel="stylesheet" href="/blog/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
@@ -80,12 +70,16 @@
         
           <a class="main-nav-link" href="/blog/archives">Archives</a>
         
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
@@ -97,7 +91,7 @@
         <section id="main"><article id="post-クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/cl0m8t2dj00393gvs3r7oar2m/" class="article-date">
-  <time datetime="2019-03-08T15:00:00.000Z" itemprop="datePublished">2019-03-09</time>
+  <time datetime="2019-03-09T00:00:00.000Z" itemprop="datePublished">2019-03-09</time>
 </a>
     <!--  -->
   </div>
@@ -117,7 +111,7 @@
         Last Update: 
         <a href="/blog/cl0m8t2dj00393gvs3r7oar2m/" class="article-date-single">    
     
-    <time datetime="2019-03-08T15:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
+    <time datetime="2019-03-09T00:00:00.000Z" itemprop="dateUpdated">2019-03-09</time>
     
 </a>              
       </div>
@@ -132,9 +126,9 @@
 <p>(C2R および MSI 形式の Office の更新方法については本サイトの下部にてご案内しております。)</p>
 <p>Windows インストーラー形式 (MSI) のファイルは Windows インストーラを利用しているため、従来通り Microsoft Update による更新やサポート技術情報 (KB) の更新プログラムの適用が可能です。</p>
 <p>クイック実行についての詳細は、以下の公開情報をご参照ください。</p>
-<p>クイック実行の概要<br><a href="https://technet.microsoft.com/ja-jp/library/jj219427.aspx" target="_blank" rel="noopener">https://technet.microsoft.com/ja-jp/library/jj219427.aspx</a></p>
-<p>Office の更新プログラムをインストールする<br><a href="https://support.office.com/ja-jp/article/2ab296f3-7f03-43a2-8e50-46de917611c5" target="_blank" rel="noopener">https://support.office.com/ja-jp/article/2ab296f3-7f03-43a2-8e50-46de917611c5</a></p>
-<h3 id="判別方法"><a href="#判別方法" class="headerlink" title="[判別方法]"></a>[判別方法]</h3><p>Office アプリケーションから [ファイル] タブ ?  [アカウント]  をクリックした際に表示される以下の画面の  [更新オプション] の有無で判別が可能です。</p>
+<p>クイック実行の概要<br><a target="_blank" rel="noopener" href="https://technet.microsoft.com/ja-jp/library/jj219427.aspx">https://technet.microsoft.com/ja-jp/library/jj219427.aspx</a></p>
+<p>Office の更新プログラムをインストールする<br><a target="_blank" rel="noopener" href="https://support.office.com/ja-jp/article/2ab296f3-7f03-43a2-8e50-46de917611c5">https://support.office.com/ja-jp/article/2ab296f3-7f03-43a2-8e50-46de917611c5</a></p>
+<h3 id="判別方法"><a href="#判別方法" class="headerlink" title="[判別方法]"></a>[判別方法]</h3><p>Office アプリケーションから [ファイル] タブ ?  [アカウント]  をクリックした際に表示される以下の画面の  [更新オプション] の有無で判別が可能です。</p>
 <p><strong>判別方法概要</strong></p>
 <p>クイック実行形式 (C2R) : [更新オプション] ボタンがあります<br>Windows インストーラー形式 (MSI) : [更新オプション] ボタンがありません</p>
 <p><strong>確認手順</strong></p>
@@ -144,30 +138,32 @@
 <p>iv. 右側に表示される [製品情報] 以下の情報を確認して、下記のいずれであるかをご確認ください。</p>
 <p><u>&lt;クイック実行形式 (C2R) のアカウント画面&gt;</u>  </p>
 <p>[Office 更新プログラム] と [Excel のバージョン情報] が上下に並んで表示されている場合は、 クイック実行によってインストールされた Officeとなります。</p>
-<p><img src="image1.png" alt="">  </p>
+<p><img src="/blog/cl0m8t2dj00393gvs3r7oar2m/image1.png">  </p>
 <p><u>&lt;Windows インストーラー形式 (MSI) のアカウント画面&gt;</u>  </p>
 <p>[Excel のバージョン情報] のみが表示されている場合は、従来の Windows インストーラー (MSI) を 使ってインストールされた Officeとなります。</p>
-<p><img src="image2.png" alt=""></p>
+<p><img src="/blog/cl0m8t2dj00393gvs3r7oar2m/image2.png"></p>
 <h3 id="更新方法"><a href="#更新方法" class="headerlink" title="[更新方法]"></a>[更新方法]</h3><p>クイック実行形式の Office は Office 製品独自の更新方法となります。  </p>
 <p>上述の &lt;クイック実行形式 のアカウント画面&gt; 内の「更新オプション」ボタンから “今すぐ更新” をクリックしていただくことで、現在ご利用の Office バージョンのチャネルの最新版の更新プログラムをダウンロードし、インストールします。</p>
 <p>Windows インストーラー形式 (MSI) の Office では、Office 2010 までと同様に Microsoft Update を使用して更新プログラムを適用します。  </p>
 <p>Microsoft Update の利用手順について詳しくは、下記のサイトを参照してください。</p>
-<p> Windows Update 利用の手順<br> <a href="https://www.microsoft.com/ja-jp/safety/pc-security/j_musteps.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/safety/pc-security/j_musteps.aspx</a></p>
-<p> Windows Update と Microsoft Update ってどう違うの?<br> <a href="https://support.microsoft.com/ja-jp/kb/914303" target="_blank" rel="noopener">https://support.microsoft.com/ja-jp/kb/914303</a></p>
+<p> Windows Update 利用の手順<br> <a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/safety/pc-security/j_musteps.aspx">https://www.microsoft.com/ja-jp/safety/pc-security/j_musteps.aspx</a></p>
+<p> Windows Update と Microsoft Update ってどう違うの?<br> <a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/kb/914303">https://support.microsoft.com/ja-jp/kb/914303</a></p>
 <h3 id="補足情報"><a href="#補足情報" class="headerlink" title="[補足情報]"></a>[補足情報]</h3><p>各 Office 製品では以下のようになっています。</p>
-<p><img src="image3.png" alt=""></p>
+<p><img src="/blog/cl0m8t2dj00393gvs3r7oar2m/image3.png"></p>
 <p>※1<br>プリインストール版 (PIPC) とは、コンピュータをご購入いただいた際に (Office 製品を、パッケージ単体で購入して、<br>パーソナル コンピュータにインストールするのではなく) 、既にパーソナル コンピュータにインストールされている形で販売されている Office 製品のことをいいます。</p>
-<p>※2<br>ボリューム ライセンスにつきましては、以下の公開情報をご参照ください。<br> ボリューム ライセンスの概要<br> <a href="https://www.microsoft.com/ja-jp/licensing/licensing-programs/licensing-programs.aspx" target="_blank" rel="noopener">https://www.microsoft.com/ja-jp/licensing/licensing-programs/licensing-programs.aspx</a></p>
+<p>※2<br>ボリューム ライセンスにつきましては、以下の公開情報をご参照ください。<br> ボリューム ライセンスの概要<br> <a target="_blank" rel="noopener" href="https://www.microsoft.com/ja-jp/licensing/licensing-programs/licensing-programs.aspx">https://www.microsoft.com/ja-jp/licensing/licensing-programs/licensing-programs.aspx</a></p>
 <p>※3<br>MSDN サブスクリプション製品 につきましては、Office 2013 と Office 2016 でインストール形式が異なりますのでご注意ください。  </p>
 <p>また、MSDN サブスクリプション製品につきましては、以下の公開情報をご参照ください。  </p>
-<p> サブスクライバー ダウンロードへようこそ<br> <a href="https://msdn.microsoft.com/ja-jp/subscriptions/downloads/" target="_blank" rel="noopener">https://msdn.microsoft.com/ja-jp/subscriptions/downloads/</a></p>
+<p> サブスクライバー ダウンロードへようこそ<br> <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/ja-jp/subscriptions/downloads/">https://msdn.microsoft.com/ja-jp/subscriptions/downloads/</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/" data-id="cl0tck5cv0038uskje2l16k20" class="article-share-link">Share</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/" data-id="cl0tck5cv0038uskje2l16k20" class="article-share-link">共有</a>
       
       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li></ul>
+
     </footer>
   </div>
   
@@ -175,7 +171,7 @@
 <nav id="article-nav">
   
     <a href="/blog/cl0m82yjx0035vovs9kilbsab/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
+      <strong class="article-nav-caption">次の記事</strong>
       <div class="article-nav-title">
         
           インターネットから Office ファイルを開く時にエラーとなる現象について
@@ -185,7 +181,7 @@
   
   
     <a href="/blog/cl0m8t2dl003b3gvs6w8z8co4/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
+      <strong class="article-nav-caption">前の記事</strong>
       <div class="article-nav-title">クイック実行形式の Office をインストールすると Office 以外のアプリケーションから ODBC - OLEDB が利用できない</div>
     </a>
   
@@ -203,9 +199,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
+    <h3 class="widget-title">タグ</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MC322553/" rel="tag">MC322553</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OCR/" rel="tag">OCR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/OneNote/" rel="tag">OneNote</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">マクロ</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
     </div>
   </div>
 
@@ -213,9 +209,18 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.75px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.75px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.5px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.75px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 17.5px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.75px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17.5px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11.25px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 16.25px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17.5px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 18.75px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.5px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16.25px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16.25px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.25px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">January 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">June 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">November 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">October 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">July 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">June 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">October 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">September 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">May 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
     </div>
   </div>
 
@@ -223,28 +228,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">最近の投稿</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/cl28oxvt6002ku8uj1ose6ej2/">OneNote の OCR 機能で読み取りにくい文字列がある</a>
+            <a href="/blog/cld8jp0gd00422skj5eabeqvb/">「必要なサービスが無効になっています」と表示される現象について</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4f5o1003504vsa5tp25c2/">インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)</a>
+            <a href="/blog/clc72h24j0001v0jo35060br5/">Word 文書内の図の位置がずれて印刷される現象について</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4rqa2001y50vshhi75we2/">Office ファイルの SPO &amp; OneDrive 移行におけるマクロ (VBA) 影響</a>
+            <a href="/blog/cl0mfb7bc0021nwvs6zie7xtv/">Office プロセスを自プログラム専用にする方法</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4xkl00039eovs4fp4ffbt/">お知らせ - Japan Office Client Support Blog について</a>
+            <a href="/blog/cla7qogkl006pa0jo434segs3/">Word での印刷で意図しない塗りつぶしが生じる</a>
           </li>
         
           <li>
-            <a href="/blog/cl0m4xkk8002oeovs8ggucayv/">Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて</a>
+            <a href="/blog/cl9dgphrg0000m4vsb52864vv/">Word for Mac での印刷時のカラー設定の表記差異について</a>
           </li>
         
       </ul>
@@ -259,7 +264,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2022 Office Support Japan<br>      
+      &copy; 2023 Office Support Japan<br>      
     </div>
   </div>
 </footer>
@@ -269,6 +274,10 @@
     <a href="/blog/" class="mobile-nav-link">Home</a>
   
     <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
   
 </nav>
     
