@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/IETempFolder.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/FilePath.png">
 <meta property="article:published_time" content="2022-10-14T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-09T06:30:47.778Z">
+<meta property="article:modified_time" content="2023-02-09T06:34:31.399Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="VBA マクロ">
 <meta name="twitter:card" content="summary">
@@ -210,7 +210,7 @@
 <p><img src="/blog/cl97y6c2w0000ykse7nll9auc/FilePath.png">  </p>
 <br>
 
-<p><strong><p id="ResponseHeader">※ 応答ヘッダーの動作</p></strong><br>Web サイトの応答によって、開かれる Office ファイルのパスが異なります。</p>
+<p><strong><p id="ResponseHeader">※ 応答ヘッダーの動作</p></strong><br>Web サイトの応答によって、開かれる Office ファイルのパスが異なります。マクロ ブロックを避けるには、レスポンス ヘッダーを Content-Disposition:Inline に設定してください。</p>
 <p>Content-Disposition:Attachment の場合:<br>インターネット一時フォルダーにテンポラリ ファイルとして保存され、Office からはこのテンポラリ ファイルを開く流れとなります。したがって、ファイル パスがインターネット一時フォルダーであるとみなされ、マクロがブロックされます。</p>
 <p>Content-Disposition:Inline の場合:<br>Office からは、Web サイト上のファイルを開いている扱いとなります。したがって、3) ～ 5) の方法で Web サイトのパスを信頼することで、マクロはブロックされません。</p>
 <br>
