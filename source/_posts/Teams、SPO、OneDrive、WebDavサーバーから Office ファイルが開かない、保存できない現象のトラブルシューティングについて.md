@@ -10,103 +10,80 @@ tags:
 ---
 
 こんにちは、Office サポートの西川 (直) です。  
-  
+
 今回の投稿では、Teams、SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象のトラブルシューティングについて説明します。
-
-以下、問題の切り分けに有用な情報を以下にご案内いたします。
-
-これらの手順を上から順にご実施ください。
+以下の手順を上から順にご実施ください。
 
 <br>
 
-**<実施方法>**
-
-**1) Office への再サインイン**
-
-\--------------------------------
-
+1\. Office への再サインイン
+--
 1\. Office からサインアウトし、Office を全て終了します。
-
 2\. OS のスタートメニュー - 歯車 - "アカウント" - "職場または学校にアクセスする" をクリックし、"職場または学校アカウント" として表示されている項目がある場合、"切断" をクリックします
-
 ※ Azure AD や AD に接続済みの項目を "切断" しますと、ドメインから外れてしまいますので、Azure AD や AD に接続済み の項目は切断しないようにご注意ください。
 
-3\. OS からログオフします。(可能であれば、再起動してください)
+![](image1.png)
 
-4\. Office を起動してサインインし、事象が解消するかをお試しください。
+3\. Office を起動してサインインし、事象が解消するかをお試しください。
+
+<br>
+
+2\.  Office のファイルキャッシュクリア
+--
+以下の "対処方法" - "方法 2" - "ユーザーインターフェースから削除する場合" をご実施ください。
+[SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について](https://officesupportjp.github.io/blog/cl0m82yjj002mvovs9cil5fgy/index.html)
 
 
 <br>
 
-**2) Office のファイルキャッシュクリア**
+3\. Office のファイルキャッシュの完全クリア
+--
+**事前準備**
+・ボリュームライセンス版の Office 2013、2016、または、[サポートされていない古いバージョンの Microsoft 365 Apps](https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date) の場合、
+タスク マネージャーを起動し、\[プロセス\] タブで MSOSYNC.EXE が存在したら "プロセスの終了" をクリックしてください。
+・"2. Office のファイルキャッシュクリア"の [ファイルを閉じたときにOfficeドキュメントキャッシュから削除する] もご実施ください
+・以下の手順について、Office 2013 の場合は 15.0、Office 2016 以降は 16.0 となります。
 
-\---------------------------------------------------
 
-1\. Excel 等を開きます。
+- **手順 (UI から実施する場合)**
+1. `%localappdata%\Microsoft\Office\16.0` に移動し、OfficeFileCache と冠するフォルダーを全て削除して下さい。
+※ OfficeFileCache2 や OfficeFileCache3 等が存在する場合、全て削除してください
 
-2\. \[ファイル\] タブ - "オプション" を開きます。
+2. スタートメニューを右クリックして \[ファイル名を指定して実行\] から regedit と入力し、レジストリ エディタを起動します。
+※ ログオンユーザーの権限で起動してください。管理者権限は不要です。
+※ UAC プロンプトで他の管理者ユーザーの UAC を入力すると、正しくキャッシュが削除出来ません。
 
-3\. "保存" より、"キャッシュ" の設定 - \[ファイルを閉じたときに Office ドキュメント キャッシュから削除する\] オプションでチェックを入れ有効に設定し、\[キャッシュ ファイルの削除\] を実施します。
+3. 以下のキーを展開し、Server Cache キーを削除します。
+`HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\Internet\Server Cache`
 
-<br>
+- **手順 (コマンドで実施する場合)**
+1. コマンドプロンプトを起動します。
+※ ログオンユーザーの権限で起動してください。管理者権限は不要です。
+※ UAC プロンプトで他の管理者ユーザーの UAC を入力すると、正しくキャッシュが削除出来ません。
 
-Office 2016 等をご利用されている場合、上記項目が見つからない可能性があります。その場合、代わりに以下の手順をご実施ください。
+2. 以下のコマンドを実施します。
+```
+cd %localappdata%\Microsoft\Office\16.0
+for /f %i in ('dir /a:d /b OfficeFileCache*') do rd /s /q %i
+reg delete "HKCU\Software\Microsoft\Office\16.0\Common\Internet\Server Cache" /f
+```
 
-<br>
-
-1\. Office を全て終了します。
-
-2\. \[スタート\]-\[すべてのプログラム\]-\[Microsoft Officeツール\]-\[Office アップロードセンター\] をクリックし、\[設定\] を押下後、\[キャッシュ ファイルの削除\] を実施してください。
-
-3\. \[ファイルを閉じたときに Office ドキュメント キャッシュから削除する\] オプションでチェックを入れ有効に設定します。
-
-4\. \[OK\] ボタンをクリックし、Microsoft Office アップロード センターの設定 ダイアログを閉じます。  
-
-<br>
-
-**3) Office のファイルキャッシュの完全クリア**
-
-\---------------------------------------------------
-
-1\. Ctrl + Shift + Esc キーを押してタスク マネージャーを起動します。
-
-2\. \[プロセス\] タブで \[MSOSYNC.EXE\] が存在する場合、クリックし、\[プロセスの終了\] をクリックしてから、タスク マネージャーを終了します。
-
-3\. %userprofile%\\AppData\\Local\\Microsoft\\Office\\16.0\\ に移動します。
-
-※ Office 2013 の場合は 15.0 となります。
-
-4\. OfficeFileCache フォルダー配下のファイルを削除できるもののみ、削除して下さい。
-
-5\. スタートメニューを右クリックして \[ファイル名を指定して実行\] から regedit と入力し、レジストリ エディタを起動します。
-
-6\. 以下のキーを展開します。
-
-HKEY\_CURRENT\_USER\\Software\\Microsoft\\Office\\16.0\\Common\\Internet\\Server Cache
-
-7\. Server Cache キーを選択し、削除します。
-
-8\. OS を再起動します。  
+3. 念のため、`%localappdata%\Microsoft\Office\16.0` に移動し、OfficeFileCache と名前が付いているフォルダーが存在しないことをご確認ください。
 
 <br>
 
-**4) Office のサインインキャッシュのクリア**
-
-\---------------------------------------------------
-
+4\. Office のサインインキャッシュのクリア
+--
 以下の記事の手順により、サインインキャッシュのクリアをご実施ください。
-
-Title : Office のサインインのトラブルシュートについて  
-URL : [https://officesupportjp.github.io/blog/Office のサインインのトラブルシュートについて](https://officesupportjp.github.io/blog/Office%20%E3%81%AE%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%81%AE%E3%83%88%E3%83%A9%E3%83%96%E3%83%AB%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%88%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
+[Office のサインインのトラブルシュートについて](https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/index.html)
 
 <br>
 
 **\- 関連情報**
+[MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について](https://officesupportjp.github.io/blog/cl0m69xu000124cvsclmc5vis/index.html)
 
-Title : MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について
-
-URL : [https://officesupportjp.github.io/blog/MSI 版の Office 2016 で SPO、OneDrive、WebDav サーバーから Office ファイルが開かない、保存できない現象について](https://officesupportjp.github.io/blog/MSI%20%E7%89%88%E3%81%AE%20Office%202016%20%E3%81%A7%20SPO%E3%80%81OneDrive%E3%80%81WebDav%E3%82%B5%E3%83%BC%E3%83%90%E3%83%BC%E3%81%8B%E3%82%89%20Office%20%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%81%8C%E9%96%8B%E3%81%8B%E3%81%AA%E3%81%84%E3%80%81%E4%BF%9D%E5%AD%98%E3%81%A7%E3%81%8D%E3%81%AA%E3%81%84%E7%8F%BE%E8%B1%A1%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/)
+<span style="color:#ff0000">**2023/2/22 Update**</span>  
+<span style="color:#339966">体裁を整え、対処方法を簡略化しました</span>
 
 <br>
-
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
