@@ -17,7 +17,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cldu0kdx900004k6yd6dvgatz/img1.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cldu0kdx900004k6yd6dvgatz/img2.png">
 <meta property="article:published_time" content="2023-02-06T15:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-10T08:34:08.075Z">
+<meta property="article:modified_time" content="2023-02-22T09:35:46.769Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="Excel">
 <meta name="twitter:card" content="summary">
@@ -124,8 +124,8 @@
 <p>その後、DirectX の初期化に関するエラーが表示され、3D マップ機能が起動しません。<br>※過去の利用履歴により上記エラー後に 3D マップ機能が起動することもあります。  </p>
 <p><img src="/blog/cldu0kdx900004k6yd6dvgatz/img2.png"></p>
 <h1 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h1><p>3D マップで利用する .Net framework で TLS 1.2 を利用して接続できるように<br>以下のレジストリを構成 (新規作成) します。<br>レジストリの設定には端末の管理者権限が必要となります。 </p>
-<p>&lt;OS と Office が同じ bit&gt;<br>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft.NETFramework\v4.0.30319<br>名前 : SchUseStrongCrypto<br>種類 : REG_DWORD<br>値 : 1  </p>
-<p>&lt;64bit OS 上に 32bit の Office&gt;<br>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft.NETFramework\v4.0.30319<br>名前 : SchUseStrongCrypto<br>種類 : REG_DWORD<br>値 : 1  </p>
+<p>&lt;OS と Office が同じ bit&gt;<br>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319<br>名前 : SchUseStrongCrypto<br>種類 : REG_DWORD<br>値 : 1  </p>
+<p>&lt;64bit OS 上に 32bit の Office&gt;<br>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319<br>名前 : SchUseStrongCrypto<br>種類 : REG_DWORD<br>値 : 1  </p>
 <h3 id="ご参考"><a href="#ご参考" class="headerlink" title="ご参考"></a>ご参考</h3><p>クライアントの SSL&#x2F;TLS プロトコルと暗号スイートのAD FSを管理する<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/windows-server/identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs#enabling-strong-authentication-for-net-applications">https://learn.microsoft.com/ja-jp/windows-server/identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs#enabling-strong-authentication-for-net-applications</a>  </p>
 <h1 id="エラーの原因"><a href="#エラーの原因" class="headerlink" title="エラーの原因"></a>エラーの原因</h1><p>「状態コード: 4」のエラーは、TLS での接続に失敗していることが原因として考えられます。<br>2022年の下旬 (10月頃) に、コンテンツ配信サービス (3D マップ) 側でセキュリティ要件を変更したことにより、TLS 1.2 の接続が必要となりました。<br>これまでは TLS 1.0&#x2F;1.1 での接続も動作していましたが、TLS 1.2 での接続を必要とし、TLS 1.0&#x2F; 1.1 での接続をエラーとするよう変更がありました。 </p>
 <p>Office 2019 や Microsoft 365 Apps では更新プログラムにより TLS 1.2 に<br>対応するように修正されましたが、Office 2016 は延長サポートフェーズであるため<br>更新による修正がリリースされていません。<br>そのため、レジストリを設定して TLS の接続方法を変更する必要があります。  </p>
