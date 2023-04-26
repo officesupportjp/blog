@@ -1,7 +1,7 @@
 ---
 title: Office のサインインのトラブルシュートについて
 date: '2020-07-09'
-lastupdate: '2021-05-10'
+lastupdate: '2023-04-26'
 id: cl0m6umvg001gi4vsgppfcmk0
 tags:
   - サインイン、認証
@@ -59,6 +59,7 @@ Office 2019 以降、または、Microsoft 365 Apps の場合
 `%LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 `%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts`
 `%LOCALAPPDATA%\Microsoft\TokenBroker\Cache`
+`%LOCALAPPDATA%\Microsoft\OneAuth`
 ※ 事象が発生しているユーザーにてご実施ください。
 
 6. OS からサインアウト、または、OS を再起動してください
@@ -143,6 +144,8 @@ $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-a
 
 [Microsoft 365 サービスに接続しようとしたときの Office アプリケーションの認証の問題を修正します](https://learn.microsoft.com/ja-jp/microsoft-365/troubleshoot/authentication/automatic-authentication-fails)
 
+[OneDrive 同期 アプリにサインインするときにエラー AADSTS50020 が発生しました](https://learn.microsoft.com/ja-jp/sharepoint/troubleshoot/sync/sign-into-onedrive-sync-app-error)
+
 <br>
 
 <span style="color:#ff0000">**2020/10/28  Update**</span>  
@@ -156,6 +159,9 @@ $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-a
 
 <span style="color:#ff0000">**2023/2/22  Update**</span>  
 <span style="color:#339966">記事を簡略化しました。</span>
+
+<span style="color:#ff0000">**2023/4/26  Update**</span>  
+<span style="color:#339966">キャッシュ削除内容を追加しました。</span>
 
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
