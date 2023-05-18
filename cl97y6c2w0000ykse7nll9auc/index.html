@@ -7,12 +7,12 @@
   
   <title>インターネット入手マクロ ブロックのトラブルシュートの流れ | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。 こんにちは、Office サポート チームの中村です。 2022 年 4 月以降、Office 製品ではインターネットから入手したマ">
+  <meta name="description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。2023&#x2F;05&#x2F;18 Update序文に本動作を無効化するポリシーの記載を追加しました。 こんにちは、Office">
 <meta property="og:type" content="article">
 <meta property="og:title" content="インターネット入手マクロ ブロックのトラブルシュートの流れ">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。 こんにちは、Office サポート チームの中村です。 2022 年 4 月以降、Office 製品ではインターネットから入手したマ">
+<meta property="og:description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。2023&#x2F;05&#x2F;18 Update序文に本動作を無効化するポリシーの記載を追加しました。 こんにちは、Office">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/FlowChart.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/BlockMessage.png">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/IETempFolder.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/FilePath.png">
 <meta property="article:published_time" content="2022-10-14T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-22T11:02:03.419Z">
+<meta property="article:modified_time" content="2023-05-18T02:15:32.248Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="VBA マクロ">
 <meta property="article:tag" content="セキュリティ">
@@ -114,21 +114,22 @@
         Last Update: 
         <a href="/blog/cl97y6c2w0000ykse7nll9auc/" class="article-date-single">    
         
-    <time datetime="2023-02-09T00:00:00.000Z" itemprop="lastupdate">2023-02-09</time>    
+    <time datetime="2023-05-18T00:00:00.000Z" itemprop="lastupdate">2023-05-18</time>    
     
 </a>              
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><span style="color:#ff0000"><strong>2023&#x2F;02&#x2F;09 Update</strong></span><br><span style="color:#339966">- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。</span><br><span style="color:#339966">- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。</span><br><br></p>
+        <p><span style="color:#ff0000"><strong>2023&#x2F;02&#x2F;09 Update</strong></span><br><span style="color:#339966">- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。</span><br><span style="color:#339966">- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。</span><br><br><br><span style="color:#ff0000"><strong>2023&#x2F;05&#x2F;18 Update</strong></span><br><span style="color:#339966">序文に本動作を無効化するポリシーの記載を追加しました。</span><br><br></p>
 <p>こんにちは、Office サポート チームの中村です。</p>
 <p>2022 年 4 月以降、Office 製品ではインターネットから入手したマクロが既定でブロックされるようになる変更を進めています。すでに公開情報や過去のブログ記事で、この動作変更詳細や、ブロックされるマクロを有効化する方法をご案内しています。  </p>
 <p>ただ、今回の動作変更では、マクロがブロックされるシナリオや関連する設定が多岐に渡り、公開情報にも様々な情報が掲載されています。このため、実際にマクロがブロックされている状態において、「何が理由でブロックされているのか」、「どのような対処方法をとるべきか」の判断が難しいことから、サポートへのお問い合わせを頂くことがあります。  </p>
 <p>本記事ではこのようなユーザーに向けて、トラブルシュートの流れをまとめました。以下の記述に従って上から順に確認していくことで、そのファイルがブロックされている理由を特定し、その場合に検討できる対応方法を確認できる記事内容となっています。  </p>
 <p>個々の動作詳細や、対応方法の設定手順などは割愛しますので、既存記事をご参照ください。  </p>
 <p>&lt;既存関連記事&gt;<br>A) Macros from the internet will be blocked by default in Office<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked">https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked</a> (日本語版 - 機械翻訳)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked">https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked</a> (英語版)  </p>
-<p>B) インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)<br><a href="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/">https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/</a>  </p>
+<p>B) インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)<br><a href="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/">https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/</a><br><br></p>
+<p><strong><h3>インターネット入手ファイルのマクロ ブロック動作全体を無効化したい場合</h3></strong><br>以下でご案内する状況に応じた対処が難しい場合、この動作変更全体を無効化し、インターネット入手ファイルもローカル ファイルと同等に扱う以前の動作に戻すことも可能です。このような対処については、上記関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-1">【マクロを有効にする方法について】 - 1) ポリシーでマクロを有効にする方法</a>」をご参照ください。<br>ただし今回の動作変更は、メールに添付した Office ファイルや、インターネット上のサイトで公開されている Office ファイル内のマクロによる攻撃の増加を鑑みたセキュリティ強化を目的としたものです。このようなセキュリティ強化が無効化されることに十分にご留意ください。<br>特段の事情がない場合、以下の通りファイルや Web サイト、ネットワーク共有ごとに、安全と判断できるものを個別にブロック解除することをお勧めします。</p>
 <br>
 <br>
 
