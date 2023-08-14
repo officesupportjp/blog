@@ -7,20 +7,18 @@
   
   <title>Office のサインインのトラブルシュートについて | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Office サポートの西川 (直) です。  特定のユーザーだけ Office のサインインが成功しないとお問い合わせいただくことがございます。この場合、Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする の内容にて解消する可能性がございます。 しかし、Office には様々なバージョンがあり、この資料の他にも後述の参考情報のよう">
+  <meta name="description" content="こんにちは、Office サポートの西川 (直) です。    - 関連情報Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について   - 参考情報Microsoft 365 Apps をライセンス認証する際のサインインの問題 デバイス ID とデスクトップ仮想化 Microsoft 365 サービスに接続しようとしたときの Office アプリケーションの認証の">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Office のサインインのトラブルシュートについて">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="こんにちは、Office サポートの西川 (直) です。  特定のユーザーだけ Office のサインインが成功しないとお問い合わせいただくことがございます。この場合、Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする の内容にて解消する可能性がございます。 しかし、Office には様々なバージョンがあり、この資料の他にも後述の参考情報のよう">
+<meta property="og:description" content="こんにちは、Office サポートの西川 (直) です。    - 関連情報Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について   - 参考情報Microsoft 365 Apps をライセンス認証する際のサインインの問題 デバイス ID とデスクトップ仮想化 Microsoft 365 サービスに接続しようとしたときの Office アプリケーションの認証の">
 <meta property="og:locale" content="ja_JP">
-<meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/image01.png">
 <meta property="article:published_time" content="2020-07-09T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-08-14T00:29:47.449Z">
+<meta property="article:modified_time" content="2023-08-14T00:35:06.272Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="サインイン、認証">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/image01.png">
   
     <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
   
@@ -117,78 +115,6 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>こんにちは、Office サポートの西川 (直) です。 </p>
-<p>特定のユーザーだけ Office のサインインが成功しないとお問い合わせいただくことがございます。<br>この場合、<a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state">Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする</a> の内容にて解消する可能性がございます。</p>
-<p>しかし、Office には様々なバージョンがあり、この資料の他にも後述の<strong>参考情報</strong>のような情報もございますので、<br>ご利用されている製品によって、以下を指針としてご対応ください。</p>
-<br>
-
-<h2 id="Office-2013、2016-の場合"><a href="#Office-2013、2016-の場合" class="headerlink" title="Office 2013、2016 の場合"></a>Office 2013、2016 の場合</h2><ol>
-<li>Office からサインアウトし、Office を終了します。</li>
-<li><a target="_blank" rel="noopener" href="https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip">OLicenseCleanup.zip</a> をダウンロードして任意のフォルダに解凍します。</li>
-<li>ダブルクリックで OLicenseCleanup.vbs を実行します。処理はバックグラウンドで終了いたします。<br>※ 管理者権限は不要です。他の管理者ユーザーで実行すると正しくキャッシュが削除出来ませんので事象が発生しているログオンユーザーの権限で実行してください。</li>
-<li>Office のサインインの事象が解消するか、ご確認ください。</li>
-</ol>
-<br>
-
-<h2 id="Office-2019-以降、または、Microsoft-365-Apps-の場合"><a href="#Office-2019-以降、または、Microsoft-365-Apps-の場合" class="headerlink" title="Office 2019 以降、または、Microsoft 365 Apps の場合"></a>Office 2019 以降、または、Microsoft 365 Apps の場合</h2><ol>
-<li>Office からサインアウトし、Office を終了します。Teams、OneDrive 同期クライアントも全て終了します。</li>
-<li><a target="_blank" rel="noopener" href="https://download.microsoft.com/download/e/1/b/e1bbdc16-fad4-4aa2-a309-2ba3cae8d424/OLicenseCleanup.zip">OLicenseCleanup.zip</a> をダウンロードして任意のフォルダに解凍します。</li>
-<li>環境によって以下の対応を実施します。</li>
-</ol>
-<p><strong>Office 2019 以降の場合</strong><br>ダブルクリックで OLicenseCleanup.vbs を実行します。処理はバックグラウンドで終了いたします。<br>※ 管理者権限は不要です。他の管理者ユーザーで実行すると正しくキャッシュが削除出来ませんので事象が発生しているログオンユーザーの権限で実行してください。</p>
-<p><strong>Microsoft 365 Apps の場合</strong></p>
-<ul>
-<li><p>ログオンユーザーに管理者権限がある場合<br>コマンドプロンプトを右クリック→管理者権限で起動し、コマンドプロンプト上で OLicenseCleanup.vbs を実行してください。実行しても完了ダイアログ等は表示されず、処理はバックグラウンドで終了いたします。</p>
-</li>
-<li><p>ログオンユーザーに管理者権限がないけれども別の管理者ユーザーが利用できる場合<br>スクリプトを 2 回実行する必要があります。ログオンユーザーではダブルクリックで OLicenseCleanup.vbs を実行します。その後、コマンドプロンプトを右クリック→管理者権限として別の管理者ユーザーのアカウントで起動し、コマンドプロンプト上で OLicenseCleanup.vbs を実行してください。実行しても完了ダイアログ等は表示されず、処理はバックグラウンドで終了いたします。</p>
-</li>
-<li><p>ログオンユーザーに管理者権限がなく別の管理者ユーザーも利用できない場合<br>まずはダブルクリックで OLicenseCleanup.vbs を実行してください。事象が解消しない場合は管理者権限での実行もご検討ください</p>
-</li>
-</ul>
-<ol start="4">
-<li>以下の [職場または学校にアクセスする] からアカウントを切断してください。<br>※ Azure AD や AD に接続済みの項目を “切断” しますと、ドメインから外れてしまいますので、Azure AD や AD に接続済み の項目は切断しないようにご注意ください。</li>
-</ol>
-<p><img src="/blog/cl0m6umvg001gi4vsgppfcmk0/image01.png">  </p>
-<ol start="5">
-<li>以下のフォルダ配下のファイルを全て削除します。</li>
-</ol>
-<p><code>%LOCALAPPDATA%\Packages\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\AC\TokenBroker\Accounts</code><br><code>%LOCALAPPDATA%\Packages\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\AC\TokenBroker\Accounts</code><br><code>%LOCALAPPDATA%\Microsoft\TokenBroker\Cache</code><br><code>%LOCALAPPDATA%\Microsoft\OneAuth</code><br><code>%LOCALAPPDATA%\Microsoft\IdentityCache</code><br>※ 事象が発生しているユーザーにてご実施ください。</p>
-<ol start="6">
-<li>OS からサインアウト、または、OS を再起動してください</li>
-<li>Office のサインインの事象が解消するか、ご確認ください。</li>
-</ol>
-<br>
-
-<h2 id="Office-2019-以降、または、Microsoft-365-Apps-で事象が解消しない場合"><a href="#Office-2019-以降、または、Microsoft-365-Apps-で事象が解消しない場合" class="headerlink" title="Office 2019 以降、または、Microsoft 365 Apps で事象が解消しない場合"></a>Office 2019 以降、または、Microsoft 365 Apps で事象が解消しない場合</h2><ol>
-<li>Office、Teams、OneDrive 等のアプリケーションを終了します。</li>
-<li>ログオンユーザーの権限で PowerShell を起動し、以下のコマンドを実施します。<br>※ 管理者権限は不要です。また、管理者権限を有する別のユーザーで実施しますと正しく処理が行われません。</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add-AppxPackage -Register &quot;C:\Windows\SystemApps\Microsoft.AAD.BrokerPlugin_cw5n1h2txyewy\Appxmanifest.xml&quot; -DisableDevelopmentMode -ForceApplicationShutdown</span><br></pre></td></tr></table></figure>
-
-<p>なお、事象がコンシューマー向けの Microsoft アカウントで生じている場合には以下のコマンドを実施します。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Add-AppxPackage -Register &quot;C:\Windows\SystemApps\Microsoft.Windows.CloudExperienceHost_cw5n1h2txyewy\Appxmanifest.xml&quot; -DisableDevelopmentMode -ForceApplicationShutdown</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>OS を再起動します。</li>
-<li>Office のサインインの事象が解消するか、ご確認ください。</li>
-</ol>
-<br>
-
-<h2 id="補足"><a href="#補足" class="headerlink" title="補足"></a><strong>補足</strong></h2><ul>
-<li><p>Office Home &amp; Business 2016 等、コンシューマー製品の場合には “Office 2019 以降の場合” と同じ対処をご実施ください。</p>
-</li>
-<li><p>「職場または学校にアクセスする」に何らかの問題が生じている、または、コマンド等でアカウントを切断する場合、以下の手順をお試しください。</p>
-</li>
-</ul>
-<ol>
-<li>以下のサイトから <a target="_blank" rel="noopener" href="https://download.microsoft.com/download/8/e/f/8ef13ae0-6aa8-48a2-8697-5b1711134730/WPJCleanUp.zip">WPJCleanUp.zip</a> を対象のクライアント端末にダウンロードします。  </li>
-<li>クライアント端末に ＜対象ユーザー＞ でログオンし、WPJCleanUp.zip を任意のフォルダに展開します。</li>
-<li>CleanupTool に含まれている WPJCleanp.cmd を実行します。<br>※ダブルクリックにて実行時、[Windows によって PC が保護されました] と表示された場合は [詳細情報] をクリックし、表示された [実行] をクリックします。</li>
-</ol>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state">Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする</a> の Signoutofwamaccounts.ps1 が文字化けしている場合、最終行を以下としてください。</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$accounts.Accounts | % &#123; AwaitAction ($_.SignOutAsync(&quot;d3590ed6-52b3-4102-aeff-aad2292ab01c&quot;)) &#125;</span><br></pre></td></tr></table></figure>
-
 <br>
 
 <p><strong>- 関連情報</strong><br><a href="https://officesupportjp.github.io/blog/cl0m75al4001gmcvse36w64dv/index.html">Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について</a></p>
