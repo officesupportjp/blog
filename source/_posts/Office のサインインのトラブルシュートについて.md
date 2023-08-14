@@ -1,7 +1,7 @@
 ---
 title: Office のサインインのトラブルシュートについて
 date: '2020-07-09'
-lastupdate: '2023-04-27'
+lastupdate: '2023-08-14'
 id: cl0m6umvg001gi4vsgppfcmk0
 tags:
   - サインイン、認証
@@ -100,34 +100,9 @@ Add-AppxPackage -Register "C:\Windows\SystemApps\Microsoft.Windows.CloudExperien
 3. CleanupTool に含まれている WPJCleanp.cmd を実行します。
 ※ダブルクリックにて実行時、\[Windows によって PC が保護されました\] と表示された場合は \[詳細情報\] をクリックし、表示された \[実行\] をクリックします。  
 
-- [Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする](https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state) の Signoutofwamaccounts.ps1 が文字化けしている場合、以下をご利用ください。
+- [Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする](https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state) の Signoutofwamaccounts.ps1 が文字化けしている場合、最終行を以下としてください。
 
 ```
-if(-not [Windows.Foundation.Metadata.ApiInformation,Windows,ContentType=WindowsRuntime]::IsMethodPresent("Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager", "FindAllAccountsAsync"))
-{
-    throw "This script is not supported on this Windows version. Please, use CleanupWPJ.cmd."
-}
-
-Add-Type -AssemblyName System.Runtime.WindowsRuntime
-
-Function AwaitAction($WinRtAction) {
-  $asTask = ([System.WindowsRuntimeSystemExtensions].GetMethods() | ? { $_.Name -eq 'AsTask' -and $_.GetParameters().Count -eq 1 -and !$_.IsGenericMethod })[0]
-  $netTask = $asTask.Invoke($null, @($WinRtAction))
-  $netTask.Wait(-1) | Out-Null
-}
-
-Function Await($WinRtTask, $ResultType) {
-  $asTaskGeneric = ([System.WindowsRuntimeSystemExtensions].GetMethods() | ? { $_.Name -eq 'AsTask' -and $_.GetParameters().Count -eq 1 -and $_.GetParameters()[0].ParameterType.Name -eq 'IAsyncOperation`1' })[0]
-  $asTask = $asTaskGeneric.MakeGenericMethod($ResultType)
-  $netTask = $asTask.Invoke($null, @($WinRtTask))
-  $netTask.Wait(-1) | Out-Null
-  $netTask.Result
-}
-
-$provider = Await ([Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager,Windows,ContentType=WindowsRuntime]::FindAccountProviderAsync("https://login.microsoft.com", "organizations")) ([Windows.Security.Credentials.WebAccountProvider,Windows,ContentType=WindowsRuntime])
-
-$accounts = Await ([Windows.Security.Authentication.Web.Core.WebAuthenticationCoreManager,Windows,ContentType=WindowsRuntime]::FindAllAccountsAsync($provider, "d3590ed6-52b3-4102-aeff-aad2292ab01c")) ([Windows.Security.Authentication.Web.Core.FindAllAccountsResult,Windows,ContentType=WindowsRuntime])
-
 $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-aad2292ab01c")) }
 ```
 
@@ -166,5 +141,8 @@ $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-a
 
 <span style="color:#ff0000">**2023/4/27  Update**</span>  
 <span style="color:#339966">キャッシュ削除内容を追加しました。</span>
+
+<span style="color:#ff0000">**2023/8/14  Update**</span>  
+<span style="color:#339966">有害サイトと分類されていたため記述を変更しました</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
