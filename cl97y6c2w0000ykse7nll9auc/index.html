@@ -7,12 +7,12 @@
   
   <title>インターネット入手マクロ ブロックのトラブルシュートの流れ | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。 こんにちは、Office サポート チームの中村です。 2022 年 4 月以降、Office 製品ではインターネットから入手したマ">
+  <meta name="description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。2023&#x2F;05&#x2F;18 Update序文に本動作を無効化するポリシーの記載を追加しました。2023&#x2F;06&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="インターネット入手マクロ ブロックのトラブルシュートの流れ">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。 こんにちは、Office サポート チームの中村です。 2022 年 4 月以降、Office 製品ではインターネットから入手したマ">
+<meta property="og:description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。2023&#x2F;05&#x2F;18 Update序文に本動作を無効化するポリシーの記載を追加しました。2023&#x2F;06&amp;">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/FlowChart.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/BlockMessage.png">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/IETempFolder.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/FilePath.png">
 <meta property="article:published_time" content="2022-10-14T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-28T01:15:26.577Z">
+<meta property="article:modified_time" content="2023-08-14T00:09:59.967Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="VBA マクロ">
 <meta property="article:tag" content="セキュリティ">
@@ -114,21 +114,21 @@
         Last Update: 
         <a href="/blog/cl97y6c2w0000ykse7nll9auc/" class="article-date-single">    
         
-    <time datetime="2023-02-09T00:00:00.000Z" itemprop="lastupdate">2023-02-09</time>    
+    <time datetime="2023-06-22T00:00:00.000Z" itemprop="lastupdate">2023-06-22</time>    
     
 </a>              
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><span style="color:#ff0000"><strong>2023&#x2F;02&#x2F;09 Update</strong></span><br><span style="color:#339966">- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。</span><br><span style="color:#339966">- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。</span><br><br></p>
-<p>こんにちは、Office サポート チームの中村です。</p>
+        <p><span style="color:#ff0000"><strong>2023&#x2F;02&#x2F;09 Update</strong></span><br><span style="color:#339966">- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。</span><br><span style="color:#339966">- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。</span><br><br><br><span style="color:#ff0000"><strong>2023&#x2F;05&#x2F;18 Update</strong></span><br><span style="color:#339966">序文に本動作を無効化するポリシーの記載を追加しました。</span><br><br><br><span style="color:#ff0000"><strong>2023&#x2F;06&#x2F;22 Update</strong></span><br><span style="color:#339966">- &lt;3. Web マーク有無の確認&gt; 内に Web マークの実体に関する説明を追加しました。</span><br><span style="color:#339966">- 信頼できる場所についてネットワーク上のパスを登録する際の注意点を追加しました。</span><br><br><br>こんにちは、Office サポート チームの中村です。</p>
 <p>2022 年 4 月以降、Office 製品ではインターネットから入手したマクロが既定でブロックされるようになる変更を進めています。すでに公開情報や過去のブログ記事で、この動作変更詳細や、ブロックされるマクロを有効化する方法をご案内しています。  </p>
 <p>ただ、今回の動作変更では、マクロがブロックされるシナリオや関連する設定が多岐に渡り、公開情報にも様々な情報が掲載されています。このため、実際にマクロがブロックされている状態において、「何が理由でブロックされているのか」、「どのような対処方法をとるべきか」の判断が難しいことから、サポートへのお問い合わせを頂くことがあります。  </p>
 <p>本記事ではこのようなユーザーに向けて、トラブルシュートの流れをまとめました。以下の記述に従って上から順に確認していくことで、そのファイルがブロックされている理由を特定し、その場合に検討できる対応方法を確認できる記事内容となっています。  </p>
 <p>個々の動作詳細や、対応方法の設定手順などは割愛しますので、既存記事をご参照ください。  </p>
 <p>&lt;既存関連記事&gt;<br>A) Macros from the internet will be blocked by default in Office<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked">https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked</a> (日本語版 - 機械翻訳)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked">https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked</a> (英語版)  </p>
-<p>B) インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)<br><a href="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/">https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/</a>  </p>
+<p>B) インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)<br><a href="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/">https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/</a><br><br></p>
+<p><strong><h3>インターネット入手ファイルのマクロ ブロック動作全体を無効化したい場合</h3></strong><br>以下でご案内する状況に応じた対処が難しい場合、この動作変更全体を無効化し、インターネット入手ファイルもローカル ファイルと同等に扱う以前の動作に戻すことも可能です。このような対処については、上記関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-1">【マクロを有効にする方法について】 - 1) ポリシーでマクロを有効にする方法</a>」をご参照ください。<br>ただし今回の動作変更は、メールに添付した Office ファイルや、インターネット上のサイトで公開されている Office ファイル内のマクロによる攻撃の増加を鑑みたセキュリティ強化を目的としたものです。このようなセキュリティ強化が無効化されることに十分にご留意ください。<br>特段の事情がない場合、以下の通りファイルや Web サイト、ネットワーク共有ごとに、安全と判断できるものを個別にブロック解除することをお勧めします。</p>
 <br>
 <br>
 
@@ -158,7 +158,12 @@
 <br>
 <br>
 
-<p><strong><h2 id="chapter3">3. Web マーク有無の確認</h2></strong><br>現在開いているファイルを、どこかに保存して開いている場合は、そのファイルを右クリックして [プロパティ] を確認します。<br>このとき、以下の赤枠のメッセージが表示される場合は、【ファイルに Web マークが付与されていること】が理由でマクロがブロックされています。(Web マークは、インターネット サイトからダウンロードしたファイルや、外部からのメール添付ファイルを保存した場合に付与されます。)<br><img src="/blog/cl97y6c2w0000ykse7nll9auc/WebMark.png">  </p>
+<p><strong><h2 id="chapter3">3. Web マーク有無の確認</h2></strong><br>現在開いているファイルを、どこかに保存して開いている場合は、そのファイルを右クリックして [プロパティ] を確認します。<br>このとき、以下の赤枠のメッセージが表示される場合は、【ファイルに Web マーク (※) が付与されていること】が理由でマクロがブロックされています。(Web マークは、インターネット サイトからダウンロードしたファイルや、外部からのメール添付ファイルを保存した場合に付与されます。)<br><img src="/blog/cl97y6c2w0000ykse7nll9auc/WebMark.png">  </p>
+<p>※<br>ここに記載の Web マークの実体はゾーン識別子 (Zone.Identifier) に保存されており、コマンド プロンプトで以下のように “&lt;ファイル パス&gt;:Zone.Identifier” と入力することで確認できます。この実行結果で ZoneId&#x3D;3 (インターネット) &#x2F; ZoneId&#x3D;4 (制限付きサイト) の場合が Web マークが付与されている状態です。ファイルのプロパティの赤枠は ZoneId&#x3D;2 (信頼済みサイト) などでも表示がされますが、マクロはブロックされません。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> more &lt; &quot;C:\temp\sample.xlsm:Zone.Identifier&quot;</span><br><span class="line"> -- コマンド実行結果例 --</span><br><span class="line"> [ZoneTransfer]</span><br><span class="line">ZoneId=3</span><br><span class="line">ReferrerUrl=https://xxxxxx.xxx</span><br><span class="line">HostUrl=https://xxxxxxxxx.xxx</span><br></pre></td></tr></table></figure>
+
+<br>
+
 <p>&lt;対処方法&gt;<br><u>1) Web マークを削除する</u><br>上図の [許可する] にチェックを入れて [OK] をクリックし、Web マークを削除します。<br>ただし、この理由に加えて、<a href="#chapter4">&lt;4. ファイルの格納フォルダーパスの確認&gt;</a> のブロック理由にも当てはまる場合があります。Web マークを削除してもマクロがブロックされる場合は、続けて <a href="#chapter4">&lt;4. ファイルの格納フォルダーパスの確認&gt;</a> について確認してください。  </p>
 <p>※ 注<br>プロパティに上記のセキュリティ メッセージが表示される場合でも、厳密には Web マークには該当せずブロック対象とならない場合があります。この動作については、冒頭の公開情報 A) の「<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked#mark-of-the-web-and-zones">Web とゾーンのマーク</a>」を参照してください。このような細かな動作はありますが、マクロを利用したい場合は、「プロパティにセキュリティ メッセージが表示されていたら削除する」という運用にすると、シンプルな対応が可能です。  </p>
 <br>
@@ -181,7 +186,7 @@
 <p>ローカルにコピーするとブロックされない場合は、【ファイル格納パス】が理由でマクロがブロックされています。  </p>
 <p>&lt;対処方法&gt;<br><u>1) サーバー名のみで接続する</u><br>ネットワーク共有がクライアントと同じドメイン内にある場合は、「\\server\share」のようにサーバー名のみで接続します。この場合は、安全な場所と判断されるため、ファイル格納フォルダーパスによるブロックは行われません。</p>
 <p><u>2) ファイルをローカルにコピーして開く</u><br>ファイルをローカル フォルダーにコピーしてから開きます。</p>
-<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ利用可能)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。</p>
+<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ利用可能)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。<br>※ 参照先に記載の [自分のネットワーク上にある場所を信頼する (推奨しません)] も併せて有効にする必要があります。</p>
 <p><u>4) インターネット オプションの [信頼済みサイト] に登録する</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-4">4) Web・ネットワーク共有上のファイルを開くシナリオで、信頼済みサイトに登録する方法</a>」を参照してください。</p>
 <p><u>5)	インターネット オプションの [ローカル イントラネット] に登録する</u><br>手順は 4) とほぼ同様です。手順 3. で [ローカル イントラネット] を選んで、[詳細設定] からフォルダー パスを追加できます。  </p>
 <p>※	3) ～ 5) の対処方法の違いは、後述の「<a href="#chapterEx1">補足1: フォルダーや URL を信頼する対処方法の違い</a>」をご参照ください。  </p>
@@ -196,7 +201,7 @@
 <p>この要因でブロックされているかを確認するため、一旦ファイルをローカルにダウンロードして <a href="#chapter3">&lt;3. Web マークの確認&gt;</a> を行ってください。<br>ダウンロードしたファイルに Web マークが付与されている場合は、ダウンロード元の Web サイトがインターネット ゾーンと判断されています。この場合、Web サイトから直接開くときは【ファイルをホストしている Web サイトの URL】が理由でマクロがブロックされています。</p>
 <p>&lt;対処方法&gt;<br><u>1) サーバー名のみで接続する</u><br>Web サーバーがクライアントと同じドメイン内にある場合は、「<code>https://server</code>」のようにサーバー名のみで接続します。この場合は、通常イントラネットと判断されるため、ファイル格納フォルダーパスによるブロックは行われません。  </p>
 <p><u>2) ファイルをダウンロードして開く</u><br>ファイルを開くときの確認メッセージで [保存] を選び、ローカルにダウンロードしてから開きます。<br>ただし、ダウンロードしたファイルが今度は <a href="#chapter3">&lt;3. Web マークの確認&gt;</a> や <a href="#chapter4">&lt;4. ファイルの格納フォルダーパスの確認&gt;</a> の理由でブロックされる場合があるため、ダウンロードしたファイルについて、改めてこれらの確認を行ってください。  </p>
-<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。  </p>
+<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。<br>※ 参照先に記載の [自分のネットワーク上にある場所を信頼する (推奨しません)] も併せて有効にする必要があります。</p>
 <p><u>4) インターネット オプションの [信頼済みサイト] に登録する</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-4">4) Web・ネットワーク共有上のファイルを開くシナリオで、信頼済みサイトに登録する方法</a>」を参照してください。  </p>
 <p><u>5) インターネット オプションの [ローカル イントラネット] に登録する</u><br>手順は 4) とほぼ同様です。手順 3. で [ローカル イントラネット] を選んで、[詳細設定] からフォルダー パスを追加できます。  </p>
 <p>※	3) ～ 5) の対処方法の違いは、後述の「補足 1: フォルダーや URL を信頼する対処方法の違い」をご参照ください。</p>
