@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2023-04-06T05:33:23.316Z</updated>
+  <updated>2023-09-15T05:53:24.506Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>「必要なサービスが無効になっています」と表示される現象について</title>
+    <link href="https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqva/"/>
+    <id>https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqva/</id>
+    <published>2023-09-15T00:00:00.000Z</published>
+    <updated>2023-09-15T05:53:24.506Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。 </p><p>今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたします。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Office をご利用されている際に、以下のようなメッセージが表示されるとお問い合わせいただくことがございます。</p><p>・例1</p><p><img src="/blog/cld8jp0gd00422skj5eabeqva/image0.png"></p><br><p>・例2</p><p><img src="/blog/cld8jp0gd00422skj5eabeqva/image1.png"></p><br><p>・例3</p><p><img src="/blog/cld8jp0gd00422skj5eabeqva/image2.png"></p><p>これらの表示は機能によって若干異なる場合がございます。<br>また、オンライン通信を伴う機能がグレーアウトされていたり、表示されていない場合もございます。</p><br><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Microsoft 365 Apps、Office LTSC 2021、Office 2019 (*) では、接続エクスペリエンスという機能が導入されており、オンライン接続の機能を用途ごとに有効・無効と切り替えるすることが出来るようになりました。<br>詳細は以下の資料をご確認ください。</p><p>Title : Microsoft 365 Apps for enterprise のプライバシー コントロールの概要<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls">https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls</a></p><p>この機能が無効にされているとオンライン機能が利用できないため、上記のような現象が生じます。</p><p><em>補足</em><br>Office 2019 では “Office での追加オプションである接続エクスペリエンスの使用を許可する” のみが利用可能です。</p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>以下を上からご確認ください。</p><h3 id="1-プライバシー設定の見直し"><a href="#1-プライバシー設定の見直し" class="headerlink" title="1) プライバシー設定の見直し"></a>1) プライバシー設定の見直し</h3><ol><li>Excel 等を起動し、[ファイル] - “オプション” をクリックします</li><li>[トラストセンター] - “トラストセンターの設定” をクリックします</li><li>[プライバシーオプション] - “プライバシー設定” をクリックします</li><li>“オプションの接続エクスペリエンスをオンにする” にチェックをつけてください</li><li>事象が解消するかご確認ください。</li></ol><br><h3 id="2-接続エクスペリエンス機能の見直し"><a href="#2-接続エクスペリエンス機能の見直し" class="headerlink" title="2) 接続エクスペリエンス機能の見直し"></a>2) 接続エクスペリエンス機能の見直し</h3><p>Office 管理用グループポリシーでご実施されている接続エクスペリエンス機能の無効化を見直します。</p><h4 id="ポリシーの確認"><a href="#ポリシーの確認" class="headerlink" title="ポリシーの確認"></a>ポリシーの確認</h4><p>以下の資料より、今回ご利用されたい機能が以下のどのポリシーで制御されているかをご確認ください。</p><p>Title : Officeでの接続環境<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences">https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences</a></p><p>例えば、”PowerPoint デザイナー” の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>“3D マップ” の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] に加えて、[Office の追加オプションである接続エクスペリエンスの使用を許可する]を有効にします。</p><p>“アイコンの挿入” の場合、[オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>“共有” や、その他記載がない機能の場合、[Office の接続エクスペリエンスの使用を許可する​] を有効にします。</p><br><h4 id="ポリシーの変更"><a href="#ポリシーの変更" class="headerlink" title="ポリシーの変更"></a>ポリシーの変更</h4><p>Office 管理用グループポリシーで該当するポリシーの制御を変更してください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[プライバシー]-[セキュリティ センター]</p><p>・コンテンツを分析する Office の接続エクスペリエンスの使用を許可する<br>・オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する<br>・Office の追加オプションである接続エクスペリエンスの使用を許可する<br>・Office の接続エクスペリエンスの使用を許可する​</p><p>もしくは、以下の資料より対応するレジストリをご確認いただき、設定を変更することで事象が解消するかをご確認ください。</p><p>Title : ポリシー設定を使用して Microsoft 365 Apps for enterprise のプライバシー コントロールを管理する<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls">https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls</a></p><h3 id="3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする"><a href="#3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする" class="headerlink" title="3) Information Rights Management 関連のユーザーインターフェイスをオンにする"></a>3) Information Rights Management 関連のユーザーインターフェイスをオンにする</h3><p>今回ご利用される機能が Azure Information Protection 関連かつ、以下の設定が “有効” となっている場合には、”未構成” または “無効” に変更することで事象が解消するかご確認ください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[アクセス制限の管理]</p><p>・”Information Rights Management 関連のユーザーインターフェイスをオフにする” : “未構成” または “無効” </p><br><p>今回の投稿は以上です。</p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。 &lt;/p&gt;
+&lt;p&gt;今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたしま</summary>
+      
+    
+    
+    
+    
+    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>Android にてアプリ保護ポリシーを適用していても OneNote アプリの組織データを Microsoft 365 アプリの個人領域へ共有できる動作について</title>
@@ -109,19 +132,19 @@
   </entry>
   
   <entry>
-    <title>「必要なサービスが無効になっています」と表示される現象について</title>
+    <title>「必要なサービスが無効になっています」と表示される現象について(旧)</title>
     <link href="https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqvb/"/>
     <id>https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqvb/</id>
     <published>2023-01-23T00:00:00.000Z</published>
-    <updated>2023-01-23T08:36:56.571Z</updated>
+    <updated>2023-09-15T05:54:26.484Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。 </p><p>今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたします。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Office をご利用されている際に、以下のようなメッセージが表示されるとお問い合わせいただくことがございます。</p><p>・例1</p><p><img src="/blog/cld8jp0gd00422skj5eabeqvb/image0.png"></p><br><p>・例2</p><p><img src="/blog/cld8jp0gd00422skj5eabeqvb/image1.png"></p><br><p>・例3</p><p><img src="/blog/cld8jp0gd00422skj5eabeqvb/image2.png"></p><p>これらの表示は機能によって若干異なる場合がございます。<br>また、オンライン通信を伴う機能がグレーアウトされていたり、表示されていない場合もございます。</p><br><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Microsoft 365 Apps、Office LTSC 2021、Office 2019 (*) では、接続エクスペリエンスという機能が導入されており、オンライン接続の機能を用途ごとに有効・無効と切り替えるすることが出来るようになりました。<br>詳細は以下の資料をご確認ください。</p><p>Title : Microsoft 365 Apps for enterprise のプライバシー コントロールの概要<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls">https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls</a></p><p>この機能が無効にされているとオンライン機能が利用できないため、上記のような現象が生じます。</p><p>Title : Officeでの接続環境<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences">https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences</a></p><p><em>補足</em><br>Office 2019 では “Office での追加オプションである接続エクスペリエンスの使用を許可する” のみが利用可能です。</p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>以下を上からご確認ください。</p><h3 id="1-プライバシー設定の見直し"><a href="#1-プライバシー設定の見直し" class="headerlink" title="1) プライバシー設定の見直し"></a>1) プライバシー設定の見直し</h3><ol><li>Excel 等を起動し、[ファイル] - “オプション” をクリックします</li><li>[トラストセンター] - “トラストセンターの設定” をクリックします</li><li>[プライバシーオプション] - “プライバシー設定” をクリックします</li><li>“オプションの接続エクスペリエンスをオンにする” にチェックをつけてください</li><li>事象が解消するかご確認ください。</li></ol><br><h3 id="2-接続エクスペリエンス機能の見直し"><a href="#2-接続エクスペリエンス機能の見直し" class="headerlink" title="2) 接続エクスペリエンス機能の見直し"></a>2) 接続エクスペリエンス機能の見直し</h3><p>Office 管理用グループポリシーでご実施されている接続エクスペリエンス機能の無効化を見直します。</p><h4 id="ポリシーの確認"><a href="#ポリシーの確認" class="headerlink" title="ポリシーの確認"></a>ポリシーの確認</h4><p>以下の資料より、今回ご利用されたい機能が以下のどのポリシーで制御されているかをご確認ください。</p><p>Title : Officeでの接続環境<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences">https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences</a></p><p>例えば、”PowerPoint デザイナー” の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>“3D マップ” の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] に加えて、[Office の追加オプションである接続エクスペリエンスの使用を許可する]を有効にします。</p><p>“アイコンの挿入” の場合、[オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>“共有” や、その他記載がない機能の場合、[Office の接続エクスペリエンスの使用を許可する​] を有効にします。</p><h4 id="ポリシーの変更"><a href="#ポリシーの変更" class="headerlink" title="ポリシーの変更"></a>ポリシーの変更</h4><p>Office 管理用グループポリシーで該当するポリシーの制御を変更してください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[プライバシー]-[セキュリティ センター]</p><p>・コンテンツを分析する Office の接続エクスペリエンスの使用を許可する<br>・オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する<br>・Office の追加オプションである接続エクスペリエンスの使用を許可する<br>・Office の接続エクスペリエンスの使用を許可する​</p><p>もしくは、以下の資料より対応するレジストリをご確認いただき、設定を変更することで事象が解消するかをご確認ください。</p><p>Title : ポリシー設定を使用して Microsoft 365 Apps for enterprise のプライバシー コントロールを管理する<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls#control-privacy-settings-by-editing-the-registry">https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls#control-privacy-settings-by-editing-the-registry</a></p><h3 id="3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする"><a href="#3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする" class="headerlink" title="3) Information Rights Management 関連のユーザーインターフェイスをオンにする"></a>3) Information Rights Management 関連のユーザーインターフェイスをオンにする</h3><p>今回ご利用される機能が Azure Information Protection 関連かつ、以下の設定が “有効” となっている場合には、”未構成” または “無効” に変更することで事象が解消するかご確認ください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[アクセス制限の管理]</p><p>・”Information Rights Management 関連のユーザーインターフェイスをオフにする” : “未構成” または “無効” </p><br><p>今回の投稿は以上です。</p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    <content type="html"><![CDATA[<p>本ページは <a href="https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqva/">「必要なサービスが無効になっています」と表示される現象について</a> に移動しました。</p><p><span style="color:#ff0000"><strong>2023&#x2F;9&#x2F;15  Update</strong></span><br><span style="color:#339966">有害サイトと分類されていたため移動しました</span></p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。 &lt;/p&gt;
-&lt;p&gt;今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたしま</summary>
+    <summary type="html">&lt;p&gt;本ページは &lt;a href=&quot;https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqva/&quot;&gt;「必要なサービスが無効になっています」と表示される現象について&lt;/a&gt; に移動しました。&lt;/p&gt;
+&lt;p&gt;&lt;sp</summary>
       
     
     
@@ -461,29 +484,6 @@
     <category term="オートメーション" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"/>
     
     <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>お知らせ - Japan Office Client Support Blog について</title>
-    <link href="https://officesupportjp.github.io/blog/cl0m4xkl00039eovs4fp4ffbt/"/>
-    <id>https://officesupportjp.github.io/blog/cl0m4xkl00039eovs4fp4ffbt/</id>
-    <published>2022-01-31T00:00:00.000Z</published>
-    <updated>2023-01-11T07:22:29.308Z</updated>
-    
-    <content type="html"><![CDATA[<p>いつも Microsoft Office をご愛顧いただき誠にありがとうございます。<br>「Japan Office Client Support Blog」の運用についてお知らせします。</p><p>「Japan Office Client Support Blog」は、Office サポートチームより、よくお問い合わせをいただく情報をサポートトピックとして、皆様よりご要望が多い情報を配信します。</p><p>また、「Office サポートチーム」フォーラムにて公開しておりました記事について、本ブログでの公開を進めております。</p><p>なお、本ブログは情報発信専用のフォーラムとなります。</p><p>Office サポートチーム</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;いつも Microsoft Office をご愛顧いただき誠にありがとうございます。&lt;br&gt;「Japan Office Client Support Blog」の運用についてお知らせします。&lt;/p&gt;
-&lt;p&gt;「Japan Office Client Support Blog」</summary>
-      
-    
-    
-    
-    
-    <category term="お知らせ" scheme="https://officesupportjp.github.io/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"/>
     
   </entry>
   
