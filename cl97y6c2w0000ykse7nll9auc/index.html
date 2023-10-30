@@ -7,12 +7,12 @@
   
   <title>インターネット入手マクロ ブロックのトラブルシュートの流れ | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。 こんにちは、Office サポート チームの中村です。 2022 年 4 月以降、Office 製品ではインターネットから入手したマ">
+  <meta name="description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。2023&#x2F;05&#x2F;18 Update序文に本動作を無効化するポリシーの記載を追加しました。2023&#x2F;06&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="インターネット入手マクロ ブロックのトラブルシュートの流れ">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。 こんにちは、Office サポート チームの中村です。 2022 年 4 月以降、Office 製品ではインターネットから入手したマ">
+<meta property="og:description" content="2023&#x2F;02&#x2F;09 Update- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。2023&#x2F;05&#x2F;18 Update序文に本動作を無効化するポリシーの記載を追加しました。2023&#x2F;06&amp;">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/FlowChart.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/BlockMessage.png">
@@ -20,7 +20,7 @@
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/IETempFolder.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl97y6c2w0000ykse7nll9auc/FilePath.png">
 <meta property="article:published_time" content="2022-10-14T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-02-28T06:19:04.683Z">
+<meta property="article:modified_time" content="2023-10-30T00:14:47.604Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="VBA マクロ">
 <meta property="article:tag" content="セキュリティ">
@@ -114,21 +114,21 @@
         Last Update: 
         <a href="/blog/cl97y6c2w0000ykse7nll9auc/" class="article-date-single">    
         
-    <time datetime="2023-02-09T00:00:00.000Z" itemprop="lastupdate">2023-02-09</time>    
+    <time datetime="2023-10-09T00:00:00.000Z" itemprop="lastupdate">2023-10-09</time>    
     
 </a>              
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><span style="color:#ff0000"><strong>2023&#x2F;02&#x2F;09 Update</strong></span><br><span style="color:#339966">- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。</span><br><span style="color:#339966">- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。</span><br><br></p>
-<p>こんにちは、Office サポート チームの中村です。</p>
+        <p><span style="color:#ff0000"><strong>2023&#x2F;02&#x2F;09 Update</strong></span><br><span style="color:#339966">- &lt;5. Web サイトの URL を確認&gt; 内のインターネット一フォルダーの動作の項番ずれを修正し、詳細を追記しました。</span><br><span style="color:#339966">- &lt;補足 3: 信頼できる署名での回避方法&gt; を追記しました。</span><br><br><br><span style="color:#ff0000"><strong>2023&#x2F;05&#x2F;18 Update</strong></span><br><span style="color:#339966">序文に本動作を無効化するポリシーの記載を追加しました。</span><br><br><br><span style="color:#ff0000"><strong>2023&#x2F;06&#x2F;22 Update</strong></span><br><span style="color:#339966">- &lt;3. Web マーク有無の確認&gt; 内に Web マークの実体に関する説明を追加しました。</span><br><span style="color:#339966">- 信頼できる場所についてネットワーク上のパスを登録する際の注意点を追加しました。</span><br><br><br><span style="color:#ff0000"><strong>2023&#x2F;10&#x2F;09 Update</strong></span><br><span style="color:#339966">“5. Web サイトの URL を確認” - &lt;対処方法&gt; の記載を変更しました。</span><br><br><br>こんにちは、Office サポート チームの中村です。</p>
 <p>2022 年 4 月以降、Office 製品ではインターネットから入手したマクロが既定でブロックされるようになる変更を進めています。すでに公開情報や過去のブログ記事で、この動作変更詳細や、ブロックされるマクロを有効化する方法をご案内しています。  </p>
 <p>ただ、今回の動作変更では、マクロがブロックされるシナリオや関連する設定が多岐に渡り、公開情報にも様々な情報が掲載されています。このため、実際にマクロがブロックされている状態において、「何が理由でブロックされているのか」、「どのような対処方法をとるべきか」の判断が難しいことから、サポートへのお問い合わせを頂くことがあります。  </p>
 <p>本記事ではこのようなユーザーに向けて、トラブルシュートの流れをまとめました。以下の記述に従って上から順に確認していくことで、そのファイルがブロックされている理由を特定し、その場合に検討できる対応方法を確認できる記事内容となっています。  </p>
 <p>個々の動作詳細や、対応方法の設定手順などは割愛しますので、既存記事をご参照ください。  </p>
 <p>&lt;既存関連記事&gt;<br>A) Macros from the internet will be blocked by default in Office<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked">https://docs.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked</a> (日本語版 - 機械翻訳)<br><a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked">https://docs.microsoft.com/en-us/DeployOffice/security/internet-macros-blocked</a> (英語版)  </p>
-<p>B) インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)<br><a href="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/">https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/</a>  </p>
+<p>B) インターネットから入手した Office ファイルのマクロがブロックされる既定の動作変更について (MC322553)<br><a href="https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/">https://officesupportjp.github.io/blog/cl0m4f5o1003504vsa5tp25c2/</a><br><br></p>
+<p><strong><h3>インターネット入手ファイルのマクロ ブロック動作全体を無効化したい場合</h3></strong><br>以下でご案内する状況に応じた対処が難しい場合、この動作変更全体を無効化し、インターネット入手ファイルもローカル ファイルと同等に扱う以前の動作に戻すことも可能です。このような対処については、上記関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-1">【マクロを有効にする方法について】 - 1) ポリシーでマクロを有効にする方法</a>」をご参照ください。<br>ただし今回の動作変更は、メールに添付した Office ファイルや、インターネット上のサイトで公開されている Office ファイル内のマクロによる攻撃の増加を鑑みたセキュリティ強化を目的としたものです。このようなセキュリティ強化が無効化されることに十分にご留意ください。<br>特段の事情がない場合、以下の通りファイルや Web サイト、ネットワーク共有ごとに、安全と判断できるものを個別にブロック解除することをお勧めします。</p>
 <br>
 <br>
 
@@ -158,7 +158,12 @@
 <br>
 <br>
 
-<p><strong><h2 id="chapter3">3. Web マーク有無の確認</h2></strong><br>現在開いているファイルを、どこかに保存して開いている場合は、そのファイルを右クリックして [プロパティ] を確認します。<br>このとき、以下の赤枠のメッセージが表示される場合は、【ファイルに Web マークが付与されていること】が理由でマクロがブロックされています。(Web マークは、インターネット サイトからダウンロードしたファイルや、外部からのメール添付ファイルを保存した場合に付与されます。)<br><img src="/blog/cl97y6c2w0000ykse7nll9auc/WebMark.png">  </p>
+<p><strong><h2 id="chapter3">3. Web マーク有無の確認</h2></strong><br>現在開いているファイルを、どこかに保存して開いている場合は、そのファイルを右クリックして [プロパティ] を確認します。<br>このとき、以下の赤枠のメッセージが表示される場合は、【ファイルに Web マーク (※) が付与されていること】が理由でマクロがブロックされています。(Web マークは、インターネット サイトからダウンロードしたファイルや、外部からのメール添付ファイルを保存した場合に付与されます。)<br><img src="/blog/cl97y6c2w0000ykse7nll9auc/WebMark.png">  </p>
+<p>※<br>ここに記載の Web マークの実体はゾーン識別子 (Zone.Identifier) に保存されており、コマンド プロンプトで以下のように “&lt;ファイル パス&gt;:Zone.Identifier” と入力することで確認できます。この実行結果で ZoneId&#x3D;3 (インターネット) &#x2F; ZoneId&#x3D;4 (制限付きサイト) の場合が Web マークが付与されている状態です。ファイルのプロパティの赤枠は ZoneId&#x3D;2 (信頼済みサイト) などでも表示がされますが、マクロはブロックされません。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> more &lt; &quot;C:\temp\sample.xlsm:Zone.Identifier&quot;</span><br><span class="line"> -- コマンド実行結果例 --</span><br><span class="line"> [ZoneTransfer]</span><br><span class="line">ZoneId=3</span><br><span class="line">ReferrerUrl=https://xxxxxx.xxx</span><br><span class="line">HostUrl=https://xxxxxxxxx.xxx</span><br></pre></td></tr></table></figure>
+
+<br>
+
 <p>&lt;対処方法&gt;<br><u>1) Web マークを削除する</u><br>上図の [許可する] にチェックを入れて [OK] をクリックし、Web マークを削除します。<br>ただし、この理由に加えて、<a href="#chapter4">&lt;4. ファイルの格納フォルダーパスの確認&gt;</a> のブロック理由にも当てはまる場合があります。Web マークを削除してもマクロがブロックされる場合は、続けて <a href="#chapter4">&lt;4. ファイルの格納フォルダーパスの確認&gt;</a> について確認してください。  </p>
 <p>※ 注<br>プロパティに上記のセキュリティ メッセージが表示される場合でも、厳密には Web マークには該当せずブロック対象とならない場合があります。この動作については、冒頭の公開情報 A) の「<a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/DeployOffice/security/internet-macros-blocked#mark-of-the-web-and-zones">Web とゾーンのマーク</a>」を参照してください。このような細かな動作はありますが、マクロを利用したい場合は、「プロパティにセキュリティ メッセージが表示されていたら削除する」という運用にすると、シンプルな対応が可能です。  </p>
 <br>
@@ -181,7 +186,7 @@
 <p>ローカルにコピーするとブロックされない場合は、【ファイル格納パス】が理由でマクロがブロックされています。  </p>
 <p>&lt;対処方法&gt;<br><u>1) サーバー名のみで接続する</u><br>ネットワーク共有がクライアントと同じドメイン内にある場合は、「\\server\share」のようにサーバー名のみで接続します。この場合は、安全な場所と判断されるため、ファイル格納フォルダーパスによるブロックは行われません。</p>
 <p><u>2) ファイルをローカルにコピーして開く</u><br>ファイルをローカル フォルダーにコピーしてから開きます。</p>
-<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ利用可能)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。</p>
+<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ利用可能)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。<br>※ 参照先に記載の [自分のネットワーク上にある場所を信頼する (推奨しません)] も併せて有効にする必要があります。</p>
 <p><u>4) インターネット オプションの [信頼済みサイト] に登録する</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-4">4) Web・ネットワーク共有上のファイルを開くシナリオで、信頼済みサイトに登録する方法</a>」を参照してください。</p>
 <p><u>5)	インターネット オプションの [ローカル イントラネット] に登録する</u><br>手順は 4) とほぼ同様です。手順 3. で [ローカル イントラネット] を選んで、[詳細設定] からフォルダー パスを追加できます。  </p>
 <p>※	3) ～ 5) の対処方法の違いは、後述の「<a href="#chapterEx1">補足1: フォルダーや URL を信頼する対処方法の違い</a>」をご参照ください。  </p>
@@ -196,16 +201,15 @@
 <p>この要因でブロックされているかを確認するため、一旦ファイルをローカルにダウンロードして <a href="#chapter3">&lt;3. Web マークの確認&gt;</a> を行ってください。<br>ダウンロードしたファイルに Web マークが付与されている場合は、ダウンロード元の Web サイトがインターネット ゾーンと判断されています。この場合、Web サイトから直接開くときは【ファイルをホストしている Web サイトの URL】が理由でマクロがブロックされています。</p>
 <p>&lt;対処方法&gt;<br><u>1) サーバー名のみで接続する</u><br>Web サーバーがクライアントと同じドメイン内にある場合は、「<code>https://server</code>」のようにサーバー名のみで接続します。この場合は、通常イントラネットと判断されるため、ファイル格納フォルダーパスによるブロックは行われません。  </p>
 <p><u>2) ファイルをダウンロードして開く</u><br>ファイルを開くときの確認メッセージで [保存] を選び、ローカルにダウンロードしてから開きます。<br>ただし、ダウンロードしたファイルが今度は <a href="#chapter3">&lt;3. Web マークの確認&gt;</a> や <a href="#chapter4">&lt;4. ファイルの格納フォルダーパスの確認&gt;</a> の理由でブロックされる場合があるため、ダウンロードしたファイルについて、改めてこれらの確認を行ってください。  </p>
-<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。  </p>
+<p><u>3) Office の [信頼できる場所] に登録する (FQDN の場合のみ)</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-3">3) 特定のフォルダーのファイルでマクロを有効にする方法</a>」を参照してください。<br>※ 参照先に記載の [自分のネットワーク上にある場所を信頼する (推奨しません)] も併せて有効にする必要があります。</p>
 <p><u>4) インターネット オプションの [信頼済みサイト] に登録する</u><br>手順は先述の関連記事 B) 内「<a href="/blog/cl0m4f5o1003504vsa5tp25c2/#EnableVBA-4">4) Web・ネットワーク共有上のファイルを開くシナリオで、信頼済みサイトに登録する方法</a>」を参照してください。  </p>
-<p><u>5) インターネット オプションの [ローカル イントラネット] に登録する</u><br>手順は 4) とほぼ同様です。手順 3. で [ローカル イントラネット] を選んで、[詳細設定] からフォルダー パスを追加できます。  </p>
-<p>※	3) ～ 5) の対処方法の違いは、後述の「補足 1: フォルダーや URL を信頼する対処方法の違い」をご参照ください。</p>
+<p>※	3) ～ 4) の対処方法の違いは、後述の「補足 1: フォルダーや URL を信頼する対処方法の違い」をご参照ください。</p>
 <p><strong>注意</strong><br>Microsoft Edge の IE モードや、Internet Explorer で Web サイトを開いている場合は、Web サイトの応答によっては (後述の <a href="#ResponseHeader">&lt;※ 応答ヘッダーの動作&gt;</a> 参照) [インターネット一時ファイル] 格納フォルダーにファイルをダウンロードして開きます。このフォルダーの場所は、[インターネット オプション] – [全般] タブ – [設定] の以下赤枠より確認できます。  </p>
 <p><img src="/blog/cl97y6c2w0000ykse7nll9auc/IETempFolder.png">  </p>
-<p>このフォルダーに一時保存されて開くシナリオは、先述の 1) および 3) ～ 5) の対応方法では回避できません。以下のいずれかの方法で対処してください。</p>
+<p>このフォルダーに一時保存されて開くシナリオは、先述の 1) および 3) ～ 4) の対応方法では回避できません。以下のいずれかの方法で対処してください。</p>
 <ul>
 <li>“2) ファイルをダウンロードして開く” で対処する</li>
-<li>Web サイト側で、応答を変更した上で 1) &#x2F; 3) &#x2F; 4) &#x2F; 5) のいずれかを実施する (後述の <a href="#ResponseHeader">&lt;※ 応答ヘッダーの動作&gt;</a> 参照)</li>
+<li>Web サイト側で、応答を変更した上で 1) &#x2F; 3) &#x2F; 4) のいずれかを実施する (後述の <a href="#ResponseHeader">&lt;※ 応答ヘッダーの動作&gt;</a> 参照)</li>
 </ul>
 <p>このフォルダーからファイルが開かれているかどうかは、Office の [ファイル] タブ - [情報] メニューから確認できます。[パスのコピー] をクリックし、その後テキスト エディタなどに貼り付けて、現在開いているファイルの格納フォルダーを確認します。  </p>
 <p><img src="/blog/cl97y6c2w0000ykse7nll9auc/FilePath.png">  </p>
@@ -213,7 +217,7 @@
 
 <p><strong><p id="ResponseHeader">※ 応答ヘッダーの動作</p></strong><br>Web サイトの応答によって、開かれる Office ファイルのパスが異なります。マクロ ブロックを避けるには、レスポンス ヘッダーを Content-Disposition:Inline に設定してください。</p>
 <p>Content-Disposition:Attachment の場合:<br>インターネット一時フォルダーにテンポラリ ファイルとして保存され、Office からはこのテンポラリ ファイルを開く流れとなります。したがって、ファイル パスがインターネット一時フォルダーであるとみなされ、マクロがブロックされます。</p>
-<p>Content-Disposition:Inline の場合:<br>Office からは、Web サイト上のファイルを開いている扱いとなり、ファイル パスは Web サイトの URL となります。したがって、1) の方法でホスト名のみで接続するか、3) ～ 5) の方法で Web サイトのパスを信頼する・社内ネットワークとして扱うことで、マクロはブロックされません。</p>
+<p>Content-Disposition:Inline の場合:<br>Office からは、Web サイト上のファイルを開いている扱いとなり、ファイル パスは Web サイトの URL となります。したがって、1) の方法でホスト名のみで接続するか、3) ～ 4) の方法で Web サイトのパスを信頼する・社内ネットワークとして扱うことで、マクロはブロックされません。</p>
 <br>
 <br>
 
@@ -336,7 +340,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">タグクラウド</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Access/" style="font-size: 14px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 11px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 14px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 13px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 14px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 18px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 14px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 17px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" style="font-size: 12px;">セキュリティ</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 19px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 13px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11px;">更新</a>
+      <a href="/blog/tags/Access/" style="font-size: 14px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 11px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 14px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 13px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 14px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 18px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 14px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 17px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 11px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 18px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" style="font-size: 12px;">セキュリティ</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 17px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 19px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 13px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 16px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16px;">印刷</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11px;">更新</a>
     </div>
   </div>
 
@@ -345,7 +349,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/02/">2月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/10/">10月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/09/">9月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/02/">2月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
     </div>
   </div>
 
@@ -358,23 +362,23 @@
       <ul>
         
           <li>
+            <a href="/blog/clj709nu4004pqou8fyhg7wta/">信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)</a>
+          </li>
+        
+          <li>
+            <a href="/blog/clmk7jget0001hckj66na16pi/">必要なサービスが無効になっていますと表示される現象について</a>
+          </li>
+        
+          <li>
             <a href="/blog/clenw3diw000xf46y72q12jrq/">Android にてアプリ保護ポリシーを適用していても OneNote アプリの組織データを Microsoft 365 アプリの個人領域へ共有できる動作について</a>
           </li>
         
           <li>
-            <a href="/blog/clefkdotu0001ukse0slv0l1u/">信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)</a>
+            <a href="/blog/clefkdotu0001ukse0slv0l1u/">信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)(旧)</a>
           </li>
         
           <li>
             <a href="/blog/cldybofry00010gkj32idbkw7/">VL 版の Office 2016 でオンラインストレージからファイルを開く際に稀にサインイン画面が表示される現象について</a>
-          </li>
-        
-          <li>
-            <a href="/blog/cldu0kdx900004k6yd6dvgatz/">Excel 2016 で 3D マップを利用するとエラーが発生する (状態コード 4)</a>
-          </li>
-        
-          <li>
-            <a href="/blog/cld8jp0gd00422skj5eabeqvb/">「必要なサービスが無効になっています」と表示される現象について</a>
           </li>
         
       </ul>
