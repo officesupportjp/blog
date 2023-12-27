@@ -1,8 +1,8 @@
 ---
 title: MECM で M365Apps の更新プログラムが必要と判定されない
 date: '2023-12-26'
-lastupdate: '2023-12-26'
-id:clqm07fq300005kkj5ww5bp4a
+lastupdate: '2023-12-27'
+id: clqm07fq300005kkj5ww5bp4a
 tags:
   - 更新
 
@@ -37,7 +37,7 @@ MECM で M365Apps の更新プログラムが必要と判定されず、更新�
 ここには、16.0.12345.12345 のような 16.0 部分は固定のビルド番号が入ります。
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\UpdateChannelChanged`
-初期値は False となります。後述のように UpdateChannel が優先度により変更された際に True となります。
+初期値は False であり、後述のように UpdateChannel が優先度により変更された際に True となります。その後、更新試行を行った後に False に戻ります。
 
 通常、チャネルの変更直後を除いて UpdateChannelChanged は False のため、VersionToReport の優劣にしたがい更新が行われます。
 
@@ -52,7 +52,7 @@ MECM で M365Apps の更新プログラムが必要と判定されず、更新�
 `半期エンタープライズチャネル (プレビュー : b8f9b850-328d-4355-9145-c59439a0c4cf`
 `半期エンタープライズチャネル : 7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`
 
-UpdateChannel は UpdateChannelChanged が False である場合、以下の優先度にしたがい値が評価されます。
+UpdateChannel は UpdateChannelChanged が False である場合、以下の優先度を上から順に評価します。
 
 優先度1) [GPO の "更新プログラムのパス"](https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps)
 `HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatepath`
@@ -130,5 +130,8 @@ OS 観点で調査が必要であると考えられます。
 参考資料
 --
 [How to manage Office 365 ProPlus Channels for IT Pros](https://techcommunity.microsoft.com/t5/microsoft-365-blog/how-to-manage-office-365-proplus-channels-for-it-pros/ba-p/795813)
+
+<span style="color:#ff0000">**2023/12/27  Update**</span>  
+<span style="color:#339966">一部記載を変更しました</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
