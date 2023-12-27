@@ -15,7 +15,7 @@
 <meta property="og:description" content="こんにちは、Office サポートの西川 (直)です。   MECM (Microsoft Endpoint Configuration Manager) で M365Apps (Microsoft 365 Apps for enterprise) の更新プログラムが必要と判定されない現象について説明します。   現象MECM で M365Apps の更新プログラムが必要と判定されず、更新が適用で">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2023-12-26T00:00:00.000Z">
-<meta property="article:modified_time" content="2023-12-26T08:13:05.259Z">
+<meta property="article:modified_time" content="2023-12-27T00:20:37.308Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="更新">
 <meta name="twitter:card" content="summary">
@@ -107,7 +107,7 @@
         Last Update: 
         <a href="/blog/clqm07fq300005kkj5ww5bp4a/" class="article-date-single">    
         
-    <time datetime="2023-12-26T00:00:00.000Z" itemprop="lastupdate">2023-12-26</time>    
+    <time datetime="2023-12-27T00:00:00.000Z" itemprop="lastupdate">2023-12-27</time>    
     
 </a>              
       </div>
@@ -127,13 +127,13 @@
 <br>
 
 <p><strong>2) VersionToReport より新しいビルドを展開しようとしている、または、UpdateChannelChanged が True である</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\VersionToReport</code><br>ここには、16.0.12345.12345 のような 16.0 部分は固定のビルド番号が入ります。</p>
-<p><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\UpdateChannelChanged</code><br>初期値は False となります。後述のように UpdateChannel が優先度により変更された際に True となります。</p>
+<p><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\UpdateChannelChanged</code><br>初期値は False であり、後述のように UpdateChannel が優先度により変更された際に True となります。その後、更新試行を行った後に False に戻ります。</p>
 <p>通常、チャネルの変更直後を除いて UpdateChannelChanged は False のため、VersionToReport の優劣にしたがい更新が行われます。</p>
 <br>
 
 <p><strong>3) UpdateChannel の URL に展開しているチャネルの識別子が含まれる</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\UpdateChannel</code></p>
 <p><em><strong>チャネルの識別子</strong></em><br><code>最新チャネル : 492350f6-3a01-4f97-b9c0-c7c6ddf67d60</code><br><code>月次エンタープライズチャネル : 55336b82-a18d-4dd6-b5f6-9e5095c314a6</code><br><code>半期エンタープライズチャネル (プレビュー : b8f9b850-328d-4355-9145-c59439a0c4cf</code><br><code>半期エンタープライズチャネル : 7ffbc6bf-bc32-4f92-8982-f9dd17fd3114</code></p>
-<p>UpdateChannel は UpdateChannelChanged が False である場合、以下の優先度にしたがい値が評価されます。</p>
+<p>UpdateChannel は UpdateChannelChanged が False である場合、以下の優先度を上から順に評価します。</p>
 <p>優先度1) <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “更新プログラムのパス”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatepath</code></p>
 <p>優先度2) <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “チャネルの更新”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatebranch</code></p>
 <p>優先度3) <a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/deployoffice/office-deployment-tool-configuration-options#updates-element">Office 展開ツールの Updates 要素の UpdatePath 属性</a><br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\UpdateUrl</code></p>
@@ -170,6 +170,7 @@
 <br>
 
 <h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p><a target="_blank" rel="noopener" href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/how-to-manage-office-365-proplus-channels-for-it-pros/ba-p/795813">How to manage Office 365 ProPlus Channels for IT Pros</a></p>
+<p><span style="color:#ff0000"><strong>2023&#x2F;12&#x2F;27  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
       
