@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2023-12-27T00:20:37.308Z</updated>
+  <updated>2024-01-05T07:13:54.277Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Office で利用するプロキシ設定について</title>
+    <link href="https://officesupportjp.github.io/blog/clr09r8tu00002wkjcubph9b8/"/>
+    <id>https://officesupportjp.github.io/blog/clr09r8tu00002wkjcubph9b8/</id>
+    <published>2024-01-04T15:00:00.000Z</published>
+    <updated>2024-01-05T07:13:54.277Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直)です。  </p><p>本記事では、Office で利用するプロキシ設定について説明します。</p><h2 id="説明"><a href="#説明" class="headerlink" title="説明"></a>説明</h2><p>Office には、オンライン画像の挿入やオンラインテンプレートの取得などインターネット通信を利用する機能がございます。<br>このプロキシ設定はログオンユーザーの OS のプロキシ設定 (WinINET) が利用されます。WinHTTP のプロキシ設定は利用されません。</p><p>ただし、Office 2019 以降や Microsoft 365 クライアントで存在する自動更新の処理等の一部の機能については、以下の順でそれぞれのプロキシ設定を参照することがございます。</p><ol><li>WinHTTP (存在しない場合、スキップされます。また、構成していても、処理によっては参照しない場合がございます)</li><li>SYSTEM ユーザーの OS のプロキシ設定 (WinINET)</li><li>ログオンユーザーの OS のプロキシ設定 (WinINET) (ただし、ユーザーがログオンしている場合に限ります)</li></ol><p>最終的には 3 が利用されるため、1 や 2 を構成せずとも 3 を構成しておくことで通信は出来るものとなります。<br>なお、この動作を無効化したり順番を変更することは出来ません。また、処理内容によっては 1 と 2 を使用しない場合もございます。</p><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p><strong>Office が利用するエンドポイントを教えてください</strong><br><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Office 365 の URL と IP アドレスの範囲</a>をご確認ください。</p><p><strong>Office でネットワーク接続がない旨のメッセージが表示されます</strong><br><a href="https://officesupportjp.github.io/blog/cl0m75al4001gmcvse36w64dv/">Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について</a>をご確認ください。</p><p><strong>必要なサービスが無効になっていますと表示されます</strong><br><a href="https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/">必要なサービスが無効になっていますと表示される現象について</a>をご確認ください。</p><p><strong>GPO プロキシ設定を配布していますが、2 の SYSTEM ユーザーのプロキシ設定は変更されますか</strong><br>GPO は OS ログオン時に設定されますため、2 の SYSTEM ユーザーのプロキシ設定は変更されません。<br>2 の SYSTEM ユーザーのプロキシ設定を変更するには、<a href="https://docs.microsoft.com/ja-jp/windows/win32/bits/bitsadmin-tool">BitsAdmin コマンド</a>を利用する方法があります。</p><p>プロキシサーバー “192.168.1.1:8080” を指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem MANUAL_PROXY 192.168.1.1:8080 “”</p><p>バイパスリストを含め指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem MANUAL_PROXY 192.168.1.1:8080 “*.microsoft.com”</p><p>pac ファイル <a href="http://server/proxy.pac">http://server/proxy.pac</a> を指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem AUTOSCRIPT <a href="http://server/proxy.pac">http://server/proxy.pac</a></p><p>設定をリセットする方法)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem NO_PROXY</p><p>設定を確認する方法)<br>bitsadmin &#x2F;util &#x2F;getieproxy localsystem</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直)です。  &lt;/p&gt;
+&lt;p&gt;本記事では、Office で利用するプロキシ設定について説明します。&lt;/p&gt;
+&lt;h2 id=&quot;説明&quot;&gt;&lt;a href=&quot;#説明&quot; class=&quot;headerlink&quot; title=&quot;説明&quot;&gt;&lt;/a&gt;説</summary>
+      
+    
+    
+    
+    
+    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>MECM で M365Apps の更新プログラムが必要と判定されない</title>
@@ -456,29 +480,6 @@
     
     
     <category term="Web アドイン" scheme="https://officesupportjp.github.io/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Office 利用時に storage.googleapis.com や cdn01.boxcdn.net への通信が発生する</title>
-    <link href="https://officesupportjp.github.io/blog/cl4hy59k50027usvsc5k6cuto/"/>
-    <id>https://officesupportjp.github.io/blog/cl4hy59k50027usvsc5k6cuto/</id>
-    <published>2022-06-19T00:00:00.000Z</published>
-    <updated>2023-01-11T07:22:29.293Z</updated>
-    
-    <content type="html"><![CDATA[<p><span style="color:#ff0000">2022&#x2F;08&#x2F;19 Update<br>[対応案] の内容を更新しました</span> </p><p>こんにちは、Office サポート チームです。<br>この記事では、クイック実行版 Office アプリケーション利用時に<br>storage.googleapis.com や cdn01.boxcdn.net への通信が発生する事象について説明します。</p><p>新たな情報がある場合には、随時この記事でお知らせします。  </p><h1 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h1><p>M365Apps や Office 2019 などのクイック実行版 Office アプリケーションで以下の操作をしたときに<br>storage.googleapis.com や cdn01.boxcdn.net への通信が発生します。</p><ul><li>[スタート] メニューから Excel 等を起動して、[開く] ボタンをクリックする</li><li>[名前を付けて保存] をクリックする</li></ul><p>このとき、プロキシ認証を利用している環境では<br>「storage.googleapis.com のプロキシサーバーに接続しています」や<br>「cdn01.boxcdn.net のプロキシサーバーに接続しています」<br>というメッセージが表示されます。  </p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>本事象は、主に、クイック実行版 Office のクラウド側の設定追加の影響で発生しています。  </p><p>Office アプリケーションから接続するサービスの定義 (クラウド側の設定) として<br>サードパーティーの Egnyte や Box のファイル共有サービスの定義が追加されました。  </p><p>この新しいクラウド側の定義をクライアントが受信すると、<br>以降、Office のバックステージ ビューに、Egnyte や Box (いずれもサードパーティーのファイル共有サービス) が読み込まれ、<br>Egnyte のアイコン画像取得のために「storage.googleapis.com」へ<br>Box のアイコン画像取得のために「cdn01.boxcdn.net」への通信が発生します。</p><h1 id="対応案"><a href="#対応案" class="headerlink" title="対応案"></a>対応案</h1><p><span style="color:#ff0000">2022&#x2F;08&#x2F;19 現在、Egnyte および Box のアイコン画像取得のための通信先が、Microsoft 365 Apps をご利用いただくにあたり必須の通信先である 「cdn.odc.officeapps.live.com」 へ変更になっております。<br>そのため、現在本事象は発生いたしません。</span> </p><p><span style="color:#ff0000">本事象に対する対応として、下記のポリシー設定は不要となります。既に設定いただいている場合は、必要に応じて設定の見直しをご検討ください。</span></p><p>サードパーティーのファイル共有サービスを全く使っていない場合は、以下のポリシー設定で回避できます。</p><p>[ユーザーの構成]<br>- [ポリシー]<br>- [管理用テンプレート]<br>- [Microsoft Office 2016]<br>- [ツール | オプション | 全般 | サービス オプション]<br>- [オンライン コンテンツ]<br>- [サービス レベルのオプション]<br>を有効にして、 “Microsoft のサービスのみ” にする  </p><p>上記ポリシーを設定すると以下のレジストリが作成されます。<br>レジストリを直接設定することでも同じ動作となります。</p><p>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\office\16.0\common\internet<br>名前 : serviceleveloptions<br>種類 : REG_DWORD<br>データ : 1</p><p>BOX 等、サードパーティーのファイル共有サービスの一部製品をご利用の場合は<br>上記設定をすると、ご利用いただけなくなります (*1) ので<br>上記設定は行わずに、「storage.googleapis.com」 等へのプロキシ認証を除外することをご検討をお願いいたします。</p><p>(*1)<br>[場所の追加] や [アカウント] – [サービスの追加] – [ストレージ] の項目が表示されなくなります。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;2022&amp;#x2F;08&amp;#x2F;19 Update&lt;br&gt;[対応案] の内容を更新しました&lt;/span&gt; &lt;/p&gt;
-&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、クイック実行版 Off</summary>
-      
-    
-    
-    
-    
-    <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
     
   </entry>
   
