@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Excel で図形やテキストの表示・印刷でずれやサイズ変化が生じる理由と対処 | Japan Office Client Support Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="こんにちは、Office サポート チームの中村です。 Excel ファイルにおいて、異なる端末で同じブックを開いたときの表示や印刷結果における、以下のような差異についてお問い合わせを頂くことがあります。 現象の例    図形やセルの縦横比が変化する 図形やセル内のテキストが見切れる、または文字列折り返し位置がずれる 図形同士、または図形とセルの位置関係がずれる 改ページ位置が変化する (1 枚に">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Excel で図形やテキストの表示・印刷でずれやサイズ変化が生じる理由と対処">
+<meta property="og:url" content="https://officesupportjp.github.io/blog/clp858vmy0000wosea1uya8uj/index.html">
+<meta property="og:site_name" content="Japan Office Client Support Blog">
+<meta property="og:description" content="こんにちは、Office サポート チームの中村です。 Excel ファイルにおいて、異なる端末で同じブックを開いたときの表示や印刷結果における、以下のような差異についてお問い合わせを頂くことがあります。 現象の例    図形やセルの縦横比が変化する 図形やセル内のテキストが見切れる、または文字列折り返し位置がずれる 図形同士、または図形とセルの位置関係がずれる 改ページ位置が変化する (1 枚に">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://officesupportjp.github.io/blog/clp858vmy0000wosea1uya8uj/ShapeProperty.png">
+<meta property="article:published_time" content="2023-11-21T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-01-09T09:06:32.637Z">
+<meta property="article:author" content="Office Support Japan">
+<meta property="article:tag" content="印刷">
+<meta property="article:tag" content="Excel">
+<meta property="article:tag" content="描画">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://officesupportjp.github.io/blog/clp858vmy0000wosea1uya8uj/ShapeProperty.png">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="Japan Office Client Support Blog" type="application/atom+xml">
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/blog/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/blog/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/blog/icons/favicon-16x16.png">
+    <link rel="manifest" href="/blog/icons/site.webmanifest">
+    <link rel="mask-icon" href="/blog/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/blog/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/blog/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/blog/css/style.css">
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="site-header-logo"></div>
+  <div id="site-header-blog-wrapper"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">Japan Office Client Support Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">日本マイクロソフト Office Client サポート チームのブログです</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+          <a class="main-nav-link" target="_blank" rel="noopener" href="https://cssjpn.github.io/">サポート情報</a>
+        
+          <a class="main-nav-link" href="/blog/cl0m4xkl00039eovs4fp4ffbt">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSSフィード"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="検索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://officesupportjp.github.io/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Excel で図形やテキストの表示・印刷でずれやサイズ変化が生じる理由と対処" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/clp858vmy0000wosea1uya8uj/" class="article-date">
+  <time datetime="2023-11-21T00:00:00.000Z" itemprop="datePublished">2023-11-21</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Excel で図形やテキストの表示・印刷でずれやサイズ変化が生じる理由と対処
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/clp858vmy0000wosea1uya8uj/" class="article-date-single">    
+    
+    <time datetime="2023-11-21T00:00:00.000Z" itemprop="dateUpdated">2023-11-21</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>こんにちは、Office サポート チームの中村です。</p>
+<p>Excel ファイルにおいて、異なる端末で同じブックを開いたときの表示や印刷結果における、以下のような差異についてお問い合わせを頂くことがあります。</p>
+<p><strong>現象の例</strong>  </p>
+<ul>
+<li>図形やセルの縦横比が変化する</li>
+<li>図形やセル内のテキストが見切れる、または文字列折り返し位置がずれる</li>
+<li>図形同士、または図形とセルの位置関係がずれる</li>
+<li>改ページ位置が変化する (1 枚に収めていた範囲が 2 枚になる、など)<br></li>
+</ul>
+<p>これらの動作は、多くの場合、Excel の表示・印刷レイアウトを計算する仕組みに依存する制限事項によるものです。本記事では、この Excel のレイアウト計算概要と回避・軽減策について説明します。<br><br></p>
+<p><strong><h2>Excel のレイアウト計算</h2></strong><br>Excel では、列の幅 &#x2F; 行の高さ &#x2F; 図形のサイズや表示位置 &#x2F; 改ページ位置といったレイアウト情報を、ブックに保存されたサイズ・表示位置などの情報を基に、ディスプレイ ドライバーやプリンター ドライバーからの応答を合わせて計算します。つまり、この計算結果はディスプレイ設定やプリンター設定の影響を受け、その計算の過程で丸め誤差が生じます。<br>この結果、ディスプレイやプリンター関連の設定や、そもそも利用しているディスプレイ、プリンターが異なることにより、マシン間で表示差異が生じることがあります。  </p>
+<p>Excel は、表計算を主目的とするアプリケーション ソフトである性格上、大量の行列の表示やスクロールのパフォーマンス向上を優先し、レイアウトに関わる計算をある程度簡略化しています。このため、上記のような誤差を設計上許容しており、異なる環境におけるレイアウトの厳密な一致は保証されません。  </p>
+<p>参考) 列の幅の計算に関しては、以下の公開情報で詳しく説明しています。<br>Excel で列の幅を決定する方法の説明<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-JP/office/troubleshoot/excel/determine-column-widths">https://learn.microsoft.com/ja-JP/office/troubleshoot/excel/determine-column-widths</a><br><br></p>
+<p><strong><h2>回避方法</h2></strong><br>大きく分けて、対応の方向性は以下のいずれかとなります。</p>
+<p>a. ブック作成時の工夫で影響を軽減する<br>b. 表示を合わせたいマシン間のディスプレイ・印刷設定を合わせる</p>
+<p>以下にそれぞれの方向で、主に効果が期待できる設定を記載します。<br>ただし、a. の方向の対応は、ファイルの構成によってはほぼ差異が気にならなくなりますが、現象や環境によっては効果がありません。<br>一方、b. については Excel 表示のためだけにディスプレイ表示倍率を変えると、ユーザーが画面を見づらくなったり、また、同じディスプレイやプリンターを使用できず、完全に一致させることは難しい状況が多いと考えられます。(一部の設定のみでも効果がある場合もあります。)<br>状況に応じて、どの回避方法が適しているかをご検討ください。<br><br></p>
+<p><strong><u><h3>a. ブック作成時の工夫で影響を軽減する</h3></u></strong> </p>
+<p><strong><h3>a-1. 図形をグループ化して位置関係を保持する</h3></strong><br>例えば、ある図形内部にきれいに納まるように別の図形を配置したものが、別の環境ではみ出している、といった図形同士のずれの場合は、それらの図形をグループ化すると位置関係を概ね保持できます。  </p>
+<p>図形、図、その他のオブジェクトをグループ化またはグループ解除する<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/topic/a7374c35-20fe-4e0a-9637-7de7d844724b">https://support.microsoft.com/ja-jp/topic/a7374c35-20fe-4e0a-9637-7de7d844724b</a><br><br></p>
+<p><strong><h3>a-2. サイズに余裕を持たせて文字列の見切れを防ぐ </h3></strong><br>図形やセル内の文字列が見切れてしまう場合、多少の誤差が生じても問題ないよう、ある程度余裕を持ったサイズに設定します。<br>また、改ページのずれに対しても同様に、1 ページにおさめる範囲に余裕を持っておくと、改ページ位置がずれたときにページを跨ぐことを防げます。<br><br></p>
+<p><strong><h3>a-3. セルやテキストに合わせた図形の調整を変更して差異を軽減する </h3></strong><br>図形のプロパティにある以下の項目は、セルのサイズが変化したときに、図形の位置やサイズを調整するかどうかを変更する設定です。<br>図形自身のみでも、本記事で説明する計算結果の丸め誤差は生じるため、セルに合わせた移動やサイズ変更をしないようにしても完全に回避はできません。ただ、状況によっては、セルに合わせた調整を行わないことで軽減できたり、また反対に、セルに合わせて調整することで位置関係が保持され、より望ましい表示となる場合があります。<br>また、テキストに合わせた図形サイズ調整の設定も、図形のサイズに影響するため同様に効果がある場合があります。  </p>
+<p><img src="/blog/clp858vmy0000wosea1uya8uj/ShapeProperty.png"><br><br></p>
+<p><strong><h3>a-4. 図形の行列跨ぎの有無で差異を軽減する </h3></strong><br>複数の行や列に跨るように図形を配置すると、行・列の計算誤差の影響をより大きく受け、図形の位置ずれやサイズの差異が大きくなる場合があります。このような場合、行や列を跨がないよう図形を配置することで差異を軽減できます。また反対に、図形自身の計算結果による差異が、行や列を跨ることで生じる差異と相殺され、かえって表示が改善する場合もあります。<br>特に帳票のような用途で整形したシートなどでは、行や列を追加してここに納まるよう (またはあえてこれを跨ぐよう) 図形を配置し、これに合わせて全体のフォーマットを調整すると、期待する表示に近づく場合があります。<br><br></p>
+<p><strong><h3>a-5. 改ページの自動調整を利用してページ数の変化を防ぐ </h3></strong><br>改ページ位置がずれる現象への対処として、印刷範囲を指定ページ数に納まるよう自動調整する機能を用いて印刷設定を行うと、どの環境でも同じページ数で印刷できます。</p>
+<p>1 ページに収める<br><a target="_blank" rel="noopener" href="https://support.microsoft.com/ja-jp/office/f3015be3-e007-4762-90a7-19ebc8052511">https://support.microsoft.com/ja-jp/office/f3015be3-e007-4762-90a7-19ebc8052511</a><br><br></p>
+<p><strong><h3>a-6. テンプレートをクライアントごとに調整して都度対応を避ける </h3></strong><br>例えば帳票作成アプリケーションなどには、予めレイアウトを用意した Excel テンプレートに値を設定してファイルを作成するものがあります。このようなアプリの出力ファイルで現象が生じる場合は、初めに各クライアントでその環境で適切な表示となるよう、テンプレート上でセルのサイズや図形の位置などをカスタマイズして利用すると、帳票作成の都度、レイアウトを調整する手間を省くことができます。<br>(なお、先述の通り Excel は表計算ソフトとして設計されているため、帳票のようなレイアウトを重視するドキュメントには、本来 Word 文書の利用をお勧めします。)<br><br><br><br></p>
+<p><strong><u><h3>b. マシン間のディスプレイ・印刷設定を合わせる</h3></u></strong><br>Excel の表示計算に関わる各種設定を以下に記載します。ファイルを作成した環境 (期待する表示レイアウトの環境) と、サイズ差異などが生じているマシン間で、これらの設定値を合わせてください。<br>全ての設定を合わせられない場合も、一部の設定の統一で回避する場合もあります。また、設定値の組み合わせ次第で、誤差が相殺され影響が少ない場合もあります。状況に応じて様々な組み合わせをお試しください。<br><br></p>
+<p><strong><h3>b-1. Excel のディスプレイ設定</h3></strong><br>Excel の [オプション] - [全般] - [複数ディスプレイを使用する場合] の [表示を優先した最適化] &#x2F; [互換性に対応した最適化] の選択を変更します。設定の変更後、反映のため Excel を再起動してください。<br><br></p>
+<p><strong><h3>b-2. Windows のディスプレイ設定 - テキスト表示倍率設定</h3></strong><br>&lt;Windows 10&gt;<br>Windows の [設定] - [システム] - [ディスプレイ] - [拡大縮小とレイアウト] セクションの [テキスト、アプリ、その他の項目のサイズを変更する] で表示倍率 (%) を変更します。 </p>
+<p>&lt;Windows 11&gt;<br>Windows の [設定] - [システム] - [ディスプレイ] - [拡大縮小とレイアウト] セクションの [拡大&#x2F;縮小] で表示倍率 (%) を変更します。  </p>
+<p>※ 本設定を含め、以降の Windows 設定の変更後は、設定の確実な反映のため、ユーザーの再サインイン、または OS 再起動を行うことをお勧めします。<br><br></p>
+<p><strong><h3>b-3. Windows のディスプレイ設定 - アクセシビリティ設定</h3></strong><br>&lt;Windows 10&gt;<br>Windows の [設定] - [簡単操作] - [ディスプレイ] - [文字を大きくする] のスライダーで表示倍率 (%) を変更します。   </p>
+<p>&lt;Windows 11&gt;<br>Windows の [設定] - [アクセシビリティ] - [テキストのサイズ] のスライダーで表示倍率 (%) を変更します。<br><br></p>
+<p><strong><h3>b-4. Windows のディスプレイ設定 - カスタムスケーリング設定</h3></strong><br>&lt;Windows 10&gt;<br>Windows の [設定] - [システム] - [ディスプレイ] - [表示スケールの詳細設定] をクリックして遷移する画面の [カスタム スケーリング] の値 (%) を変更します。  </p>
+<p>&lt;Windows 11&gt;<br>Windows の [設定] - [システム] - [ディスプレイ] - [拡大&#x2F;縮小] - [カスタム スケーリング] の値 (%) を変更します。<br><br></p>
+<p><strong><h3>b-5. Windows のディスプレイ設定 - 自動スケーリング設定</h3></strong><br>&lt;Windows 10 のみ&gt;<br>Windows の [設定] - [システム] - [ディスプレイ] - [表示スケールの詳細設定] をクリックして遷移する画面の [アプリが鮮明に表示されるように Windows により修正を試す] を変更します。<br><br></p>
+<p><strong><h3>b-6. Windows のディスプレイ設定 - 解像度設定</h3></strong><br>&lt;Windows 10 &#x2F; Windows 11&gt;<br>Windows の [設定] - [システム] - [ディスプレイ] - [ディスプレイの解像度] を変更します。<br><br></p>
+<p><strong><h3>b-7. プリンター設定</h3></strong><br>異なるプリンターを利用している場合、既定のプリンターを合わせます。  </p>
+<p>&lt;Windows 10&gt;<br>Windows の [設定] - [デバイス] - [プリンターとスキャナー] の [Windows で通常使うプリンターを管理する] をオフにした上で、既定に設定するプリンターを選択して [管理] をクリックし、[既定として設定する] をクリックします。  </p>
+<p>&lt;Windows 11&gt;<br>Windows の [設定] - [Bluetooth とデバイス] - [プリンターとスキャナー] の [Windows で通常使うプリンターを管理する] をオフにした上で、既定に設定するプリンターを選択し、[既定として設定する] をクリックします。  </p>
+<p>また、同一のプリンターを利用している場合、プリンターの [印刷設定] などのプリンター固有の設定画面で DPI 等の設定を合わせます。<br><br></p>
+<p>今回の投稿は以上です。</p>
+<p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong>  </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/clp858vmy0000wosea1uya8uj/" data-id="clr65j0gd00001s6y2qvk92nc" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E6%8F%8F%E7%94%BB/" rel="tag">描画</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/clqm07fq300005kkj5ww5bp4a/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">次の記事</strong>
+      <div class="article-nav-title">
+        
+          MECM で M365Apps の更新プログラムが必要と判定されない
+        
+      </div>
+    </a>
+  
+  
+    <a href="/blog/clj709nu4004pqou8fyhg7wta/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前の記事</strong>
+      <div class="article-nav-title">信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグ</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" rel="tag">セキュリティ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%8F%8F%E7%94%BB/" rel="tag">描画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">タグクラウド</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/Access/" style="font-size: 13.64px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 11.82px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.64px;">Graph API</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.73px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.64px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 17.27px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.64px;">お知らせ</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 16.36px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 14.55px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 10.91px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 18.18px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" style="font-size: 11.82px;">セキュリティ</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 16.36px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 19.09px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.73px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 15.45px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16.36px;">印刷</a> <a href="/blog/tags/%E6%8F%8F%E7%94%BB/" style="font-size: 10px;">描画</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 11.82px;">更新</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">アーカイブ</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/01/">1月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/12/">12月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/11/">11月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/10/">10月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/09/">9月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/02/">2月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近の投稿</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/clr65j0hm00091s6ycv6zcha4/">iOS 端末で Excel ファイルに描画を行うとアプリが強制終了する場合がある</a>
+          </li>
+        
+          <li>
+            <a href="/blog/clr09r8tu00002wkjcubph9b8/">Office で利用するプロキシ設定について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/clqm07fq300005kkj5ww5bp4a/">MECM で M365Apps の更新プログラムが必要と判定されない</a>
+          </li>
+        
+          <li>
+            <a href="/blog/clp858vmy0000wosea1uya8uj/">Excel で図形やテキストの表示・印刷でずれやサイズ変化が生じる理由と対処</a>
+          </li>
+        
+          <li>
+            <a href="/blog/clj709nu4004pqou8fyhg7wta/">信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2024 Office Support Japan<br>      
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+    <a target="_blank" rel="noopener" href="https://cssjpn.github.io/" class="mobile-nav-link">サポート情報</a>
+  
+    <a href="/blog/cl0m4xkl00039eovs4fp4ffbt" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
