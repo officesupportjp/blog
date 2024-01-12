@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2024-01-09T09:32:50.387Z</updated>
+  <updated>2024-01-12T08:17:12.099Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について</title>
+    <link href="https://officesupportjp.github.io/blog/clracr3qn0000sc6yestg9pc9/"/>
+    <id>https://officesupportjp.github.io/blog/clracr3qn0000sc6yestg9pc9/</id>
+    <published>2024-01-12T00:00:00.000Z</published>
+    <updated>2024-01-12T08:17:12.099Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について説明します。  </p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Microsoft 365 Apps に含まれる Outlook や Word で、テキスト ボックスのサイズ変更や位置の移動がマウス操作とおりに行われずに、意図しない場所に移動してしまう場合があります。<br>メールの本文や Word 文書内に複数行にわたって文面や改行が入っていて、垂直スクロール バーが表示される状態で上下移動が可能な構成になっていると発生しやすい傾向があります。  </p><h3 id="Outlook"><a href="#Outlook" class="headerlink" title="Outlook"></a>Outlook</h3><p>リッチ テキスト形式、または、HTML 形式のメール アイテムにテキスト ボックスを挿入して、<br>サイズ変更や位置の移動のためにドラッグすると、<br>サイズや位置を示すガイドラインの点線が実際とは異なる位置に描画され、ドラッグ後に上方 (斜め上など) に移動される</p><h3 id="Word"><a href="#Word" class="headerlink" title="Word"></a>Word</h3><p>Web レイアウト表示でテキスト ボックスを挿入して、<br>位置の移動のためにドラッグすると、位置を示すガイドラインの点線が実際とは異なる位置に描画され、ドラッグ後に上方 (斜め上など) に移動される</p><p><img src="/blog/image1.png"></p><h1 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h1><p>事象が発生した場合の有効な対処方法はありません。<br>意図しない位置に移動されたオブジェクトを 「元に戻す」 操作で戻してやり直すことや、希望する位置に移動されるようドラッグし直します。<br>オプション設定の変更や更新適用などで解消することはできません。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について説明します。  &lt;/p&gt;
+&lt;h1 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;headerl</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>VBA マクロの Office バージョンアップ時の互換性</title>
+    <link href="https://officesupportjp.github.io/blog/clr8yxe6w00043gsebywv7n74/"/>
+    <id>https://officesupportjp.github.io/blog/clr8yxe6w00043gsebywv7n74/</id>
+    <published>2024-01-11T00:00:00.000Z</published>
+    <updated>2024-01-12T07:58:22.519Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。</p><p>Office 2019 や Office LTSC 2021 といった Office 永続ライセンスの新しいバージョンへの変更や、Microsoft 365 Apps のバージョン更新にあたって、これまで動作していた VBA マクロが引き続き同じように動作するのかを懸念するご質問を頂くことがあります。<br>今回の記事では、このような Office バージョンアップ時の VBA マクロの互換性の考え方について記載します。</p><p>初めに結論を記載すると、元々利用していたバージョンが Office 2016 以降であれば、基本的な互換性は保持されており、ほとんどの場合は問題ありません。ただし、VBA マクロの処理の流れに依存して、Office の細かな動作変化が影響することは稀にあります。<br>このような動作しなくなるシナリオを網羅して弊社から案内することはできません。<br>最終的に確実な互換性を担保したい場合は、検証を通して確認していただく必要があります。</p><p>以下、VBA マクロの動作に関わる要素ごとに詳しく解説します。</p><p><strong><h3>1. VBA ランタイム</h3></strong><br>VBA はプログラム言語の 1 つであり、この VBA 言語を解釈して実行する VBA ランタイム自体にバージョンを持ちます。<br>VBA ランタイムは Office アプリケーションに同梱されていますが、現在サポートされる Office 2016 以降、Office 2019 &#x2F; Office 2021 &#x2F; Microsoft 365 Apps のいずれもバージョン 7.1 で統一されており、VBA ランタイムのバージョン更新はありません。<br>また仮に VBA 7.1 より古いバージョンで作成した VBA コードを含む Office ファイルであっても、VBA コードを実行環境で再コンパイルして実行できます。  </p><p>以上のことから、VBA ランタイムの観点で互換性を気にする必要はありません。<br><br></p><p><strong><h3>2. Office オブジェクト ライブラリ</h3></strong><br>VBA マクロの処理内容の中心は、Office アプリケーションに関する処理を行うことです。これには通常、Office オブジェクト ライブラリ内のオブジェクト &#x2F; メソッド &#x2F; プロパティなどを使用します。<br>例えば、「Microsoft Excel 16.0 Object Library」ライブラリでは、Workbooks.Open メソッドなどの Excel アプリケーションとのやり取りを行うためのオブジェクトを提供しています。VBA マクロからは、[参照設定] でこれらのライブラリを参照したり、レイト バインディングと呼ばれる手法で実行時にライブラリを参照して利用します。</p><p><strong><h4>2-1. ライブラリ バージョン</h4></strong><br>これらの Office アプリケーションとやり取りするためのオブジェクトを提供するライブラリは、Office に同梱されています。Office 2016 以降、Office 2019 &#x2F; Office 2021 &#x2F; Microsoft 365 Apps のいずれにおいても、バージョン「16.0」から変更はありません。このため、ライブラリ自体のバージョンが変わり、参照できなくなるといった問題は発生しません。</p><p>また、Office 2013 以前は「15.0」など、Office バージョンごとに異なるバージョンでした。この場合も、古いバージョンから新しいバージョンへの互換性は考慮されています。例えば Office 2013 で作成した VBA コードを、Microsoft 365 Apps 環境で実行する場合、自動的に新しいバージョンの同じライブラリを参照して動作します。<br>ただし、反対に新しいバージョンで作成した VBA コードを古いバージョンで実行する場合は、利用アプリケーションとライブラリの組み合わせによっては参照できません。</p><p><strong><h4>2-2. ライブラリ内のオブジェクト モデルの廃止 &#x2F; 変更</h4></strong><br>ライブラリ内で提供するオブジェクト モデルについては、Office 2016 より前のバージョンからの更新の場合、いくつかの互換性に影響が生じる廃止・変更があります。これらは、以下の公開情報でご案内しています。  </p><p>Office の互換性に関する問題<br><a href="https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office">https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office</a>  </p><p>一方、Office 2016 以降は、既存のオブジェクト モデルに対し、メソッドなどが削除されたり、メソッド呼び出し時の必須パラメーターが追加されるといった、これまでのオブジェクト モデルの用法に影響を与えるような破壊的変更はありません。<br><br></p><p><strong><h3>3. Office アプリケーションの動作変化</h3></strong><br>ここまでの 1. &#x2F; 2. の観点からは、Office 2016 以降のバージョンから、より新しいバージョンへの更新において、通常 VBA マクロの動作に影響はありません。<br>ただ重要な点として、VBA マクロは、Office アプリケーション等に対する処理要求を行っているということです。このため、VBA マクロからの処理においても、Office アプリケーションの動作変化の影響を受けます。  </p><p>例えば VBA マクロで Workbooks.Open を実行すると、Excel アプリケーションに対し「ファイルを開く」という要求を行い、実際にファイルを開く処理を行うのは VBA コード自身ではなく、Excel アプリケーション側です。そして、「ファイルを開く」という動作の中には、実際のファイル内容の読み取りの他、様々な内部処理が存在します。例えば、ファイルのフォーマットチェック、セキュリティ設定によるファイル内要素のブロック要否のチェック、最近使ったファイルへの情報追加・・・など、多岐に渡る内部処理をまとめて Workbooks.Open により実行される「ファイルを開く」動作となります。</p><p>ここまでに述べた通り、新しいバージョンの Office でも、Workbooks.Open メソッド自体はこれまでと同じ用法で実行することはできます。ただ、例えば Workbooks.Open から実行するフォーマットチェック項目が強化される、といった Excel 側の動作変化はあり得ます。<br>先述の例の場合、新しいチェック項目に反するフォーマットのファイルを VBA マクロから開くと、以前のバージョンでは開けるが、新しいバージョンでは開けない、といった事象が発生する可能性があります。</p><p>このような Office アプリケーションの動作変化は、バージョン更新に伴って無数に存在し、かつ内部の細かな実装であるため、すべての変更点を網羅して一覧化することはできません。リリース ノートで主要な変更の概要は確認できますが、記載のない細かな変更もあり、また、リリース ノートの端的な記載から影響有無を判断することは難しいことがほとんどです。<br>また一方、ユーザーが作成する VBA マクロの処理内容も千差万別であり、どの Office 動作変化が VBA マクロの処理に影響するかを弊社で事前に推測し、「VBA に影響が出る変更リスト」のような形でまとめることも困難です。  </p><p>したがって、VBA マクロが新しい Office バージョンで確実に動作するかは、実際に新しい環境での動作検証を通してご確認ください。  </p><p>なお、このように記載しましたが、もちろん、広く一般的に想定される状況で、既存 VBA マクロの動作に影響するような変更は基本的には行いません。以下の公開情報でも触れている通り、ほとんどの VBA マクロはこれまでと同じように動作するため、過度に心配する必要はありません。</p><p>Microsoft 365 Appsをデプロイするための環境と要件を評価する<br>手順 4 - アプリケーション互換性の評価<br><a href="https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps">https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps</a></p><p>社内環境の Office バージョンアップなどに際しては、VBA マクロを含むファイルは非常に多く存在することが一般的かと思います。そして、このようなファイルすべてを事前検証することは現実的ではないことが多いと考えられます。<br>例えば、業務上重要なファイルのみ事前検証を行い、その他のファイルは新バージョンの利用開始後に問題が確認された時点で、弊社サポートへのお問い合わせなどを通して調査するなど、皆様のご事情に合わせて、互換性に関する対応方針をご検討いただければ幸いです。<br><br></p><p><strong><h3>付録 1: Office 動作変化の具体例</h3></strong><br>&lt;3. Office アプリケーションの動作変化&gt; について、Office の動作変化の具体例を紹介します。</p><p><strong>OneDrive 同期フォルダーの Workbook.Path</strong><br>エクスプローラーで OneDrive や SharePoint ライブラリの同期フォルダからファイルを開く場合、以前の Office バージョンでは、ThisWorkbook.Path などで開いたファイルのパスを取得すると、同期フォルダのローカル パスが返されました。<br>Microsoft 365 の最新チャネル バージョン 1903 および半期チャネル バージョン 2008 以降、および Office LTSC 2021 では、このとき、クラウド ストレージ側の URL パスが返るようになりました。</p><p>この変化により、ローカル パスが返ることを期待して後続処理 (例: ”￥” 文字でのパス分割など) を記載していると影響が生じます。</p><p><strong>Excel 表示形式の和暦元年対応</strong><br> Office 2019 までは、Excel のセルの表示形式において、和暦の元年表記に未対応だったため、「令和1年5月1日」のように表示されていました。<br> Microsoft 365 のバージョン 1909 以降や Office LTSC 2021 では、元年表記に対応するとともに、既定で元年表記が有効となっています。</p><p> <img src="/blog/clr8yxe6w00043gsebywv7n74/Gannen.png"></p><p>この変化により、新しいバージョンでは、セルに「令和1年5月1日」のような和暦文字列を設定すると「令和元年5月1日」と表示内容が変わります。<br><br></p><p><strong><h3>付録 2: bit 変更の影響</h3></strong><br>Office のバージョンアップと合わせて、32 bit から 64 bit に変更することも多いかと思います。bit 変更に伴う VBA マクロへの影響として主に注意する点は、以下の 2 点です。</p><ul><li>Office 以外のライブラリを利用している場合、64 bit ライブラリを実行環境にインストール済みか</li><li>Declare ステートメントを利用している場合、PtrSafe の付与と、パラメーターの Long 型を適切に LongPtr 型に変更しているか (パラメーターの値を扱う変数のデータ型も合わせて変更が必要)</li></ul><p>詳しくは、以下の公開情報をご参照ください。  </p><p>64 ビット版または 32 ビット版の Office を選択する<br><a href="https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261">https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261</a></p><p>64 ビット Visual Basic for Applications の概要<br><a href="https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview">https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview</a></p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;/p&gt;
+&lt;p&gt;Office 2019 や Office LTSC 2021 といった Office 永続ライセンスの新しいバージョンへの変更や、Microsoft 365 Apps のバージョン更新にあたって、これまで</summary>
+      
+    
+    
+    
+    
+    <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>iOS 端末で Excel ファイルに描画を行うとアプリが強制終了する場合がある</title>
@@ -435,49 +479,6 @@
     
     
     <category term="インストール" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する</title>
-    <link href="https://officesupportjp.github.io/blog/cl7pvphjn0000a46ygd3m4nro/"/>
-    <id>https://officesupportjp.github.io/blog/cl7pvphjn0000a46ygd3m4nro/</id>
-    <published>2022-09-06T00:00:00.000Z</published>
-    <updated>2022-09-30T01:45:49.675Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、暗号化された Office ファイル (*) を保護ビューで開き、保護ビューが閉じた後、<br>クライアントのローカル フォルダ %localappdata%\Packages 配下に oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダ (x は任意の英数字) が残存する事象について説明します。  </p><h1 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h1><p>Office アプリでは、暗号化された Office ファイルであるかどうかに関わらず、ファイルを保護ビューで開く場合、以下のフォルダを作成します。  </p><p>%localappdata%\Packages\oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダ<br>(例: C:\Users&lt;ユーザー名&gt;\AppData\Local\Packages\oice_xx_xxxxxxxx_xxxxxxxx_xxxx)  </p><p>この oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダ配下に、元のファイルや元のファイルに紐づく情報を一時ファイルとしてコピー&#x2F;作成した上で、保護ビューでファイルを読み取り専用で開きます。  </p><p>この動作は、ユーザーが明示的に [編集を有効にする] を実行しない限り、リスクを軽減しながらファイルの内容を確認できるセキュリティを考慮した実装です。  </p><p>なお、Office ファイルが暗号化されていない場合は、[編集を有効にする] をクリックしたタイミングで、%localappdata%\Packages\oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダは削除されます。  </p><p>一方、暗号化された Office ファイル (*) の場合、[編集を有効にする] をクリックしても、%localappdata%\Packages\oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダは削除されず、残ります。  </p><p><img src="/blog/cl7pvphjn0000a46ygd3m4nro/image1.png"><br><img src="/blog/cl7pvphjn0000a46ygd3m4nro/image2.png">  </p><p>(*) 暗号化された Office ファイルとは、以下のような操作などで暗号化されたファイルを指します。<br>・Azure Information Protection 統合ラベル付けクライアントや Office アプリで秘密度ラベルを設定したファイル<br>・Office アプリの [ファイルの保護] - [アクセスの制限] からアクセス制限ありを設定したファイル<br>・SharePoint の Information Rights Management (IRM) を有効に設定したライブラリからダウンロードされたファイル  </p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>この問題は、Microsoft 365 Apps にて確認されており、現在、製品開発部門で調査中です。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><h1 id="回避案"><a href="#回避案" class="headerlink" title="回避案"></a>回避案</h1><p>エクスプローラーを起動し、残っている %localappdata%\Packages\oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダ<br>(例: C:\Users&lt;ユーザー名&gt;\AppData\Local\Packages\oice_xx_xxxxxxxx_xxxxxxxx_xxxx) を選択し、手動で削除してください。  </p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、暗号化された Office ファイル (*) を保護ビューで開き、保護ビューが閉じた後、&lt;br&gt;クライアントのローカル フォルダ %localappdata%\Packages 配下に oice_xx_x</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない</title>
-    <link href="https://officesupportjp.github.io/blog/cl6q3dt1k0000ks3pemokg0de/"/>
-    <id>https://officesupportjp.github.io/blog/cl6q3dt1k0000ks3pemokg0de/</id>
-    <published>2022-08-12T00:00:00.000Z</published>
-    <updated>2022-09-30T01:45:49.644Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。</p><p>今回の記事では、Windows Server Failover Cluster (WSFC) 構成のファイル サーバー上に作成した共有フォルダーで、継続的可用性 (Continuous Availability<br> (CA)) 設定を有効にすると、このフォルダー配下の Office ファイルを開くときに時間がかかる、という動作について説明します。なお、このときに要する時間は数十分となる場合があるため、ユーザーが開き終わるまで待機することなく「Office ファイルを開くことができず、Office アプリの応答がなくなる」といった現象として報告されることが想定されます。<br><br></p><h3 id="1-発生条件"><a href="#1-発生条件" class="headerlink" title="1. 発生条件"></a><strong>1. 発生条件</strong></h3><p> 以下をすべて満たす場合に発生します。</p><ul><li><p>Office デスクトップ アプリ バージョン 1812 以降</p></li><li><p>WSFC 構成のファイル サーバーで、共有フォルダーの継続的可用性 (CA) を有効にしている</p></li></ul><p> <img src="/blog/cl6q3dt1k0000ks3pemokg0de/WSFC_CA.png">  </p><ul><li><p>共有フォルダーの名前に NFKC 形式での Unicode正規化により、別の文字に置き換わる文字を使用している (例: 全角アルファベット)</p><p>Unicode 正規化の詳細は以下をご参照ください。<br>Using Unicode Normalization to Represent Strings<br><a href="https://docs.microsoft.com/en-us/windows/win32/intl/using-unicode-normalization-to-represent-strings">https://docs.microsoft.com/en-us/windows/win32/intl/using-unicode-normalization-to-represent-strings</a></p><p>※ サブ フォルダーは影響しません。共有ルート フォルダーの名前のみです。</p></li></ul><br><h3 id="2-原因"><a href="#2-原因" class="headerlink" title="2. 原因"></a><strong>2. 原因</strong></h3><p>WSFC 構成の継続的可用性 (CA) は、一般的に可用性が重要なスケールアウト ファイル サーバーなどの構成で利用され、ファイルへのアクセス中にフェイル オーバーが発生したときにも、フェイル オーバー後にそのままアクセスを継続することを実現します。<br>本機能の詳細は、以下の公開情報をご参照ください。</p><p>Windows Server 2012 Continuous Availability File Server feature<br><a href="https://docs.microsoft.com/en-us/archive/blogs/davguents_blog/windows-server-2012-continuous-availability-file-server-feature">https://docs.microsoft.com/en-us/archive/blogs/davguents_blog/windows-server-2012-continuous-availability-file-server-feature</a></p><p>この仕組みの実現のため、継続的可用性が有効な共有フォルダーが検出されると、SMB クライアントはそのファイル サーバーへのアクセスが失敗した場合も、しばらくの間リトライを繰り返します。このリトライによって、フェイル オーバー後に自動的に再接続され、継続アクセスが可能となります。<br><br></p><p>一方で、先述の発生条件に記載したバージョン以降の Office アプリケーションでは、セキュリティ脆弱性への対応のため、ファイルが格納されているネットワーク フォルダー パスを Unicode 正規化してアクセスする処理を追加しました。<br>例えば、「ｓｈａｒｅ」という全角英字を Unicode 正規化すると、半角英字「share」となります。したがって、「\\server\ｓｈａｒｅ\test.xlsx」という全角英字フォルダー内のファイルを開くときに、「\\server\share」 (半角英字) へのアクセスが発生することになります。</p><p>半角英字の「share」フォルダーが存在せず、そのようなフォルダーは存在しない旨のエラーが返されても以後の処理は正常に動作しますが、継続的可用性が有効な場合は、存在しないことによるエラーであってもこのエラーがすぐに Office に返らず、リトライが繰り返されます。<br>この結果、リトライ オーバーまで Office は待機し続け、ファイルを開くまでに長い時間を要します。</p><p>Windows OS の継続的可用性によるリトライ、Office アプリケーションのファイル オープン時の Unicode 正規化ともに、想定された仕組みであり、本動作は現在の製品動作上の制限事項です。<br><br></p><h3 id="3-回避策"><a href="#3-回避策" class="headerlink" title="3. 回避策"></a><strong>3. 回避策</strong></h3><p>以下のいずれかの方法による回避をご検討ください。</p><ol><li><p>共有フォルダーの名前に Unicode 正規化で別の文字となる文字を使用しない</p></li><li><p>共有フォルダーをネットワーク ドライブに割り当てて使用する<br>(この場合、Office が Unicode 正規化してアクセスするのはネットワーク ドライブを用いたパスとなるため、現象を回避できます)</p></li><li><p>共有フォルダーの継続的可用性を無効にする</p></li></ol><br>今回の投稿は以上です。  <br><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;/p&gt;
-&lt;p&gt;今回の記事では、Windows Server Failover Cluster (WSFC) 構成のファイル サーバー上に作成した共有フォルダーで、継続的可用性 (Continuous Availabil</summary>
-      
-    
-    
-    
-    
-    <category term="ファイル I/O" scheme="https://officesupportjp.github.io/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/"/>
     
   </entry>
   
