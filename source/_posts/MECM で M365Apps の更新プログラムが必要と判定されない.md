@@ -1,7 +1,7 @@
 ---
 title: MECM で M365Apps の更新プログラムが必要と判定されない
 date: '2023-12-26'
-lastupdate: '2023-12-27'
+lastupdate: '2024-03-04'
 id: clqm07fq300005kkj5ww5bp4a
 tags:
   - 更新
@@ -33,10 +33,10 @@ MECM で M365Apps の更新プログラムが必要と判定されず、更新�
 <br>
 
 **2) VersionToReport より新しいビルドを展開しようとしている、または、UpdateChannelChanged が True である**
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\VersionToReport`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\VersionToReport`
 ここには、16.0.12345.12345 のような 16.0 部分は固定のビルド番号が入ります。
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\UpdateChannelChanged`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannelChanged`
 初期値は False であり、後述のように UpdateChannel が優先度により変更された際に True となります。その後、更新試行を行った後に False に戻ります。
 
 通常、チャネルの変更直後を除いて UpdateChannelChanged は False のため、VersionToReport の優劣にしたがい更新が行われます。
@@ -44,7 +44,7 @@ MECM で M365Apps の更新プログラムが必要と判定されず、更新�
 <br>
 
 **3) UpdateChannel の URL に展開しているチャネルの識別子が含まれる**
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuratio\UpdateChannel`
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannel`
 
 ***チャネルの識別子***
 `最新チャネル : 492350f6-3a01-4f97-b9c0-c7c6ddf67d60`
@@ -133,5 +133,8 @@ OS 観点で調査が必要であると考えられます。
 
 <span style="color:#ff0000">**2023/12/27  Update**</span>  
 <span style="color:#339966">一部記載を変更しました</span>
+
+<span style="color:#ff0000">**2024/3/4  Update**</span>  
+<span style="color:#339966">一部記載を修正しました</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
