@@ -1,6 +1,7 @@
 ---
 title: Office ファイルの SPO & OneDrive 移行におけるマクロ (VBA) 影響
 date: '2022-02-17'
+lastupdate: '2024-05-08'
 id: cl0m4rqa2001y50vshhi75we2
 tags:
   - オートメーション
@@ -13,6 +14,11 @@ tags:
 *****  
 **2022/3/18 Update**  
 2. / 3. にそれぞれ、他のファイル内の VBA を参照している場合の影響と回避策を追加しました。
+
+**2024/5/08 Update**
+- 2. に Power Query の影響を追加しました。
+- 3. に Power Query によるファイル・フォルダー列挙の代替案を追記しました。
+- 4. に Power Query や Graph API の認証についての記述を追加しました。
 *****  
 <br>
 
@@ -23,14 +29,14 @@ Office ファイルの保存場所として、ファイル サーバーの共有
 今後、さらにクラウド活用が進むと想定されるため、今回の記事で、このようなシナリオで一般的に生じる影響と対応方法、考慮すべき点についてまとめたいと思います。
 <br>
 
-## **1. クラウド移行で変化すること**
+**<h2>1. クラウド移行で変化すること</h2>**
 ファイルの格納場所を変更したとき、マクロに影響を与える要素は主に以下の 2 点です。
 
 ・フォルダやファイルのパスが UNC 共有パス形式 (\\\Server\\folder) から URL 形式 (http\://tenantname.sharepoint.com/xxxx など) に変わる  
 ・SharePoint や OneDrive によってアクセス権が管理される
 <br>
 
-## **2. ファイル パス変更の影響**
+**<h2 id="chapter2">2. ファイル パス変更の影響</h2>**
 マクロからファイルやフォルダを操作するときに使用する関数によっては、URL 形式に対応していません。このような関数を利用している場合は、マクロ処理の見直しが必要です。以下に、マクロで主に使用されるファイル操作関数の URL 形式対応状況を記載します。
 <br>
 
@@ -66,6 +72,40 @@ Folder object
 <https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/folder-object>
 <br>
 
+### **Power Query**
+Power Query でファイルからデータを読み込む場合、クエリの参照場所によって使用する関数を変える必要があります。  
+  
+UNC 共有パスで接続するファイル サーバーを参照する場合、主に以下の関数が使用されます。
+- File.Contents (指定ファイルの内容取得)
+- Folder.Contents (指定フォルダー内のファイル・フォルダー列挙)
+- Folder.Files (指定フォルダー内のファイル列挙)
+  
+これらの関数は、URL 形式のパスでは使用できません。SharePoint や OneDrive への参照の場合、上記の関数は以下に置き換える必要があります。
+- Web.Contents  
+<https://learn.microsoft.com/en-us/powerquery-m/web-contents>
+- SharePoint.Contents  
+<https://learn.microsoft.com/ja-jp/powerquery-m/sharepoint-contents>
+- SharePoint.Files  
+<https://learn.microsoft.com/ja-jp/powerquery-m/sharepoint-files>
+
+ただし、関数の使い勝手が異なりそのまま置き換えられない場合があったり、URL の指定誤りなどから、直接クエリを編集して書き換えると、問題に直面することが多くなっています。  
+Excel 画面上の手動操作で、新しい場所を参照する正しいクエリを作成して利用する、および、これを参考に VBA からのクエリ作成処理を見直すことをお勧めします。 (Excel の [データ] タブ - [データの取得] にある [Web から] / [ファイルから] - [SharePoint フォルダーから] などで作成できます。)
+
+また、SharePoint / OneDrive への認証も考慮する必要があります。
+
+クエリ作成手順や認証に関する情報の詳細は、以下の公開情報をご参照ください。
+
+**参考資料:**  
+データ ソースの設定とアクセス許可を管理する (Power Query)  
+<https://support.microsoft.com/ja-jp/office/9f24a631-f7eb-4729-88dd-6a4921380ca9>
+
+Web データに接続する  
+<https://learn.microsoft.com/ja-jp/power-query/connectors/web/web>
+
+データ ソースによる認証  
+<https://learn.microsoft.com/ja-jp/power-query/connector-authentication>
+<br>
+
 ### **補足 1) その他、独自にパスを解析・組み立てる処理**  
 マクロの独自処理として、例えばマクロ ファイル自身の格納フォルダ パスの一部を加工して処理結果ファイルの出力パスを組み立てるなど、パスのテキストを意識した処理がある場合は注意が必要です。URL 形式への変更に伴い、既存の文字列操作処理では、期待する結果が得られない場合があります。
 <br>
@@ -77,7 +117,7 @@ Folder object
 参照設定の他にも、マクロ処理内でパスを指定して他のファイルを開いている場合は、パスの指定方法がファイルの移動後も有効な実装となっているか十分に確認してください。
 <br>
 
-## **3. 影響を受ける場合の対処方法**
+**<h2>3. 影響を受ける場合の対処方法</h2>**
 一般的には、以下のような対処方法が検討できます。実際の処理内容や環境構成、対応にかけられる工数などを考慮して対処方法をご検討ください。
 <br>
 
@@ -85,11 +125,15 @@ Folder object
 先述の通り、Microsoft xxx 16.0 Object Library で提供されるメソッド・プロパティは基本的に URL 形式を扱うことができます。そして、Word や Excel は、テキスト ファイルを扱うこともできます。現在 VBA 関数や FileSystemObject でテキスト ファイルを操作している場合には、これを Word や Excel アプリで Microsoft xxx 16.0 Object Library を用いて扱うよう変更することが検討できます。
 <br>
 
-### **b. 不要なファイル・フォルダ操作を止める**
+### **b. ファイル・フォルダー列挙は Power Query を使用する**
+<a href="#chapter2"><2. ファイル パス変更の影響></a> の "Power Query" セクションで紹介した SharePoint.Contents や SharePoint.Files では、SharePoint Online の指定した場所のファイルやフォルダーを列挙できます。
+VBA の Dir 関数や FileSystemObject を用いて、ファイルを列挙している場合は、Power Query を利用するよう変更することが検討できます。
+
+### **c. 不要なファイル・フォルダ操作を止める**
 例えば、次回利用時に引き継ぎたい内容を動的に保持する設定ファイルを別ファイルとして用意し、これを読み書きするために対応していない関数を使っている、というシナリオを考えます。このような場合、これをマクロ ファイル自身のどこかに保持する (Excel の非表示シート、Word の隠し文字、ファイルのユーザー設定プロパティ等) ことで、他のファイルへの読み書きを行わないようにする、といった対応もマクロの内容次第では検討できます。
 <br>
 
-### **c. Graph API に変更する (ファイル操作と Excel 操作が対応)**
+### **d. Graph API に変更する (ファイル操作と Excel 操作が対応)**
 SharePoint Online や OneDrive に対し、HTTP リクエスト ベースで操作する API として Graph API が提供されています。現在、SharePoint ライブラリや OneDrive のフォルダ・ファイル自体の操作 (作成やコピー、削除など) と、Excel ファイルの操作用 API が利用できます。ただし、プログラムの実装イメージがマクロと大きく異なりますので、Graph API 自体の利用に習熟している開発者向けの代替案です。  
 
 Microsoft Graph API を使用する  
@@ -110,7 +154,7 @@ Microsoft Graph REST API v1.0 リファレンス
 [https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/](https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/)  
 <br>
 
-### **d. OneDrive や SharePoint ライブラリの同期フォルダを操作する**
+### **e. OneDrive や SharePoint ライブラリの同期フォルダを操作する**
 OneDrive 同期クライアントで、ファイル格納フォルダをクライアント コンピューターと同期すると、ローカルの同期フォルダにファイルがコピーされます。この同期フォルダに対してマクロから操作を行うと、通常のローカル パスとして扱うことができます。(なお、先述の通り、ThisWorkbook.Path の結果は最新の Microsoft 365 では URL 形式になり、同期フォルダのローカル パスではない点にご注意ください。)  
 
 Windows の OneDrive とファイルを同期する  
@@ -127,7 +171,7 @@ SharePoint ライブラリを Internet Explorer で開くと、\[エクスプロ
 WebClient サービス用の認証情報の保存にはまもなくサポートを終了する Internet Explorer を利用する必要があることなどからも、新たに WebDAV パスでの利用を検討することは推奨しません。
 <br>
 
-### **e. 参照設定を Application.Run に変更する**
+### **f. 参照設定を Application.Run に変更する**
 参照設定で他のファイルの VBA プロシージャを呼び出している場合、参照設定を止め、以下のようにファイルを開いた上で Application.Run で実行することが検討できます。
 
 例: 
@@ -144,11 +188,13 @@ Application.Run "Ref.xlsm!SampleProc"
 ```
 <br>
 
-## **4. Microsoft 365 サービスへの認証とアクセス権**
+**<h2>4. Microsoft 365 サービスへの認証とアクセス権</h2>**
 対応方法のうち、引き続きマクロから Microsoft 365 サービス上のファイルへのアクセスを行う "a. Office ライブラリを用いて操作する" の場合、マクロが実行されている Office アプリケーションにサインインしているユーザーとして認証が行われます。このため、マクロ実行時の Office サインイン ユーザーに、マクロで操作するファイルへのアクセス権を付与する必要があります。
+
+Power Query や Graph API については独自に認証を行うため、上記の対応方法内に記載の資料をご参照ください。
 <br>
 
-## **5. サポートされる Office クライアント アプリケーション**
+**<h2>5. サポートされる Office クライアント アプリケーション</h2>**
 マクロからの操作においても、Microsoft 365 サービスとの接続がサポートされる Office クライアント アプリケーションがサポート対象です。サポートされる製品は、以下の公開情報でご確認ください。
 
 Office versions and connectivity to Microsoft 365 services  
