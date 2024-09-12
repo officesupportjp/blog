@@ -7,19 +7,19 @@
   
   <title>クリップボード アクセスの競合による Office でのコピー-貼り付け失敗 | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2024&#x2F;09&#x2F;12 Update・”2. 問題に直面するシナリオ” - “エクスプローラの [貼り付け] ボタン” に Windows 11 の動作を追記しました。・Microsoft 365 Apps の Excel で競合時のメッセージとその抑止方法を追記しました。     こんにちは、Office サポート チームの中村です。 Office アプリケーション上でコピーや">
+  <meta name="description" content="2024&#x2F;09&#x2F;12 Update・”2. 問題に直面するシナリオ” - “エクスプローラの [貼り付け] ボタン” に Windows 11 の動作を追記しました。・Microsoft 365 Apps の Excel で競合時のメッセージとその抑止方法を追記しました。 こんにちは、Office サポート チームの中村です。 Office アプリケーション上でコピーや貼り付け">
 <meta property="og:type" content="article">
 <meta property="og:title" content="クリップボード アクセスの競合による Office でのコピー-貼り付け失敗">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cl0m4xkl2003deovs5ntr794w/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="2024&#x2F;09&#x2F;12 Update・”2. 問題に直面するシナリオ” - “エクスプローラの [貼り付け] ボタン” に Windows 11 の動作を追記しました。・Microsoft 365 Apps の Excel で競合時のメッセージとその抑止方法を追記しました。     こんにちは、Office サポート チームの中村です。 Office アプリケーション上でコピーや">
+<meta property="og:description" content="2024&#x2F;09&#x2F;12 Update・”2. 問題に直面するシナリオ” - “エクスプローラの [貼り付け] ボタン” に Windows 11 の動作を追記しました。・Microsoft 365 Apps の Excel で競合時のメッセージとその抑止方法を追記しました。 こんにちは、Office サポート チームの中村です。 Office アプリケーション上でコピーや貼り付け">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkl2003deovs5ntr794w/image1.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkl2003deovs5ntr794w/image2.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkl2003deovs5ntr794w/image3.png">
 <meta property="og:image" content="https://officesupportjp.github.io/blog/cl0m4xkl2003deovs5ntr794w/M365Err.png">
 <meta property="article:published_time" content="2021-01-19T00:00:00.000Z">
-<meta property="article:modified_time" content="2024-09-12T06:44:39.130Z">
+<meta property="article:modified_time" content="2024-09-12T07:45:45.259Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="コピー＆ペースト">
 <meta name="twitter:card" content="summary">
@@ -119,9 +119,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><span style="color:#ff0000"><strong>2024&#x2F;09&#x2F;12 Update</strong></span><br><span style="color:#339966">・”2. 問題に直面するシナリオ” - “エクスプローラの [貼り付け] ボタン” に Windows 11 の動作を追記しました。<br>・Microsoft 365 Apps の Excel で競合時のメッセージとその抑止方法を追記しました。</span>  </p>
-<br>
-
+        <p><span style="color:#ff0000"><strong>2024&#x2F;09&#x2F;12 Update</strong></span><br><span style="color:#339966">・”2. 問題に直面するシナリオ” - “エクスプローラの [貼り付け] ボタン” に Windows 11 の動作を追記しました。<br>・Microsoft 365 Apps の Excel で競合時のメッセージとその抑止方法を追記しました。</span><br><br></p>
 <p>こんにちは、Office サポート チームの中村です。</p>
 <p>Office アプリケーション上でコピーや貼り付け操作を行ったときに、コピーしたはずのデータが貼り付けられなかったり、エラーが発生することがあります。これは、他のアプリケーションとのクリップボードへのアクセスが競合したことが原因である場合が非常に多いものとなります。このような原因でコピー・貼り付けに失敗する場合、基本的には再度コピーや貼り付けを行うしかありません。</p>
 <p>弊社サポートへのお問い合わせの中で、このような状況が避けられないことに疑問を持つ声を時折頂いていますので、今回の記事では、この仕組みを解説します。</p>
@@ -172,6 +170,11 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ActiveSheet.Range(&quot;B1&quot;).Copy</span><br><span class="line">ActiveSheet.Range(&quot;A1&quot;).Select</span><br><span class="line">ActiveSheet.Paste</span><br></pre></td></tr></table></figure>
 <p>変更後:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ActiveSheet.Range(&quot;A1&quot;).Value = ActiveSheet.Range(&quot;B1&quot;).Value</span><br></pre></td></tr></table></figure>
+<br>
+また、Excel の場合に、オートメーション処理中のみ競合を通知するメッセージを表示したくない場合は、コピー処理の実行前に Application.DisplayAlerts プロパティを False にすることでメッセージを抑止できます。(このメッセージだけでなく、Excel の様々なエラー、警告通知が無効になるためご注意ください。)  
+<br>
+
+<p>Application.DisplayAlerts プロパティ (Excel)<br><a target="_blank" rel="noopener" href="https://learn.microsoft.com/ja-jp/office/vba/api/excel.application.displayalerts">https://learn.microsoft.com/ja-jp/office/vba/api/excel.application.displayalerts</a><br><br></p>
 <p>今回の投稿は以上です。  </p>
 <p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>
 
