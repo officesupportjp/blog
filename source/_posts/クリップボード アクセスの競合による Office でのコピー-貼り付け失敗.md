@@ -10,7 +10,6 @@ tags:
 <span style="color:#ff0000">**2024/09/12 Update**</span>  
 <span style="color:#339966">・"2. 問題に直面するシナリオ" - "エクスプローラの [貼り付け] ボタン" に Windows 11 の動作を追記しました。  
 ・Microsoft 365 Apps の Excel で競合時のメッセージとその抑止方法を追記しました。</span>  
-
 <br>
 
 こんにちは、Office サポート チームの中村です。
@@ -152,7 +151,13 @@ ActiveSheet.Paste
 ```
 ActiveSheet.Range("A1").Value = ActiveSheet.Range("B1").Value
 ```
-  
+<br>
+また、Excel の場合に、オートメーション処理中のみ競合を通知するメッセージを表示したくない場合は、コピー処理の実行前に Application.DisplayAlerts プロパティを False にすることでメッセージを抑止できます。(このメッセージだけでなく、Excel の様々なエラー、警告通知が無効になるためご注意ください。)  
+<br>
+
+Application.DisplayAlerts プロパティ (Excel)  
+[https://learn.microsoft.com/ja-jp/office/vba/api/excel.application.displayalerts](https://learn.microsoft.com/ja-jp/office/vba/api/excel.application.displayalerts)
+<br>
 
 今回の投稿は以上です。  
   

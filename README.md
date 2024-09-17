@@ -3,6 +3,7 @@
 Go to the [blog site](https://officesupportjp.github.io/blog/).
 
 # Articles
+# Articles
 - [(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード](./source/_posts/(WebAPI)Microsoft%20Graph%20-%20OneDrive%20API%20(C%20Sharp)%20を使ったサンプル%20コード.md)
 - [(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード](./source/_posts/(WebAPI)Microsoft%20Graph%20–%20Excel%20REST%20API%20(C%20Sharp)%20を使い%20Range%20を操作するサンプル%20コード.md)
 - [(WebAPI)Microsoft Graph を使用した開発に便利なツール群](./source/_posts/(WebAPI)Microsoft%20Graph%20を使用した開発に便利なツール群.md)
@@ -99,11 +100,13 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [Office 開発におけるパフォーマンス トラブルシュート (その 1：概要と対処方法)](./source/_posts/Office%20開発におけるパフォーマンス%20トラブルシュート%20(その%201：概要と対処方法).md)
 - [Office 開発におけるパフォーマンス トラブルシュート (その 2：ボトルネックの特定)](./source/_posts/Office%20開発におけるパフォーマンス%20トラブルシュート%20(その%202：ボトルネックの特定).md)
 - [Office 開発に関するサポート対象外の構成でのトラブルシュート (切り分けの進め方)](./source/_posts/Office%20開発に関するサポート対象外の構成でのトラブルシュート%20(切り分けの進め方).md)
+- [Officeの更新プログラムの種類について](./source/_posts/Officeの更新プログラムの種類について.md)
 - [Officeソリューション開発時の開発環境のバージョン選定について](./source/_posts/Officeソリューション開発時の開発環境のバージョン選定について.md)
 - [OneDrive などのクラウド上の日本語パスに格納されたファイルからのリンク貼り付けでエラーが発生する](./source/_posts/OneDrive%20などのクラウド上の日本語パスに格納されたファイルからのリンク貼り付けでエラーが発生する.md)
 - [OneNote 2016 で全角入力から半角入力にすると「遊ゴシック」に切り替わる](./source/_posts/OneNote%202016%20で全角入力から半角入力にすると「遊ゴシック」に切り替わる.md)
 - [OneNote 2016 で背景に設定した画像が印刷時にずれる](./source/_posts/OneNote%202016%20で背景に設定した画像が印刷時にずれる.md)
 - [OneNote の OCR 機能で読み取りにくい文字列がある](./source/_posts/OneNote%20の%20OCR%20機能で読み取りにくい文字列がある.md)
+- [Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について](./source/_posts/Outlook%20や%20Word%20でテキスト%20ボックスのサイズ変更や移動が正しく行われない現象について.md)
 - [PowerPoint Online で日本語フォントが変更される](./source/_posts/PowerPoint%20Online%20で日本語フォントが変更される.md)
 - [PowerPoint でのカラー印刷について](./source/_posts/PowerPoint%20でのカラー印刷について.md)
 - [PowerShell の導入について](./source/_posts/PowerShell%20の導入について.md)
@@ -123,6 +126,7 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [Word 2016 からメールを送信すると文字化けする](./source/_posts/Word%202016%20からメールを送信すると文字化けする.md)
 - [Word 2016 の 2018 年 3 月 セキュリティ更新プログラム KB4011730 を適用すると、ファイルを開くまたは保存時にクラッシュする](./source/_posts/Word%202016%20の%202018%20年%203%20月%20セキュリティ更新プログラム%20KB4011730%20を適用すると、ファイルを開くまたは保存時にクラッシュする.md)
 - [Word for Mac での印刷時のカラー設定の表記差異について](./source/_posts/Word%20for%20Mac%20での印刷時のカラー設定の表記差異について.md)
+- [Word で「打」で始まるテキスト ファイルを開くとコンバーターを要求される](./source/_posts/Word%20で「打」で始まるテキスト%20ファイルを開くとコンバーターを要求される.md)
 - [Word での印刷で意図しない塗りつぶしが生じる](./source/_posts/Word%20での印刷で意図しない塗りつぶしが生じる.md)
 - [Word 文書内の図の位置がずれて印刷される現象について](./source/_posts/Word%20文書内の図の位置がずれて印刷される現象について.md)
 - [WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない](./source/_posts/WSFC%20継続的可用性%20(CA)%20が有効な共有フォルダーから%20Office%20ファイルが開けない.md)
@@ -153,5 +157,3 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [数式エディター 3.0 の機能削除について](./source/_posts/数式エディター%203.0%20の機能削除について.md)
 - [日本語入力中に Office アプリケーションが異常終了する場合がある現象について](./source/_posts/日本語入力中に%20Office%20アプリケーションが異常終了する場合がある現象について.md)
 - [暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する](./source/_posts/暗号化された%20Office%20ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの%20%localappdata%%20フォルダ配下%20Packages%20フォルダに%20oice_xx_xxxxxxxx_xxxxxxxx_xxxx%20フォルダが残存する.md)
-
-
