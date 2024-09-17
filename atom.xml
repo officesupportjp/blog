@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2024-09-12T04:35:59.549Z</updated>
+  <updated>2024-09-17T04:15:27.228Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word で「打」で始まるテキスト ファイルを開くとコンバーターを要求される</title>
+    <link href="https://officesupportjp.github.io/blog/cm15ufuis0000f0seec0i7yev/"/>
+    <id>https://officesupportjp.github.io/blog/cm15ufuis0000f0seec0i7yev/</id>
+    <published>2024-09-17T00:00:00.000Z</published>
+    <updated>2024-09-17T04:15:27.228Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。<br>今回の記事では、Word でテキスト ファイルを開くとき、一部の内容においてコンバーターが要求される動作について説明します。<br><br></p><h4 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a><strong>1. 現象</strong></h4><p>以下の条件を満たすテキスト ファイルを Windows デスクトップ アプリの Word で開くと、「このファイルは新しいバージョンの Microsoft Word で作成されているため、このファイルを開くにはコンバーターが必要です。」というメッセージが表示されます。<br><br></p><p><img src="/blog/cm15ufuis0000f0seec0i7yev/msg.png"></p><p>&lt;ファイルの条件&gt;</p><ul><li>ファイル内容の先頭が Shift-JIS の「打」 (0x91C5) で始まること  </li><li>2 文字目以降に文字が続くこと (制御コードを含め、何らかのデータがあること)</li></ul><br><h4 id="2-原因"><a href="#2-原因" class="headerlink" title="2. 原因"></a><strong>2. 原因</strong></h4><p>多くのファイル形式では、先頭数バイトでそのファイル形式を表します。このため Word でファイルを開くとき、ファイルのバイナリ データの先頭数バイトを元にファイル形式を判断しています。<br>しかし、テキスト ファイルではこのようなデータ部を持たないため、ユーザーがファイルに入力したテキスト情報を、ファイルの先頭バイトから格納します。<br>「打」を Shift-JIS でエンコードした場合の 0x91C5 で始まり、3 バイト目以降にデータが続くと、Word はテキスト ファイルとは別のファイル形式と認識します。この Word で認識されたファイル形式は、現在サポートされる Word デスクトップ アプリで開くことができない形式のため、Word はコンバーターが必要と判断し、先述のメッセージを表示します。  </p><p>「打」で始まるテキスト ファイルにおけるこの動作は、Windows デスクトップ アプリの Word における制限事項です。<br><br></p><h4 id="3-対応方法"><a href="#3-対応方法" class="headerlink" title="3. 対応方法"></a><strong>3. 対応方法</strong></h4><h5 id="3-1-ユーザーの手動操作でファイルを開く場合"><a href="#3-1-ユーザーの手動操作でファイルを開く場合" class="headerlink" title="3-1. ユーザーの手動操作でファイルを開く場合"></a><strong>3-1. ユーザーの手動操作でファイルを開く場合</strong></h5><p>「このファイルは新しいバージョンの Microsoft Word で作成されているため、このファイルを開くにはコンバーターが必要です。」のメッセージで [いいえ] を選択し、次に表示される以下のメッセージで [OK] を選択すると、テキスト ファイルとして開くことができます。</p><p><img src="/blog/cm15ufuis0000f0seec0i7yev/msg2.png"><br><br></p><h5 id="3-2-プログラムからの操作でファイルを開く場合"><a href="#3-2-プログラムからの操作でファイルを開く場合" class="headerlink" title="3-2. プログラムからの操作でファイルを開く場合"></a><strong>3-2. プログラムからの操作でファイルを開く場合</strong></h5><p>VBA などのプログラムでテキスト ファイルを開く場合は、Documents.Open メソッドの Format パラメーターに wdOpenFormatText を指定して明示的にテキスト ファイルとして開きます。この場合、コンバーターを要求するメッセージの表示を回避し、初めからテキスト ファイルとして開きます。</p><p>Documents.Open メソッド (Word)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open">https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open</a></p><p>&lt;公開情報より抜粋&gt;<br><em>Format オプション バリアント型 (Variant)<br>文書を開くために使用するファイル コンバーターを指定します。 WdOpenFormat 定数のいずれかを使用できます。 既定値は wdOpenFormatAuto です。 外部のファイル形式を指定するには、 FileConverter オブジェクトに OpenFormat プロパティを適用して、この引数で使用する値を決定します。</em></p><p>WdOpenFormat 列挙 (Word)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Word.WdOpenFormat">https://learn.microsoft.com/ja-jp/office/vba/api/Word.WdOpenFormat</a></p><p>&lt;公開情報より抜粋&gt;<br><em>wdOpenFormatText4エンコードされていないテキスト形式</em><br><br></p><h5 id="3-3-ファイルの保存時に対処する場合"><a href="#3-3-ファイルの保存時に対処する場合" class="headerlink" title="3-3. ファイルの保存時に対処する場合"></a><strong>3-3. ファイルの保存時に対処する場合</strong></h5><p>テキスト ファイルの文字コードを変更して問題なければ、Shift-JIS ではなく UTF-8 など他の文字コードで保存することで回避できます。このときに、開かれたファイルが期待する文字コードで認識されない場合は、ファイルを開くときの以下の画面や、プログラムから開く場合は Documents.Open の Encoding パラメーターで文字コードを変更できます (例えば、UTF-8 の場合は msoEncodingUTF8 を指定します)。</p><p><img src="/blog/cm15ufuis0000f0seec0i7yev/CharcodeSelect.png"></p><p>Documents.Open メソッド (Word)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open">https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open</a></p><p>&lt;公開情報より抜粋&gt;<br><em>Encoding オプション バリアント型 (Variant)<br>保存された文書を表示するときに Microsoft Word で使用する、文書のエンコード (コード ページまたは文字セット) を指定します。 使用できる定数は、有効な MsoEncoding クラスの定数です。 有効な MsoEncoding クラスの定数の一覧については、Visual Basic Editor のオブジェクト ブラウザーを参照してください。 既定値はシステム コード ページです。</em></p><p>MsoEncoding 列挙 (Office)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Office.MsoEncoding">https://learn.microsoft.com/ja-jp/office/vba/api/Office.MsoEncoding</a></p><br><p>今回の投稿は以上です。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;br&gt;今回の記事では、Word でテキスト ファイルを開くとき、一部の内容においてコンバーターが要求される動作について説明します。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-現象&quot;&gt;&lt;a href=&quot;#1-現象&quot; c</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+  </entry>
   
   <entry>
     <title>Officeの更新プログラムの種類について</title>
@@ -459,29 +482,6 @@
     <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
     
     <category term="セキュリティ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PowerPoint でのカラー印刷について</title>
-    <link href="https://officesupportjp.github.io/blog/cl8ntfhk30000246y446z0u65/"/>
-    <id>https://officesupportjp.github.io/blog/cl8ntfhk30000246y446z0u65/</id>
-    <published>2022-09-30T00:00:00.000Z</published>
-    <updated>2022-10-06T07:31:23.172Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、PowerPoint でカラー印刷に対応したプリンターに印刷をする際の色の設定について説明します。</p><h2 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h2><p>PowerPoint では印刷時に “カラー”、”グレースケール”、”単純白黒” のいずれかの設定を選んで印刷することができます。</p><p><img src="/blog/cl8ntfhk30000246y446z0u65/image1.png"></p><p>PowerPoint の既定の設定では、プリンター ドライバーの既定の設定よりも PowerPoint で印刷時に選択した設定が優先されて印刷されます。<br>プリンターから印刷された印刷結果が、PowerPoint で印刷時に選択した設定ではなく、プリンター ドライバーの既定の設定となって印刷される場合、以下のレジストリ値が設定されている可能性があります。<br><br><br><br></p><p>キー</p><p>HKEY_CURRENT_USER\Software\Microsoft\Office&lt;以下参照&gt;\PowerPoint</p><p>Office 2013 の場合 : 15.0<br>Office 2016、2019、2021、Microsoft 365 Apps の場合 : 16.0</p><p>値の名前 : IgnoreDevModeColor<br>値の種類 : REG_DWORD<br>設定されている値 : 1</p><p>レジストリ値が 1 でセットされている場合の動作としては、以下のようになります。</p><p>プリンターの既定設定 : カラー<br>PowerPoint の設定 : 単純白黒</p><p>印刷結果 : カラー</p><p>なお、本レジストリ値は、Office 製品をインストールした既定の状態では設定されていません。</p><p>PowerPoint からの印刷で色の設定が期待通りに動作しない場合、こちらの設定がされていないかご確認をお願いいたします。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、PowerPoint でカラー印刷に対応したプリンターに印刷をする際の色の設定について説明します。&lt;/p&gt;
-&lt;h2 id=&quot;事象の詳細&quot;&gt;&lt;a href=&quot;#事象の詳細&quot; class=&quot;headerlin</summary>
-      
-    
-    
-    
-    
-    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
     
   </entry>
   
