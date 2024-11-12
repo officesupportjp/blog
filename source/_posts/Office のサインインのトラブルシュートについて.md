@@ -1,7 +1,7 @@
 ---
 title: Officeのサインインのトラブルシュートについて
 date: '2020-07-09'
-lastupdate: '2023-08-14'
+lastupdate: '2024-11-12'
 id : clla7sav30001akkj8j1m1u3f
 tags:
   - サインイン、認証
@@ -106,6 +106,7 @@ Add-AppxPackage -Register "C:\Windows\SystemApps\Microsoft.Windows.CloudExperien
 $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-aad2292ab01c")) }
 ```
 
+
 <br>
 
 **\- 関連情報**
@@ -121,6 +122,8 @@ $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-a
 [Microsoft 365 サービスに接続しようとしたときの Office アプリケーションの認証の問題を修正します](https://learn.microsoft.com/ja-jp/microsoft-365/troubleshoot/authentication/automatic-authentication-fails)
 
 [テナントの移行後、OneDrive for Business を同期できない](https://learn.microsoft.com/ja-jp/sharepoint/troubleshoot/sync/cant-sync-after-migration)
+
+[OfficeLogCollect.zip](OfficeLogCollect.zip) 
 
 <br>
 
