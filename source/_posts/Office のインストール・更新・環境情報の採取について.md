@@ -19,7 +19,7 @@ Office のインストール・更新・環境情報の採取
    **※重要※ インストール、更新に関する調査では、本手順を実施しない場合、調査が出来ず、採取し直しとなります**
 
 
-2. [MSOfficeinfo.zip](MSOfficeinfo.zip) をダウンロードします。
+2. [MSOfficeinfo.zip](MSOfficeinfo_v1.9.zip) をダウンロードします。
 
 3. MSOfficeinfo.zip のプロパティを開き、以下で "許可する"にチェックをつけます。
 ![](image1.png)
