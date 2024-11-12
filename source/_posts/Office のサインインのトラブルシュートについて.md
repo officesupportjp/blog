@@ -8,7 +8,7 @@ tags:
 
 ---
 
-こんにちは、Office サポートの西川 (直) です。
+こんにちは、Office サポートの西川 (直) です。 
 
 特定のユーザーだけ Office のサインインが成功しないとお問い合わせいただくことがございます。
 この場合、[Microsoft 365 Apps for enterprise のライセンス認証の状態をリセットする](https://docs.microsoft.com/ja-jp/office/troubleshoot/activation/reset-office-365-proplus-activation-state) の内容にて解消する可能性がございます。
