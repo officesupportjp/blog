@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2024-11-12T12:22:50.567Z</updated>
+  <updated>2024-11-12T12:24:02.544Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/"/>
     <id>https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/</id>
     <published>2024-11-12T00:00:00.000Z</published>
-    <updated>2024-11-12T12:22:50.567Z</updated>
+    <updated>2024-11-12T12:24:02.544Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><br><h2 id="Office-のインストール・更新・環境情報の採取"><a href="#Office-のインストール・更新・環境情報の採取" class="headerlink" title="Office のインストール・更新・環境情報の採取"></a>Office のインストール・更新・環境情報の採取</h2><ol><li><p>インストール、更新に関する調査の場合、C:\Windows\Temp をエクスプローラーで開き、このフォルダの中身が閲覧できる状態であることを確認します。<br>そして、管理者権限が求められる場合、管理者権限を入力します。<br><strong>※重要※ インストール、更新に関する調査では、本手順を実施しない場合、調査が出来ず、採取し直しとなります</strong></p></li><li><p><a href="MSOfficeinfo.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.cmd.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_temp に出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。<br>※ C:\MS_temp フォルダが既に存在する場合、先にファイルを退避してください。</p></li><li><p>ライセンス認証に関連する事象の場合、<a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">こちら</a> をダウンロードし、licenseInfo.cmd をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li></ol><p><strong>取得した以下の情報を弊社にお寄せください</strong></p><p>・C:\MS_temp を zip で圧縮したファイル<br>・サインイン、ライセンス認証に関連する事象の場合、%temp% に出力された licensingInfo から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><br><h2 id="Office-のインストール・更新・環境情報の採取"><a href="#Office-のインストール・更新・環境情報の採取" class="headerlink" title="Office のインストール・更新・環境情報の採取"></a>Office のインストール・更新・環境情報の採取</h2><ol><li><p>インストール、更新に関する調査の場合、C:\Windows\Temp をエクスプローラーで開き、このフォルダの中身が閲覧できる状態であることを確認します。<br>そして、管理者権限が求められる場合、管理者権限を入力します。<br><strong>※重要※ インストール、更新に関する調査では、本手順を実施しない場合、調査が出来ず、採取し直しとなります</strong></p></li><li><p><a href="MSOfficeinfo_v1.9.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.cmd.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_temp に出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。<br>※ C:\MS_temp フォルダが既に存在する場合、先にファイルを退避してください。</p></li><li><p>ライセンス認証に関連する事象の場合、<a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">こちら</a> をダウンロードし、licenseInfo.cmd をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li></ol><p><strong>取得した以下の情報を弊社にお寄せください</strong></p><p>・C:\MS_temp を zip で圧縮したファイル<br>・サインイン、ライセンス認証に関連する事象の場合、%temp% に出力された licensingInfo から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
     
     
       
