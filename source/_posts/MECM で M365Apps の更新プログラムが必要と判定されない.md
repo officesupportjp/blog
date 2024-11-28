@@ -1,7 +1,7 @@
 ---
 title: MECM で M365Apps の更新プログラムが必要と判定されない
 date: '2023-12-26'
-lastupdate: '2024-03-04'
+lastupdate: '2024-11-28'
 id: clqm07fq300005kkj5ww5bp4a
 tags:
   - 更新
@@ -95,6 +95,16 @@ UnmanagedUpdateUrl レジストリを削除していただくか、優先度 2 �
 **MECM から更新しているのに、優先度4 の UnmanagedUpdateUrl レジストリが設定されているのはなぜですか？**
 [方法3](https://learn.microsoft.com/ja-jp/deployoffice/updates/manage-microsoft-365-apps-updates-configuration-manager#enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager) の Office 展開ツールでのインストール時に OfficeMgmtCOM を True で設定していない場合、端末に MECM から更新する設定が反映される前に M365Apps の自動更新が動作した可能性があります。
 
+**MECM から更新したいのに、Office CDN から更新されてしまいます**
+[クラウド更新](https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/cloud-update) が有効になっている可能性がございます。
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\cloud\office\16.0\Common\officeupdate\IgnoreGPO` が 1 の場合、全ての更新設定よりクラウド更新が優先されます。
+
+[クラウド更新](https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/cloud-update) が不要な場合、[Microsoft 365 Apps 管理センター](https://config.office.com/) において、クラウド更新に進みます。
+もし、クラウド更新が有効となっていない場合、有効化しないでください。
+クラウド更新が有効な場合、各チャネルの設定 - クラウド更新のレビュー において、"クラウド更新を通じて管理を非アクティブ化できます" をクリックしてください。フォームの入力画面が表示されますので、記載を進めて送信してください。
+
+そして、即座に反映させるため、GPO 等にて、`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\cloud\office\16.0\Common\officeupdate\IgnoreGPO` を DWORD の 0 に指定して配布してください。
+
 
 **COM IF のレジストリキーが作成されません**
 何らかの影響により、端末で COM 登録が行えていない可能性があります。
@@ -136,5 +146,8 @@ OS 観点で調査が必要であると考えられます。
 
 <span style="color:#ff0000">**2024/3/4  Update**</span>  
 <span style="color:#339966">一部記載を修正しました</span>
+
+<span style="color:#ff0000">**2024/11/28  Update**</span>  
+<span style="color:#339966">クラウド更新について追記しました</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
