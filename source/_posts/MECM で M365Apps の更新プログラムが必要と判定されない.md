@@ -105,7 +105,6 @@ UnmanagedUpdateUrl レジストリを削除していただくか、優先度 2 �
 
 そして、即座に反映させるため、GPO 等にて、`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\cloud\office\16.0\Common\officeupdate\IgnoreGPO` を DWORD の 0 に指定して配布してください。
 
-
 **COM IF のレジストリキーが作成されません**
 何らかの影響により、端末で COM 登録が行えていない可能性があります。
 
