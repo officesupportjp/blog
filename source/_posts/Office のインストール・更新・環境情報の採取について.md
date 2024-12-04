@@ -17,11 +17,11 @@ Office のインストール・更新・環境情報の採取
 1. インストール、更新に関する調査の場合、C:\Windows\Temp をエクスプローラーで開き、このフォルダの中身が閲覧できる状態であることを確認します。管理者権限が求められる場合、管理者権限を入力します。 <span style="color:#ff0000">**※重要※ インストール、更新に関する調査では、本手順を実施しない場合、正しくログ採取が出来ず、採取し直しとなります**</span>
 
 
-2. [MSOfficeinfo.zip](MSOfficeinfo_v2.0.zip) をダウンロードします。
+2. [MSOfficeinfo.zip](MSOfficeinfo_v2.1.zip) をダウンロードします。
 
 3. MSOfficeinfo.zip のプロパティを開き、以下で "許可する"にチェックをつけます。
 ![](image1.png)
-4. MSOfficeinfo.zip を解凍し、MSOfficeinfo.cmd.txt の拡張子を .cmd に変更します。
+4. MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。
 
 5. MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_temp に出力されます。
 ※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。
