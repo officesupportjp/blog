@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2024-12-04T07:24:16.923Z</updated>
+  <updated>2024-12-23T02:24:21.776Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word で表のレイアウトが変わる</title>
+    <link href="https://officesupportjp.github.io/blog/cm4m8fp9y0009346y3p6tg4s6/"/>
+    <id>https://officesupportjp.github.io/blog/cm4m8fp9y0009346y3p6tg4s6/</id>
+    <published>2024-12-12T15:00:00.000Z</published>
+    <updated>2024-12-23T02:24:21.776Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Word で表のレイアウトが変わる現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Apps、及び、製品版のOffice 2021&#x2F;2024 を以下のバージョンへ更新した後に、更新前のバージョンで作成した Word 文書内の表のレイアウトが変わる現象が発生する場合があります。</p><p>・バージョン 2409 (ビルド 18025.XXXXX) 以降</p><p>現象発生前の表のイメージ：<br><img src="/blog/cm4m8fp9y0009346y3p6tg4s6/image01.png"></p><p>現象発生後の表のイメージ：<br><img src="/blog/cm4m8fp9y0009346y3p6tg4s6/image02.png"></p><p><strong>対象製品:</strong><br>Microsoft 365 Apps<br>Office 2021 製品版<br>Office 2024 製品版<br>※ Office 2021 ボリュームライセンス版、及び、Office 2024 ボリュームライセンス版では発生しません。</p><h3 id="2-今後の対応予定"><a href="#2-今後の対応予定" class="headerlink" title="2. 今後の対応予定"></a>2. 今後の対応予定</h3><p>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Word で表のレイアウトが変わる現象について説明します。&lt;/p&gt;
+&lt;h3 id=&quot;1-現象&quot;&gt;&lt;a href=&quot;#1-現象&quot; class=&quot;headerlink&quot; title=&quot;1. 現象&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+  </entry>
   
   <entry>
     <title>Office のインストール・更新・環境情報の採取について</title>
@@ -462,29 +485,6 @@
     
     
     <category term="SDI" scheme="https://officesupportjp.github.io/blog/tags/SDI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Word での印刷で意図しない塗りつぶしが生じる</title>
-    <link href="https://officesupportjp.github.io/blog/cla7qogkl006pa0jo434segs3/"/>
-    <id>https://officesupportjp.github.io/blog/cla7qogkl006pa0jo434segs3/</id>
-    <published>2022-11-08T00:00:00.000Z</published>
-    <updated>2023-01-11T07:22:29.308Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Word で文書を印刷した際、編集画面や印刷プレビューでの表示とは異なり、画像データの一部が塗りつぶされた状態で印刷されてしまう現象について説明します。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Word 文書に以下のような構成の画像データを貼り付けて印刷した場合、編集時や印刷プレビューでは白もしくはグレー等の色で表示されている箇所がすべて塗りつぶされた状態で印刷されてしまう場合があります。</p><p>  ・EMF 形式のデータで構成される画像データを貼り付けている。<br>  ・EMF 形式のデータ内で、透過処理を行ったビットマップが使用されている。</p><p>例えば黒色の矩形のビットマップを透過処理にてグレーに見えるように表示させている画像データが貼られている Word 文書を印刷した時、画像データの当該箇所が黒で塗りつぶされた状態で印刷されてしまう場合があります。</p><h2 id="回避方法"><a href="#回避方法" class="headerlink" title="回避方法"></a>回避方法</h2><p>上記の要因で発生している現象につきましては、ご使用のプリンター ドライバーの設定でスプール ファイルの形式を変更可能であれば EMF スプール形式を選択いただくことで、現象を回避できる場合があります。<br>具体的な設定方法はプリンター ドライバーごとに異なりますので、各プリンター ドライバーのヘルプ等を参照くださいますようお願いいたします。</p><p>プリンター ドライバーの設定でスプール ファイルの形式を変更できないプリンターの場合は、以下のような手順で問題が発生する画像データをコピーしてビットマップとして貼り付けなおすことで現象を回避できる場合があります。なお、この手順の場合、印刷結果として出力される画像の変更前と比較して精度が低くなる可能性がございます。</p><p>ビットマップ形式で貼り付けなおす手順の例</p><ol><li>あらかじめオリジナルのファイルをコピーするなどしてバックアップしておきます。</li><li>Word で当該ファイルを開きます。</li><li>問題の生じる画像データを右クリックし、[切り取り] メニューを選択します。</li><li>Word の [ホーム] タブ内の [貼り付け] ボタン下の矢印をクリックして [貼り付けのオプション] より [形式を選択して貼り付け] を選択します。</li><li>「形式を選択して貼り付け」 ダイアログで [ビットマップ] を選択して OK を押して貼り付けます。</li><li>貼り付けられた画像データを確認し、別名を付けて保存します。</li></ol><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Word で文書を印刷した際、編集画面や印刷プレビューでの表示とは異なり、画像データの一部が塗りつぶされた状態で印刷されてしまう現象について説明します。&lt;/p&gt;
-&lt;h2 id=&quot;現象&quot;&gt;&lt;a href=&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
     
   </entry>
   
