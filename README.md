@@ -1,7 +1,3 @@
-# Japan Office Client Support Blog
-
-Go to the [blog site](https://officesupportjp.github.io/blog/).
-
 # Articles
 - [(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード](./source/_posts/(WebAPI)Microsoft%20Graph%20-%20OneDrive%20API%20(C%20Sharp)%20を使ったサンプル%20コード.md)
 - [(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード](./source/_posts/(WebAPI)Microsoft%20Graph%20–%20Excel%20REST%20API%20(C%20Sharp)%20を使い%20Range%20を操作するサンプル%20コード.md)
@@ -63,6 +59,7 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [Office Online と Office デスクトップ アプリケーションの機能差異に関する情報](./source/_posts/Office%20Online%20と%20Office%20デスクトップ%20アプリケーションの機能差異に関する情報.md)
 - [Office Viewer 製品の提供終了について](./source/_posts/Office%20Viewer%20製品の提供終了について.md)
 - [Office で利用するプロキシ設定について](./source/_posts/Office%20で利用するプロキシ設定について.md)
+- [Office のインストール・更新・環境情報の採取について](./source/_posts/Office%20のインストール・更新・環境情報の採取について.md)
 - [Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について](./source/_posts/Office%20のサインインでネットワーク接続がない旨のメッセージが表示される事象について.md)
 - [Officeのサインインのトラブルシュートについて(旧)](./source/_posts/Office%20のサインインのトラブルシュートについて(旧).md)
 - [Officeのサインインのトラブルシュートについて](./source/_posts/Office%20のサインインのトラブルシュートについて.md)
@@ -128,6 +125,7 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [Word for Mac での印刷時のカラー設定の表記差異について](./source/_posts/Word%20for%20Mac%20での印刷時のカラー設定の表記差異について.md)
 - [Word で「打」で始まるテキスト ファイルを開くとコンバーターを要求される](./source/_posts/Word%20で「打」で始まるテキスト%20ファイルを開くとコンバーターを要求される.md)
 - [Word での印刷で意図しない塗りつぶしが生じる](./source/_posts/Word%20での印刷で意図しない塗りつぶしが生じる.md)
+- [Word で表のレイアウトが変わる](./source/_posts/Word%20で表のレイアウトが変わる.md)
 - [Word 文書内の図の位置がずれて印刷される現象について](./source/_posts/Word%20文書内の図の位置がずれて印刷される現象について.md)
 - [WSFC 継続的可用性 (CA) が有効な共有フォルダーから Office ファイルが開けない](./source/_posts/WSFC%20継続的可用性%20(CA)%20が有効な共有フォルダーから%20Office%20ファイルが開けない.md)
 - [“Microsoft Barcode Control” について](./source/_posts/“Microsoft%20Barcode%20Control”%20について.md)
@@ -151,10 +149,10 @@ Go to the [blog site](https://officesupportjp.github.io/blog/).
 - [ボリュームライセンス版 Visio 2016 と Microsoft 365 Apps を共存インストールする方法について](./source/_posts/ボリュームライセンス版%20Visio%202016%20と%20Microsoft%20365%20Apps%20を共存インストールする方法について.md)
 - [ボリュームライセンス版 Visio 2019、Project 2019 または Visio 2021、Project 2021 と Microsoft 365 Apps を共存インストールする方法について](./source/_posts/ボリュームライセンス版%20Visio%202019、Project%202019%20または%20Visio%202021、Project%202021%20と%20Microsoft%20365%20Apps%20を共存インストールする方法について.md)
 - [モバイル版の Office のトラブルシューティングについて](./source/_posts/モバイル版の%20Office%20のトラブルシューティングについて.md)
+- [ラベル ポリシー「ユーザーがメールとドキュメントにラベルを適用することを必須にする」が有効の場合 Excel アドイン (.xlam) 保存時にラベル適用が求められ保存できない](./source/_posts/ラベル%20ポリシー「ユーザーがメールとドキュメントにラベルを適用することを必須にする」が有効の場合%20Excel%20アドイン%20(.xlam)%20保存時にラベル適用が求められ保存できない.md)
 - [信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)(旧)](./source/_posts/信頼済みドキュメントに関するコンテンツ%20ブロックメッセージの説明%20(MC302216)(旧).md)
 - [信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)](./source/_posts/信頼済みドキュメントに関するコンテンツ%20ブロックメッセージの説明%20(MC302216).md)
 - [必要なサービスが無効になっていますと表示される現象について](./source/_posts/必要なサービスが無効になっていますと表示される現象について.md)
 - [数式エディター 3.0 の機能削除について](./source/_posts/数式エディター%203.0%20の機能削除について.md)
 - [日本語入力中に Office アプリケーションが異常終了する場合がある現象について](./source/_posts/日本語入力中に%20Office%20アプリケーションが異常終了する場合がある現象について.md)
 - [暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する](./source/_posts/暗号化された%20Office%20ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの%20%localappdata%%20フォルダ配下%20Packages%20フォルダに%20oice_xx_xxxxxxxx_xxxxxxxx_xxxx%20フォルダが残存する.md)
-
