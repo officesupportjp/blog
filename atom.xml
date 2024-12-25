@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2024-12-13T04:31:02.815Z</updated>
+  <updated>2024-12-25T07:52:36.663Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ラベル ポリシー「ユーザーがメールとドキュメントにラベルを適用することを必須にする」が有効の場合 Excel アドイン (.xlam) 保存時にラベル適用が求められ保存できない</title>
+    <link href="https://officesupportjp.github.io/blog/cm53l15yg0000j46y7a4s6u9f/"/>
+    <id>https://officesupportjp.github.io/blog/cm53l15yg0000j46y7a4s6u9f/</id>
+    <published>2024-12-24T15:00:00.000Z</published>
+    <updated>2024-12-25T07:52:36.663Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の投稿では、Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、Excel アドイン (*.xlam) 編集後保存時にラベル適用を求められ保存ができない現象について説明します。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Microsoft Information Protection が構成されており、ラベル ポリシーの [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、ラベル付けされていないドキュメントを開くと、”必須ラベル付け” によってユーザー操作によるラベルの付与を強制するプロンプトが表示されます。<br>そのため、通常のユーザー利用シナリオにおいて、ラベルの付与が行われていないドキュメントを保存しようとした、または、ラベルが適用されていないドキュメントを操作した場合などにおいて、プロンプトが繰り返し表示されることが想定されます。</p><p>また、ラベル付けの処理が組み込まれていないマクロや RPA の処理が実行された場合、ラベルが適用されていないドキュメントを操作した場合も “必須ラベル付け” のプロンプトが表示される可能性があります。<br>これにより Microsoft Information Protection ラベル ポリシーに依存し、ファイル形式によっては Microsoft 365 Apps にて保存ができないケースが確認されています。</p><br><h2 id="再現条件"><a href="#再現条件" class="headerlink" title="再現条件"></a>再現条件</h2><p>以下の構成を全て満たす場合、”必須ラベル付け” のプロンプトが表示され Microsoft 365 Apps にてファイルを保存することができません。</p><ul><li>Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効に設定されている</li><li>Microsoft Information Protectionラベル ポリシー [既存のドキュメントに既定のラベルを適用する] が設定されていない</li><li>Microsoft 365 Apps で Excel アドイン形式 (<em>.xlam) のファイルを開く、かつ、Excel アドイン形式 (</em>.xlam) にラベルが未設定である</li></ul><br><h2 id="再現手順の例"><a href="#再現手順の例" class="headerlink" title="再現手順の例"></a>再現手順の例</h2><ol><li>Excel アプリを起動し、[ファイル]-[開く] から、ラベルが付与されていない Excel アドイン形式 (<em>.xlam) のファイルを開きます。<br>※ Excel アドイン形式 (</em>.xlam) のファイルは、ファイルを開いても、ワークシートが表示されないことにご留意ください。</li><li>Alt + F12 キーを押下し、Visual Basic Editor を起動します。</li><li>Visual Basic Editor で、任意の編集を加えます。例えば、ThisWorkbookに下記コードを追加します。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    Debug.Print &quot;Test&quot;</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure><ol start="4"><li>Visual Basic Editor 画面で保存ボタンをクリックします。</li></ol><br><h4 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h4><p>ラベルの適用を求めるプロンプトが表示されます。<br>[ラベルの選択] ボタンをクリックしても、ラベル選択のダイアログが表示されないため、このユーザー インターフェースからラベルを設定することはできません。<br>このため、Visual Basic Editor 画面で行った変更内容は保存することができません。</p><p><img src="/blog/cm53l15yg0000j46y7a4s6u9f/image0.png"></p><br><h2 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a>回避策</h2><p>以下いずれかの方法による対応をご検討いただきますようお願いいたします。</p><p>(a). Microsoft Information Protectionラベル ポリシー [既存のドキュメントに既定のラベルを適用する] で暗号化を含まないラベルを設定する</p><p>あるいは</p><p>(b). VBA マクロにて、暗号化を含まないラベルを設定する</p><br><h4 id="b-の設定手順例"><a href="#b-の設定手順例" class="headerlink" title="(b). の設定手順例"></a>(b). の設定手順例</h4><p>本手順は一度実行していただければ結構です。設定したラベルを削除しない限り、毎回実行する必要はございません。</p><ol><li>Excel アプリを起動し、ラベルが付与されていない Excel アドイン形式 (<em>.xlam) のファイルを開きます。<br>※ Excel アドイン形式 (</em>.xlam) のファイルは、ファイルを開いても、ワークシートは表示されないことにご留意ください。</li><li>Alt + F12 キーを押下し、Visual Basic Editor を起動します。</li><li>Visual Basic Editor で、以下のコードを追加したら、F5 キーを押下してマクロ実行します。<br>※ “&lt;暗号化設定のないラベルの GUID&gt;” は、お客様の環境で作成済みの暗号化設定のないラベルの GUID を指定してください。<br>※ 暗号化設定を含むラベルは設定しないでください。暗号化設定を含むラベルを設定すると、Excel アドイン形式 (*.xlam) として使用できません。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Sub Sample()</span><br><span class="line">Dim mysensitivityLabel As Office.SensitivityLabel</span><br><span class="line">Dim myLabelInfo As Office.LabelInfo</span><br><span class="line"></span><br><span class="line">    Set mysensitivityLabel = ThisWorkbook.SensitivityLabel  </span><br><span class="line">    Set myLabelInfo = ThisWorkbook.SensitivityLabel.CreateLabelInfo()</span><br><span class="line"></span><br><span class="line">        With myLabelInfo</span><br><span class="line">            .AssignmentMethod = MsoAssignmentMethod.PRIVILEGED</span><br><span class="line">            .LabelId = &quot;&lt;暗号化設定のないラベルの GUID&gt;&quot;</span><br><span class="line">        End With</span><br><span class="line"></span><br><span class="line">    mysensitivityLabel.SetLabel myLabelInfo, myLabelInfo</span><br><span class="line">End Sub</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="4"><li>Excel アドイン形式 (*.xlam) に暗号化設定のないラベルが設定できたら、Visual Basic Editor 画面で保存ボタンをクリックして保存を行います。</li><li>保存が完了したら、3. で追加したマクロ自体は削除して構いません。削除後は再度、Visual Basic Editor 画面で保存を行います。</li></ol><br><h2 id="今後の対応予定"><a href="#今後の対応予定" class="headerlink" title="今後の対応予定"></a>今後の対応予定</h2><p>本動作について、現在開発部門にて今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><br><h2 id="ご参考情報"><a href="#ご参考情報" class="headerlink" title="ご参考情報"></a>ご参考情報</h2><p>ラベル ポリシーにおいて “必須ラベル付け” を有効にする場合、併せて “既定のラベル” によってプロンプトの表示が抑制されることを公開情報によりご案内しております。<br>“既定のラベル” は、”必須ラベル付け” よりも常に優先されるため、最低限、すべてのドキュメントに既定のラベルが付与されます。<br>その結果、”必須ラベル付け” によって表示されるプロンプトを抑制することが可能です。</p><p>Title: 秘密度ラベルの詳細<br>URL: <a href="https://learn.microsoft.com/ja-jp/purview/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do">https://learn.microsoft.com/ja-jp/purview/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do</a></p><blockquote><p>項目 [ラベル ポリシーでできること] &gt; [ドキュメントとメール、文書のみ、コンテナー、および Power BI コンテンツに ラベルを適用することをユーザーに要求します。] をご参照ください \</p><blockquote><p>このオプションを使用して、ラベル付けの適用範囲を広げることを検討してください。 ただし、ユーザーのトレーニングを実施しない場合、この設定は不正確なラベル付けにつながる可能性があります。 さらに、対応する既定のラベルも設定しない限り、必須のラベル付けにより頻繁にダイアログが表示され、ユーザーを苛立たせる可能性があります。</p></blockquote></blockquote><p>Title: Office アプリで秘密度ラベルを管理する<br>URL: <a href="https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-office-apps?view=o365-worldwide#require-users-to-apply-a-label-to-their-email-and-documents">https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-office-apps?view=o365-worldwide#require-users-to-apply-a-label-to-their-email-and-documents</a></p><blockquote><p>項目 [ユーザーがメールとドキュメントにラベルを適用することを必須にする] をご参照ください \</p><blockquote><p>既定のラベルは、必須のラベル付けよりも常に優先されます。</p></blockquote></blockquote><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の投稿では、Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、Excel アドイン (*.xla</summary>
+      
+    
+    
+    
+    
+    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
+    
+    <category term="Office 開発全般" scheme="https://officesupportjp.github.io/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/"/>
+    
+    <category term="アドイン" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>Word で表のレイアウトが変わる</title>
@@ -458,33 +484,6 @@
     
     
     <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Office プロセスを自プログラム専用にする方法</title>
-    <link href="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/"/>
-    <id>https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/</id>
-    <published>2022-12-26T00:00:00.000Z</published>
-    <updated>2023-02-07T07:57:41.444Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p><strong>2022&#x2F;12&#x2F;26 Update</strong><br>Microsoft 365 Apps での動作をベースに全体的に記事の構成を改訂しました。</p><hr><br><p>こんにちは、Office 開発 サポート チームです。</p><p><a href="https://officesupportjp.github.io/blog/cl0n10ddh000t90vsbpgv3r9l">前回の投稿</a>で Excel のプロセスを統合することについて記載しましたが、今回はこれに関連し、Office を操作するプログラムを開発するときに、プログラムから操作する Office プロセスを自分のプログラム専用にできるか、という話を記載します。<br><br></p><p>Office を操作するプログラム開発を行う際、プログラムの処理が行いやすいよう、Office アプリケーションのプロパティを変更したり、画面を非表示にすることがあります。このとき、プログラムから行うプロパティ設定や画面の状態を、ユーザーが開いている他の Office ファイルには反映させたくないといった理由から、「ユーザーが起動する Office とプログラムが起動する Office でプロセスを分けたい」というご相談を頂くことがあります。<br><br></p><p><strong><h4>実現方法</h4></strong><br><u>Excel</u><br>COM オートメーションで Office を起動してください。 (CreateObject や new、CoCreateInstance など)  </p><p><u>Word &#x2F; PowerPoint</u><br>このような動作を実現する方法はありません。</p><p><strong><h4>既定の動作</h4></strong><br>過去投稿で、Office では起動方法によって、既に起動されたプロセスがある場合には、これを利用して新しいファイルを開く動作となることをご紹介しています。  </p><p>過去の投稿)<br>タイトル : Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/">https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/</a></p><p>タイトル : Office のプロセス インスタンス制御について<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/">https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/</a></p><br><p><strong><h4>対応方法 1</h4></strong><br>過去投稿でご案内している Excel の &#x2F;x コマンドライン スイッチや DisableMergeInstance レジストリのように、アプリ起動時に新規プロセスで起動するよう変更できる起動方法も一部用意されています。このような仕組みを用いて、後からユーザーがファイルを開くときに、起動済みのプログラム用のプロセスで開かれることを、ある程度は防ぐことができます。  </p><p>しかし、このような構成を行っても、例えば以下のような方法で 2 つめの Office ファイルを開くと、既存プロセスで開かれます。 </p><ul><li>Offie ファイルをダブル クリックする</li><li>OLE 埋め込みオブジェクトとして埋め込まれた Office ファイルを開く</li><li>他の Office オートメーションを行うプログラムが Process.Start 等の方法で Office プログラムを起動してファイルを開く</li></ul><br><p><strong><h4>対応方法 2</h4></strong><br>Excel のみは、COM オートメーションでプロセスを起動すると、以下のどちらのシナリオでも、起動した Excel プロセスが既存プロセスにマージされるのを防ぐことができます。</p><ul><li>既にプロセスが存在する状態で COM オートメーションでプロセスを起動する</li><li>COM オートメーションでプロセスを起動した後、ユーザーが新たにアプリを起動したりファイルを開く<br></li></ul><p>ただし、プログラムから起動したプロセスの Excel 画面を表示状態にしてユーザー操作可能とする場合、その画面内の操作 ([ファイル] - [開く] など) でファイルを開く場合は、そのプロセス内で開きます。<br><br></p><p><strong><h4>補足</h4></strong><br>リモートデスクトップで複数のユーザーが 1 つの端末にログインして Office を利用する場合、ユーザー間でプロセスが統合されることはありません。ただし、これを利用して意図的にログインしていないユーザーで Office を起動するような動作は、Office のサポート外の構成となります (Office のサーバーサイド オートメーションと呼ばれる構成に該当します) 。Office の起動ユーザーは、必ずログインしているユーザーで行う必要があります。  </p><p>Office のサーバーサイド オートメーションについては、公開情報や本ブログの過去投稿でご案内しています。  </p><p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/257757">https://support.microsoft.com/ja-jp/kb/257757</a>  </p><p>タイトル : Office サーバー サイド オートメーションの危険性について<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/">https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/</a>  </p><br><p><strong><h4>図解</h4></strong><br>文章だけでは分かり辛い点もあるかと思いますので、以下に Excel の動作を例にどのような動作になるか、図を用いて説明します。Microsoft 365 Excel での既定の設定の場合を代表として解説します。Excel 以外のアプリでは動作が異なるため注意してください。<br><br></p><p>まず、以下に自分のプログラムが初めに Excel プロセスを起動した後、他の方法で Excel を利用する場合の動作を図解します。(ここで初めにプログラムからプロセスを起動するときは、Process.Start のように COM オートメーションではない方法での起動を想定しています。)</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image1.png">  </p><p>図 1. 自プログラム (Process.Start) → 他の方法</p><br><p>一方、&lt;対応方法 2&gt; に記載したように COM オートメーションでプロセスを起動した場合の図です。COM オートメーションで起動したプロセスには、他の操作によりファイルを開いた場合もマージされません。<br>※ ただし先述の通り、①で起動したプロセス内での操作で開くファイルは①のプロセスで開かれます。([開く] メニューからの操作や、OLE 埋め込みファイルを開く場合など)</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image4.png">  </p><p>図 2. 自プログラム (COM オートメーション) → 他の方法</p><br><p>次に、先にユーザー操作などですでに Excel プロセスを起動しているところに、自プログラムが Excel を起動した場合について図解します。</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image2.png">  </p><p>図 3. 他の方法 → 自プログラム</p><br><p>また、複数のプロセスが存在する場合の動作はさらに複雑です。以下の図に示す通り、既存プロセスに統合される場合にどちらのプロセスに統合されるかは、明確に決められておりません。</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image3.png">  </p><p>図 4. 複数プロセスが存在する場合</p><br><p>以上の通り、Excel では COM オートメーションにより、自プログラムから起動したプロセスを自身専用にすることができますが、Word や PowerPoint では実現できません。また、Excel でも設計によっては、Process.Start 等の起動方法の方が実装しやすい処理もあるかと思いますので、このような場合は、プロセスの専用化とのトレードオフが生じます。</p><p>プロセスのマージが生じるようなプログラムを設計する場合は、自ブログラムで起動する Office プロセスがユーザー操作や他のプログラムで起動されるプロセスと統合されても問題ない動作となるよう設計してください。<br><br></p><p>今回の投稿は以上です。<br><br></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;2022&amp;#x2F;12&amp;#x2F;26 Update&lt;/strong&gt;&lt;br&gt;Microsoft 365 Apps での動作をベースに全体的に記事の構成を改訂しました。&lt;/p&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;p&gt;こんにちは、Office 開発 サポート</summary>
-      
-    
-    
-    
-    
-    <category term="SDI" scheme="https://officesupportjp.github.io/blog/tags/SDI/"/>
     
   </entry>
   
