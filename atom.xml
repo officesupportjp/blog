@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2024-11-08T01:19:07.252Z</updated>
+  <updated>2025-01-16T05:27:57.642Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,84 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ラベル ポリシー「ユーザーがメールとドキュメントにラベルを適用することを必須にする」が有効の場合 Excel アドイン (.xlam) 保存時にラベル適用が求められ保存できない</title>
+    <link href="https://officesupportjp.github.io/blog/cm53l15yg0000j46y7a4s6u9f/"/>
+    <id>https://officesupportjp.github.io/blog/cm53l15yg0000j46y7a4s6u9f/</id>
+    <published>2024-12-24T15:00:00.000Z</published>
+    <updated>2025-01-16T05:27:57.642Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の投稿では、Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、Excel アドイン (*.xlam) 編集後保存時にラベル適用を求められ保存ができない現象について説明します。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Microsoft Information Protection が構成されており、ラベル ポリシーの [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、ラベル付けされていないドキュメントを開くと、”必須ラベル付け” によってユーザー操作によるラベルの付与を強制するプロンプトが表示されます。<br>そのため、通常のユーザー利用シナリオにおいて、ラベルの付与が行われていないドキュメントを保存しようとした、または、ラベルが適用されていないドキュメントを操作した場合などにおいて、プロンプトが繰り返し表示されることが想定されます。</p><p>また、ラベル付けの処理が組み込まれていないマクロや RPA の処理が実行された場合、ラベルが適用されていないドキュメントを操作した場合も “必須ラベル付け” のプロンプトが表示される可能性があります。<br>これにより Microsoft Information Protection ラベル ポリシーに依存し、ファイル形式によっては Microsoft 365 Apps にて保存ができないケースが確認されています。</p><br><h2 id="再現条件"><a href="#再現条件" class="headerlink" title="再現条件"></a>再現条件</h2><p>以下の構成を全て満たす場合、”必須ラベル付け” のプロンプトが表示され Microsoft 365 Apps にてファイルを保存することができません。</p><ul><li>Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効に設定されている</li><li>Microsoft Information Protectionラベル ポリシー [既存のドキュメントに既定のラベルを適用する] が設定されていない</li><li>Microsoft 365 Apps で Excel アドイン形式 (<em>.xlam) のファイルを開く、かつ、Excel アドイン形式 (</em>.xlam) にラベルが未設定である</li></ul><br><h2 id="再現手順の例"><a href="#再現手順の例" class="headerlink" title="再現手順の例"></a>再現手順の例</h2><ol><li>Excel アプリを起動し、[ファイル]-[開く] から、ラベルが付与されていない Excel アドイン形式 (<em>.xlam) のファイルを開きます。<br>※ Excel アドイン形式 (</em>.xlam) のファイルは、ファイルを開いても、ワークシートが表示されないことにご留意ください。</li><li>Alt + F12 キーを押下し、Visual Basic Editor を起動します。</li><li>Visual Basic Editor で、任意の編集を加えます。例えば、ThisWorkbookに下記コードを追加します。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    Debug.Print &quot;Test&quot;</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure><ol start="4"><li>Visual Basic Editor 画面で保存ボタンをクリックします。</li></ol><br><h4 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h4><p>ラベルの適用を求めるプロンプトが表示されます。<br>[ラベルの選択] ボタンをクリックしても、ラベル選択のダイアログが表示されないため、このユーザー インターフェースからラベルを設定することはできません。<br>このため、Visual Basic Editor 画面で行った変更内容は保存することができません。</p><p><img src="/blog/cm53l15yg0000j46y7a4s6u9f/image0.png"></p><br><h2 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a>回避策</h2><p>以下いずれかの方法による対応をご検討いただきますようお願いいたします。</p><p>(a). Microsoft Information Protectionラベル ポリシー [既存のドキュメントに既定のラベルを適用する] で暗号化を含まないラベルを設定する</p><p>あるいは</p><p>(b). VBA マクロにて、暗号化を含まないラベルを設定する</p><br><h4 id="b-の設定手順例"><a href="#b-の設定手順例" class="headerlink" title="(b). の設定手順例"></a>(b). の設定手順例</h4><p>本手順は一度実行していただければ結構です。設定したラベルを削除しない限り、毎回実行する必要はございません。</p><ol><li>Excel アプリを起動し、ラベルが付与されていない Excel アドイン形式 (<em>.xlam) のファイルを開きます。<br>※ Excel アドイン形式 (</em>.xlam) のファイルは、ファイルを開いても、ワークシートは表示されないことにご留意ください。</li><li>Alt + F12 キーを押下し、Visual Basic Editor を起動します。</li><li>Visual Basic Editor で、以下のコードを追加したら、F5 キーを押下してマクロ実行します。<br>※ “&lt;暗号化設定のないラベルの GUID&gt;” は、お客様の環境で作成済みの暗号化設定のないラベルの GUID を指定してください。<br>※ 暗号化設定を含むラベルは設定しないでください。暗号化設定を含むラベルを設定すると、Excel アドイン形式 (*.xlam) として使用できません。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Sub Sample()</span><br><span class="line">Dim mysensitivityLabel As Office.SensitivityLabel</span><br><span class="line">Dim myLabelInfo As Office.LabelInfo</span><br><span class="line"></span><br><span class="line">    Set mysensitivityLabel = ThisWorkbook.SensitivityLabel  </span><br><span class="line">    Set myLabelInfo = ThisWorkbook.SensitivityLabel.CreateLabelInfo()</span><br><span class="line"></span><br><span class="line">        With myLabelInfo</span><br><span class="line">            .AssignmentMethod = MsoAssignmentMethod.PRIVILEGED</span><br><span class="line">            .LabelId = &quot;&lt;暗号化設定のないラベルの GUID&gt;&quot;</span><br><span class="line">        End With</span><br><span class="line"></span><br><span class="line">    mysensitivityLabel.SetLabel myLabelInfo, myLabelInfo</span><br><span class="line">End Sub</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="4"><li>Excel アドイン形式 (*.xlam) に暗号化設定のないラベルが設定できたら、Visual Basic Editor 画面で保存ボタンをクリックして保存を行います。</li><li>保存が完了したら、3. で追加したマクロ自体は削除して構いません。削除後は再度、Visual Basic Editor 画面で保存を行います。</li></ol><br><h2 id="今後の対応予定"><a href="#今後の対応予定" class="headerlink" title="今後の対応予定"></a>今後の対応予定</h2><p>本動作について、現在開発部門にて今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><br><h2 id="ご参考情報"><a href="#ご参考情報" class="headerlink" title="ご参考情報"></a>ご参考情報</h2><p>ラベル ポリシーにおいて “必須ラベル付け” を有効にする場合、併せて “既定のラベル” によってプロンプトの表示が抑制されることを公開情報によりご案内しております。<br>“既定のラベル” は、”必須ラベル付け” よりも常に優先されるため、最低限、すべてのドキュメントに既定のラベルが付与されます。<br>その結果、”必須ラベル付け” によって表示されるプロンプトを抑制することが可能です。</p><p>Title: 秘密度ラベルの詳細<br>URL: <a href="https://learn.microsoft.com/ja-jp/purview/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do">https://learn.microsoft.com/ja-jp/purview/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do</a></p><blockquote><p>項目 [ラベル ポリシーでできること] &gt; [ドキュメントとメール、文書のみ、コンテナー、および Power BI コンテンツに ラベルを適用することをユーザーに要求します。] をご参照ください \</p><blockquote><p>このオプションを使用して、ラベル付けの適用範囲を広げることを検討してください。 ただし、ユーザーのトレーニングを実施しない場合、この設定は不正確なラベル付けにつながる可能性があります。 さらに、対応する既定のラベルも設定しない限り、必須のラベル付けにより頻繁にダイアログが表示され、ユーザーを苛立たせる可能性があります。</p></blockquote></blockquote><p>Title: Office アプリで秘密度ラベルを管理する<br>URL: <a href="https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-office-apps?view=o365-worldwide#require-users-to-apply-a-label-to-their-email-and-documents">https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-office-apps?view=o365-worldwide#require-users-to-apply-a-label-to-their-email-and-documents</a></p><blockquote><p>項目 [ユーザーがメールとドキュメントにラベルを適用することを必須にする] をご参照ください \</p><blockquote><p>既定のラベルは、必須のラベル付けよりも常に優先されます。</p></blockquote></blockquote><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の投稿では、Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、Excel アドイン (*.xla</summary>
+      
+    
+    
+    
+    
+    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
+    
+    <category term="Office 開発全般" scheme="https://officesupportjp.github.io/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/"/>
+    
+    <category term="アドイン" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/"/>
+    
+    <category term="MIP ラベル" scheme="https://officesupportjp.github.io/blog/tags/MIP-%E3%83%A9%E3%83%99%E3%83%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word で表のレイアウトが変わる</title>
+    <link href="https://officesupportjp.github.io/blog/cm4m8fp9y0009346y3p6tg4s6/"/>
+    <id>https://officesupportjp.github.io/blog/cm4m8fp9y0009346y3p6tg4s6/</id>
+    <published>2024-12-12T15:00:00.000Z</published>
+    <updated>2025-01-16T05:27:57.636Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Word で表のレイアウトが変わる現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Apps、及び、製品版のOffice 2021&#x2F;2024 を以下のバージョンへ更新した後に、更新前のバージョンで作成した Word 文書内の表のレイアウトが変わる現象が発生する場合があります。</p><p>・バージョン 2409 (ビルド 18025.XXXXX) 以降</p><p>現象発生前の表のイメージ：<br><img src="/blog/cm4m8fp9y0009346y3p6tg4s6/image01.png"></p><p>現象発生後の表のイメージ：<br><img src="/blog/cm4m8fp9y0009346y3p6tg4s6/image02.png"></p><p><strong>対象製品:</strong><br>Microsoft 365 Apps<br>Office 2021 製品版<br>Office 2024 製品版<br>※ Office 2021 ボリュームライセンス版、及び、Office 2024 ボリュームライセンス版では発生しません。</p><h3 id="2-今後の対応予定"><a href="#2-今後の対応予定" class="headerlink" title="2. 今後の対応予定"></a>2. 今後の対応予定</h3><p>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Word で表のレイアウトが変わる現象について説明します。&lt;/p&gt;
+&lt;h3 id=&quot;1-現象&quot;&gt;&lt;a href=&quot;#1-現象&quot; class=&quot;headerlink&quot; title=&quot;1. 現象&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Office のインストール・更新・環境情報の採取について</title>
+    <link href="https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/"/>
+    <id>https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/</id>
+    <published>2024-11-28T00:00:00.000Z</published>
+    <updated>2025-01-16T05:27:57.629Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><br><h2 id="Office-のインストール・更新・環境情報の採取"><a href="#Office-のインストール・更新・環境情報の採取" class="headerlink" title="Office のインストール・更新・環境情報の採取"></a>Office のインストール・更新・環境情報の採取</h2><ol><li><p>インストール、更新に関する調査の場合、C:\Windows\Temp をエクスプローラーで開き、このフォルダの中身が閲覧できる状態であることを確認します。管理者権限が求められる場合、管理者権限を入力します。 <span style="color:#ff0000"><strong>※重要※ インストール、更新に関する調査では、本手順を実施しない場合、正しくログ採取が出来ず、採取し直しとなります</strong></span></p></li><li><p><a href="MSOfficeinfo_v2.1.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_temp に出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。<br>※ C:\MS_temp フォルダが既に存在する場合、先にファイルを退避してください。</p></li><li><p>ライセンス認証に関連する事象の場合、<a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">こちら</a> をダウンロードし、licenseInfo.cmd をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li></ol><p><strong>取得した以下の情報を弊社にお寄せください</strong></p><p>・C:\MS_temp を zip で圧縮したファイル<br>・サインイン、ライセンス認証に関連する事象の場合、%temp% に出力された licensingInfo から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット<br><br></p><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;本記事では Office のインストール・更新・環境情報の採取について解説します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;Office-のインストール・更新・環境情報の採取&quot;&gt;&lt;a href=&quot;#Office-の</summary>
+      
+    
+    
+    
+    
+    <category term="インストール" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/"/>
+    
+    <category term="更新" scheme="https://officesupportjp.github.io/blog/tags/%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Excel シート タブの外観変更後、オートメーションのパフォーマンスが低下する</title>
@@ -184,9 +262,9 @@
     <link href="https://officesupportjp.github.io/blog/clqm07fq300005kkj5ww5bp4a/"/>
     <id>https://officesupportjp.github.io/blog/clqm07fq300005kkj5ww5bp4a/</id>
     <published>2023-12-26T00:00:00.000Z</published>
-    <updated>2024-05-02T05:00:38.802Z</updated>
+    <updated>2025-01-16T05:27:57.629Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直)です。  </p><p>MECM (Microsoft Endpoint Configuration Manager) で M365Apps (Microsoft 365 Apps for enterprise) の更新プログラムが必要と判定されない現象について説明します。</p><br><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>MECM で M365Apps の更新プログラムが必要と判定されず、更新が適用できない</p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>以下の 3 つの条件を全て満たしているかをご確認ください。</p><p><strong>1) Office の更新に使用する COM IF のレジストリキーが存在する</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\&#123;B7F1785F-D69B-46F1-92FC-D2DE9C994F13&#125;</code></p><p>本レジストリは、<a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/manage-microsoft-365-apps-updates-configuration-manager#enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager">MECM から更新プログラムを受信できるようにする設定</a>が反映された後、OS を再起動することで作成されます。</p><br><p><strong>2) VersionToReport より新しいビルドを展開しようとしている、または、UpdateChannelChanged が True である</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\VersionToReport</code><br>ここには、16.0.12345.12345 のような 16.0 部分は固定のビルド番号が入ります。</p><p><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannelChanged</code><br>初期値は False であり、後述のように UpdateChannel が優先度により変更された際に True となります。その後、更新試行を行った後に False に戻ります。</p><p>通常、チャネルの変更直後を除いて UpdateChannelChanged は False のため、VersionToReport の優劣にしたがい更新が行われます。</p><br><p><strong>3) UpdateChannel の URL に展開しているチャネルの識別子が含まれる</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannel</code></p><p><em><strong>チャネルの識別子</strong></em><br><code>最新チャネル : 492350f6-3a01-4f97-b9c0-c7c6ddf67d60</code><br><code>月次エンタープライズチャネル : 55336b82-a18d-4dd6-b5f6-9e5095c314a6</code><br><code>半期エンタープライズチャネル (プレビュー : b8f9b850-328d-4355-9145-c59439a0c4cf</code><br><code>半期エンタープライズチャネル : 7ffbc6bf-bc32-4f92-8982-f9dd17fd3114</code></p><p>UpdateChannel は UpdateChannelChanged が False である場合、以下の優先度を上から順に評価します。</p><p>優先度1) <a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “更新プログラムのパス”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatepath</code></p><p>優先度2) <a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “チャネルの更新”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatebranch</code></p><p>優先度3) <a href="https://learn.microsoft.com/ja-jp/deployoffice/office-deployment-tool-configuration-options#updates-element">Office 展開ツールの Updates 要素の UpdatePath 属性</a><br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\UpdateUrl</code></p><p>優先度4) <a href="https://learn.microsoft.com/ja-jp/deployoffice/manage-software-download-settings-office-365">Microsoft 365 管理センターで Microsoft 365 のインストール オプションを管理する</a> の取得頻度<br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\UnmanagedUpdateUrl</code></p><p>優先度5) <a href="https://learn.microsoft.com/ja-jp/deployoffice/office-deployment-tool-configuration-options#updates-element">Office 展開ツールの Updates 要素の Channel 属性</a><br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\CDNBaseURL</code></p><p>現在の UpdateChannel と値が異なる場合、評価された値に上書きされ、UpdateChannelChanged が True となります。</p><br><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p><strong>UpdateChannel が変更されるタイミングを教えてください</strong><br>タスクスケジューラーに登録されている Office Automatic Updates 2.0 が実行する OfficeC2RClient.exe の中で、前回の構成試行より 24 時間以上経過している場合に構成処理を行います。<br>このため、タスクスケジューラーを手動実行いただいても即座に実行することは出来ません。また、この時間を変更することは出来ません。</p><p><strong>優先度1 や 3 が入っている端末に MECM から更新プログラムを展開できますか？</strong><br>優先度1 は “未構成” に変更してください。優先度 3 の場合、UpdateUrl レジストリを削除していただくか、優先度 2 の GPO の “チャネルの更新” を代わりにご利用ください<br>なお、”チャネルの更新” を設定すると、MECM もしくはインターネット上の Office CDN から更新プログラムを取得するようになります。MECM で管理しない端末に設定する際はご留意ください。</p><p><strong>UpdateChannelChanged が既に True になっているため、優先度にしたがって設定を変更しても端末に反映されません</strong><br>UpdateChannelChanged を一度だけ False に書き換えてください。</p><p><strong>優先度4の UnmanagedUpdateUrl のチャネルを変更したいのですが、Microsoft 365 管理センターで半期エンタープライズチャネルを選択できません</strong><br>UnmanagedUpdateUrl レジストリを削除していただくか、優先度 2 の GPO の “チャネルの更新” を代わりにご利用ください<br>なお、”チャネルの更新” を設定すると、MECM もしくはインターネット上の Office CDN から更新プログラムを取得するようになります。MECM で管理しない端末に設定する際はご留意ください。</p><p><strong>MECM から更新しているのに、優先度4 の UnmanagedUpdateUrl レジストリが設定されているのはなぜですか？</strong><br><a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/manage-microsoft-365-apps-updates-configuration-manager#enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager">方法3</a> の Office 展開ツールでのインストール時に OfficeMgmtCOM を True で設定していない場合、端末に MECM から更新する設定が反映される前に M365Apps の自動更新が動作した可能性があります。</p><p><strong>COM IF のレジストリキーが作成されません</strong><br>何らかの影響により、端末で COM 登録が行えていない可能性があります。</p><p>対象の端末で、PowerShell を管理者権限で起動し、以下の 2 行を実行いただき、エラーが出るかをご確認ください。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$comCatalog = New-Object -ComObject COMAdmin.COMAdminCatalog</span><br><span class="line">$appColl = $comCatalog.GetCollection(&quot;Applications&quot;)</span><br></pre></td></tr></table></figure><p><strong>エラーが出る場合</strong><br>OS 観点で調査が必要であると考えられます。</p><p><strong>エラーが出ない場合</strong><br>以下の手順をご実施ください。</p><ol><li><p>以下の REG_DWORD レジストリに 0 を設定します。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate\OfficeMgmtCOM</code></p></li><li><p>スタートメニューの検索にて、「サービス」と検索し、サービスを起動します</p></li><li><p>“Microsoft Office クイック実行サービス” を右クリックし、”再起動” を実施します。</p></li><li><p>以下の REG_DWORD レジストリに 1 を設定します。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate\OfficeMgmtCOM</code></p></li><li><p>“Microsoft Office クイック実行サービス” を右クリックし、”再起動” を実施します。</p></li><li><p>COM IF のレジストリキーが作成されるかをご確認ください。</p></li></ol><br><h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p><a href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/how-to-manage-office-365-proplus-channels-for-it-pros/ba-p/795813">How to manage Office 365 ProPlus Channels for IT Pros</a></p><p><span style="color:#ff0000"><strong>2023&#x2F;12&#x2F;27  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;3&#x2F;4  Update</strong></span><br><span style="color:#339966">一部記載を修正しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直)です。  </p><p>MECM (Microsoft Endpoint Configuration Manager) で M365Apps (Microsoft 365 Apps for enterprise) の更新プログラムが必要と判定されない現象について説明します。</p><br><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>MECM で M365Apps の更新プログラムが必要と判定されず、更新が適用できない</p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>以下の 3 つの条件を全て満たしているかをご確認ください。</p><p><strong>1) Office の更新に使用する COM IF のレジストリキーが存在する</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\&#123;B7F1785F-D69B-46F1-92FC-D2DE9C994F13&#125;</code></p><p>本レジストリは、<a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/manage-microsoft-365-apps-updates-configuration-manager#enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager">MECM から更新プログラムを受信できるようにする設定</a>が反映された後、OS を再起動することで作成されます。</p><br><p><strong>2) VersionToReport より新しいビルドを展開しようとしている、または、UpdateChannelChanged が True である</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\VersionToReport</code><br>ここには、16.0.12345.12345 のような 16.0 部分は固定のビルド番号が入ります。</p><p><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannelChanged</code><br>初期値は False であり、後述のように UpdateChannel が優先度により変更された際に True となります。その後、更新試行を行った後に False に戻ります。</p><p>通常、チャネルの変更直後を除いて UpdateChannelChanged は False のため、VersionToReport の優劣にしたがい更新が行われます。</p><br><p><strong>3) UpdateChannel の URL に展開しているチャネルの識別子が含まれる</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannel</code></p><p><em><strong>チャネルの識別子</strong></em><br><code>最新チャネル : 492350f6-3a01-4f97-b9c0-c7c6ddf67d60</code><br><code>月次エンタープライズチャネル : 55336b82-a18d-4dd6-b5f6-9e5095c314a6</code><br><code>半期エンタープライズチャネル (プレビュー : b8f9b850-328d-4355-9145-c59439a0c4cf</code><br><code>半期エンタープライズチャネル : 7ffbc6bf-bc32-4f92-8982-f9dd17fd3114</code></p><p>UpdateChannel は UpdateChannelChanged が False である場合、以下の優先度を上から順に評価します。</p><p>優先度1) <a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “更新プログラムのパス”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatepath</code></p><p>優先度2) <a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “チャネルの更新”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatebranch</code></p><p>優先度3) <a href="https://learn.microsoft.com/ja-jp/deployoffice/office-deployment-tool-configuration-options#updates-element">Office 展開ツールの Updates 要素の UpdatePath 属性</a><br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\UpdateUrl</code></p><p>優先度4) <a href="https://learn.microsoft.com/ja-jp/deployoffice/manage-software-download-settings-office-365">Microsoft 365 管理センターで Microsoft 365 のインストール オプションを管理する</a> の取得頻度<br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\UnmanagedUpdateUrl</code></p><p>優先度5) <a href="https://learn.microsoft.com/ja-jp/deployoffice/office-deployment-tool-configuration-options#updates-element">Office 展開ツールの Updates 要素の Channel 属性</a><br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\CDNBaseURL</code></p><p>現在の UpdateChannel と値が異なる場合、評価された値に上書きされ、UpdateChannelChanged が True となります。</p><br><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p><strong>UpdateChannel が変更されるタイミングを教えてください</strong><br>タスクスケジューラーに登録されている Office Automatic Updates 2.0 が実行する OfficeC2RClient.exe の中で、前回の構成試行より 24 時間以上経過している場合に構成処理を行います。<br>このため、タスクスケジューラーを手動実行いただいても即座に実行することは出来ません。また、この時間を変更することは出来ません。</p><p><strong>優先度1 や 3 が入っている端末に MECM から更新プログラムを展開できますか？</strong><br>優先度1 は “未構成” に変更してください。優先度 3 の場合、UpdateUrl レジストリを削除していただくか、優先度 2 の GPO の “チャネルの更新” を代わりにご利用ください<br>なお、”チャネルの更新” を設定すると、MECM もしくはインターネット上の Office CDN から更新プログラムを取得するようになります。MECM で管理しない端末に設定する際はご留意ください。</p><p><strong>UpdateChannelChanged が既に True になっているため、優先度にしたがって設定を変更しても端末に反映されません</strong><br>UpdateChannelChanged を一度だけ False に書き換えてください。</p><p><strong>優先度4の UnmanagedUpdateUrl のチャネルを変更したいのですが、Microsoft 365 管理センターで半期エンタープライズチャネルを選択できません</strong><br>UnmanagedUpdateUrl レジストリを削除していただくか、優先度 2 の GPO の “チャネルの更新” を代わりにご利用ください<br>なお、”チャネルの更新” を設定すると、MECM もしくはインターネット上の Office CDN から更新プログラムを取得するようになります。MECM で管理しない端末に設定する際はご留意ください。</p><p><strong>MECM から更新しているのに、優先度4 の UnmanagedUpdateUrl レジストリが設定されているのはなぜですか？</strong><br><a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/manage-microsoft-365-apps-updates-configuration-manager#enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager">方法3</a> の Office 展開ツールでのインストール時に OfficeMgmtCOM を True で設定していない場合、端末に MECM から更新する設定が反映される前に M365Apps の自動更新が動作した可能性があります。</p><p><strong>MECM から更新したいのに、Office CDN から更新されてしまいます</strong><br><a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/cloud-update">クラウド更新</a> が有効になっている可能性がございます。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\cloud\office\16.0\Common\officeupdate\IgnoreGPO</code> が 1 の場合、全ての更新設定よりクラウド更新が優先されます。</p><p><a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/cloud-update">クラウド更新</a> が不要な場合、<a href="https://config.office.com/">Microsoft 365 Apps 管理センター</a> において、クラウド更新に進みます。<br>もし、クラウド更新が有効となっていない場合、有効化しないでください。<br>クラウド更新が有効な場合、各チャネルの設定 - クラウド更新のレビュー において、”クラウド更新を通じて管理を非アクティブ化できます” をクリックしてください。フォームの入力画面が表示されますので、記載を進めて送信してください。</p><p>そして、即座に反映させるため、GPO 等にて、<code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\cloud\office\16.0\Common\officeupdate\IgnoreGPO</code> を DWORD の 0 に指定して配布してください。</p><p><strong>COM IF のレジストリキーが作成されません</strong><br>何らかの影響により、端末で COM 登録が行えていない可能性があります。</p><p>対象の端末で、PowerShell を管理者権限で起動し、以下の 2 行を実行いただき、エラーが出るかをご確認ください。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$comCatalog = New-Object -ComObject COMAdmin.COMAdminCatalog</span><br><span class="line">$appColl = $comCatalog.GetCollection(&quot;Applications&quot;)</span><br></pre></td></tr></table></figure><p><strong>エラーが出る場合</strong><br>OS 観点で調査が必要であると考えられます。</p><p><strong>エラーが出ない場合</strong><br>以下の手順をご実施ください。</p><ol><li><p>以下の REG_DWORD レジストリに 0 を設定します。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate\OfficeMgmtCOM</code></p></li><li><p>スタートメニューの検索にて、「サービス」と検索し、サービスを起動します</p></li><li><p>“Microsoft Office クイック実行サービス” を右クリックし、”再起動” を実施します。</p></li><li><p>以下の REG_DWORD レジストリに 1 を設定します。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate\OfficeMgmtCOM</code></p></li><li><p>“Microsoft Office クイック実行サービス” を右クリックし、”再起動” を実施します。</p></li><li><p>COM IF のレジストリキーが作成されるかをご確認ください。</p></li></ol><br><h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p><a href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/how-to-manage-office-365-proplus-channels-for-it-pros/ba-p/795813">How to manage Office 365 ProPlus Channels for IT Pros</a></p><p><span style="color:#ff0000"><strong>2023&#x2F;12&#x2F;27  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;3&#x2F;4  Update</strong></span><br><span style="color:#339966">一部記載を修正しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">クラウド更新について追記しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
     
     
       
@@ -402,82 +480,6 @@
       
     <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、図を含んだ Word 文書を印刷した際に、図の位置が編集中の表示箇所とは異なる位置で印刷される現象について説明します。&lt;/p&gt;
 &lt;h2 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;heade</summary>
-      
-    
-    
-    
-    
-    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Office プロセスを自プログラム専用にする方法</title>
-    <link href="https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/"/>
-    <id>https://officesupportjp.github.io/blog/cl0mfb7bc0021nwvs6zie7xtv/</id>
-    <published>2022-12-26T00:00:00.000Z</published>
-    <updated>2022-12-26T04:17:36.133Z</updated>
-    
-    <content type="html"><![CDATA[<hr><p><strong>2022&#x2F;12&#x2F;26 Update</strong><br>Microsoft 365 Apps での動作をベースに全体的に記事の構成を改訂しました。</p><hr><br><p>こんにちは、Office 開発 サポート チームです。</p><p><a href="https://officesupportjp.github.io/blog/cl0n10ddh000t90vsbpgv3r9l">前回の投稿</a>で Excel のプロセスを統合することについて記載しましたが、今回はこれに関連し、Office を操作するプログラムを開発するときに、プログラムから操作する Office プロセスを自分のプログラム専用にできるか、という話を記載します。<br><br></p><p>Office を操作するプログラム開発を行う際、プログラムの処理が行いやすいよう、Office アプリケーションのプロパティを変更したり、画面を非表示にすることがあります。このとき、プログラムから行うプロパティ設定や画面の状態を、ユーザーが開いている他の Office ファイルには反映させたくないといった理由から、「ユーザーが起動する Office とプログラムが起動する Office でプロセスを分けたい」というご相談を頂くことがあります。<br><br></p><p><strong><h4>実現方法</h4></strong><br><u>Excel</u><br>COM オートメーションで Office を起動してください。 (CreateObject や new、CoCreateInstance など)  </p><p><u>Word &#x2F; PowerPoint</u><br>このような動作を実現する方法はありません。</p><p><strong><h4>既定の動作</h4></strong><br>過去投稿で、Office では起動方法によって、既に起動されたプロセスがある場合には、これを利用して新しいファイルを開く動作となることをご紹介しています。  </p><p>過去の投稿)<br>タイトル : Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/">https://officesupportjp.github.io/blog/cl0n10dct000i90vs4c2a3pct/</a></p><p>タイトル : Office のプロセス インスタンス制御について<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/">https://officesupportjp.github.io/blog/cl0n10de6001p90vsaa9n6gy8/</a></p><br><p><strong><h4>対応方法 1</h4></strong><br>過去投稿でご案内している Excel の &#x2F;x コマンドライン スイッチや DisableMergeInstance レジストリのように、アプリ起動時に新規プロセスで起動するよう変更できる起動方法も一部用意されています。このような仕組みを用いて、後からユーザーがファイルを開くときに、起動済みのプログラム用のプロセスで開かれることを、ある程度は防ぐことができます。  </p><p>しかし、このような構成を行っても、例えば以下のような方法で 2 つめの Office ファイルを開くと、既存プロセスで開かれます。 </p><ul><li>Offie ファイルをダブル クリックする</li><li>OLE 埋め込みオブジェクトとして埋め込まれた Office ファイルを開く</li><li>他の Office オートメーションを行うプログラムが Process.Start 等の方法で Office プログラムを起動してファイルを開く</li></ul><br><p><strong><h4>対応方法 2</h4></strong><br>Excel のみは、COM オートメーションでプロセスを起動すると、以下のどちらのシナリオでも、起動した Excel プロセスが既存プロセスにマージされるのを防ぐことができます。</p><ul><li>既にプロセスが存在する状態で COM オートメーションでプロセスを起動する</li><li>COM オートメーションでプロセスを起動した後、ユーザーが新たにアプリを起動したりファイルを開く<br></li></ul><p>ただし、プログラムから起動したプロセスの Excel 画面を表示状態にしてユーザー操作可能とする場合、その画面内の操作 ([ファイル] - [開く] など) でファイルを開く場合は、そのプロセス内で開きます。<br><br></p><p><strong><h4>補足</h4></strong><br>リモートデスクトップで複数のユーザーが 1 つの端末にログインして Office を利用する場合、ユーザー間でプロセスが統合されることはありません。ただし、これを利用して意図的にログインしていないユーザーで Office を起動するような動作は、Office のサポート外の構成となります (Office のサーバーサイド オートメーションと呼ばれる構成に該当します) 。Office の起動ユーザーは、必ずログインしているユーザーで行う必要があります。  </p><p>Office のサーバーサイド オートメーションについては、公開情報や本ブログの過去投稿でご案内しています。  </p><p>タイトル : Office のサーバーサイド オートメーションについて<br>アドレス : <a href="https://support.microsoft.com/ja-jp/kb/257757">https://support.microsoft.com/ja-jp/kb/257757</a>  </p><p>タイトル : Office サーバー サイド オートメーションの危険性について<br>アドレス : <a href="https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/">https://officesupportjp.github.io/blog/cl0mfb7b7001wnwvshfp01l5u/</a>  </p><br><p><strong><h4>図解</h4></strong><br>文章だけでは分かり辛い点もあるかと思いますので、以下に Excel の動作を例にどのような動作になるか、図を用いて説明します。Microsoft 365 Excel での既定の設定の場合を代表として解説します。Excel 以外のアプリでは動作が異なるため注意してください。<br><br></p><p>まず、以下に自分のプログラムが初めに Excel プロセスを起動した後、他の方法で Excel を利用する場合の動作を図解します。(ここで初めにプログラムからプロセスを起動するときは、Process.Start のように COM オートメーションではない方法での起動を想定しています。)</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image1.png">  </p><p>図 1. 自プログラム (Process.Start) → 他の方法</p><br><p>一方、&lt;対応方法 2&gt; に記載したように COM オートメーションでプロセスを起動した場合の図です。COM オートメーションで起動したプロセスには、他の操作によりファイルを開いた場合もマージされません。<br>※ ただし先述の通り、①で起動したプロセス内での操作で開くファイルは①のプロセスで開かれます。([開く] メニューからの操作や、OLE 埋め込みファイルを開く場合など)</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image4.png">  </p><p>図 2. 自プログラム (COM オートメーション) → 他の方法</p><br><p>次に、先にユーザー操作などですでに Excel プロセスを起動しているところに、自プログラムが Excel を起動した場合について図解します。</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image2.png">  </p><p>図 3. 他の方法 → 自プログラム</p><br><p>また、複数のプロセスが存在する場合の動作はさらに複雑です。以下の図に示す通り、既存プロセスに統合される場合にどちらのプロセスに統合されるかは、明確に決められておりません。</p><p><img src="/blog/cl0mfb7bc0021nwvs6zie7xtv/image3.png">  </p><p>図 4. 複数プロセスが存在する場合</p><br><p>以上の通り、Excel では COM オートメーションにより、自プログラムから起動したプロセスを自身専用にすることができますが、Word や PowerPoint では実現できません。また、Excel でも設計によっては、Process.Start 等の起動方法の方が実装しやすい処理もあるかと思いますので、このような場合は、プロセスの専用化とのトレードオフが生じます。</p><p>プロセスのマージが生じるようなプログラムを設計する場合は、自ブログラムで起動する Office プロセスがユーザー操作や他のプログラムで起動されるプロセスと統合されても問題ない動作となるよう設計してください。<br><br></p><p>今回の投稿は以上です。<br><br></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;2022&amp;#x2F;12&amp;#x2F;26 Update&lt;/strong&gt;&lt;br&gt;Microsoft 365 Apps での動作をベースに全体的に記事の構成を改訂しました。&lt;/p&gt;
-&lt;hr&gt;
-&lt;br&gt;
-
-&lt;p&gt;こんにちは、Office 開発 サポート</summary>
-      
-    
-    
-    
-    
-    <category term="SDI" scheme="https://officesupportjp.github.io/blog/tags/SDI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Word での印刷で意図しない塗りつぶしが生じる</title>
-    <link href="https://officesupportjp.github.io/blog/cla7qogkl006pa0jo434segs3/"/>
-    <id>https://officesupportjp.github.io/blog/cla7qogkl006pa0jo434segs3/</id>
-    <published>2022-11-08T00:00:00.000Z</published>
-    <updated>2022-11-30T01:30:21.445Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Word で文書を印刷した際、編集画面や印刷プレビューでの表示とは異なり、画像データの一部が塗りつぶされた状態で印刷されてしまう現象について説明します。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Word 文書に以下のような構成の画像データを貼り付けて印刷した場合、編集時や印刷プレビューでは白もしくはグレー等の色で表示されている箇所がすべて塗りつぶされた状態で印刷されてしまう場合があります。</p><p>  ・EMF 形式のデータで構成される画像データを貼り付けている。<br>  ・EMF 形式のデータ内で、透過処理を行ったビットマップが使用されている。</p><p>例えば黒色の矩形のビットマップを透過処理にてグレーに見えるように表示させている画像データが貼られている Word 文書を印刷した時、画像データの当該箇所が黒で塗りつぶされた状態で印刷されてしまう場合があります。</p><h2 id="回避方法"><a href="#回避方法" class="headerlink" title="回避方法"></a>回避方法</h2><p>上記の要因で発生している現象につきましては、ご使用のプリンター ドライバーの設定でスプール ファイルの形式を変更可能であれば EMF スプール形式を選択いただくことで、現象を回避できる場合があります。<br>具体的な設定方法はプリンター ドライバーごとに異なりますので、各プリンター ドライバーのヘルプ等を参照くださいますようお願いいたします。</p><p>プリンター ドライバーの設定でスプール ファイルの形式を変更できないプリンターの場合は、以下のような手順で問題が発生する画像データをコピーしてビットマップとして貼り付けなおすことで現象を回避できる場合があります。なお、この手順の場合、印刷結果として出力される画像の変更前と比較して精度が低くなる可能性がございます。</p><p>ビットマップ形式で貼り付けなおす手順の例</p><ol><li>あらかじめオリジナルのファイルをコピーするなどしてバックアップしておきます。</li><li>Word で当該ファイルを開きます。</li><li>問題の生じる画像データを右クリックし、[切り取り] メニューを選択します。</li><li>Word の [ホーム] タブ内の [貼り付け] ボタン下の矢印をクリックして [貼り付けのオプション] より [形式を選択して貼り付け] を選択します。</li><li>「形式を選択して貼り付け」 ダイアログで [ビットマップ] を選択して OK を押して貼り付けます。</li><li>貼り付けられた画像データを確認し、別名を付けて保存します。</li></ol><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Word で文書を印刷した際、編集画面や印刷プレビューでの表示とは異なり、画像データの一部が塗りつぶされた状態で印刷されてしまう現象について説明します。&lt;/p&gt;
-&lt;h2 id=&quot;現象&quot;&gt;&lt;a href=&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Word for Mac での印刷時のカラー設定の表記差異について</title>
-    <link href="https://officesupportjp.github.io/blog/cl9dgphrg0000m4vsb52864vv/"/>
-    <id>https://officesupportjp.github.io/blog/cl9dgphrg0000m4vsb52864vv/</id>
-    <published>2022-10-18T15:00:00.000Z</published>
-    <updated>2022-11-30T01:30:21.441Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。</p><p>この記事では、Word for Mac での印刷時のカラー設定に関して、<br>確認されている動作をご案内いたします。</p><br /><h1 id="事象詳細"><a href="#事象詳細" class="headerlink" title="事象詳細"></a>事象詳細</h1><p>Word for Mac では、ご利用のドライバ等によって、<br>以下二か所から、カラー設定を行うことが可能です。<br>※実際の見た目はご利用のプリンタ・プリンタドライバ等によって異なります。</p><ul><li>[印刷部数と印刷ページ] メニュー<br><img src="/blog/cl9dgphrg0000m4vsb52864vv/%E5%8D%B0%E5%88%B7%E9%83%A8%E6%95%B0%E3%81%A8%E5%8D%B0%E5%88%B7%E3%83%9A%E3%83%BC%E3%82%B8.png"></li></ul><br><ul><li>[プリンタの機能] メニュー<br><img src="/blog/cl9dgphrg0000m4vsb52864vv/%E3%83%97%E3%83%AA%E3%83%B3%E3%82%BF%E3%81%AE%E6%A9%9F%E8%83%BD.png"></li></ul><br><p>それぞれの設定の変更を繰り返す際、Word for Mac の動作に影響を受け、<br>[印刷部数と印刷ページ] メニューと [プリンタの機能] メニュー の印刷のカラー印刷設定の表記が、<br>一方では “白黒で印刷する設定”, 一方では “カラーで印刷する設定” のように、<br>異なるカラー印刷設定を示す場合があることが確認されております。  </p><br><p>恐れ入りますが、現時点で有効な回避方法はございません。<br>Word for Mac を再起動すると再度両方の設定が一致した状態となりますので、<br>事象発生時には Word for Mac を再起動する、<br>印刷時に期待したカラー設定で印刷されているか印刷結果を再確認するなどによって、<br>ご対応くださいますようお願いいたします。  </p><br><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;/p&gt;
-&lt;p&gt;この記事では、Word for Mac での印刷時のカラー設定に関して、&lt;br&gt;確認されている動作をご案内いたします。&lt;/p&gt;
-&lt;br /&gt;
-
-&lt;h1 id=&quot;事象詳細&quot;&gt;&lt;a href=&quot;#事象詳細&quot; cla</summary>
       
     
     
