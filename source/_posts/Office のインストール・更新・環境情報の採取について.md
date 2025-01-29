@@ -1,6 +1,7 @@
 ---
 title: Office のインストール・更新・環境情報の採取について
 date: '2024-11-28'
+lastupdate: '2025-01-29'
 id: cm3e5mpvi0000cgkj2sfvb55j
 tags:
   - 更新
@@ -17,15 +18,14 @@ Office のインストール・更新・環境情報の採取
 1. インストール、更新に関する調査の場合、C:\Windows\Temp をエクスプローラーで開き、このフォルダの中身が閲覧できる状態であることを確認します。管理者権限が求められる場合、管理者権限を入力します。 <span style="color:#ff0000">**※重要※ インストール、更新に関する調査では、本手順を実施しない場合、正しくログ採取が出来ず、採取し直しとなります**</span>
 
 
-2. [MSOfficeinfo.zip](MSOfficeinfo_v2.1.zip) をダウンロードします。
+2. [MSOfficeinfo.zip](MSOfficeinfo_v3.zip) をダウンロードします。
 
 3. MSOfficeinfo.zip のプロパティを開き、以下で "許可する"にチェックをつけます。
 ![](image1.png)
 4. MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。
 
-5. MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_temp に出力されます。
+5. MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_DATA 配下に出力されます。
 ※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。
-※ C:\MS_temp フォルダが既に存在する場合、先にファイルを退避してください。
 
 6. ライセンス認証に関連する事象の場合、[こちら](https://www.microsoft.com/en-us/download/details.aspx?id=55948) をダウンロードし、licenseInfo.cmd をダブルクリックで実行してください。
 ※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。
@@ -34,7 +34,7 @@ Office のインストール・更新・環境情報の採取
 
 **取得した以下の情報を弊社にお寄せください**
 
-・C:\MS_temp を zip で圧縮したファイル
+・C:\MS_DATA に出力された MOI から始まる zip ファイル
 ・サインイン、ライセンス認証に関連する事象の場合、%temp% に出力された licensingInfo から始まる zip ファイル
 ・インストール・更新の事象の場合、事象発生日時
 ・インストールの事象の場合、利用した Configuration.xml ファイル
@@ -43,5 +43,8 @@ Office のインストール・更新・環境情報の採取
 
 <span style="color:#ff0000">**2024/11/28  Update**</span>  
 <span style="color:#339966">一部記載を変更しました</span>
+
+<span style="color:#ff0000">**2024/1/29  Update**</span>  
+<span style="color:#339966">スクリプトを更新しました</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
