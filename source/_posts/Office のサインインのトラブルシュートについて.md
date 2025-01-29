@@ -1,7 +1,7 @@
 ---
 title: Officeのサインインのトラブルシュートについて
 date: '2020-07-09'
-lastupdate: '2024-11-12'
+lastupdate: '2025-01-29'
 id : clla7sav30001akkj8j1m1u3f
 tags:
   - サインイン、認証
@@ -123,7 +123,7 @@ $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-a
 
 [テナントの移行後、OneDrive for Business を同期できない](https://learn.microsoft.com/ja-jp/sharepoint/troubleshoot/sync/cant-sync-after-migration)
 
-[OfficeLogCollect.zip](OfficeLogCollect_v1.2.zip) 
+[OfficeLogCollect.zip](OfficeLogCollect_v2.zip) 
 
 <br>
 
@@ -147,5 +147,8 @@ $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-a
 
 <span style="color:#ff0000">**2023/8/14  Update**</span>  
 <span style="color:#339966">有害サイトと分類されていたため記述を変更しました</span>
+
+<span style="color:#ff0000">**2025/1/29  Update**</span>  
+<span style="color:#339966">スクリプトを変更しました</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
