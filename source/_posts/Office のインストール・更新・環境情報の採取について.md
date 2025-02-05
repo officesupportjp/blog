@@ -14,7 +14,7 @@ tags:
 
 環境情報ログ
 ---
-1. [MSOfficeinfo.zip](MSOfficeinfo_v3.zip) をダウンロードします。
+1. [MSOfficeinfo.zip](MSOfficeinfo_v3.1.zip) をダウンロードします。
 
 2. MSOfficeinfo.zip のプロパティを開き、以下で "許可する"にチェックをつけます。
 ![](image1.png)
