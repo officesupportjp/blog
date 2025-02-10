@@ -1,7 +1,7 @@
 ---
 title: Office の既定のフォントを変更する方法
 date: '2019-09-17'
-lastupdate: '2022-03-18'
+lastupdate: '2025-02-10'
 id: cl0m75alf001rmcvses4a67bp
 tags:
   - フォント
@@ -13,6 +13,9 @@ tags:
 *****
 **2022/3/18 Update**  
 "3-2. エクスプローラなどでの右クリックからの新規作成" の対応を新しい PowerPoint バージョンでの動作変更に対応する手順に更新しました。
+
+**2025/2/10 Update**  
+"1-1. Excel 内での新規作成" のフォルダー パスの誤記を修正しました。
 *****
 <br>
 
@@ -90,7 +93,7 @@ Excel のオプションで、\[全般\] – \[新しいブックの作成時\] 
 
 以下の 1-2. で説明する方法で標準スタイルのフォントを変更したファイルを、ファイルの種類を \[Excel テンプレート (\*.xltx)\] で、\[Book.xltx\] という名前でデスクトップなどに保存します。 
 
-この \[Book.xltx\] を、Excel の起動時に自動的にファイルが開かれるフォルダに格納します。一般的には、%userprofile%\\AppData\\Microsoft\\Excel\\XLSTART フォルダに格納しますが、任意のフォルダを指定することもできますので、詳細は以下の公開情報をご参照ください。  
+この \[Book.xltx\] を、Excel の起動時に自動的にファイルが開かれるフォルダに格納します。一般的には、%appdata%\\Microsoft\\Excel\\XLSTART フォルダに格納しますが、任意のフォルダを指定することもできますので、詳細は以下の公開情報をご参照ください。  
   
 参考) Excel の起動方法をカスタマイズする  
 [https://support.office.com/ja-jp/article/6509b9af-2cc8-4fb6-9ef5-cf5f1d292c19](https://support.office.com/ja-jp/article/6509b9af-2cc8-4fb6-9ef5-cf5f1d292c19)
