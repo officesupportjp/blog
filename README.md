@@ -42,6 +42,7 @@
 - [KB 3191877 の適用後に VBA のコンパイルエラーが発生する](./source/_posts/KB%203191877%20の適用後に%20VBA%20のコンパイルエラーが発生する.md)
 - [Large Address Aware に対応した Excel 2013 - Excel 2016](./source/_posts/Large%20Address%20Aware%20に対応した%20Excel%202013%20-%20Excel%202016.md)
 - [MECM で M365Apps の更新プログラムが必要と判定されない](./source/_posts/MECM%20で%20M365Apps%20の更新プログラムが必要と判定されない.md)
+- [Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する](./source/_posts/Microsoft%20365%20Apps%20利用時に%20p1.aprimocdn.net%20への通信が発生する.md)
 - [Microsoft Forms でよく本サポートに寄せられるお問い合わせ](./source/_posts/Microsoft%20Forms%20でよく本サポートに寄せられるお問い合わせ.md)
 - [Microsoft Office 製品を Windows のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて](./source/_posts/Microsoft%20Office%20製品を%20Windows%20のプラットフォーム上で別アプリケーションから操作する場合のテクノロジについて.md)
 - [Microsoft ストア アプリ版 Office 2016 (Centennial) での開発 – その1 – (DLL の読み込み)](./source/_posts/Microsoft%20ストア%20アプリ版%20Office%202016%20(Centennial)%20での開発%20–%20その1%20–%20(DLL%20の読み込み).md)
