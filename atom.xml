@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2024-12-25T08:07:07.403Z</updated>
+  <updated>2025-02-21T07:46:01.577Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する</title>
+    <link href="https://officesupportjp.github.io/blog/cm7eg3dd40000kc6y3kebhpid/"/>
+    <id>https://officesupportjp.github.io/blog/cm7eg3dd40000kc6y3kebhpid/</id>
+    <published>2025-02-21T00:00:00.000Z</published>
+    <updated>2025-02-21T07:46:01.577Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。</p><p>新たな情報がある場合には、随時この記事でお知らせします。</p><h1 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h1><p>Microsoft 365 App にて以下の操作をしたときに p1.aprimocdn.net への通信が発生します。</p><ul><li>[スタート] メニューから Excel 等を起動して、[開く] ボタンをクリックする</li><li>[名前を付けて保存] をクリックする</li></ul><p>このとき、プロキシ認証を利用している環境では「p1.aprimocdn.net のプロキシサーバーに接続しています」というメッセージが表示されます。</p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>本事象は、Microsoft 365 Apps のクラウド側の設定追加の影響で発生しています。</p><p>Microsoft 365 Apps から接続するサービスの定義 (クラウド側の設定) としてサードパーティーの NetDocuments のファイル共有サービスの定義が追加されました。</p><p>この新しいクラウド側の定義をクライアントが受信すると、以降、Microsoft 365 Apps のバックステージ ビューに、NetDocuments (サードパーティーのファイル共有サービス) が読み込まれ、<br>NetDocuments のアイコン画像取得のために「p1.aprimocdn.net」への通信が発生します。</p><p>現時点では、Microsoft 365 の通信先以外との通信が発生しないように対応検討中となります。</p><h1 id="対応案"><a href="#対応案" class="headerlink" title="対応案"></a>対応案</h1><p>サードパーティーのファイル共有サービスを全く使っていない場合は、以下 2 種類のポリシーのいずれかを設定いただくことで回避できます。</p><ul><li>[Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] のポリシー</li></ul><p>[ユーザーの構成]<br>- [ポリシー]<br>- [管理用テンプレート]<br>- [Microsoft Office 2016]<br>- [その他]<br>- [Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする]<br>を有効にし、[オンライン ストレージ フィルターの値] として “すべてのサード パーティサービスを無効にします” の設定値である 128 を設定します。</p><p>上記ポリシーを設定、適用すると以下のレジストリが作成されます。<br>レジストリを直接設定することでも同じ動作となります。</p><p>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\office\16.0\common\internet<br>名前 : onlinestorage<br>種類 : REG_DWORD<br>データ : 128<br>(16進数の場合は、80 となります)</p><ul><li>[サービス レベルのオプション] のポリシー</li></ul><p>[ユーザーの構成]<br>- [ポリシー]<br>- [管理用テンプレート]<br>- [Microsoft Office 2016]<br>- [ツール | オプション | 全般 | サービス オプション]<br>- [オンライン コンテンツ]<br>- [サービス レベルのオプション]<br>を有効にして、 “Microsoft のサービスのみ” にする</p><p>上記ポリシーを設定、適用すると以下のレジストリが作成されます。<br>レジストリを直接設定することでも同じ動作となります。</p><p>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\office\16.0\common\internet<br>名前 : serviceleveloptions<br>種類 : REG_DWORD<br>データ : 1</p><p>BOX 等、サードパーティーのファイル共有サービスの一部製品をご利用の場合は、上記 2 設定を実施すると、ご利用いただけなくなります (*1) ので、<br>上記設定は行わずに、「p1.aprimocdn.net」 へのプロキシ認証を除外することをご検討お願いいたします。</p><p>(*1)<br>[場所の追加] や [アカウント] – [サービスの追加] – [ストレージ] の項目が表示されなくなります。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。&lt;/p&gt;
+&lt;p&gt;新たな情報がある場合には、随時この記事でお知らせします。&lt;/p</summary>
+      
+    
+    
+    
+    
+    <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel シート タブの外観変更後、オートメーションのパフォーマンスが低下する</title>
+    <link href="https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/"/>
+    <id>https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/</id>
+    <published>2025-01-31T00:00:00.000Z</published>
+    <updated>2025-02-07T05:50:01.589Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2025&#x2F;01&#x2F;31 Update</strong></span><br><span style="color:#339966">本現象を修正する更新について追記しました。</span>  </p><p>こんにちは、Office サポート チームの中村です。</p><p>今回の記事では、Excel が新しい外観に変わった後、Excel オートメーションの処理パフォーマンスが大きく低下する場合がある現象について記載します。<br><br></p><p><strong><h3>1. 前提となる動作変更</h3></strong><br>Office デスクトップ アプリの新しいバージョンでは、Windows 11 の外観と一貫性のある外観への変更が進められています。この変更後、ウィンドウの配色が変化したり、ウィンドウ枠の角が丸みを帯びる、といった外観の変化があります。</p><p>参考) Office の新しい外観<br><a href="https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf</a></p><p>この Office デスクトップ アプリの全体的な外観変更に加え、Excel ではさらにシート タブも一貫性のある外観への変更を進めています。</p><p>&lt;シート タブ変更前&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_Before.png">  </p><p>&lt;シート タブ変更後&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_After.png">  </p><p>このシート タブの外観変更が行われた後、次に説明する Excel オートメーションのパフォーマンス低下の問題が生じることを確認しています。<br><br></p><p><strong><h3>2. 現象</h3></strong><br>先述のシート タブ外観変更後、多くのシートを持つブックにおいて、オートメーションで各シートに対する様々な操作を行うと、パフォーマンスが低下する場合があります。<br>どの程度影響を受けるかは、オートメーション処理内容に依存しますが、特に、.NET プログラムや PowerShell などの外部プログラムからの Excel オートメーションでは、大きくパフォーマンスが低下する傾向にあります。<br>また、シート数が増えるにつれて、処理時間の増加量がより大きく増えます。<br><br></p><p><strong><h3>3. 原因</h3></strong><br>新しいシート タブの外観を描画するため、描画処理を大きく変更しました。この新しい描画処理で、特にシート数が多いとき、以前の処理より時間を要することが原因です。<br><br></p><p><strong><h3>4. 現象発生バージョン</h3></strong><br>ご利用の製品とチャネル、OS によって、以下のバージョン以降で Excel のシート タブが新しい外観に変更されます。このバージョン以降でシート タブが新しい外観に変わると、現象が発生します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>Windows 11: バージョン 2308 (ビルド 16731.20170)<br>Windows 10: バージョン 2404 (ビルド 17531.20120)  </p><p>&lt;月次エンタープライズ チャネル&gt;<br>Windows 11: バージョン 2310 (ビルド 16924.20180)<br>Windows 10: バージョン 2408 (ビルド 17928.20216)  </p><p><strong>製品版 Office 2024</strong><br>Windows 11 &#x2F; Windows 10 ともに製品出荷バージョン以降全て</p><p><strong>製品版 Office 2021</strong><br>Windows 11 &#x2F; Windows 10 ともにバージョン 2308 (ビルド 16731.20170)  </p><p>上記以外の製品やチャネルでは、本記事作成時点でシート タブは新しい外観に変わっていないため、本問題の影響を受けません。<br>※ 上記の &lt;製品版 Office&gt; は、コンシューマー向け製品を指します。ボリューム ライセンス版 Office LTSC 2024 &#x2F; Office LTSC 2021 は影響を受けません。<br><br></p><p><strong><h3>5. 対処方法</h3></strong></p><p>以下のバージョンで本現象を修正しました。本バージョン以降に更新することで、本記事でご案内するシナリオのパフォーマンスが改善します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>バージョン 2501 (ビルド 18429.20132)  </p><p>※ 月次エンタープライズ チャネル向けには、2025 年 3 月に修正を含むバージョン 2501 を公開見込みです。</p><p><strong>製品版 Office 2024&#x2F;2021</strong><br>バージョン 2501 (ビルド 18429.20132)</p><br><p><strong><h3>6. 暫定回避策</h3></strong><br>※ 本現象について未修正のバージョン 2412 以前向けのご案内です。  </p><p>新しい外観を適用しないよう、Office の設定で変更することはできません。<br>現状の動作における暫定回避策として、以下の方法でパフォーマンス向上を図ることができることを確認しています。</p><ul><li>シート名に日本語 (DBCS 文字) を使用しない</li><li>外部プログラムからのオートメーションを、VBA での処理に変更する (外部プログラムからは、Application.Run で VBA を呼び出すことができます)<br></li></ul><p>上記の対応が難しい場合、他の暫定回避策としては、シート タブが新しい外観に変わる前のバージョンに戻すことが検討できます。(製品初期出荷時点から新しい外観となっている Office 2024 を除く)<br>ただし、現象がまだ発生しないバージョンは、チャネルによっては最新バージョンから大きくバージョンを戻す必要があり、サポートされないバージョンとなります。<br>古いバージョンには、最新のセキュリティ更新が含まれないため、バージョンを戻す対処を検討する場合は、十分にこの点を考慮いただきますようお願いします。恐れ入りますが、本問題の回避のため、サポートされないバージョンを利用することによって生じた問題について、マイクロソフトでは責任を負うことはできません。</p><p>クイック実行形式の Office を以前のバージョンに戻す基本的な手順は、以下の公開情報をご参照ください。</p><p>以前のバージョンの Office に戻す方法<br><a href="https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841">https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841</a><br>※ Apply To が Office 2019 までとなっていますが、Office 2021 も同じ手順でバージョンを戻すことができます。</p><p>手順 3 で指定するビルド番号 (16.0.xxxxx.yyyyy) は、ご利用の製品及びチャネル向けに過去にリリースされたビルドを以下の公開情報で確認し、先述の現象発生バージョンより前のビルドを使用します。</p><p>Microsoft 365 Apps の更新履歴 (日付別の一覧)<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date">https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date</a></p><p>Office LTSC 2024 および Office 2024 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024</a>  </p><p>Office LTSC 2021 および Office 2021 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021</a>  </p><p>注意:<br>エンタープライズ環境などでは、管理者が Office の更新バージョンを管理している場合があります。Office デスクトップ アプリの更新管理には様々な方法があるため、上記の基本手順ではバージョンを変更できない場合があります。このような場合は、ユーザー様のクライアント環境管理者にお問い合わせください。</p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2025&amp;#x2F;01&amp;#x2F;31 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;本現象を修正する更新について追記しました。&lt;/spa</summary>
+      
+    
+    
+    
+    
+    <category term="オートメーション" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"/>
+    
+    <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>ラベル ポリシー「ユーザーがメールとドキュメントにラベルを適用することを必須にする」が有効の場合 Excel アドイン (.xlam) 保存時にラベル適用が求められ保存できない</title>
@@ -72,17 +119,15 @@
     <link href="https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/"/>
     <id>https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/</id>
     <published>2024-11-28T00:00:00.000Z</published>
-    <updated>2024-12-13T04:04:10.016Z</updated>
+    <updated>2025-02-07T05:50:01.590Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><br><h2 id="Office-のインストール・更新・環境情報の採取"><a href="#Office-のインストール・更新・環境情報の採取" class="headerlink" title="Office のインストール・更新・環境情報の採取"></a>Office のインストール・更新・環境情報の採取</h2><ol><li><p>インストール、更新に関する調査の場合、C:\Windows\Temp をエクスプローラーで開き、このフォルダの中身が閲覧できる状態であることを確認します。管理者権限が求められる場合、管理者権限を入力します。 <span style="color:#ff0000"><strong>※重要※ インストール、更新に関する調査では、本手順を実施しない場合、正しくログ採取が出来ず、採取し直しとなります</strong></span></p></li><li><p><a href="MSOfficeinfo_v2.1.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_temp に出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。<br>※ C:\MS_temp フォルダが既に存在する場合、先にファイルを退避してください。</p></li><li><p>ライセンス認証に関連する事象の場合、<a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">こちら</a> をダウンロードし、licenseInfo.cmd をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li></ol><p><strong>取得した以下の情報を弊社にお寄せください</strong></p><p>・C:\MS_temp を zip で圧縮したファイル<br>・サインイン、ライセンス認証に関連する事象の場合、%temp% に出力された licensingInfo から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット<br><br></p><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><h2 id="環境情報ログ"><a href="#環境情報ログ" class="headerlink" title="環境情報ログ"></a>環境情報ログ</h2><ol><li><p><a href="MSOfficeinfo_v3.1.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_DATA 配下に出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・C:\MS_DATA に出力された MOI から始まる zip ファイル</p></li></ol><br><h2 id="インストール、更新ログ"><a href="#インストール、更新ログ" class="headerlink" title="インストール、更新ログ"></a>インストール、更新ログ</h2><ol start="0"><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=103236">Microsoft 365 Apps Deployment Log Collector</a> から <strong>officedeploymentlogcollector.exe</strong> をダウンロードします。</p></li><li><p><strong>officedeploymentlogcollector.exe</strong> をダブルクリックし、任意のフォルダに展開します。</p></li><li><p>展開したフォルダに配置された <strong>OfficeC2RLogCollector.exe</strong> を実行します。(端末の管理者権限が必要となります)</p></li><li><p>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Temp\C2RLogs 配下に出力された c2rlogs_ から始まる zip ファイルを取得ください</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・c2rlogs_ から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット</p></li></ol><br><h2 id="ライセンス認証ログ"><a href="#ライセンス認証ログ" class="headerlink" title="ライセンス認証ログ"></a>ライセンス認証ログ</h2><ol start="0"><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">Office Licensing Diagnostic Tool</a> から <strong>OfficeLicenseDiagnostic.zip</strong> をダウンロードし展開してください。</p></li><li><p><strong>licenseInfo.cmd</strong> をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・licensingInfo から始まる zip ファイル</p></li></ol><br><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;1&#x2F;29  Update</strong></span><br><span style="color:#339966">スクリプトを更新しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;2&#x2F;5  Update</strong></span><br><span style="color:#339966">採取方法を簡素化しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;本記事では Office のインストール・更新・環境情報の採取について解説します。&lt;/p&gt;
-&lt;br&gt;
-
-&lt;h2 id=&quot;Office-のインストール・更新・環境情報の採取&quot;&gt;&lt;a href=&quot;#Office-の</summary>
+&lt;h2 id=&quot;環境情報ログ&quot;&gt;&lt;a href=&quot;#環境情報ログ&quot; class=&quot;headerlink&quot; title=</summary>
       
     
     
@@ -91,32 +136,6 @@
     <category term="インストール" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/"/>
     
     <category term="更新" scheme="https://officesupportjp.github.io/blog/tags/%E6%9B%B4%E6%96%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel シート タブの外観変更後、オートメーションのパフォーマンスが低下する</title>
-    <link href="https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/"/>
-    <id>https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/</id>
-    <published>2024-11-08T00:00:00.000Z</published>
-    <updated>2024-12-13T04:04:10.013Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。</p><p>今回の記事では、Excel が新しい外観に変わった後、Excel オートメーションの処理パフォーマンスが大きく低下する場合がある現象について記載します。<br><br></p><p><strong><h3>1. 前提となる動作変更</h3></strong><br>Office デスクトップ アプリの新しいバージョンでは、Windows 11 の外観と一貫性のある外観への変更が進められています。この変更後、ウィンドウの配色が変化したり、ウィンドウ枠の角が丸みを帯びる、といった外観の変化があります。</p><p>参考) Office の新しい外観<br><a href="https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf</a></p><p>この Office デスクトップ アプリの全体的な外観変更に加え、Excel ではさらにシート タブも一貫性のある外観への変更を進めています。</p><p>&lt;シート タブ変更前&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_Before.png">  </p><p>&lt;シート タブ変更後&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_After.png">  </p><p>このシート タブの外観変更が行われた後、次に説明する Excel オートメーションのパフォーマンス低下の問題が生じることを確認しています。<br><br></p><p><strong><h3>2. 現象</h3></strong><br>先述のシート タブ外観変更後、多くのシートを持つブックにおいて、オートメーションで各シートに対する様々な操作を行うと、パフォーマンスが低下する場合があります。<br>どの程度影響を受けるかは、オートメーション処理内容に依存しますが、特に、.NET プログラムや PowerShell などの外部プログラムからの Excel オートメーションでは、大きくパフォーマンスが低下する傾向にあります。<br>また、シート数が増えるにつれて、処理時間の増加量がより大きく増えます。<br><br></p><p><strong><h3>3. 原因</h3></strong><br>新しいシート タブの外観を描画するため、描画処理を大きく変更しました。この新しい描画処理で、特にシート数が多いとき、以前の処理より時間を要することが原因です。<br><br></p><p><strong><h3>4. 現象発生バージョン</h3></strong><br>ご利用の製品とチャネル、OS によって、以下のバージョン以降で Excel のシート タブが新しい外観に変更されます。このバージョン以降でシート タブが新しい外観に変わると、現象が発生します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>Windows 11: バージョン 2308 (ビルド 16731.20170)<br>Windows 10: バージョン 2404 (ビルド 17531.20120)  </p><p>&lt;月次エンタープライズ チャネル&gt;<br>Windows 11: バージョン 2310 (ビルド 16924.20180)<br>Windows 10: バージョン 2408 (ビルド 17928.20216)  </p><p><strong>製品版 Office 2024</strong><br>Windows 11 &#x2F; Windows 10 ともに製品出荷バージョン以降全て</p><p><strong>製品版 Office 2021</strong><br>Windows 11 &#x2F; Windows 10 ともにバージョン 2308 (ビルド 16731.20170)  </p><p>上記以外の製品やチャネルでは、本記事作成時点でシート タブは新しい外観に変わっていないため、本問題の影響を受けません。<br>※ 上記の &lt;製品版 Office&gt; は、コンシューマー向け製品を指します。ボリューム ライセンス版 Office LTSC 2024 &#x2F; Office LTSC 2021 は影響を受けません。<br><br></p><p><strong><h3>5. 状況</h3></strong></p><p>本問題は弊社内で認識しており、現在対応方針を検討中です。<br><br></p><p><strong><h3>6. 暫定回避策</h3></strong><br>新しい外観を適用しないよう、Office の設定で変更することはできません。<br>現状の動作における暫定回避策として、以下の方法でパフォーマンス向上を図ることができることを確認しています。</p><ul><li>シート名に日本語 (DBCS 文字) を使用しない</li><li>外部プログラムからのオートメーションを、VBA での処理に変更する (外部プログラムからは、Application.Run で VBA を呼び出すことができます)<br></li></ul><p>上記の対応が難しい場合、他の暫定回避策としては、シート タブが新しい外観に変わる前のバージョンに戻すことが検討できます。(製品初期出荷時点から新しい外観となっている Office 2024 を除く)<br>ただし、現象がまだ発生しないバージョンは、チャネルによっては最新バージョンから大きくバージョンを戻す必要があり、サポートされないバージョンとなります。<br>古いバージョンには、最新のセキュリティ更新が含まれないため、バージョンを戻す対処を検討する場合は、十分にこの点を考慮いただきますようお願いします。恐れ入りますが、本問題の回避のため、サポートされないバージョンを利用することによって生じた問題について、マイクロソフトでは責任を負うことはできません。</p><p>クイック実行形式の Office を以前のバージョンに戻す基本的な手順は、以下の公開情報をご参照ください。</p><p>以前のバージョンの Office に戻す方法<br><a href="https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841">https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841</a><br>※ Apply To が Office 2019 までとなっていますが、Office 2021 も同じ手順でバージョンを戻すことができます。</p><p>手順 3 で指定するビルド番号 (16.0.xxxxx.yyyyy) は、ご利用の製品及びチャネル向けに過去にリリースされたビルドを以下の公開情報で確認し、先述の現象発生バージョンより前のビルドを使用します。</p><p>Microsoft 365 Apps の更新履歴 (日付別の一覧)<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date">https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date</a></p><p>Office LTSC 2024 および Office 2024 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024</a>  </p><p>Office LTSC 2021 および Office 2021 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021</a>  </p><p>注意:<br>エンタープライズ環境などでは、管理者が Office の更新バージョンを管理している場合があります。Office デスクトップ アプリの更新管理には様々な方法があるため、上記の基本手順ではバージョンを変更できない場合があります。このような場合は、ユーザー様のクライアント環境管理者にお問い合わせください。</p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;/p&gt;
-&lt;p&gt;今回の記事では、Excel が新しい外観に変わった後、Excel オートメーションの処理パフォーマンスが大きく低下する場合がある現象について記載します。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;h</summary>
-      
-    
-    
-    
-    
-    <category term="オートメーション" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"/>
-    
-    <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
     
   </entry>
   
@@ -463,29 +482,6 @@
     
     
     <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Word 文書内の図の位置がずれて印刷される現象について</title>
-    <link href="https://officesupportjp.github.io/blog/clc72h24j0001v0jo35060br5/"/>
-    <id>https://officesupportjp.github.io/blog/clc72h24j0001v0jo35060br5/</id>
-    <published>2022-12-28T00:00:00.000Z</published>
-    <updated>2023-02-07T07:57:41.460Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、図を含んだ Word 文書を印刷した際に、図の位置が編集中の表示箇所とは異なる位置で印刷される現象について説明します。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>図や図形等のオブジェクトが挿入されている Word 文書を印刷した際、編集中や印刷プレビューで確認できる図やオブジェクトの配置場所とは異なる場所に図やオブジェクトが印刷されてしまう場合があります。<br>Word 文書の構成内容に依存して発生する場合があり、また、毎回必ず位置がずれるわけではなく、正常な位置で印刷される場合もあります。</p><p>Microsoft 365 Apps の Word の他、Word 2019 や Word 2021、過去のバージョンの Word でも発生する場合があります。</p><h2 id="回避方法"><a href="#回避方法" class="headerlink" title="回避方法"></a>回避方法</h2><p>上記の現象について、Word のバックグラウンド印刷の設定を変更することで回避できる場合があります。<br>手順を以下に説明します。</p><ol><li>Word を起動します。</li><li>[ファイル] メニューより [オプション] を選択します。</li><li>「Word のオプション」 ダイアログで [詳細設定] を選択します。</li><li>[印刷] の項目内にある [バックグラウンドで印刷する] のチェックをオフにします。</li><li>[OK] を押して 「Word のオプション」 ダイアログを閉じます。</li><li>Word を終了します。</li></ol><p>この設定を行った後で Word 文書を開きなおし、印刷を行います。</p><h2 id="Word-のバックグラウンド印刷について"><a href="#Word-のバックグラウンド印刷について" class="headerlink" title="Word のバックグラウンド印刷について"></a>Word のバックグラウンド印刷について</h2><p>[バックグラウンドで印刷する] の設定は、既定ではチェックがオンになっています。<br>チェックのオン、オフそれぞれの場合の動作は以下となります。</p><p>チェックがオンの場合 :<br>印刷を実行中に Word の操作が可能となります。<br>Word のウィンドウの下部に表示されるステータス バーに印刷状況が表示されます。</p><p>チェックがオフの場合 :<br>印刷処理が完了するまで Word の操作を行えません。<br>印刷中には印刷中であることを示すメッセージが表示されます。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、図を含んだ Word 文書を印刷した際に、図の位置が編集中の表示箇所とは異なる位置で印刷される現象について説明します。&lt;/p&gt;
-&lt;h2 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;heade</summary>
-      
-    
-    
-    
-    
-    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
     
   </entry>
   
