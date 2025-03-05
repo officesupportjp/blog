@@ -7,15 +7,15 @@
   
   <title>Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する | Japan Office Client Support Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="こんにちは、Office サポート チームです。この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。 新たな情報がある場合には、随時この記事でお知らせします。 事象の詳細Microsoft 365 App にて以下の操作をしたときに p1.aprimocdn.net への通信が発生します。  [スタート] メニ">
+  <meta name="description" content="2025&#x2F;03&#x2F;05 Update [対応案] の内容を更新しました    こんにちは、Office サポート チームです。この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。 新たな情報がある場合には、随時この記事でお知らせします。 事象の詳細Microsoft 365 App にて以下の操作をしたときに">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する">
 <meta property="og:url" content="https://officesupportjp.github.io/blog/cm7eg3dd40000kc6y3kebhpid/index.html">
 <meta property="og:site_name" content="Japan Office Client Support Blog">
-<meta property="og:description" content="こんにちは、Office サポート チームです。この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。 新たな情報がある場合には、随時この記事でお知らせします。 事象の詳細Microsoft 365 App にて以下の操作をしたときに p1.aprimocdn.net への通信が発生します。  [スタート] メニ">
+<meta property="og:description" content="2025&#x2F;03&#x2F;05 Update [対応案] の内容を更新しました    こんにちは、Office サポート チームです。この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。 新たな情報がある場合には、随時この記事でお知らせします。 事象の詳細Microsoft 365 App にて以下の操作をしたときに">
 <meta property="og:locale" content="ja_JP">
 <meta property="article:published_time" content="2025-02-21T00:00:00.000Z">
-<meta property="article:modified_time" content="2025-02-21T08:14:22.528Z">
+<meta property="article:modified_time" content="2025-03-05T00:51:07.155Z">
 <meta property="article:author" content="Office Support Japan">
 <meta property="article:tag" content="クラウド ストレージ">
 <meta name="twitter:card" content="summary">
@@ -106,15 +106,21 @@
       <div class="article-share">
         Last Update: 
         <a href="/blog/cm7eg3dd40000kc6y3kebhpid/" class="article-date-single">    
-    
-    <time datetime="2025-02-21T00:00:00.000Z" itemprop="dateUpdated">2025-02-21</time>
+        
+    <time datetime="2025-03-05T00:00:00.000Z" itemprop="lastupdate">2025-03-05</time>    
     
 </a>              
       </div>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>こんにちは、Office サポート チームです。<br>この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。</p>
+        <span style="color:#ff0000">
+2025/03/05 Update
+[対応案] の内容を更新しました
+</span>
+
+
+<p>こんにちは、Office サポート チームです。<br>この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。</p>
 <p>新たな情報がある場合には、随時この記事でお知らせします。</p>
 <h1 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h1><p>Microsoft 365 App にて以下の操作をしたときに p1.aprimocdn.net への通信が発生します。</p>
 <ul>
@@ -126,7 +132,9 @@
 <p>Microsoft 365 Apps から接続するサービスの定義 (クラウド側の設定) としてサードパーティーの NetDocuments のファイル共有サービスの定義が追加されました。</p>
 <p>この新しいクラウド側の定義をクライアントが受信すると、以降、Microsoft 365 Apps のバックステージ ビューに、NetDocuments (サードパーティーのファイル共有サービス) が読み込まれ、<br>NetDocuments のアイコン画像取得のために「p1.aprimocdn.net」への通信が発生します。</p>
 <p>現時点では、Microsoft 365 の通信先以外との通信が発生しないように対応検討中となります。</p>
-<h1 id="対応案"><a href="#対応案" class="headerlink" title="対応案"></a>対応案</h1><p>サードパーティーのファイル共有サービスを全く使っていない場合は、以下 2 種類のポリシーのいずれかを設定いただくことで回避できます。</p>
+<h1 id="対応案"><a href="#対応案" class="headerlink" title="対応案"></a>対応案</h1><p><span style="color:#ff0000">2025&#x2F;03&#x2F;05 現在、NetDocuments のアイコン画像取得のための通信先が、Microsoft 365 Apps をご利用いただくにあたり必須の通信先である 「odc.officeapps.live.com」 へ変更になっております。<br>そのため、新しい設定を受け取った端末では、「p1.aprimocdn.net」への通信は行いませんので、本事象は発生いたしません。</span></p>
+<p><span style="color:#ff0000">新しい設定を受け取った端末では、本事象に対する対応として下記のポリシー設定は不要となります。既に設定いただいている場合は、必要に応じて設定の見直しをご検討ください。</span></p>
+<p>サードパーティーのファイル共有サービスを全く使っていない場合は、以下 2 種類のポリシーのいずれかを設定いただくことで回避できます。</p>
 <ul>
 <li>[Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] のポリシー</li>
 </ul>
