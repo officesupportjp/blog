@@ -1,11 +1,17 @@
 ---
 title: Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する 
 date: '2025-02-21'
+lastupdate: '2025-03-05'
 id: cm7eg3dd40000kc6y3kebhpid
 tags: 
  - クラウド ストレージ
 
 ---
+<span style="color:#ff0000">
+2025/03/05 Update
+[対応案] の内容を更新しました
+</span>
+
 
 こんにちは、Office サポート チームです。
 この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。
@@ -34,6 +40,11 @@ NetDocuments のアイコン画像取得のために「p1.aprimocdn.net」への
 
 
 # 対応案
+<span style="color:#ff0000">2025/03/05 現在、NetDocuments のアイコン画像取得のための通信先が、Microsoft 365 Apps をご利用いただくにあたり必須の通信先である 「odc.officeapps.live.com」 へ変更になっております。\
+そのため、新しい設定を受け取った端末では、「p1.aprimocdn.net」への通信は行いませんので、本事象は発生いたしません。</span>
+
+<span style="color:#ff0000">新しい設定を受け取った端末では、本事象に対する対応として下記のポリシー設定は不要となります。既に設定いただいている場合は、必要に応じて設定の見直しをご検討ください。</span>
+
 サードパーティーのファイル共有サービスを全く使っていない場合は、以下 2 種類のポリシーのいずれかを設定いただくことで回避できます。
 
 - [Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] のポリシー
