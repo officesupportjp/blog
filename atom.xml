@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-03-14T02:42:53.685Z</updated>
+  <updated>2025-03-14T07:05:18.816Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Excel でユニバーサル プリントを使用して印刷した場合の現象について</title>
+    <link href="https://officesupportjp.github.io/blog/cm88fpn830000146y52sf2mbd/"/>
+    <id>https://officesupportjp.github.io/blog/cm88fpn830000146y52sf2mbd/</id>
+    <published>2025-03-14T00:00:00.000Z</published>
+    <updated>2025-03-14T07:05:18.816Z</updated>
+    
+    <content type="html"><![CDATA[<br><p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel でユニバーサル プリントを使用して印刷した場合に発生する現象について説明します。</p><h3 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h3><p>Excel のセルの書式設定で塗りつぶしパターンを指定しているファイルをユニバーサル プリントにて印刷した場合、印刷結果が出力されない場合があります。</p><p><strong>参考</strong><br>ユニバーサル プリントについては以下を参照ください。</p><p>ユニバーサル プリントのドキュメント<br><a href="https://learn.microsoft.com/ja-jp/universal-print/">https://learn.microsoft.com/ja-jp/universal-print/</a></p><h3 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h3><p>Excel からの印刷時に、OS 付属の 「Microsoft Print to PDF」 を指定して印刷操作を行い PDF 形式のファイルを作成します。その後に作成された PDF ファイルを開いてユニバーサル プリントにて印刷を行います。</p><p>Excel ファイルの内容を編集可能な場合は、セルの書式設定にて塗りつぶしパターンの設定を解除します。<br>セルの書式設定ダイアログで、以下のように [パターンの種類] のドロップダウンを展開して表示される一覧より左上のものを選択します。</p><p><img src="/blog/cm88fpn830000146y52sf2mbd/01.png"><br><br><br><br></p><p>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;br&gt;
+
+&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Excel でユニバーサル プリントを使用して印刷した場合に発生する現象について説明します。&lt;/p&gt;
+&lt;h3 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;headerlink&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
+    
+    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Excel ファイルを開くパフォーマンスが低下する</title>
     <link href="https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/"/>
     <id>https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/</id>
     <published>2025-03-13T15:00:00.000Z</published>
-    <updated>2025-03-14T02:42:53.685Z</updated>
+    <updated>2025-03-14T04:16:57.384Z</updated>
     
     <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel 利用に Excel ファイルを開くパフォーマンスが低下する現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Appsバージョン 2402 以降の Excel では、バージョン 2302 等の以前のバージョンと比較して、ふたつ目の Excel ファイルを開くまでの待ち時間が長くなる (ファイルを開くのが遅い) 場合があります。</p><p><strong>再現手順</strong><br>1 下記のような Excel ファイルを用意します。</p><p>A.xlsx  (サイズ : 約 20MB)<br>B.xlsx (サイズ : 約 60KB) </p><p>※ ひとつ目に開く Excel ファイルのサイズが大きいと、2つ目の Excel ファイルを開くのがより遅くなる傾向があることから、A.xlsx はサイズの大きなファイルとしています。</p><p>2 ひとつ目の Excel ファイル (A.xlsx) を開く操作をします。<br>画面上で A.xlsx が開いたことを確認します。</p><p>3 ふたつ目の Excel ファイル (B.xlsx) を開く操作をします。<br>B.xlsxが開かれるまでマウスから手を放すなどして何も操作しません。</p><p>4 画面上でふたつ目の Excel ファイル (B.xlsx) が開いたことを確認します。</p><p><strong>結果</strong><br>以前のバージョンと比較して、Microsoft 365 Apps バージョン 2402 以降の Excel  のほうが<br>ふたつ目の Excel ファイル (B.xlsx) を開くまでの待ち時間が長くなる(ファイルを開くのが遅い ) 傾向が確認できます。<br>※ 手順 3 から 4 までの、ふたつ目の Excel ファイル (B.xlsx) が開くまでの時間を計測して比較します。</p><h3 id="2-対処方法"><a href="#2-対処方法" class="headerlink" title="2. 対処方法"></a>2. 対処方法</h3><p>ふたつ目の Excel ファイルを開いた後に、ひとつ目の Excel ファイルを開いている Excel のウィンドウ上でマウスを動かすことで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><p>手順:<br>1 ひとつ目の Excel ファイル (A.xlsx) を開きます。<br>画面上で A.xlsx が開いたことを確認します。</p><p>2 ふたつ目の Excel ファイル  (B.xlsx) を開きます。</p><p>3 手順 1 で開いたExcel のウィンドウ上でマウスを動かします。(Excel ウィンドウ上でマウスを動かすことやセルをクリックする等の操作をします)</p><p>手順 3 を実施することで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><h3 id="3-今後の対応予定"><a href="#3-今後の対応予定" class="headerlink" title="3. 今後の対応予定"></a>3. 今後の対応予定</h3><p>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
     
@@ -466,29 +493,6 @@
     
     
     <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel 2016 で 3D マップを利用するとエラーが発生する (状態コード 4)</title>
-    <link href="https://officesupportjp.github.io/blog/cldu0kdx900004k6yd6dvgatz/"/>
-    <id>https://officesupportjp.github.io/blog/cldu0kdx900004k6yd6dvgatz/</id>
-    <published>2023-02-06T15:00:00.000Z</published>
-    <updated>2023-02-16T04:50:10.968Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの佐村です。<br>今回の投稿では、Excel 2016 において、[挿入] タブの 3D マップを利用時にエラーとなる現象についてご案内いたします。  </p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Excel 2016 の 3D マップ機能を利用しようとすると以下のエラーが発生します。  </p><p>3D Maps<br>3D Maps が Microsoft Bing 地図サービスに接続しているときにエラーが発生しました。　　<br>機能が制限される場合があります (状態コード: 4)。　</p><p><img src="/blog/cldu0kdx900004k6yd6dvgatz/img1.png"></p><p>その後、DirectX の初期化に関するエラーが表示され、3D マップ機能が起動しません。<br>※過去の利用履歴により上記エラー後に 3D マップ機能が起動することもあります。  </p><p><img src="/blog/cldu0kdx900004k6yd6dvgatz/img2.png"></p><h1 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h1><p>3D マップで利用する .Net framework で TLS 1.2 を利用して接続できるように<br>以下のレジストリを構成 (新規作成) します。<br>レジストリの設定には端末の管理者権限が必要となります。 </p><p>&lt;OS と Office が同じ bit&gt;<br>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319<br>名前 : SchUseStrongCrypto<br>種類 : REG_DWORD<br>値 : 1  </p><p>&lt;64bit OS 上に 32bit の Office&gt;<br>キー : HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\.NETFramework\v4.0.30319<br>名前 : SchUseStrongCrypto<br>種類 : REG_DWORD<br>値 : 1  </p><h3 id="ご参考"><a href="#ご参考" class="headerlink" title="ご参考"></a>ご参考</h3><p>クライアントの SSL&#x2F;TLS プロトコルと暗号スイートのAD FSを管理する<br><a href="https://learn.microsoft.com/ja-jp/windows-server/identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs#enabling-strong-authentication-for-net-applications">https://learn.microsoft.com/ja-jp/windows-server/identity/ad-fs/operations/manage-ssl-protocols-in-ad-fs#enabling-strong-authentication-for-net-applications</a>  </p><h1 id="エラーの原因"><a href="#エラーの原因" class="headerlink" title="エラーの原因"></a>エラーの原因</h1><p>「状態コード: 4」のエラーは、TLS での接続に失敗していることが原因として考えられます。<br>2022年の下旬 (10月頃) に、コンテンツ配信サービス (3D マップ) 側でセキュリティ要件を変更したことにより、TLS 1.2 の接続が必要となりました。<br>これまでは TLS 1.0&#x2F;1.1 での接続も動作していましたが、TLS 1.2 での接続を必要とし、TLS 1.0&#x2F; 1.1 での接続をエラーとするよう変更がありました。 </p><p>Office 2019 や Microsoft 365 Apps では更新プログラムにより TLS 1.2 に<br>対応するように修正されましたが、Office 2016 は延長サポートフェーズであるため<br>更新による修正がリリースされていません。<br>そのため、レジストリを設定して TLS の接続方法を変更する必要があります。  </p><h1 id="レジストリの構成による影響について"><a href="#レジストリの構成による影響について" class="headerlink" title="レジストリの構成による影響について"></a>レジストリの構成による影響について</h1><p>レジストリ SchUseStrongCrypto&#x3D;1 とすると、.NET Framework 4.5.2 のバージョンで既定で利用されるプロトコルが TLS 1.2 &#x2F; 1.1 &#x2F; 1.0 となります。<br>※高いバージョンから優先的に使用されるため、基本的には TLS 1.2 を利用します。  </p><p>このレジストリが未指定または 0 となっている場合は、.NET Framework 4.5.2 では既定で利用されるプロトコルは SSL 3.0 &#x2F; TLS 1.0 となります。<br>また、.NET Framework のプログラム上で明示的にプロトコルバージョンを指定している場合上記のレジストリの値や有無に関わらず、プログラムで指定したバージョンのプロトコルを利用します。  </p><p>以上のことから、影響としてはプログラム上で明示的にプロトコルバージョンを指定して「いない」、かつ.NET Framework 4.5.2 をターゲットにビルドされているアプリを利用する場合に通信のプロトコルが変更されます。  </p><p>上記条件で通信先のサービスで TLS 1.2 をサポートしていない場合 (レガシサービスの場合) はエラーとなる可能性はございますが、セキュリティ観点から TLS 1.2 への対応を進めていただくことを推奨しております。  </p><h3 id="ご参考-1"><a href="#ご参考-1" class="headerlink" title="ご参考"></a>ご参考</h3><p>.NET Framework で TLS 1.1 および TLS 1.2 を有効化する方法 - まとめ –<br>※#6 をご参照ください。<br><a href="https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12">https://jpdsi.github.io/blog/internet-explorer-microsoft-edge/dotnet-framework-tls12</a> </p><p>今回の投稿は以上です。<br>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。 </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの佐村です。&lt;br&gt;今回の投稿では、Excel 2016 において、[挿入] タブの 3D マップを利用時にエラーとなる現象についてご案内いたします。  &lt;/p&gt;
-&lt;h1 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;heade</summary>
-      
-    
-    
-    
-    
-    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
     
   </entry>
   
