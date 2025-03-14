@@ -30,6 +30,7 @@
 - [Excel for Microsoft 365 で上書きモードで DBCS を 1 文字を編集すると 2 文字分上書きされる](./source/_posts/Excel%20for%20Microsoft%20365%20で上書きモードで%20DBCS%20を%201%20文字を編集すると%202%20文字分上書きされる.md)
 - [Excel で ScrollArea プロパティを設定すると、キーボード操作でシートがスクロールしない](./source/_posts/Excel%20で%20ScrollArea%20プロパティを設定すると、キーボード操作でシートがスクロールしない.md)
 - [Excel でブックを開くプロセスを統合するメリット](./source/_posts/Excel%20でブックを開くプロセスを統合するメリット.md)
+- [Excel でユニバーサル プリントを使用して印刷した場合の現象について](./source/_posts/Excel%20でユニバーサル%20プリントを使用して印刷した場合の現象について.md)
 - [Excel で図形やテキストの表示・印刷でずれやサイズ変化が生じる理由と対処](./source/_posts/Excel%20で図形やテキストの表示・印刷でずれやサイズ変化が生じる理由と対処.md)
 - [Excel に入力した記号のフォントが Cambria Math に変更される事象について](./source/_posts/Excel%20に入力した記号のフォントが%20Cambria%20Math%20に変更される事象について.md)
 - [Excel の CodeName プロパティが取得できない動作](./source/_posts/Excel%20の%20CodeName%20プロパティが取得できない動作.md)
@@ -157,3 +158,4 @@
 - [必要なサービスが無効になっていますと表示される現象について](./source/_posts/必要なサービスが無効になっていますと表示される現象について.md)
 - [数式エディター 3.0 の機能削除について](./source/_posts/数式エディター%203.0%20の機能削除について.md)
 - [日本語入力中に Office アプリケーションが異常終了する場合がある現象について](./source/_posts/日本語入力中に%20Office%20アプリケーションが異常終了する場合がある現象について.md)
+- [暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する](./source/_posts/暗号化された%20Office%20ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの%20%localappdata%%20フォルダ配下%20Packages%20フォルダに%20oice_xx_xxxxxxxx_xxxxxxxx_xxxx%20フォルダが残存する.md)
