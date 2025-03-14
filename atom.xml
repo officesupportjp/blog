@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-03-05T00:51:07.155Z</updated>
+  <updated>2025-03-14T02:42:53.685Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Excel ファイルを開くパフォーマンスが低下する</title>
+    <link href="https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/"/>
+    <id>https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/</id>
+    <published>2025-03-13T15:00:00.000Z</published>
+    <updated>2025-03-14T02:42:53.685Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel 利用に Excel ファイルを開くパフォーマンスが低下する現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Appsバージョン 2402 以降の Excel では、バージョン 2302 等の以前のバージョンと比較して、ふたつ目の Excel ファイルを開くまでの待ち時間が長くなる (ファイルを開くのが遅い) 場合があります。</p><p><strong>再現手順</strong><br>1 下記のような Excel ファイルを用意します。</p><p>A.xlsx  (サイズ : 約 20MB)<br>B.xlsx (サイズ : 約 60KB) </p><p>※ ひとつ目に開く Excel ファイルのサイズが大きいと、2つ目の Excel ファイルを開くのがより遅くなる傾向があることから、A.xlsx はサイズの大きなファイルとしています。</p><p>2 ひとつ目の Excel ファイル (A.xlsx) を開く操作をします。<br>画面上で A.xlsx が開いたことを確認します。</p><p>3 ふたつ目の Excel ファイル (B.xlsx) を開く操作をします。<br>B.xlsxが開かれるまでマウスから手を放すなどして何も操作しません。</p><p>4 画面上でふたつ目の Excel ファイル (B.xlsx) が開いたことを確認します。</p><p><strong>結果</strong><br>以前のバージョンと比較して、Microsoft 365 Apps バージョン 2402 以降の Excel  のほうが<br>ふたつ目の Excel ファイル (B.xlsx) を開くまでの待ち時間が長くなる(ファイルを開くのが遅い ) 傾向が確認できます。<br>※ 手順 3 から 4 までの、ふたつ目の Excel ファイル (B.xlsx) が開くまでの時間を計測して比較します。</p><h3 id="2-対処方法"><a href="#2-対処方法" class="headerlink" title="2. 対処方法"></a>2. 対処方法</h3><p>ふたつ目の Excel ファイルを開いた後に、ひとつ目の Excel ファイルを開いている Excel のウィンドウ上でマウスを動かすことで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><p>手順:<br>1 ひとつ目の Excel ファイル (A.xlsx) を開きます。<br>画面上で A.xlsx が開いたことを確認します。</p><p>2 ふたつ目の Excel ファイル  (B.xlsx) を開きます。</p><p>3 手順 1 で開いたExcel のウィンドウ上でマウスを動かします。(Excel ウィンドウ上でマウスを動かすことやセルをクリックする等の操作をします)</p><p>手順 3 を実施することで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><h3 id="3-今後の対応予定"><a href="#3-今後の対応予定" class="headerlink" title="3. 今後の対応予定"></a>3. 今後の対応予定</h3><p>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Excel 利用に Excel ファイルを開くパフォーマンスが低下する現象について説明します。&lt;/p&gt;
+&lt;h3 id=&quot;1-現象&quot;&gt;&lt;a href=&quot;#1-現象&quot; class=&quot;headerlink&quot; </summary>
+      
+    
+    
+    
+    
+    <category term="パフォーマンス" scheme="https://officesupportjp.github.io/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/"/>
+    
+    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel シート タブの外観変更後、オートメーションのパフォーマンスが低下する</title>
+    <link href="https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/"/>
+    <id>https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/</id>
+    <published>2025-03-12T00:00:00.000Z</published>
+    <updated>2025-03-14T04:07:26.114Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2025&#x2F;01&#x2F;31 Update</strong></span><br><span style="color:#339966">Microsoft 365 Apps 最新チャネル、永続ライセンス向けの本現象を修正する更新について追記しました。</span>  </p><p><span style="color:#ff0000"><strong>2025&#x2F;03&#x2F;12 Update</strong></span><br><span style="color:#339966">Microsoft 365 Apps 月次エンタープライズ チャネル向けの本現象を修正する更新について追記しました。</span><br><br></p><p>こんにちは、Office サポート チームの中村です。</p><p>今回の記事では、Excel が新しい外観に変わった後、Excel オートメーションの処理パフォーマンスが大きく低下する場合がある現象について記載します。<br><br></p><p><strong><h3>1. 前提となる動作変更</h3></strong><br>Office デスクトップ アプリの新しいバージョンでは、Windows 11 の外観と一貫性のある外観への変更が進められています。この変更後、ウィンドウの配色が変化したり、ウィンドウ枠の角が丸みを帯びる、といった外観の変化があります。</p><p>参考) Office の新しい外観<br><a href="https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf</a></p><p>この Office デスクトップ アプリの全体的な外観変更に加え、Excel ではさらにシート タブも一貫性のある外観への変更を進めています。</p><p>&lt;シート タブ変更前&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_Before.png">  </p><p>&lt;シート タブ変更後&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_After.png">  </p><p>このシート タブの外観変更が行われた後、次に説明する Excel オートメーションのパフォーマンス低下の問題が生じることを確認しています。<br><br></p><p><strong><h3>2. 現象</h3></strong><br>先述のシート タブ外観変更後、多くのシートを持つブックにおいて、オートメーションで各シートに対する様々な操作を行うと、パフォーマンスが低下する場合があります。<br>どの程度影響を受けるかは、オートメーション処理内容に依存しますが、特に、.NET プログラムや PowerShell などの外部プログラムからの Excel オートメーションでは、大きくパフォーマンスが低下する傾向にあります。<br>また、シート数が増えるにつれて、処理時間の増加量がより大きく増えます。<br><br></p><p><strong><h3>3. 原因</h3></strong><br>新しいシート タブの外観を描画するため、描画処理を大きく変更しました。この新しい描画処理で、特にシート数が多いとき、以前の処理より時間を要することが原因です。<br><br></p><p><strong><h3>4. 現象発生バージョン</h3></strong><br>ご利用の製品とチャネル、OS によって、以下のバージョン以降で Excel のシート タブが新しい外観に変更されます。このバージョン以降でシート タブが新しい外観に変わると、現象が発生します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>Windows 11: バージョン 2308 (ビルド 16731.20170)<br>Windows 10: バージョン 2404 (ビルド 17531.20120)  </p><p>&lt;月次エンタープライズ チャネル&gt;<br>Windows 11: バージョン 2310 (ビルド 16924.20180)<br>Windows 10: バージョン 2408 (ビルド 17928.20216)  </p><p><strong>製品版 Office 2024</strong><br>Windows 11 &#x2F; Windows 10 ともに製品出荷バージョン以降全て</p><p><strong>製品版 Office 2021</strong><br>Windows 11 &#x2F; Windows 10 ともにバージョン 2308 (ビルド 16731.20170)  </p><p>上記以外の製品やチャネルでは、本記事作成時点でシート タブは新しい外観に変わっていないため、本問題の影響を受けません。<br>※ 上記の &lt;製品版 Office&gt; は、コンシューマー向け製品を指します。ボリューム ライセンス版 Office LTSC 2024 &#x2F; Office LTSC 2021 は影響を受けません。<br><br></p><p><strong><h3>5. 対処方法</h3></strong></p><p>以下のバージョンで本現象を修正しました。本バージョン以降に更新することで、本記事でご案内するシナリオのパフォーマンスが改善します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>バージョン 2501 (ビルド 18429.20132)  </p><p>&lt;月次エンタープライズ チャネル&gt;<br>バージョン 2501 (ビルド 18429.20200)  </p><p><strong>製品版 Office 2024&#x2F;2021</strong><br>バージョン 2501 (ビルド 18429.20132)</p><br><p><strong><h3>6. 暫定回避策</h3></strong><br>※ 本現象について未修正のバージョン 2412 以前向けのご案内です。  </p><p>新しい外観を適用しないよう、Office の設定で変更することはできません。<br>現状の動作における暫定回避策として、以下の方法でパフォーマンス向上を図ることができることを確認しています。</p><ul><li>シート名に日本語 (DBCS 文字) を使用しない</li><li>外部プログラムからのオートメーションを、VBA での処理に変更する (外部プログラムからは、Application.Run で VBA を呼び出すことができます)<br></li></ul><p>上記の対応が難しい場合、他の暫定回避策としては、シート タブが新しい外観に変わる前のバージョンに戻すことが検討できます。(製品初期出荷時点から新しい外観となっている Office 2024 を除く)<br>ただし、現象がまだ発生しないバージョンは、チャネルによっては最新バージョンから大きくバージョンを戻す必要があり、サポートされないバージョンとなります。<br>古いバージョンには、最新のセキュリティ更新が含まれないため、バージョンを戻す対処を検討する場合は、十分にこの点を考慮いただきますようお願いします。恐れ入りますが、本問題の回避のため、サポートされないバージョンを利用することによって生じた問題について、マイクロソフトでは責任を負うことはできません。</p><p>クイック実行形式の Office を以前のバージョンに戻す基本的な手順は、以下の公開情報をご参照ください。</p><p>以前のバージョンの Office に戻す方法<br><a href="https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841">https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841</a><br>※ Apply To が Office 2019 までとなっていますが、Office 2021 も同じ手順でバージョンを戻すことができます。</p><p>手順 3 で指定するビルド番号 (16.0.xxxxx.yyyyy) は、ご利用の製品及びチャネル向けに過去にリリースされたビルドを以下の公開情報で確認し、先述の現象発生バージョンより前のビルドを使用します。</p><p>Microsoft 365 Apps の更新履歴 (日付別の一覧)<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date">https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date</a></p><p>Office LTSC 2024 および Office 2024 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024</a>  </p><p>Office LTSC 2021 および Office 2021 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021</a>  </p><p>注意:<br>エンタープライズ環境などでは、管理者が Office の更新バージョンを管理している場合があります。Office デスクトップ アプリの更新管理には様々な方法があるため、上記の基本手順ではバージョンを変更できない場合があります。このような場合は、ユーザー様のクライアント環境管理者にお問い合わせください。</p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2025&amp;#x2F;01&amp;#x2F;31 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;Microsoft 365 Apps 最新チャネル、</summary>
+      
+    
+    
+    
+    
+    <category term="オートメーション" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"/>
+    
+    <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
+    
+  </entry>
   
   <entry>
     <title>Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する</title>
@@ -41,30 +90,6 @@
     
     
     <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Excel シート タブの外観変更後、オートメーションのパフォーマンスが低下する</title>
-    <link href="https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/"/>
-    <id>https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/</id>
-    <published>2025-01-31T00:00:00.000Z</published>
-    <updated>2025-02-07T05:50:01.589Z</updated>
-    
-    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2025&#x2F;01&#x2F;31 Update</strong></span><br><span style="color:#339966">本現象を修正する更新について追記しました。</span>  </p><p>こんにちは、Office サポート チームの中村です。</p><p>今回の記事では、Excel が新しい外観に変わった後、Excel オートメーションの処理パフォーマンスが大きく低下する場合がある現象について記載します。<br><br></p><p><strong><h3>1. 前提となる動作変更</h3></strong><br>Office デスクトップ アプリの新しいバージョンでは、Windows 11 の外観と一貫性のある外観への変更が進められています。この変更後、ウィンドウの配色が変化したり、ウィンドウ枠の角が丸みを帯びる、といった外観の変化があります。</p><p>参考) Office の新しい外観<br><a href="https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf</a></p><p>この Office デスクトップ アプリの全体的な外観変更に加え、Excel ではさらにシート タブも一貫性のある外観への変更を進めています。</p><p>&lt;シート タブ変更前&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_Before.png">  </p><p>&lt;シート タブ変更後&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_After.png">  </p><p>このシート タブの外観変更が行われた後、次に説明する Excel オートメーションのパフォーマンス低下の問題が生じることを確認しています。<br><br></p><p><strong><h3>2. 現象</h3></strong><br>先述のシート タブ外観変更後、多くのシートを持つブックにおいて、オートメーションで各シートに対する様々な操作を行うと、パフォーマンスが低下する場合があります。<br>どの程度影響を受けるかは、オートメーション処理内容に依存しますが、特に、.NET プログラムや PowerShell などの外部プログラムからの Excel オートメーションでは、大きくパフォーマンスが低下する傾向にあります。<br>また、シート数が増えるにつれて、処理時間の増加量がより大きく増えます。<br><br></p><p><strong><h3>3. 原因</h3></strong><br>新しいシート タブの外観を描画するため、描画処理を大きく変更しました。この新しい描画処理で、特にシート数が多いとき、以前の処理より時間を要することが原因です。<br><br></p><p><strong><h3>4. 現象発生バージョン</h3></strong><br>ご利用の製品とチャネル、OS によって、以下のバージョン以降で Excel のシート タブが新しい外観に変更されます。このバージョン以降でシート タブが新しい外観に変わると、現象が発生します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>Windows 11: バージョン 2308 (ビルド 16731.20170)<br>Windows 10: バージョン 2404 (ビルド 17531.20120)  </p><p>&lt;月次エンタープライズ チャネル&gt;<br>Windows 11: バージョン 2310 (ビルド 16924.20180)<br>Windows 10: バージョン 2408 (ビルド 17928.20216)  </p><p><strong>製品版 Office 2024</strong><br>Windows 11 &#x2F; Windows 10 ともに製品出荷バージョン以降全て</p><p><strong>製品版 Office 2021</strong><br>Windows 11 &#x2F; Windows 10 ともにバージョン 2308 (ビルド 16731.20170)  </p><p>上記以外の製品やチャネルでは、本記事作成時点でシート タブは新しい外観に変わっていないため、本問題の影響を受けません。<br>※ 上記の &lt;製品版 Office&gt; は、コンシューマー向け製品を指します。ボリューム ライセンス版 Office LTSC 2024 &#x2F; Office LTSC 2021 は影響を受けません。<br><br></p><p><strong><h3>5. 対処方法</h3></strong></p><p>以下のバージョンで本現象を修正しました。本バージョン以降に更新することで、本記事でご案内するシナリオのパフォーマンスが改善します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>バージョン 2501 (ビルド 18429.20132)  </p><p>※ 月次エンタープライズ チャネル向けには、2025 年 3 月に修正を含むバージョン 2501 を公開見込みです。</p><p><strong>製品版 Office 2024&#x2F;2021</strong><br>バージョン 2501 (ビルド 18429.20132)</p><br><p><strong><h3>6. 暫定回避策</h3></strong><br>※ 本現象について未修正のバージョン 2412 以前向けのご案内です。  </p><p>新しい外観を適用しないよう、Office の設定で変更することはできません。<br>現状の動作における暫定回避策として、以下の方法でパフォーマンス向上を図ることができることを確認しています。</p><ul><li>シート名に日本語 (DBCS 文字) を使用しない</li><li>外部プログラムからのオートメーションを、VBA での処理に変更する (外部プログラムからは、Application.Run で VBA を呼び出すことができます)<br></li></ul><p>上記の対応が難しい場合、他の暫定回避策としては、シート タブが新しい外観に変わる前のバージョンに戻すことが検討できます。(製品初期出荷時点から新しい外観となっている Office 2024 を除く)<br>ただし、現象がまだ発生しないバージョンは、チャネルによっては最新バージョンから大きくバージョンを戻す必要があり、サポートされないバージョンとなります。<br>古いバージョンには、最新のセキュリティ更新が含まれないため、バージョンを戻す対処を検討する場合は、十分にこの点を考慮いただきますようお願いします。恐れ入りますが、本問題の回避のため、サポートされないバージョンを利用することによって生じた問題について、マイクロソフトでは責任を負うことはできません。</p><p>クイック実行形式の Office を以前のバージョンに戻す基本的な手順は、以下の公開情報をご参照ください。</p><p>以前のバージョンの Office に戻す方法<br><a href="https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841">https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841</a><br>※ Apply To が Office 2019 までとなっていますが、Office 2021 も同じ手順でバージョンを戻すことができます。</p><p>手順 3 で指定するビルド番号 (16.0.xxxxx.yyyyy) は、ご利用の製品及びチャネル向けに過去にリリースされたビルドを以下の公開情報で確認し、先述の現象発生バージョンより前のビルドを使用します。</p><p>Microsoft 365 Apps の更新履歴 (日付別の一覧)<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date">https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date</a></p><p>Office LTSC 2024 および Office 2024 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024</a>  </p><p>Office LTSC 2021 および Office 2021 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021</a>  </p><p>注意:<br>エンタープライズ環境などでは、管理者が Office の更新バージョンを管理している場合があります。Office デスクトップ アプリの更新管理には様々な方法があるため、上記の基本手順ではバージョンを変更できない場合があります。このような場合は、ユーザー様のクライアント環境管理者にお問い合わせください。</p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2025&amp;#x2F;01&amp;#x2F;31 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;本現象を修正する更新について追記しました。&lt;/spa</summary>
-      
-    
-    
-    
-    
-    <category term="オートメーション" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"/>
-    
-    <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
     
   </entry>
   
@@ -464,29 +489,6 @@
     
     
     <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>「必要なサービスが無効になっています」と表示される現象について(旧)</title>
-    <link href="https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqvb/"/>
-    <id>https://officesupportjp.github.io/blog/cld8jp0gd00422skj5eabeqvb/</id>
-    <published>2023-01-23T00:00:00.000Z</published>
-    <updated>2023-10-30T00:14:47.604Z</updated>
-    
-    <content type="html"><![CDATA[<p>本ページは <a href="https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/">「必要なサービスが無効になっています」と表示される現象について</a> に移動しました。</p><p><span style="color:#ff0000"><strong>2023&#x2F;9&#x2F;15  Update</strong></span><br><span style="color:#339966">有害サイトと分類されていたため移動しました</span></p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本ページは &lt;a href=&quot;https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/&quot;&gt;「必要なサービスが無効になっています」と表示される現象について&lt;/a&gt; に移動しました。&lt;/p&gt;
-&lt;p&gt;&lt;sp</summary>
-      
-    
-    
-    
-    
-    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
     
   </entry>
   
