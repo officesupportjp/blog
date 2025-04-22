@@ -123,7 +123,7 @@ $accounts.Accounts | % { AwaitAction ($_.SignOutAsync("d3590ed6-52b3-4102-aeff-a
 
 [テナントの移行後、OneDrive for Business を同期できない](https://learn.microsoft.com/ja-jp/sharepoint/troubleshoot/sync/cant-sync-after-migration)
 
-[OfficeLogCollect.zip](OfficeLogCollect_v2.zip) 
+[OfficeLogCollect.zip](OfficeLogCollect_v3.zip) 
 
 <br>
 
