@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-05-16T01:41:18.806Z</updated>
+  <updated>2025-06-20T04:34:58.468Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更するとワークスペースにアクセス出来なくなる場合がある</title>
+    <link href="https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/"/>
+    <id>https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/</id>
+    <published>2025-06-20T00:00:00.000Z</published>
+    <updated>2025-06-20T04:34:58.468Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更するとワークスペースにアクセス出来なくなる場合がある事象について説明します。</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>Loop のメインページからワークスペースを開いた場合に以下のようなメッセージが表示されます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image1.png"></p><p>Loop ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image3.png"></p><p>「メンバーの招待と管理」で削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。<br>※ 見た目上、追加されるケースも確認されておりますので、この事象は生じない場合もございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image2.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下の条件を満たした場合に生じることが確認されております。</p><p>発生条件 1) Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image4.png"></p><p>発生条件 2) ※調査中※</p><p>本条件は現在も調査中でございますが、2025&#x2F;5&#x2F;30 以降に作成した新規ワークスペースでは事象の発生を確認しておりませんため、<br>2025&#x2F;5&#x2F;30 より前に作成した Loop ワークスペースにて事象が生じる可能性がございます。</p><p>Loop ワークスペースの作成日は、ユーザーは UI から確認することが出来ませんが、<br>ワークスペース内の各ページのバージョン履歴を確認することで、目安にしていただけます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image5.png"></p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image7.png"></p><p>しかしながら、ページが削除されている可能性がございます場合、この方法はご利用いただけませんため、<br>例えば、テナントの全体管理者、または、SharePoint Embedded管理者にて、<br>SharePoint 管理センターより、Containers – Active containers から該当のコンテナーを開き、全般 - 作成日を確認する必要がございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image6.png"></p><p>しかしながら、現在も調査中の状況のため、影響が大きいワークスペースについては、<br>新規ワークスペースについても役割変更自体をお控えいただけますと幸いです。</p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>ワークスペースの単位の事象につきましては、問題が生じたワークスペースに関しては再作成する以外の回避策をご提供出来ない可能性がございますため、<br>恐れ入りますが、可能でございましたらワークスペースの再作成をご検討いただけますと幸いです。</p><p>なお、ワークスペースの再作成以外の回避策といたしましては、右上の “共有” から、ページ単位での共有を行っていただくことが挙げられます。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。<br>誠に恐れ入りますが、上記回避策にてご対応をいただくか、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートチームです。&lt;br&gt;この記事では、Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更するとワークスペースにアクセス出来なくなる場合がある事象について説明します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;事象&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    
+    <category term="Loop" scheme="https://officesupportjp.github.io/blog/tags/Loop/"/>
+    
+  </entry>
   
   <entry>
     <title>挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について</title>
@@ -268,12 +293,12 @@
   
   <entry>
     <title>Officeの更新プログラムの種類について</title>
-    <link href="https://officesupportjp.github.io/blog/cmbee1f0s006e6ckjhins3sjy/"/>
-    <id>https://officesupportjp.github.io/blog/cmbee1f0s006e6ckjhins3sjy/</id>
+    <link href="https://officesupportjp.github.io/blog/cmc4bhkpg006gzwkj6s35ayka/"/>
+    <id>https://officesupportjp.github.io/blog/cmc4bhkpg006gzwkj6s35ayka/</id>
     <published>2024-09-02T00:00:00.000Z</published>
     <updated>2024-09-02T06:35:04.261Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office の更新プログラムの種類について解説します。</p><br><h2 id="Office-の更新プログラムの違いについて"><a href="#Office-の更新プログラムの違いについて" class="headerlink" title="Office の更新プログラムの違いについて"></a>Office の更新プログラムの違いについて</h2><p>新機能が追加される機能更新が存在するのは Microsoft 365 Apps クライアントのみです。</p><table><thead><tr><th align="center">バージョン</th><th align="center">機能更新</th><th align="center">セキュリティ更新</th><th align="center">セキュリティ以外の更新(修正)</th></tr></thead><tbody><tr><td align="center">Microsoft 365 Apps クライアント</td><td align="center">○</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">Office 2019&#x2F;2021 LTSC</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">パッケージ版 Office 2016&#x2F;2019&#x2F;2021</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">Office 2016</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr></tbody></table><br><h2 id="Microsoft-365-Apps-クライアント"><a href="#Microsoft-365-Apps-クライアント" class="headerlink" title="Microsoft 365 Apps クライアント"></a>Microsoft 365 Apps クライアント</h2><p>更新は<a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/updates/overview-update-channels">チャネル</a>に沿ってバージョン、ビルドを上げることで行われます。また、過去の変更は累積となります。<br>このため、Excel のみ等、特定の製品のみ更新することは出来ません。また、累積のため、バージョン 2302 から 2308 を飛ばして 2402 に直接更新することも可能であり、2308 の変更も含まれます。</p><p><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image01.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date"></p><p>機能更新、セキュリティ更新、セキュリティ以外の更新(修正) の 3 種類がありますが、表のように、チャネルに沿ってバージョンアップを伴う更新とビルドのみの更新の 2 つに分けて公開されています。</p><p>同日に複数の更新プログラムが公開されている理由は、過去のバージョンから、機能更新を行わず、セキュリティ更新、セキュリティ以外の更新(修正)のみの更新をサポートするためです。</p><p><strong>1) 機能更新</strong><br><strong>バージョンが上がる更新</strong>が機能更新です。これには機能更新、セキュリティ更新、セキュリティ以外の更新(修正)が含まれます。<br>例えば、最新チャネルの 6&#x2F;26 において、バージョンが 2405 から 2406 に上がっておりますので、これは機能更新となります。</p><p><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image02.png"></p><p><strong>2) セキュリティ更新</strong><br><strong>ビルドのみ上がる更新</strong>がセキュリティ更新です。これにはセキュリティ更新、セキュリティ以外の更新(修正)が含まれます。<br>例えば、最新チャネルの 6&#x2F;19 では、バージョンは 2405 のまま、ビルドのみ上がっておりますので、これはセキュリティ更新、セキュリティ以外の更新(修正)となります。</p><p><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image03.png"></p><br><p><strong>MECM上の表記について</strong><br>機能更新は “機能更新プログラム”、セキュリティ更新は “品質更新プログラム” または “拡張品質更新プログラム” と表示されます。</p><p>“拡張品質更新プログラム”は、最新バージョンではないセキュリティ更新、および、セキュリティ以外の更新を指します。</p><p><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image04.png"></p><p>例えば、上記の例では、バージョン 2402 は “品質更新プログラム” であり、2308 と 2302 は “拡張品質更新プログラム” となります。</p><br><h2 id="Office-2019-x2F-2021-LTSC"><a href="#Office-2019-x2F-2021-LTSC" class="headerlink" title="Office 2019&#x2F;2021 LTSC"></a>Office 2019&#x2F;2021 LTSC</h2><p>ボリュームライセンス版の Office 2019&#x2F;2021 LTSC では、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。<br>これらの Office はそれぞれ、Microsoft 365 Apps のバージョン 1808、2108 を元に製造されており、基本的な考え方は同一となります。</p><p><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image06.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2019"><br><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image05.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021"></p><br><h2 id="パッケージ版-Office-2016-x2F-2019-x2F-2021"><a href="#パッケージ版-Office-2016-x2F-2019-x2F-2021" class="headerlink" title="パッケージ版 Office 2016&#x2F;2019&#x2F;2021"></a>パッケージ版 Office 2016&#x2F;2019&#x2F;2021</h2><p>これらの Office は Microsoft 365 Apps を元に製造されており、基本的な考え方は同一となりますが、<br>バージョンが上がったとしても機能更新は含まれず、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。</p><p><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image07.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2019"><br><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image08.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021"></p><br><h2 id="Office-2016"><a href="#Office-2016" class="headerlink" title="Office 2016"></a>Office 2016</h2><p>ボリュームライセンス版の Office 2016 では、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。<br>こちらの Office は、<a href="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/">クイック実行形式 (C2R) ではなく Windows インストーラー形式 (MSI)</a> であり、モジュール単位で更新プログラムが公開されています。</p><p><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image09.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/msp-files-office-2016"></p><p><strong>MECM上の表記について</strong><br>C2R形式の Office の更新プログラムは、Microsoft Update Catalog 上の “分類” は “更新” で統一されておりますが、<br>MSI形式では “セキュリティ更新” は “セキュリティ問題の修正プログラム”、”セキュリティ以外の更新(修正)” は “重要な更新” と表記されます。<br><img src="/blog/cmbee1f0s006e6ckjhins3sjy/image10.png"></p><br><p><strong>- 関連情報</strong><br><a href="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office の更新プログラムの種類について解説します。</p><br><h2 id="Office-の更新プログラムの違いについて"><a href="#Office-の更新プログラムの違いについて" class="headerlink" title="Office の更新プログラムの違いについて"></a>Office の更新プログラムの違いについて</h2><p>新機能が追加される機能更新が存在するのは Microsoft 365 Apps クライアントのみです。</p><table><thead><tr><th align="center">バージョン</th><th align="center">機能更新</th><th align="center">セキュリティ更新</th><th align="center">セキュリティ以外の更新(修正)</th></tr></thead><tbody><tr><td align="center">Microsoft 365 Apps クライアント</td><td align="center">○</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">Office 2019&#x2F;2021 LTSC</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">パッケージ版 Office 2016&#x2F;2019&#x2F;2021</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">Office 2016</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr></tbody></table><br><h2 id="Microsoft-365-Apps-クライアント"><a href="#Microsoft-365-Apps-クライアント" class="headerlink" title="Microsoft 365 Apps クライアント"></a>Microsoft 365 Apps クライアント</h2><p>更新は<a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/updates/overview-update-channels">チャネル</a>に沿ってバージョン、ビルドを上げることで行われます。また、過去の変更は累積となります。<br>このため、Excel のみ等、特定の製品のみ更新することは出来ません。また、累積のため、バージョン 2302 から 2308 を飛ばして 2402 に直接更新することも可能であり、2308 の変更も含まれます。</p><p><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image01.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date"></p><p>機能更新、セキュリティ更新、セキュリティ以外の更新(修正) の 3 種類がありますが、表のように、チャネルに沿ってバージョンアップを伴う更新とビルドのみの更新の 2 つに分けて公開されています。</p><p>同日に複数の更新プログラムが公開されている理由は、過去のバージョンから、機能更新を行わず、セキュリティ更新、セキュリティ以外の更新(修正)のみの更新をサポートするためです。</p><p><strong>1) 機能更新</strong><br><strong>バージョンが上がる更新</strong>が機能更新です。これには機能更新、セキュリティ更新、セキュリティ以外の更新(修正)が含まれます。<br>例えば、最新チャネルの 6&#x2F;26 において、バージョンが 2405 から 2406 に上がっておりますので、これは機能更新となります。</p><p><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image02.png"></p><p><strong>2) セキュリティ更新</strong><br><strong>ビルドのみ上がる更新</strong>がセキュリティ更新です。これにはセキュリティ更新、セキュリティ以外の更新(修正)が含まれます。<br>例えば、最新チャネルの 6&#x2F;19 では、バージョンは 2405 のまま、ビルドのみ上がっておりますので、これはセキュリティ更新、セキュリティ以外の更新(修正)となります。</p><p><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image03.png"></p><br><p><strong>MECM上の表記について</strong><br>機能更新は “機能更新プログラム”、セキュリティ更新は “品質更新プログラム” または “拡張品質更新プログラム” と表示されます。</p><p>“拡張品質更新プログラム”は、最新バージョンではないセキュリティ更新、および、セキュリティ以外の更新を指します。</p><p><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image04.png"></p><p>例えば、上記の例では、バージョン 2402 は “品質更新プログラム” であり、2308 と 2302 は “拡張品質更新プログラム” となります。</p><br><h2 id="Office-2019-x2F-2021-LTSC"><a href="#Office-2019-x2F-2021-LTSC" class="headerlink" title="Office 2019&#x2F;2021 LTSC"></a>Office 2019&#x2F;2021 LTSC</h2><p>ボリュームライセンス版の Office 2019&#x2F;2021 LTSC では、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。<br>これらの Office はそれぞれ、Microsoft 365 Apps のバージョン 1808、2108 を元に製造されており、基本的な考え方は同一となります。</p><p><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image06.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2019"><br><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image05.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021"></p><br><h2 id="パッケージ版-Office-2016-x2F-2019-x2F-2021"><a href="#パッケージ版-Office-2016-x2F-2019-x2F-2021" class="headerlink" title="パッケージ版 Office 2016&#x2F;2019&#x2F;2021"></a>パッケージ版 Office 2016&#x2F;2019&#x2F;2021</h2><p>これらの Office は Microsoft 365 Apps を元に製造されており、基本的な考え方は同一となりますが、<br>バージョンが上がったとしても機能更新は含まれず、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。</p><p><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image07.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2019"><br><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image08.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021"></p><br><h2 id="Office-2016"><a href="#Office-2016" class="headerlink" title="Office 2016"></a>Office 2016</h2><p>ボリュームライセンス版の Office 2016 では、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。<br>こちらの Office は、<a href="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/">クイック実行形式 (C2R) ではなく Windows インストーラー形式 (MSI)</a> であり、モジュール単位で更新プログラムが公開されています。</p><p><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image09.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/msp-files-office-2016"></p><p><strong>MECM上の表記について</strong><br>C2R形式の Office の更新プログラムは、Microsoft Update Catalog 上の “分類” は “更新” で統一されておりますが、<br>MSI形式では “セキュリティ更新” は “セキュリティ問題の修正プログラム”、”セキュリティ以外の更新(修正)” は “重要な更新” と表記されます。<br><img src="/blog/cmc4bhkpg006gzwkj6s35ayka/image10.png"></p><br><p><strong>- 関連情報</strong><br><a href="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
     
     
       
@@ -475,27 +500,6 @@
     
     
     <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android にてアプリ保護ポリシーを適用していても OneNote アプリの組織データを Microsoft 365 アプリの個人領域へ共有できる動作について</title>
-    <link href="https://officesupportjp.github.io/blog/clenw3diw000xf46y72q12jrq/"/>
-    <id>https://officesupportjp.github.io/blog/clenw3diw000xf46y72q12jrq/</id>
-    <published>2023-02-28T00:00:00.000Z</published>
-    <updated>2023-12-26T06:53:45.352Z</updated>
-    
-    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2023&#x2F;10&#x2F;30 Update</strong></span><br>本現象の対応が行われ、最新バージョンにては発生しない現象であることを記載しました。</p><p>こんにちは。Office サポートチームです。<br>この記事では、Android 端末で利用する OneNote アプリにて、<br>アプリ保護ポリシーを設定していても、組織データを個人データとして、<br>Microsoft 365 アプリに共有することができる動作について記載します。  </p><h1 id="事象の概要"><a href="#事象の概要" class="headerlink" title="事象の概要"></a>事象の概要</h1><p>BYOD で利用されるモバイル端末から企業データへアクセスする場合などを含め、<br>組織データを保護するための仕組みとして、Intune のアプリ保護ポリシーがあります。  </p><p>Android 端末においても例えば、Outlook や OneDrive, OneNote, Microsoft 365 アプリなど、<br>個人アカウントと組織アカウントの両方で利用可能なアプリに対して、<br>Intune のアプリ保護ポリシーにて、<br>[他のアプリに組織データを送信] を [ポリシーマネージドアプリ] と設定することで、<br>組織データを個人アカウントでサインイン済みの他のアプリに共有した際、<br>個人アカウントで扱うことを制限することが可能です。  </p><p>参考<br>Title: アプリ保護ポリシーの概要<br>URL: <a href="https://learn.microsoft.com/ja-jp/mem/intune/apps/app-protection-policy">https://learn.microsoft.com/ja-jp/mem/intune/apps/app-protection-policy</a>  </p><p>ただし、例外的な動作として、Android 端末において、<br>OneNote アプリの組織データを、Microsoft 365 アプリの個人領域へ共有可能であるという動作が確認されております。<br>具体的な手順は以下となります。  </p><ol><li>Microsoft 365 アプリに、個人アカウント、組織アカウントの両方でサインインし、Microsoft 365 アプリで個人アカウントが選択されている状態とする。</li><li>OneNote アプリで組織データとして扱われる OneDrive for Business 上のノートブックなどのページを開き、[…]-[ページの共有]-[プレーンテキスト]-[メモを作成 (Microsfoto 365)] をタップする。</li><li>Microsoft 365 アプリにサインインしている個人アカウントのメモとして保存される。</li></ol><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p><span style="color:#ff0000"><strong>2023&#x2F;10&#x2F;30 Update</strong></span><br>本現象の対応が行われ、最新バージョンにては、<br>OneNote の組織データのノートブックのページは、Microsoft 365 アプリの個人アカウントのメモとして保存されない動作となりました。</p><p><del>本動作について、現在開発部門で調査中となります。</del><br><del>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</del>  </p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。  </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2023&amp;#x2F;10&amp;#x2F;30 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;本現象の対応が行われ、最新バージョンにては発生しない現象であることを記載しました。&lt;/p&gt;
-&lt;p&gt;こんにちは</summary>
-      
-    
-    
-    
     
   </entry>
   
