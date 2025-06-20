@@ -37,6 +37,29 @@
     
     
     
+  </entry>
+  
+  <entry>
+    <title>Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる</title>
+    <link href="https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/"/>
+    <id>https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/</id>
+    <published>2025-06-20T00:00:00.000Z</published>
+    <updated>2025-06-20T05:09:27.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる事象について説明します。</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><h6 id="役割を変更されたメンバーが-Loop-のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。"><a href="#役割を変更されたメンバーが-Loop-のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。" class="headerlink" title="役割を変更されたメンバーが Loop のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。"></a>役割を変更されたメンバーが Loop のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image1.png"></p><h6 id="役割を変更されたメンバーが該当の-Loop-ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。"><a href="#役割を変更されたメンバーが該当の-Loop-ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。" class="headerlink" title="役割を変更されたメンバーが該当の Loop ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。"></a>役割を変更されたメンバーが該当の Loop ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image3.png"></p><h6 id="「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。"><a href="#「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。" class="headerlink" title="「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。"></a>「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。</h6><p>※ SharePoint 管理センターより、該当のコンテナーに対して直接メンバーを追加しても同様に追加できません。<br>※ 見た目上、追加されるケースも確認されておりますので、この事象は生じない場合もございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image2.png"></p><p><strong>補足</strong></p><ul><li>役割を変更されたメンバー以外のメンバーは、該当の Loop ワークスペースの利用を継続していただけます。</li><li>役割を変更されたメンバーでも、該当の Loop ワークスペース以外の Loop ワークスペースはご利用いただけます。</li></ul><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下の条件を満たした場合、役割を変更されたメンバーがアクセス出来なくなる事象が確認されております。</p><h6 id="発生条件-1-Loop-ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。"><a href="#発生条件-1-Loop-ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。" class="headerlink" title="発生条件 1) Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。"></a>発生条件 1) Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image4.png"></p><br><h6 id="発生条件-2-※調査中※"><a href="#発生条件-2-※調査中※" class="headerlink" title="発生条件 2) ※調査中※"></a>発生条件 2) ※調査中※</h6><p><strong>現在も調査中の状況のため、影響が大きい Loop ワークスペースについては、役割変更自体をお控えいただけますと幸いです。</strong></p><p>現時点での情報までといたしまして、2025&#x2F;5&#x2F;30 以降に作成した Loop ワークスペースでは事象の発生を確認しておりませんため、<br>2025&#x2F;5&#x2F;30 より前に作成した Loop ワークスペースにて事象が生じる可能性が高いと考えられます。</p><p>Loop ワークスペースの作成日は、ユーザーは確認することが出来ませんが、<br>ワークスペース内の各ページにはバージョン履歴がございますので、ワークスペース作成時期の目安にしていただけます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image5.png"></p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image7.png"></p><p>しかしながら、ワークスペース内でページを削除されている可能性がございます場合、この方法はご利用いただけません。<br>その他としては、例えば、テナントの全体管理者や SharePoint Embedded管理者にて、<br>SharePoint 管理センターより、Containers – Active containers から該当のコンテナーを開き、全般 - 作成日を確認する方法がございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image6.png"></p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。</p><p>大変お手数でございますが、ワークスペースの再作成をご実施いただくか、<br>右上の “共有” から、ページ単位での共有を行っていただくことをご検討いただけますと幸いです。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。</p><p>また、誠に恐れ入りますが、ワークスペースの単位の事象につきましては、問題が生じたワークスペースを再作成する以外の回避策をご提供出来ない可能性がございます。<br>恐縮でございますが、上記回避策にてご対応をいただくか、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートチームです。&lt;br&gt;この記事では、Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる事象について説明します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;事象&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
     <category term="Loop" scheme="https://officesupportjp.github.io/blog/tags/Loop/"/>
     
   </entry>
@@ -477,29 +500,6 @@
     <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
     
     <category term="セキュリティ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>必要なサービスが無効になっていますと表示される現象について</title>
-    <link href="https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/"/>
-    <id>https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/</id>
-    <published>2023-09-15T00:00:00.000Z</published>
-    <updated>2023-09-15T06:20:18.725Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。 </p><p>今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたします。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Office をご利用されている際に、以下のようなメッセージが表示されるとお問い合わせいただくことがございます。</p><p><img src="/blog/clmk7jget0001hckj66na16pi/image0.png"></p><br><p>これらの表示は機能によって若干異なる場合がございます。<br>また、オンライン通信を伴う機能がグレーアウトされていたり、表示されていない場合もございます。</p><br><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Microsoft 365 Apps、Office LTSC 2021、Office 2019 (*) では、接続エクスペリエンスという機能が導入されており、オンライン接続の機能を用途ごとに有効・無効と切り替えるすることが出来るようになりました。<br>この機能が無効にされているとオンライン機能が利用できないため、上記のような現象が生じます。</p><p>Title : Microsoft 365 Apps for enterprise のプライバシー コントロールの概要<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls">https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls</a><br>(Office 2019 では Office での追加オプションである接続エクスペリエンスの使用を許可する のみが利用可能です)</p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>以下を上からご確認ください。</p><h2 id="1-プライバシー設定の見直し"><a href="#1-プライバシー設定の見直し" class="headerlink" title="1. プライバシー設定の見直し"></a>1. プライバシー設定の見直し</h2><ol><li>Excel 等を起動し、ファイル - オプション をクリックします</li><li>トラストセンター - トラストセンターの設定 をクリックします</li><li>プライバシーオプション - プライバシー設定 をクリックします</li><li>オプションの接続エクスペリエンスをオンにする にチェックをつけてください</li><li>事象が解消するかご確認ください。</li></ol><br><h2 id="2-接続エクスペリエンス機能の見直し"><a href="#2-接続エクスペリエンス機能の見直し" class="headerlink" title="2.  接続エクスペリエンス機能の見直し"></a>2.  接続エクスペリエンス機能の見直し</h2><p>Office 管理用グループポリシーでご実施されている接続エクスペリエンス機能の無効化を見直します。</p><ul><li><strong>ポリシーの確認</strong></li></ul><p>以下の資料より、今回ご利用されたい機能が以下のどのポリシーで制御されているかをご確認ください。</p><p>Title : Officeでの接続環境<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences">https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences</a></p><p>例えば、PowerPoint デザイナー の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>3D マップ の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] に加えて、[Office の追加オプションである接続エクスペリエンスの使用を許可する]を有効にします。</p><p>アイコンの挿入 の場合、[オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>共有 や、その他記載がない機能の場合、[Office の接続エクスペリエンスの使用を許可する​] を有効にします。</p><br><ul><li><strong>ポリシーの変更</strong></li></ul><p>Office 管理用グループポリシーで該当するポリシーの制御を変更してください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[プライバシー]-[セキュリティ センター]</p><p>・コンテンツを分析する Office の接続エクスペリエンスの使用を許可する<br>・オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する<br>・Office の追加オプションである接続エクスペリエンスの使用を許可する<br>・Office の接続エクスペリエンスの使用を許可する​</p><p>もしくは、以下の資料より対応するレジストリをご確認いただき、設定を変更することで事象が解消するかをご確認ください。</p><p>Title : ポリシー設定を使用して Microsoft 365 Apps for enterprise のプライバシー コントロールを管理する<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls">https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls</a></p><br><h2 id="3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする"><a href="#3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする" class="headerlink" title="3. Information Rights Management 関連のユーザーインターフェイスをオンにする"></a>3. Information Rights Management 関連のユーザーインターフェイスをオンにする</h2><p>今回ご利用される機能が Azure Information Protection 関連かつ、以下の設定が有効となっている場合には、未構成、または、無効に変更することで事象が解消するかご確認ください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[アクセス制限の管理]</p><p>・Information Rights Management 関連のユーザーインターフェイスをオフにする : 未構成 または 無効</p><br><p>今回の投稿は以上です。</p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。 &lt;/p&gt;
-&lt;p&gt;今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたしま</summary>
-      
-    
-    
-    
-    
-    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
     
   </entry>
   
