@@ -94,6 +94,267 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Office のインストール・更新・環境情報の採取について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cm3e5mpvi0000cgkj2sfvb55j/" class="article-date">
+  <time datetime="2024-11-28T00:00:00.000Z" itemprop="datePublished">2024-11-28</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cm3e5mpvi0000cgkj2sfvb55j/">Office のインストール・更新・環境情報の採取について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cm3e5mpvi0000cgkj2sfvb55j/" class="article-date-single">    
+        
+    <time datetime="2025-06-02T00:00:00.000Z" itemprop="lastupdate">2025-06-02</time>    
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。本記事では Office のインストール・更新・環境情報の採取について解説します。
+環境情報ログ
+MSOfficeinfo.zip をダウンロードします。
+
+MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。
+
+MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。
+
+MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_DATA 配下に出力されます。※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。
+
+取得した以下の情報を弊社にお寄せください・C:\MS_DATA に出力された MOI から始まる zip ファイル
+
+
+
+
+インストール...
+        <p class="article-more-link">
+          <a href="/blog/cm3e5mpvi0000cgkj2sfvb55j/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/" data-id="cm4m97pej003k6g6y7mpah1t5" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Word で「打」で始まるテキスト ファイルを開くとコンバーターを要求される" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cm15ufuis0000f0seec0i7yev/" class="article-date">
+  <time datetime="2024-09-17T00:00:00.000Z" itemprop="datePublished">2024-09-17</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cm15ufuis0000f0seec0i7yev/">Word で「打」で始まるテキスト ファイルを開くとコンバーターを要求される</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cm15ufuis0000f0seec0i7yev/" class="article-date-single">    
+    
+    <time datetime="2024-09-17T00:00:00.000Z" itemprop="dateUpdated">2024-09-17</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームの中村です。今回の記事では、Word でテキスト ファイルを開くとき、一部の内容においてコンバーターが要求される動作について説明します。
+1. 現象以下の条件を満たすテキスト ファイルを Windows デスクトップ アプリの Word で開くと、「このファイルは新しいバージョンの Microsoft Word で作成されているため、このファイルを開くにはコンバーターが必要です。」というメッセージが表示されます。
+
+&lt;ファイルの条件&gt;
+
+ファイル内容の先頭が Shift-JIS の「打」 (0x91C5) で始まること  
+2 文字目以降に文字が続くこと (制御コードを含め、何らかのデータがあること)
+
+
+
+2. 原因多くのファイル形式では、先頭数バイトでそのファイル形式を表します。このため Word でファイルを開くとき、ファイルのバ...
+        <p class="article-more-link">
+          <a href="/blog/cm15ufuis0000f0seec0i7yev/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cm15ufuis0000f0seec0i7yev/" data-id="cm4m97ph3007j6g6y8lc7etd9" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Word/" rel="tag">Word</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Officeの更新プログラムの種類について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cm4m97pg300606g6y1bqlgtz4/" class="article-date">
+  <time datetime="2024-09-02T00:00:00.000Z" itemprop="datePublished">2024-09-02</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cm4m97pg300606g6y1bqlgtz4/">Officeの更新プログラムの種類について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cm4m97pg300606g6y1bqlgtz4/" class="article-date-single">    
+    
+    <time datetime="2024-09-02T00:00:00.000Z" itemprop="dateUpdated">2024-09-02</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポートの西川 (直) です。本記事では Office の更新プログラムの種類について解説します。
+
+
+Office の更新プログラムの違いについて新機能が追加される機能更新が存在するのは Microsoft 365 Apps クライアントのみです。
+
+
+
+バージョン
+機能更新
+セキュリティ更新
+セキュリティ以外の更新(修正)
+
+
+
+Microsoft 365 Apps クライアント
+○
+○
+○
+
+
+Office 2019&#x2F;2021 LTSC
+-
+○
+○
+
+
+パッケージ版 Office 2016&#x2F;2019&#x2F;2021
+-
+○
+○
+
+
+Office 2016
+-
+○
+○
+
+
+
+
+Microsoft 365 Apps クライアント更新はチャネルに沿ってバージョン、ビルドを上げることで行われます。また、過去の変更は累積となります。このため、E...
+        <p class="article-more-link">
+          <a href="/blog/cm4m97pg300606g6y1bqlgtz4/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cm4m97pg300606g6y1bqlgtz4/" data-id="cm4m97pg300606g6y1bqlgtz4" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/clracr3qn0000sc6yestg9pc9/" class="article-date">
+  <time datetime="2024-01-12T00:00:00.000Z" itemprop="datePublished">2024-01-12</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/clracr3qn0000sc6yestg9pc9/">Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/clracr3qn0000sc6yestg9pc9/" class="article-date-single">    
+    
+    <time datetime="2024-01-12T00:00:00.000Z" itemprop="dateUpdated">2024-01-12</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        こんにちは、Office サポート チームです。この記事では、Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について説明します。  
+現象Microsoft 365 Apps に含まれる Outlook や Word で、テキスト ボックスのサイズ変更や位置の移動がマウス操作とおりに行われずに、意図しない場所に移動してしまう場合があります。メールの本文や Word 文書内に複数行にわたって文面や改行が入っていて、垂直スクロール バーが表示される状態で上下移動が可能な構成になっていると発生しやすい傾向があります。  
+Outlookリッチ テキスト形式、または、HTML 形式のメール アイテムにテキスト ボックスを挿入して、サイズ変更や位置の移動のためにドラッグすると、サイズや位置を示すガイドラインの点線が実際とは異なる位置に描画され、ドラッグ後に...
+        <p class="article-more-link">
+          <a href="/blog/clracr3qn0000sc6yestg9pc9/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/clracr3qn0000sc6yestg9pc9/" data-id="cm4m97pgg006d6g6yfs72akgi" class="article-share-link">共有</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-VBA マクロの Office バージョンアップ時の互換性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/clr8yxe6w00043gsebywv7n74/" class="article-date">
@@ -423,228 +684,11 @@ Excel のレイアウト計算Excel では、列の幅 &#x2F; 行の高さ &#x2F
 
 
   
-    <article id="post-必要なサービスが無効になっていますと表示される現象について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/clmk7jget0001hckj66na16pi/" class="article-date">
-  <time datetime="2023-09-15T00:00:00.000Z" itemprop="datePublished">2023-09-15</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/clmk7jget0001hckj66na16pi/">必要なサービスが無効になっていますと表示される現象について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/clmk7jget0001hckj66na16pi/" class="article-date-single">    
-        
-    <time datetime="2023-09-15T00:00:00.000Z" itemprop="lastupdate">2023-09-15</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        こんにちは、Office サポートの西川 (直) です。 
-今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたします。
-現象Office をご利用されている際に、以下のようなメッセージが表示されるとお問い合わせいただくことがございます。
-
-
-
-これらの表示は機能によって若干異なる場合がございます。また、オンライン通信を伴う機能がグレーアウトされていたり、表示されていない場合もございます。
-
-
-原因Microsoft 365 Apps、Office LTSC 2021、Office 2019 (*) では、接続エクスペリエンスという機能が導入されており、オンライン接続の機能を用途ごとに有効・無効と切り替えるすることが出来るようになりました。この機能...
-        <p class="article-more-link">
-          <a href="/blog/clmk7jget0001hckj66na16pi/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/" data-id="cm4m97phz00986g6y5hdtbqun" class="article-share-link">共有</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Android にてアプリ保護ポリシーを適用していても OneNote アプリの組織データを Microsoft 365 アプリの個人領域へ共有できる動作について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/clenw3diw000xf46y72q12jrq/" class="article-date">
-  <time datetime="2023-02-28T00:00:00.000Z" itemprop="datePublished">2023-02-28</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/clenw3diw000xf46y72q12jrq/">Android にてアプリ保護ポリシーを適用していても OneNote アプリの組織データを Microsoft 365 アプリの個人領域へ共有できる動作について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/clenw3diw000xf46y72q12jrq/" class="article-date-single">    
-        
-    <time datetime="2023-10-30T00:00:00.000Z" itemprop="lastupdate">2023-10-30</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        2023&#x2F;10&#x2F;30 Update本現象の対応が行われ、最新バージョンにては発生しない現象であることを記載しました。
-こんにちは。Office サポートチームです。この記事では、Android 端末で利用する OneNote アプリにて、アプリ保護ポリシーを設定していても、組織データを個人データとして、Microsoft 365 アプリに共有することができる動作について記載します。  
-事象の概要BYOD で利用されるモバイル端末から企業データへアクセスする場合などを含め、組織データを保護するための仕組みとして、Intune のアプリ保護ポリシーがあります。  
-Android 端末においても例えば、Outlook や OneDrive, OneNote, Microsoft 365 アプリなど、個人アカウントと組織アカウントの両方で利用可能なアプリに対して、Intun...
-        <p class="article-more-link">
-          <a href="/blog/clenw3diw000xf46y72q12jrq/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/clenw3diw000xf46y72q12jrq/" data-id="cm4m97pco000x6g6y9r9l6iiz" class="article-share-link">共有</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)(旧)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/clefkdotu0001ukse0slv0l1u/" class="article-date">
-  <time datetime="2023-02-24T00:00:00.000Z" itemprop="datePublished">2023-02-24</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/clefkdotu0001ukse0slv0l1u/">信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)(旧)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/clefkdotu0001ukse0slv0l1u/" class="article-date-single">    
-        
-    <time datetime="2023-10-09T00:00:00.000Z" itemprop="lastupdate">2023-10-09</time>    
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        2023&#x2F;10&#x2F;09 Update有害サイトと分類されていたため移動しました。本ページは 信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216) に移動しました。
-本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。
-...
-        <p class="article-more-link">
-          <a href="/blog/clefkdotu0001ukse0slv0l1u/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/clefkdotu0001ukse0slv0l1u/" data-id="cm4m97phw00946g6y7mxh7dw8" class="article-share-link">共有</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-VL 版の Office 2016 でオンラインストレージからファイルを開く際に稀にサインイン画面が表示される現象について" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cldybofry00010gkj32idbkw7/" class="article-date">
-  <time datetime="2023-02-10T00:00:00.000Z" itemprop="datePublished">2023-02-10</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cldybofry00010gkj32idbkw7/">VL 版の Office 2016 でオンラインストレージからファイルを開く際に稀にサインイン画面が表示される現象について</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cldybofry00010gkj32idbkw7/" class="article-date-single">    
-    
-    <time datetime="2023-02-10T00:00:00.000Z" itemprop="dateUpdated">2023-02-10</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        こんにちは、Office サポートの西川 (直) です。 
-今回の投稿では、VL (ボリュームライセンス) 版の Office 2016 でオンラインストレージからファイルを開く際に稀にサインイン画面が表示される現象についてご説明いたします。
-VL 版の Office 2016 とは？
-
-
-現象VL 版の Office 2016 において、Teams やブラウザを介して SharePoint 等のオンラインストレージよりファイルを開く際、稀に以下のようなサインイン画面が表示されます。
-・例
-
-
-
-対処方法本事象は Office 2016 で生じる可能性がございます。
-本ダイアログが表示された場合、Office を再起動して事象が解消するかをご確認いただくとともに、改善されない場合には再度サインインをしていただきますようお願いいたします。また、Microsoft 365 Apps ではオンラ...
-        <p class="article-more-link">
-          <a href="/blog/cldybofry00010gkj32idbkw7/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cldybofry00010gkj32idbkw7/" data-id="cm4m97pgs006x6g6yf9d801ei" class="article-share-link">共有</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/blog/">戻る</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/16/">16</a><a class="extend next" rel="next" href="/blog/page/3/">次へ</a>
+    <a class="extend prev" rel="prev" href="/blog/">戻る</a><a class="page-number" href="/blog/">1</a><span class="page-number current">2</span><a class="page-number" href="/blog/page/3/">3</a><a class="page-number" href="/blog/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/blog/page/17/">17</a><a class="extend next" rel="next" href="/blog/page/3/">次へ</a>
   </nav>
 
 </section>
@@ -658,7 +702,7 @@ VL 版の Office 2016 とは？
   <div class="widget-wrap">
     <h3 class="widget-title">タグ</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MIP-%E3%83%A9%E3%83%99%E3%83%AB/" rel="tag">MIP ラベル</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Word/" rel="tag">Word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" rel="tag">セキュリティ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%8F%8F%E7%94%BB/" rel="tag">描画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Access/" rel="tag">Access</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Excel/" rel="tag">Excel</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Loop/" rel="tag">Loop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/MIP-%E3%83%A9%E3%83%99%E3%83%AB/" rel="tag">MIP ラベル</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" rel="tag">Office 開発全般</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SDI/" rel="tag">SDI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SwayForms/" rel="tag">SwayForms</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">Web アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/Word/" rel="tag">Word</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" rel="tag">お知らせ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" rel="tag">アドイン</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" rel="tag">インストール</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" rel="tag">クラウド ストレージ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" rel="tag">コピー＆ペースト</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" rel="tag">サインイン、認証</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" rel="tag">セキュリティ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" rel="tag">パフォーマンス</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" rel="tag">ファイル I&#x2F;O</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" rel="tag">フォント</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" rel="tag">リボン カスタマイズ</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E5%8D%B0%E5%88%B7/" rel="tag">印刷</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%8F%8F%E7%94%BB/" rel="tag">描画</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/%E6%9B%B4%E6%96%B0/" rel="tag">更新</a></li></ul>
     </div>
   </div>
 
@@ -668,7 +712,7 @@ VL 版の Office 2016 とは？
   <div class="widget-wrap">
     <h3 class="widget-title">タグクラウド</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/Access/" style="font-size: 13.64px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 14.55px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.64px;">Graph API</a> <a href="/blog/tags/MIP-%E3%83%A9%E3%83%99%E3%83%AB/" style="font-size: 10px;">MIP ラベル</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10.91px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.73px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.64px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 18.18px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/Word/" style="font-size: 10.91px;">Word</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.64px;">お知らせ</a> <a href="/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">アドイン</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 16.36px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15.45px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 10.91px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 17.27px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" style="font-size: 11.82px;">セキュリティ</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 16.36px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 19.09px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.73px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 15.45px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16.36px;">印刷</a> <a href="/blog/tags/%E6%8F%8F%E7%94%BB/" style="font-size: 10px;">描画</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 13.64px;">更新</a>
+      <a href="/blog/tags/Access/" style="font-size: 13.64px;">Access</a> <a href="/blog/tags/Excel/" style="font-size: 14.55px;">Excel</a> <a href="/blog/tags/Graph-API/" style="font-size: 13.64px;">Graph API</a> <a href="/blog/tags/Loop/" style="font-size: 10.91px;">Loop</a> <a href="/blog/tags/MIP-%E3%83%A9%E3%83%99%E3%83%AB/" style="font-size: 10px;">MIP ラベル</a> <a href="/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/" style="font-size: 10.91px;">Office 開発全般</a> <a href="/blog/tags/SDI/" style="font-size: 12.73px;">SDI</a> <a href="/blog/tags/SwayForms/" style="font-size: 13.64px;">SwayForms</a> <a href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" style="font-size: 18.18px;">VBA マクロ</a> <a href="/blog/tags/Web-%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">Web アドイン</a> <a href="/blog/tags/Word/" style="font-size: 10.91px;">Word</a> <a href="/blog/tags/%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/" style="font-size: 13.64px;">お知らせ</a> <a href="/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/" style="font-size: 10px;">アドイン</a> <a href="/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/" style="font-size: 16.36px;">インストール</a> <a href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" style="font-size: 20px;">オートメーション</a> <a href="/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/" style="font-size: 15.45px;">クラウド ストレージ</a> <a href="/blog/tags/%E3%82%B3%E3%83%94%E3%83%BC%EF%BC%86%E3%83%9A%E3%83%BC%E3%82%B9%E3%83%88/" style="font-size: 10.91px;">コピー＆ペースト</a> <a href="/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/" style="font-size: 17.27px;">サインイン、認証</a> <a href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" style="font-size: 10px;">ストア アプリ開発</a> <a href="/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/" style="font-size: 11.82px;">セキュリティ</a> <a href="/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/" style="font-size: 16.36px;">パフォーマンス</a> <a href="/blog/tags/%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB-I-O/" style="font-size: 19.09px;">ファイル I/O</a> <a href="/blog/tags/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88/" style="font-size: 12.73px;">フォント</a> <a href="/blog/tags/%E3%83%AA%E3%83%9C%E3%83%B3-%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA/" style="font-size: 15.45px;">リボン カスタマイズ</a> <a href="/blog/tags/%E5%8D%B0%E5%88%B7/" style="font-size: 16.36px;">印刷</a> <a href="/blog/tags/%E6%8F%8F%E7%94%BB/" style="font-size: 10.91px;">描画</a> <a href="/blog/tags/%E6%9B%B4%E6%96%B0/" style="font-size: 13.64px;">更新</a>
     </div>
   </div>
 
@@ -677,7 +721,7 @@ VL 版の Office 2016 とは？
   <div class="widget-wrap">
     <h3 class="widget-title">アーカイブ</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/03/">3月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/02/">2月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/12/">12月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/11/">11月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/09/">9月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/01/">1月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/12/">12月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/11/">11月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/10/">10月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/09/">9月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/02/">2月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/07/">7月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/06/">6月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/05/">5月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/04/">4月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/03/">3月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2025/02/">2月 2025</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/12/">12月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/11/">11月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/09/">9月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2024/01/">1月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/12/">12月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/11/">11月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/10/">10月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/09/">9月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/02/">2月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2023/01/">1月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/12/">12月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/11/">11月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/10/">10月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/09/">9月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/08/">8月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/06/">6月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/04/">4月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/02/">2月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2022/01/">1月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/06/">6月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/04/">4月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/03/">3月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2021/01/">1月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/12/">12月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/11/">11月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/10/">10月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/09/">9月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/08/">8月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/07/">7月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/06/">6月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/04/">4月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/02/">2月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2020/01/">1月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/12/">12月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/10/">10月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/09/">9月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/05/">5月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/04/">4月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/03/">3月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2019/02/">2月 2019</a></li></ul>
     </div>
   </div>
 
@@ -690,23 +734,23 @@ VL 版の Office 2016 とは？
       <ul>
         
           <li>
+            <a href="/blog/cmcvaqw140003hc6y0qnedgdp/">Microsoft 365 Copilot モバイルアプリのディクテーション機能の長時間の利用について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cmc4bhkp0002nzwkj2dtfai4k/">Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cmagbplia0001mskjh69cder5/">挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について</a>
+          </li>
+        
+          <li>
+            <a href="/blog/cm97ug53k00011ckj6784f71k/">Loop ワークスペースの「メンバーの招待と管理」でワークスペースのリンクが表示されない場合がある</a>
+          </li>
+        
+          <li>
             <a href="/blog/cm88fpn830000146y52sf2mbd/">Excel でユニバーサル プリントを使用して印刷した場合の現象について</a>
-          </li>
-        
-          <li>
-            <a href="/blog/cm889ij900000tw6ygk5y0dlo/">Excel ファイルを開くパフォーマンスが低下する</a>
-          </li>
-        
-          <li>
-            <a href="/blog/cm372f6jk000058se8jgwhvee/">Excel シート タブの外観変更後、オートメーションのパフォーマンスが低下する</a>
-          </li>
-        
-          <li>
-            <a href="/blog/cm7eg3dd40000kc6y3kebhpid/">Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する</a>
-          </li>
-        
-          <li>
-            <a href="/blog/cm53l15yg0000j46y7a4s6u9f/">ラベル ポリシー「ユーザーがメールとドキュメントにラベルを適用することを必須にする」が有効の場合 Excel アドイン (.xlam) 保存時にラベル適用が求められ保存できない</a>
           </li>
         
       </ul>

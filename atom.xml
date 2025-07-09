@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-03-14T07:05:18.816Z</updated>
+  <updated>2025-07-09T01:49:04.151Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -17,11 +17,104 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Microsoft 365 Copilot モバイルアプリのディクテーション機能の長時間の利用について</title>
+    <link href="https://officesupportjp.github.io/blog/cmcvaqw140003hc6y0qnedgdp/"/>
+    <id>https://officesupportjp.github.io/blog/cmcvaqw140003hc6y0qnedgdp/</id>
+    <published>2025-07-09T00:00:00.000Z</published>
+    <updated>2025-07-09T01:49:04.151Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Microsoft 365 Copilot モバイルアプリでのディクテーション機能を<br>長時間利用する際に発生する事象についてご案内いたします。</p><h1 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h1><p>Microsoft 365 Copilot モバイルアプリでは、[作成]-[ディクテーション] より<br>音声の録音とその文字起こしを行うことが可能です。</p><p>録音中はリアルタイムに文字起こしが表示されます。<br>また、録音中録音データは端末にキャッシュされ、<br>録音終了時に自動的に音声データとその文字起こしデータファイルが自身の OneDrive 上にアップロードされます。</p><p>本機能について、75 分以上録音を行う場合に、リアルタイムの文字起こしが中断され、<br>録音終了後も OneDrive へのデータのアップロードが失敗する動作が確認されております。</p><p>また、60 分など長時間録音を継続する場合においても、<br>何らかのエラーにより録音が中断される場合などが確認されております。</p><h1 id="対応案"><a href="#対応案" class="headerlink" title="対応案"></a>対応案</h1><p>上記の通り録音中の音声データは端末にキャッシュされるため、端末のストレージ容量次第でディクテーション機能の利用に問題が生じる可能性がございます。<br>また、ディクテーション機能利用時には安定したネットワーク接続が必須となり、機能の安定した利用にはネットワークの影響もうけます。</p><p>上記を踏まえ、長時間の録音は控え、最低限の時間ごとに録音いただくことをお勧めいたします。</p><p>参考: Record voice notes in Office Mobile<br>URL: <a href="https://nam06.safelinks.protection.outlook.com/?url=https://techcommunity.microsoft.com/blog/microsoft365insiderblog/record-voice-notes-in-office-mobile-for-ios/4213168&data=05%7C02%7Ckokisugiura@microsoft.com%7C4e2660413f9140f57f2708ddb9408c5d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638870409089899235%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ==%7C0%7C%7C%7C&sdata=q1WpUtuykCg2Ps0KzzBJN6rTja8xZFVaj3f8H2MzSc4=&reserved=0">https://techcommunity.microsoft.com/blog/microsoft365insiderblog/record-voice-notes-in-office-mobile-for-ios/4213168</a></p><p>なお、録音後自動的に音声データ等が OneDrive にアップロードされない場合は以下のような方法で音声データを取得できるかお試しいただければと存じます。</p><ul><li>[検索] タブより最近使ったファイルとして表示される音声データを開き、表示される UI から OneDrive へアップロードする</li><li>[検索] タブより最近使ったファイルとして表示される音声データを開き、OS の [共有] の仕組みを利用し、OneDrive アプリや Teams アプリなど任意のその他アプリに共有する</li></ul><p>音声データの文字起こしについては以下機能の利用もご検討いただければと存じます。</p><p>参考: レコーディングの文字起こし<br>URL: <a href="https://support.microsoft.com/ja-jp/office/7fc2efec-245e-45f0-b053-2a97531ecf57">https://support.microsoft.com/ja-jp/office/7fc2efec-245e-45f0-b053-2a97531ecf57</a></p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Microsoft 365 Copilot モバイルアプリでのディクテーション機能を&lt;br&gt;長時間利用する際に発生する事象についてご案内いたします。&lt;/p&gt;
+&lt;h1 id=&quot;事象の詳細&quot;&gt;&lt;a href=</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる</title>
+    <link href="https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/"/>
+    <id>https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/</id>
+    <published>2025-06-20T00:00:00.000Z</published>
+    <updated>2025-07-09T01:38:06.608Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる事象について説明します。</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><h6 id="役割を変更されたメンバーが-Loop-のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。"><a href="#役割を変更されたメンバーが-Loop-のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。" class="headerlink" title="役割を変更されたメンバーが Loop のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。"></a>役割を変更されたメンバーが Loop のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image1.png"></p><h6 id="役割を変更されたメンバーが該当の-Loop-ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。"><a href="#役割を変更されたメンバーが該当の-Loop-ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。" class="headerlink" title="役割を変更されたメンバーが該当の Loop ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。"></a>役割を変更されたメンバーが該当の Loop ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image3.png"></p><h6 id="「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。"><a href="#「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。" class="headerlink" title="「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。"></a>「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。</h6><p>※ SharePoint 管理センターより、該当のコンテナーに対して直接メンバーを追加しても同様に追加できません。<br>※ 見た目上、追加されるケースも確認されておりますので、この事象は生じない場合もございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image2.png"></p><p><strong>補足</strong></p><ul><li>役割を変更されたメンバー以外のメンバーは、該当の Loop ワークスペースの利用を継続していただけます。</li><li>役割を変更されたメンバーでも、該当の Loop ワークスペース以外の Loop ワークスペースはご利用いただけます。</li></ul><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下の条件を満たした場合、役割を変更されたメンバーがアクセス出来なくなる事象が確認されております。</p><h6 id="発生条件-1-Loop-ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。"><a href="#発生条件-1-Loop-ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。" class="headerlink" title="発生条件 1) Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。"></a>発生条件 1) Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image4.png"></p><br><h6 id="発生条件-2-※調査中※"><a href="#発生条件-2-※調査中※" class="headerlink" title="発生条件 2) ※調査中※"></a>発生条件 2) ※調査中※</h6><p><strong>現在も調査中の状況のため、影響が大きい Loop ワークスペースについては、役割変更自体をお控えいただけますと幸いです。</strong></p><p>現時点での情報までといたしまして、2025&#x2F;5&#x2F;30 以降に作成した Loop ワークスペースでは事象の発生を確認しておりませんため、<br>2025&#x2F;5&#x2F;30 より前に作成した Loop ワークスペースにて事象が生じる可能性が高いと考えられます。</p><p>Loop ワークスペースの作成日は、ユーザーは確認することが出来ませんが、<br>ワークスペース内の各ページにはバージョン履歴がございますので、ワークスペース作成時期の目安にしていただけます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image5.png"></p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image7.png"></p><p>しかしながら、ワークスペース内でページを削除されている可能性がございます場合、この方法はご利用いただけません。<br>その他としては、例えば、テナントの全体管理者や SharePoint Embedded管理者にて、<br>SharePoint 管理センターより、Containers – Active containers から該当のコンテナーを開き、全般 - 作成日を確認する方法がございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image6.png"></p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。</p><p>大変お手数でございますが、ワークスペースの再作成をご実施いただくか、<br>右上の “共有” から、ページ単位での共有を行っていただくことをご検討いただけますと幸いです。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。</p><p>また、誠に恐れ入りますが、ワークスペースの単位の事象につきましては、問題が生じたワークスペースを再作成する以外の回避策をご提供出来ない可能性がございます。<br>恐縮でございますが、上記回避策にてご対応をいただくか、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートチームです。&lt;br&gt;この記事では、Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる事象について説明します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;事象&quot;&gt;&lt;a href</summary>
+      
+    
+    
+    
+    
+    <category term="Loop" scheme="https://officesupportjp.github.io/blog/tags/Loop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について</title>
+    <link href="https://officesupportjp.github.io/blog/cmagbplia0001mskjh69cder5/"/>
+    <id>https://officesupportjp.github.io/blog/cmagbplia0001mskjh69cder5/</id>
+    <published>2025-05-09T00:00:00.000Z</published>
+    <updated>2025-07-09T01:38:06.661Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2025&#x2F;05&#x2F;09 Update</strong></span><br><span style="color:#339966">今後についてを追記しました。タイトルを変更しました。</span>  </p><p><span style="color:#ff0000"><strong>2025&#x2F;05&#x2F;16 Update</strong></span><br><span style="color:#339966">今後についてを追記しました。</span>  </p><p>こんにちは、Office サポート チームです。<br>この記事では、挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について説明します。</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について</p><p><img src="/blog/cmagbplia0001mskjh69cder5/image1.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>Office のバージョンが 2402 以下 (ビルド表記では 16.0.17328.***** 以下) の場合、事象が生じる可能性がございます。<br>製品バージョンは以下よりご確認いただけます。</p><p>・Office 製品の [ファイル] タブ - “アカウント”<br><img src="/blog/cmagbplia0001mskjh69cder5/image2.png"></p><p>・OS の設定 - アプリ - インストールされているアプリ<br><img src="/blog/cmagbplia0001mskjh69cder5/image3.png"></p><br><h2 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a>回避策</h2><p>現時点で確認されている回避策は、以下の通りです。</p><p>・<span style="color:#ff0000">バージョン 2402 を除き、</span> <a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date">Microsoft 365 Apps の更新履歴 (日付別の一覧)</a> のサポートされているバージョンを利用する<br>・ブラウザーから Office for the web を利用する (Excel&#x2F;Word for the web ではアイコンの代わりにストック画像をご利用ください)</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p><del>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。</del><br><del>誠に恐れ入りますが、上記回避策にてご対応をいただくか、弊社開発部門での調査をお待ちくださいますようお願いいたします。</del></p><p>5&#x2F;16 現在、本事象の改善が確認されております。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2025&amp;#x2F;05&amp;#x2F;09 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;今後についてを追記しました。タイトルを変更しました。</summary>
+      
+    
+    
+    
+    
+    <category term="描画" scheme="https://officesupportjp.github.io/blog/tags/%E6%8F%8F%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Loop ワークスペースの「メンバーの招待と管理」でワークスペースのリンクが表示されない場合がある</title>
+    <link href="https://officesupportjp.github.io/blog/cm97ug53k00011ckj6784f71k/"/>
+    <id>https://officesupportjp.github.io/blog/cm97ug53k00011ckj6784f71k/</id>
+    <published>2025-04-08T00:00:00.000Z</published>
+    <updated>2025-07-09T01:38:06.608Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>今回、Loop ワークスペースの「メンバーの招待と管理」でワークスペースのリンクが表示されない事象についてご案内します。</p><br><h2 id="ワークスペースのリンクとは"><a href="#ワークスペースのリンクとは" class="headerlink" title="ワークスペースのリンクとは"></a>ワークスペースのリンクとは</h2><p>Loop ワークスペースを開き、人のアイコンをクリックして「メンバーの招待と管理」を開きます。</p><p><img src="/blog/cm97ug53k00011ckj6784f71k/image1.png"><br>↓<br><img src="/blog/cm97ug53k00011ckj6784f71k/image3.png"></p><br><h2 id="事象について"><a href="#事象について" class="headerlink" title="事象について"></a>事象について</h2><p>本記事作成時点 (2025&#x2F;04&#x2F;08) では、ワークスペースのリンク機能は公開を停止しております。<br>そのため、「メンバーの招待と管理」のダイアログを開いても、ワークスペースのリンク機能は表示されません。</p><p><img src="/blog/cm97ug53k00011ckj6784f71k/image2.png"></p><p>なお、公開停止前に作成していたワークスペースでは、引き続きワークスペースのリンク機能をご利用いただけます。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>今後、改めて機能公開が行われる可能性はございますが、具体的なスケジュールは未定となります。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;今回、Loop ワークスペースの「メンバーの招待と管理」でワークスペースのリンクが表示されない事象についてご案内します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;ワークスペースのリンクとは&quot;&gt;&lt;a href=&quot;#ワ</summary>
+      
+    
+    
+    
+    
+    <category term="Loop" scheme="https://officesupportjp.github.io/blog/tags/Loop/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Excel でユニバーサル プリントを使用して印刷した場合の現象について</title>
     <link href="https://officesupportjp.github.io/blog/cm88fpn830000146y52sf2mbd/"/>
     <id>https://officesupportjp.github.io/blog/cm88fpn830000146y52sf2mbd/</id>
     <published>2025-03-14T00:00:00.000Z</published>
-    <updated>2025-03-14T07:05:18.816Z</updated>
+    <updated>2025-03-14T07:09:02.644Z</updated>
     
     <content type="html"><![CDATA[<br><p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel でユニバーサル プリントを使用して印刷した場合に発生する現象について説明します。</p><h3 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h3><p>Excel のセルの書式設定で塗りつぶしパターンを指定しているファイルをユニバーサル プリントにて印刷した場合、印刷結果が出力されない場合があります。</p><p><strong>参考</strong><br>ユニバーサル プリントについては以下を参照ください。</p><p>ユニバーサル プリントのドキュメント<br><a href="https://learn.microsoft.com/ja-jp/universal-print/">https://learn.microsoft.com/ja-jp/universal-print/</a></p><h3 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h3><p>Excel からの印刷時に、OS 付属の 「Microsoft Print to PDF」 を指定して印刷操作を行い PDF 形式のファイルを作成します。その後に作成された PDF ファイルを開いてユニバーサル プリントにて印刷を行います。</p><p>Excel ファイルの内容を編集可能な場合は、セルの書式設定にて塗りつぶしパターンの設定を解除します。<br>セルの書式設定ダイアログで、以下のように [パターンの種類] のドロップダウンを展開して表示される一覧より左上のものを選択します。</p><p><img src="/blog/cm88fpn830000146y52sf2mbd/01.png"><br><br><br><br></p><p>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
     
@@ -48,15 +141,15 @@
     <link href="https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/"/>
     <id>https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/</id>
     <published>2025-03-13T15:00:00.000Z</published>
-    <updated>2025-03-14T04:16:57.384Z</updated>
+    <updated>2025-07-09T01:38:06.608Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel 利用に Excel ファイルを開くパフォーマンスが低下する現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Appsバージョン 2402 以降の Excel では、バージョン 2302 等の以前のバージョンと比較して、ふたつ目の Excel ファイルを開くまでの待ち時間が長くなる (ファイルを開くのが遅い) 場合があります。</p><p><strong>再現手順</strong><br>1 下記のような Excel ファイルを用意します。</p><p>A.xlsx  (サイズ : 約 20MB)<br>B.xlsx (サイズ : 約 60KB) </p><p>※ ひとつ目に開く Excel ファイルのサイズが大きいと、2つ目の Excel ファイルを開くのがより遅くなる傾向があることから、A.xlsx はサイズの大きなファイルとしています。</p><p>2 ひとつ目の Excel ファイル (A.xlsx) を開く操作をします。<br>画面上で A.xlsx が開いたことを確認します。</p><p>3 ふたつ目の Excel ファイル (B.xlsx) を開く操作をします。<br>B.xlsxが開かれるまでマウスから手を放すなどして何も操作しません。</p><p>4 画面上でふたつ目の Excel ファイル (B.xlsx) が開いたことを確認します。</p><p><strong>結果</strong><br>以前のバージョンと比較して、Microsoft 365 Apps バージョン 2402 以降の Excel  のほうが<br>ふたつ目の Excel ファイル (B.xlsx) を開くまでの待ち時間が長くなる(ファイルを開くのが遅い ) 傾向が確認できます。<br>※ 手順 3 から 4 までの、ふたつ目の Excel ファイル (B.xlsx) が開くまでの時間を計測して比較します。</p><h3 id="2-対処方法"><a href="#2-対処方法" class="headerlink" title="2. 対処方法"></a>2. 対処方法</h3><p>ふたつ目の Excel ファイルを開いた後に、ひとつ目の Excel ファイルを開いている Excel のウィンドウ上でマウスを動かすことで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><p>手順:<br>1 ひとつ目の Excel ファイル (A.xlsx) を開きます。<br>画面上で A.xlsx が開いたことを確認します。</p><p>2 ふたつ目の Excel ファイル  (B.xlsx) を開きます。</p><p>3 手順 1 で開いたExcel のウィンドウ上でマウスを動かします。(Excel ウィンドウ上でマウスを動かすことやセルをクリックする等の操作をします)</p><p>手順 3 を実施することで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><h3 id="3-今後の対応予定"><a href="#3-今後の対応予定" class="headerlink" title="3. 今後の対応予定"></a>3. 今後の対応予定</h3><p>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
+    <content type="html"><![CDATA[<p><strong><span style="color:red;">2025&#x2F;06&#x2F;26 Update</span></strong><br><span style="color:green;">今後の対応予定を変更しました。</span>  </p><p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel 利用に Excel ファイルを開くパフォーマンスが低下する現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Appsバージョン 2402 以降の Excel では、バージョン 2302 等の以前のバージョンと比較して、ふたつ目の Excel ファイルを開くまでの待ち時間が長くなる (ファイルを開くのが遅い) 場合があります。</p><p><strong>再現手順</strong><br>1 下記のような Excel ファイルを用意します。</p><p>A.xlsx  (サイズ : 約 20MB)<br>B.xlsx (サイズ : 約 60KB) </p><p>※ ひとつ目に開く Excel ファイルのサイズが大きいと、2つ目の Excel ファイルを開くのがより遅くなる傾向があることから、A.xlsx はサイズの大きなファイルとしています。</p><p>2 ひとつ目の Excel ファイル (A.xlsx) を開く操作をします。<br>画面上で A.xlsx が開いたことを確認します。</p><p>3 ふたつ目の Excel ファイル (B.xlsx) を開く操作をします。<br>B.xlsxが開かれるまでマウスから手を放すなどして何も操作しません。</p><p>4 画面上でふたつ目の Excel ファイル (B.xlsx) が開いたことを確認します。</p><p><strong>結果</strong><br>以前のバージョンと比較して、Microsoft 365 Apps バージョン 2402 以降の Excel  のほうが<br>ふたつ目の Excel ファイル (B.xlsx) を開くまでの待ち時間が長くなる(ファイルを開くのが遅い ) 傾向が確認できます。<br>※ 手順 3 から 4 までの、ふたつ目の Excel ファイル (B.xlsx) が開くまでの時間を計測して比較します。</p><h3 id="2-対処方法"><a href="#2-対処方法" class="headerlink" title="2. 対処方法"></a>2. 対処方法</h3><p>ふたつ目の Excel ファイルを開いた後に、ひとつ目の Excel ファイルを開いている Excel のウィンドウ上でマウスを動かすことで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><p>手順:<br>1 ひとつ目の Excel ファイル (A.xlsx) を開きます。<br>画面上で A.xlsx が開いたことを確認します。</p><p>2 ふたつ目の Excel ファイル  (B.xlsx) を開きます。</p><p>3 手順 1 で開いたExcel のウィンドウ上でマウスを動かします。(Excel ウィンドウ上でマウスを動かすことやセルをクリックする等の操作をします)</p><p>手順 3 を実施することで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><h3 id="3-今後の対応予定"><a href="#3-今後の対応予定" class="headerlink" title="3. 今後の対応予定"></a>3. 今後の対応予定</h3><p><del>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</del></p><p>最新チャネルのバージョン 2501 等、2025  年 2 月のリリースにて改善に向けた修正を図りました。<br>Microsoft 365 Apps を新しいバージョン&#x2F;ビルドに更新してご利用ください。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Excel 利用に Excel ファイルを開くパフォーマンスが低下する現象について説明します。&lt;/p&gt;
-&lt;h3 id=&quot;1-現象&quot;&gt;&lt;a href=&quot;#1-現象&quot; class=&quot;headerlink&quot; </summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color:red;&quot;&gt;2025&amp;#x2F;06&amp;#x2F;26 Update&lt;/span&gt;&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:green;&quot;&gt;今後の対応予定を変更しました。&lt;/span&gt;  &lt;/p&gt;
+&lt;</summary>
       
     
     
@@ -176,9 +269,9 @@
     <link href="https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/"/>
     <id>https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/</id>
     <published>2024-11-28T00:00:00.000Z</published>
-    <updated>2025-02-07T05:50:01.590Z</updated>
+    <updated>2025-07-09T01:38:06.661Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><h2 id="環境情報ログ"><a href="#環境情報ログ" class="headerlink" title="環境情報ログ"></a>環境情報ログ</h2><ol><li><p><a href="MSOfficeinfo_v3.1.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_DATA 配下に出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・C:\MS_DATA に出力された MOI から始まる zip ファイル</p></li></ol><br><h2 id="インストール、更新ログ"><a href="#インストール、更新ログ" class="headerlink" title="インストール、更新ログ"></a>インストール、更新ログ</h2><ol start="0"><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=103236">Microsoft 365 Apps Deployment Log Collector</a> から <strong>officedeploymentlogcollector.exe</strong> をダウンロードします。</p></li><li><p><strong>officedeploymentlogcollector.exe</strong> をダブルクリックし、任意のフォルダに展開します。</p></li><li><p>展開したフォルダに配置された <strong>OfficeC2RLogCollector.exe</strong> を実行します。(端末の管理者権限が必要となります)</p></li><li><p>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Temp\C2RLogs 配下に出力された c2rlogs_ から始まる zip ファイルを取得ください</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・c2rlogs_ から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット</p></li></ol><br><h2 id="ライセンス認証ログ"><a href="#ライセンス認証ログ" class="headerlink" title="ライセンス認証ログ"></a>ライセンス認証ログ</h2><ol start="0"><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">Office Licensing Diagnostic Tool</a> から <strong>OfficeLicenseDiagnostic.zip</strong> をダウンロードし展開してください。</p></li><li><p><strong>licenseInfo.cmd</strong> をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・licensingInfo から始まる zip ファイル</p></li></ol><br><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;1&#x2F;29  Update</strong></span><br><span style="color:#339966">スクリプトを更新しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;2&#x2F;5  Update</strong></span><br><span style="color:#339966">採取方法を簡素化しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><h2 id="環境情報ログ"><a href="#環境情報ログ" class="headerlink" title="環境情報ログ"></a>環境情報ログ</h2><ol><li><p><a href="MSOfficeinfo_v3.2.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_DATA 配下に出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・C:\MS_DATA に出力された MOI から始まる zip ファイル</p></li></ol><br><h2 id="インストール、更新ログ"><a href="#インストール、更新ログ" class="headerlink" title="インストール、更新ログ"></a>インストール、更新ログ</h2><ol start="0"><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=103236">Microsoft 365 Apps Deployment Log Collector</a> から <strong>officedeploymentlogcollector.exe</strong> をダウンロードします。</p></li><li><p><strong>officedeploymentlogcollector.exe</strong> をダブルクリックし、任意のフォルダに展開します。</p></li><li><p>展開したフォルダに配置された <strong>OfficeC2RLogCollector.exe</strong> を実行します。(端末の管理者権限が必要となります)</p></li><li><p>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Temp\C2RLogs 配下に出力された c2rlogs_ から始まる zip ファイルを取得ください</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・c2rlogs_ から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット</p></li></ol><br><h2 id="ライセンス認証ログ"><a href="#ライセンス認証ログ" class="headerlink" title="ライセンス認証ログ"></a>ライセンス認証ログ</h2><ol start="0"><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">Office Licensing Diagnostic Tool</a> から <strong>OfficeLicenseDiagnostic.zip</strong> をダウンロードし展開してください。</p></li><li><p><strong>licenseInfo.cmd</strong> をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・licensingInfo から始まる zip ファイル</p></li></ol><br><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;1&#x2F;29  Update</strong></span><br><span style="color:#339966">スクリプトを更新しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;2&#x2F;5  Update</strong></span><br><span style="color:#339966">採取方法を簡素化しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;6&#x2F;2  Update</strong></span><br><span style="color:#339966">スクリプトを更新しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
     
     
       
@@ -405,94 +498,6 @@
     <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
     
     <category term="セキュリティ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>必要なサービスが無効になっていますと表示される現象について</title>
-    <link href="https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/"/>
-    <id>https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/</id>
-    <published>2023-09-15T00:00:00.000Z</published>
-    <updated>2023-10-30T00:14:47.619Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。 </p><p>今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたします。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Office をご利用されている際に、以下のようなメッセージが表示されるとお問い合わせいただくことがございます。</p><p><img src="/blog/clmk7jget0001hckj66na16pi/image0.png"></p><br><p>これらの表示は機能によって若干異なる場合がございます。<br>また、オンライン通信を伴う機能がグレーアウトされていたり、表示されていない場合もございます。</p><br><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>Microsoft 365 Apps、Office LTSC 2021、Office 2019 (*) では、接続エクスペリエンスという機能が導入されており、オンライン接続の機能を用途ごとに有効・無効と切り替えるすることが出来るようになりました。<br>この機能が無効にされているとオンライン機能が利用できないため、上記のような現象が生じます。</p><p>Title : Microsoft 365 Apps for enterprise のプライバシー コントロールの概要<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls">https://learn.microsoft.com/ja-jp/deployoffice/privacy/overview-privacy-controls</a><br>(Office 2019 では Office での追加オプションである接続エクスペリエンスの使用を許可する のみが利用可能です)</p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>以下を上からご確認ください。</p><h2 id="1-プライバシー設定の見直し"><a href="#1-プライバシー設定の見直し" class="headerlink" title="1. プライバシー設定の見直し"></a>1. プライバシー設定の見直し</h2><ol><li>Excel 等を起動し、ファイル - オプション をクリックします</li><li>トラストセンター - トラストセンターの設定 をクリックします</li><li>プライバシーオプション - プライバシー設定 をクリックします</li><li>オプションの接続エクスペリエンスをオンにする にチェックをつけてください</li><li>事象が解消するかご確認ください。</li></ol><br><h2 id="2-接続エクスペリエンス機能の見直し"><a href="#2-接続エクスペリエンス機能の見直し" class="headerlink" title="2.  接続エクスペリエンス機能の見直し"></a>2.  接続エクスペリエンス機能の見直し</h2><p>Office 管理用グループポリシーでご実施されている接続エクスペリエンス機能の無効化を見直します。</p><ul><li><strong>ポリシーの確認</strong></li></ul><p>以下の資料より、今回ご利用されたい機能が以下のどのポリシーで制御されているかをご確認ください。</p><p>Title : Officeでの接続環境<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences">https://learn.microsoft.com/ja-jp/deployoffice/privacy/connected-experiences</a></p><p>例えば、PowerPoint デザイナー の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>3D マップ の場合、[コンテンツを分析する Office の接続エクスペリエンスの使用を許可する] に加えて、[Office の追加オプションである接続エクスペリエンスの使用を許可する]を有効にします。</p><p>アイコンの挿入 の場合、[オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する] を有効にします。</p><p>共有 や、その他記載がない機能の場合、[Office の接続エクスペリエンスの使用を許可する​] を有効にします。</p><br><ul><li><strong>ポリシーの変更</strong></li></ul><p>Office 管理用グループポリシーで該当するポリシーの制御を変更してください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[プライバシー]-[セキュリティ センター]</p><p>・コンテンツを分析する Office の接続エクスペリエンスの使用を許可する<br>・オンラインのコンテンツをダウンロードする Office の接続エクスペリエンスの使用を許可する<br>・Office の追加オプションである接続エクスペリエンスの使用を許可する<br>・Office の接続エクスペリエンスの使用を許可する​</p><p>もしくは、以下の資料より対応するレジストリをご確認いただき、設定を変更することで事象が解消するかをご確認ください。</p><p>Title : ポリシー設定を使用して Microsoft 365 Apps for enterprise のプライバシー コントロールを管理する<br>URL : <a href="https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls">https://learn.microsoft.com/ja-jp/deployoffice/privacy/manage-privacy-controls</a></p><br><h2 id="3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする"><a href="#3-Information-Rights-Management-関連のユーザーインターフェイスをオンにする" class="headerlink" title="3. Information Rights Management 関連のユーザーインターフェイスをオンにする"></a>3. Information Rights Management 関連のユーザーインターフェイスをオンにする</h2><p>今回ご利用される機能が Azure Information Protection 関連かつ、以下の設定が有効となっている場合には、未構成、または、無効に変更することで事象が解消するかご確認ください。</p><p>[ユーザーの構成]‐[ポリシー]-[管理用テンプレート]-[Microsoft Office 2016]-[アクセス制限の管理]</p><p>・Information Rights Management 関連のユーザーインターフェイスをオフにする : 未構成 または 無効</p><br><p>今回の投稿は以上です。</p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。 &lt;/p&gt;
-&lt;p&gt;今回の投稿では、Microsoft 365 Apps、Office LTSC 2021、Office 2019 のご利用時に「必要なサービスが無効になっています」と表示される現象についてご説明いたしま</summary>
-      
-    
-    
-    
-    
-    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android にてアプリ保護ポリシーを適用していても OneNote アプリの組織データを Microsoft 365 アプリの個人領域へ共有できる動作について</title>
-    <link href="https://officesupportjp.github.io/blog/clenw3diw000xf46y72q12jrq/"/>
-    <id>https://officesupportjp.github.io/blog/clenw3diw000xf46y72q12jrq/</id>
-    <published>2023-02-28T00:00:00.000Z</published>
-    <updated>2023-10-30T00:20:57.513Z</updated>
-    
-    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2023&#x2F;10&#x2F;30 Update</strong></span><br>本現象の対応が行われ、最新バージョンにては発生しない現象であることを記載しました。</p><p>こんにちは。Office サポートチームです。<br>この記事では、Android 端末で利用する OneNote アプリにて、<br>アプリ保護ポリシーを設定していても、組織データを個人データとして、<br>Microsoft 365 アプリに共有することができる動作について記載します。  </p><h1 id="事象の概要"><a href="#事象の概要" class="headerlink" title="事象の概要"></a>事象の概要</h1><p>BYOD で利用されるモバイル端末から企業データへアクセスする場合などを含め、<br>組織データを保護するための仕組みとして、Intune のアプリ保護ポリシーがあります。  </p><p>Android 端末においても例えば、Outlook や OneDrive, OneNote, Microsoft 365 アプリなど、<br>個人アカウントと組織アカウントの両方で利用可能なアプリに対して、<br>Intune のアプリ保護ポリシーにて、<br>[他のアプリに組織データを送信] を [ポリシーマネージドアプリ] と設定することで、<br>組織データを個人アカウントでサインイン済みの他のアプリに共有した際、<br>個人アカウントで扱うことを制限することが可能です。  </p><p>参考<br>Title: アプリ保護ポリシーの概要<br>URL: <a href="https://learn.microsoft.com/ja-jp/mem/intune/apps/app-protection-policy">https://learn.microsoft.com/ja-jp/mem/intune/apps/app-protection-policy</a>  </p><p>ただし、例外的な動作として、Android 端末において、<br>OneNote アプリの組織データを、Microsoft 365 アプリの個人領域へ共有可能であるという動作が確認されております。<br>具体的な手順は以下となります。  </p><ol><li>Microsoft 365 アプリに、個人アカウント、組織アカウントの両方でサインインし、Microsoft 365 アプリで個人アカウントが選択されている状態とする。</li><li>OneNote アプリで組織データとして扱われる OneDrive for Business 上のノートブックなどのページを開き、[…]-[ページの共有]-[プレーンテキスト]-[メモを作成 (Microsfoto 365)] をタップする。</li><li>Microsoft 365 アプリにサインインしている個人アカウントのメモとして保存される。</li></ol><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p><span style="color:#ff0000"><strong>2023&#x2F;10&#x2F;30 Update</strong></span><br>本現象の対応が行われ、最新バージョンにては、<br>OneNote の組織データのノートブックのページは、Microsoft 365 アプリの個人アカウントのメモとして保存されない動作となりました。</p><p><del>本動作について、現在開発部門で調査中となります。</del><br><del>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</del>  </p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。  </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2023&amp;#x2F;10&amp;#x2F;30 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;本現象の対応が行われ、最新バージョンにては発生しない現象であることを記載しました。&lt;/p&gt;
-&lt;p&gt;こんにちは</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)(旧)</title>
-    <link href="https://officesupportjp.github.io/blog/clefkdotu0001ukse0slv0l1u/"/>
-    <id>https://officesupportjp.github.io/blog/clefkdotu0001ukse0slv0l1u/</id>
-    <published>2023-02-24T00:00:00.000Z</published>
-    <updated>2023-10-30T00:14:47.604Z</updated>
-    
-    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2023&#x2F;10&#x2F;09 Update</strong></span><br><span style="color:#339966">有害サイトと分類されていたため移動しました。</span><br><br><br>本ページは <a href="https://officesupportjp.github.io/blog/clj709nu4004pqou8fyhg7wta/">信頼済みドキュメントに関するコンテンツ ブロックメッセージの説明 (MC302216)</a> に移動しました。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2023&amp;#x2F;10&amp;#x2F;09 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;有害サイトと分類されていたため移動しました。&lt;/sp</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>VL 版の Office 2016 でオンラインストレージからファイルを開く際に稀にサインイン画面が表示される現象について</title>
-    <link href="https://officesupportjp.github.io/blog/cldybofry00010gkj32idbkw7/"/>
-    <id>https://officesupportjp.github.io/blog/cldybofry00010gkj32idbkw7/</id>
-    <published>2023-02-10T00:00:00.000Z</published>
-    <updated>2023-02-16T04:49:53.168Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。 </p><p>今回の投稿では、VL (ボリュームライセンス) 版の Office 2016 でオンラインストレージからファイルを開く際に稀にサインイン画面が表示される現象についてご説明いたします。</p><p><a href="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/index.html">VL 版の Office 2016 とは？</a></p><br><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>VL 版の Office 2016 において、Teams やブラウザを介して SharePoint 等のオンラインストレージよりファイルを開く際、稀に以下のようなサインイン画面が表示されます。</p><p>・例</p><p><img src="/blog/cldybofry00010gkj32idbkw7/image1.png"></p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>本事象は Office 2016 で生じる可能性がございます。</p><p>本ダイアログが表示された場合、Office を再起動して事象が解消するかをご確認いただくとともに、改善されない場合には再度サインインをしていただきますようお願いいたします。<br>また、Microsoft 365 Apps ではオンラインストレージとのやり取りの機能が向上しておりますので、Microsoft 365 Apps をご利用いただき事象が改善するかをご確認いただけますと幸いです。</p><br><h2 id="留意点"><a href="#留意点" class="headerlink" title="留意点"></a>留意点</h2><p>本事象は以下のような場合には該当いたしません。</p><ul><li>Office を再起動してもファイルが開けない</li><li>Office のファイルの保存に失敗する</li><li>Office のサインインが出来ない</li></ul><p>このような場合には、以下の情報をご参考にいただけますと幸いです。</p><p><a href="https://officesupportjp.github.io/blog/cl0m69xu000124cvsclmc5vis/">MSI 版の Office 2016 で SPO、OneDrive、WebDavサーバーから Office ファイルが開かない、保存できない現象について</a></p><p><a href="https://officesupportjp.github.io/blog/cl0m82yjj002mvovs9cil5fgy/index.html">SharePoint Server など WebDAV が有効なサーバーから Office ファイルが開かない、保存できない現象について</a></p><p><a href="https://officesupportjp.github.io/blog/cl0m6umvg001gi4vsgppfcmk0/">Office のサインインのトラブルシュートについて</a></p><br><p>今回の投稿は以上です。</p><p>※ 本情報の内容（添付文書、リンク先などを含む）は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。 &lt;/p&gt;
-&lt;p&gt;今回の投稿では、VL (ボリュームライセンス) 版の Office 2016 でオンラインストレージからファイルを開く際に稀にサインイン画面が表示される現象についてご説明いたします。&lt;/p&gt;
-&lt;p&gt;&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
     
   </entry>
   
