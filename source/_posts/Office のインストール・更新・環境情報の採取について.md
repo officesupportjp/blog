@@ -1,7 +1,7 @@
 ---
 title: Office のインストール・更新・環境情報の採取について
 date: '2024-11-28'
-lastupdate: '2025-06-02'
+lastupdate: '2025-09-19'
 id: cm3e5mpvi0000cgkj2sfvb55j
 tags:
   - 更新
@@ -14,7 +14,7 @@ tags:
 
 環境情報ログ
 ---
-1. [MSOfficeinfo.zip](MSOfficeinfo_v3.2.zip) をダウンロードします。
+1. [MSOfficeinfo.zip](MSOfficeinfo_v3.3.zip) をダウンロードします。
 
 2. MSOfficeinfo.zip のプロパティを開き、以下で "許可する"にチェックをつけます。
 ![](image1.png)
@@ -47,6 +47,13 @@ tags:
 ・インストールの事象の場合、利用した Configuration.xml ファイル
 ・エラーが生じる事象の場合、スクリーンショット
 
+※ ツールを他の管理者ユーザーの資格情報で実行すると、他の管理者ユーザーの C:\Users\\<ユーザー名> 配下にログが作成されます。
+コマンドプロンプトを右クリック→管理者権限で起動し、以下のコマンドを実行してログを C:\MS_DATA 配下にコピーしてください。
+
+```
+Xcopy %temp%\C2RLogs C:\MS_DATA\C2RLogs  /S /C /I
+```
+
 <br>
 
 ライセンス認証ログ
@@ -75,5 +82,8 @@ tags:
 
 <span style="color:#ff0000">**2024/6/2  Update**</span>  
 <span style="color:#339966">スクリプトを更新しました</span>
+
+<span style="color:#ff0000">**2025/9/19  Update**</span>  
+<span style="color:#339966">スクリプトを更新しました。他の管理者ユーザーでの採取時の注意点を追記しました。</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
