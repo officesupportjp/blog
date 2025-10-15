@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-10-09T02:54:38.149Z</updated>
+  <updated>2025-10-15T02:37:26.120Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="https://officesupportjp.github.io/blog/cmgitf2o50001p46y0g4r53f0/"/>
     <id>https://officesupportjp.github.io/blog/cmgitf2o50001p46y0g4r53f0/</id>
     <published>2025-10-08T15:00:00.000Z</published>
-    <updated>2025-10-09T02:54:38.149Z</updated>
+    <updated>2025-10-15T02:37:26.120Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Word for Microsoft 365 が意図せず、勝手に起動する現象について説明します。<br><br></p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Word for Microsoft 365 でファイルを閉じた後や Word を終了した後で、Word が勝手に起動してくる場合があります。<br><br><br><br></p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>Word の終了処理の問題に起因して、Word が異常終了 (クラッシュ) することで<br>Word が再起動します。<br><br></p><p>イベントログに、以下のような内容で Word の Application Error の記録がある場合は、この問題に該当している可能性があります。<br>(ご利用の環境によりバージョンが異なる場合があります。)<br><br><br>＜イベントログ＞<br>障害が発生しているアプリケーション名: WINWORD.EXE、バージョン: 16.0.19029.20244<br>障害が発生したモジュール名: mso20win32client.dll、 バージョン: 0.0.0.0<br>例外コード: 0x1e29f389<br><br><br><br></p><h1 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h1><p>Word の終了処理の問題は、以下のバージョンで修正しました。<br><br>Word の終了時に異常終了 (クラッシュ) しなくなることで、Word の再起動 (勝手に起動する症状) が発生しなくなります。<br><br><br>Microsoft 365 Apps<br><br>・最新チャネル バージョン 2509<br>・月次エンタープライズチャネルについては、現在対応を検討中です。<br><br>後日進展がある場合には、こちらに掲載します。<br><br><br><br><br>今回の投稿は以上です。<br><br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    <content type="html"><![CDATA[<p><strong><span style="color:red;">2025&#x2F;10&#x2F;15 Update</span></strong><br><span style="color:green;">解決方法を更新しました。</span>  </p><p>こんにちは、Office サポート チームです。<br>今回の記事では、Word for Microsoft 365 が意図せず、勝手に起動する現象について説明します。<br><br></p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Word for Microsoft 365 でファイルを閉じた後や Word を終了した後で、Word が勝手に起動してくる場合があります。<br><br><br><br></p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>Word の終了処理の問題に起因して、Word が異常終了 (クラッシュ) することで<br>Word が再起動します。<br><br></p><p>イベントログに、以下のような内容で Word の Application Error の記録がある場合は、この問題に該当している可能性があります。<br>(ご利用の環境によりバージョンが異なる場合があります。)<br><br><br>＜イベントログ＞<br>障害が発生しているアプリケーション名: WINWORD.EXE、バージョン: 16.0.19029.20244<br>障害が発生したモジュール名: mso20win32client.dll、 バージョン: 0.0.0.0<br>例外コード: 0x1e29f389<br><br><br><br></p><h1 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h1><p>Word の終了処理の問題は、以下のバージョンで修正しました。<br>Word の終了時に異常終了 (クラッシュ) しなくなることで、Word の再起動 (勝手に起動する症状) が発生しなくなります。<br><br><br>Microsoft 365 Apps<br>・最新チャネル バージョン 2509 (ビルド 19231.20156)<br>・月次エンタープライズチャネル バージョン 2507 (ビルド 19029.20274) <br><br><br><br>※ 月次エンタープライズチャネル バージョン 2508 (ビルド 19127.20302) には修正が含まれていません。現在対応を検討中です。<br><br><br><br><br>今回の投稿は以上です。<br><br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Word for Microsoft 365 が意図せず、勝手に起動する現象について説明します。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h1 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;headerl</summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color:red;&quot;&gt;2025&amp;#x2F;10&amp;#x2F;15 Update&lt;/span&gt;&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:green;&quot;&gt;解決方法を更新しました。&lt;/span&gt;  &lt;/p&gt;
+&lt;p&gt;こ</summary>
       
     
     
