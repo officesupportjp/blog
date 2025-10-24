@@ -2,7 +2,7 @@
 title: Office の更新プログラムの種類について
 date: '2024-09-02'
 lastupdate: '2025-10-24'
-id : cmh456xcn006u50kj0ov34dby
+id : cmh1q882o006mkckj91ye8nt7
 tags:
   - 更新
 
