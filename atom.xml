@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-12-03T06:59:18.497Z</updated>
+  <updated>2025-12-19T09:44:20.230Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Word でルビ付きの文章作成時に自動で同じ文言が追加される</title>
+    <link href="https://officesupportjp.github.io/blog/cmjconxnr00007w6y0xbp70pg/"/>
+    <id>https://officesupportjp.github.io/blog/cmjconxnr00007w6y0xbp70pg/</id>
+    <published>2025-12-19T09:14:37.778Z</published>
+    <updated>2025-12-19T09:44:20.230Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。</p><br><h2 id="対象製品"><a href="#対象製品" class="headerlink" title="対象製品"></a>対象製品</h2><p>Word<br>Word for the web</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>Word でルビ付きの文章作成時に自動で同じ文言が追加されます。</p><p><img src="/blog/cmjconxnr00007w6y0xbp70pg/image1.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下のような操作時に発生することが確認されています。</p><p>・ルビを含んだ Word ファイルを共有している<br>・ルビを含む文字の段落にカーソルを置いている<br>・複数人で該当 Word ファイルを共同編集する<br>・[地域] の設定で Unicode 対応ではないプログラムの言語として [日本語 (日本)] が設定されている</p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。<br>上記の発生条件に合致する操作にて、文字の重複が発生した場合は、重複を削除くださいますようお願いいたします。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。<br>上記回避策にてご対応をいただき、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートチームです。&lt;br&gt;この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;対象製品&quot;&gt;&lt;a href=&quot;#対象製品&quot; class=&quot;headerlink&quot; t</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+    <category term="入力" scheme="https://officesupportjp.github.io/blog/tags/%E5%85%A5%E5%8A%9B/"/>
+    
+    <category term="ルビ" scheme="https://officesupportjp.github.io/blog/tags/%E3%83%AB%E3%83%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Word for Mac でトナーセーブ設定で印刷できない</title>
@@ -470,30 +499,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title>Office で利用するプロキシ設定について</title>
-    <link href="https://officesupportjp.github.io/blog/clr09r8tu00002wkjcubph9b8/"/>
-    <id>https://officesupportjp.github.io/blog/clr09r8tu00002wkjcubph9b8/</id>
-    <published>2024-01-04T15:00:00.000Z</published>
-    <updated>2024-01-09T09:06:32.640Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直)です。  </p><p>本記事では、Office で利用するプロキシ設定について説明します。</p><h2 id="説明"><a href="#説明" class="headerlink" title="説明"></a>説明</h2><p>Office には、オンライン画像の挿入やオンラインテンプレートの取得などインターネット通信を利用する機能がございます。<br>このプロキシ設定はログオンユーザーの OS のプロキシ設定 (WinINET) が利用されます。WinHTTP のプロキシ設定は利用されません。</p><p>ただし、Office 2019 以降や Microsoft 365 クライアントで存在する自動更新の処理等の一部の機能については、以下の順でそれぞれのプロキシ設定を参照することがございます。</p><ol><li>WinHTTP (存在しない場合、スキップされます。また、構成していても、処理によっては参照しない場合がございます)</li><li>SYSTEM ユーザーの OS のプロキシ設定 (WinINET)</li><li>ログオンユーザーの OS のプロキシ設定 (WinINET) (ただし、ユーザーがログオンしている場合に限ります)</li></ol><p>最終的には 3 が利用されるため、1 や 2 を構成せずとも 3 を構成しておくことで通信は出来るものとなります。<br>なお、この動作を無効化したり順番を変更することは出来ません。また、処理内容によっては 1 と 2 を使用しない場合もございます。</p><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p><strong>Office が利用するエンドポイントを教えてください</strong><br><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Office 365 の URL と IP アドレスの範囲</a>をご確認ください。</p><p><strong>Office でネットワーク接続がない旨のメッセージが表示されます</strong><br><a href="https://officesupportjp.github.io/blog/cl0m75al4001gmcvse36w64dv/">Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について</a>をご確認ください。</p><p><strong>必要なサービスが無効になっていますと表示されます</strong><br><a href="https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/">必要なサービスが無効になっていますと表示される現象について</a>をご確認ください。</p><p><strong>GPO プロキシ設定を配布していますが、2 の SYSTEM ユーザーのプロキシ設定は変更されますか</strong><br>GPO は OS ログオン時に設定されますため、2 の SYSTEM ユーザーのプロキシ設定は変更されません。<br>2 の SYSTEM ユーザーのプロキシ設定を変更するには、<a href="https://docs.microsoft.com/ja-jp/windows/win32/bits/bitsadmin-tool">BitsAdmin コマンド</a>を利用する方法があります。</p><p>プロキシサーバー “192.168.1.1:8080” を指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem MANUAL_PROXY 192.168.1.1:8080 “”</p><p>バイパスリストを含め指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem MANUAL_PROXY 192.168.1.1:8080 “*.microsoft.com”</p><p>pac ファイル <a href="http://server/proxy.pac">http://server/proxy.pac</a> を指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem AUTOSCRIPT <a href="http://server/proxy.pac">http://server/proxy.pac</a></p><p>設定をリセットする方法)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem NO_PROXY</p><p>設定を確認する方法)<br>bitsadmin &#x2F;util &#x2F;getieproxy localsystem</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直)です。  &lt;/p&gt;
-&lt;p&gt;本記事では、Office で利用するプロキシ設定について説明します。&lt;/p&gt;
-&lt;h2 id=&quot;説明&quot;&gt;&lt;a href=&quot;#説明&quot; class=&quot;headerlink&quot; title=&quot;説明&quot;&gt;&lt;/a&gt;説</summary>
-      
-    
-    
-    
-    
-    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
     
   </entry>
   
