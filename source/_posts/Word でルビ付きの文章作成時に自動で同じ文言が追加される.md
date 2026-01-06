@@ -1,8 +1,7 @@
 ---
 title: Word でルビ付きの文章作成時に自動で同じ文言が追加される
 date: 2025-12-19 
-lastupdate:
-id:cmjcon66n0000so6yfre75pjp
+id: cmjcon66n0000so6yfre75pjp
 tags:  
  - Word
  - 入力
