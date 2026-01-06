@@ -1,7 +1,7 @@
 ---
 title: Excel 2013 からのウィンドウ管理方法変更について – シングル ドキュメント インターフェイス (SDI)
 date: '2019-02-21'
-lastupdate: '2020-07-06'
+lastupdate: '2026-01-06'
 id: cl0n10dct000i90vs4c2a3pct
 tags:
   - SDI
@@ -21,6 +21,10 @@ tags:
 
 <span style="color:#ff0000">**2020/7/6 Update**</span>  
 <span style="color:#339966">3-1. に関連記事へのリンクを追記しました。</span>
+
+<span style="color:#ff0000">**2026/1/6 Update**</span>  
+<span style="color:#339966">3-1. に DisableMergeInstance レジストリの更新情報を追記しました。</span>
+
 
 **目次**
 
@@ -124,9 +128,19 @@ Excel 2010 以前からの動作ですが、No.2 や No.4 に相当する動作�
 タイトル : How to force Excel to open in a new instance by default  
 アドレス : [https://support.microsoft.com/en-us/help/3165211](https://support.microsoft.com/en-us/help/3165211)
 
-   
-**関連情報**
+**更新情報**  
+Office の更新に伴う動作変更で、現在は DisableMergeInstance に「1」を設定した場合も、スタートメニューなどからの Excel アプリケーション起動のみが新規プロセスになり、エクスプローラからファイルを開く場合は既存プロセスが使用されるままとなります。
 
+以下のバージョン以降では、DisableMergeInstance の値に「2」が追加されました。2 を設定すると、Excel アプリケーション起動に加え、エクスプローラからファイルを開くときも新規プロセスを使用する動作に変更できます。  
+- Microsoft 365 Apps:  
+  - 最新チャネル: バージョン 2301 (ビルド 16026.20146)  
+  - 月次エンタープライズ チャネル: バージョン 2212 (ビルド 15928.20298)  
+  - 半期エンタープライズ チャネル: バージョン 2208 (ビルド 15601.20578)  
+- 製品版 Office 全バージョン: バージョン 2301 (ビルド 16026.20146)
+- Office LTSC 2021: バージョン 2108 (ビルド 14332.20604)
+- Office 2024・Office LTSC 2024 以降: 初期リリース バージョンからすべて
+
+**関連情報**  
 プロセスの統合・分離に関連する以下のフォーラム記事も公開しています。
 
 Office プロセスを自プログラム専用にすることはできません  
