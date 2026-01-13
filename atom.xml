@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-10-22T08:15:06.551Z</updated>
+  <updated>2026-01-13T01:46:59.134Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -15,6 +15,82 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>クイックアクセスが「詳細の表示」としか表示されない事象について</title>
+    <link href="https://officesupportjp.github.io/blog/cmkbxw4t2009c2kkja1kvcvpr/"/>
+    <id>https://officesupportjp.github.io/blog/cmkbxw4t2009c2kkja1kvcvpr/</id>
+    <published>2026-01-12T15:00:00.000Z</published>
+    <updated>2026-01-13T01:46:59.134Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では、<a href="https://support.microsoft.com/ja-jp/office/eb533c0a-7ee9-40d4-8d29-0a88cc9e0231">クイックアクセス</a>が「詳細の表示」としか表示されない事象について説明します。</p><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p><a href="https://support.microsoft.com/ja-jp/office/eb533c0a-7ee9-40d4-8d29-0a88cc9e0231">クイックアクセス</a> にて、<br>SharePoint Online や OneDrive for business が表示されず、「詳細の表示」としか表示されません。</p><p><img src="/blog/image1.png"></p><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>クイックアクセスは OneDrive アカウントに紐づく仕様となりますが、<br>ユーザーが OneDrive for business サイトを保有していない場合に本事象が生じることが確認されております。</p><ul><li>参考手順</li></ul><ol><li>Microsoft 365の管理者のアカウントで、Microsoft 365にサインインし、[Microsoft 365管理センター] &gt; [すべての管理センター]から 「ShreaPoint 管理センター」を開く</li><li>[その他の機能]からユーザープロファイルの[開く]ボタンをクリックし、[ユーザープロファイル]画面を開く</li><li>ひと - [ユーザー権限の管理]をクリックし、[個人用サイトを作成する] のチェックを外す。<br>→ これより、ユーザーに紐づく OneDrive for business サイトを生成させていない</li></ol><br><h2 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a>回避策</h2><p>恐れ入りますが、現状、ユーザー様でご実施いただける本事象の有効な回避策はご案内可能な情報がございません。<br>ご利用環境をお伺いした上での詳細な調査をご希望されます場合、弊社にお問い合わせ下さいますようお願いいたします。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査および対処策の検討を行っておりますが、具体的なスケジュールは未定となります。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;本記事では、&lt;a href=&quot;https://support.microsoft.com/ja-jp/office/eb533c0a-7ee9-40d4-8d29-0a88cc9e0231&quot;&gt;クイックアクセス&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
+    
+    <category term="Microsoft 365 Apps" scheme="https://officesupportjp.github.io/blog/tags/Microsoft-365-Apps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word でルビ付きの文章作成時に自動で同じ文言が追加される</title>
+    <link href="https://officesupportjp.github.io/blog/cmjcon66n0000so6yfre75pjp/"/>
+    <id>https://officesupportjp.github.io/blog/cmjcon66n0000so6yfre75pjp/</id>
+    <published>2025-12-18T15:00:00.000Z</published>
+    <updated>2026-01-13T01:20:03.035Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。</p><br><h2 id="対象製品"><a href="#対象製品" class="headerlink" title="対象製品"></a>対象製品</h2><p>Word<br>Word for the web</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>Word でルビ付きの文章作成時に自動で同じ文言が追加されます。</p><p><img src="/blog/cmjcon66n0000so6yfre75pjp/image1.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下のような操作時に発生することが確認されています。</p><p>・ルビを含んだ Word ファイルを共有している<br>・ルビを含む文字の段落にカーソルを置いている<br>・複数人で該当 Word ファイルを共同編集する<br>・[地域] の設定で Unicode 対応ではないプログラムの言語として [日本語 (日本)] が設定されている</p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。<br>上記の発生条件に合致する操作にて、文字の重複が発生した場合は、重複を削除くださいますようお願いいたします。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。<br>上記回避策にてご対応をいただき、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートチームです。&lt;br&gt;この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;対象製品&quot;&gt;&lt;a href=&quot;#対象製品&quot; class=&quot;headerlink&quot; t</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+    <category term="入力" scheme="https://officesupportjp.github.io/blog/tags/%E5%85%A5%E5%8A%9B/"/>
+    
+    <category term="ルビ" scheme="https://officesupportjp.github.io/blog/tags/%E3%83%AB%E3%83%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word for Mac でトナーセーブ設定で印刷できない</title>
+    <link href="https://officesupportjp.github.io/blog/cmipmqpu600014w6y2vmfdmxc/"/>
+    <id>https://officesupportjp.github.io/blog/cmipmqpu600014w6y2vmfdmxc/</id>
+    <published>2025-12-02T15:00:00.000Z</published>
+    <updated>2025-12-08T02:46:04.096Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Word for Mac でファイルを印刷する際に、一部プリンタでトナーセーブ・カラーセーブ設定で印刷できない現象についてご案内いたします。<br><br></p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Word for Mac では印刷時のダイアログにて、プリンタで用意されたオプションを設定することが可能です。<br><br><br>ただし、一部プリンタでトナーセーブ・カラーセーブ設定を行っても、印刷時にトナーセーブ・カラーセーブ設定が適用されない場合がございます。<br>恐れ入りますが本動作は現状の Word for Mac の実装による制限事項となります。<br><br></p><h1 id="回避方法"><a href="#回避方法" class="headerlink" title="回避方法"></a>回避方法</h1><p>Word for Mac で印刷したいファイルを [ファイル]-[名前を付けて保存] より一度 PDF に変換し、<br>OS 標準の “プレビュー” アプリなどで PDF を開いて印刷することをお試しください。<br><br><br>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Word for Mac でファイルを印刷する際に、一部プリンタでトナーセーブ・カラーセーブ設定で印刷できない現象についてご案内いたします。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h1 id=&quot;現象&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+  </entry>
   
   <entry>
     <title>Word が勝手に起動する</title>
@@ -411,89 +487,20 @@
     <link href="https://officesupportjp.github.io/blog/clr8yxe6w00043gsebywv7n74/"/>
     <id>https://officesupportjp.github.io/blog/clr8yxe6w00043gsebywv7n74/</id>
     <published>2024-01-11T00:00:00.000Z</published>
-    <updated>2024-03-03T23:51:41.876Z</updated>
+    <updated>2026-01-13T01:20:03.035Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。</p><p>Office 2019 や Office LTSC 2021 といった Office 永続ライセンスの新しいバージョンへの変更や、Microsoft 365 Apps のバージョン更新にあたって、これまで動作していた VBA マクロが引き続き同じように動作するのかを懸念するご質問を頂くことがあります。<br>今回の記事では、このような Office バージョンアップ時の VBA マクロの互換性の考え方について記載します。</p><p>初めに結論を記載すると、元々利用していたバージョンが Office 2016 以降であれば、基本的な互換性は保持されており、ほとんどの場合は問題ありません。ただし、VBA マクロの処理の流れに依存して、Office の細かな動作変化が影響することは稀にあります。<br>このような動作しなくなるシナリオを網羅して弊社から案内することはできません。<br>最終的に確実な互換性を担保したい場合は、検証を通して確認していただく必要があります。</p><p>以下、VBA マクロの動作に関わる要素ごとに詳しく解説します。</p><p><strong><h3>1. VBA ランタイム</h3></strong><br>VBA はプログラム言語の 1 つであり、この VBA 言語を解釈して実行する VBA ランタイム自体にバージョンを持ちます。<br>VBA ランタイムは Office アプリケーションに同梱されていますが、現在サポートされる Office 2016 以降、Office 2019 &#x2F; Office 2021 &#x2F; Microsoft 365 Apps のいずれもバージョン 7.1 で統一されており、VBA ランタイムのバージョン更新はありません。<br>また仮に VBA 7.1 より古いバージョンで作成した VBA コードを含む Office ファイルであっても、VBA コードを実行環境で再コンパイルして実行できます。  </p><p>以上のことから、VBA ランタイムの観点で互換性を気にする必要はありません。<br><br></p><p><strong><h3>2. Office オブジェクト ライブラリ</h3></strong><br>VBA マクロの処理内容の中心は、Office アプリケーションに関する処理を行うことです。これには通常、Office オブジェクト ライブラリ内のオブジェクト &#x2F; メソッド &#x2F; プロパティなどを使用します。<br>例えば、「Microsoft Excel 16.0 Object Library」ライブラリでは、Workbooks.Open メソッドなどの Excel アプリケーションとのやり取りを行うためのオブジェクトを提供しています。VBA マクロからは、[参照設定] でこれらのライブラリを参照したり、レイト バインディングと呼ばれる手法で実行時にライブラリを参照して利用します。</p><p><strong><h4>2-1. ライブラリ バージョン</h4></strong><br>これらの Office アプリケーションとやり取りするためのオブジェクトを提供するライブラリは、Office に同梱されています。Office 2016 以降、Office 2019 &#x2F; Office 2021 &#x2F; Microsoft 365 Apps のいずれにおいても、バージョン「16.0」から変更はありません。このため、ライブラリ自体のバージョンが変わり、参照できなくなるといった問題は発生しません。</p><p>また、Office 2013 以前は「15.0」など、Office バージョンごとに異なるバージョンでした。この場合も、古いバージョンから新しいバージョンへの互換性は考慮されています。例えば Office 2013 で作成した VBA コードを、Microsoft 365 Apps 環境で実行する場合、自動的に新しいバージョンの同じライブラリを参照して動作します。<br>ただし、反対に新しいバージョンで作成した VBA コードを古いバージョンで実行する場合は、利用アプリケーションとライブラリの組み合わせによっては参照できません。</p><p><strong><h4>2-2. ライブラリ内のオブジェクト モデルの廃止 &#x2F; 変更</h4></strong><br>ライブラリ内で提供するオブジェクト モデルについては、Office 2016 より前のバージョンからの更新の場合、いくつかの互換性に影響が生じる廃止・変更があります。これらは、以下の公開情報でご案内しています。  </p><p>Office の互換性に関する問題<br><a href="https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office">https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office</a>  </p><p>一方、Office 2016 以降は、既存のオブジェクト モデルに対し、メソッドなどが削除されたり、メソッド呼び出し時の必須パラメーターが追加されるといった、これまでのオブジェクト モデルの用法に影響を与えるような破壊的変更はありません。<br><br></p><p><strong><h3>3. Office アプリケーションの動作変化</h3></strong><br>ここまでの 1. &#x2F; 2. の観点からは、Office 2016 以降のバージョンから、より新しいバージョンへの更新において、通常 VBA マクロの動作に影響はありません。<br>ただ重要な点として、VBA マクロは、Office アプリケーション等に対する処理要求を行っているということです。このため、VBA マクロからの処理においても、Office アプリケーションの動作変化の影響を受けます。  </p><p>例えば VBA マクロで Workbooks.Open を実行すると、Excel アプリケーションに対し「ファイルを開く」という要求を行い、実際にファイルを開く処理を行うのは VBA コード自身ではなく、Excel アプリケーション側です。そして、「ファイルを開く」という動作の中には、実際のファイル内容の読み取りの他、様々な内部処理が存在します。例えば、ファイルのフォーマットチェック、セキュリティ設定によるファイル内要素のブロック要否のチェック、最近使ったファイルへの情報追加・・・など、多岐に渡る内部処理をまとめて Workbooks.Open により実行される「ファイルを開く」動作となります。</p><p>ここまでに述べた通り、新しいバージョンの Office でも、Workbooks.Open メソッド自体はこれまでと同じ用法で実行することはできます。ただ、例えば Workbooks.Open から実行するフォーマットチェック項目が強化される、といった Excel 側の動作変化はあり得ます。<br>先述の例の場合、新しいチェック項目に反するフォーマットのファイルを VBA マクロから開くと、以前のバージョンでは開けるが、新しいバージョンでは開けない、といった事象が発生する可能性があります。</p><p>このような Office アプリケーションの動作変化は、バージョン更新に伴って無数に存在し、かつ内部の細かな実装であるため、すべての変更点を網羅して一覧化することはできません。リリース ノートで主要な変更の概要は確認できますが、記載のない細かな変更もあり、また、リリース ノートの端的な記載から影響有無を判断することは難しいことがほとんどです。<br>また一方、ユーザーが作成する VBA マクロの処理内容も千差万別であり、どの Office 動作変化が VBA マクロの処理に影響するかを弊社で事前に推測し、「VBA に影響が出る変更リスト」のような形でまとめることも困難です。  </p><p>したがって、VBA マクロが新しい Office バージョンで確実に動作するかは、実際に新しい環境での動作検証を通してご確認ください。  </p><p>なお、このように記載しましたが、もちろん、広く一般的に想定される状況で、既存 VBA マクロの動作に影響するような変更は基本的には行いません。以下の公開情報でも触れている通り、ほとんどの VBA マクロはこれまでと同じように動作するため、過度に心配する必要はありません。</p><p>Microsoft 365 Appsをデプロイするための環境と要件を評価する<br>手順 4 - アプリケーション互換性の評価<br><a href="https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps">https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps</a></p><p>社内環境の Office バージョンアップなどに際しては、VBA マクロを含むファイルは非常に多く存在することが一般的かと思います。そして、このようなファイルすべてを事前検証することは現実的ではないことが多いと考えられます。<br>例えば、業務上重要なファイルのみ事前検証を行い、その他のファイルは新バージョンの利用開始後に問題が確認された時点で、弊社サポートへのお問い合わせなどを通して調査するなど、皆様のご事情に合わせて、互換性に関する対応方針をご検討いただければ幸いです。<br><br></p><p><strong><h3>付録 1: Office 動作変化の具体例</h3></strong><br>&lt;3. Office アプリケーションの動作変化&gt; について、Office の動作変化の具体例を紹介します。</p><p><strong>OneDrive 同期フォルダーの Workbook.Path</strong><br>エクスプローラーで OneDrive や SharePoint ライブラリの同期フォルダからファイルを開く場合、以前の Office バージョンでは、ThisWorkbook.Path などで開いたファイルのパスを取得すると、同期フォルダのローカル パスが返されました。<br>Microsoft 365 の最新チャネル バージョン 1903 および半期チャネル バージョン 2008 以降、および Office LTSC 2021 では、このとき、クラウド ストレージ側の URL パスが返るようになりました。</p><p>この変化により、ローカル パスが返ることを期待して後続処理 (例: ”￥” 文字でのパス分割など) を記載していると影響が生じます。</p><p><strong>Excel 表示形式の和暦元年対応</strong><br> Office 2019 までは、Excel のセルの表示形式において、和暦の元年表記に未対応だったため、「令和1年5月1日」のように表示されていました。<br> Microsoft 365 のバージョン 1909 以降や Office LTSC 2021 では、元年表記に対応するとともに、既定で元年表記が有効となっています。</p><p> <img src="/blog/clr8yxe6w00043gsebywv7n74/Gannen.png"></p><p>この変化により、新しいバージョンでは、セルに「令和1年5月1日」のような和暦文字列を設定すると「令和元年5月1日」と表示内容が変わります。<br><br></p><p><strong><h3>付録 2: bit 変更の影響</h3></strong><br>Office のバージョンアップと合わせて、32 bit から 64 bit に変更することも多いかと思います。bit 変更に伴う VBA マクロへの影響として主に注意する点は、以下の 2 点です。</p><ul><li>Office 以外のライブラリを利用している場合、64 bit ライブラリを実行環境にインストール済みか</li><li>Declare ステートメントを利用している場合、PtrSafe の付与と、パラメーターの Long 型を適切に LongPtr 型に変更しているか (パラメーターの値を扱う変数のデータ型も合わせて変更が必要)</li></ul><p>詳しくは、以下の公開情報をご参照ください。  </p><p>64 ビット版または 32 ビット版の Office を選択する<br><a href="https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261">https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261</a></p><p>64 ビット Visual Basic for Applications の概要<br><a href="https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview">https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview</a></p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2026&#x2F;01&#x2F;06 Update</strong></span><br><span style="color:#339966">- “付録 3: OS 更新による VBA 動作への影響” を追記しました。</span><br><span style="color:#339966">- Office 2016 &#x2F; 2019 のサポート終了に伴い、Office バージョンに言及する記載を更新しました。</span><br><br></p><p>こんにちは、Office サポート チームの中村です。</p><p>Office LTSC 2024 等の Office 永続ライセンスの新しいバージョンへの変更や、Microsoft 365 Apps のバージョン更新にあたって、これまで動作していた VBA マクロが引き続き同じように動作するのかを懸念するご質問を頂くことがあります。<br>今回の記事では、このような Office バージョンアップ時の VBA マクロの互換性の考え方について記載します。</p><p>初めに結論を記載すると、元々利用していたバージョンが Office 2016 以降であれば、基本的な互換性は保持されており、ほとんどの場合は問題ありません。ただし、VBA マクロの処理の流れに依存して、Office の細かな動作変化が影響することは稀にあります。<br>このような影響で動作しなくなるシナリオを網羅して弊社から案内することはできません。<br>最終的に確実な互換性を担保したい場合は、検証を通して確認していただく必要があります。</p><p>以下、VBA マクロの動作に関わる要素ごとに詳しく解説します。</p><p><strong><h3>1. VBA ランタイム</h3></strong><br>VBA はプログラム言語の 1 つであり、この VBA 言語を解釈して実行する VBA ランタイム自体にバージョンを持ちます。<br>VBA ランタイムは Office アプリケーションに同梱されていますが、Office 2016 以降の永続ライセンス版 Office、および Microsoft 365 Apps のいずれもバージョン 7.1 で統一されており、VBA ランタイムのバージョン更新はありません。<br>また仮に VBA 7.1 より古いバージョンで作成した VBA コードを含む Office ファイルであっても、VBA コードを実行環境で再コンパイルして実行できます。  </p><p>以上のことから、VBA ランタイムの観点で互換性を気にする必要はありません。<br><br></p><p><strong><h3>2. Office オブジェクト ライブラリ</h3></strong><br>VBA マクロの処理内容の中心は、Office アプリケーションに関する処理を行うことです。これには通常、Office オブジェクト ライブラリ内のオブジェクト &#x2F; メソッド &#x2F; プロパティなどを使用します。<br>例えば、「Microsoft Excel 16.0 Object Library」ライブラリでは、Workbooks.Open メソッドなどの Excel アプリケーションとのやり取りを行うためのオブジェクトを提供しています。VBA マクロからは、[参照設定] でこれらのライブラリを参照したり、レイト バインディングと呼ばれる手法で実行時にライブラリを参照して利用します。</p><p><strong><h4>2-1. ライブラリ バージョン</h4></strong><br>これらの Office アプリケーションとやり取りするためのオブジェクトを提供するライブラリは、Office に同梱されています。Office 2016 以降の永続ライセンス版 Office、および Microsoft 365 Apps のいずれにおいても、バージョン「16.0」から変更はありません。このため、ライブラリ自体のバージョンが変わり、参照できなくなるといった問題は発生しません。</p><p>また、Office 2013 以前は「15.0」など、Office バージョンごとに異なるバージョンでした。この場合も、古いバージョンから新しいバージョンへの互換性は考慮されています。例えば Office 2013 で作成した VBA コードを、Microsoft 365 Apps 環境で実行する場合、自動的に新しいバージョンの同じライブラリを参照して動作します。<br>ただし、反対に新しいバージョンで作成した VBA コードを古いバージョンで実行する場合は、利用アプリケーションとライブラリの組み合わせによっては参照できません。</p><p><strong><h4>2-2. ライブラリ内のオブジェクト モデルの廃止 &#x2F; 変更</h4></strong><br>ライブラリ内で提供するオブジェクト モデルについては、Office 2016 より前のバージョンからの更新の場合、いくつかの互換性に影響が生じる廃止・変更があります。これらは、以下の公開情報でご案内しています。  </p><p>Office の互換性に関する問題<br><a href="https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office">https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office</a>  </p><p>一方、Office 2016 以降は、既存のオブジェクト モデルに対し、メソッドなどが削除されたり、メソッド呼び出し時の必須パラメーターが追加されるといった、これまでのオブジェクト モデルの用法に影響を与えるような破壊的変更はありません。<br><br></p><p><strong><h3>3. Office アプリケーションの動作変化</h3></strong><br>ここまでの 1. &#x2F; 2. の観点からは、Office 2016 以降のバージョンから、より新しいバージョンへの更新において、通常 VBA マクロの動作に影響はありません。<br>ただ重要な点として、VBA マクロは、Office アプリケーション等に対する処理要求を行っているということです。このため、VBA マクロからの処理においても、Office アプリケーションの動作変化の影響を受けます。  </p><p>例えば VBA マクロで Workbooks.Open を実行すると、Excel アプリケーションに対し「ファイルを開く」という要求を行い、実際にファイルを開く処理を行うのは VBA コード自身ではなく、Excel アプリケーション側です。そして、「ファイルを開く」という動作の中には、実際のファイル内容の読み取りの他、様々な内部処理が存在します。例えば、ファイルのフォーマットチェック、セキュリティ設定によるファイル内要素のブロック要否のチェック、最近使ったファイルへの情報追加・・・など、多岐に渡る内部処理をまとめて Workbooks.Open により実行される「ファイルを開く」動作となります。</p><p>ここまでに述べた通り、新しいバージョンの Office でも、Workbooks.Open メソッド自体はこれまでと同じ用法で実行することはできます。ただ、例えば Workbooks.Open から実行する「ファイルを開く」処理内のフォーマットチェック項目が強化される、といった Excel 側の動作変化はあり得ます。<br>先述の例の場合、新しいチェック項目に反するフォーマットのファイルを VBA マクロから開くと、以前のバージョンでは開けるが、新しいバージョンでは開けない、といった事象が発生する可能性があります。</p><p>このような Office アプリケーションの動作変化は、バージョン更新に伴って無数に存在し、かつ内部の細かな実装であるため、すべての変更点を網羅して一覧化することはできません。リリース ノートで主要な変更の概要は確認できますが、記載のない細かな変更もあり、また、リリース ノートの端的な記載から影響有無を判断することは難しいことがほとんどです。<br>また一方、ユーザーが作成する VBA マクロの処理内容も千差万別であり、どの Office 動作変化が VBA マクロの処理に影響するかを弊社で事前に推測し、「VBA に影響が出る変更リスト」のような形でまとめることも困難です。  </p><p>したがって、VBA マクロが新しい Office バージョンで確実に動作するかは、実際に新しい環境での動作検証を通してご確認ください。  </p><p>なお、このように記載しましたが、もちろん、広く一般的に想定される状況で、既存 VBA マクロの動作に影響するような変更は基本的には行いません。以下の公開情報でも触れている通り、ほとんどの VBA マクロはこれまでと同じように動作するため、過度に心配する必要はありません。</p><p>Microsoft 365 Appsをデプロイするための環境と要件を評価する<br>手順 4 - アプリケーション互換性の評価<br><a href="https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps">https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps</a></p><p>社内環境の Office バージョンアップなどに際しては、VBA マクロを含むファイルは非常に多く存在することが一般的かと思います。そして、このようなファイルすべてを事前検証することは現実的ではないことが多いと考えられます。<br>例えば、業務上重要なファイルのみ事前検証を行い、その他のファイルは新バージョンの利用開始後に問題が確認された時点で、弊社サポートへのお問い合わせなどを通して調査するなど、皆様のご事情に合わせて、互換性に関する対応方針をご検討いただければ幸いです。<br><br></p><p><strong><h3>付録 1: Office 動作変化の具体例</h3></strong><br>&lt;3. Office アプリケーションの動作変化&gt; について、Office の動作変化の具体例を紹介します。</p><p><strong>OneDrive 同期フォルダーの Workbook.Path</strong><br>エクスプローラーで OneDrive や SharePoint ライブラリの同期フォルダからファイルを開く場合、以前の Office バージョンでは、ThisWorkbook.Path などで開いたファイルのパスを取得すると、同期フォルダのローカル パスが返されました。<br>Microsoft 365 Apps の最新チャネル バージョン 1903 および半期チャネル バージョン 2008 以降、および Office LTSC 2021 では、このとき、クラウド ストレージ側の URL パスが返るようになりました。</p><p>この変化により、ローカル パスが返ることを期待して後続処理 (例: ”￥” 文字でのパス分割など) を記載していると影響が生じます。</p><p><strong>Excel 表示形式の和暦元年対応</strong><br> Office 2019 までは、Excel のセルの表示形式において、和暦の元年表記に未対応だったため、「令和1年5月1日」のように表示されていました。<br> Microsoft 365 のバージョン 1909 以降や Office LTSC 2021 以降の永続ライセンス版では、元年表記に対応するとともに、既定で元年表記が有効となっています。</p><p> <img src="/blog/clr8yxe6w00043gsebywv7n74/Gannen.png"></p><p>この変化により、新しいバージョンでは、セルに「令和1年5月1日」のような和暦文字列を設定すると「令和元年5月1日」と表示内容が変わります。<br><br></p><p><strong><h3>付録 2: bit 変更の影響</h3></strong><br>Office のバージョンアップと合わせて、32 bit から 64 bit に変更することも多いかと思います。bit 変更に伴う VBA マクロへの影響として主に注意する点は、以下の 2 点です。</p><ul><li>Office 以外のライブラリを利用している場合、64 bit ライブラリを実行環境にインストール済みか</li><li>Declare ステートメントを利用している場合、PtrSafe の付与と、パラメーターの Long 型を適切に LongPtr 型に変更しているか (パラメーターの値を扱う変数のデータ型も合わせて変更が必要)</li></ul><p>詳しくは、以下の公開情報をご参照ください。  </p><p>64 ビット版または 32 ビット版の Office を選択する<br><a href="https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261">https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261</a></p><p>64 ビット Visual Basic for Applications の概要<br><a href="https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview">https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview</a></p><br><p><strong><h3>付録 3: OS 更新による VBA 動作への影響</h3></strong><br>Office のバージョン アップだけでなく、OS のバージョン アップで VBA の動作に影響が出るか、という質問を頂くこともありますが、考え方は「3. Office アプリケーションの動作変化」と同じです。  </p><p>Office アプリケーションは、内部的に OS で用意された API を呼び出し、OS の機能を利用して動作しています。またファイルを開く処理を例にすると、実際のファイルへのアクセスには、OS のファイル操作 API を呼び出しています。また、ファイル サーバーやクラウド ストレージにあるファイルの場合は SMB や HTTP でネットワーク通信を行う OS 機能も利用します。そして、開いたファイルを画面に表示するには、OS の描画 API を使います。 (これらは利用する OS 機能の一部の例です。)  </p><p>このように「VBA → Office アプリケーション → OS」と連携する仕組み上、OS API の動作変化が Office アプリケーションの動作、ひいては VBA の動作に影響する理論上の可能性はあります。  </p><p>ただし、OS API の動作は Office に限らず、その OS 上で動作するあらゆるアプリケーションに影響します。このため、Windows は互換性を非常に重視して設計されており、Office 更新に比べると OS 更新による VBA 動作への影響はさらに少なく、実際にはほぼありません。</p><p>参考)<br>以下の Windows IT Pro Blog では、Windows OS の互換性への取り組みについて詳しくご案内しています。  </p><p>Microsoft extends application compatibility promise to Windows 11<br><a href="https://techcommunity.microsoft.com/blog/windows-itpro-blog/microsoft-extends-application-compatibility-promise-to-windows-11/2810546">https://techcommunity.microsoft.com/blog/windows-itpro-blog/microsoft-extends-application-compatibility-promise-to-windows-11/2810546</a></p><p>App confidence: From our compatibility story to yours<br><a href="https://techcommunity.microsoft.com/blog/windows-itpro-blog/app-confidence-from-our-compatibility-story-to-yours/3750085">https://techcommunity.microsoft.com/blog/windows-itpro-blog/app-confidence-from-our-compatibility-story-to-yours/3750085</a></p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;/p&gt;
-&lt;p&gt;Office 2019 や Office LTSC 2021 といった Office 永続ライセンスの新しいバージョンへの変更や、Microsoft 365 Apps のバージョン更新にあたって、これまで</summary>
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2026&amp;#x2F;01&amp;#x2F;06 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;- “付録 3: OS 更新による VBA 動作への</summary>
       
     
     
     
     
     <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS 端末で Excel ファイルに描画を行うとアプリが強制終了する場合がある</title>
-    <link href="https://officesupportjp.github.io/blog/clr65j0hm00091s6ycv6zcha4/"/>
-    <id>https://officesupportjp.github.io/blog/clr65j0hm00091s6ycv6zcha4/</id>
-    <published>2024-01-09T00:00:00.000Z</published>
-    <updated>2024-03-03T23:51:41.876Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは。Office サポートチームです。<br>この記事では、iOS 端末で Excel ファイルに対して描画をする際に、<br>アプリが強制終了する動作について記載します。    </p><h1 id="事象の概要"><a href="#事象の概要" class="headerlink" title="事象の概要"></a>事象の概要</h1><p>以下公開情報の通り、Office では　[描画] 機能を使用することで、Excel ファイルに対して手書き入力を行うことが可能です。  </p><p>Title: Office で図形やテキストを手描き入力する<br>URL: <a href="https://support.microsoft.com/ja-jp/office/6d76c674-7f4b-414d-b67f-b3ffef6ccf53#OfficeVersion=iOS">https://support.microsoft.com/ja-jp/office/6d76c674-7f4b-414d-b67f-b3ffef6ccf53#OfficeVersion=iOS</a></p><p>本描画機能に関連して、iOS 端末の Excel アプリや Microsoft 365 アプリにて、<br>一度 Excel ファイルを開いて閉じるまでの間に、<br>Excel ファイルに対して長時間の描画などによって多く描画オブジェクトを作成する場合に、<br>アプリが強制終了する動作が確認されております。<br>※アプリ内部でのメモリ使用状況等によって事象が再現するとみられ、具体的な目安等についてはご案内が困難となります。  </p><h1 id="今後の対応予定"><a href="#今後の対応予定" class="headerlink" title="今後の対応予定"></a>今後の対応予定</h1><p>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。  </p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。  </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは。Office サポートチームです。&lt;br&gt;この記事では、iOS 端末で Excel ファイルに対して描画をする際に、&lt;br&gt;アプリが強制終了する動作について記載します。    &lt;/p&gt;
-&lt;h1 id=&quot;事象の概要&quot;&gt;&lt;a href=&quot;#事象の概要&quot; class=</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Office で利用するプロキシ設定について</title>
-    <link href="https://officesupportjp.github.io/blog/clr09r8tu00002wkjcubph9b8/"/>
-    <id>https://officesupportjp.github.io/blog/clr09r8tu00002wkjcubph9b8/</id>
-    <published>2024-01-04T15:00:00.000Z</published>
-    <updated>2024-01-05T07:13:54.277Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直)です。  </p><p>本記事では、Office で利用するプロキシ設定について説明します。</p><h2 id="説明"><a href="#説明" class="headerlink" title="説明"></a>説明</h2><p>Office には、オンライン画像の挿入やオンラインテンプレートの取得などインターネット通信を利用する機能がございます。<br>このプロキシ設定はログオンユーザーの OS のプロキシ設定 (WinINET) が利用されます。WinHTTP のプロキシ設定は利用されません。</p><p>ただし、Office 2019 以降や Microsoft 365 クライアントで存在する自動更新の処理等の一部の機能については、以下の順でそれぞれのプロキシ設定を参照することがございます。</p><ol><li>WinHTTP (存在しない場合、スキップされます。また、構成していても、処理によっては参照しない場合がございます)</li><li>SYSTEM ユーザーの OS のプロキシ設定 (WinINET)</li><li>ログオンユーザーの OS のプロキシ設定 (WinINET) (ただし、ユーザーがログオンしている場合に限ります)</li></ol><p>最終的には 3 が利用されるため、1 や 2 を構成せずとも 3 を構成しておくことで通信は出来るものとなります。<br>なお、この動作を無効化したり順番を変更することは出来ません。また、処理内容によっては 1 と 2 を使用しない場合もございます。</p><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p><strong>Office が利用するエンドポイントを教えてください</strong><br><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Office 365 の URL と IP アドレスの範囲</a>をご確認ください。</p><p><strong>Office でネットワーク接続がない旨のメッセージが表示されます</strong><br><a href="https://officesupportjp.github.io/blog/cl0m75al4001gmcvse36w64dv/">Office のサインインでネットワーク接続がない旨のメッセージが表示される事象について</a>をご確認ください。</p><p><strong>必要なサービスが無効になっていますと表示されます</strong><br><a href="https://officesupportjp.github.io/blog/clmk7jget0001hckj66na16pi/">必要なサービスが無効になっていますと表示される現象について</a>をご確認ください。</p><p><strong>GPO プロキシ設定を配布していますが、2 の SYSTEM ユーザーのプロキシ設定は変更されますか</strong><br>GPO は OS ログオン時に設定されますため、2 の SYSTEM ユーザーのプロキシ設定は変更されません。<br>2 の SYSTEM ユーザーのプロキシ設定を変更するには、<a href="https://docs.microsoft.com/ja-jp/windows/win32/bits/bitsadmin-tool">BitsAdmin コマンド</a>を利用する方法があります。</p><p>プロキシサーバー “192.168.1.1:8080” を指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem MANUAL_PROXY 192.168.1.1:8080 “”</p><p>バイパスリストを含め指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem MANUAL_PROXY 192.168.1.1:8080 “*.microsoft.com”</p><p>pac ファイル <a href="http://server/proxy.pac">http://server/proxy.pac</a> を指定する場合の例)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem AUTOSCRIPT <a href="http://server/proxy.pac">http://server/proxy.pac</a></p><p>設定をリセットする方法)<br>bitsadmin &#x2F;util &#x2F;setieproxy localsystem NO_PROXY</p><p>設定を確認する方法)<br>bitsadmin &#x2F;util &#x2F;getieproxy localsystem</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直)です。  &lt;/p&gt;
-&lt;p&gt;本記事では、Office で利用するプロキシ設定について説明します。&lt;/p&gt;
-&lt;h2 id=&quot;説明&quot;&gt;&lt;a href=&quot;#説明&quot; class=&quot;headerlink&quot; title=&quot;説明&quot;&gt;&lt;/a&gt;説</summary>
-      
-    
-    
-    
-    
-    <category term="サインイン、認証" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%B5%E3%82%A4%E3%83%B3%E3%82%A4%E3%83%B3%E3%80%81%E8%AA%8D%E8%A8%BC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MECM で M365Apps の更新プログラムが必要と判定されない</title>
-    <link href="https://officesupportjp.github.io/blog/clqm07fq300005kkj5ww5bp4a/"/>
-    <id>https://officesupportjp.github.io/blog/clqm07fq300005kkj5ww5bp4a/</id>
-    <published>2023-12-26T00:00:00.000Z</published>
-    <updated>2024-11-28T07:57:07.715Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直)です。  </p><p>MECM (Microsoft Endpoint Configuration Manager) で M365Apps (Microsoft 365 Apps for enterprise) の更新プログラムが必要と判定されない現象について説明します。</p><br><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>MECM で M365Apps の更新プログラムが必要と判定されず、更新が適用できない</p><br><h2 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h2><p>以下の 3 つの条件を全て満たしているかをご確認ください。</p><p><strong>1) Office の更新に使用する COM IF のレジストリキーが存在する</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\&#123;B7F1785F-D69B-46F1-92FC-D2DE9C994F13&#125;</code></p><p>本レジストリは、<a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/manage-microsoft-365-apps-updates-configuration-manager#enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager">MECM から更新プログラムを受信できるようにする設定</a>が反映された後、OS を再起動することで作成されます。</p><br><p><strong>2) VersionToReport より新しいビルドを展開しようとしている、または、UpdateChannelChanged が True である</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\VersionToReport</code><br>ここには、16.0.12345.12345 のような 16.0 部分は固定のビルド番号が入ります。</p><p><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannelChanged</code><br>初期値は False であり、後述のように UpdateChannel が優先度により変更された際に True となります。その後、更新試行を行った後に False に戻ります。</p><p>通常、チャネルの変更直後を除いて UpdateChannelChanged は False のため、VersionToReport の優劣にしたがい更新が行われます。</p><br><p><strong>3) UpdateChannel の URL に展開しているチャネルの識別子が含まれる</strong><br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Office\ClickToRun\Configuration\UpdateChannel</code></p><p><em><strong>チャネルの識別子</strong></em><br><code>最新チャネル : 492350f6-3a01-4f97-b9c0-c7c6ddf67d60</code><br><code>月次エンタープライズチャネル : 55336b82-a18d-4dd6-b5f6-9e5095c314a6</code><br><code>半期エンタープライズチャネル (プレビュー : b8f9b850-328d-4355-9145-c59439a0c4cf</code><br><code>半期エンタープライズチャネル : 7ffbc6bf-bc32-4f92-8982-f9dd17fd3114</code></p><p>UpdateChannel は UpdateChannelChanged が False である場合、以下の優先度を上から順に評価します。</p><p>優先度1) <a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “更新プログラムのパス”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatepath</code></p><p>優先度2) <a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/configure-update-settings-microsoft-365-apps">GPO の “チャネルの更新”</a><br><code>HKEY_LOCAL_MACHINE\software\policies\microsoft\office\16.0\common\OfficeUpdate\updatebranch</code></p><p>優先度3) <a href="https://learn.microsoft.com/ja-jp/deployoffice/office-deployment-tool-configuration-options#updates-element">Office 展開ツールの Updates 要素の UpdatePath 属性</a><br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\UpdateUrl</code></p><p>優先度4) <a href="https://learn.microsoft.com/ja-jp/deployoffice/manage-software-download-settings-office-365">Microsoft 365 管理センターで Microsoft 365 のインストール オプションを管理する</a> の取得頻度<br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\UnmanagedUpdateUrl</code></p><p>優先度5) <a href="https://learn.microsoft.com/ja-jp/deployoffice/office-deployment-tool-configuration-options#updates-element">Office 展開ツールの Updates 要素の Channel 属性</a><br><code>HKEY_LOCAL_MACHINE\Software\Microsoft\Office\ClickToRun\Configuration\CDNBaseURL</code></p><p>現在の UpdateChannel と値が異なる場合、評価された値に上書きされ、UpdateChannelChanged が True となります。</p><br><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><p><strong>UpdateChannel が変更されるタイミングを教えてください</strong><br>タスクスケジューラーに登録されている Office Automatic Updates 2.0 が実行する OfficeC2RClient.exe の中で、前回の構成試行より 24 時間以上経過している場合に構成処理を行います。<br>このため、タスクスケジューラーを手動実行いただいても即座に実行することは出来ません。また、この時間を変更することは出来ません。</p><p><strong>優先度1 や 3 が入っている端末に MECM から更新プログラムを展開できますか？</strong><br>優先度1 は “未構成” に変更してください。優先度 3 の場合、UpdateUrl レジストリを削除していただくか、優先度 2 の GPO の “チャネルの更新” を代わりにご利用ください<br>なお、”チャネルの更新” を設定すると、MECM もしくはインターネット上の Office CDN から更新プログラムを取得するようになります。MECM で管理しない端末に設定する際はご留意ください。</p><p><strong>UpdateChannelChanged が既に True になっているため、優先度にしたがって設定を変更しても端末に反映されません</strong><br>UpdateChannelChanged を一度だけ False に書き換えてください。</p><p><strong>優先度4の UnmanagedUpdateUrl のチャネルを変更したいのですが、Microsoft 365 管理センターで半期エンタープライズチャネルを選択できません</strong><br>UnmanagedUpdateUrl レジストリを削除していただくか、優先度 2 の GPO の “チャネルの更新” を代わりにご利用ください<br>なお、”チャネルの更新” を設定すると、MECM もしくはインターネット上の Office CDN から更新プログラムを取得するようになります。MECM で管理しない端末に設定する際はご留意ください。</p><p><strong>MECM から更新しているのに、優先度4 の UnmanagedUpdateUrl レジストリが設定されているのはなぜですか？</strong><br><a href="https://learn.microsoft.com/ja-jp/deployoffice/updates/manage-microsoft-365-apps-updates-configuration-manager#enable-microsoft-365-apps-clients-to-receive-updates-from-configuration-manager">方法3</a> の Office 展開ツールでのインストール時に OfficeMgmtCOM を True で設定していない場合、端末に MECM から更新する設定が反映される前に M365Apps の自動更新が動作した可能性があります。</p><p><strong>MECM から更新したいのに、Office CDN から更新されてしまいます</strong><br><a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/cloud-update">クラウド更新</a> が有効になっている可能性がございます。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\cloud\office\16.0\Common\officeupdate\IgnoreGPO</code> が 1 の場合、全ての更新設定よりクラウド更新が優先されます。</p><p><a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/cloud-update">クラウド更新</a> が不要な場合、<a href="https://config.office.com/">Microsoft 365 Apps 管理センター</a> において、クラウド更新に進みます。<br>もし、クラウド更新が有効となっていない場合、有効化しないでください。<br>クラウド更新が有効な場合、各チャネルの設定 - クラウド更新のレビュー において、”クラウド更新を通じて管理を非アクティブ化できます” をクリックしてください。フォームの入力画面が表示されますので、記載を進めて送信してください。</p><p>そして、即座に反映させるため、GPO 等にて、<code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\cloud\office\16.0\Common\officeupdate\IgnoreGPO</code> を DWORD の 0 に指定して配布してください。</p><p><strong>COM IF のレジストリキーが作成されません</strong><br>何らかの影響により、端末で COM 登録が行えていない可能性があります。</p><p>対象の端末で、PowerShell を管理者権限で起動し、以下の 2 行を実行いただき、エラーが出るかをご確認ください。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$comCatalog = New-Object -ComObject COMAdmin.COMAdminCatalog</span><br><span class="line">$appColl = $comCatalog.GetCollection(&quot;Applications&quot;)</span><br></pre></td></tr></table></figure><p><strong>エラーが出る場合</strong><br>OS 観点で調査が必要であると考えられます。</p><p><strong>エラーが出ない場合</strong><br>以下の手順をご実施ください。</p><ol><li><p>以下の REG_DWORD レジストリに 0 を設定します。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate\OfficeMgmtCOM</code></p></li><li><p>スタートメニューの検索にて、「サービス」と検索し、サービスを起動します</p></li><li><p>“Microsoft Office クイック実行サービス” を右クリックし、”再起動” を実施します。</p></li><li><p>以下の REG_DWORD レジストリに 1 を設定します。<br><code>HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\office\16.0\Common\officeupdate\OfficeMgmtCOM</code></p></li><li><p>“Microsoft Office クイック実行サービス” を右クリックし、”再起動” を実施します。</p></li><li><p>COM IF のレジストリキーが作成されるかをご確認ください。</p></li></ol><br><h2 id="参考資料"><a href="#参考資料" class="headerlink" title="参考資料"></a>参考資料</h2><p><a href="https://techcommunity.microsoft.com/t5/microsoft-365-blog/how-to-manage-office-365-proplus-channels-for-it-pros/ba-p/795813">How to manage Office 365 ProPlus Channels for IT Pros</a></p><p><span style="color:#ff0000"><strong>2023&#x2F;12&#x2F;27  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;3&#x2F;4  Update</strong></span><br><span style="color:#339966">一部記載を修正しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">クラウド更新について追記しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直)です。  &lt;/p&gt;
-&lt;p&gt;MECM (Microsoft Endpoint Configuration Manager) で M365Apps (Microsoft 365 Apps for enterprise) の更新プロ</summary>
-      
-    
-    
-    
-    
-    <category term="更新" scheme="https://officesupportjp.github.io/blog/tags/%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   
