@@ -6,7 +6,7 @@
   <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
   
   <link href="https://officesupportjp.github.io/blog/"/>
-  <updated>2025-12-19T09:44:20.230Z</updated>
+  <updated>2026-01-23T08:14:38.751Z</updated>
   <id>https://officesupportjp.github.io/blog/</id>
   
   <author>
@@ -17,13 +17,58 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Word でルビ付きの文章作成時に自動で同じ文言が追加される</title>
-    <link href="https://officesupportjp.github.io/blog/cmjconxnr00007w6y0xbp70pg/"/>
-    <id>https://officesupportjp.github.io/blog/cmjconxnr00007w6y0xbp70pg/</id>
-    <published>2025-12-19T09:14:37.778Z</published>
-    <updated>2025-12-19T09:44:20.230Z</updated>
+    <title>位置情報が無効になっている旨の通知が表示される</title>
+    <link href="https://officesupportjp.github.io/blog/cmkqlqt6a0001vg6y4k6tf1st/"/>
+    <id>https://officesupportjp.github.io/blog/cmkqlqt6a0001vg6y4k6tf1st/</id>
+    <published>2026-01-22T15:00:00.000Z</published>
+    <updated>2026-01-23T08:14:38.751Z</updated>
     
-    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。</p><br><h2 id="対象製品"><a href="#対象製品" class="headerlink" title="対象製品"></a>対象製品</h2><p>Word<br>Word for the web</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>Word でルビ付きの文章作成時に自動で同じ文言が追加されます。</p><p><img src="/blog/cmjconxnr00007w6y0xbp70pg/image1.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下のような操作時に発生することが確認されています。</p><p>・ルビを含んだ Word ファイルを共有している<br>・ルビを含む文字の段落にカーソルを置いている<br>・複数人で該当 Word ファイルを共同編集する<br>・[地域] の設定で Unicode 対応ではないプログラムの言語として [日本語 (日本)] が設定されている</p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。<br>上記の発生条件に合致する操作にて、文字の重複が発生した場合は、重複を削除くださいますようお願いいたします。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。<br>上記回避策にてご対応をいただき、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Microsoft 365 Apps 利用時に「システム設定で位置情報が無効になっています」と表示される事象について説明します。</p><h1 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h1><p>[設定] アプリ [プライバシーとセキュリティ]-[位置情報]-[位置情報サービス]&#x2F;[アプリに位置情報へのアクセスを許可する]&#x2F;[デスクトップアプリに位置情報へのアクセスを許可する]<br>のいずれかがオフとなっている場合に、<br>Microsoft 365 Apps にて以下のようなタイミングで「システム設定で位置情報が無効になっています」と表示される動作が確認されております。</p><ul><li>Word でファイルを開き 30 秒程度経過したタイミング<br>月次エンタープライズチャネルで発生することが確認されております。</li><li>Word, Excel, PowerPoint で Copilot Chat を起動したタイミング<br>月次エンタープライズチャネル、最新チャネルで発生することが確認されております。</li></ul><p><img src="/blog/cmkqlqt6a0001vg6y4k6tf1st/img1.png">  </p><h1 id="原因・回避方法"><a href="#原因・回避方法" class="headerlink" title="原因・回避方法"></a>原因・回避方法</h1><p>現在詳細調査中となります。</p><p>[設定] アプリ [プライバシーとセキュリティ]-[位置情報]-[位置情報サービス]&#x2F;[アプリに位置情報へのアクセスを許可する]&#x2F;[デスクトップアプリに位置情報へのアクセスを許可する]<br>をオンにすることで「システム設定で位置情報が無効になっています」は表示されなくなります。<br>恐れ入りますがそのほかの回避策は確認されておりません。  </p><br>後日進展がある場合には、こちらに掲載します。<p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Microsoft 365 Apps 利用時に「システム設定で位置情報が無効になっています」と表示される事象について説明します。&lt;/p&gt;
+&lt;h1 id=&quot;事象&quot;&gt;&lt;a href=&quot;#事象&quot; class=</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>クイックアクセスの内容が表示されない</title>
+    <link href="https://officesupportjp.github.io/blog/cmkbxw4t2009c2kkja1kvcvpr/"/>
+    <id>https://officesupportjp.github.io/blog/cmkbxw4t2009c2kkja1kvcvpr/</id>
+    <published>2026-01-12T15:00:00.000Z</published>
+    <updated>2026-01-23T08:04:13.322Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では、クイックアクセスの内容が表示されない事象について説明します。<br>クイックアクセス自体が表示されない場合、<a href="https://support.microsoft.com/ja-jp/office/eb533c0a-7ee9-40d4-8d29-0a88cc9e0231">クイックアクセス</a>の記事をご確認ください。</p><br><h2 id="事象1-「詳細の表示」のみ表示される"><a href="#事象1-「詳細の表示」のみ表示される" class="headerlink" title="事象1. 「詳細の表示」のみ表示される"></a>事象1. 「詳細の表示」のみ表示される</h2><p><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image1.png"></p><p>[ファイル] - “アカウント” の接続済みサービスで OneDrive for business が表示されません<br><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image4.png"></p><br><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>クイックアクセスはサインインしているユーザーの OneDrive for business に紐づく動作となりますが、<br>ユーザーが OneDrive for business 領域を保有していない場合に本事象が生じることが確認されております。</p><ul><li>参考手順</li></ul><ol><li>[Microsoft 365管理センター] &gt; [すべての管理センター]から 「ShreaPoint 管理センター」を開く</li><li>[その他の機能]からユーザープロファイルの[開く]ボタンをクリックし、[ユーザープロファイル]画面を開く</li><li>ひと - [ユーザー権限の管理]をクリックし、[個人用サイトを作成する] のチェックを外す。<br>→ これより、ユーザーに紐づく OneDrive for business サイトを生成させていない</li></ol><h3 id="対処策について"><a href="#対処策について" class="headerlink" title="対処策について"></a>対処策について</h3><p>現在、弊社開発部門で調査および対処策の検討を行っておりますが、具体的なスケジュールは未定となります。<br>また、現状、ユーザー様でご実施いただける本事象の有効な回避策はございません。<br>ご利用環境をお伺いした上での詳細な調査をご希望されます場合、弊社にお問い合わせ下さいますようお願いいたします。</p><br><h2 id="事象2-OneDrive-for-business-と「詳細の表示」のみ表示される"><a href="#事象2-OneDrive-for-business-と「詳細の表示」のみ表示される" class="headerlink" title="事象2. OneDrive for business と「詳細の表示」のみ表示される"></a>事象2. OneDrive for business と「詳細の表示」のみ表示される</h2><p><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image2.png"></p><br><h3 id="考えられる原因"><a href="#考えられる原因" class="headerlink" title="考えられる原因"></a>考えられる原因</h3><p>以下の点をご確認いただきますようお願いいたします。</p><ol><li><p>通信が必要な URL の構成<br><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Microsoft 365 の URL と IP アドレスの範囲</a> の “Microsoft 365 Common および Office Online” の “必須” のエンドポイントのアクセスできる必要がありますので、通信の疎通に問題がないかご確認ください。</p></li><li><p>OneDrive for business のクイックアクセスリストの確認<br>クイックアクセスはサインインしているユーザーの OneDrive for business に紐づく動作となりますため、<br>ブラウザで OneDrive for business にアクセスし、リストが存在するかをご確認ください。</p></li></ol><p><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image3.png"></p><ol start="3"><li>サインインキャッシュの影響確認<br>特定のユーザーで事象が生じている場合、<a href="https://officesupportjp.github.io/blog/clla7sav30001akkj8j1m1u3f/">Officeのサインインのトラブルシュートについて</a> をご実施いただくことで事象に変化があるかをご確認ください。</li></ol><p>以上で事象が解消しない場合、弊社にお問い合わせいただけますと幸いです。</p><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;本記事では、クイックアクセスの内容が表示されない事象について説明します。&lt;br&gt;クイックアクセス自体が表示されない場合、&lt;a href=&quot;https://support.microsoft.com/ja-jp/</summary>
+      
+    
+    
+    
+    
+    <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
+    
+    <category term="Microsoft 365 Apps" scheme="https://officesupportjp.github.io/blog/tags/Microsoft-365-Apps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word でルビ付きの文章作成時に自動で同じ文言が追加される</title>
+    <link href="https://officesupportjp.github.io/blog/cmjcon66n0000so6yfre75pjp/"/>
+    <id>https://officesupportjp.github.io/blog/cmjcon66n0000so6yfre75pjp/</id>
+    <published>2025-12-19T09:14:37.778Z</published>
+    <updated>2026-01-23T08:04:13.321Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。</p><br><h2 id="対象製品"><a href="#対象製品" class="headerlink" title="対象製品"></a>対象製品</h2><p>Word<br>Word for the web</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>Word でルビ付きの文章作成時に自動で同じ文言が追加されます。</p><p><img src="/blog/cmjcon66n0000so6yfre75pjp/image1.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下のような操作時に発生することが確認されています。</p><p>・ルビを含んだ Word ファイルを共有している<br>・ルビを含む文字の段落にカーソルを置いている<br>・複数人で該当 Word ファイルを共同編集する<br>・[地域] の設定で Unicode 対応ではないプログラムの言語として [日本語 (日本)] が設定されている</p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。<br>上記の発生条件に合致する操作にて、文字の重複が発生した場合は、重複を削除くださいますようお願いいたします。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。<br>上記回避策にてご対応をいただき、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
     
     
       
@@ -451,50 +496,6 @@
       
     <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について説明します。  &lt;/p&gt;
 &lt;h1 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;headerl</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>VBA マクロの Office バージョンアップ時の互換性</title>
-    <link href="https://officesupportjp.github.io/blog/clr8yxe6w00043gsebywv7n74/"/>
-    <id>https://officesupportjp.github.io/blog/clr8yxe6w00043gsebywv7n74/</id>
-    <published>2024-01-11T00:00:00.000Z</published>
-    <updated>2024-01-12T07:58:22.519Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。</p><p>Office 2019 や Office LTSC 2021 といった Office 永続ライセンスの新しいバージョンへの変更や、Microsoft 365 Apps のバージョン更新にあたって、これまで動作していた VBA マクロが引き続き同じように動作するのかを懸念するご質問を頂くことがあります。<br>今回の記事では、このような Office バージョンアップ時の VBA マクロの互換性の考え方について記載します。</p><p>初めに結論を記載すると、元々利用していたバージョンが Office 2016 以降であれば、基本的な互換性は保持されており、ほとんどの場合は問題ありません。ただし、VBA マクロの処理の流れに依存して、Office の細かな動作変化が影響することは稀にあります。<br>このような動作しなくなるシナリオを網羅して弊社から案内することはできません。<br>最終的に確実な互換性を担保したい場合は、検証を通して確認していただく必要があります。</p><p>以下、VBA マクロの動作に関わる要素ごとに詳しく解説します。</p><p><strong><h3>1. VBA ランタイム</h3></strong><br>VBA はプログラム言語の 1 つであり、この VBA 言語を解釈して実行する VBA ランタイム自体にバージョンを持ちます。<br>VBA ランタイムは Office アプリケーションに同梱されていますが、現在サポートされる Office 2016 以降、Office 2019 &#x2F; Office 2021 &#x2F; Microsoft 365 Apps のいずれもバージョン 7.1 で統一されており、VBA ランタイムのバージョン更新はありません。<br>また仮に VBA 7.1 より古いバージョンで作成した VBA コードを含む Office ファイルであっても、VBA コードを実行環境で再コンパイルして実行できます。  </p><p>以上のことから、VBA ランタイムの観点で互換性を気にする必要はありません。<br><br></p><p><strong><h3>2. Office オブジェクト ライブラリ</h3></strong><br>VBA マクロの処理内容の中心は、Office アプリケーションに関する処理を行うことです。これには通常、Office オブジェクト ライブラリ内のオブジェクト &#x2F; メソッド &#x2F; プロパティなどを使用します。<br>例えば、「Microsoft Excel 16.0 Object Library」ライブラリでは、Workbooks.Open メソッドなどの Excel アプリケーションとのやり取りを行うためのオブジェクトを提供しています。VBA マクロからは、[参照設定] でこれらのライブラリを参照したり、レイト バインディングと呼ばれる手法で実行時にライブラリを参照して利用します。</p><p><strong><h4>2-1. ライブラリ バージョン</h4></strong><br>これらの Office アプリケーションとやり取りするためのオブジェクトを提供するライブラリは、Office に同梱されています。Office 2016 以降、Office 2019 &#x2F; Office 2021 &#x2F; Microsoft 365 Apps のいずれにおいても、バージョン「16.0」から変更はありません。このため、ライブラリ自体のバージョンが変わり、参照できなくなるといった問題は発生しません。</p><p>また、Office 2013 以前は「15.0」など、Office バージョンごとに異なるバージョンでした。この場合も、古いバージョンから新しいバージョンへの互換性は考慮されています。例えば Office 2013 で作成した VBA コードを、Microsoft 365 Apps 環境で実行する場合、自動的に新しいバージョンの同じライブラリを参照して動作します。<br>ただし、反対に新しいバージョンで作成した VBA コードを古いバージョンで実行する場合は、利用アプリケーションとライブラリの組み合わせによっては参照できません。</p><p><strong><h4>2-2. ライブラリ内のオブジェクト モデルの廃止 &#x2F; 変更</h4></strong><br>ライブラリ内で提供するオブジェクト モデルについては、Office 2016 より前のバージョンからの更新の場合、いくつかの互換性に影響が生じる廃止・変更があります。これらは、以下の公開情報でご案内しています。  </p><p>Office の互換性に関する問題<br><a href="https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office">https://learn.microsoft.com/ja-jp/office/client-developer/shared/compatibility-issues-in-office</a>  </p><p>一方、Office 2016 以降は、既存のオブジェクト モデルに対し、メソッドなどが削除されたり、メソッド呼び出し時の必須パラメーターが追加されるといった、これまでのオブジェクト モデルの用法に影響を与えるような破壊的変更はありません。<br><br></p><p><strong><h3>3. Office アプリケーションの動作変化</h3></strong><br>ここまでの 1. &#x2F; 2. の観点からは、Office 2016 以降のバージョンから、より新しいバージョンへの更新において、通常 VBA マクロの動作に影響はありません。<br>ただ重要な点として、VBA マクロは、Office アプリケーション等に対する処理要求を行っているということです。このため、VBA マクロからの処理においても、Office アプリケーションの動作変化の影響を受けます。  </p><p>例えば VBA マクロで Workbooks.Open を実行すると、Excel アプリケーションに対し「ファイルを開く」という要求を行い、実際にファイルを開く処理を行うのは VBA コード自身ではなく、Excel アプリケーション側です。そして、「ファイルを開く」という動作の中には、実際のファイル内容の読み取りの他、様々な内部処理が存在します。例えば、ファイルのフォーマットチェック、セキュリティ設定によるファイル内要素のブロック要否のチェック、最近使ったファイルへの情報追加・・・など、多岐に渡る内部処理をまとめて Workbooks.Open により実行される「ファイルを開く」動作となります。</p><p>ここまでに述べた通り、新しいバージョンの Office でも、Workbooks.Open メソッド自体はこれまでと同じ用法で実行することはできます。ただ、例えば Workbooks.Open から実行するフォーマットチェック項目が強化される、といった Excel 側の動作変化はあり得ます。<br>先述の例の場合、新しいチェック項目に反するフォーマットのファイルを VBA マクロから開くと、以前のバージョンでは開けるが、新しいバージョンでは開けない、といった事象が発生する可能性があります。</p><p>このような Office アプリケーションの動作変化は、バージョン更新に伴って無数に存在し、かつ内部の細かな実装であるため、すべての変更点を網羅して一覧化することはできません。リリース ノートで主要な変更の概要は確認できますが、記載のない細かな変更もあり、また、リリース ノートの端的な記載から影響有無を判断することは難しいことがほとんどです。<br>また一方、ユーザーが作成する VBA マクロの処理内容も千差万別であり、どの Office 動作変化が VBA マクロの処理に影響するかを弊社で事前に推測し、「VBA に影響が出る変更リスト」のような形でまとめることも困難です。  </p><p>したがって、VBA マクロが新しい Office バージョンで確実に動作するかは、実際に新しい環境での動作検証を通してご確認ください。  </p><p>なお、このように記載しましたが、もちろん、広く一般的に想定される状況で、既存 VBA マクロの動作に影響するような変更は基本的には行いません。以下の公開情報でも触れている通り、ほとんどの VBA マクロはこれまでと同じように動作するため、過度に心配する必要はありません。</p><p>Microsoft 365 Appsをデプロイするための環境と要件を評価する<br>手順 4 - アプリケーション互換性の評価<br><a href="https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps">https://learn.microsoft.com/ja-jp/deployoffice/assess-microsoft-365-apps</a></p><p>社内環境の Office バージョンアップなどに際しては、VBA マクロを含むファイルは非常に多く存在することが一般的かと思います。そして、このようなファイルすべてを事前検証することは現実的ではないことが多いと考えられます。<br>例えば、業務上重要なファイルのみ事前検証を行い、その他のファイルは新バージョンの利用開始後に問題が確認された時点で、弊社サポートへのお問い合わせなどを通して調査するなど、皆様のご事情に合わせて、互換性に関する対応方針をご検討いただければ幸いです。<br><br></p><p><strong><h3>付録 1: Office 動作変化の具体例</h3></strong><br>&lt;3. Office アプリケーションの動作変化&gt; について、Office の動作変化の具体例を紹介します。</p><p><strong>OneDrive 同期フォルダーの Workbook.Path</strong><br>エクスプローラーで OneDrive や SharePoint ライブラリの同期フォルダからファイルを開く場合、以前の Office バージョンでは、ThisWorkbook.Path などで開いたファイルのパスを取得すると、同期フォルダのローカル パスが返されました。<br>Microsoft 365 の最新チャネル バージョン 1903 および半期チャネル バージョン 2008 以降、および Office LTSC 2021 では、このとき、クラウド ストレージ側の URL パスが返るようになりました。</p><p>この変化により、ローカル パスが返ることを期待して後続処理 (例: ”￥” 文字でのパス分割など) を記載していると影響が生じます。</p><p><strong>Excel 表示形式の和暦元年対応</strong><br> Office 2019 までは、Excel のセルの表示形式において、和暦の元年表記に未対応だったため、「令和1年5月1日」のように表示されていました。<br> Microsoft 365 のバージョン 1909 以降や Office LTSC 2021 では、元年表記に対応するとともに、既定で元年表記が有効となっています。</p><p> <img src="/blog/clr8yxe6w00043gsebywv7n74/Gannen.png"></p><p>この変化により、新しいバージョンでは、セルに「令和1年5月1日」のような和暦文字列を設定すると「令和元年5月1日」と表示内容が変わります。<br><br></p><p><strong><h3>付録 2: bit 変更の影響</h3></strong><br>Office のバージョンアップと合わせて、32 bit から 64 bit に変更することも多いかと思います。bit 変更に伴う VBA マクロへの影響として主に注意する点は、以下の 2 点です。</p><ul><li>Office 以外のライブラリを利用している場合、64 bit ライブラリを実行環境にインストール済みか</li><li>Declare ステートメントを利用している場合、PtrSafe の付与と、パラメーターの Long 型を適切に LongPtr 型に変更しているか (パラメーターの値を扱う変数のデータ型も合わせて変更が必要)</li></ul><p>詳しくは、以下の公開情報をご参照ください。  </p><p>64 ビット版または 32 ビット版の Office を選択する<br><a href="https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261">https://support.office.com/ja-jp/article/2dee7807-8f95-4d0c-b5fe-6c6f49b8d261</a></p><p>64 ビット Visual Basic for Applications の概要<br><a href="https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview">https://learn.microsoft.com/ja-jp/office/vba/language/concepts/getting-started/64-bit-visual-basic-for-applications-overview</a></p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;/p&gt;
-&lt;p&gt;Office 2019 や Office LTSC 2021 といった Office 永続ライセンスの新しいバージョンへの変更や、Microsoft 365 Apps のバージョン更新にあたって、これまで</summary>
-      
-    
-    
-    
-    
-    <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>iOS 端末で Excel ファイルに描画を行うとアプリが強制終了する場合がある</title>
-    <link href="https://officesupportjp.github.io/blog/clr65j0hm00091s6ycv6zcha4/"/>
-    <id>https://officesupportjp.github.io/blog/clr65j0hm00091s6ycv6zcha4/</id>
-    <published>2024-01-09T00:00:00.000Z</published>
-    <updated>2024-01-09T09:32:50.387Z</updated>
-    
-    <content type="html"><![CDATA[<p>こんにちは。Office サポートチームです。<br>この記事では、iOS 端末で Excel ファイルに対して描画をする際に、<br>アプリが強制終了する動作について記載します。    </p><h1 id="事象の概要"><a href="#事象の概要" class="headerlink" title="事象の概要"></a>事象の概要</h1><p>以下公開情報の通り、Office では　[描画] 機能を使用することで、Excel ファイルに対して手書き入力を行うことが可能です。  </p><p>Title: Office で図形やテキストを手描き入力する<br>URL: <a href="https://support.microsoft.com/ja-jp/office/6d76c674-7f4b-414d-b67f-b3ffef6ccf53#OfficeVersion=iOS">https://support.microsoft.com/ja-jp/office/6d76c674-7f4b-414d-b67f-b3ffef6ccf53#OfficeVersion=iOS</a></p><p>本描画機能に関連して、iOS 端末の Excel アプリや Microsoft 365 アプリにて、<br>一度 Excel ファイルを開いて閉じるまでの間に、<br>Excel ファイルに対して長時間の描画などによって多く描画オブジェクトを作成する場合に、<br>アプリが強制終了する動作が確認されております。<br>※アプリ内部でのメモリ使用状況等によって事象が再現するとみられ、具体的な目安等についてはご案内が困難となります。  </p><h1 id="今後の対応予定"><a href="#今後の対応予定" class="headerlink" title="今後の対応予定"></a>今後の対応予定</h1><p>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。  </p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。  </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;こんにちは。Office サポートチームです。&lt;br&gt;この記事では、iOS 端末で Excel ファイルに対して描画をする際に、&lt;br&gt;アプリが強制終了する動作について記載します。    &lt;/p&gt;
-&lt;h1 id=&quot;事象の概要&quot;&gt;&lt;a href=&quot;#事象の概要&quot; class=</summary>
       
     
     
