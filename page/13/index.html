@@ -94,58 +94,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0m8t2a400003gvsgcr96w6h/" class="article-date">
-  <time datetime="2019-03-01T00:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0m8t2a400003gvsgcr96w6h/">(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0m8t2a400003gvsgcr96w6h/" class="article-date-single">    
-    
-    <time datetime="2019-03-01T00:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2017 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
-こんにちは、Office Developer サポートの森　健吾 (kenmori) です。
-今回の投稿では、Microsoft Graph – Excel REST API を使用して、指定されたアドレスの Range オブジェクトを操作するプログラムを、実際に C# で開発するエクスペリエンスをご紹介します。
-ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。前回の OneDrive API のウォークスルー同様、本投稿では、現実的な実装シナリオを重視するよりも、Excel REST API を理解するためになるべくシンプルなコードにすることを心掛...
-        <p class="article-more-link">
-          <a href="/blog/cl0m8t2a400003gvsgcr96w6h/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/" data-id="cmkbxw4rv00012kkj124p9se6" class="article-share-link">共有</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-(WebAPI)Microsoft Graph を使用した開発に便利なツール群" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/blog/cl0m8t2ae00033gvsbtlo3btc/" class="article-date">
@@ -189,7 +137,114 @@ Microsoft Graph は 1 つのエンドポイントを介して複数の API を O
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/" data-id="cmkbxw4rw00032kkj97dm22tg" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ae00033gvsbtlo3btc/" data-id="cmkxl6nfv0000awkj3qp1fxkk" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m8t2aa00013gvsa2mr8xj5/" class="article-date">
+  <time datetime="2019-03-01T00:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m8t2aa00013gvsa2mr8xj5/">(WebAPI)Microsoft Graph - OneDrive API (C Sharp) を使ったサンプル コード</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m8t2aa00013gvsa2mr8xj5/" class="article-date-single">    
+    
+    <time datetime="2019-03-01T00:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2016 年 12 月 29 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
+こんにちは、Office Developer サポートの森　健吾 (kenmori) です。
+今回の投稿では、Microsoft Graph – OneDrive API を実際に C# で開発するエクスペリエンスをご紹介します。
+ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。本投稿では、現実的な実装シナリオを重視するよりも、OneDrive API を理解するためになるべくシンプルなコードにすることを心掛けています。
+例外処理なども含めていませんので、実際にコーディングする際には、あくまでこのコードを参考する形でご検討ください。
+事前準備
+以前の投...
+        <p class="article-more-link">
+          <a href="/blog/cl0m8t2aa00013gvsa2mr8xj5/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2aa00013gvsa2mr8xj5/" data-id="cmkxl6nfx0001awkj2wtnfns0" class="article-share-link">共有</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cl0m8t2a400003gvsgcr96w6h/" class="article-date">
+  <time datetime="2019-03-01T00:00:00.000Z" itemprop="datePublished">2019-03-01</time>
+</a>
+    <!--  -->
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header-single">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cl0m8t2a400003gvsgcr96w6h/">(WebAPI)Microsoft Graph – Excel REST API (C Sharp) を使い Range を操作するサンプル コード</a>
+    </h1>
+  
+
+      </header>
+      <div class="article-share">
+        Last Update: 
+        <a href="/blog/cl0m8t2a400003gvsgcr96w6h/" class="article-date-single">    
+    
+    <time datetime="2019-03-01T00:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
+    
+</a>              
+      </div>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        (※ 2017 年 1 月 23 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)  
+こんにちは、Office Developer サポートの森　健吾 (kenmori) です。
+今回の投稿では、Microsoft Graph – Excel REST API を使用して、指定されたアドレスの Range オブジェクトを操作するプログラムを、実際に C# で開発するエクスペリエンスをご紹介します。
+ウォークスルーのような形式にしておりますので、慣れていない方も今回の投稿を一通り実施することで、プログラム開発を経験し理解できると思います。前回の OneDrive API のウォークスルー同様、本投稿では、現実的な実装シナリオを重視するよりも、Excel REST API を理解するためになるべくシンプルなコードにすることを心掛...
+        <p class="article-more-link">
+          <a href="/blog/cl0m8t2a400003gvsgcr96w6h/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2a400003gvsgcr96w6h/" data-id="cmkxl6nfy0003awkj87k26k5c" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li></ul>
@@ -244,7 +299,7 @@ Az...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/" data-id="cmkbxw4rx00042kkj6c7wet1f" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ac00023gvs6bwo9tp2/" data-id="cmkxl6nfz0004awkj0k0kfpl2" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li></ul>
@@ -296,7 +351,7 @@ Az...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ag00043gvs6dpf43ay/" data-id="cmkbxw4ry00082kkjbg4x31wu" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0m8t2ag00043gvs6dpf43ay/" data-id="cmkxl6nfz0005awkj77yp1xjl" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/Graph-API/" rel="tag">Graph API</a></li></ul>
@@ -351,7 +406,7 @@ Az...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0l000bb0vsf8n5en1k/" data-id="cmkbxw4s1000q2kkjh5lm14q7" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0l000bb0vsf8n5en1k/" data-id="cmkxl6ng3000iawkjgd8s5vi6" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li></ul>
@@ -403,7 +458,7 @@ Az...
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/" data-id="cmkbxw4s300152kkj9ck5ctr3" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o0y000lb0vs0gt6dkmz/" data-id="cmkxl6ng70012awkjgrqo9qol" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li></ul>
@@ -457,7 +512,7 @@ Excel の CodeName プロパティは、以下の 3 つのオブジェクトに�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o14000tb0vs85lvc2xs/" data-id="cmkbxw4s7001y2kkjc2tc7z8g" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o14000tb0vs85lvc2xs/" data-id="cmkxl6ngh002jawkjgu8v6a38" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li></ul>
@@ -511,7 +566,7 @@ Excel には、SpecialCells メソッドという、引数に指定した条件�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/" data-id="cmkbxw4s800272kkjhez0gypd" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o15000vb0vscpvphs5e/" data-id="cmkxl6ngi002lawkjfbzj6apy" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/" rel="tag">オートメーション</a></li></ul>
@@ -564,63 +619,10 @@ Excel には、SpecialCells メソッドという、引数に指定した条件�
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o17000zb0vs3hta6j0c/" data-id="cmkbxw4sa002j2kkj87ncbvgb" class="article-share-link">共有</a>
+      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o17000zb0vs3hta6j0c/" data-id="cmkxl6ngk002zawkjgnzvh8z3" class="article-share-link">共有</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/" rel="tag">VBA マクロ</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Microsoft ストア アプリ版 Office 2016 (Centennial) での開発 – その1 – (DLL の読み込み)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/cl0mc9o1b0014b0vsbsrk3ew0/" class="article-date">
-  <time datetime="2019-03-01T00:00:00.000Z" itemprop="datePublished">2019-03-01</time>
-</a>
-    <!--  -->
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header-single">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/cl0mc9o1b0014b0vsbsrk3ew0/">Microsoft ストア アプリ版 Office 2016 (Centennial) での開発 – その1 – (DLL の読み込み)</a>
-    </h1>
-  
-
-      </header>
-      <div class="article-share">
-        Last Update: 
-        <a href="/blog/cl0mc9o1b0014b0vsbsrk3ew0/" class="article-date-single">    
-    
-    <time datetime="2019-03-01T00:00:00.000Z" itemprop="dateUpdated">2019-03-01</time>
-    
-</a>              
-      </div>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        (※ 2018 年 5 月 15 日に Japan Office Developer Support Blog に公開した情報のアーカイブです。)
-こんにちは、Office 開発サポート チームの中村です。久しぶりの投稿になります。
-このタイトルの記事では、新しい提供方法である「Microsoft ストア版 Office 2016」における、これまでの Office との違いについて、Office 開発観点から記載していきたいと思います。今後もこのテーマでは何度か投稿することになると思いますが、今回はまず、DLL 読み込み動作の違いについて記載します。
-1. Microsoft ストア版 Office 2016 とは？Office 開発観点の話の前に、そもそも、Microsoft ストア版 Office 2016 とはどういうものかを簡単に説明します。
-Office 2016 には色々なラ...
-        <p class="article-more-link">
-          <a href="/blog/cl0mc9o1b0014b0vsbsrk3ew0/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://officesupportjp.github.io/blog/cl0mc9o1b0014b0vsbsrk3ew0/" data-id="cmkbxw4sc00302kkjdu2dgr69" class="article-share-link">共有</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/%E3%82%B9%E3%83%88%E3%82%A2-%E3%82%A2%E3%83%97%E3%83%AA%E9%96%8B%E7%99%BA/" rel="tag">ストア アプリ開発</a></li></ul>
 
     </footer>
   </div>
@@ -679,6 +681,10 @@ Office 2016 には色々なラ...
       <ul>
         
           <li>
+            <a href="/blog/cmkqlqt6a0001vg6y4k6tf1st/">位置情報が無効になっている旨の通知が表示される</a>
+          </li>
+        
+          <li>
             <a href="/blog/cmkbxw4t2009c2kkja1kvcvpr/">クイックアクセスの内容が表示されない</a>
           </li>
         
@@ -692,10 +698,6 @@ Office 2016 には色々なラ...
         
           <li>
             <a href="/blog/cmgitf2o50001p46y0g4r53f0/">Word が勝手に起動する</a>
-          </li>
-        
-          <li>
-            <a href="/blog/cmff530z3000atsse9c4navwb/">Office アプリの設定を管理する方法の紹介</a>
           </li>
         
       </ul>
