@@ -1,7 +1,7 @@
 ---
 title: Office のインストール・更新・環境情報の採取について
 date: '2024-11-28'
-lastupdate: '2026-02-16'
+lastupdate: '2026-02-18'
 id: cm3e5mpvi0000cgkj2sfvb55j
 tags:
   - 更新
@@ -21,7 +21,7 @@ A) 環境情報ログ
 3. MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。
 
 4. MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_DATA 配下に出力されます。
-※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。
+※ ツールを他の管理者ユーザーの資格情報で実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。
 
 5. 取得した以下の情報を弊社にお寄せください
 ・C:\MS_DATA に出力された MOI から始まる zip ファイル
@@ -63,7 +63,7 @@ C) ライセンス認証ログ
 2. [Office Licensing Diagnostic Tool](https://www.microsoft.com/en-us/download/details.aspx?id=55948) から **OfficeLicenseDiagnostic.zip** をダウンロードし展開してください。
 3. **licenseInfo.cmd** をダブルクリックで実行してください。
 ※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。
-※ 管理者を持つ別のユーザーで実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。
+※ ツールを他の管理者ユーザーの資格情報で実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。
 
 4. 取得した以下の情報を弊社にお寄せください
 ・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)
@@ -87,6 +87,9 @@ C) ライセンス認証ログ
 <span style="color:#339966">スクリプトを更新しました。他の管理者ユーザーでの採取時の注意点を追記しました。</span>
 
 <span style="color:#ff0000">**2026/2/16  Update**</span>  
+<span style="color:#339966">一部記載を変更しました</span>
+
+<span style="color:#ff0000">**2026/2/18  Update**</span>  
 <span style="color:#339966">一部記載を変更しました</span>
 
 **本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。**
