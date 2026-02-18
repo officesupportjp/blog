@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Japan Office Client Support Blog</title>
+  
+  <subtitle>日本マイクロソフト Office Client サポート チームのブログです</subtitle>
+  <link href="https://officesupportjp.github.io/blog/atom.xml" rel="self"/>
+  
+  <link href="https://officesupportjp.github.io/blog/"/>
+  <updated>2026-02-16T02:20:02.380Z</updated>
+  <id>https://officesupportjp.github.io/blog/</id>
+  
+  <author>
+    <name>Office Support Japan</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>位置情報が無効になっている旨の通知が表示される</title>
+    <link href="https://officesupportjp.github.io/blog/cmkqlqt6a0001vg6y4k6tf1st/"/>
+    <id>https://officesupportjp.github.io/blog/cmkqlqt6a0001vg6y4k6tf1st/</id>
+    <published>2026-01-22T15:00:00.000Z</published>
+    <updated>2026-02-16T02:20:02.380Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:red;">2026&#x2F;2&#x2F;12 Update</span><br>Microsoft 365 Apps の更新にて修正された旨を追記しました。</p><p><span style="color:red;">2026&#x2F;2&#x2F;3 Update</span><br>原因・回避方法を更新しました。</p><p>こんにちは、Office サポート チームです。<br>今回の記事では、Microsoft 365 Apps 利用時に「システム設定で位置情報が無効になっています」と表示される事象について説明します。</p><h1 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h1><p>[設定] アプリ [プライバシーとセキュリティ]-[位置情報]-[位置情報サービス]&#x2F;[アプリに位置情報へのアクセスを許可する]&#x2F;[デスクトップアプリに位置情報へのアクセスを許可する]<br>のいずれかがオフとなっている場合に、<br>Microsoft 365 Apps にて以下のようなタイミングで「システム設定で位置情報が無効になっています」と表示される動作が確認されております。</p><ul><li>Word でファイルを開き 30 秒程度経過したタイミング<br>月次エンタープライズチャネルで発生することが確認されております。</li><li>Word, Excel, PowerPoint で Copilot Chat を起動したタイミング<br>月次エンタープライズチャネル、最新チャネルで発生することが確認されております。</li></ul><p><span style="color:red;">※修正バージョンがリリースされましたので後続の内容もご確認ください。</span></p><p><img src="/blog/cmkqlqt6a0001vg6y4k6tf1st/img1.png">  </p><h1 id="原因・回避方法"><a href="#原因・回避方法" class="headerlink" title="原因・回避方法"></a>原因・回避方法</h1><p>Microsoft 365 Apps の利用する WebView2 の動作に起因して発生します。<br>以下のバージョンにて修正されました。</p><ul><li>Word でファイルを開き 30 秒程度経過したタイミングの事象について<span style="color:red;">月次エンタープライズチャネルバージョン 2512 (ビルド 19530.20226) にて修正されました。</span></li><li>Word, Excel, PowerPoint で Copilot Chat を起動したタイミングの事象について<span style="color:red;">月次エンタープライズチャネルバージョン 2512 (ビルド 19530.20226), 最新チャネルバージョン 2601 (ビルド 19628.20204) にて修正されました。</span></li></ul><p>以下のレジストリを設定することで回避可能です。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">パス: HKLM\SOFTWARE\Policies\Microsoft\Edge\WebView2</span><br><span class="line">名前: DefaultGeolocationSetting</span><br><span class="line">種類: REG_DWORD</span><br><span class="line">値: 0x2</span><br></pre></td></tr></table></figure><p>※レジストリが存在しない場合は手動で作成します。<br>※回避されない場合は端末再起動後の動作もご確認ください。<br></p><p>また、[設定] アプリ [プライバシーとセキュリティ]-[位置情報]-[位置情報サービス]&#x2F;[アプリに位置情報へのアクセスを許可する]&#x2F;[デスクトップアプリに位置情報へのアクセスを許可する]<br>をオンにすることでも「システム設定で位置情報が無効になっています」は表示されなくなります。  </p><br><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:red;&quot;&gt;2026&amp;#x2F;2&amp;#x2F;12 Update&lt;/span&gt;&lt;br&gt;Microsoft 365 Apps の更新にて修正された旨を追記しました。&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color:red;&quot;&gt;2026</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>クイックアクセスの内容が表示されない</title>
+    <link href="https://officesupportjp.github.io/blog/cmkbxw4t2009c2kkja1kvcvpr/"/>
+    <id>https://officesupportjp.github.io/blog/cmkbxw4t2009c2kkja1kvcvpr/</id>
+    <published>2026-01-12T15:00:00.000Z</published>
+    <updated>2026-02-16T02:38:34.830Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では、クイックアクセスの内容が表示されない事象について説明します。<br>クイックアクセス自体が表示されない場合、<a href="https://support.microsoft.com/ja-jp/office/eb533c0a-7ee9-40d4-8d29-0a88cc9e0231">クイックアクセス</a>の記事をご確認ください。</p><br><h2 id="事象1-「詳細の表示」のみ表示される"><a href="#事象1-「詳細の表示」のみ表示される" class="headerlink" title="事象1. 「詳細の表示」のみ表示される"></a>事象1. 「詳細の表示」のみ表示される</h2><p><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image1.png"></p><p>[ファイル] - “アカウント” の接続済みサービスで OneDrive for business が表示されません<br><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image4.png"></p><br><h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>クイックアクセスはサインインしているユーザーの OneDrive for business に紐づく動作となりますが、<br>ユーザーが OneDrive for business 領域を保有していない場合に本事象が生じることが確認されております。</p><ul><li>参考手順</li></ul><ol><li>[Microsoft 365管理センター] &gt; [すべての管理センター]から 「ShreaPoint 管理センター」を開く</li><li>[その他の機能]からユーザープロファイルの[開く]ボタンをクリックし、[ユーザープロファイル]画面を開く</li><li>ひと - [ユーザー権限の管理]をクリックし、[個人用サイトを作成する] のチェックを外す。<br>→ これより、ユーザーに紐づく OneDrive for business サイトを生成させていない</li></ol><h3 id="対処策について"><a href="#対処策について" class="headerlink" title="対処策について"></a>対処策について</h3><p>現在、弊社開発部門で調査および対処策の検討を行っておりますが、具体的なスケジュールは未定となります。<br>また、現状、ユーザー様でご実施いただける本事象の有効な回避策はございません。<br>ご利用環境をお伺いした上での詳細な調査をご希望されます場合、弊社にお問い合わせ下さいますようお願いいたします。</p><br><h2 id="事象2-OneDrive-for-business-と「詳細の表示」のみ表示される"><a href="#事象2-OneDrive-for-business-と「詳細の表示」のみ表示される" class="headerlink" title="事象2. OneDrive for business と「詳細の表示」のみ表示される"></a>事象2. OneDrive for business と「詳細の表示」のみ表示される</h2><p><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image2.png"></p><br><h3 id="考えられる原因"><a href="#考えられる原因" class="headerlink" title="考えられる原因"></a>考えられる原因</h3><p>以下の点をご確認いただきますようお願いいたします。</p><ol><li><p>通信が必要な URL の構成<br><a href="https://learn.microsoft.com/ja-jp/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide">Microsoft 365 の URL と IP アドレスの範囲</a> の “Microsoft 365 Common および Office Online” の “必須” のエンドポイントのアクセスできる必要がありますので、通信の疎通に問題がないかご確認ください。</p></li><li><p>OneDrive for business のクイックアクセスリストの確認<br>クイックアクセスはサインインしているユーザーの OneDrive for business に紐づく動作となりますため、<br>ブラウザで OneDrive for business にアクセスし、リストが存在するかをご確認ください。</p></li></ol><p><img src="/blog/cmkbxw4t2009c2kkja1kvcvpr/image3.png"></p><p><del>3. クイックアクセスリストに表示されているサイト名に全角スペースが存在するかの確認</del><br><del>OneDrive for business にアクセスしクイックアクセスに列挙されているサイト名に全角スペースが存在するかをご確認ください。</del><br><del>存在する場合、対象の SharePoint サイトにおいて、設定 - サイト情報 - サイト名から全角スペースを取り除いて下さい。</del></p><p><del>もし、変更後も解消されない場合、念の為、以下をお試しください。</del><br><del>・ユーザー側では対象の SharePoint サイトから Excel ファイル等を一度開いて下さい。</del><br><del>・対象の SharePoint サイトにおいて、ドキュメントライブラリを選択し、設定 - ライブラリの設定からドキュメントライブラリの名前を一度変更し、再度元の名前に戻して下さい。</del><br><del>例えば、”ドキュメント” の場合、”ドキュメント_” に変更し、再度 “ドキュメント” に戻して下さい。</del></p><p><del>なお、この全角スペースの事象については、現在、弊社開発部門で調査および対処策の検討を行っておりますが、具体的なスケジュールは未定となります。</del><br><span style="color:#ff0000">2026&#x2F;02&#x2F;16 現在、弊社サービス側で修正を行い、本事象の改善が確認されております。</span></p><ol start="4"><li>サインインキャッシュの影響確認<br>特定のユーザーで事象が生じている場合、<a href="https://officesupportjp.github.io/blog/clla7sav30001akkj8j1m1u3f/">Officeのサインインのトラブルシュートについて</a> をご実施いただくことで事象に変化があるかをご確認ください。</li></ol><p>以上で事象が解消しない場合、弊社にお問い合わせいただけますと幸いです。</p><p>今回の投稿は以上です。</p><p><span style="color:#ff0000"><strong>2026&#x2F;1&#x2F;28  Update</strong></span><br><span style="color:#339966">サイト名のトラブルシューティングについて追記しました</span></p><p><span style="color:#ff0000"><strong>2026&#x2F;2&#x2F;16  Update</strong></span><br><span style="color:#339966">サイト名の事象の修正を追記しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;本記事では、クイックアクセスの内容が表示されない事象について説明します。&lt;br&gt;クイックアクセス自体が表示されない場合、&lt;a href=&quot;https://support.microsoft.com/ja-jp/</summary>
+      
+    
+    
+    
+    
+    <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
+    
+    <category term="Microsoft 365 Apps" scheme="https://officesupportjp.github.io/blog/tags/Microsoft-365-Apps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word でルビ付きの文章作成時に自動で同じ文言が追加される</title>
+    <link href="https://officesupportjp.github.io/blog/cmjcon66n0000so6yfre75pjp/"/>
+    <id>https://officesupportjp.github.io/blog/cmjcon66n0000so6yfre75pjp/</id>
+    <published>2025-12-18T15:00:00.000Z</published>
+    <updated>2026-01-13T01:20:03.035Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートチームです。<br>この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。</p><br><h2 id="対象製品"><a href="#対象製品" class="headerlink" title="対象製品"></a>対象製品</h2><p>Word<br>Word for the web</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>Word でルビ付きの文章作成時に自動で同じ文言が追加されます。</p><p><img src="/blog/cmjcon66n0000so6yfre75pjp/image1.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下のような操作時に発生することが確認されています。</p><p>・ルビを含んだ Word ファイルを共有している<br>・ルビを含む文字の段落にカーソルを置いている<br>・複数人で該当 Word ファイルを共同編集する<br>・[地域] の設定で Unicode 対応ではないプログラムの言語として [日本語 (日本)] が設定されている</p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。<br>上記の発生条件に合致する操作にて、文字の重複が発生した場合は、重複を削除くださいますようお願いいたします。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。<br>上記回避策にてご対応をいただき、弊社開発部門での調査をお待ちくださいますようお願いいたします。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートチームです。&lt;br&gt;この記事では、Word でルビ付きの文章作成時に自動で同じ文言が追加される事象について説明します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;対象製品&quot;&gt;&lt;a href=&quot;#対象製品&quot; class=&quot;headerlink&quot; t</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+    <category term="入力" scheme="https://officesupportjp.github.io/blog/tags/%E5%85%A5%E5%8A%9B/"/>
+    
+    <category term="ルビ" scheme="https://officesupportjp.github.io/blog/tags/%E3%83%AB%E3%83%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word for Mac でトナーセーブ設定で印刷できない</title>
+    <link href="https://officesupportjp.github.io/blog/cmipmqpu600014w6y2vmfdmxc/"/>
+    <id>https://officesupportjp.github.io/blog/cmipmqpu600014w6y2vmfdmxc/</id>
+    <published>2025-12-02T15:00:00.000Z</published>
+    <updated>2025-12-08T02:46:04.096Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Word for Mac でファイルを印刷する際に、一部プリンタでトナーセーブ・カラーセーブ設定で印刷できない現象についてご案内いたします。<br><br></p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Word for Mac では印刷時のダイアログにて、プリンタで用意されたオプションを設定することが可能です。<br><br><br>ただし、一部プリンタでトナーセーブ・カラーセーブ設定を行っても、印刷時にトナーセーブ・カラーセーブ設定が適用されない場合がございます。<br>恐れ入りますが本動作は現状の Word for Mac の実装による制限事項となります。<br><br></p><h1 id="回避方法"><a href="#回避方法" class="headerlink" title="回避方法"></a>回避方法</h1><p>Word for Mac で印刷したいファイルを [ファイル]-[名前を付けて保存] より一度 PDF に変換し、<br>OS 標準の “プレビュー” アプリなどで PDF を開いて印刷することをお試しください。<br><br><br>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Word for Mac でファイルを印刷する際に、一部プリンタでトナーセーブ・カラーセーブ設定で印刷できない現象についてご案内いたします。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h1 id=&quot;現象&quot;&gt;&lt;a hre</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word が勝手に起動する</title>
+    <link href="https://officesupportjp.github.io/blog/cmgitf2o50001p46y0g4r53f0/"/>
+    <id>https://officesupportjp.github.io/blog/cmgitf2o50001p46y0g4r53f0/</id>
+    <published>2025-10-08T15:00:00.000Z</published>
+    <updated>2025-10-22T08:15:06.551Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span style="color:red;">2025&#x2F;10&#x2F;15 Update</span></strong><br>解決方法を更新しました。<br><strong><span style="color:red;">2025&#x2F;10&#x2F;17 Update</span></strong><br><span style="color:green;">解決方法を更新しました。</span>  </p><p>こんにちは、Office サポート チームです。<br>今回の記事では、Word for Microsoft 365 が意図せず、勝手に起動する現象について説明します。<br><br></p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Word for Microsoft 365 でファイルを閉じた後や Word を終了した後で、Word が勝手に起動してくる場合があります。<br><br><br><br></p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>Word の終了処理の問題に起因して、Word が異常終了 (クラッシュ) することで<br>Word が再起動します。<br><br></p><p>イベントログに、以下のような内容で Word の Application Error の記録がある場合は、この問題に該当している可能性があります。<br>(ご利用の環境によりバージョンが異なる場合があります。)<br><br><br>＜イベントログ＞<br>障害が発生しているアプリケーション名: WINWORD.EXE、バージョン: 16.0.19029.20244<br>障害が発生したモジュール名: mso20win32client.dll、 バージョン: 0.0.0.0<br>例外コード: 0x1e29f389<br><br><br><br></p><h1 id="解決方法"><a href="#解決方法" class="headerlink" title="解決方法"></a>解決方法</h1><p>Word の終了処理の問題は、以下のバージョンで修正しました。<br>Word の終了時に異常終了 (クラッシュ) しなくなることで、Word の再起動 (勝手に起動する症状) が発生しなくなります。<br><br><br>Microsoft 365 Apps<br>・最新チャネル バージョン 2509 (ビルド 19231.20156)<br><span style="color:green;">・月次エンタープライズチャネル バージョン 2508 (ビルド 19127.20314) </span><br>　※ 月次エンタープライズチャネル バージョン 2508 (ビルド 19127.20302) には修正が含まれていません。<br>・月次エンタープライズチャネル バージョン 2507 (ビルド 19029.20274)<br><br><br><br><br>今回の投稿は以上です。<br><br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color:red;&quot;&gt;2025&amp;#x2F;10&amp;#x2F;15 Update&lt;/span&gt;&lt;/strong&gt;&lt;br&gt;解決方法を更新しました。&lt;br&gt;&lt;strong&gt;&lt;span style=&quot;color:red;&quot;&gt;2025&amp;#x2</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+    <category term="Microsoft 365 Apps" scheme="https://officesupportjp.github.io/blog/tags/Microsoft-365-Apps/"/>
+    
+    <category term="M365Apps" scheme="https://officesupportjp.github.io/blog/tags/M365Apps/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Office アプリの設定を管理する方法の紹介</title>
+    <link href="https://officesupportjp.github.io/blog/cmff530z3000atsse9c4navwb/"/>
+    <id>https://officesupportjp.github.io/blog/cmff530z3000atsse9c4navwb/</id>
+    <published>2025-09-11T00:00:00.000Z</published>
+    <updated>2025-09-19T04:49:05.726Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの大津です。  </p><p>今回の記事では、特にお問い合わせの多い Windows 版の Office デスクトップアプリと Office for the Web を対象に、企業や組織の IT 管理者がユーザーの Office アプリの動作や機能を管理・制御する一般的な方法についてご紹介します。</p><h1 id="1-一般的な-Office-向け設定の構成方法"><a href="#1-一般的な-Office-向け設定の構成方法" class="headerlink" title="1. 一般的な Office 向け設定の構成方法"></a>1. 一般的な Office 向け設定の構成方法</h1><h2 id="■-Microsoft-365-クラウドポリシー"><a href="#■-Microsoft-365-クラウドポリシー" class="headerlink" title="■ Microsoft 365 クラウドポリシー"></a>■ Microsoft 365 クラウドポリシー</h2><p>Microsoft 365 クラウド ポリシーは、Microsoft 365 Apps 管理センター画面から Microsoft 365 Apps へのサインイン ユーザーに対するポリシーを構成できます。<br>デバイスがドメインや Intune に参加していない場合でも Microsoft 365 Apps サインイン ユーザーに対してポリシーを構成することができます。構成方法や詳細情報は以下の公開情報をご確認ください。</p><p>参考：Microsoft 365 向けクラウドポリシーサービスの概要<br>URL：<a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/overview-cloud-policy">https://learn.microsoft.com/ja-jp/microsoft-365-apps/admin-center/overview-cloud-policy</a></p><h2 id="■-Active-Directory-のグループポリシー"><a href="#■-Active-Directory-のグループポリシー" class="headerlink" title="■ Active Directory のグループポリシー"></a>■ Active Directory のグループポリシー</h2><p>Active Directory (AD) のグループポリシー (GPO) では、ドメインに参加していて Windows OS を使用しているデバイスに対してポリシーを構成することができます。Office に対してポリシーを構成する場合、IT 管理者は Office の管理用テンプレートをダウンロードして構成する必要があります。詳細な手順は以下の公開情報をご覧ください。</p><p>参考：Office の管理用テンプレートを使用してグループポリシー (GPO) で Office 365 ProPrus を制御する<br>URL：<a href="https://learn.microsoft.com/ja-jp/answers/questions/4370544/office-(gpo)-office-365-proplus">https://learn.microsoft.com/ja-jp/answers/questions/4370544/office-(gpo)-office-365-proplus</a></p><h2 id="■-Intune-内-Microsoft-365-アプリのポリシー→-Microsoft-365-クラウドポリシーと同じ"><a href="#■-Intune-内-Microsoft-365-アプリのポリシー→-Microsoft-365-クラウドポリシーと同じ" class="headerlink" title="■ Intune 内 Microsoft 365 アプリのポリシー→ Microsoft 365 クラウドポリシーと同じ"></a>■ Intune 内 Microsoft 365 アプリのポリシー→ Microsoft 365 クラウドポリシーと同じ</h2><p>Intune 管理センターでも Microsoft 365 クラウドポリシーを構成することができます。具体的な手順は以下の公開情報を参考にしてください。</p><p>参考：Microsoft 365 アプリのポリシー<br>URL：<a href="https://learn.microsoft.com/ja-jp/mem/intune/apps/app-office-policies">https://learn.microsoft.com/ja-jp/mem/intune/apps/app-office-policies</a></p><h2 id="■-Intune-設定カタログ"><a href="#■-Intune-設定カタログ" class="headerlink" title="■ Intune 設定カタログ"></a>■ Intune 設定カタログ</h2><p>Intune 設定カタログでは、様々な機能や製品のポリシーを構成でき、Office のポリシーも含まれています。具体的な手順は以下の公開情報を参考にしてください。</p><p>参考：Microsoft Intune で設定カタログを使用してポリシーを作成する<br>URL：<a href="https://learn.microsoft.com/ja-jp/intune/intune-service/configuration/settings-catalog">https://learn.microsoft.com/ja-jp/intune/intune-service/configuration/settings-catalog</a></p><p>&lt;Intune について&gt;<br>Intune は企業や組織が従業員のデバイスを一元管理できるクラウドベースのエンドポイント管理サービスです。設定カタログを利用する場合は、ポリシーを構成したいユーザーのデバイスを Intune に登録しておく必要があります。</p><p>参考: 登録ガイド: Microsoft Intune登録<br><a href="https://learn.microsoft.com/ja-jp/intune/intune-service/fundamentals/deployment-guide-enrollment">https://learn.microsoft.com/ja-jp/intune/intune-service/fundamentals/deployment-guide-enrollment</a></p><h2 id="■-Office-展開ツール-ODT-の構成ファイル-AppSetting-で「初期値」を設定"><a href="#■-Office-展開ツール-ODT-の構成ファイル-AppSetting-で「初期値」を設定" class="headerlink" title="■ Office 展開ツール (ODT) の構成ファイル AppSetting で「初期値」を設定"></a>■ Office 展開ツール (ODT) の構成ファイル AppSetting で「初期値」を設定</h2><p>Microsoft 365 Apps インストール時や、または、インストール後に ODT を追加実行して、構成ファイルで指定した設定を、実行したデバイスに追加できます。他のポリシー設定とは異なり、既定値 (初期値) として構成され、強制することはできません。対応するオプション メニュー等からユーザーが変更できます。<br>具体的な手順は以下の公開情報を参考にしてください。</p><p>参考：Office 展開ツールの概要<br>URL：<a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/deploy/overview-office-deployment-tool">https://learn.microsoft.com/ja-jp/microsoft-365-apps/deploy/overview-office-deployment-tool</a><br>※「アプリケーションの基本設定をMicrosoft 365 Appsに適用する」セクションを参照</p><p>参考：Office 展開ツールのオプションの構成<br>URL：<a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/deploy/office-deployment-tool-configuration-options">https://learn.microsoft.com/ja-jp/microsoft-365-apps/deploy/office-deployment-tool-configuration-options</a><br>※ 「AppSettings 要素」セクションを参照</p><h1 id="2-構成方法の比較"><a href="#2-構成方法の比較" class="headerlink" title="2. 構成方法の比較"></a>2. 構成方法の比較</h1><p>各 Office 向け設定の構成方法について、特徴の違いを以下の表にまとめます。これを参考にどの方法を採用するかをご検討ください。</p><table><thead><tr><th></th><th>Microsoft 365 クラウドポリシー</th><th>Active Directory のグループポリシー</th><th>Intune 設定カタログ</th><th>ODT の構成ファイルで初期設定</th></tr></thead><tbody><tr><td>適用対象※1</td><td>Microsoft 365 Apps サインイン ユーザー</td><td>Windows デバイスまたはユーザー</td><td>Windows デバイスまたはユーザー</td><td>Windows デバイス</td></tr><tr><td>前提</td><td>Microsoft 365 Apps にサインイン</td><td>デバイスやユーザーが AD の管理対象</td><td>デバイスを Intune に登録</td><td>特になし</td></tr><tr><td>強制または任意</td><td>強制</td><td>強制</td><td>強制</td><td>任意</td></tr><tr><td>優先順位</td><td>1 位</td><td>2 位</td><td>2 位</td><td>3 位</td></tr><tr><td>使用可能な製品<br>注：ポリシーはエンタープライズ向け製品でのみサポートされます</td><td>Microsoft 365 for enterprise</td><td>Microsoft 365 Apps for enterprise、ボリューム ライセンス版 Office</td><td>Microsoft 365 Apps for enterprise、ボリュームライセンス版 Office</td><td>クイック実行形式の Office (Microsoft 365 Apps、ボリュームライセンス版 Office 2019 以降、製品版 Office 2016 以降)</td></tr><tr><td>使用可能なプラットフォーム</td><td>Windows 上の Microsoft 365 デスクトップ アプリ、Office for the web</td><td>Windows 上の Office デスクトップ アプリ</td><td>Windows 上の Office デスクトップ アプリ</td><td>Windows 上の Office デスクトップ アプリ</td></tr><tr><td>反映にかかる時間</td><td>最大 24 時間</td><td>90 ~ 120 分</td><td>約 8 時間ごとに更新</td><td>ODT 実行後 Office 起動時</td></tr><tr><td>手動同期方法</td><td>なし</td><td>コンピューターのポリシー：クライアントの再起動<br>ユーザーのポリシー：Windows への再ログオン<br>または<br>gpupdate コマンド実行</td><td>管理者が Intune 管理画面から同期<br>または<br>クライアントで Windows の設定画面内 [アカウント] から同期</td><td>なし</td></tr><tr><td>構成に必要な権限</td><td>Office Apps 管理者 (推奨)、セキュリティ管理者、グローバル管理者</td><td>Active Directory ドメイン管理者、エンタープライズ管理者</td><td>ポリシーとプロファイルマネージャーの役割</td><td>実行マシンのローカル管理者権限</td></tr><tr><td>インターネット環境要否</td><td>必要</td><td>必要なし</td><td>必要</td><td>必要なし</td></tr></tbody></table><p>※1: 適用対象の動作詳細<br>Office の動作設定のほとんどは、ユーザー向けに構成します。(セットアップ関連設定などのコンピューター向け設定も一部存在します。)<br>Active Directory のグループポリシーは、ユーザー向けのポリシーは、ユーザーに対してのみ構成できます。<br>Intune 設定カタログは、ユーザー向けのポリシーをデバイスに割り当てることもできます。この場合、そのデバイス上のすべてのサインイン ユーザーに反映されます。<br>Office 展開ツールも、デバイス上で実行すると、そのデバイスにサインインするすべてのユーザーに反映されます。<br><br></p><p>今回の投稿は以上です。ご紹介した各種管理方法の中から、組織の環境や運用方針に最も適したものを選択いただくことで、Office アプリをより効率的に活用していただけるかと思います。<br>今後も、皆様の業務に役立つ情報を継続的に発信してまいりますので、ぜひ当ブログをご覧ください。<br><br></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの大津です。  &lt;/p&gt;
+&lt;p&gt;今回の記事では、特にお問い合わせの多い Windows 版の Office デスクトップアプリと Office for the Web を対象に、企業や組織の IT 管理者がユーザーの Office </summary>
+      
+    
+    
+    
+    
+    <category term="Office アプリ全般" scheme="https://officesupportjp.github.io/blog/tags/Office-%E3%82%A2%E3%83%97%E3%83%AA%E5%85%A8%E8%88%AC/"/>
+    
+    <category term="運用管理" scheme="https://officesupportjp.github.io/blog/tags/%E9%81%8B%E7%94%A8%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Microsoft 365 Copilot モバイルアプリのディクテーション機能の長時間の利用について</title>
+    <link href="https://officesupportjp.github.io/blog/cmcvaqw140003hc6y0qnedgdp/"/>
+    <id>https://officesupportjp.github.io/blog/cmcvaqw140003hc6y0qnedgdp/</id>
+    <published>2025-07-09T00:00:00.000Z</published>
+    <updated>2025-07-10T08:54:44.453Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Microsoft 365 Copilot モバイルアプリでのディクテーション機能を<br>長時間利用する際に発生する事象についてご案内いたします。</p><h1 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h1><p>Microsoft 365 Copilot モバイルアプリでは、[作成]-[ディクテーション] より<br>音声の録音とその文字起こしを行うことが可能です。</p><p>録音中はリアルタイムに文字起こしが表示されます。<br>また、録音中録音データは端末にキャッシュされ、<br>録音終了時に自動的に音声データとその文字起こしデータファイルが自身の OneDrive 上にアップロードされます。</p><p>本機能について、75 分以上録音を行う場合に、リアルタイムの文字起こしが中断され、<br>録音終了後も OneDrive へのデータのアップロードが失敗する動作が確認されております。</p><p>また、60 分など長時間録音を継続する場合においても、<br>何らかのエラーにより録音が中断される場合などが確認されております。</p><h1 id="対応案"><a href="#対応案" class="headerlink" title="対応案"></a>対応案</h1><p>上記の通り録音中の音声データは端末にキャッシュされるため、端末のストレージ容量次第でディクテーション機能の利用に問題が生じる可能性がございます。<br>また、ディクテーション機能利用時には安定したネットワーク接続が必須となり、機能の安定した利用にはネットワークの影響もうけます。</p><p>上記を踏まえ、長時間の録音は控え、最低限の時間ごとに録音いただくことをお勧めいたします。</p><p>参考: Record voice notes in Office Mobile<br>URL: <a href="https://nam06.safelinks.protection.outlook.com/?url=https://techcommunity.microsoft.com/blog/microsoft365insiderblog/record-voice-notes-in-office-mobile-for-ios/4213168&data=05%7C02%7Ckokisugiura@microsoft.com%7C4e2660413f9140f57f2708ddb9408c5d%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C638870409089899235%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ==%7C0%7C%7C%7C&sdata=q1WpUtuykCg2Ps0KzzBJN6rTja8xZFVaj3f8H2MzSc4=&reserved=0">https://techcommunity.microsoft.com/blog/microsoft365insiderblog/record-voice-notes-in-office-mobile-for-ios/4213168</a></p><p>なお、録音後自動的に音声データ等が OneDrive にアップロードされない場合は以下のような方法で音声データを取得できるかお試しいただければと存じます。</p><ul><li>[検索] タブより最近使ったファイルとして表示される音声データを開き、表示される UI から OneDrive へアップロードする</li><li>[検索] タブより最近使ったファイルとして表示される音声データを開き、OS の [共有] の仕組みを利用し、OneDrive アプリや Teams アプリなど任意のその他アプリに共有する</li></ul><p>音声データの文字起こしについては以下機能の利用もご検討いただければと存じます。</p><p>参考: レコーディングの文字起こし<br>URL: <a href="https://support.microsoft.com/ja-jp/office/7fc2efec-245e-45f0-b053-2a97531ecf57">https://support.microsoft.com/ja-jp/office/7fc2efec-245e-45f0-b053-2a97531ecf57</a></p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Microsoft 365 Copilot モバイルアプリでのディクテーション機能を&lt;br&gt;長時間利用する際に発生する事象についてご案内いたします。&lt;/p&gt;
+&lt;h1 id=&quot;事象の詳細&quot;&gt;&lt;a href=</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる</title>
+    <link href="https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/"/>
+    <id>https://officesupportjp.github.io/blog/cmc4bhkp0002nzwkj2dtfai4k/</id>
+    <published>2025-06-20T00:00:00.000Z</published>
+    <updated>2025-07-10T09:01:01.022Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2025&#x2F;07&#x2F;10 Update</strong></span><br><span style="color:#339966">事象改善により、「回避策について」「今後について」を変更しました。</span>  </p><p>こんにちは、Office サポートチームです。<br>この記事では、Loop ワークスペースの「メンバーの招待と管理」で役割を変更後、変更されたメンバーがワークスペースにアクセス出来なくなる事象について説明します。</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><h6 id="役割を変更されたメンバーが-Loop-のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。"><a href="#役割を変更されたメンバーが-Loop-のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。" class="headerlink" title="役割を変更されたメンバーが Loop のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。"></a>役割を変更されたメンバーが Loop のメインページから該当のワークスペースを開いた場合に以下のようなメッセージが表示されます。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image1.png"></p><h6 id="役割を変更されたメンバーが該当の-Loop-ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。"><a href="#役割を変更されたメンバーが該当の-Loop-ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。" class="headerlink" title="役割を変更されたメンバーが該当の Loop ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。"></a>役割を変更されたメンバーが該当の Loop ワークスペースのリンクを直接開いた場合、以下のようなメッセージが表示されます。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image3.png"></p><h6 id="「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。"><a href="#「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。" class="headerlink" title="「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。"></a>「メンバーの招待と管理」で該当のメンバーを削除し再追加しようとした場合、「新しいメンバーを正常に追加しました」と表示されても、メンバーに追加されていません。</h6><p>※ SharePoint 管理センターより、該当のコンテナーに対して直接メンバーを追加しても同様に追加できません。<br>※ 見た目上、追加されるケースも確認されておりますので、この事象は生じない場合もございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image2.png"></p><p><strong>補足</strong></p><ul><li>役割を変更されたメンバー以外のメンバーは、該当の Loop ワークスペースの利用を継続していただけます。</li><li>役割を変更されたメンバーでも、該当の Loop ワークスペース以外の Loop ワークスペースはご利用いただけます。</li></ul><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>以下の条件を満たした場合、役割を変更されたメンバーがアクセス出来なくなる事象が確認されております。</p><h6 id="発生条件-1-Loop-ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。"><a href="#発生条件-1-Loop-ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。" class="headerlink" title="発生条件 1) Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。"></a>発生条件 1) Loop ワークスペースの「メンバーの招待と管理」でメンバーの役割を変更する。</h6><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image4.png"></p><br><h6 id="発生条件-2-※調査中※"><a href="#発生条件-2-※調査中※" class="headerlink" title="発生条件 2) ※調査中※"></a>発生条件 2) ※調査中※</h6><p><strong>現在も調査中の状況のため、影響が大きい Loop ワークスペースについては、役割変更自体をお控えいただけますと幸いです。</strong></p><p>現時点での情報までといたしまして、2025&#x2F;5&#x2F;30 以降に作成した Loop ワークスペースでは事象の発生を確認しておりませんため、<br>2025&#x2F;5&#x2F;30 より前に作成した Loop ワークスペースにて事象が生じる可能性が高いと考えられます。</p><p>Loop ワークスペースの作成日は、ユーザーは確認することが出来ませんが、<br>ワークスペース内の各ページにはバージョン履歴がございますので、ワークスペース作成時期の目安にしていただけます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image5.png"></p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image7.png"></p><p>しかしながら、ワークスペース内でページを削除されている可能性がございます場合、この方法はご利用いただけません。<br>その他としては、例えば、テナントの全体管理者や SharePoint Embedded管理者にて、<br>SharePoint 管理センターより、Containers – Active containers から該当のコンテナーを開き、全般 - 作成日を確認する方法がございます。</p><p><img src="/blog/cmc4bhkp0002nzwkj2dtfai4k/image6.png"></p><br><h2 id="回避策について"><a href="#回避策について" class="headerlink" title="回避策について"></a>回避策について</h2><p><del>恐れ入りますが、現状、本事象の有効な回避策はご案内可能な情報がございません。</del></p><p><del>大変お手数でございますが、ワークスペースの再作成をご実施いただくか、</del><br><del>右上の “共有” から、ページ単位での共有を行っていただくことをご検討いただけますと幸いです。</del></p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p><del>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。</del></p><p><del>また、誠に恐れ入りますが、ワークスペースの単位の事象につきましては、問題が生じたワークスペースを再作成する以外の回避策をご提供出来ない可能性がございます。</del><br><del>恐縮でございますが、上記回避策にてご対応をいただくか、弊社開発部門での調査をお待ちくださいますようお願いいたします。</del></p><span style="color:#ff0000">7/10 現在、弊社サービス側で修正を行い、本事象の改善が確認されております。<p>事象が生じていたユーザーをワークスペースに追加 (既に追加済の場合には一度削除して再追加) いただくことで、<br>該当のユーザーがアクセス出来るようになるかをご確認いただけますと幸いです。</p><p>なお、ワークスペースのメンバーとして追加後に、事象が生じているユーザーのワークスペースの一覧に表示されない場合、<br>お手数ですが、該当のワークスペースの URL をブラウザーのアドレスバーからコピーして共有いただいてアクセスいただき、<br>その後、しばらくして一覧にも表示されることをご確認いただけますと幸いです。<br> </span></p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2025&amp;#x2F;07&amp;#x2F;10 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;事象改善により、「回避策について」「今後について」を</summary>
+      
+    
+    
+    
+    
+    <category term="Loop" scheme="https://officesupportjp.github.io/blog/tags/Loop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について</title>
+    <link href="https://officesupportjp.github.io/blog/cmagbplia0001mskjh69cder5/"/>
+    <id>https://officesupportjp.github.io/blog/cmagbplia0001mskjh69cder5/</id>
+    <published>2025-05-09T00:00:00.000Z</published>
+    <updated>2025-05-16T01:41:18.806Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2025&#x2F;05&#x2F;09 Update</strong></span><br><span style="color:#339966">今後についてを追記しました。タイトルを変更しました。</span>  </p><p><span style="color:#ff0000"><strong>2025&#x2F;05&#x2F;16 Update</strong></span><br><span style="color:#339966">今後についてを追記しました。</span>  </p><p>こんにちは、Office サポート チームです。<br>この記事では、挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について説明します。</p><br><h2 id="事象"><a href="#事象" class="headerlink" title="事象"></a>事象</h2><p>挿入タブ-図-アイコンのダイアログが白くなりアイコンが表示されない事象について</p><p><img src="/blog/cmagbplia0001mskjh69cder5/image1.png"></p><br><h2 id="発生条件"><a href="#発生条件" class="headerlink" title="発生条件"></a>発生条件</h2><p>Office のバージョンが 2402 以下 (ビルド表記では 16.0.17328.***** 以下) の場合、事象が生じる可能性がございます。<br>製品バージョンは以下よりご確認いただけます。</p><p>・Office 製品の [ファイル] タブ - “アカウント”<br><img src="/blog/cmagbplia0001mskjh69cder5/image2.png"></p><p>・OS の設定 - アプリ - インストールされているアプリ<br><img src="/blog/cmagbplia0001mskjh69cder5/image3.png"></p><br><h2 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a>回避策</h2><p>現時点で確認されている回避策は、以下の通りです。</p><p>・<span style="color:#ff0000">バージョン 2402 を除き、</span> <a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date">Microsoft 365 Apps の更新履歴 (日付別の一覧)</a> のサポートされているバージョンを利用する<br>・ブラウザーから Office for the web を利用する (Excel&#x2F;Word for the web ではアイコンの代わりにストック画像をご利用ください)</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p><del>現在、弊社開発部門で調査を行っておりますが、具体的なスケジュールは未定となります。</del><br><del>誠に恐れ入りますが、上記回避策にてご対応をいただくか、弊社開発部門での調査をお待ちくださいますようお願いいたします。</del></p><p>5&#x2F;16 現在、本事象の改善が確認されております。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2025&amp;#x2F;05&amp;#x2F;09 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;今後についてを追記しました。タイトルを変更しました。</summary>
+      
+    
+    
+    
+    
+    <category term="描画" scheme="https://officesupportjp.github.io/blog/tags/%E6%8F%8F%E7%94%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Loop ワークスペースの「メンバーの招待と管理」でワークスペースのリンクが表示されない場合がある</title>
+    <link href="https://officesupportjp.github.io/blog/cm97ug53k00011ckj6784f71k/"/>
+    <id>https://officesupportjp.github.io/blog/cm97ug53k00011ckj6784f71k/</id>
+    <published>2025-04-08T00:00:00.000Z</published>
+    <updated>2025-04-08T01:58:44.680Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>今回、Loop ワークスペースの「メンバーの招待と管理」でワークスペースのリンクが表示されない事象についてご案内します。</p><br><h2 id="ワークスペースのリンクとは"><a href="#ワークスペースのリンクとは" class="headerlink" title="ワークスペースのリンクとは"></a>ワークスペースのリンクとは</h2><p>Loop ワークスペースを開き、人のアイコンをクリックして「メンバーの招待と管理」を開きます。</p><p><img src="/blog/cm97ug53k00011ckj6784f71k/image1.png"><br>↓<br><img src="/blog/cm97ug53k00011ckj6784f71k/image3.png"></p><br><h2 id="事象について"><a href="#事象について" class="headerlink" title="事象について"></a>事象について</h2><p>本記事作成時点 (2025&#x2F;04&#x2F;08) では、ワークスペースのリンク機能は公開を停止しております。<br>そのため、「メンバーの招待と管理」のダイアログを開いても、ワークスペースのリンク機能は表示されません。</p><p><img src="/blog/cm97ug53k00011ckj6784f71k/image2.png"></p><p>なお、公開停止前に作成していたワークスペースでは、引き続きワークスペースのリンク機能をご利用いただけます。</p><br><h2 id="今後について"><a href="#今後について" class="headerlink" title="今後について"></a>今後について</h2><p>今後、改めて機能公開が行われる可能性はございますが、具体的なスケジュールは未定となります。</p><br><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;今回、Loop ワークスペースの「メンバーの招待と管理」でワークスペースのリンクが表示されない事象についてご案内します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;ワークスペースのリンクとは&quot;&gt;&lt;a href=&quot;#ワ</summary>
+      
+    
+    
+    
+    
+    <category term="Loop" scheme="https://officesupportjp.github.io/blog/tags/Loop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel でユニバーサル プリントを使用して印刷した場合の現象について</title>
+    <link href="https://officesupportjp.github.io/blog/cm88fpn830000146y52sf2mbd/"/>
+    <id>https://officesupportjp.github.io/blog/cm88fpn830000146y52sf2mbd/</id>
+    <published>2025-03-14T00:00:00.000Z</published>
+    <updated>2025-04-08T01:19:38.899Z</updated>
+    
+    <content type="html"><![CDATA[<br><p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel でユニバーサル プリントを使用して印刷した場合に発生する現象について説明します。</p><h3 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h3><p>Excel のセルの書式設定で塗りつぶしパターンを指定しているファイルをユニバーサル プリントにて印刷した場合、印刷結果が出力されない場合があります。</p><p><strong>参考</strong><br>ユニバーサル プリントについては以下を参照ください。</p><p>ユニバーサル プリントのドキュメント<br><a href="https://learn.microsoft.com/ja-jp/universal-print/">https://learn.microsoft.com/ja-jp/universal-print/</a></p><h3 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h3><p>Excel からの印刷時に、OS 付属の 「Microsoft Print to PDF」 を指定して印刷操作を行い PDF 形式のファイルを作成します。その後に作成された PDF ファイルを開いてユニバーサル プリントにて印刷を行います。</p><p>Excel ファイルの内容を編集可能な場合は、セルの書式設定にて塗りつぶしパターンの設定を解除します。<br>セルの書式設定ダイアログで、以下のように [パターンの種類] のドロップダウンを展開して表示される一覧より左上のものを選択します。</p><p><img src="/blog/cm88fpn830000146y52sf2mbd/01.png"><br><br><br><br></p><p>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;br&gt;
+
+&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Excel でユニバーサル プリントを使用して印刷した場合に発生する現象について説明します。&lt;/p&gt;
+&lt;h3 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;headerlink&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="印刷" scheme="https://officesupportjp.github.io/blog/tags/%E5%8D%B0%E5%88%B7/"/>
+    
+    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel ファイルを開くパフォーマンスが低下する</title>
+    <link href="https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/"/>
+    <id>https://officesupportjp.github.io/blog/cm889ij900000tw6ygk5y0dlo/</id>
+    <published>2025-03-13T15:00:00.000Z</published>
+    <updated>2025-06-26T06:27:53.551Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong><span style="color:red;">2025&#x2F;06&#x2F;26 Update</span></strong><br><span style="color:green;">今後の対応予定を変更しました。</span>  </p><p>こんにちは、Office サポート チームです。<br>今回の記事では、Excel 利用に Excel ファイルを開くパフォーマンスが低下する現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Appsバージョン 2402 以降の Excel では、バージョン 2302 等の以前のバージョンと比較して、ふたつ目の Excel ファイルを開くまでの待ち時間が長くなる (ファイルを開くのが遅い) 場合があります。</p><p><strong>再現手順</strong><br>1 下記のような Excel ファイルを用意します。</p><p>A.xlsx  (サイズ : 約 20MB)<br>B.xlsx (サイズ : 約 60KB) </p><p>※ ひとつ目に開く Excel ファイルのサイズが大きいと、2つ目の Excel ファイルを開くのがより遅くなる傾向があることから、A.xlsx はサイズの大きなファイルとしています。</p><p>2 ひとつ目の Excel ファイル (A.xlsx) を開く操作をします。<br>画面上で A.xlsx が開いたことを確認します。</p><p>3 ふたつ目の Excel ファイル (B.xlsx) を開く操作をします。<br>B.xlsxが開かれるまでマウスから手を放すなどして何も操作しません。</p><p>4 画面上でふたつ目の Excel ファイル (B.xlsx) が開いたことを確認します。</p><p><strong>結果</strong><br>以前のバージョンと比較して、Microsoft 365 Apps バージョン 2402 以降の Excel  のほうが<br>ふたつ目の Excel ファイル (B.xlsx) を開くまでの待ち時間が長くなる(ファイルを開くのが遅い ) 傾向が確認できます。<br>※ 手順 3 から 4 までの、ふたつ目の Excel ファイル (B.xlsx) が開くまでの時間を計測して比較します。</p><h3 id="2-対処方法"><a href="#2-対処方法" class="headerlink" title="2. 対処方法"></a>2. 対処方法</h3><p>ふたつ目の Excel ファイルを開いた後に、ひとつ目の Excel ファイルを開いている Excel のウィンドウ上でマウスを動かすことで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><p>手順:<br>1 ひとつ目の Excel ファイル (A.xlsx) を開きます。<br>画面上で A.xlsx が開いたことを確認します。</p><p>2 ふたつ目の Excel ファイル  (B.xlsx) を開きます。</p><p>3 手順 1 で開いたExcel のウィンドウ上でマウスを動かします。(Excel ウィンドウ上でマウスを動かすことやセルをクリックする等の操作をします)</p><p>手順 3 を実施することで、ふたつ目の Excel ファイルを開く速度の改善が期待できます。</p><h3 id="3-今後の対応予定"><a href="#3-今後の対応予定" class="headerlink" title="3. 今後の対応予定"></a>3. 今後の対応予定</h3><p><del>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</del></p><p>最新チャネルのバージョン 2501 等、2025  年 2 月のリリースにて改善に向けた修正を図りました。<br>Microsoft 365 Apps を新しいバージョン&#x2F;ビルドに更新してご利用ください。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;&lt;span style=&quot;color:red;&quot;&gt;2025&amp;#x2F;06&amp;#x2F;26 Update&lt;/span&gt;&lt;/strong&gt;&lt;br&gt;&lt;span style=&quot;color:green;&quot;&gt;今後の対応予定を変更しました。&lt;/span&gt;  &lt;/p&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="パフォーマンス" scheme="https://officesupportjp.github.io/blog/tags/%E3%83%91%E3%83%95%E3%82%A9%E3%83%BC%E3%83%9E%E3%83%B3%E3%82%B9/"/>
+    
+    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel シート タブの外観変更後、オートメーションのパフォーマンスが低下する</title>
+    <link href="https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/"/>
+    <id>https://officesupportjp.github.io/blog/cm372f6jk000058se8jgwhvee/</id>
+    <published>2025-03-12T00:00:00.000Z</published>
+    <updated>2025-04-08T01:19:38.900Z</updated>
+    
+    <content type="html"><![CDATA[<p><span style="color:#ff0000"><strong>2025&#x2F;01&#x2F;31 Update</strong></span><br><span style="color:#339966">Microsoft 365 Apps 最新チャネル、永続ライセンス向けの本現象を修正する更新について追記しました。</span>  </p><p><span style="color:#ff0000"><strong>2025&#x2F;03&#x2F;12 Update</strong></span><br><span style="color:#339966">Microsoft 365 Apps 月次エンタープライズ チャネル向けの本現象を修正する更新について追記しました。</span><br><br></p><p>こんにちは、Office サポート チームの中村です。</p><p>今回の記事では、Excel が新しい外観に変わった後、Excel オートメーションの処理パフォーマンスが大きく低下する場合がある現象について記載します。<br><br></p><p><strong><h3>1. 前提となる動作変更</h3></strong><br>Office デスクトップ アプリの新しいバージョンでは、Windows 11 の外観と一貫性のある外観への変更が進められています。この変更後、ウィンドウの配色が変化したり、ウィンドウ枠の角が丸みを帯びる、といった外観の変化があります。</p><p>参考) Office の新しい外観<br><a href="https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf">https://support.microsoft.com/ja-jp/office/a6cdf19a-b2bd-4be1-9515-d74a37aa59bf</a></p><p>この Office デスクトップ アプリの全体的な外観変更に加え、Excel ではさらにシート タブも一貫性のある外観への変更を進めています。</p><p>&lt;シート タブ変更前&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_Before.png">  </p><p>&lt;シート タブ変更後&gt;<br><img src="/blog/cm372f6jk000058se8jgwhvee/Visual_After.png">  </p><p>このシート タブの外観変更が行われた後、次に説明する Excel オートメーションのパフォーマンス低下の問題が生じることを確認しています。<br><br></p><p><strong><h3>2. 現象</h3></strong><br>先述のシート タブ外観変更後、多くのシートを持つブックにおいて、オートメーションで各シートに対する様々な操作を行うと、パフォーマンスが低下する場合があります。<br>どの程度影響を受けるかは、オートメーション処理内容に依存しますが、特に、.NET プログラムや PowerShell などの外部プログラムからの Excel オートメーションでは、大きくパフォーマンスが低下する傾向にあります。<br>また、シート数が増えるにつれて、処理時間の増加量がより大きく増えます。<br><br></p><p><strong><h3>3. 原因</h3></strong><br>新しいシート タブの外観を描画するため、描画処理を大きく変更しました。この新しい描画処理で、特にシート数が多いとき、以前の処理より時間を要することが原因です。<br><br></p><p><strong><h3>4. 現象発生バージョン</h3></strong><br>ご利用の製品とチャネル、OS によって、以下のバージョン以降で Excel のシート タブが新しい外観に変更されます。このバージョン以降でシート タブが新しい外観に変わると、現象が発生します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>Windows 11: バージョン 2308 (ビルド 16731.20170)<br>Windows 10: バージョン 2404 (ビルド 17531.20120)  </p><p>&lt;月次エンタープライズ チャネル&gt;<br>Windows 11: バージョン 2310 (ビルド 16924.20180)<br>Windows 10: バージョン 2408 (ビルド 17928.20216)  </p><p><strong>製品版 Office 2024</strong><br>Windows 11 &#x2F; Windows 10 ともに製品出荷バージョン以降全て</p><p><strong>製品版 Office 2021</strong><br>Windows 11 &#x2F; Windows 10 ともにバージョン 2308 (ビルド 16731.20170)  </p><p>上記以外の製品やチャネルでは、本記事作成時点でシート タブは新しい外観に変わっていないため、本問題の影響を受けません。<br>※ 上記の &lt;製品版 Office&gt; は、コンシューマー向け製品を指します。ボリューム ライセンス版 Office LTSC 2024 &#x2F; Office LTSC 2021 は影響を受けません。<br><br></p><p><strong><h3>5. 対処方法</h3></strong></p><p>以下のバージョンで本現象を修正しました。本バージョン以降に更新することで、本記事でご案内するシナリオのパフォーマンスが改善します。</p><p><strong>Microsoft 365 Apps</strong><br>&lt;最新チャネル&gt;<br>バージョン 2501 (ビルド 18429.20132)  </p><p>&lt;月次エンタープライズ チャネル&gt;<br>バージョン 2501 (ビルド 18429.20200)  </p><p><strong>製品版 Office 2024&#x2F;2021</strong><br>バージョン 2501 (ビルド 18429.20132)</p><br><p><strong><h3>6. 暫定回避策</h3></strong><br>※ 本現象について未修正のバージョン 2412 以前向けのご案内です。  </p><p>新しい外観を適用しないよう、Office の設定で変更することはできません。<br>現状の動作における暫定回避策として、以下の方法でパフォーマンス向上を図ることができることを確認しています。</p><ul><li>シート名に日本語 (DBCS 文字) を使用しない</li><li>外部プログラムからのオートメーションを、VBA での処理に変更する (外部プログラムからは、Application.Run で VBA を呼び出すことができます)<br></li></ul><p>上記の対応が難しい場合、他の暫定回避策としては、シート タブが新しい外観に変わる前のバージョンに戻すことが検討できます。(製品初期出荷時点から新しい外観となっている Office 2024 を除く)<br>ただし、現象がまだ発生しないバージョンは、チャネルによっては最新バージョンから大きくバージョンを戻す必要があり、サポートされないバージョンとなります。<br>古いバージョンには、最新のセキュリティ更新が含まれないため、バージョンを戻す対処を検討する場合は、十分にこの点を考慮いただきますようお願いします。恐れ入りますが、本問題の回避のため、サポートされないバージョンを利用することによって生じた問題について、マイクロソフトでは責任を負うことはできません。</p><p>クイック実行形式の Office を以前のバージョンに戻す基本的な手順は、以下の公開情報をご参照ください。</p><p>以前のバージョンの Office に戻す方法<br><a href="https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841">https://support.microsoft.com/ja-jp/topic/2bd5c457-a917-d57e-35a1-f709e3dda841</a><br>※ Apply To が Office 2019 までとなっていますが、Office 2021 も同じ手順でバージョンを戻すことができます。</p><p>手順 3 で指定するビルド番号 (16.0.xxxxx.yyyyy) は、ご利用の製品及びチャネル向けに過去にリリースされたビルドを以下の公開情報で確認し、先述の現象発生バージョンより前のビルドを使用します。</p><p>Microsoft 365 Apps の更新履歴 (日付別の一覧)<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date">https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date</a></p><p>Office LTSC 2024 および Office 2024 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2024</a>  </p><p>Office LTSC 2021 および Office 2021 の更新履歴<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021">https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021</a>  </p><p>注意:<br>エンタープライズ環境などでは、管理者が Office の更新バージョンを管理している場合があります。Office デスクトップ アプリの更新管理には様々な方法があるため、上記の基本手順ではバージョンを変更できない場合があります。このような場合は、ユーザー様のクライアント環境管理者にお問い合わせください。</p><br><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;span style=&quot;color:#ff0000&quot;&gt;&lt;strong&gt;2025&amp;#x2F;01&amp;#x2F;31 Update&lt;/strong&gt;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;color:#339966&quot;&gt;Microsoft 365 Apps 最新チャネル、</summary>
+      
+    
+    
+    
+    
+    <category term="オートメーション" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AA%E3%83%BC%E3%83%88%E3%83%A1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3/"/>
+    
+    <category term="VBA マクロ" scheme="https://officesupportjp.github.io/blog/tags/VBA-%E3%83%9E%E3%82%AF%E3%83%AD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Microsoft 365 Apps 利用時に p1.aprimocdn.net への通信が発生する</title>
+    <link href="https://officesupportjp.github.io/blog/cm7eg3dd40000kc6y3kebhpid/"/>
+    <id>https://officesupportjp.github.io/blog/cm7eg3dd40000kc6y3kebhpid/</id>
+    <published>2025-02-21T00:00:00.000Z</published>
+    <updated>2025-04-08T01:19:38.901Z</updated>
+    
+    <content type="html"><![CDATA[<span style="color:#ff0000">2025/03/05 Update[対応案] の内容を更新しました</span><p>こんにちは、Office サポート チームです。<br>この記事では、Microsoft 365 Apps の利用時に p1.aprimocdn.net への通信が発生する事象について説明します。</p><p>新たな情報がある場合には、随時この記事でお知らせします。</p><h1 id="事象の詳細"><a href="#事象の詳細" class="headerlink" title="事象の詳細"></a>事象の詳細</h1><p>Microsoft 365 App にて以下の操作をしたときに p1.aprimocdn.net への通信が発生します。</p><ul><li>[スタート] メニューから Excel 等を起動して、[開く] ボタンをクリックする</li><li>[名前を付けて保存] をクリックする</li></ul><p>このとき、プロキシ認証を利用している環境では「p1.aprimocdn.net のプロキシサーバーに接続しています」というメッセージが表示されます。</p><h1 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h1><p>本事象は、Microsoft 365 Apps のクラウド側の設定追加の影響で発生しています。</p><p>Microsoft 365 Apps から接続するサービスの定義 (クラウド側の設定) としてサードパーティーの NetDocuments のファイル共有サービスの定義が追加されました。</p><p>この新しいクラウド側の定義をクライアントが受信すると、以降、Microsoft 365 Apps のバックステージ ビューに、NetDocuments (サードパーティーのファイル共有サービス) が読み込まれ、<br>NetDocuments のアイコン画像取得のために「p1.aprimocdn.net」への通信が発生します。</p><p>現時点では、Microsoft 365 の通信先以外との通信が発生しないように対応検討中となります。</p><h1 id="対応案"><a href="#対応案" class="headerlink" title="対応案"></a>対応案</h1><p><span style="color:#ff0000">2025&#x2F;03&#x2F;05 現在、NetDocuments のアイコン画像取得のための通信先が、Microsoft 365 Apps をご利用いただくにあたり必須の通信先である 「odc.officeapps.live.com」 へ変更になっております。<br>そのため、新しい設定を受け取った端末では、「p1.aprimocdn.net」への通信は行いませんので、本事象は発生いたしません。</span></p><p><span style="color:#ff0000">新しい設定を受け取った端末では、本事象に対する対応として下記のポリシー設定は不要となります。既に設定いただいている場合は、必要に応じて設定の見直しをご検討ください。</span></p><p>サードパーティーのファイル共有サービスを全く使っていない場合は、以下 2 種類のポリシーのいずれかを設定いただくことで回避できます。</p><ul><li>[Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする] のポリシー</li></ul><p>[ユーザーの構成]<br>- [ポリシー]<br>- [管理用テンプレート]<br>- [Microsoft Office 2016]<br>- [その他]<br>- [Backstage ビューの Microsoft のクラウドベースのファイルの場所を非表示にする]<br>を有効にし、[オンライン ストレージ フィルターの値] として “すべてのサード パーティサービスを無効にします” の設定値である 128 を設定します。</p><p>上記ポリシーを設定、適用すると以下のレジストリが作成されます。<br>レジストリを直接設定することでも同じ動作となります。</p><p>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\office\16.0\common\internet<br>名前 : onlinestorage<br>種類 : REG_DWORD<br>データ : 128<br>(16進数の場合は、80 となります)</p><ul><li>[サービス レベルのオプション] のポリシー</li></ul><p>[ユーザーの構成]<br>- [ポリシー]<br>- [管理用テンプレート]<br>- [Microsoft Office 2016]<br>- [ツール | オプション | 全般 | サービス オプション]<br>- [オンライン コンテンツ]<br>- [サービス レベルのオプション]<br>を有効にして、 “Microsoft のサービスのみ” にする</p><p>上記ポリシーを設定、適用すると以下のレジストリが作成されます。<br>レジストリを直接設定することでも同じ動作となります。</p><p>キー : HKEY_CURRENT_USER\Software\Policies\Microsoft\office\16.0\common\internet<br>名前 : serviceleveloptions<br>種類 : REG_DWORD<br>データ : 1</p><p>BOX 等、サードパーティーのファイル共有サービスの一部製品をご利用の場合は、上記 2 点いずれかのポリシー設定を実施すると、サードパーティーのファイル共有サービスをご利用いただけなくなります (*1) ので、<br>上記設定は行わずに、「p1.aprimocdn.net」 へのプロキシ認証を除外することをご検討お願いいたします。</p><p>(*1)<br>[場所の追加] や [アカウント] – [サービスの追加] – [ストレージ] の項目が表示されなくなります。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;span style=&quot;color:#ff0000&quot;&gt;
+2025/03/05 Update
+[対応案] の内容を更新しました
+&lt;/span&gt;
+
+
+&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Microsoft 365 Apps の利用時に p1.</summary>
+      
+    
+    
+    
+    
+    <category term="クラウド ストレージ" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89-%E3%82%B9%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ラベル ポリシー「ユーザーがメールとドキュメントにラベルを適用することを必須にする」が有効の場合 Excel アドイン (.xlam) 保存時にラベル適用が求められ保存できない</title>
+    <link href="https://officesupportjp.github.io/blog/cm53l15yg0000j46y7a4s6u9f/"/>
+    <id>https://officesupportjp.github.io/blog/cm53l15yg0000j46y7a4s6u9f/</id>
+    <published>2024-12-24T15:00:00.000Z</published>
+    <updated>2025-01-29T08:39:08.058Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の投稿では、Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、Excel アドイン (*.xlam) 編集後保存時にラベル適用を求められ保存ができない現象について説明します。</p><h2 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h2><p>Microsoft Information Protection が構成されており、ラベル ポリシーの [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、ラベル付けされていないドキュメントを開くと、”必須ラベル付け” によってユーザー操作によるラベルの付与を強制するプロンプトが表示されます。<br>そのため、通常のユーザー利用シナリオにおいて、ラベルの付与が行われていないドキュメントを保存しようとした、または、ラベルが適用されていないドキュメントを操作した場合などにおいて、プロンプトが繰り返し表示されることが想定されます。</p><p>また、ラベル付けの処理が組み込まれていないマクロや RPA の処理が実行された場合、ラベルが適用されていないドキュメントを操作した場合も “必須ラベル付け” のプロンプトが表示される可能性があります。<br>これにより Microsoft Information Protection ラベル ポリシーに依存し、ファイル形式によっては Microsoft 365 Apps にて保存ができないケースが確認されています。</p><br><h2 id="再現条件"><a href="#再現条件" class="headerlink" title="再現条件"></a>再現条件</h2><p>以下の構成を全て満たす場合、”必須ラベル付け” のプロンプトが表示され Microsoft 365 Apps にてファイルを保存することができません。</p><ul><li>Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効に設定されている</li><li>Microsoft Information Protectionラベル ポリシー [既存のドキュメントに既定のラベルを適用する] が設定されていない</li><li>Microsoft 365 Apps で Excel アドイン形式 (<em>.xlam) のファイルを開く、かつ、Excel アドイン形式 (</em>.xlam) にラベルが未設定である</li></ul><br><h2 id="再現手順の例"><a href="#再現手順の例" class="headerlink" title="再現手順の例"></a>再現手順の例</h2><ol><li>Excel アプリを起動し、[ファイル]-[開く] から、ラベルが付与されていない Excel アドイン形式 (<em>.xlam) のファイルを開きます。<br>※ Excel アドイン形式 (</em>.xlam) のファイルは、ファイルを開いても、ワークシートが表示されないことにご留意ください。</li><li>Alt + F12 キーを押下し、Visual Basic Editor を起動します。</li><li>Visual Basic Editor で、任意の編集を加えます。例えば、ThisWorkbookに下記コードを追加します。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Private Sub Workbook_Open()</span><br><span class="line">    Debug.Print &quot;Test&quot;</span><br><span class="line">End Sub</span><br></pre></td></tr></table></figure><ol start="4"><li>Visual Basic Editor 画面で保存ボタンをクリックします。</li></ol><br><h4 id="結果"><a href="#結果" class="headerlink" title="結果"></a>結果</h4><p>ラベルの適用を求めるプロンプトが表示されます。<br>[ラベルの選択] ボタンをクリックしても、ラベル選択のダイアログが表示されないため、このユーザー インターフェースからラベルを設定することはできません。<br>このため、Visual Basic Editor 画面で行った変更内容は保存することができません。</p><p><img src="/blog/cm53l15yg0000j46y7a4s6u9f/image0.png"></p><br><h2 id="回避策"><a href="#回避策" class="headerlink" title="回避策"></a>回避策</h2><p>以下いずれかの方法による対応をご検討いただきますようお願いいたします。</p><p>(a). Microsoft Information Protectionラベル ポリシー [既存のドキュメントに既定のラベルを適用する] で暗号化を含まないラベルを設定する</p><p>あるいは</p><p>(b). VBA マクロにて、暗号化を含まないラベルを設定する</p><br><h4 id="b-の設定手順例"><a href="#b-の設定手順例" class="headerlink" title="(b). の設定手順例"></a>(b). の設定手順例</h4><p>本手順は一度実行していただければ結構です。設定したラベルを削除しない限り、毎回実行する必要はございません。</p><ol><li>Excel アプリを起動し、ラベルが付与されていない Excel アドイン形式 (<em>.xlam) のファイルを開きます。<br>※ Excel アドイン形式 (</em>.xlam) のファイルは、ファイルを開いても、ワークシートは表示されないことにご留意ください。</li><li>Alt + F12 キーを押下し、Visual Basic Editor を起動します。</li><li>Visual Basic Editor で、以下のコードを追加したら、F5 キーを押下してマクロ実行します。<br>※ “&lt;暗号化設定のないラベルの GUID&gt;” は、お客様の環境で作成済みの暗号化設定のないラベルの GUID を指定してください。<br>※ 暗号化設定を含むラベルは設定しないでください。暗号化設定を含むラベルを設定すると、Excel アドイン形式 (*.xlam) として使用できません。</li></ol><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Sub Sample()</span><br><span class="line">Dim mysensitivityLabel As Office.SensitivityLabel</span><br><span class="line">Dim myLabelInfo As Office.LabelInfo</span><br><span class="line"></span><br><span class="line">    Set mysensitivityLabel = ThisWorkbook.SensitivityLabel  </span><br><span class="line">    Set myLabelInfo = ThisWorkbook.SensitivityLabel.CreateLabelInfo()</span><br><span class="line"></span><br><span class="line">        With myLabelInfo</span><br><span class="line">            .AssignmentMethod = MsoAssignmentMethod.PRIVILEGED</span><br><span class="line">            .LabelId = &quot;&lt;暗号化設定のないラベルの GUID&gt;&quot;</span><br><span class="line">        End With</span><br><span class="line"></span><br><span class="line">    mysensitivityLabel.SetLabel myLabelInfo, myLabelInfo</span><br><span class="line">End Sub</span><br><span class="line"></span><br></pre></td></tr></table></figure><ol start="4"><li>Excel アドイン形式 (*.xlam) に暗号化設定のないラベルが設定できたら、Visual Basic Editor 画面で保存ボタンをクリックして保存を行います。</li><li>保存が完了したら、3. で追加したマクロ自体は削除して構いません。削除後は再度、Visual Basic Editor 画面で保存を行います。</li></ol><br><h2 id="今後の対応予定"><a href="#今後の対応予定" class="headerlink" title="今後の対応予定"></a>今後の対応予定</h2><p>本動作について、現在開発部門にて今後の改善可否等を含め調査中となります。<br>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</p><br><h2 id="ご参考情報"><a href="#ご参考情報" class="headerlink" title="ご参考情報"></a>ご参考情報</h2><p>ラベル ポリシーにおいて “必須ラベル付け” を有効にする場合、併せて “既定のラベル” によってプロンプトの表示が抑制されることを公開情報によりご案内しております。<br>“既定のラベル” は、”必須ラベル付け” よりも常に優先されるため、最低限、すべてのドキュメントに既定のラベルが付与されます。<br>その結果、”必須ラベル付け” によって表示されるプロンプトを抑制することが可能です。</p><p>Title: 秘密度ラベルの詳細<br>URL: <a href="https://learn.microsoft.com/ja-jp/purview/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do">https://learn.microsoft.com/ja-jp/purview/sensitivity-labels?view=o365-worldwide#what-label-policies-can-do</a></p><blockquote><p>項目 [ラベル ポリシーでできること] &gt; [ドキュメントとメール、文書のみ、コンテナー、および Power BI コンテンツに ラベルを適用することをユーザーに要求します。] をご参照ください \</p><blockquote><p>このオプションを使用して、ラベル付けの適用範囲を広げることを検討してください。 ただし、ユーザーのトレーニングを実施しない場合、この設定は不正確なラベル付けにつながる可能性があります。 さらに、対応する既定のラベルも設定しない限り、必須のラベル付けにより頻繁にダイアログが表示され、ユーザーを苛立たせる可能性があります。</p></blockquote></blockquote><p>Title: Office アプリで秘密度ラベルを管理する<br>URL: <a href="https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-office-apps?view=o365-worldwide#require-users-to-apply-a-label-to-their-email-and-documents">https://learn.microsoft.com/ja-jp/purview/sensitivity-labels-office-apps?view=o365-worldwide#require-users-to-apply-a-label-to-their-email-and-documents</a></p><blockquote><p>項目 [ユーザーがメールとドキュメントにラベルを適用することを必須にする] をご参照ください \</p><blockquote><p>既定のラベルは、必須のラベル付けよりも常に優先されます。</p></blockquote></blockquote><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の投稿では、Microsoft Information Protection ラベル ポリシー [ユーザーがメールとドキュメントにラベルを適用することを必須にする] が有効の場合、Excel アドイン (*.xla</summary>
+      
+    
+    
+    
+    
+    <category term="Excel" scheme="https://officesupportjp.github.io/blog/tags/Excel/"/>
+    
+    <category term="Office 開発全般" scheme="https://officesupportjp.github.io/blog/tags/Office-%E9%96%8B%E7%99%BA%E5%85%A8%E8%88%AC/"/>
+    
+    <category term="アドイン" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A2%E3%83%89%E3%82%A4%E3%83%B3/"/>
+    
+    <category term="MIP ラベル" scheme="https://officesupportjp.github.io/blog/tags/MIP-%E3%83%A9%E3%83%99%E3%83%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word で表のレイアウトが変わる</title>
+    <link href="https://officesupportjp.github.io/blog/cm4m8fp9y0009346y3p6tg4s6/"/>
+    <id>https://officesupportjp.github.io/blog/cm4m8fp9y0009346y3p6tg4s6/</id>
+    <published>2024-12-12T15:00:00.000Z</published>
+    <updated>2025-04-08T01:19:38.902Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>今回の記事では、Word で表のレイアウトが変わる現象について説明します。</p><h3 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a>1. 現象</h3><p>Microsoft 365 Apps、及び、製品版のOffice 2021&#x2F;2024 を以下のバージョンへ更新した後に、更新前のバージョンで作成した Word 文書内の表のレイアウトが変わる現象が発生する場合があります。</p><p>・バージョン 2409 (ビルド 18025.XXXXX) 以降</p><p>現象発生前の表のイメージ：<br><img src="/blog/cm4m8fp9y0009346y3p6tg4s6/image01.png"></p><p>現象発生後の表のイメージ：<br><img src="/blog/cm4m8fp9y0009346y3p6tg4s6/image02.png"></p><p><strong>対象製品:</strong><br>Microsoft 365 Apps<br>Office 2021 製品版<br>Office 2024 製品版<br>※ Office 2021 ボリュームライセンス版、及び、Office 2024 ボリュームライセンス版では発生しません。</p><h3 id="2-今後の対応予定"><a href="#2-今後の対応予定" class="headerlink" title="2. 今後の対応予定"></a>2. 今後の対応予定</h3><p><del>本動作について、現在開発部門にて詳細な原因・今後の改善可否等を含め調査中となります。</del><br><del>新たな情報が確認された場合は、この記事に追記する形で公開していく予定です。</del></p><p>本問題は、バージョン 2501 (ビルド 18429.20132) で修正が行われました。</p><p>現在のチャネルのリリース ノート<br><a href="https://learn.microsoft.com/ja-jp/officeupdates/current-channel#version-2501-january-30">https://learn.microsoft.com/ja-jp/officeupdates/current-channel#version-2501-january-30</a></p><p>バージョン 2501: 1 月 30 日<br>バージョン 2501 (ビルド 18429.20132)</p><p>解決済みの問題<br>Word<br>・バージョン 2409 に更新した後にテーブルのレイアウトが予期せず変更される可能性があるWordの問題を解決しました。</p><p>今回の投稿は以上です。</p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;今回の記事では、Word で表のレイアウトが変わる現象について説明します。&lt;/p&gt;
+&lt;h3 id=&quot;1-現象&quot;&gt;&lt;a href=&quot;#1-現象&quot; class=&quot;headerlink&quot; title=&quot;1. 現象&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Office のインストール・更新・環境情報の採取について</title>
+    <link href="https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/"/>
+    <id>https://officesupportjp.github.io/blog/cm3e5mpvi0000cgkj2sfvb55j/</id>
+    <published>2024-11-28T00:00:00.000Z</published>
+    <updated>2026-02-18T08:45:10.207Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office のインストール・更新・環境情報の採取について解説します。</p><h2 id="A-環境情報ログ"><a href="#A-環境情報ログ" class="headerlink" title="A) 環境情報ログ"></a>A) 環境情報ログ</h2><ol><li><p><a href="MSOfficeinfo_v3.4.zip">MSOfficeinfo.zip</a> をダウンロードします。</p></li><li><p>MSOfficeinfo.zip のプロパティを開き、以下で “許可する”にチェックをつけます。<br><img src="/blog/cm3e5mpvi0000cgkj2sfvb55j/image1.png"></p></li><li><p>MSOfficeinfo.zip を解凍し、MSOfficeinfo.txt の拡張子を .cmd に変更します。</p></li><li><p>MSOfficeinfo.cmd をダブルクリックで実行します。結果は、C:\MS_DATA 配下に出力されます。<br>※ ツールを他の管理者ユーザーの資格情報で実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・C:\MS_DATA に出力された MOI から始まる zip ファイル</p></li></ol><br><h2 id="B-インストール・更新ログ"><a href="#B-インストール・更新ログ" class="headerlink" title="B) インストール・更新ログ"></a>B) インストール・更新ログ</h2><ol><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=103236">Microsoft 365 Apps Deployment Log Collector</a> から <strong>officedeploymentlogcollector.exe</strong> をダウンロードします。</p></li><li><p><strong>officedeploymentlogcollector.exe</strong> をダブルクリックし、任意のフォルダに展開します。</p></li><li><p>展開したフォルダに配置された <strong>OfficeC2RLogCollector.exe</strong> を実行します。(端末の管理者権限が必要となります)</p></li><li><p>C:\Users\&lt;ユーザー名&gt;\AppData\Local\Temp\C2RLogs 配下に出力された c2rlogs_ から始まる zip ファイルを取得ください</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・c2rlogs_ から始まる zip ファイル<br>・インストール・更新の事象の場合、事象発生日時<br>・インストールの事象の場合、利用した Configuration.xml ファイル<br>・エラーが生じる事象の場合、スクリーンショット</p></li></ol><p>※ ツールを他の管理者ユーザーの資格情報で実行すると、他の管理者ユーザーの C:\Users\&lt;ユーザー名&gt; 配下にログが作成されます。<br>コマンドプロンプトを右クリック→管理者権限で起動し、以下のコマンドを実行してログを C:\MS_DATA 配下にコピーしてください。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Xcopy %temp%\C2RLogs C:\MS_DATA\C2RLogs  /S /C /I</span><br></pre></td></tr></table></figure><br><h2 id="C-ライセンス認証ログ"><a href="#C-ライセンス認証ログ" class="headerlink" title="C) ライセンス認証ログ"></a>C) ライセンス認証ログ</h2><ol><li><p>事前に環境情報ログを採取してください</p></li><li><p><a href="https://www.microsoft.com/en-us/download/details.aspx?id=55948">Office Licensing Diagnostic Tool</a> から <strong>OfficeLicenseDiagnostic.zip</strong> をダウンロードし展開してください。</p></li><li><p><strong>licenseInfo.cmd</strong> をダブルクリックで実行してください。<br>※ 途中、数回 Enter キーの入力が求められます。また、結果は %temp% に licensingInfo から始まる名前で出力されます。<br>※ ツールを他の管理者ユーザーの資格情報で実行すると正しく取得できませんので、ログオンユーザーでダブルクリックで取得ください。</p></li><li><p>取得した以下の情報を弊社にお寄せください<br>・環境情報ログ(C:\MS_DATA に出力された MOI から始まる zip ファイル)<br>・licensingInfo から始まる zip ファイル</p></li></ol><br><p><span style="color:#ff0000"><strong>2024&#x2F;11&#x2F;28  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;1&#x2F;29  Update</strong></span><br><span style="color:#339966">スクリプトを更新しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;2&#x2F;5  Update</strong></span><br><span style="color:#339966">採取方法を簡素化しました</span></p><p><span style="color:#ff0000"><strong>2024&#x2F;6&#x2F;2  Update</strong></span><br><span style="color:#339966">スクリプトを更新しました</span></p><p><span style="color:#ff0000"><strong>2025&#x2F;9&#x2F;19  Update</strong></span><br><span style="color:#339966">スクリプトを更新しました。他の管理者ユーザーでの採取時の注意点を追記しました。</span></p><p><span style="color:#ff0000"><strong>2026&#x2F;2&#x2F;16  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><span style="color:#ff0000"><strong>2026&#x2F;2&#x2F;18  Update</strong></span><br><span style="color:#339966">一部記載を変更しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;本記事では Office のインストール・更新・環境情報の採取について解説します。&lt;/p&gt;
+&lt;h2 id=&quot;A-環境情報ログ&quot;&gt;&lt;a href=&quot;#A-環境情報ログ&quot; class=&quot;headerlink&quot; ti</summary>
+      
+    
+    
+    
+    
+    <category term="インストール" scheme="https://officesupportjp.github.io/blog/tags/%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB/"/>
+    
+    <category term="更新" scheme="https://officesupportjp.github.io/blog/tags/%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Word で「打」で始まるテキスト ファイルを開くとコンバーターを要求される</title>
+    <link href="https://officesupportjp.github.io/blog/cm15ufuis0000f0seec0i7yev/"/>
+    <id>https://officesupportjp.github.io/blog/cm15ufuis0000f0seec0i7yev/</id>
+    <published>2024-09-17T00:00:00.000Z</published>
+    <updated>2024-11-12T05:59:12.936Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームの中村です。<br>今回の記事では、Word でテキスト ファイルを開くとき、一部の内容においてコンバーターが要求される動作について説明します。<br><br></p><h4 id="1-現象"><a href="#1-現象" class="headerlink" title="1. 現象"></a><strong>1. 現象</strong></h4><p>以下の条件を満たすテキスト ファイルを Windows デスクトップ アプリの Word で開くと、「このファイルは新しいバージョンの Microsoft Word で作成されているため、このファイルを開くにはコンバーターが必要です。」というメッセージが表示されます。<br><br></p><p><img src="/blog/cm15ufuis0000f0seec0i7yev/msg.png"></p><p>&lt;ファイルの条件&gt;</p><ul><li>ファイル内容の先頭が Shift-JIS の「打」 (0x91C5) で始まること  </li><li>2 文字目以降に文字が続くこと (制御コードを含め、何らかのデータがあること)</li></ul><br><h4 id="2-原因"><a href="#2-原因" class="headerlink" title="2. 原因"></a><strong>2. 原因</strong></h4><p>多くのファイル形式では、先頭数バイトでそのファイル形式を表します。このため Word でファイルを開くとき、ファイルのバイナリ データの先頭数バイトを元にファイル形式を判断しています。<br>しかし、テキスト ファイルではこのようなデータ部を持たないため、ユーザーがファイルに入力したテキスト情報を、ファイルの先頭バイトから格納します。<br>「打」を Shift-JIS でエンコードした場合の 0x91C5 で始まり、3 バイト目以降にデータが続くと、Word はテキスト ファイルとは別のファイル形式と認識します。この Word で認識されたファイル形式は、現在サポートされる Word デスクトップ アプリで開くことができない形式のため、Word はコンバーターが必要と判断し、先述のメッセージを表示します。  </p><p>「打」で始まるテキスト ファイルにおけるこの動作は、Windows デスクトップ アプリの Word における制限事項です。<br><br></p><h4 id="3-対応方法"><a href="#3-対応方法" class="headerlink" title="3. 対応方法"></a><strong>3. 対応方法</strong></h4><h5 id="3-1-ユーザーの手動操作でファイルを開く場合"><a href="#3-1-ユーザーの手動操作でファイルを開く場合" class="headerlink" title="3-1. ユーザーの手動操作でファイルを開く場合"></a><strong>3-1. ユーザーの手動操作でファイルを開く場合</strong></h5><p>「このファイルは新しいバージョンの Microsoft Word で作成されているため、このファイルを開くにはコンバーターが必要です。」のメッセージで [いいえ] を選択し、次に表示される以下のメッセージで [OK] を選択すると、テキスト ファイルとして開くことができます。</p><p><img src="/blog/cm15ufuis0000f0seec0i7yev/msg2.png"><br><br></p><h5 id="3-2-プログラムからの操作でファイルを開く場合"><a href="#3-2-プログラムからの操作でファイルを開く場合" class="headerlink" title="3-2. プログラムからの操作でファイルを開く場合"></a><strong>3-2. プログラムからの操作でファイルを開く場合</strong></h5><p>VBA などのプログラムでテキスト ファイルを開く場合は、Documents.Open メソッドの Format パラメーターに wdOpenFormatText を指定して明示的にテキスト ファイルとして開きます。この場合、コンバーターを要求するメッセージの表示を回避し、初めからテキスト ファイルとして開きます。</p><p>Documents.Open メソッド (Word)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open">https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open</a></p><p>&lt;公開情報より抜粋&gt;<br><em>Format オプション バリアント型 (Variant)<br>文書を開くために使用するファイル コンバーターを指定します。 WdOpenFormat 定数のいずれかを使用できます。 既定値は wdOpenFormatAuto です。 外部のファイル形式を指定するには、 FileConverter オブジェクトに OpenFormat プロパティを適用して、この引数で使用する値を決定します。</em></p><p>WdOpenFormat 列挙 (Word)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Word.WdOpenFormat">https://learn.microsoft.com/ja-jp/office/vba/api/Word.WdOpenFormat</a></p><p>&lt;公開情報より抜粋&gt;<br><em>wdOpenFormatText4エンコードされていないテキスト形式</em><br><br></p><h5 id="3-3-ファイルの保存時に対処する場合"><a href="#3-3-ファイルの保存時に対処する場合" class="headerlink" title="3-3. ファイルの保存時に対処する場合"></a><strong>3-3. ファイルの保存時に対処する場合</strong></h5><p>テキスト ファイルの文字コードを変更して問題なければ、Shift-JIS ではなく UTF-8 など他の文字コードで保存することで回避できます。このときに、開かれたファイルが期待する文字コードで認識されない場合は、ファイルを開くときの以下の画面や、プログラムから開く場合は Documents.Open の Encoding パラメーターで文字コードを変更できます (例えば、UTF-8 の場合は msoEncodingUTF8 を指定します)。</p><p><img src="/blog/cm15ufuis0000f0seec0i7yev/CharcodeSelect.png"></p><p>Documents.Open メソッド (Word)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open">https://learn.microsoft.com/ja-jp/office/vba/api/Word.Documents.Open</a></p><p>&lt;公開情報より抜粋&gt;<br><em>Encoding オプション バリアント型 (Variant)<br>保存された文書を表示するときに Microsoft Word で使用する、文書のエンコード (コード ページまたは文字セット) を指定します。 使用できる定数は、有効な MsoEncoding クラスの定数です。 有効な MsoEncoding クラスの定数の一覧については、Visual Basic Editor のオブジェクト ブラウザーを参照してください。 既定値はシステム コード ページです。</em></p><p>MsoEncoding 列挙 (Office)<br><a href="https://learn.microsoft.com/ja-jp/office/vba/api/Office.MsoEncoding">https://learn.microsoft.com/ja-jp/office/vba/api/Office.MsoEncoding</a></p><br><p>今回の投稿は以上です。  </p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームの中村です。&lt;br&gt;今回の記事では、Word でテキスト ファイルを開くとき、一部の内容においてコンバーターが要求される動作について説明します。&lt;br&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4 id=&quot;1-現象&quot;&gt;&lt;a href=&quot;#1-現象&quot; c</summary>
+      
+    
+    
+    
+    
+    <category term="Word" scheme="https://officesupportjp.github.io/blog/tags/Word/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Office の更新プログラムの種類について</title>
+    <link href="https://officesupportjp.github.io/blog/cmh1q882o006mkckj91ye8nt7/"/>
+    <id>https://officesupportjp.github.io/blog/cmh1q882o006mkckj91ye8nt7/</id>
+    <published>2024-09-02T00:00:00.000Z</published>
+    <updated>2025-10-24T01:14:32.373Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポートの西川 (直) です。<br>本記事では Office の更新プログラムの種類について解説します。</p><br><h2 id="Office-の更新プログラムの違いについて"><a href="#Office-の更新プログラムの違いについて" class="headerlink" title="Office の更新プログラムの違いについて"></a>Office の更新プログラムの違いについて</h2><p>新機能が追加される機能更新が存在するのは Microsoft 365 Apps クライアントのみです。</p><table><thead><tr><th align="center">バージョン</th><th align="center">機能更新</th><th align="center">セキュリティ更新</th><th align="center">セキュリティ以外の更新(修正)</th></tr></thead><tbody><tr><td align="center">Microsoft 365 Apps クライアント</td><td align="center">○</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">Office 2019&#x2F;2021 LTSC</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">パッケージ版 Office 2016&#x2F;2019&#x2F;2021</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr><tr><td align="center">Office 2016</td><td align="center">-</td><td align="center">○</td><td align="center">○</td></tr></tbody></table><br><h2 id="Microsoft-365-Apps-クライアント"><a href="#Microsoft-365-Apps-クライアント" class="headerlink" title="Microsoft 365 Apps クライアント"></a>Microsoft 365 Apps クライアント</h2><p>更新は<a href="https://learn.microsoft.com/ja-jp/microsoft-365-apps/updates/overview-update-channels">チャネル</a>に沿ってバージョン、ビルドを上げることで行われます。また、過去の変更は累積となります。<br>このため、Excel のみ等、特定の製品のみ更新することは出来ません。</p><p><img src="/blog/cmh1q882o006mkckj91ye8nt7/image01.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-microsoft365-apps-by-date"></p><p>機能更新、セキュリティ更新、セキュリティ以外の更新(修正) の 3 種類がありますが、表のように、チャネルに沿ってバージョンアップを伴う更新とビルドのみの更新の 2 つに分けて公開されています。</p><p>同日に複数の更新プログラムが公開されている理由は、過去のバージョンから、機能更新を行わず、セキュリティ更新、セキュリティ以外の更新(修正)のみの更新をサポートするためです。</p><p><strong>1) 機能更新</strong><br><strong>バージョンが上がる更新</strong>が機能更新です。これには機能更新、セキュリティ更新、セキュリティ以外の更新(修正)が含まれます。<br>例えば、最新チャネルの 6&#x2F;26 において、バージョンが 2405 から 2406 に上がっておりますので、これは機能更新となります。</p><p><img src="/blog/cmh1q882o006mkckj91ye8nt7/image02.png"></p><p><strong>2) セキュリティ更新</strong><br><strong>ビルドのみ上がる更新</strong>がセキュリティ更新です。これにはセキュリティ更新、セキュリティ以外の更新(修正)が含まれます。<br>例えば、最新チャネルの 6&#x2F;19 では、バージョンは 2405 のまま、ビルドのみ上がっておりますので、これはセキュリティ更新、セキュリティ以外の更新(修正)となります。</p><p><img src="/blog/cmh1q882o006mkckj91ye8nt7/image03.png"></p><br><p>更新プログラムは累積のため、<strong>バージョンを飛ばして更新ができます。また、上位の機能更新から順に更新する必要はありません。</strong></p><p>例えば、バージョン 2302 (ビルド 16130.21026) から、2308、および、機能更新のバージョン 2402 (ビルド 17328.20452) も飛ばし、<br>セキュリティ更新となるバージョン 2402 (ビルド 17328.20550) に直接更新することも可能です。</p><br><p><strong>MECM上の表記について</strong><br>機能更新は “機能更新プログラム”、セキュリティ更新は “品質更新プログラム” または “拡張品質更新プログラム” と表示されます。</p><p>“拡張品質更新プログラム”は、最新バージョンではないセキュリティ更新、および、セキュリティ以外の更新を指します。</p><p><img src="/blog/cmh1q882o006mkckj91ye8nt7/image04.png"></p><p>例えば、上記の例では、バージョン 2402 は “品質更新プログラム” であり、2308 と 2302 は “拡張品質更新プログラム” となります。</p><br><h2 id="Office-2019-x2F-2021-LTSC"><a href="#Office-2019-x2F-2021-LTSC" class="headerlink" title="Office 2019&#x2F;2021 LTSC"></a>Office 2019&#x2F;2021 LTSC</h2><p>ボリュームライセンス版の Office 2019&#x2F;2021 LTSC では、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。<br>これらの Office はそれぞれ、Microsoft 365 Apps のバージョン 1808、2108 を元に製造されており、基本的な考え方は同一となります。</p><p><img src="/blog/cmh1q882o006mkckj91ye8nt7/image06.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2019"><br><img src="/blog/cmh1q882o006mkckj91ye8nt7/image05.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021"></p><br><h2 id="パッケージ版-Office-2016-x2F-2019-x2F-2021"><a href="#パッケージ版-Office-2016-x2F-2019-x2F-2021" class="headerlink" title="パッケージ版 Office 2016&#x2F;2019&#x2F;2021"></a>パッケージ版 Office 2016&#x2F;2019&#x2F;2021</h2><p>これらの Office は Microsoft 365 Apps を元に製造されており、基本的な考え方は同一となりますが、<br>バージョンが上がったとしても機能更新は含まれず、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。</p><p><img src="/blog/cmh1q882o006mkckj91ye8nt7/image07.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2019"><br><img src="/blog/cmh1q882o006mkckj91ye8nt7/image08.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/update-history-office-2021"></p><br><h2 id="Office-2016"><a href="#Office-2016" class="headerlink" title="Office 2016"></a>Office 2016</h2><p>ボリュームライセンス版の Office 2016 では、セキュリティ更新、セキュリティ以外の更新(修正)のみが公開されています。<br>こちらの Office は、<a href="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/">クイック実行形式 (C2R) ではなく Windows インストーラー形式 (MSI)</a> であり、モジュール単位で更新プログラムが公開されています。</p><p><img src="/blog/cmh1q882o006mkckj91ye8nt7/image09.png" alt="https://learn.microsoft.com/ja-jp/officeupdates/msp-files-office-2016"></p><p><strong>MECM上の表記について</strong><br>C2R形式の Office の更新プログラムは、Microsoft Update Catalog 上の “分類” は “更新” で統一されておりますが、<br>MSI形式では “セキュリティ更新” は “セキュリティ問題の修正プログラム”、”セキュリティ以外の更新(修正)” は “重要な更新” と表記されます。<br><img src="/blog/cmh1q882o006mkckj91ye8nt7/image10.png"></p><br><p><strong>- 関連情報</strong><br><a href="https://officesupportjp.github.io/blog/cl0m8t2dj00393gvs3r7oar2m/">クイック実行形式 (C2R) と Windows インストーラー形式 (MSI) を見分ける方法</a></p><br><p><span style="color:#ff0000"><strong>2025&#x2F;10&#x2F;24  Update</strong></span><br><span style="color:#339966">更新プログラムの適用について追記しました</span></p><p><strong>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</strong></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポートの西川 (直) です。&lt;br&gt;本記事では Office の更新プログラムの種類について解説します。&lt;/p&gt;
+&lt;br&gt;
+
+&lt;h2 id=&quot;Office-の更新プログラムの違いについて&quot;&gt;&lt;a href=&quot;#Office-の更新プログラムの違い</summary>
+      
+    
+    
+    
+    
+    <category term="更新" scheme="https://officesupportjp.github.io/blog/tags/%E6%9B%B4%E6%96%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について</title>
+    <link href="https://officesupportjp.github.io/blog/clracr3qn0000sc6yestg9pc9/"/>
+    <id>https://officesupportjp.github.io/blog/clracr3qn0000sc6yestg9pc9/</id>
+    <published>2024-01-12T00:00:00.000Z</published>
+    <updated>2024-03-03T23:51:41.876Z</updated>
+    
+    <content type="html"><![CDATA[<p>こんにちは、Office サポート チームです。<br>この記事では、Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について説明します。  </p><h1 id="現象"><a href="#現象" class="headerlink" title="現象"></a>現象</h1><p>Microsoft 365 Apps に含まれる Outlook や Word で、テキスト ボックスのサイズ変更や位置の移動がマウス操作とおりに行われずに、意図しない場所に移動してしまう場合があります。<br>メールの本文や Word 文書内に複数行にわたって文面や改行が入っていて、垂直スクロール バーが表示される状態で上下移動が可能な構成になっていると発生しやすい傾向があります。  </p><h3 id="Outlook"><a href="#Outlook" class="headerlink" title="Outlook"></a>Outlook</h3><p>リッチ テキスト形式、または、HTML 形式のメール アイテムにテキスト ボックスを挿入して、<br>サイズ変更や位置の移動のためにドラッグすると、<br>サイズや位置を示すガイドラインの点線が実際とは異なる位置に描画され、ドラッグ後に上方 (斜め上など) に移動される</p><h3 id="Word"><a href="#Word" class="headerlink" title="Word"></a>Word</h3><p>Web レイアウト表示でテキスト ボックスを挿入して、<br>位置の移動のためにドラッグすると、位置を示すガイドラインの点線が実際とは異なる位置に描画され、ドラッグ後に上方 (斜め上など) に移動される</p><p><img src="/blog/clracr3qn0000sc6yestg9pc9/image1.png"></p><h1 id="対処方法"><a href="#対処方法" class="headerlink" title="対処方法"></a>対処方法</h1><p>事象が発生した場合の有効な対処方法はありません。<br>意図しない位置に移動されたオブジェクトを 「元に戻す」 操作で戻してやり直すことや、希望する位置に移動されるようドラッグし直します。<br>オプション設定の変更や更新適用などで解消することはできません。</p><p>今回の投稿は以上です。<br>本情報の内容 (添付文書、リンク先などを含む) は、作成日時点でのものであり、予告なく変更される場合があります。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;こんにちは、Office サポート チームです。&lt;br&gt;この記事では、Outlook や Word でテキスト ボックスのサイズ変更や移動が正しく行われない現象について説明します。  &lt;/p&gt;
+&lt;h1 id=&quot;現象&quot;&gt;&lt;a href=&quot;#現象&quot; class=&quot;headerl</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
