@@ -166,3 +166,4 @@
 - [数式エディター 3.0 の機能削除について](./source/_posts/数式エディター%203.0%20の機能削除について.md)
 - [日本語入力中に Office アプリケーションが異常終了する場合がある現象について](./source/_posts/日本語入力中に%20Office%20アプリケーションが異常終了する場合がある現象について.md)
 - [暗号化された Office ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの %localappdata% フォルダ配下 Packages フォルダに oice_xx_xxxxxxxx_xxxxxxxx_xxxx フォルダが残存する](./source/_posts/暗号化された%20Office%20ファイルを保護ビューで開き、保護ビューが閉じた後、クライアントの%20%localappdata%%20フォルダ配下%20Packages%20フォルダに%20oice_xx_xxxxxxxx_xxxxxxxx_xxxx%20フォルダが残存する.md)
+- [ボリュームライセンス版 Visio 2024 / Project 2024 と Microsoft 365 Apps を共存インストールする方法について](./source/_posts/ボリュームライセンス版%20Visio%202024%20%20Project%202024%20と%20Microsoft%20365%20Apps%20を共存インストールする方法について.md)
