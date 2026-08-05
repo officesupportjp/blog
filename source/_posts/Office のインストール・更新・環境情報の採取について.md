@@ -1,7 +1,7 @@
 ---
 title: Office のインストール・更新・環境情報の採取について
 date: '2024-11-28'
-lastupdate: '2026-02-18'
+lastupdate: '2026-08-05'
 id: cm3e5mpvi0000cgkj2sfvb55j
 tags:
   - 更新
@@ -14,7 +14,7 @@ tags:
 
 A) 環境情報ログ
 ---
-1. [MSOfficeinfo.zip](MSOfficeinfo_v3.4.zip) をダウンロードします。
+1. [MSOfficeinfo.zip](MSOfficeinfo_v3.5.zip) をダウンロードします。
 
 2. MSOfficeinfo.zip のプロパティを開き、以下で "許可する"にチェックをつけます。
 ![](image1.png)
