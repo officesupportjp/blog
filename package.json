@@ -13,7 +13,7 @@
     "readme": "node tools/readmepage.js"
   },
   "hexo": {
-    "version": "8.1.1"
+    "version": "6.3.0"
   },
   "dependencies": {
     "dom-parser": "^0.1.6",
